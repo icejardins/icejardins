@@ -2,39 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ICE Jardins - Igreja Cristã Evangélica Jardins</title>
-    <link>http://localhost:1313/</link>
+    <link>https://icejardins.org.br/</link>
     <description>Recent content on ICE Jardins - Igreja Cristã Evangélica Jardins</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 22 Apr 2026 10:03:56 -0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>No que cremos?</title>
-      <link>http://localhost:1313/fe/</link>
-      <pubDate>Wed, 22 Apr 2026 10:03:56 -0300</pubDate>
-      <guid>http://localhost:1313/fe/</guid>
-      <description>&lt;h1 id=&#34;no-que-cremos&#34;&gt;No que cremos&lt;/h1&gt;&#xA;&lt;h2 id=&#34;a-confissão-de-fé-da-igreja-cristã-evangélica-do-brasil&#34;&gt;A confissão de Fé da Igreja Cristã Evangélica do Brasil&lt;/h2&gt;&#xA;&lt;p&gt;&lt;em&gt;Você tem o direito de saber em que cremos.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Uma confissão de fé é uma maneira honesta de revelar em que uma comunidade acredita.&lt;/p&gt;&#xA;&lt;p&gt;A Bíblia tem mais autoridade do que qualquer confissão de fé. A confissão de fé é apenas uma síntese de como uma determinada comunidade interpreta as Escrituras e a ajuda a caminhar em unidade nas questões centrais da fé.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Como chegar</title>
-      <link>http://localhost:1313/onde/</link>
-      <pubDate>Wed, 22 Apr 2026 09:58:56 -0300</pubDate>
-      <guid>http://localhost:1313/onde/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Planeje sua visita</title>
-      <link>http://localhost:1313/visita/</link>
-      <pubDate>Wed, 22 Apr 2026 09:58:43 -0300</pubDate>
-      <guid>http://localhost:1313/visita/</guid>
-      <description>&lt;h1 id=&#34;você-é-muito-bem-vindo-na-jardins&#34;&gt;Você é muito bem-vindo na Jardins!&lt;/h1&gt;&#xA;&lt;p&gt;Os domingos na &lt;strong&gt;Igreja Cristã Evangélica Jardins&lt;/strong&gt; são vibrantes, casuais e repletos de um senso de admiração e alegria pela presença de Deus entre nós. Venha como você está e espere ser bem recebido como nosso convidado.&lt;/p&gt;&#xA;&lt;h2 id=&#34;nossa-programação-de-domingo&#34;&gt;Nossa Programação de Domingo&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th style=&#34;text-align: left&#34;&gt;Primeira Parte&lt;/th&gt;&#xA;          &lt;th style=&#34;text-align: center&#34;&gt;Cafezinho&lt;/th&gt;&#xA;          &lt;th style=&#34;text-align: right&#34;&gt;Segunda Parte&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Louvor e culto&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;Comunhão&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: right&#34;&gt;Escola Bíblica Dominical&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Auditório&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;Na quadra&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: right&#34;&gt;Diversas salas&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;09:30&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;10:50&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: right&#34;&gt;11:00&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h3 id=&#34;manhã-primeira-parte-louvor-e-culto&#34;&gt;Manhã (Primeira parte): Louvor e culto&lt;/h3&gt;&#xA;&lt;p&gt;Começamos o dia com um momento de louvor e um de nossos pastores irá compartilhar uma mensagem cristocêntrica e preferencialmente expositiva, cheia de encorajamento, ensino e esperança.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Sobre</title>
-      <link>http://localhost:1313/sobre/</link>
-      <pubDate>Wed, 22 Apr 2026 09:42:58 -0300</pubDate>
-      <guid>http://localhost:1313/sobre/</guid>
-      <description>&lt;p&gt;Em breve&lt;/p&gt;</description>
-    </item>
+    <atom:link href="https://icejardins.org.br/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
