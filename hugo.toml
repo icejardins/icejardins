@@ -1,0 +1,55 @@
+baseURL = 'https://icejardins.org.br/'
+locale = 'pt-br'
+languageCode = 'pt-br'
+title = 'ICE Jardins - Igreja Cristã Evangélica Jardins'
+sectionPagesMenu = 'main'
+theme = 'hugo-profile'
+enableRobotsTXT = true
+hasCJKLanguage = false
+paginate = 10
+
+defaultContentLanguage = 'pt'
+
+[languages]
+  [languages.pt]
+    languageName = 'Português'
+    contentDir = 'content' # onde estão seus arquivos .md
+    weight = 1
+
+[params]
+  date_format = "January 2, 2006"
+
+[taxonomies]
+  category = "categorias"
+  tag = "tags"
+  series = "series" # Ótimo para agrupar tutoriais em partes
+
+
+[permalinks]
+  posts = "/:year/:month/:title/"
+
+
+[[menu.main]]
+    name = "Início"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "Sobre"
+    url = "/sobre/"
+    weight = 2
+
+[[menu.main]]
+    name = "Visita"
+    url = "/visita/"
+    weight = 3
+
+[[menu.main]]
+    name = "No que cremos"
+    url = "/fe/"
+    weight = 4
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
