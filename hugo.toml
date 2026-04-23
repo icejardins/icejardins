@@ -22,7 +22,7 @@ defaultContentLanguageInSubdir = false
     weight = 1
 
 [params]
-  favicon = "/images/fav.png"
+  favicon = "/images/fav.webp"
   animate = true
 
 [params.font]
@@ -30,6 +30,15 @@ defaultContentLanguageInSubdir = false
   fontWeight = 400
   lineHeight = 1.5
   textAlign = "left"
+
+[params.color]
+  textColor                = "#1a1a1a"
+  secondaryTextColor       = "#7E7E7E"
+  textLinkColor            = "#1D5E62"
+  backgroundColor          = "#FFFFFF"
+  secondaryBackgroundColor = "#f8f9fa"
+  primaryColor             = "#CC6B02"
+  secondaryColor           = "#f8f9fa"
 
 [params.navbar]
     align = "ms-auto"
