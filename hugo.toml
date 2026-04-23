@@ -65,7 +65,7 @@ defaultContentLanguageInSubdir = false
     btnLink = "mailto:secretaria@icejardins.org.br"
 
 [params.footer.recentPosts]
-    path = "blogs"
+    path = "posts"
     count = 3
     title = "Publicações recentes"
     enable = true
@@ -108,6 +108,11 @@ defaultContentLanguageInSubdir = false
     name = "No que cremos"
     url = "/fe/"
     weight = 4
+
+[[menu.main]]
+    name = "Sermões"
+    url = "/posts/"
+    weight = 5
 
 [markup]
   [markup.goldmark]
