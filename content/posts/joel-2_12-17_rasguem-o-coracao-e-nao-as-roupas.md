@@ -4,7 +4,7 @@ subtitle = "Nosso arrependimento é possível porque Jesus já se doou por nós 
 date = '2026-04-23'
 draft = false
 tags = ["Joel", "Antigo Testamento"]
-category = ["Sermões", "Joel", "Antigo Testamento"]
+categorias = ["Sermões", "Joel", "Antigo Testamento"]
 image = "/images/posts/joel-2_12-17_rasguem-o-coracao-e-nao-as-roupas.jpg"
 +++
 

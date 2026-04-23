@@ -3,7 +3,7 @@ title = 'Joel 2:1-11 - Deus em Guerra Contra Seu Povo'
 subtitle = "Como você reage quando perde o controle sobre algo em sua vida?"
 date = '2026-04-23'
 draft = false
-category = ['Sermões', 'Joel', 'Antigo Testamento']
+categorias = ['Sermões', 'Joel', 'Antigo Testamento']
 tags = ["Joel", "Antigo Testamento"]
 image = "/images/posts/joel-2_1-11_deus-em-guerra-contra-seu-povo.jpg"
 +++

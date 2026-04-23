@@ -4,7 +4,7 @@ subtitle = "A continuidade do cumprimento da promessa de Deus de Salvação do H
 date = '2026-04-23'
 draft = false
 tags = ["Joel", "Antigo Testamento", "Devocional"]
-category = ["Sermões", "Antigo Testamento"]
+categorias = ["Sermões", "Antigo Testamento"]
 image = "/images/posts/joel-3-17-21-os-resultados-do-dia-do-senhor.webp"
 +++
 

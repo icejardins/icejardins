@@ -3,7 +3,7 @@ title = 'Joel 1 - A Chegada Do Dia Do Senhor'
 subtitle = "A seriedade do pecado e a necessidade de redenção."
 date = '2026-04-23'
 draft = false
-category = ['Sermões', 'Joel', 'Antigo Testamento']
+categorias = ['Sermões', 'Joel', 'Antigo Testamento']
 tags = ['Joel', 'Antigo Testamento']
 image = "/images/posts/joel-1-a-chegada-do-dia-do-senhor.jpg"
 +++

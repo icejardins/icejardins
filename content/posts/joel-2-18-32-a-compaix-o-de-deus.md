@@ -4,7 +4,7 @@ subtitle = "A decisão de Deus em se compadecer do povo que ele mesmo afligia pe
 date = '2026-04-23'
 draft = false
 tags = ["Joel", "Antigo Testamento"]
-category = ['Sermões', 'Joel', 'Antigo Testamento']
+categorias = ['Sermões', 'Joel', 'Antigo Testamento']
 image = "/images/posts/joel-2-18-32-a-compaix-o-de-deus.webp"
 +++
 

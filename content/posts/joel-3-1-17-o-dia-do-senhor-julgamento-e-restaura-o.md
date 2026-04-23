@@ -4,7 +4,7 @@ subtitle = 'Joel 3:1-17 nos apresenta o Dia do Senhor como um tempo de juízo im
 date = '2026-04-23'
 draft = false
 tags = ["Joel", "Antigo Testamento", "Devocional"]
-category = ["Sermões", "Antigo Testamento"]
+categorias = ["Sermões", "Antigo Testamento"]
 image = "/images/posts/joel-3-1-17-o-dia-do-senhor-julgamento-e-restaura-o.webp"
 +++
 
