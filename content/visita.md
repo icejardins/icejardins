@@ -3,6 +3,7 @@ date = '2026-04-22T09:58:43-03:00'
 draft = false
 title = 'Planeje sua visita'
 tags = []
+layout = "visita"
 +++
 
 # Você é muito bem-vindo na Jardins!
