@@ -56,7 +56,7 @@ defaultContentLanguageInSubdir = false
     disableEducation = false
     disableProjects = false
     disableAchievements = false
-    disableContact = false
+    disableContact = true
 
 [params.contact]
     enable = true
@@ -93,11 +93,6 @@ defaultContentLanguageInSubdir = false
     name = "Início"
     url = "/"
     weight = 1
-
-[[menu.main]]
-    name = "Sobre"
-    url = "/sobre/"
-    weight = 2
 
 [[menu.main]]
     name = "Visita"
