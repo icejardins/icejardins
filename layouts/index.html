@@ -5,7 +5,7 @@
 <script defer src="{{ (printf "%sfontawesome-6/all-6.4.2.js" (.Site.Params.staticPath | default "")) | relURL }}"></script>
 <style>
     .hero-section {
-        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('/images/sobre/banner.webp') no-repeat center center;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('{{ "images/sobre/banner.webp" | relURL }}') no-repeat center center;
         background-size: cover;
         color: white;
         padding: 100px 0;
@@ -114,7 +114,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6 mb-5 mb-lg-0">
                 <div class="position-relative">
-                    <img src="/images/sobre/congregacao.webp" alt="Congregação da ICE Jardins" class="img-fluid shadow-lg" style="object-fit: cover; height: 100%; min-height: 450px; border-radius: 20px;">
+                    <img src="{{ "images/sobre/congregacao.webp" | relURL }}" alt="Congregação da ICE Jardins" class="img-fluid shadow-lg" style="object-fit: cover; height: 100%; min-height: 450px; border-radius: 20px;">
                     <div class="position-absolute d-none d-md-block" style="bottom: -30px; right: -30px; width: 150px; height: 150px; background-color: var(--primary-color); border-radius: 20px; z-index: -1;"></div>
                 </div>
             </div>
@@ -182,7 +182,7 @@
 
 <!-- Imagem de Transição -->
 <section>
-    <img src="/images/sobre/comunidade.webp" alt="Comunidade ICE Jardins" class="img-fluid w-100 shadow-lg" style="height: 450px; object-fit: cover;">
+    <img src="{{ "images/sobre/comunidade.webp" | relURL }}" alt="Comunidade ICE Jardins" class="img-fluid w-100 shadow-lg" style="height: 450px; object-fit: cover;">
 </section>
 
 <!-- Nossos Cultos & Localização -->
