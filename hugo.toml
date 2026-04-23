@@ -1,33 +1,84 @@
 baseURL = 'https://icejardins.org.br/'
-locale = 'pt-br'
 languageCode = 'pt-br'
 title = 'ICE Jardins - Igreja Cristã Evangélica Jardins'
-sectionPagesMenu = 'main'
 theme = 'hugo-profile'
 enableRobotsTXT = true
 hasCJKLanguage = false
-paginate = 10
 
 defaultContentLanguage = 'pt'
+defaultContentLanguageInSubdir = false
+
+[outputs]
+    home = ["HTML", "RSS", "JSON"]
+    page = ["HTML", "RSS"]
+
+[pagination]
+    pagerSize = 10
 
 [languages]
   [languages.pt]
     languageName = 'Português'
-    contentDir = 'content' # onde estão seus arquivos .md
+    contentDir = 'content'
     weight = 1
 
 [params]
-  date_format = "January 2, 2006"
+  favicon = "/images/fav.png"
+  animate = true
+
+[params.font]
+  fontSize = "1rem"
+  fontWeight = 400
+  lineHeight = 1.5
+  textAlign = "left"
+
+[params.navbar]
+    align = "ms-auto"
+    brandName = "Igreja Cristã Evangélica Jardins"
+    disableSearch = false
+    enableSeparator = false
+
+[params.navbar.stickyNavBar]
+    enable = true
+    showOnScrollUp = true
+
+[params.navbar.menus]
+    disableAbout = false
+    disableExperience = false
+    disableEducation = false
+    disableProjects = false
+    disableAchievements = false
+    disableContact = false
+
+[params.contact]
+    enable = true
+    content = "Nossa equipe de atendimento está à disposição para responder suas perguntas, ouvir suas necessidades e orientar você em qualquer questão espiritual. Enviamos mensagens e bênçãos por todos os meios disponíveis para abençoar sua vida."
+    btnName = "Fale conosco"
+    btnLink = "mailto:secretaria@icejardins.org.br"
+
+[params.footer.recentPosts]
+    path = "blogs"
+    count = 3
+    title = "Publicações recentes"
+    enable = true
+    disableFeaturedImage = false
+
+[params.footer.socialNetworks]
+    facebook = "https://www.facebook.com/icejardins/"
+    instagram = "https://www.instagram.com/icejardins/"
+    whatsapp = "https://wa.me/5561982624952"
+
+[params.datesFormat]
+    article = "January 2, 2006"
+    articleList = "January 2, 2006"
+    articleRecent = "January 2, 2006"
 
 [taxonomies]
-  category = "categorias"
-  tag = "tags"
-  series = "series" # Ótimo para agrupar tutoriais em partes
-
+    category = "categorias"
+    tag = "tags"
+    series = "series"
 
 [permalinks]
-  posts = "/:year/:month/:title/"
-
+    posts = "/:year/:month/:title/"
 
 [[menu.main]]
     name = "Início"
