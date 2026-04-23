@@ -19,7 +19,7 @@ bin-release/
 
 # Hugo
 public/
-
+resources/
 # Backup Files
 *.markdown~
 *.md~
