@@ -1,0 +1,142 @@
+{{ define "head" }}
+<meta name="description" content="{{ .Params.description | default .Summary }}">
+<style>
+    .fe-hero {
+        background: linear-gradient(135deg, var(--primary-color), #914d02);
+        color: white;
+        padding: 90px 0 60px;
+        text-align: center;
+        border-radius: 0 0 30px 30px;
+        margin-bottom: 60px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .dark .fe-hero {
+        background: linear-gradient(135deg, #1f1f1f, #111);
+        border-bottom: 3px solid var(--primary-color);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+    
+    .fe-content {
+        max-width: 850px;
+        margin: 0 auto;
+        font-size: 1.15rem;
+        line-height: 1.8;
+    }
+    
+    .intro-box {
+        background: var(--secondary-background-color);
+        border-left: 5px solid var(--primary-color);
+        border-radius: 15px;
+        padding: 40px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    .dark .intro-box {
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    
+    /* Styling the markdown output */
+    .fe-content h2 {
+        color: var(--primary-color);
+        font-weight: 800;
+        margin-top: 80px;
+        margin-bottom: 10px;
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .fe-content h2::before {
+        content: "\f02d";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        margin-right: 15px;
+        font-size: 1.5rem;
+        opacity: 0.8;
+    }
+    
+    .fe-content p > em {
+        display: block;
+        color: var(--text-secondary-color);
+        font-size: 1.25rem;
+        margin-bottom: 30px;
+        font-style: italic;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(128,128,128,0.2);
+    }
+    
+    .fe-content p strong {
+        color: white;
+        background: var(--primary-color);
+        padding: 4px 10px;
+        border-radius: 5px;
+        margin-right: 8px;
+        font-size: 1.1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .fe-content blockquote {
+        background: rgba(204, 107, 2, 0.05);
+        border-left: 4px solid #f39c12;
+        padding: 20px 30px;
+        margin: 30px 0 50px;
+        border-radius: 0 15px 15px 0;
+        font-size: 1rem;
+        color: var(--text-secondary-color);
+        position: relative;
+    }
+    .dark .fe-content blockquote {
+        background: rgba(255, 255, 255, 0.03);
+    }
+    .fe-content blockquote p {
+        margin-bottom: 0;
+    }
+    .fe-content blockquote::before {
+        content: "\f10d";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 2rem;
+        opacity: 0.1;
+        color: var(--text-color);
+    }
+    
+    .fe-content hr {
+        display: none; /* Hide horizontal rules since we style the h2 instead */
+    }
+</style>
+{{ end }}
+
+{{ define "title" }}
+{{ .Title }} | {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+<div class="visita-hero fe-hero">
+    <div class="container">
+        <h1 class="display-4 font-weight-bold mb-4">No que cremos?</h1>
+        <p class="lead" style="max-width: 800px; margin: 0 auto; font-size: 1.3rem;">
+            A Confissão de Fé da Igreja Cristã Evangélica do Brasil.<br>
+            <em style="opacity: 0.9;">Você tem o direito de saber em que cremos.</em>
+        </p>
+    </div>
+</div>
+
+<div class="container mb-5 pb-5">
+    <div class="fe-content">
+        <!-- Intro Box -->
+        <div class="intro-box mb-5">
+            <p class="mb-4" style="font-size: 1.25rem;">Uma confissão de fé é uma maneira honesta de revelar em que uma comunidade acredita.</p>
+            <p class="mb-4">A Bíblia tem mais autoridade do que qualquer confissão de fé. A confissão de fé é apenas uma síntese de como uma determinada comunidade interpreta as Escrituras e a ajuda a caminhar em unidade nas questões centrais da fé.</p>
+            <p class="mb-0 font-weight-bold" style="color: var(--primary-color); font-size: 1.2rem;"><i class="fas fa-lightbulb mr-2 text-warning"></i> Boas igrejas possuem confissões de fé e as publicam... Fica a dica.</p>
+        </div>
+        
+        <!-- Markdown Content -->
+        {{ .Content }}
+        
+    </div>
+</div>
+{{ end }}
