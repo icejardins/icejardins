@@ -1,0 +1,35 @@
+{{- $church := .Site.Params.church -}}
+{{- $whatsappLink := printf "https://api.whatsapp.com/send?phone=%s&text=%s" $church.whatsappNumber (urlquery $church.whatsappMessage) -}}
+
+<footer class="ice-footer">
+  <div class="ice-footer-grid">
+    <div class="ice-footer-brand">
+      <div class="ice-footer-tag">— ICE</div>
+      <h2>Jardins</h2>
+      <p>{{ $church.slogan }} em Brasília, no Jardim Botânico.</p>
+    </div>
+    <div class="ice-footer-col">
+      <h3>Conheça</h3>
+      <a href="{{ "/" | relURL }}">Início</a>
+      <a href="{{ "visita/" | relURL }}">Visita</a>
+      <a href="{{ "fe/" | relURL }}">No que cremos</a>
+      <a href="{{ "posts/" | relURL }}">Sermões</a>
+    </div>
+    <div class="ice-footer-col">
+      <h3>Encontros</h3>
+      <a href="{{ "visita/" | relURL }}">Culto · {{ $church.serviceDay }} {{ $church.worshipTime }}</a>
+      <a href="{{ "visita/" | relURL }}">EBD · {{ $church.serviceDay }} {{ $church.schoolTime }}</a>
+      <a href="{{ $church.mapsUrl }}">Colégio In-Nova</a>
+    </div>
+    <div class="ice-footer-col">
+      <h3>Contato</h3>
+      <a href="mailto:{{ $church.email }}">{{ $church.email }}</a>
+      <a href="{{ $whatsappLink }}">WhatsApp</a>
+      <a href="{{ .Site.Params.footer.socialNetworks.instagram }}">Instagram</a>
+    </div>
+  </div>
+  <div class="ice-footer-bottom">
+    <span>© {{ now.Format "2006" }} {{ $church.shortName }} · Brasília, DF</span>
+    <span>Soli Deo Gloria.</span>
+  </div>
+</footer>

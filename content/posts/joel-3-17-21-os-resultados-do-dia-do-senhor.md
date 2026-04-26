@@ -5,6 +5,8 @@ date = '2026-04-23'
 draft = false
 tags = ["Joel", "Antigo Testamento", "Devocional"]
 categorias = ["Sermões", "Antigo Testamento"]
+series = "Joel"
+biblicalText = "Joel 3:17-21"
 image = "/images/posts/joel-3-17-21-os-resultados-do-dia-do-senhor.webp"
 +++
 

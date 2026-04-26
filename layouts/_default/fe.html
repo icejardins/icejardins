@@ -1,113 +1,5 @@
 {{ define "head" }}
 <meta name="description" content="{{ .Params.description | default .Summary }}">
-<style>
-    .fe-hero {
-        background: linear-gradient(135deg, var(--primary-color), #914d02);
-        color: white;
-        padding: 90px 0 60px;
-        text-align: center;
-        border-radius: 0 0 30px 30px;
-        margin-bottom: 60px;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-    .dark .fe-hero {
-        background: linear-gradient(135deg, #1f1f1f, #111);
-        border-bottom: 3px solid var(--primary-color);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-    }
-    
-    .fe-content {
-        max-width: 850px;
-        margin: 0 auto;
-        font-size: 1.15rem;
-        line-height: 1.8;
-    }
-    
-    .intro-box {
-        background: var(--secondary-background-color);
-        border-left: 5px solid var(--primary-color);
-        border-radius: 15px;
-        padding: 40px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    }
-    .dark .intro-box {
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    }
-    
-    /* Styling the markdown output */
-    .fe-content h2 {
-        color: var(--primary-color);
-        font-weight: 800;
-        margin-top: 80px;
-        margin-bottom: 10px;
-        font-size: 2rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        display: flex;
-        align-items: center;
-    }
-    
-    .fe-content h2::before {
-        content: "\f02d";
-        font-family: "Font Awesome 6 Free";
-        font-weight: 900;
-        margin-right: 15px;
-        font-size: 1.5rem;
-        opacity: 0.8;
-    }
-    
-    .fe-content p > em {
-        display: block;
-        color: var(--text-secondary-color);
-        font-size: 1.25rem;
-        margin-bottom: 30px;
-        font-style: italic;
-        padding-bottom: 15px;
-        border-bottom: 1px solid rgba(128,128,128,0.2);
-    }
-    
-    .fe-content p strong {
-        color: white;
-        background: var(--primary-color);
-        padding: 4px 10px;
-        border-radius: 5px;
-        margin-right: 8px;
-        font-size: 1.1rem;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    
-    .fe-content blockquote {
-        background: rgba(204, 107, 2, 0.05);
-        border-left: 4px solid #f39c12;
-        padding: 20px 30px;
-        margin: 30px 0 50px;
-        border-radius: 0 15px 15px 0;
-        font-size: 1rem;
-        color: var(--text-secondary-color);
-        position: relative;
-    }
-    .dark .fe-content blockquote {
-        background: rgba(255, 255, 255, 0.03);
-    }
-    .fe-content blockquote p {
-        margin-bottom: 0;
-    }
-    .fe-content blockquote::before {
-        content: "\f10d";
-        font-family: "Font Awesome 6 Free";
-        font-weight: 900;
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        font-size: 2rem;
-        opacity: 0.1;
-        color: var(--text-color);
-    }
-    
-    .fe-content hr {
-        display: none; /* Hide horizontal rules since we style the h2 instead */
-    }
-</style>
 {{ end }}
 
 {{ define "title" }}
@@ -115,28 +7,71 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="visita-hero fe-hero">
-    <div class="container">
-        <h1 class="display-4 font-weight-bold mb-4">No que cremos?</h1>
-        <p class="lead" style="max-width: 800px; margin: 0 auto; font-size: 1.3rem;">
-            A Confissão de Fé da Igreja Cristã Evangélica do Brasil.<br>
-            <em style="opacity: 0.9;">Você tem o direito de saber em que cremos.</em>
-        </p>
-    </div>
-</div>
+{{ $beliefs := slice
+  (dict "roman" "i" "number" "1" "slug" "trindade" "title" "Trindade" "subtitle" "Um só Deus que subsiste em três Pessoas." "body" "Cremos que há <em>um só Deus</em> na Sua essência, mas que subsiste em três pessoas distintas, co-iguais em poder e em glória e co-eternas — Deus Pai, Deus Filho e Deus Espírito Santo, tendo os mesmos atributos e perfeições." "refs" "Mt 3:16,17 · 28:18,19 · Jo 14:16,17 · 16:12-15 · 2Co 13:13 · Cl 4:6,7 · Hb 9:14 · 1Jo 2:22,23 · 5:6-12")
+  (dict "roman" "ii" "number" "2" "slug" "escrituras" "title" "Escrituras" "subtitle" "A Palavra de Deus como regra final de fé e prática." "body" "Cremos que as <em>Sagradas Escrituras</em>, compostas do Antigo e Novo Testamentos, são inspiradas por Deus, infalíveis, inerrantes e suficientes para revelar a vontade de Deus quanto à salvação e à vida cristã." "refs" "Sl 19:7-11 · 119:105 · 2Tm 3:16,17 · 2Pe 1:20,21 · Hb 4:12")
+  (dict "roman" "iii" "number" "3" "slug" "criacao" "title" "Criação" "subtitle" "O Deus vivo fez todas as coisas para a Sua glória." "body" "Cremos que Deus criou todas as coisas, visíveis e invisíveis, e que o ser humano foi criado à <em>imagem e semelhança de Deus</em>, com dignidade, responsabilidade e vocação para glorificá-lo." "refs" "Gn 1:1-31 · 2:7,15 · Sl 24:1 · Jo 1:1-3 · Cl 1:16,17")
+  (dict "roman" "iv" "number" "4" "slug" "queda" "title" "Queda" "subtitle" "O pecado feriu a humanidade e toda a criação." "body" "Cremos que nossos primeiros pais pecaram contra Deus, e, por essa queda, toda a humanidade tornou-se culpada, corrompida e incapaz de salvar a si mesma sem a <em>graça regeneradora</em> de Deus." "refs" "Gn 3:1-24 · Rm 3:10-23 · 5:12-21 · Ef 2:1-10")
+  (dict "roman" "v" "number" "5" "slug" "cristo" "title" "Cristo" "subtitle" "Verdadeiro Deus, verdadeiro homem, único Mediador." "body" "Cremos em Jesus Cristo, o Filho eterno de Deus, que se fez homem, nasceu da virgem Maria, viveu sem pecado, morreu em nosso lugar, ressuscitou corporalmente e reina como <em>Senhor e Salvador</em>." "refs" "Is 53 · Mt 1:18-25 · Jo 1:1-18 · Rm 5:6-11 · 1Co 15:1-8 · Hb 4:14-16")
+  (dict "roman" "vi" "number" "6" "slug" "salvacao" "title" "Salvação" "subtitle" "Pela graça, mediante a fé, em Cristo somente." "body" "Cremos que a salvação é dom gratuito de Deus, recebida pela fé em Jesus Cristo, não por méritos humanos; nela Deus perdoa, justifica, adota, santifica e preserva o Seu povo para a <em>vida eterna</em>." "refs" "Jo 3:16 · Rm 8:28-39 · Ef 1:3-14 · 2:8-10 · Tt 3:4-7")
+  (dict "roman" "vii" "number" "7" "slug" "igreja" "title" "Igreja" "subtitle" "O povo de Deus reunido para adoração, comunhão e missão." "body" "Cremos que a Igreja é o corpo de Cristo, composta por todos os verdadeiros crentes, chamada a adorar a Deus, proclamar o evangelho, discipular, servir ao próximo e aguardar a <em>volta gloriosa</em> do Senhor." "refs" "Mt 28:18-20 · At 2:42-47 · 1Co 12:12-27 · Ef 4:1-16 · 1Pe 2:9,10")
+}}
 
-<div class="container mb-5 pb-5">
-    <div class="fe-content">
-        <!-- Intro Box -->
-        <div class="intro-box mb-5">
-            <p class="mb-4" style="font-size: 1.25rem;">Uma confissão de fé é uma maneira honesta de revelar em que uma comunidade acredita.</p>
-            <p class="mb-4">A Bíblia tem mais autoridade do que qualquer confissão de fé. A confissão de fé é apenas uma síntese de como uma determinada comunidade interpreta as Escrituras e a ajuda a caminhar em unidade nas questões centrais da fé.</p>
-            <p class="mb-0 font-weight-bold" style="color: var(--primary-color); font-size: 1.2rem;"><i class="fas fa-lightbulb mr-2 text-warning"></i> Boas igrejas possuem confissões de fé e as publicam... Fica a dica.</p>
-        </div>
-        
-        <!-- Markdown Content -->
-        {{ .Content }}
-        
+<main class="ice-belief-page">
+  <section class="ice-page-hero ice-belief-hero">
+    <div class="ice-page-leaf ice-page-leaf-left" aria-hidden="true">
+      <svg viewBox="0 0 120 220" focusable="false"><path d="M60 210 C58 160 22 134 22 76 C22 30 60 10 60 10 C60 10 98 30 98 76 C98 134 62 160 60 210 Z"/><path d="M60 210 L60 18"/><path d="M60 78 Q42 58 30 44"/><path d="M60 112 Q82 92 92 74"/></svg>
     </div>
-</div>
+    <div class="ice-page-leaf ice-page-leaf-right" aria-hidden="true">
+      <svg viewBox="0 0 120 220" focusable="false"><path d="M60 210 C58 160 22 134 22 76 C22 30 60 10 60 10 C60 10 98 30 98 76 C98 134 62 160 60 210 Z"/><path d="M60 210 L60 18"/><path d="M60 78 Q42 58 30 44"/><path d="M60 112 Q82 92 92 74"/></svg>
+    </div>
+    <div class="ice-page-hero-inner text-center reveal">
+      <div class="ice-page-kicker">— a Confissão de Fé da ICE Brasil</div>
+      <h1 class="ice-page-title">No que <em>cremos.</em></h1>
+      <p class="ice-page-copy mx-auto">Você tem o direito de saber em que cremos — e nós temos a alegria de contar.</p>
+    </div>
+  </section>
+
+  <div class="ice-intro-card reveal">
+    <div class="ice-kicker">— uma nota antes de começar</div>
+    <p>Uma <strong>confissão de fé</strong> é uma maneira honesta de revelar em que uma comunidade acredita.</p>
+    <p>A Bíblia tem mais autoridade do que qualquer confissão de fé. A confissão é apenas uma síntese de como uma determinada comunidade interpreta as Escrituras e a ajuda a caminhar em unidade nas questões centrais da fé.</p>
+    <p>Boas igrejas possuem confissões de fé — e as publicam. Fica a dica.</p>
+  </div>
+
+  <div class="ice-belief-layout">
+    <aside class="ice-toc" aria-label="Índice de artigos">
+      <div class="ice-toc-title">Índice · 7 artigos</div>
+      <nav>
+        {{ range $beliefs }}
+        <a class="ice-belief-toc-link" href="#{{ .slug }}" data-belief-link="{{ .slug }}"><span>{{ .roman }}.</span> {{ .title }}</a>
+        {{ end }}
+      </nav>
+    </aside>
+
+    <article class="ice-belief-content">
+      {{ range $beliefs }}
+      <section class="ice-belief-article reveal" id="{{ .slug }}" data-belief-section="{{ .slug }}">
+        <div class="ice-belief-article-num">— Artigo {{ .roman }}</div>
+        <h2><em>{{ .title }}</em></h2>
+        <p class="ice-belief-subtitle">{{ .subtitle }}</p>
+        <div class="ice-belief-article-text">
+          <span>Art. {{ .number }}°</span>
+          {{ .body | safeHTML }}
+        </div>
+        <div class="ice-belief-references">
+          <strong>Refs.</strong>
+          <p>{{ .refs }}</p>
+        </div>
+      </section>
+      {{ end }}
+    </article>
+  </div>
+
+  <section class="ice-dedication reveal">
+    <div class="ice-kicker">— ad finem</div>
+    <h2>Aquele que vive em mim,<br>e eu nele, esse <em>dá muito fruto.</em></h2>
+    <p>João 15:5 — a videira e os ramos. Esta é a fé que confessamos, e o jardim onde Deus nos planta.</p>
+  </section>
+</main>
 {{ end }}
