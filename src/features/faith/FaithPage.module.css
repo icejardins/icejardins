@@ -1,0 +1,84 @@
+﻿.hero {
+  background: linear-gradient(135deg, var(--brand-700), var(--brand-900));
+  color: #fff;
+  padding: 5.5rem 0 4.2rem;
+  border-radius: 0 0 1.2rem 1.2rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5.5vw, 3rem);
+  margin-bottom: 0.75rem;
+  font-weight: 800;
+}
+
+.hero p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.hero em {
+  display: block;
+  margin-top: 0.7rem;
+  opacity: 0.95;
+}
+
+.wrapper {
+  padding: 3.5rem 0 5rem;
+}
+
+.introBox {
+  border-left: 5px solid var(--primary-color);
+  border-radius: 1rem;
+  background: var(--secondary-background-color);
+  padding: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.introBox p {
+  line-height: 1.8;
+}
+
+.tip {
+  margin-bottom: 0;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.content :global(h2) {
+  margin-top: 3rem;
+  color: var(--primary-color);
+  font-weight: 800;
+}
+
+.content :global(blockquote) {
+  border-left: 4px solid var(--brand-500);
+  border-radius: 0 0.8rem 0.8rem 0;
+  padding: 0.85rem 1rem;
+  margin: 1.1rem 0;
+  background: color-mix(in srgb, var(--primary-color) 7%, transparent);
+}
+
+.content :global(hr) {
+  margin: 2rem 0;
+  border: 0;
+  height: 1px;
+  background: color-mix(in srgb, var(--secondary-text-color) 25%, transparent);
+}
+
+.content :global(p strong) {
+  color: #fff;
+  background: var(--primary-color);
+  border-radius: 0.35rem;
+  padding: 0.12rem 0.42rem;
+  font-weight: 700;
+}
+
+:global(.dark) .hero {
+  background: linear-gradient(135deg, #1f1f1f, #111);
+}

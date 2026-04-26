@@ -1,4 +1,4 @@
-# Build and Release Folders
+﻿# Build and Release Folders
 bin/
 bin-debug/
 bin-release/
@@ -54,6 +54,12 @@ build/Release
 # Build directories
 public
 dist
+dist-ssr
+
+# Generated static artifacts
+static/search-index.json
+static/sitemap.xml
+static/robots.txt
 
 # Dependency directory
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git

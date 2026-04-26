@@ -1,0 +1,239 @@
+﻿.hero {
+  min-height: 74vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #fff;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.72)),
+    url("/images/sobre/identidade.webp") center / cover no-repeat;
+  padding: 6rem 0 4rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 7vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: clamp(1.1rem, 3vw, 1.65rem);
+  margin-bottom: 2rem;
+}
+
+.sectionSpace {
+  padding: 5.5rem 0;
+}
+
+.aboutCarousel {
+  width: 100%;
+  min-height: 430px;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  position: relative;
+  background: var(--secondary-background-color);
+}
+
+.imageCover {
+  width: 100%;
+  min-height: 430px;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carouselImage {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(1.03);
+  transition:
+    opacity 0.8s ease,
+    transform 2.2s ease;
+}
+
+.carouselImageActive {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.carouselIndicators {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.28);
+}
+
+.carouselIndicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  transition: all 0.3s ease;
+}
+
+.carouselIndicatorActive {
+  width: 24px;
+  border-radius: 999px;
+  background: #fff;
+}
+
+.lead {
+  font-size: 1.18rem;
+}
+
+.highlight {
+  margin-top: 1.3rem;
+  padding: 1rem 1.2rem;
+  border-left: 5px solid var(--primary-color);
+  border-radius: 0.8rem;
+  background: var(--secondary-background-color);
+  font-weight: 600;
+}
+
+.softBackground {
+  background: var(--secondary-background-color);
+}
+
+.identityCard {
+  background: var(--background-color);
+  border-radius: 1rem;
+  border: 1px solid color-mix(in srgb, var(--secondary-text-color) 18%, transparent);
+  padding: 1.5rem;
+  height: 100%;
+  text-align: center;
+}
+
+.iconWrap {
+  width: 68px;
+  height: 68px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 0.9rem;
+  font-size: 1.45rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--brand-700), var(--brand-500));
+}
+
+.identityCard h3 {
+  font-size: 1.25rem;
+}
+
+.identityCard p {
+  margin: 0;
+  color: var(--secondary-text-color);
+}
+
+.bannerImage {
+  width: 100%;
+  height: min(420px, 55vw);
+  min-height: 240px;
+  object-fit: cover;
+}
+
+.worshipSection {
+  color: #fff;
+  background: linear-gradient(135deg, var(--brand-700), var(--brand-900));
+}
+
+.worshipCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  background: color-mix(in srgb, var(--background-color) 86%, var(--brand-50));
+  color: var(--text-color);
+  border-left: 5px solid var(--primary-color);
+}
+
+.worshipCard i {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.worshipCard h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.worshipCard p {
+  margin: 0;
+  color: var(--secondary-text-color);
+  font-weight: 600;
+}
+
+.locationCard {
+  border-radius: 0.8rem;
+  padding: 1rem 1.2rem;
+  margin-bottom: 0.8rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.locationCard h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.locationCard p {
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.locationCard a {
+  color: #fff;
+}
+
+.closing {
+  margin-top: 3rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 2rem;
+}
+
+.closing h3 {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.closing h4 {
+  margin: 0;
+  font-weight: 700;
+}
+
+:global(.dark) .worshipSection {
+  background: linear-gradient(135deg, #132122, #0d1415);
+}
+
+:global(.dark) .worshipCard {
+  background: #1e2f30;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .sectionSpace {
+    padding: 4rem 0;
+  }
+
+  .aboutCarousel,
+  .imageCover {
+    min-height: 320px;
+  }
+
+  .worshipSection {
+    padding-bottom: 4.5rem;
+  }
+}
+
+
+
+

@@ -1,0 +1,46 @@
+﻿.block {
+  border: 1px solid color-mix(in srgb, var(--secondary-text-color) 20%, transparent);
+  border-radius: 0.9rem;
+  background: var(--background-color);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.block h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.block ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.block li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.block a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.block a:hover,
+.block a:focus-visible {
+  color: var(--primary-color);
+}
+
+.block span {
+  background: var(--secondary-background-color);
+  min-width: 1.5rem;
+  border-radius: 999px;
+  text-align: center;
+  padding: 0.1rem 0.45rem;
+  font-size: 0.85rem;
+}

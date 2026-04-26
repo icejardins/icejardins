@@ -32,13 +32,13 @@ defaultContentLanguageInSubdir = false
   textAlign = "left"
 
 [params.color]
-  textColor                = "#1a1a1a"
-  secondaryTextColor       = "#7E7E7E"
-  textLinkColor            = "#1D5E62"
-  backgroundColor          = "#FFFFFF"
-  secondaryBackgroundColor = "#f8f9fa"
-  primaryColor             = "#CC6B02"
-  secondaryColor           = "#f8f9fa"
+  textColor                = "#12383A"
+  secondaryTextColor       = "#4D6B6D"
+  textLinkColor            = "#145F63"
+  backgroundColor          = "#F4F8F8"
+  secondaryBackgroundColor = "#e7f8f8"
+  primaryColor             = "#145F63"
+  secondaryColor           = "#E2F0F1"
 
 [params.navbar]
     align = "ms-auto"
