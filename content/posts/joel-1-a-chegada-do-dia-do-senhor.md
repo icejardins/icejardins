@@ -5,7 +5,9 @@ date = '2026-04-23'
 draft = false
 categorias = ['Sermões', 'Joel', 'Antigo Testamento']
 tags = ['Joel', 'Antigo Testamento']
-image = "/images/posts/joel-1-a-chegada-do-dia-do-senhor.jpg"
+series = "Joel"
+biblicalText = "Joel 1"
+image = "/images/posts/joel-1-a-chegada-do-dia-do-senhor.webp"
 +++
 
 A Bíblia tem como tema como Deus trata da calamidade causada pelo pecado e o que Deus precisou fazer para nos salvar em Cristo. O livro de Joel tem como pano de fundo a seriedade do pecado e a necessidade de redenção. Pense em como preparamos nossas casas para uma festa importante. Da mesma forma, Deus, em Sua soberania, prepara a história para o grande evento da redenção. Já estamos nos aproximando do Natal, e é sempre importante lembrar por que ele é necessário!
