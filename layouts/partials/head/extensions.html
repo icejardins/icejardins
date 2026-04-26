@@ -1,0 +1,41 @@
+{{ $church := .Site.Params.church }}
+{{ $description := .Description | default .Params.description | default .Site.Params.description }}
+<meta name="geo.region" content="BR-DF">
+<meta name="geo.placename" content="Brasília">
+<meta name="theme-color" content="{{ .Site.Params.color.primaryColor | default "#CC6B02" }}">
+
+{{ if $church }}
+{{ $address := dict
+    "@type" "PostalAddress"
+    "streetAddress" (printf "%s, %s" $church.addressLine1 $church.addressLine2)
+    "addressLocality" "Brasília"
+    "addressRegion" "DF"
+    "postalCode" $church.postalCode
+    "addressCountry" "BR"
+}}
+{{ $openingHours := slice (dict
+    "@type" "OpeningHoursSpecification"
+    "dayOfWeek" "Sunday"
+    "opens" "09:30"
+    "closes" "12:00"
+) }}
+{{ $sameAs := slice .Site.Params.footer.socialNetworks.facebook .Site.Params.footer.socialNetworks.instagram }}
+{{ $schema := dict
+    "@context" "https://schema.org"
+    "@type" "Church"
+    "@id" (printf "%s/#church" (strings.TrimSuffix "/" .Site.BaseURL))
+    "name" $church.fullName
+    "alternateName" $church.shortName
+    "description" (.Site.Params.description | default $description)
+    "url" .Site.BaseURL
+    "email" $church.email
+    "telephone" $church.phone
+    "image" (absURL (strings.TrimPrefix "/" $church.logoColor))
+    "address" $address
+    "openingHoursSpecification" $openingHours
+    "sameAs" $sameAs
+}}
+<script type="application/ld+json">
+{{ $schema | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+{{ end }}

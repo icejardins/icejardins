@@ -1,10 +1,17 @@
 <div class="container py-4">
     <div class="row justify-content-center">
         <div class="col-md-4 text-center">
-            {{ if or .Site.Params.navbar.brandLogo .Site.Params.favicon }}
+            {{ if .Site.Params.church.logoColor }}
                 <div class="pb-2">
                     <a href="{{ .Site.BaseURL }}" title="{{ .Site.Title }}">
-                        <img alt="Footer logo" src="{{ strings.TrimPrefix "/" (.Site.Params.navbar.brandLogo | default .Site.Params.favicon) | relURL }}"
+                        <img alt="{{ .Site.Params.church.fullName }}" src="{{ strings.TrimPrefix "/" .Site.Params.church.logoColor | relURL }}"
+                            height="48" style="width: auto; max-width: 190px;">
+                    </a>
+                </div>
+            {{ else if or .Site.Params.navbar.brandLogo .Site.Params.favicon }}
+                <div class="pb-2">
+                    <a href="{{ .Site.BaseURL }}" title="{{ .Site.Title }}">
+                        <img alt="{{ .Site.Params.navbar.brandName | default .Site.Title }}" src="{{ strings.TrimPrefix "/" (.Site.Params.navbar.brandLogo | default .Site.Params.favicon) | relURL }}"
                             height="40px" width="40px">
                     </a>
                 </div>

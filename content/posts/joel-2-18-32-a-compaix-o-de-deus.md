@@ -5,6 +5,8 @@ date = '2026-04-23'
 draft = false
 tags = ["Joel", "Antigo Testamento"]
 categorias = ['Sermões', 'Joel', 'Antigo Testamento']
+series = "Joel"
+biblicalText = "Joel 2:18-32"
 image = "/images/posts/joel-2-18-32-a-compaix-o-de-deus.webp"
 +++
 

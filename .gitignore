@@ -20,6 +20,11 @@ bin-release/
 # Hugo
 public/
 resources/
+
+# Local source branding files kept outside the site bundle
+logo-ice-jardins-*.png
+tmp-visual-review/
+
 # Backup Files
 *.markdown~
 *.md~

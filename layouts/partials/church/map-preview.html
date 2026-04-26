@@ -1,0 +1,30 @@
+{{ $church := .Site.Params.church }}
+
+<a class="ice-map-card" href="{{ $church.mapsUrl }}" aria-label="Abrir rota para a ICE Jardins no Google Maps">
+  <div class="ice-map-leaf" aria-hidden="true">
+    <svg viewBox="0 0 200 200" focusable="false">
+      <path d="M100 190 Q100 140 60 110 Q30 90 25 60 Q22 35 40 20 Q70 10 100 30 Q130 10 160 20 Q178 35 175 60 Q170 90 140 110 Q100 140 100 190 Z"/>
+      <path d="M40 30 Q55 50 50 70"/>
+      <path d="M30 55 Q50 65 60 80"/>
+      <path d="M40 85 Q60 90 75 100"/>
+      <path d="M160 30 Q145 50 150 70"/>
+      <path d="M170 55 Q150 65 140 80"/>
+    </svg>
+  </div>
+  <div class="ice-map-body">
+    <div class="ice-map-label">— como chegar</div>
+    <h3>{{ $church.venue }}</h3>
+    <p class="ice-map-address">
+      {{ $church.addressLine1 }}<br>
+      {{ $church.addressLine2 }} — {{ $church.cityRegion }}<br>
+      CEP {{ $church.postalCode }}
+    </p>
+    <div class="ice-map-route" aria-hidden="true">
+      <span class="ice-map-pin"></span>
+    </div>
+  </div>
+  <div class="ice-map-footer">
+    <span class="ice-map-note">{{ $church.venueNote }}</span>
+    <span class="ice-map-cta">Abrir no mapa →</span>
+  </div>
+</a>

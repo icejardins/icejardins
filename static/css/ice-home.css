@@ -1,0 +1,3249 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --ice-bone: #f6f2ea;
+  --ice-bone-2: #ece5d6;
+  --ice-paper: #faf7f1;
+  --ice-ink: #0d1f17;
+  --ice-moss: #1a3d2e;
+  --ice-moss-2: #2a5a44;
+  --ice-sage: #7a9a86;
+  --ice-leaf: #c8d6c0;
+  --ice-ember: #d97442;
+  --ice-ember-deep: #b8542a;
+  --ice-gold: #d4a44b;
+  --ice-text-1: #14251c;
+  --ice-text-2: #43544a;
+  --ice-text-3: #7b877d;
+  --ice-display: "Fraunces", "Cormorant Garamond", Georgia, serif;
+  --ice-serif: "Cormorant Garamond", Georgia, serif;
+  --ice-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ice-hand: "Caveat", cursive;
+  --ice-shadow-sm: 0 10px 28px -22px rgba(13, 31, 23, 0.3);
+  --ice-shadow-md: 0 18px 48px -28px rgba(13, 31, 23, 0.32);
+  --ice-shadow-lg: 0 30px 90px -42px rgba(13, 31, 23, 0.42);
+}
+
+html {
+  background: var(--ice-bone) !important;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ice-bone) !important;
+  color: var(--ice-text-1) !important;
+  font-family: var(--ice-sans) !important;
+  overflow-x: hidden;
+}
+
+body.dark,
+html.dark {
+  background: var(--ice-bone) !important;
+  color: var(--ice-text-1) !important;
+}
+
+::selection {
+  background: var(--ice-moss);
+  color: var(--ice-bone);
+}
+
+#content {
+  background: var(--ice-bone);
+  min-height: 70vh;
+}
+
+#search-content {
+  display: none;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+.ice-site-header {
+  background: linear-gradient(to bottom, rgba(250, 247, 241, 0.96), rgba(250, 247, 241, 0.86));
+  border-bottom: 1px solid rgba(236, 229, 214, 0.9);
+  backdrop-filter: blur(14px);
+  position: sticky;
+  top: 0;
+  z-index: 60;
+}
+
+.ice-nav {
+  padding: 0;
+}
+
+.ice-nav-inner {
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1440px;
+  min-height: 82px;
+  padding: 0 3.5rem;
+  width: 100%;
+}
+
+.ice-brand {
+  align-items: baseline;
+  color: var(--ice-moss);
+  display: inline-flex;
+  gap: 0.35rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.ice-brand:hover {
+  color: var(--ice-moss);
+  text-decoration: none;
+}
+
+.ice-brand-main {
+  font-family: var(--ice-display);
+  font-size: 1.45rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.ice-brand-script {
+  color: var(--ice-ember);
+  font-family: var(--ice-hand);
+  font-size: 1.75rem;
+  font-weight: 600;
+  transform: rotate(-2deg);
+}
+
+.ice-nav-collapse {
+  align-items: center;
+  flex-grow: 0;
+  gap: 1.6rem;
+}
+
+.ice-nav-links {
+  align-items: center;
+  gap: 1.35rem;
+}
+
+.ice-nav-links .nav-link {
+  color: var(--ice-text-2) !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.35rem 0 !important;
+}
+
+.ice-nav-links .nav-link:hover,
+.ice-nav-links .nav-link.active {
+  color: var(--ice-ember) !important;
+}
+
+.ice-nav-cta,
+.ice-nav-whatsapp {
+  align-items: center;
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: 600;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0.65rem 1.05rem;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.ice-nav-cta {
+  border: 1px solid var(--ice-moss);
+  color: var(--ice-moss);
+}
+
+.ice-nav-whatsapp {
+  background: rgba(217, 116, 66, 0.1);
+  border: 1px solid rgba(217, 116, 66, 0.32);
+  color: var(--ice-ember);
+}
+
+.ice-nav-cta:hover {
+  background: var(--ice-moss);
+  color: var(--ice-bone);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.ice-nav-whatsapp:hover {
+  background: var(--ice-ember);
+  color: var(--ice-bone);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.ice-theme-orb {
+  align-items: center;
+  background: rgba(26, 61, 46, 0.04);
+  border: 1px solid rgba(26, 61, 46, 0.18);
+  border-radius: 999px;
+  color: var(--ice-moss);
+  cursor: pointer;
+  display: inline-flex;
+  gap: 0.45rem;
+  min-height: 42px;
+  padding: 0.45rem 0.8rem 0.45rem 0.55rem;
+  transition: background 0.22s ease, border-color 0.22s ease, color 0.22s ease, transform 0.22s ease;
+  white-space: nowrap;
+}
+
+.ice-theme-orb:hover {
+  background: rgba(26, 61, 46, 0.08);
+  border-color: rgba(26, 61, 46, 0.34);
+  transform: translateY(-1px);
+}
+
+.ice-theme-orb:focus-visible {
+  outline: 3px solid rgba(217, 116, 66, 0.3);
+  outline-offset: 2px;
+}
+
+.ice-theme-symbol {
+  background: var(--ice-moss);
+  border-radius: 50%;
+  display: inline-block;
+  height: 1.35rem;
+  position: relative;
+  width: 1.35rem;
+}
+
+.ice-theme-moon {
+  background: var(--ice-paper);
+  border-radius: 50%;
+  height: 0.9rem;
+  position: absolute;
+  right: 0.15rem;
+  top: 0.15rem;
+  width: 0.9rem;
+}
+
+.ice-theme-leaf {
+  background: var(--ice-gold);
+  border-radius: 50% 0 50% 50%;
+  bottom: -0.12rem;
+  height: 0.44rem;
+  position: absolute;
+  right: -0.05rem;
+  transform: rotate(-28deg);
+  width: 0.32rem;
+}
+
+.ice-theme-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.ice-nav-toggle {
+  border: 1px solid rgba(26, 61, 46, 0.18);
+  border-radius: 999px;
+  height: 42px;
+  padding: 0;
+  width: 42px;
+}
+
+.ice-nav-toggle:focus {
+  box-shadow: 0 0 0 0.18rem rgba(217, 116, 66, 0.18);
+}
+
+.ice-nav-toggle span {
+  background: var(--ice-moss);
+  display: block;
+  height: 2px;
+  margin: 5px auto;
+  width: 18px;
+}
+
+.ice-footer {
+  background: var(--ice-ink);
+  background-color: var(--ice-ink) !important;
+  color: var(--ice-bone);
+  color: var(--ice-bone) !important;
+  padding: 5rem 3.5rem 2.5rem;
+}
+
+.ice-footer-grid {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.ice-footer-tag,
+.ice-hand {
+  color: var(--ice-gold);
+  font-family: var(--ice-hand);
+  font-size: 1.35rem;
+}
+
+.ice-footer-brand h2 {
+  color: var(--ice-bone);
+  font-family: var(--ice-display);
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin: 0.2rem 0 0.75rem;
+}
+
+.ice-footer-brand p {
+  color: rgba(246, 242, 234, 0.82);
+  line-height: 1.7;
+  margin: 0;
+  max-width: 340px;
+}
+
+.ice-footer-col h3 {
+  color: var(--ice-gold);
+  font-family: var(--ice-display);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+}
+
+.ice-footer-col a {
+  color: rgba(246, 242, 234, 0.84);
+  display: block;
+  font-size: 0.92rem;
+  padding: 0.36rem 0;
+  text-decoration: none;
+}
+
+.ice-footer-col a:hover {
+  color: var(--ice-gold);
+  text-decoration: none;
+}
+
+.ice-footer-bottom {
+  border-top: 1px solid rgba(246, 242, 234, 0.12);
+  color: rgba(246, 242, 234, 0.64);
+  display: flex;
+  font-size: 0.78rem;
+  justify-content: space-between;
+  margin: 4rem auto 0;
+  max-width: 1280px;
+  padding-top: 2rem;
+}
+
+.whatsapp-float {
+  align-items: center;
+  background: var(--ice-ember);
+  border: 1px solid rgba(246, 242, 234, 0.45);
+  border-radius: 50%;
+  bottom: 1.5rem;
+  box-shadow: 0 18px 42px -18px rgba(13, 31, 23, 0.5);
+  color: var(--ice-bone);
+  display: flex;
+  height: 3.7rem;
+  justify-content: center;
+  position: fixed;
+  right: 1.5rem;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+  width: 3.7rem;
+  z-index: 1000;
+}
+
+.whatsapp-float svg {
+  height: 1.75rem;
+  width: 1.75rem;
+}
+
+.whatsapp-float:hover {
+  background: var(--ice-ember-deep);
+  color: var(--ice-bone);
+  text-decoration: none;
+  transform: translateY(-2px) scale(1.03);
+}
+
+.ice-section {
+  padding: clamp(5rem, 9vw, 8.5rem) clamp(1.5rem, 6vw, 5rem);
+  position: relative;
+}
+
+.ice-section-inner {
+  margin-inline: auto;
+  max-width: 1280px;
+}
+
+.ice-kicker,
+.ice-page-kicker {
+  color: var(--ice-ember);
+  font-family: var(--ice-hand);
+  font-size: clamp(1.35rem, 2.1vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+}
+
+.ice-title,
+.ice-page-title {
+  color: var(--ice-moss);
+  font-family: var(--ice-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-variation-settings: "opsz" 144;
+  font-weight: 300;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+  margin: 0;
+}
+
+.ice-title em,
+.ice-page-title em {
+  color: var(--ice-ember);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.ice-copy,
+.ice-page-copy {
+  color: var(--ice-text-2);
+  font-size: 1.06rem;
+  line-height: 1.8;
+}
+
+.ice-btn {
+  align-items: center;
+  border-radius: 4px;
+  display: inline-flex;
+  font-size: 0.94rem;
+  font-weight: 600;
+  gap: 0.6rem;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0.9rem 1.35rem;
+  text-decoration: none;
+  transition: background 0.22s ease, border-color 0.22s ease, color 0.22s ease, transform 0.22s ease;
+}
+
+.ice-btn:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.ice-btn-primary {
+  background: var(--ice-moss);
+  border: 1px solid var(--ice-moss);
+  color: var(--ice-bone);
+}
+
+.ice-btn-primary:hover {
+  background: var(--ice-ink);
+  border-color: var(--ice-ink);
+  color: var(--ice-bone);
+}
+
+.ice-btn-ember {
+  background: var(--ice-ember);
+  border: 1px solid var(--ice-ember);
+  color: var(--ice-bone);
+}
+
+.ice-btn-ember:hover {
+  background: var(--ice-ember-deep);
+  border-color: var(--ice-ember-deep);
+  color: var(--ice-bone);
+}
+
+.ice-btn-outline {
+  background: transparent;
+  border: 1px solid rgba(26, 61, 46, 0.22);
+  color: var(--ice-moss);
+}
+
+.ice-btn-outline:hover {
+  border-color: var(--ice-ember);
+  color: var(--ice-ember);
+}
+
+.ice-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+  transform: none;
+}
+
+.ice-btn-ghost {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  border-radius: 0;
+  color: var(--ice-moss);
+  min-height: 0;
+  padding: 0.7rem 0;
+}
+
+.ice-btn-ghost:hover {
+  color: var(--ice-ember);
+}
+
+.ice-home {
+  background: var(--ice-paper);
+  overflow: hidden;
+}
+
+.ice-home-hero {
+  align-items: center;
+  background:
+    radial-gradient(ellipse at 88% 22%, rgba(217, 116, 66, 0.12), transparent 42%),
+    linear-gradient(180deg, var(--ice-paper), var(--ice-bone));
+  display: grid;
+  gap: clamp(3rem, 6vw, 5.5rem);
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.86fr);
+  min-height: calc(100vh - 82px);
+  overflow: hidden;
+  padding: clamp(4.5rem, 8vw, 7rem) clamp(1.5rem, 6vw, 5rem) clamp(4rem, 7vw, 6rem);
+  position: relative;
+}
+
+@media (min-width: 981px) {
+  .ice-home-hero {
+    gap: 80px;
+    grid-template-columns: 1fr 1fr;
+    padding: 140px 80px 80px;
+  }
+
+  .ice-verse,
+  .ice-sermons-home {
+    padding: 140px 80px;
+  }
+
+  .ice-story,
+  .ice-pillars,
+  .ice-visit {
+    padding: 120px 80px;
+  }
+
+  .ice-closing {
+    padding: 160px 80px;
+  }
+}
+
+.ice-home-hero::before,
+.ice-home-hero::after {
+  background: none;
+  border: 1px solid rgba(26, 61, 46, 0.18);
+  border-radius: 50% 50% 50% 8%;
+  content: "";
+  height: 14rem;
+  pointer-events: none;
+  position: absolute;
+  width: 9rem;
+}
+
+.ice-home-hero::before {
+  left: -2rem;
+  opacity: 0.28;
+  top: 6rem;
+  transform: rotate(-24deg);
+}
+
+.ice-home-hero::after {
+  bottom: 2.5rem;
+  opacity: 0.18;
+  right: 2rem;
+  transform: rotate(20deg);
+}
+
+.ice-hero-text {
+  max-width: 760px;
+  position: relative;
+  z-index: 2;
+}
+
+.ice-hero-eyebrow {
+  color: var(--ice-ember);
+  font-family: var(--ice-hand);
+  font-size: clamp(1.55rem, 2.5vw, 2rem);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.ice-home-hero h1 {
+  color: var(--ice-moss);
+  font-family: var(--ice-display);
+  font-size: clamp(4.1rem, 8vw, 8.8rem);
+  font-variation-settings: "opsz" 144;
+  font-weight: 300;
+  letter-spacing: -0.045em;
+  line-height: 0.92;
+  margin: 0 0 1.8rem;
+}
+
+.ice-home-hero h1 em {
+  color: var(--ice-ember);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.ice-hero-sub {
+  color: var(--ice-text-2);
+  font-family: var(--ice-display);
+  font-size: clamp(1.25rem, 2.1vw, 1.55rem);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.45;
+  margin: 0 0 2.4rem;
+  max-width: 560px;
+}
+
+.ice-hero-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.ice-hero-visual {
+  aspect-ratio: 4 / 5;
+  max-height: 680px;
+  position: relative;
+}
+
+.ice-hero-frame {
+  background: linear-gradient(135deg, var(--ice-moss), var(--ice-ink));
+  border-radius: 4px;
+  box-shadow: var(--ice-shadow-lg);
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.ice-hero-illustration {
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.ice-leaf-bg {
+  color: var(--ice-sage);
+  pointer-events: none;
+  position: absolute;
+  z-index: 2;
+}
+
+.ice-leaf-bg-tl {
+  left: -3.75rem;
+  opacity: 0.72;
+  top: -2.5rem;
+  transform: rotate(-25deg);
+}
+
+.ice-leaf-bg-br {
+  bottom: -3.75rem;
+  color: var(--ice-moss);
+  opacity: 0.62;
+  right: -2.5rem;
+  transform: rotate(180deg);
+}
+
+.ice-hero-frame img {
+  filter: saturate(0.9) contrast(1.02);
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  opacity: 0.88;
+  width: 100%;
+}
+
+.ice-hero-frame::after {
+  background:
+    radial-gradient(circle at 72% 28%, rgba(217, 116, 66, 0.2), transparent 42%),
+    linear-gradient(180deg, rgba(13, 31, 23, 0.02), rgba(13, 31, 23, 0.28));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.ice-hero-img-num,
+.ice-hero-img-label {
+  color: var(--ice-bone);
+  left: auto;
+  position: absolute;
+  z-index: 2;
+}
+
+.ice-hero-img-num {
+  font-family: var(--ice-display);
+  font-size: 0.76rem;
+  letter-spacing: 0.18em;
+  opacity: 0.78;
+  right: 1.5rem;
+  top: 1.5rem;
+  text-transform: uppercase;
+}
+
+.ice-hero-img-label {
+  bottom: 1.5rem;
+  font-family: var(--ice-display);
+  font-size: 0.95rem;
+  font-style: italic;
+  left: 1.5rem;
+  max-width: 280px;
+  opacity: 0.9;
+}
+
+.ice-service-card {
+  background: var(--ice-paper);
+  border-left: 3px solid var(--ice-ember);
+  border-radius: 4px;
+  bottom: 12%;
+  box-shadow: var(--ice-shadow-lg);
+  padding: 1.35rem 1.55rem;
+  position: absolute;
+  right: -2.5rem;
+  width: min(320px, 88%);
+  z-index: 4;
+}
+
+@media (min-width: 981px) {
+  .ice-service-card {
+    bottom: auto;
+    right: -40px;
+    top: 60%;
+  }
+}
+
+.ice-service-card .label {
+  color: var(--ice-ember);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin-bottom: 0.55rem;
+  text-transform: uppercase;
+}
+
+.ice-service-card h2 {
+  color: var(--ice-moss);
+  font-family: var(--ice-display);
+  font-size: 1.45rem;
+  font-weight: 400;
+  margin: 0 0 0.25rem;
+}
+
+.ice-service-card p {
+  color: var(--ice-text-2);
+  font-size: 0.88rem;
+  margin: 0 0 0.8rem;
+}
+
+.ice-service-times {
+  border-top: 1px solid var(--ice-bone-2);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 0.85rem;
+}
+
+.ice-service-times strong {
+  color: var(--ice-moss);
+  display: block;
+  font-family: var(--ice-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.ice-service-times span {
+  color: var(--ice-text-3);
+  display: block;
+  font-size: 0.78rem;
+}
+
+.ice-verse {
+  background: var(--ice-bone);
+  text-align: center;
+}
+
+.ice-verse::before,
+.ice-verse::after {
+  background: var(--ice-moss);
+  content: "";
+  height: 64px;
+  left: 50%;
+  opacity: 0.22;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+.ice-verse::after {
+  bottom: 0;
+  top: auto;
+}
+
+.ice-verse blockquote {
+  color: var(--ice-moss);
+  font-family: var(--ice-display);
+  font-size: clamp(2.3rem, 4.8vw, 4.4rem);
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  line-height: 1.16;
+  margin: 0 auto 1.5rem;
+  max-width: 1080px;
+}
+
+.ice-verse blockquote em {
+  color: var(--ice-ember);
+  font-style: italic;
+}
+
+.ice-verse cite {
+  color: var(--ice-text-3);
+  font-family: var(--ice-display);
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.ice-story {
+  background: var(--ice-paper);
+}
+
+.ice-story-grid {
+  align-items: start;
+  display: grid;
+  gap: clamp(3rem, 6vw, 5rem);
+  grid-template-columns: 0.44fr 1fr;
+}
+
+.ice-story-cols {
+  columns: 2;
+  column-gap: clamp(2rem, 4vw, 3.5rem);
+}
+
+.ice-story-cols p {
+  break-inside: avoid;
+  color: var(--ice-text-2);
+  font-size: 1.06rem;
+  line-height: 1.8;
+  margin: 0 0 1.2rem;
+}
+
+.ice-story-cols p:first-child::first-letter {
+  color: var(--ice-ember);
+  float: left;
+  font-family: var(--ice-display);
+  font-size: 3.3rem;
+  line-height: 0.9;
+  padding: 0.35rem 0.45rem 0 0;
+}
+
+.ice-pull {
+  border-left: 2px solid var(--ice-ember);
+  color: var(--ice-moss);
+  font-family: var(--ice-display);
+  font-size: clamp(1.55rem, 2.5vw, 2.05rem);
+  font-style: italic;
+  line-height: 1.35;
+  margin-top: 2.5rem;
+  max-width: 720px;
+  padding: 1.3rem 0 1.3rem 1.8rem;
+}
+
+.ice-pillars {
+  background:
+    radial-gradient(ellipse at 80% 0%, rgba(212, 164, 75, 0.18), transparent 50%),
+    var(--ice-moss);
+  color: var(--ice-bone);
+  overflow: hidden;
+}
+
+.ice-pillars .ice-kicker {
+  color: var(--ice-gold);
+}
+
+.ice-pillars .ice-title {
+  color: var(--ice-bone);
+}
+
+.ice-pillars-head {
+  margin: 0 auto clamp(3rem, 6vw, 4.5rem);
+  max-width: 780px;
+  text-align: center;
+}
+
+.ice-pillars-head p {
+  color: rgba(246, 242, 234, 0.75);
+  font-size: 1.06rem;
+  line-height: 1.7;
+  margin: 1rem auto 0;
+  max-width: 560px;
+}
+
+.ice-pillars-grid {
+  display: grid;
+  gap: clamp(2rem, 5vw, 4rem);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.ice-pillar {
+  border-top: 1px solid rgba(246, 242, 234, 0.16);
+  padding-top: 1.5rem;
+}
+
+.ice-pillar .num {
+  color: var(--ice-gold);
+  font-family: var(--ice-display);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.ice-pillar-icon {
+  align-items: flex-end;
+  display: flex;
+  height: 100px;
+  margin-bottom: 1.4rem;
+}
+
+.ice-pillar-icon svg {
+  fill: none;
+  height: 88px;
+  max-width: 100px;
+  stroke: var(--ice-gold);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.ice-pillar h3 {
+  color: var(--ice-bone);
+  font-family: var(--ice-display);
+  font-size: clamp(2.1rem, 3.5vw, 2.7rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin: 0 0 1rem;
+}
+
+.ice-pillar h3 em {
+  color: var(--ice-gold);
+  font-style: italic;
+}
+
+.ice-pillar p {
+  color: rgba(246, 242, 234, 0.76);
+  line-height: 1.72;
+  margin: 0;
+}
+
+.ice-visit {
+  background: var(--ice-paper);
+}
+
+.ice-visit-grid {
+  align-items: stretch;
+  display: grid;
+  gap: clamp(3rem, 6vw, 5rem);
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+}
+
+.ice-visit-list {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+}
+
+.ice-visit-row {
+  align-items: center;
+  border-top: 1px solid var(--ice-bone-2);
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 96px 1fr;
+  padding: 1.25rem 0;
+}
+
+.ice-visit-row:last-child {
+  border-bottom: 1px solid var(--ice-bone-2);
+}
+
+.ice-visit-row .when {
+  color: var(--ice-ember);
+  font-family: var(--ice-display);
+  font-size: 1.8rem;
+  font-style: italic;
+  line-height: 1;
+}
+
+.ice-visit-row .when small {
+  color: var(--ice-text-3);
+  display: block;
+  font-family: var(--ice-sans);
+  font-size: 0.68rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-top: 0.45rem;
+  text-transform: uppercase;
+}
+
+.ice-visit-row strong {
+  color: var(--ice-moss);
+  display: block;
+  font-family: var(--ice-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.12;
+}
+
+.ice-visit-row span {
+  color: var(--ice-text-3);
+  display: block;
+  font-size: 0.92rem;
+  margin-top: 0.2rem;
+}
+
+.ice-map-shell {
+  min-height: 480px;
+}
+
+.ice-map-card {
+  background: linear-gradient(135deg, var(--ice-moss), var(--ice-ink));
+  border-radius: 4px;
+  box-shadow: var(--ice-shadow-lg);
+  color: var(--ice-bone);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 480px;
+  overflow: hidden;
+  padding: clamp(2rem, 4vw, 3rem);
+  position: relative;
+  text-decoration: none;
+}
+
+.ice-map-card:hover {
+  color: var(--ice-bone);
+  text-decoration: none;
+}
+
+.ice-map-card::before {
+  background:
+    linear-gradient(32deg, transparent 0 43%, rgba(246, 242, 234, 0.16) 43% 47%, transparent 47%),
+    linear-gradient(142deg, transparent 0 36%, rgba(246, 242, 234, 0.12) 36% 40%, transparent 40%),
+    radial-gradient(circle at 72% 26%, rgba(212, 164, 75, 0.18), transparent 32%),
+    radial-gradient(circle at 22% 78%, rgba(122, 154, 134, 0.18), transparent 28%);
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.ice-map-card::after {
+  border: 1px solid rgba(246, 242, 234, 0.18);
+  border-radius: 50% 50% 50% 8%;
+  content: "";
+  height: 14rem;
+  opacity: 0.5;
+  position: absolute;
+  right: -3rem;
+  top: -4rem;
+  transform: rotate(24deg);
+  width: 10rem;
+}
+
+.ice-map-body,
+.ice-map-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.ice-map-label {
+  color: var(--ice-gold);
+  font-family: var(--ice-hand);
+  font-size: 1.55rem;
+  margin-bottom: 0.8rem;
+}
+
+.ice-map-card h3 {
+  color: var(--ice-bone);
+  font-family: var(--ice-display);
+  font-size: clamp(2.1rem, 4vw, 3rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  margin: 0 0 1.2rem;
+}
+
+.ice-map-address {
+  color: rgba(246, 242, 234, 0.82);
+  font-family: var(--ice-display);
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 440px;
+}
+
+.ice-map-route {
+  height: 150px;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.ice-map-route::before,
+.ice-map-route::after {
+  background: rgba(246, 242, 234, 0.2);
+  content: "";
+  height: 16px;
+  left: -10%;
+  position: absolute;
+  right: -10%;
+  top: 48%;
+}
+
+.ice-map-route::before {
+  transform: rotate(-14deg);
+}
+
+.ice-map-route::after {
+  transform: rotate(22deg);
+}
+
+.ice-map-pin {
+  background: var(--ice-ember);
+  border-radius: 50% 50% 50% 8px;
+  box-shadow: 0 16px 30px rgba(13, 31, 23, 0.28);
+  height: 58px;
+  left: 58%;
+  position: absolute;
+  top: 24%;
+  transform: rotate(-45deg);
+  width: 58px;
+  z-index: 2;
+}
+
+.ice-map-pin::after {
+  background: var(--ice-bone);
+  border-radius: 50%;
+  content: "";
+  inset: 17px;
+  position: absolute;
+}
+
+.ice-map-footer {
+  align-items: center;
+  border-top: 1px solid rgba(246, 242, 234, 0.18);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding-top: 1.4rem;
+}
+
+.ice-map-note {
+  color: rgba(246, 242, 234, 0.68);
+  font-size: 0.84rem;
+}
+
+.ice-map-cta {
+  border: 1px solid var(--ice-gold);
+  border-radius: 999px;
+  color: var(--ice-gold);
+  display: inline-flex;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.65rem 1rem;
+}
+
+.ice-map-card:hover .ice-map-cta {
+  background: var(--ice-gold);
+  color: var(--ice-moss);
+}
+
+.ice-sermons-home {
+  background: var(--ice-bone);
+}
+
+.ice-section-head {
+  align-items: end;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.ice-link {
+  border-bottom: 1px solid currentColor;
+  color: var(--ice-moss);
+  display: inline-flex;
+  font-weight: 700;
+  gap: 0.5rem;
+  padding: 0.55rem 0;
+  text-decoration: none;
+}
+
+.ice-link:hover {
+  color: var(--ice-ember);
+  text-decoration: none;
+}
+
+.ice-card-grid,
+.ice-sermons-grid {
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.ice-sermon-card {
+  background: var(--ice-paper);
+  border-radius: 6px;
+  box-shadow: var(--ice-shadow-sm);
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-decoration: none;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.ice-sermon-card:hover {
+  box-shadow: var(--ice-shadow-lg);
+  color: inherit;
+  text-decoration: none;
+  transform: translateY(-4px);
+}
+
+.ice-sermon-image {
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(135deg, var(--ice-moss), var(--ice-ink));
+  overflow: hidden;
+  position: relative;
+}
+
+.ice-sermon-art {
+  background: linear-gradient(135deg, var(--ice-moss), var(--ice-ink));
+}
+
+.ice-sermon-art-1::before {
+  background: radial-gradient(circle at 50% 28%, rgba(217, 116, 66, 0.34), transparent 52%);
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.ice-sermon-art-2::before {
+  background: radial-gradient(circle at 70% 28%, rgba(212, 164, 75, 0.35), transparent 60%);
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.ice-sermon-art-3::before {
+  background: radial-gradient(circle at 50% 80%, rgba(122, 154, 134, 0.4), transparent 60%);
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.ice-sermon-art svg {
+  inset: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.ice-sermon-image img {
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.84;
+  width: 100%;
+}
+
+.ice-sermon-image::after {
+  background: radial-gradient(circle at 35% 55%, rgba(217, 116, 66, 0.28), transparent 62%);
+  content: "";
+  inset: 0;
+  mix-blend-mode: screen;
+  position: absolute;
+}
+
+.ice-sermon-num {
+  color: var(--ice-bone);
+  font-family: var(--ice-display);
+  font-size: 0.92rem;
+  font-style: italic;
+  left: 1.25rem;
+  opacity: 0.92;
+  position: absolute;
+  top: 1.1rem;
+  z-index: 1;
+}
+
+.ice-sermon-body {
+  flex: 1;
+  padding: 1.65rem;
+}
+
+.ice-sermon-meta,
+.ice-meta-line {
+  color: var(--ice-text-3);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.85rem;
+  text-transform: uppercase;
+}
+
+.ice-sermon-body h3 {
+  color: var(--ice-moss);
+  font-family: var(--ice-display);
+  font-size: clamp(1.45rem, 2.3vw, 1.95rem);
+  font-weight: 500;
+  line-height: 1.16;
+  margin: 0 0 0.8rem;
+}
+
+.ice-sermon-body p {
+  color: var(--ice-text-2);
+  line-height: 1.65;
+  margin: 0 0 1rem;
+}
+
+.ice-read {
+  color: var(--ice-ember);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.ice-closing {
+  background:
+    radial-gradient(ellipse at 50% 100%, rgba(217, 116, 66, 0.15), transparent 72%),
+    var(--ice-paper);
+  text-align: center;
+  overflow: hidden;
+}
+
+.ice-closing-leaf {
+  color: var(--ice-moss);
+  opacity: 0.48;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  width: 190px;
+  z-index: 0;
+}
+
+.ice-closing-leaf svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1;
+  width: 100%;
+}
+
+.ice-closing-leaf-l {
+  left: -3.75rem;
+  transform: translateY(-50%) rotate(-20deg);
+}
+
+.ice-closing-leaf-r {
+  right: -3.75rem;
+  transform: translateY(-50%) rotate(20deg) scaleX(-1);
+}
+
+.ice-closing .ice-section-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+.ice-closing p {
+  color: var(--ice-text-2);
+  font-family: var(--ice-display);
+  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+  font-style: italic;
+  line-height: 1.5;
+  margin: 1.6rem auto 2.4rem;
+  max-width: 650px;
+}
+
+.ice-page-hero {
+  background:
+    radial-gradient(ellipse at 80% 18%, rgba(212, 164, 75, 0.18), transparent 50%),
+    var(--ice-moss);
+  color: var(--ice-bone);
+  overflow: hidden;
+  padding: clamp(6.5rem, 11vw, 9rem) clamp(1.5rem, 5vw, 3.5rem) clamp(5.5rem, 9vw, 7rem);
+  position: relative;
+}
+
+.ice-page-hero.is-light {
+  background:
+    radial-gradient(ellipse at 80% 18%, rgba(217, 116, 66, 0.12), transparent 50%),
+    var(--ice-paper);
+  color: var(--ice-moss);
+}
+
+.ice-page-hero-inner {
+  margin: 0 auto;
+  max-width: 1280px;
+  position: relative;
+  z-index: 1;
+}
+
+.ice-page-hero .ice-page-kicker {
+  color: var(--ice-gold);
+}
+
+.ice-page-hero.is-light .ice-page-kicker {
+  color: var(--ice-ember);
+}
+
+.ice-page-hero .ice-page-title {
+  color: var(--ice-bone);
+  font-size: clamp(4rem, 8vw, 8rem);
+}
+
+.ice-page-hero.is-light .ice-page-title {
+  color: var(--ice-moss);
+}
+
+.ice-page-hero .ice-page-copy {
+  color: rgba(246, 242, 234, 0.82);
+  font-family: var(--ice-display);
+  font-size: clamp(1.25rem, 2vw, 1.45rem);
+  font-style: italic;
+  margin: 1.4rem 0 0;
+  max-width: 720px;
+}
+
+.ice-page-hero .ice-meta-line {
+  color: rgba(246, 242, 234, 0.58);
+}
+
+.ice-page-title .ice-hand {
+  color: var(--ice-gold);
+  display: block;
+  font-family: var(--ice-hand);
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.1;
+  margin-bottom: 0.85rem;
+}
+
+.ice-page-hero.is-light .ice-page-copy {
+  color: var(--ice-text-2);
+}
+
+.ice-intro-card {
+  background: var(--ice-paper);
+  border-left: 4px solid var(--ice-ember);
+  border-radius: 4px;
+  box-shadow: var(--ice-shadow-lg);
+  margin: -4rem auto 0;
+  max-width: 860px;
+  padding: clamp(2rem, 4vw, 3.3rem);
+  position: relative;
+  z-index: 4;
+}
+
+.ice-intro-card p {
+  color: var(--ice-text-2);
+  font-size: 1.08rem;
+  line-height: 1.76;
+  margin: 0 0 1rem;
+}
+
+.ice-intro-card p:last-child {
+  color: var(--ice-moss);
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.ice-belief-layout {
+  display: grid;
+  gap: clamp(2rem, 5vw, 4rem);
+  grid-template-columns: 250px minmax(0, 1fr);
+  margin: clamp(5rem, 8vw, 7rem) auto;
+  max-width: 1280px;
+  padding: 0 clamp(1.5rem, 5vw, 3.5rem);
+}
+
+.ice-toc {
+  position: sticky;
+  top: 110px;
+}
+
+.ice-toc-title {
+  color: var(--ice-text-3);
+  font-family: var(--ice-display);
+  font-size: 0.82rem;
+  font-style: italic;
+  letter-spacing: 0.18em;
+  margin-bottom: 1.1rem;
+  text-transform: uppercase;
+}
+
+.ice-toc nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ice-toc nav li {
+  margin: 0;
+}
+
+.ice-toc nav a {
+  border-left: 1px solid var(--ice-bone-2);
+  color: var(--ice-text-2);
+  display: block;
+  font-family: var(--ice-display);
+  font-size: 0.95rem;
+  padding: 0.55rem 0 0.55rem 1rem;
+  text-decoration: none;
+}
+
+.ice-toc nav a:hover {
+  border-color: var(--ice-ember);
+  color: var(--ice-ember);
+}
+
+.ice-belief-content {
+  min-width: 0;
+}
+
+.ice-belief-content h2 {
+  color: var(--ice-moss);
+  font-family: var(--ice-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 300;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+  margin: 0 0 0.75rem;
+  padding-top: 1.8rem;
+  scroll-margin-top: 110px;
+}
+
+.ice-belief-content h2::before {
+  color: var(--ice-ember);
+  content: "— Artigo";
+  display: block;
+  font-family: var(--ice-display);
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.ice-belief-content h2 + p em {
+  color: var(--ice-text-2);
+  display: block;
+  font-family: var(--ice-display);
+  font-size: 1.35rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.ice-belief-content p {
+  color: var(--ice-text-1);
+  font-family: var(--ice-display);
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  line-height: 1.62;
+  margin: 0 0 1.4rem;
+}
+
+.ice-belief-content p strong {
+  background: var(--ice-moss);
+  border-radius: 4px;
+  color: var(--ice-bone);
+  display: inline-block;
+  font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 500;
+  margin-right: 0.55rem;
+  padding: 0.2rem 0.6rem;
+  vertical-align: middle;
+}
+
+.ice-belief-content blockquote {
+  background: var(--ice-paper);
+  border: 1px solid var(--ice-bone-2);
+  border-left: 4px solid var(--ice-ember);
+  border-radius: 0 4px 4px 0;
+  color: var(--ice-text-3);
+  font-family: var(--ice-display);
+  font-size: 1rem;
+  font-style: italic;
+  margin: 1.4rem 0 4rem;
+  padding: 1.2rem 1.5rem;
+}
+
+.ice-belief-content blockquote p {
+  color: inherit;
+  font-size: inherit;
+  margin: 0;
+}
+
+.ice-belief-content hr {
+  border: 0;
+  margin: 1.8rem 0;
+}
+
+.ice-dedication {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(212, 164, 75, 0.15), transparent 60%),
+    var(--ice-moss);
+  border-radius: 4px;
+  color: var(--ice-bone);
+  margin: 0 auto clamp(5rem, 9vw, 8rem);
+  max-width: 860px;
+  overflow: hidden;
+  padding: clamp(3.5rem, 6vw, 5rem) clamp(2rem, 5vw, 3.5rem);
+  text-align: center;
+}
+
+.ice-dedication h2 {
+  color: var(--ice-bone);
+  font-family: var(--ice-display);
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  margin: 0 0 1.3rem;
+}
+
+.ice-dedication em {
+  color: var(--ice-gold);
+  font-style: italic;
+}
+
+.ice-dedication p {
+  color: rgba(246, 242, 234, 0.78);
+  font-family: var(--ice-display);
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 540px;
+}
+
+.ice-visit-page-grid {
+  display: grid;
+  gap: clamp(2rem, 4vw, 3rem);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 2.5rem;
+}
+
+.ice-schedule-card {
+  background: var(--ice-paper);
+  border-top: 4px solid var(--ice-ember);
+  border-radius: 6px;
+  box-shadow: var(--ice-shadow-sm);
+  padding: 1.65rem;
+}
+
+.ice-schedule-card:nth-child(2) {
+  border-color: var(--ice-gold);
+}
+
+.ice-schedule-card:nth-child(3) {
+  border-color: var(--ice-moss);
+}
+
+.ice-time-badge {
+  color: var(--ice-ember);
+  font-family: var(--ice-display);
+  font-size: 2.35rem;
+  font-style: italic;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.ice-schedule-card h3 {
+  color: var(--ice-moss);
+  font-family: var(--ice-display);
+  font-size: 1.65rem;
+  font-weight: 400;
+  margin: 0 0 0.7rem;
+}
+
+.ice-schedule-card p {
+  color: var(--ice-text-2);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.ice-detail-band {
+  background: var(--ice-paper);
+  border-left: 4px solid var(--ice-ember);
+  border-radius: 6px;
+  box-shadow: var(--ice-shadow-sm);
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 4rem;
+  padding: clamp(2rem, 4vw, 3rem);
+}
+
+.ice-detail-band h3 {
+  color: var(--ice-moss);
+  font-family: var(--ice-display);
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0 0 1rem;
+}
+
+.ice-detail-band p {
+  color: var(--ice-text-2);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.ice-sermons-page .ice-page-hero {
+  padding-bottom: clamp(7rem, 12vw, 10rem);
+}
+
+.ice-featured-sermon {
+  margin: -4rem auto 0;
+  max-width: 1280px;
+  padding: 0 clamp(1.5rem, 5vw, 3.5rem);
+  position: relative;
+  z-index: 4;
+}
+
+.ice-sermon-page .ice-featured-sermon {
+  margin-top: 2.5rem;
+}
+
+.ice-featured-card {
+  background: var(--ice-paper);
+  border-radius: 6px;
+  box-shadow: var(--ice-shadow-lg);
+  color: inherit;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.ice-featured-card:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ice-featured-image {
+  background: linear-gradient(135deg, var(--ice-ember), var(--ice-ember-deep));
+  min-height: 360px;
+  overflow: hidden;
+  position: relative;
+}
+
+.ice-featured-image img {
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.78;
+  width: 100%;
+}
+
+.ice-featured-image::after {
+  background: radial-gradient(circle at 30% 70%, rgba(212, 164, 75, 0.35), transparent 58%);
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.ice-play-mark {
+  align-items: center;
+  background: var(--ice-bone);
+  border-radius: 50%;
+  bottom: 1.5rem;
+  box-shadow: 0 14px 32px rgba(13, 31, 23, 0.28);
+  color: var(--ice-ember);
+  display: flex;
+  height: 4rem;
+  justify-content: center;
+  left: 1.5rem;
+  position: absolute;
+  width: 4rem;
+  z-index: 2;
+}
+
+.ice-play-mark::before {
+  border-bottom: 10px solid transparent;
+  border-left: 16px solid currentColor;
+  border-top: 10px solid transparent;
+  content: "";
+  margin-left: 4px;
+}
+
+.ice-featured-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(2rem, 5vw, 3.5rem);
+}
+
+.ice-featured-text h2 {
+  color: var(--ice-moss);
+  font-family: var(--ice-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin: 0 0 1rem;
+}
+
+.ice-featured-text p {
+  color: var(--ice-text-2);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin: 0 0 1.5rem;
+}
+
+.ice-filter-row {
+  align-items: end;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr auto minmax(220px, 280px);
+  margin: clamp(4rem, 7vw, 6rem) auto 1.5rem;
+  max-width: 1280px;
+  padding: 0 clamp(1.5rem, 5vw, 3.5rem);
+}
+
+.ice-filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.ice-filter-pills button {
+  background: transparent;
+  border: 1px solid var(--ice-bone-2);
+  border-radius: 999px;
+  color: var(--ice-text-2);
+  cursor: pointer;
+  font-family: var(--ice-display);
+  font-size: 0.92rem;
+  padding: 0.45rem 0.9rem;
+}
+
+.ice-filter-pills button.active,
+.ice-filter-pills button:hover {
+  background: var(--ice-paper);
+  border-color: var(--ice-ember);
+  color: var(--ice-ember);
+}
+
+.ice-search-input {
+  background: transparent;
+  border: 1px solid var(--ice-bone-2);
+  border-radius: 999px;
+  color: var(--ice-text-1);
+  min-height: 44px;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.ice-sermon-list-grid {
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0 auto clamp(5rem, 8vw, 7rem);
+  max-width: 1280px;
+  padding: 1.5rem clamp(1.5rem, 5vw, 3.5rem) 0;
+}
+
+.ice-series-band {
+  background:
+    radial-gradient(ellipse at 0% 50%, rgba(217, 116, 66, 0.15), transparent 60%),
+    var(--ice-moss);
+  color: var(--ice-bone);
+}
+
+.ice-series-band .ice-kicker {
+  color: var(--ice-gold);
+}
+
+.ice-series-band .ice-title {
+  color: var(--ice-bone);
+}
+
+.ice-series-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 2.5rem;
+}
+
+.ice-series-card {
+  background: rgba(246, 242, 234, 0.045);
+  border: 1px solid rgba(246, 242, 234, 0.12);
+  border-radius: 6px;
+  color: var(--ice-bone);
+  padding: 2rem;
+  text-decoration: none;
+}
+
+.ice-series-card:hover {
+  border-color: var(--ice-gold);
+  color: var(--ice-bone);
+  text-decoration: none;
+}
+
+.ice-series-card .num {
+  color: var(--ice-gold);
+  font-family: var(--ice-display);
+  font-size: 0.8rem;
+  font-style: italic;
+  letter-spacing: 0.14em;
+  margin-bottom: 0.7rem;
+  text-transform: uppercase;
+}
+
+.ice-series-card h3 {
+  color: var(--ice-bone);
+  font-family: var(--ice-display);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 0.8rem;
+}
+
+.ice-series-card p {
+  color: rgba(246, 242, 234, 0.72);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ice-sermon-breadcrumb {
+  align-items: center;
+  color: var(--ice-text-3);
+  display: flex;
+  flex-wrap: wrap;
+  font-family: var(--ice-display);
+  font-size: 0.9rem;
+  font-style: italic;
+  gap: 0.2rem 0.35rem;
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 2.5rem clamp(1.5rem, 5vw, 3.5rem) 0;
+}
+
+.ice-sermon-breadcrumb a {
+  align-items: center;
+  color: var(--ice-text-3);
+  display: inline-flex;
+  min-height: 36px;
+  padding: 0 0.1rem;
+  text-decoration: none;
+}
+
+.ice-sermon-breadcrumb a:hover {
+  color: var(--ice-ember);
+}
+
+.ice-sermon-header {
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 2rem clamp(1.5rem, 5vw, 3.5rem) 2.5rem;
+}
+
+.ice-sermon-series {
+  background: rgba(217, 116, 66, 0.1);
+  border-radius: 999px;
+  color: var(--ice-ember);
+  display: inline-block;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.4rem;
+  padding: 0.4rem 0.85rem;
+  text-transform: uppercase;
+}
+
+.ice-sermon-header h1 {
+  color: var(--ice-moss);
+  font-family: var(--ice-display);
+  font-size: clamp(3.2rem, 6vw, 5.4rem);
+  font-weight: 300;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  margin: 0 0 1rem;
+}
+
+.ice-sermon-summary {
+  color: var(--ice-text-2);
+  font-family: var(--ice-display);
+  font-size: clamp(1.25rem, 2vw, 1.45rem);
+  font-style: italic;
+  line-height: 1.5;
+  margin: 0 0 2rem;
+  max-width: 780px;
+}
+
+.ice-sermon-meta-grid {
+  border-bottom: 1px solid var(--ice-bone-2);
+  border-top: 1px solid var(--ice-bone-2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem 2.5rem;
+  padding: 1.4rem 0;
+}
+
+.ice-sermon-meta-grid .label {
+  color: var(--ice-text-3);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ice-sermon-meta-grid .value {
+  color: var(--ice-moss);
+  font-family: var(--ice-display);
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+
+.ice-reading-card {
+  background: var(--ice-moss);
+  border-radius: 8px;
+  box-shadow: var(--ice-shadow-md);
+  color: var(--ice-bone);
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: auto 1fr auto;
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 1.8rem clamp(1.5rem, 5vw, 2rem);
+}
+
+.ice-reading-mark {
+  align-items: center;
+  background: var(--ice-ember);
+  border-radius: 50%;
+  display: flex;
+  font-family: var(--ice-display);
+  font-size: 1.5rem;
+  height: 4rem;
+  justify-content: center;
+  width: 4rem;
+}
+
+.ice-reading-card h2 {
+  color: var(--ice-gold);
+  font-family: var(--ice-display);
+  font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 400;
+  margin: 0 0 0.35rem;
+}
+
+.ice-reading-card p {
+  color: rgba(246, 242, 234, 0.78);
+  margin: 0;
+}
+
+.ice-sermon-content {
+  color: var(--ice-text-1);
+  font-family: var(--ice-display);
+  font-size: clamp(1.12rem, 2vw, 1.32rem);
+  line-height: 1.75;
+  margin: clamp(4rem, 7vw, 5.5rem) auto;
+  max-width: 820px;
+  padding: 0 clamp(1.5rem, 5vw, 3.5rem);
+  scroll-margin-top: 96px;
+}
+
+.ice-sermon-content > p:first-child::first-letter {
+  color: var(--ice-ember);
+  float: left;
+  font-family: var(--ice-display);
+  font-size: 5.2rem;
+  font-style: italic;
+  line-height: 0.85;
+  padding: 0.55rem 0.75rem 0 0;
+}
+
+.ice-sermon-content h1,
+.ice-sermon-content h2,
+.ice-sermon-content h3 {
+  color: var(--ice-moss);
+  font-family: var(--ice-display);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin: 3rem 0 1rem;
+}
+
+.ice-sermon-content h1 {
+  font-size: clamp(2.3rem, 4vw, 3.2rem);
+}
+
+.ice-sermon-content h2 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+}
+
+.ice-sermon-content h3 {
+  font-size: clamp(1.65rem, 2.5vw, 2.1rem);
+}
+
+.ice-sermon-content blockquote {
+  background: var(--ice-paper);
+  border-left: 4px solid var(--ice-ember);
+  border-radius: 0 4px 4px 0;
+  color: var(--ice-moss);
+  font-size: clamp(1.25rem, 2.5vw, 1.7rem);
+  font-style: italic;
+  line-height: 1.5;
+  margin: 2.4rem -2rem;
+  padding: 1.7rem 2rem;
+}
+
+.ice-sermon-content blockquote p {
+  margin: 0;
+}
+
+.ice-related {
+  background: var(--ice-paper);
+}
+
+.ice-related-grid {
+  display: grid;
+  gap: 1.4rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 2rem;
+}
+
+.ice-related-card {
+  background: var(--ice-bone);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: inherit;
+  padding: 1.5rem;
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.ice-related-card:hover {
+  border-color: var(--ice-ember);
+  color: inherit;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.ice-related-card .num {
+  color: var(--ice-ember);
+  font-family: var(--ice-display);
+  font-size: 0.85rem;
+  font-style: italic;
+  margin-bottom: 0.7rem;
+}
+
+.ice-related-card h3 {
+  color: var(--ice-moss);
+  font-family: var(--ice-display);
+  font-size: 1.45rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 0.6rem;
+}
+
+.ice-related-card p {
+  color: var(--ice-text-2);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ice-map-leaf {
+  color: rgba(212, 164, 75, 0.18);
+  height: 18rem;
+  pointer-events: none;
+  position: absolute;
+  right: -4.5rem;
+  top: -3.5rem;
+  transform: rotate(18deg);
+  width: 18rem;
+  z-index: 1;
+}
+
+.ice-map-leaf svg,
+.ice-page-leaf svg,
+.ice-sermons-hero-leaf svg,
+.ice-closing-leaf svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.1;
+}
+
+.ice-page-leaf,
+.ice-sermons-hero-leaf {
+  color: rgba(246, 242, 234, 0.12);
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+}
+
+.ice-page-leaf {
+  height: 18rem;
+  top: 24%;
+  width: 10rem;
+}
+
+.ice-page-leaf-left {
+  left: 5vw;
+  transform: rotate(-18deg);
+}
+
+.ice-page-leaf-right {
+  right: 5vw;
+  transform: scaleX(-1) rotate(-18deg);
+}
+
+.ice-belief-hero {
+  padding: 180px 56px 120px;
+}
+
+.ice-belief-toc-link {
+  border-left: 1px solid var(--ice-bone-2);
+  color: var(--ice-text-2);
+  display: block;
+  font-family: var(--ice-display);
+  font-size: 0.98rem;
+  padding: 0.58rem 0 0.58rem 1rem;
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.ice-belief-toc-link span {
+  color: var(--ice-ember);
+  font-style: italic;
+  margin-right: 0.35rem;
+}
+
+.ice-belief-toc-link:hover,
+.ice-belief-toc-link.active {
+  border-color: var(--ice-ember);
+  color: var(--ice-moss);
+  text-decoration: none;
+  transform: translateX(2px);
+}
+
+.ice-belief-article {
+  margin-bottom: clamp(4rem, 8vw, 6.5rem);
+  scroll-margin-top: 120px;
+}
+
+.ice-belief-article-num {
+  color: var(--ice-ember);
+  font-family: var(--ice-display);
+  font-size: 0.82rem;
+  font-style: italic;
+  letter-spacing: 0.14em;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+.ice-belief-article h2 {
+  margin-bottom: 0.65rem;
+  padding-top: 0;
+}
+
+.ice-belief-article h2::before {
+  content: none;
+  display: none;
+}
+
+.ice-belief-article h2 em {
+  color: var(--ice-ember);
+  font-style: italic;
+}
+
+.ice-belief-subtitle {
+  color: var(--ice-text-2) !important;
+  font-family: var(--ice-display) !important;
+  font-size: clamp(1.25rem, 2vw, 1.55rem) !important;
+  font-style: italic;
+  line-height: 1.45 !important;
+  margin: 0 0 1.6rem !important;
+}
+
+.ice-belief-article-text {
+  background: var(--ice-paper);
+  border-left: 3px solid var(--ice-moss);
+  border-radius: 4px;
+  box-shadow: var(--ice-shadow-sm);
+  color: var(--ice-text-1);
+  font-family: var(--ice-display);
+  font-size: clamp(1.25rem, 2.1vw, 1.55rem);
+  line-height: 1.62;
+  padding: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.ice-belief-article-text span {
+  background: var(--ice-moss);
+  border-radius: 999px;
+  color: var(--ice-bone);
+  display: inline-block;
+  font-family: var(--ice-display);
+  font-size: 0.9rem;
+  font-style: italic;
+  margin: 0 0.6rem 0.35rem 0;
+  padding: 0.25rem 0.7rem;
+  vertical-align: middle;
+}
+
+.ice-belief-article-text em {
+  color: var(--ice-ember);
+  font-style: italic;
+}
+
+.ice-belief-references {
+  align-items: start;
+  background: var(--ice-bone);
+  border-radius: 4px;
+  color: var(--ice-text-3);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 72px 1fr;
+  margin-top: 1.1rem;
+  padding: 1rem 1.25rem;
+}
+
+.ice-belief-references strong {
+  background: transparent !important;
+  color: var(--ice-ember) !important;
+  font-family: var(--ice-sans) !important;
+  font-size: 0.72rem !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-transform: uppercase;
+}
+
+.ice-belief-references p {
+  color: var(--ice-text-3) !important;
+  font-family: var(--ice-display) !important;
+  font-size: 1rem !important;
+  font-style: italic;
+  line-height: 1.55 !important;
+  margin: 0 !important;
+}
+
+.ice-sermons-hero {
+  padding: 140px 56px 80px;
+}
+
+.ice-sermons-hero-leaf {
+  height: 26rem;
+  right: -3rem;
+  top: 3rem;
+  transform: rotate(-24deg);
+  width: 16rem;
+}
+
+.ice-sermons-hero-meta {
+  color: rgba(246, 242, 234, 0.62);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.76rem;
+  font-weight: 700;
+  gap: 1rem 2rem;
+  letter-spacing: 0.16em;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.ice-featured-art {
+  background:
+    radial-gradient(circle at 70% 24%, rgba(212, 164, 75, 0.36), transparent 35%),
+    radial-gradient(circle at 28% 72%, rgba(246, 242, 234, 0.12), transparent 36%),
+    linear-gradient(135deg, var(--ice-ember), var(--ice-ember-deep));
+}
+
+.ice-featured-art svg {
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.ice-featured-meta {
+  color: var(--ice-text-3);
+  font-size: 0.86rem;
+  font-style: italic;
+  margin: -0.4rem 0 1.5rem;
+}
+
+.ice-featured-text h2 em,
+.ice-sermon-body h3 em,
+.ice-series-card h3 em,
+.ice-sermon-header h1 em {
+  color: var(--ice-ember);
+  font-style: italic;
+}
+
+.ice-sermon-list-art {
+  background:
+    radial-gradient(circle at 74% 28%, rgba(212, 164, 75, 0.28), transparent 34%),
+    linear-gradient(135deg, var(--ice-moss), var(--ice-ink));
+  overflow: hidden;
+}
+
+.ice-sermon-list-art-1 {
+  background:
+    radial-gradient(circle at 68% 32%, rgba(217, 116, 66, 0.28), transparent 36%),
+    linear-gradient(135deg, #7c512f, var(--ice-ink));
+}
+
+.ice-sermon-list-art-2 {
+  background:
+    radial-gradient(circle at 62% 34%, rgba(122, 154, 134, 0.3), transparent 36%),
+    linear-gradient(135deg, var(--ice-ember-deep), var(--ice-moss));
+}
+
+.ice-sermon-list-art svg {
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.ice-duration-badge {
+  background: rgba(13, 31, 23, 0.62);
+  border: 1px solid rgba(246, 242, 234, 0.18);
+  border-radius: 999px;
+  color: var(--ice-bone);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.34rem 0.62rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  z-index: 2;
+}
+
+.ice-play-mini {
+  align-items: center;
+  background: var(--ice-bone);
+  border-radius: 50%;
+  bottom: 1rem;
+  color: var(--ice-ember);
+  display: flex;
+  height: 2.4rem;
+  justify-content: center;
+  left: 1rem;
+  position: absolute;
+  width: 2.4rem;
+  z-index: 2;
+}
+
+.ice-play-mini::before {
+  border-bottom: 7px solid transparent;
+  border-left: 11px solid currentColor;
+  border-top: 7px solid transparent;
+  content: "";
+  margin-left: 3px;
+}
+
+.ice-sermon-meta span {
+  background: rgba(217, 116, 66, 0.1);
+  border-radius: 999px;
+  color: var(--ice-ember);
+  display: inline-block;
+  padding: 0.16rem 0.52rem;
+}
+
+.ice-link.is-gold {
+  color: var(--ice-gold);
+}
+
+.ice-sermon-verse-ref {
+  color: var(--ice-ember);
+  font-family: var(--ice-hand);
+  font-size: clamp(1.65rem, 3vw, 2rem);
+  font-weight: 600;
+  margin: -0.25rem 0 1rem;
+}
+
+.ice-player-card {
+  align-items: center;
+  background: var(--ice-moss);
+  border-radius: 4px;
+  box-shadow: var(--ice-shadow-md);
+  color: var(--ice-bone);
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  margin: 0 auto;
+  max-width: 980px;
+  padding: clamp(1.5rem, 3vw, 2rem);
+}
+
+.ice-player-play,
+.ice-player-actions a {
+  align-items: center;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.ice-player-play {
+  background: var(--ice-ember);
+  border: 0;
+  color: var(--ice-bone);
+  cursor: pointer;
+  height: 4rem;
+  width: 4rem;
+}
+
+.ice-player-play span {
+  border-bottom: 11px solid transparent;
+  border-left: 17px solid currentColor;
+  border-top: 11px solid transparent;
+  margin-left: 4px;
+}
+
+.ice-player-main h2 {
+  color: var(--ice-gold);
+  font-family: var(--ice-display);
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+  margin: 0 0 0.9rem;
+}
+
+.ice-player-progress {
+  background: rgba(246, 242, 234, 0.18);
+  border-radius: 999px;
+  height: 0.36rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.ice-player-progress span {
+  background: var(--ice-gold);
+  border-radius: inherit;
+  display: block;
+  height: 100%;
+  position: relative;
+  width: 34%;
+}
+
+.ice-player-progress span::after {
+  background: var(--ice-bone);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(212, 164, 75, 0.18);
+  content: "";
+  height: 0.8rem;
+  position: absolute;
+  right: -0.35rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.8rem;
+}
+
+.ice-player-times {
+  color: rgba(246, 242, 234, 0.72);
+  display: flex;
+  font-family: var(--ice-display);
+  font-size: 0.86rem;
+  font-style: italic;
+  justify-content: space-between;
+  margin-top: 0.65rem;
+}
+
+.ice-player-actions {
+  display: flex;
+  gap: 0.65rem;
+}
+
+.ice-player-actions a {
+  border: 1px solid rgba(246, 242, 234, 0.32);
+  color: var(--ice-bone);
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.ice-player-actions a:hover {
+  border-color: var(--ice-gold);
+  color: var(--ice-gold);
+}
+
+.ice-player-actions svg {
+  fill: none;
+  height: 1.2rem;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+  width: 1.2rem;
+}
+
+.ice-reader-card {
+  align-items: center;
+  background: var(--ice-paper);
+  border-left: 4px solid var(--ice-ember);
+  border-radius: 4px;
+  box-shadow: var(--ice-shadow-md);
+  color: var(--ice-text-1);
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  margin: 0 auto;
+  max-width: 980px;
+  padding: clamp(1.5rem, 3vw, 2rem);
+}
+
+.ice-reader-mark {
+  align-items: center;
+  background: var(--ice-moss);
+  border-radius: 50%;
+  color: var(--ice-bone);
+  display: flex;
+  font-family: var(--ice-display);
+  font-size: 2rem;
+  font-style: italic;
+  height: 4rem;
+  justify-content: center;
+  width: 4rem;
+}
+
+.ice-reader-main h2 {
+  color: var(--ice-moss);
+  font-family: var(--ice-display);
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0 0 0.45rem;
+}
+
+.ice-reader-main p {
+  color: var(--ice-text-2);
+  line-height: 1.65;
+  margin: 0 0 1.2rem;
+}
+
+.ice-reader-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.ice-reader-share {
+  align-items: center;
+  border: 1px solid var(--ice-bone-2);
+  border-radius: 50%;
+  color: var(--ice-moss);
+  display: inline-flex;
+  height: 2.8rem;
+  justify-content: center;
+  text-decoration: none;
+  width: 2.8rem;
+}
+
+.ice-reader-share:hover {
+  border-color: var(--ice-ember);
+  color: var(--ice-ember);
+  text-decoration: none;
+}
+
+.ice-reader-share svg {
+  fill: none;
+  height: 1.2rem;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+  width: 1.2rem;
+}
+
+.ice-reader-card.is-unsupported .ice-reader-mark {
+  background: var(--ice-text-3);
+}
+
+.ice-sermon-content h2 {
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.ice-sermon-content h2::before {
+  background: var(--ice-ember);
+  border-radius: 50%;
+  content: "";
+  height: 0.62rem;
+  left: 0;
+  position: absolute;
+  top: 0.52em;
+  width: 0.62rem;
+}
+
+html.ice-dark,
+html.ice-dark body {
+  background: #0a130e !important;
+  color: #edf4ea !important;
+}
+
+html.ice-dark body.light > *,
+body.ice-dark > * {
+  background-color: #0a130e !important;
+  color: #edf4ea !important;
+}
+
+html.ice-dark #content {
+  background: #0a130e !important;
+}
+
+html.ice-dark .ice-site-header {
+  background: rgba(10, 19, 14, 0.92) !important;
+  border-bottom-color: rgba(216, 230, 214, 0.12);
+  box-shadow: 0 14px 44px -34px rgba(0, 0, 0, 0.9);
+}
+
+html.ice-dark .ice-brand-main,
+html.ice-dark .ice-nav-links .nav-link,
+html.ice-dark .ice-nav-cta,
+html.ice-dark .ice-theme-orb {
+  color: #edf4ea !important;
+}
+
+html.ice-dark .ice-brand-script,
+html.ice-dark .ice-nav-links .nav-link.active,
+html.ice-dark .ice-nav-links .nav-link:hover {
+  color: #e58a58 !important;
+}
+
+html.ice-dark .ice-nav-cta,
+html.ice-dark .ice-theme-orb {
+  background: rgba(237, 244, 234, 0.04);
+  border-color: rgba(237, 244, 234, 0.2);
+}
+
+html.ice-dark .ice-nav-cta:hover {
+  background: #edf4ea;
+  border-color: #edf4ea;
+  color: #0a130e !important;
+}
+
+html.ice-dark .ice-nav-whatsapp {
+  background: rgba(229, 138, 88, 0.14);
+  border-color: rgba(229, 138, 88, 0.38);
+  color: #f3a074 !important;
+}
+
+html.ice-dark .ice-nav-whatsapp:hover {
+  background: #d97442;
+  color: #0a130e !important;
+}
+
+html.ice-dark .ice-theme-symbol {
+  background: #d4a44b;
+}
+
+html.ice-dark .ice-theme-moon {
+  background: #0a130e;
+  transform: translateX(-0.18rem);
+}
+
+html.ice-dark .ice-theme-leaf {
+  background: #7a9a86;
+}
+
+html.ice-dark .ice-home,
+html.ice-dark .ice-home-hero,
+html.ice-dark .ice-verse,
+html.ice-dark .ice-story,
+html.ice-dark .ice-visit,
+html.ice-dark .ice-sermons-home,
+html.ice-dark .ice-closing,
+html.ice-dark .ice-related,
+html.ice-dark .ice-page-hero.is-light,
+html.ice-dark .ice-section {
+  background: #0f1b14 !important;
+  color: #edf4ea !important;
+}
+
+html.ice-dark .ice-home-hero,
+html.ice-dark .ice-closing,
+html.ice-dark .ice-page-hero.is-light {
+  background:
+    radial-gradient(ellipse at 78% 18%, rgba(217, 116, 66, 0.16), transparent 46%),
+    radial-gradient(ellipse at 18% 86%, rgba(122, 154, 134, 0.13), transparent 44%),
+    #0f1b14 !important;
+}
+
+html.ice-dark .ice-pillars,
+html.ice-dark .ice-series-band,
+html.ice-dark .ice-page-hero:not(.is-light),
+html.ice-dark .ice-map-card,
+html.ice-dark .ice-reading-card {
+  background:
+    radial-gradient(ellipse at 80% 0%, rgba(212, 164, 75, 0.14), transparent 55%),
+    #06100c !important;
+  color: #edf4ea !important;
+}
+
+html.ice-dark .ice-title,
+html.ice-dark .ice-page-title,
+html.ice-dark .ice-home-hero h1,
+html.ice-dark .ice-hero-sub,
+html.ice-dark .ice-copy,
+html.ice-dark .ice-page-copy,
+html.ice-dark .ice-verse blockquote,
+html.ice-dark .ice-verse cite,
+html.ice-dark .ice-story-cols p,
+html.ice-dark .ice-pull,
+html.ice-dark .ice-visit-row strong,
+html.ice-dark .ice-sermon-body h3,
+html.ice-dark .ice-featured-text h2,
+html.ice-dark .ice-belief-content h2,
+html.ice-dark .ice-belief-content p,
+html.ice-dark .ice-sermon-header h1,
+html.ice-dark .ice-sermon-summary,
+html.ice-dark .ice-sermon-content,
+html.ice-dark .ice-sermon-content h1,
+html.ice-dark .ice-sermon-content h2,
+html.ice-dark .ice-sermon-content h3,
+html.ice-dark .ice-related-card h3 {
+  color: #edf4ea !important;
+}
+
+html.ice-dark .ice-title em,
+html.ice-dark .ice-page-title em,
+html.ice-dark .ice-home-hero h1 em,
+html.ice-dark .ice-verse blockquote em,
+html.ice-dark .ice-sermon-content blockquote,
+html.ice-dark .ice-read,
+html.ice-dark .ice-link,
+html.ice-dark .ice-kicker,
+html.ice-dark .ice-page-kicker {
+  color: #e58a58 !important;
+}
+
+html.ice-dark .ice-copy,
+html.ice-dark .ice-page-copy,
+html.ice-dark .ice-story-cols p,
+html.ice-dark .ice-sermon-body p,
+html.ice-dark .ice-featured-text p,
+html.ice-dark .ice-intro-card p,
+html.ice-dark .ice-schedule-card p,
+html.ice-dark .ice-detail-band p,
+html.ice-dark .ice-related-card p,
+html.ice-dark .ice-visit-row span,
+html.ice-dark .ice-sermon-meta,
+html.ice-dark .ice-meta-line,
+html.ice-dark .ice-toc nav a,
+html.ice-dark .ice-sermon-breadcrumb,
+html.ice-dark .ice-sermon-breadcrumb a {
+  color: #bccbc0 !important;
+}
+
+html.ice-dark .ice-service-card,
+html.ice-dark .ice-sermon-card,
+html.ice-dark .ice-featured-card,
+html.ice-dark .ice-intro-card,
+html.ice-dark .ice-schedule-card,
+html.ice-dark .ice-detail-band,
+html.ice-dark .ice-belief-content blockquote,
+html.ice-dark .ice-related-card {
+  background: #17251c !important;
+  border-color: rgba(237, 244, 234, 0.12) !important;
+  box-shadow: 0 30px 80px -46px rgba(0, 0, 0, 0.95);
+  color: #edf4ea !important;
+}
+
+html.ice-dark .ice-service-card {
+  border-left-color: #e58a58;
+}
+
+html.ice-dark .ice-service-card h2,
+html.ice-dark .ice-service-times strong {
+  color: #edf4ea !important;
+}
+
+html.ice-dark .ice-service-card .label {
+  color: #e58a58 !important;
+}
+
+html.ice-dark .ice-service-card p,
+html.ice-dark .ice-service-times span {
+  color: #bccbc0 !important;
+}
+
+html.ice-dark .ice-btn-primary {
+  background: #edf4ea;
+  border-color: #edf4ea;
+  color: #0a130e !important;
+}
+
+html.ice-dark .ice-btn-primary:hover {
+  background: #d4a44b;
+  border-color: #d4a44b;
+  color: #0a130e !important;
+}
+
+html.ice-dark .ice-btn-ghost {
+  color: #edf4ea !important;
+}
+
+html.ice-dark .ice-btn-outline {
+  border-color: rgba(237, 244, 234, 0.22);
+  color: #edf4ea !important;
+}
+
+html.ice-dark .ice-btn-outline:hover {
+  border-color: #e58a58;
+  color: #e58a58 !important;
+}
+
+html.ice-dark .ice-time-badge,
+html.ice-dark .ice-visit-row .when,
+html.ice-dark .ice-sermon-series {
+  color: #f3a074 !important;
+}
+
+html.ice-dark .ice-search-input {
+  background: rgba(237, 244, 234, 0.04);
+  border-color: rgba(237, 244, 234, 0.16);
+  color: #edf4ea;
+}
+
+html.ice-dark .ice-footer,
+body.light > .ice-footer,
+body.ice-dark > .ice-footer {
+  background: #06100c !important;
+  background-color: #06100c !important;
+  color: #edf4ea !important;
+}
+
+html.ice-dark .ice-footer-brand h2,
+body.light > .ice-footer .ice-footer-brand h2,
+body.ice-dark > .ice-footer .ice-footer-brand h2 {
+  color: #edf4ea !important;
+}
+
+html.ice-dark .ice-footer-brand p,
+body.light > .ice-footer .ice-footer-brand p,
+body.ice-dark > .ice-footer .ice-footer-brand p {
+  color: rgba(237, 244, 234, 0.82) !important;
+}
+
+html.ice-dark .ice-footer-col a,
+body.light > .ice-footer .ice-footer-col a,
+body.ice-dark > .ice-footer .ice-footer-col a {
+  color: rgba(237, 244, 234, 0.88) !important;
+}
+
+html.ice-dark .ice-footer-col h3,
+html.ice-dark .ice-footer-tag,
+body.light > .ice-footer .ice-footer-col h3,
+body.light > .ice-footer .ice-footer-tag,
+body.ice-dark > .ice-footer .ice-footer-col h3,
+body.ice-dark > .ice-footer .ice-footer-tag {
+  color: #d4a44b !important;
+}
+
+html.ice-dark .ice-footer-bottom,
+body.light > .ice-footer .ice-footer-bottom,
+body.ice-dark > .ice-footer .ice-footer-bottom {
+  color: rgba(237, 244, 234, 0.66) !important;
+}
+
+html.ice-dark .whatsapp-float {
+  background: #d97442;
+  color: #0a130e;
+}
+
+html.ice-dark .ice-nav-collapse {
+  background: rgba(10, 19, 14, 0.98);
+  border-top-color: rgba(237, 244, 234, 0.12);
+}
+
+html.ice-dark .ice-player-card {
+  background:
+    radial-gradient(ellipse at 82% 0%, rgba(212, 164, 75, 0.14), transparent 55%),
+    #06100c !important;
+  color: #edf4ea !important;
+}
+
+html.ice-dark .ice-reader-card {
+  background: #17251c !important;
+  border-left-color: #e58a58;
+  box-shadow: 0 30px 80px -46px rgba(0, 0, 0, 0.95);
+  color: #edf4ea !important;
+}
+
+html.ice-dark .ice-reader-main h2 {
+  color: #edf4ea !important;
+}
+
+html.ice-dark .ice-reader-main p {
+  color: #bccbc0 !important;
+}
+
+html.ice-dark .ice-reader-share {
+  border-color: rgba(237, 244, 234, 0.18);
+  color: #edf4ea;
+}
+
+html.ice-dark .ice-belief-article-text,
+html.ice-dark .ice-belief-references {
+  background: #17251c !important;
+  border-color: rgba(237, 244, 234, 0.12) !important;
+  color: #edf4ea !important;
+}
+
+html.ice-dark .ice-belief-article-text span {
+  background: #edf4ea;
+  color: #0a130e;
+}
+
+html.ice-dark .ice-belief-subtitle,
+html.ice-dark .ice-belief-references p,
+html.ice-dark .ice-featured-meta,
+html.ice-dark .ice-player-times {
+  color: #bccbc0 !important;
+}
+
+html.ice-dark .ice-belief-toc-link {
+  border-color: rgba(237, 244, 234, 0.12);
+  color: #bccbc0;
+}
+
+html.ice-dark .ice-belief-toc-link:hover,
+html.ice-dark .ice-belief-toc-link.active {
+  border-color: #e58a58;
+  color: #edf4ea;
+}
+
+html.ice-dark .ice-player-actions a {
+  border-color: rgba(237, 244, 234, 0.28);
+  color: #edf4ea;
+}
+
+@media (max-width: 1100px) {
+  .ice-home-hero,
+  .ice-story-grid,
+  .ice-visit-grid,
+  .ice-featured-card,
+  .ice-detail-band {
+    grid-template-columns: 1fr;
+  }
+
+  .ice-home-hero {
+    min-height: auto;
+  }
+
+  .ice-hero-visual {
+    max-width: 620px;
+    width: 100%;
+  }
+
+  .ice-service-card {
+    bottom: 1.4rem;
+    right: 1.4rem;
+  }
+
+  .ice-story-cols {
+    columns: 1;
+  }
+
+  .ice-filter-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 991px) {
+  .ice-nav-inner {
+    flex-wrap: wrap;
+    gap: 0;
+    min-height: 74px;
+    padding: 0.85rem 1.5rem;
+  }
+
+  .ice-brand {
+    order: 1;
+  }
+
+  .ice-nav-toggle {
+    margin-left: auto;
+    order: 2;
+  }
+
+  .ice-nav-collapse {
+    align-items: stretch;
+    background: rgba(250, 247, 241, 0.98);
+    border-top: 1px solid var(--ice-bone-2);
+    flex-basis: 100%;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin: 0.85rem 0 0;
+    order: 3;
+    padding: 1rem 0 1.2rem;
+    width: 100%;
+  }
+
+  .ice-nav-collapse.show {
+    display: flex !important;
+  }
+
+  .ice-nav-links {
+    align-items: flex-start;
+    gap: 0.45rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .ice-nav-links .nav-link {
+    align-items: center;
+    display: flex;
+    min-height: 44px;
+    width: 100%;
+  }
+
+  .ice-nav-cta,
+  .ice-nav-whatsapp {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .ice-theme-orb {
+    width: 100%;
+  }
+
+  .ice-pillars-grid,
+  .ice-card-grid,
+  .ice-sermons-grid,
+  .ice-sermon-list-grid,
+  .ice-series-grid,
+  .ice-related-grid,
+  .ice-visit-page-grid,
+  .ice-footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ice-belief-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .ice-toc {
+    position: static;
+  }
+
+  .ice-footer-bottom {
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .ice-home-hero {
+    padding-top: 3.6rem;
+  }
+
+  .ice-home-hero h1 {
+    font-size: clamp(3.35rem, 16vw, 4.8rem);
+  }
+
+  .ice-hero-actions .ice-btn,
+  .ice-nav-cta,
+  .ice-nav-whatsapp,
+  .ice-theme-orb {
+    width: 100%;
+  }
+
+  .ice-service-card {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .ice-visit-row {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .ice-map-footer,
+  .ice-section-head,
+  .ice-sermon-meta-grid,
+  .ice-reading-card,
+  .ice-player-card,
+  .ice-reader-card {
+    align-items: flex-start;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+
+  .ice-sermon-content blockquote {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .ice-sermon-breadcrumb {
+    line-height: 1.35;
+    padding-top: 1.25rem;
+  }
+
+  .ice-sermon-breadcrumb a {
+    min-height: 40px;
+  }
+
+  .ice-footer,
+  .ice-section,
+  .ice-page-hero {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .whatsapp-float {
+    bottom: 1rem;
+    height: 3.25rem;
+    right: 1rem;
+    width: 3.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-float {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,71 +1,5 @@
 {{ define "head" }}
 <meta name="description" content="{{ .Params.description | default .Summary }}">
-<style>
-    .visita-hero {
-        background: linear-gradient(135deg, var(--primary-color), #914d02);
-        color: white;
-        padding: 90px 0;
-        text-align: center;
-        border-radius: 0 0 30px 30px;
-        margin-bottom: 60px;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-    .dark .visita-hero {
-        background: linear-gradient(135deg, #1f1f1f, #111);
-        border-bottom: 3px solid var(--primary-color);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-    }
-    .schedule-card {
-        border: none;
-        border-radius: 15px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        background: var(--secondary-background-color);
-        height: 100%;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        border-top: 5px solid var(--primary-color);
-    }
-    .dark .schedule-card {
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    }
-    .schedule-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    }
-    .time-badge {
-        background-color: var(--primary-color);
-        color: white;
-        font-weight: 800;
-        font-size: 1.3rem;
-        padding: 8px 20px;
-        border-radius: 25px;
-        display: inline-block;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .detail-section {
-        background-color: var(--secondary-background-color);
-        border-radius: 20px;
-        padding: 50px;
-        margin-top: 60px;
-        border-left: 5px solid var(--primary-color);
-    }
-    .map-container {
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        border: 1px solid rgba(0,0,0,0.05);
-    }
-    .btn-visita {
-        border-radius: 30px;
-        font-weight: bold;
-        transition: all 0.3s ease;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-    .btn-visita:hover {
-        transform: scale(1.05);
-    }
-</style>
 {{ end }}
 
 {{ define "title" }}
@@ -73,104 +7,79 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="visita-hero">
-    <div class="container">
-        <h1 class="display-4 font-weight-bold mb-4">Você é muito bem-vindo na Jardins!</h1>
-        <p class="lead" style="max-width: 850px; margin: 0 auto; font-size: 1.3rem; line-height: 1.8;">
-            Os domingos na <strong>Igreja Cristã Evangélica Jardins</strong> são vibrantes, casuais e repletos de um senso de admiração e alegria pela presença de Deus entre nós. Venha como você está e espere ser bem recebido como nosso convidado.
+{{ $church := .Site.Params.church }}
+{{ $whatsappLink := printf "https://api.whatsapp.com/send?phone=%s&text=%s" $church.whatsappNumber (urlquery $church.whatsappMessage) }}
+
+<main class="ice-visit-page">
+  <section class="ice-page-hero is-light">
+    <div class="ice-page-hero-inner">
+      <div class="ice-page-kicker">— sua primeira visita</div>
+      <h1 class="ice-page-title">Você é muito<br><em>bem-vindo.</em></h1>
+      <p class="ice-page-copy">Domingos na {{ $church.shortName }} são simples, acolhedores e centrados na Palavra. Venha como você está.</p>
+      <div class="ice-hero-actions mt-4">
+        <a href="{{ $whatsappLink }}" class="ice-btn ice-btn-primary">Avisar pelo WhatsApp</a>
+        <a href="#mapa" class="ice-btn ice-btn-ghost">Ver localização</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="ice-section">
+    <div class="ice-section-inner">
+      <div>
+        <div class="ice-kicker">— programação</div>
+        <h2 class="ice-title">Nossa manhã<br>de domingo.</h2>
+      </div>
+
+      <div class="ice-visit-page-grid">
+        <article class="ice-schedule-card">
+          <div class="ice-time-badge">{{ $church.worshipTime }}</div>
+          <h3>Louvor e Culto</h3>
+          <p>Adoração comunitária e pregação cristocêntrica, expositiva e cheia de esperança.</p>
+        </article>
+        <article class="ice-schedule-card">
+          <div class="ice-time-badge">{{ $church.coffeeTime }}</div>
+          <h3>Comunhão</h3>
+          <p>Uma pausa para café, conversa e acolhimento entre o culto e as classes.</p>
+        </article>
+        <article class="ice-schedule-card">
+          <div class="ice-time-badge">{{ $church.schoolTime }}</div>
+          <h3>Escola Bíblica</h3>
+          <p>Classes para adultos e crianças, com estudo bíblico e cuidado por faixa etária.</p>
+        </article>
+      </div>
+
+      <div class="ice-detail-band">
+        <div>
+          <h3>O Culto Matinal</h3>
+          <p>Começamos com louvor, oração e uma mensagem bíblica. A duração média é de 1h20min, com ambiente simples e acolhedor.</p>
+        </div>
+        <div>
+          <h3>Escola Dominical</h3>
+          <p>Depois do café, seguimos para classes temáticas. Crianças também têm uma estrutura segura e direcionada para cada idade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ice-section ice-visit" id="mapa">
+    <div class="ice-section-inner ice-visit-grid">
+      <div>
+        <div class="ice-kicker">— localização</div>
+        <h2 class="ice-title">Estamos no<br>Colégio In-Nova.</h2>
+        <p class="ice-copy mt-4">
+          {{ $church.venue }}<br>
+          {{ $church.addressLine1 }}<br>
+          {{ $church.addressLine2 }} — {{ $church.cityRegion }} · {{ $church.postalCode }}
         </p>
+        <div class="ice-hero-actions mt-4">
+          <a href="{{ $whatsappLink }}" class="ice-btn ice-btn-primary">Tirar dúvida no WhatsApp</a>
+          <a href="{{ $church.mapsUrl }}" class="ice-btn ice-btn-ghost">Abrir rota direta</a>
+        </div>
+      </div>
+      <div class="ice-map-shell">
+        {{ partial "church/map-preview.html" . }}
+      </div>
     </div>
-</div>
-
-<div class="container mb-5 pb-5">
-    
-    <div class="text-center mb-5 pb-2">
-        <h2 class="font-weight-bold display-5" style="color: var(--primary-color);">Nossa Programação</h2>
-        <p class="text-muted" style="font-size: 1.2rem;">Acompanhe nossos horários para aproveitar o domingo ao máximo.</p>
-    </div>
-
-    <div class="row text-center">
-        <!-- 09:30 -->
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card schedule-card p-4">
-                <div class="card-body">
-                    <div class="time-badge">09:30</div>
-                    <h4 class="font-weight-bold mb-3">Louvor e Culto</h4>
-                    <p class="text-muted mb-3 font-weight-bold"><i class="fas fa-map-marker-alt text-danger mr-2"></i> Auditório</p>
-                    <p style="font-size: 1.1rem; color: var(--text-color);">Momentos de adoração vibrante e pregação expositiva da Palavra.</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 10:50 -->
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card schedule-card p-4" style="border-top-color: #f39c12;">
-                <div class="card-body">
-                    <div class="time-badge" style="background-color: #f39c12;">10:50</div>
-                    <h4 class="font-weight-bold mb-3">Comunhão</h4>
-                    <p class="text-muted mb-3 font-weight-bold"><i class="fas fa-map-marker-alt text-danger mr-2"></i> Quadra</p>
-                    <p style="font-size: 1.1rem; color: var(--text-color);">Uma pausa para um cafézinho e nos conhecermos antes das classes.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- 11:00 -->
-        <div class="col-lg-4 col-md-12 mb-4">
-            <div class="card schedule-card p-4" style="border-top-color: #17a2b8;">
-                <div class="card-body">
-                    <div class="time-badge" style="background-color: #17a2b8;">11:00</div>
-                    <h4 class="font-weight-bold mb-3">Escola Bíblica</h4>
-                    <p class="text-muted mb-3 font-weight-bold"><i class="fas fa-map-marker-alt text-danger mr-2"></i> Diversas Salas</p>
-                    <p style="font-size: 1.1rem; color: var(--text-color);">Salas temáticas para adultos e EBD especial para cada idade das crianças.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Detalhes -->
-    <div class="detail-section shadow-sm">
-        <div class="row">
-            <div class="col-lg-6 mb-4 mb-lg-0 pr-lg-5">
-                <h3 class="font-weight-bold mb-4" style="color: var(--primary-color);"><i class="fas fa-sun mr-3"></i> O Culto Matinal</h3>
-                <p style="font-size: 1.1rem; line-height: 1.8;">Começamos o dia com um momento de louvor maravilhoso. Logo após, um de nossos pastores irá compartilhar uma mensagem <strong>cristocêntrica e expositiva</strong>, cheia de encorajamento, ensino e esperança.</p>
-                <div class="mt-4 p-3 rounded" style="background: rgba(0,0,0,0.03);">
-                    <p class="mb-0 text-muted"><i class="far fa-clock mr-2"></i> Duração estimada: <strong>1h20min</strong></p>
-                </div>
-            </div>
-            <div class="col-lg-6 pl-lg-5" style="border-left: 1px solid rgba(128,128,128,0.2);">
-                <h3 class="font-weight-bold mb-4" style="color: #17a2b8;"><i class="fas fa-book-open mr-3"></i> Escola Dominical (EBD)</h3>
-                <p style="font-size: 1.1rem; line-height: 1.8;">Após o café, nossa escola é dividida em várias salas temáticas. Você pode escolher a que melhor se adapta a você no momento.</p>
-                <div class="mt-4 p-3 rounded" style="background: rgba(23, 162, 184, 0.1); border-left: 4px solid #17a2b8;">
-                    <p class="mb-0" style="color: var(--text-color);"><i class="fas fa-child mr-2 text-info"></i> <strong>Crianças:</strong> Temos uma estrutura segura e acolhedora, com aulas direcionadas para cada faixa etária!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Contato e Mapa -->
-    <div class="row mt-5 pt-5 align-items-center">
-        <div class="col-lg-5 mb-5 mb-lg-0 text-center text-lg-left pr-lg-5">
-            <h2 class="font-weight-bold mb-4 display-5">Pronto para nos conhecer?</h2>
-            <p class="lead mb-5">Queremos muito conhecer você pessoalmente! Se desejar, avise sobre a sua primeira vinda para que possamos te receber ainda melhor e tirar qualquer dúvida.</p>
-            <a href="mailto:secretaria@icejardins.org.br?subject=Primeira%20Visita" class="btn btn-lg btn-outline-info btn-visita px-5 py-3 border-2 text-dark" style="border-color: #17a2b8;">
-                <i class="fas fa-paper-plane mr-2"></i> Fale com a Recepção
-            </a>
-            
-            <div class="mt-5 text-left d-inline-block">
-                <h5 class="font-weight-bold mb-3"><i class="fas fa-map-marker-alt text-danger mr-2"></i> Endereço Completo</h5>
-                <p class="text-muted" style="line-height: 1.6;">
-                    Colégio In-Nova <small>(antigo COC)</small><br>
-                    Cond. Estância Jardim Botânico II<br>
-                    SH Jardim Botânico<br>
-                    Brasília — DF, 71686-301
-                </p>
-            </div>
-        </div>
-        <div class="col-lg-7">
-            <div class="map-container">
-                <iframe src="https://maps.google.com/maps?q=Condom%C3%ADnio%20Est%C3%A2ncia%20Jardim%20Bot%C3%A2nico%20II,%20Bras%C3%ADlia&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-    </div>
-</div>
+  </section>
+</main>
 {{ end }}

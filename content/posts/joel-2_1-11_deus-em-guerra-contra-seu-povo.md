@@ -5,7 +5,9 @@ date = '2026-04-23'
 draft = false
 categorias = ['Sermões', 'Joel', 'Antigo Testamento']
 tags = ["Joel", "Antigo Testamento"]
-image = "/images/posts/joel-2_1-11_deus-em-guerra-contra-seu-povo.jpg"
+series = "Joel"
+biblicalText = "Joel 2:1-11"
+image = "/images/posts/joel-2_1-11_deus-em-guerra-contra-seu-povo.webp"
 +++
 
 
