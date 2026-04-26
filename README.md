@@ -1,67 +1,66 @@
-﻿# ICE Jardins React
+# ICE Jardins
 
-Migração do site institucional de Hugo para React + Vite, mantendo conteúdo e identidade visual.
+Site estático da Igreja Cristã Evangélica Jardins, feito com Hugo e publicado via GitHub Pages.
 
-## Stack
+## Rodar localmente
 
-- React 18 + TypeScript
-- Vite
-- React Router
-- Bootstrap + CSS Modules
-- Pipeline de conteúdo Markdown (`gray-matter` + `remark/rehype`)
-- Prerender estático via SSR (`scripts/prerender.mjs`)
+Requisitos:
 
-## Estrutura
+- Hugo Extended `0.160.1` ou superior.
+- Git com submódulos habilitados.
 
-```txt
-src/
-  app/
-  core/
-  shared/
-  features/
-  content/
-  styles/
-scripts/
+Primeiro preparo:
+
+```powershell
+git submodule update --init --recursive
 ```
 
-## Comandos
+Servidor local:
 
-```bash
-npm install
-npm run dev
-npm run check
-npm run build
-npm run preview
+```powershell
+hugo server -D
 ```
 
-## Pipeline de build
+Build de produção:
 
-`npm run build` executa:
+```powershell
+hugo --gc --minify
+```
 
-1. `build:content` -> converte Markdown/frontmatter em JSON para o app
-2. `build:search-index` -> gera índice local de busca
-3. `build:client` -> build client Vite
-4. `build:ssr` -> bundle SSR para prerender
-5. `prerender` -> gera HTML estático por rota pública
+## Criar um sermão
 
-## Rotas principais
+Use o archetype da seção `posts`:
 
-- `/`
-- `/visita/`
-- `/fe/`
-- `/posts/`
-- `/posts/:slug/`
-- `/tags/:slug/`
-- `/categorias/:slug/`
+```powershell
+hugo new posts/nome-do-sermao.md
+```
 
-## Origem de conteúdo
+Preencha no frontmatter:
 
-- Páginas Markdown: `content/*.md`
-- Sermões: `content/posts/*.md`
-- Assets: `static/images/*`
+- `title`: título público.
+- `subtitle`: resumo curto.
+- `date`: data do sermão ou publicação.
+- `categorias` e `tags`: classificação.
+- `series`: série do sermão, quando houver.
+- `biblicalText`: texto bíblico principal.
+- `speaker`: pregador, quando conhecido.
+- `image`: imagem em `/images/posts/...webp`.
 
-Dados gerados automaticamente para o app ficam em `src/content/generated/`.
+## Imagens
 
-## Guia editorial
+Preferir `.webp`.
 
-- Criação de novas publicações via GitHub (sem backend): [`docs/GUIA-PUBLICACOES.md`](docs/GUIA-PUBLICACOES.md)
+Metas práticas:
+
+- Hero: abaixo de `250KB`, quando possível.
+- Sermões: abaixo de `150KB`, quando possível.
+
+Exemplo usando `ffmpeg`:
+
+```powershell
+ffmpeg -i entrada.jpg -vf "scale='min(1200,iw)':-2" -c:v libwebp -quality 78 static/images/posts/saida.webp
+```
+
+## Dados da igreja
+
+Informações institucionais ficam em `[params.church]` no `hugo.toml`: nome, slogan, horários, endereço, WhatsApp, e-mail e mapas.
