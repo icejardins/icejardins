@@ -14,12 +14,12 @@
 <main class="ice-home">
   <section class="ice-home-hero" aria-labelledby="ice-hero-title">
     <div class="ice-hero-text reveal">
-      <div class="ice-hero-eyebrow">— uma comunidade em Brasília</div>
-      <h1 id="ice-hero-title">Pessoas<br>imperfeitas,<br><em>perfeição</em><br>de Cristo.</h1>
-      <p class="ice-hero-sub">Somos um jardim onde Deus cultiva pessoas. Vinde, e vede.</p>
+      <div class="ice-hero-eyebrow">ICE Jardins · Jardim Botânico</div>
+      <h1 id="ice-hero-title">Pessoas<br>imperfeitas.<br><em>Perfeição</em><br>de Cristo.</h1>
+      <p class="ice-hero-sub">Uma igreja bíblica, evangelizadora e discipuladora em Brasília.</p>
       <div class="ice-hero-actions">
         <a href="{{ "visita/" | relURL }}" class="ice-btn ice-btn-primary">Planeje sua visita →</a>
-        <a href="{{ "posts/" | relURL }}" class="ice-btn ice-btn-ghost">Ler sermões</a>
+        <a href="{{ "fe/" | relURL }}" class="ice-btn ice-btn-ghost">No que cremos</a>
       </div>
     </div>
 
@@ -32,43 +32,8 @@
       </div>
       <div class="ice-hero-frame">
         <div class="ice-hero-img-num">N° 01 — {{ $church.serviceDay }} {{ $church.worshipTime }}</div>
-        <div class="ice-hero-img-label">Comunidade reunida, manhã de domingo.</div>
-        <svg class="ice-hero-illustration" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
-          <defs>
-            <radialGradient id="iceWarmLight" cx="62%" cy="35%">
-              <stop offset="0%" stop-color="#d97442" stop-opacity="0.45"/>
-              <stop offset="42%" stop-color="#1a3d2e" stop-opacity="0"/>
-            </radialGradient>
-            <linearGradient id="iceHeroDeep" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0%" stop-color="#1a3d2e"/>
-              <stop offset="100%" stop-color="#0d1f17"/>
-            </linearGradient>
-          </defs>
-          <rect width="400" height="500" fill="url(#iceHeroDeep)"/>
-          <rect width="400" height="500" fill="url(#iceWarmLight)"/>
-          <g fill="#0d1f17" opacity="0.85">
-            <circle cx="120" cy="218" r="22"/>
-            <ellipse cx="120" cy="282" rx="43" ry="58"/>
-            <circle cx="200" cy="198" r="27"/>
-            <ellipse cx="200" cy="276" rx="51" ry="68"/>
-            <circle cx="282" cy="220" r="22"/>
-            <ellipse cx="282" cy="284" rx="43" ry="57"/>
-          </g>
-          <g fill="none" stroke="#7a9a86" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" opacity="0.68">
-            <path d="M30 470 Q62 420 50 360"/>
-            <path d="M50 360 Q72 350 82 329"/>
-            <path d="M50 383 Q30 380 20 364"/>
-            <path d="M62 410 Q82 398 96 374"/>
-            <ellipse cx="82" cy="329" rx="9" ry="3.5" transform="rotate(-30 82 329)"/>
-            <ellipse cx="20" cy="364" rx="9" ry="3.5" transform="rotate(30 20 364)"/>
-            <ellipse cx="96" cy="374" rx="9" ry="3.5" transform="rotate(-32 96 374)"/>
-            <path d="M368 470 Q348 420 360 380"/>
-            <path d="M360 380 Q382 370 389 350"/>
-            <path d="M355 414 Q335 398 322 376"/>
-            <ellipse cx="389" cy="350" rx="9" ry="3.5" transform="rotate(20 389 350)"/>
-            <ellipse cx="322" cy="376" rx="9" ry="3.5" transform="rotate(28 322 376)"/>
-          </g>
-        </svg>
+        <div class="ice-hero-img-label">Pessoas da ICE Jardins em oração.</div>
+        <img src="{{ "images/sobre/comunidade.webp" | relURL }}" alt="Pessoas da ICE Jardins reunidas em oração">
       </div>
       <div class="ice-leaf-bg ice-leaf-bg-br" aria-hidden="true">
         <svg width="160" height="240" viewBox="0 0 50 80" role="img" focusable="false">
@@ -80,10 +45,10 @@
       <aside class="ice-service-card" aria-label="Próximo encontro">
         <div class="label">Próximo encontro</div>
         <h2>Domingo na Jardins</h2>
-        <p>Culto e Escola Bíblica. Todos são bem-vindos.</p>
+        <p>Culto expositivo e Escola Bíblica. Todos são bem-vindos.</p>
         <div class="ice-service-times">
-          <div><strong>{{ $church.worshipTime }}</strong><span>culto inspirativo</span></div>
-          <div><strong>{{ $church.schoolTime }}</strong><span>escola dominical</span></div>
+          <div><strong>{{ $church.worshipTime }}</strong><span>{{ $church.worshipName }}</span></div>
+          <div><strong>{{ $church.schoolTime }}</strong><span>{{ $church.schoolName }}</span></div>
         </div>
       </aside>
     </div>
@@ -91,7 +56,7 @@
 
   <section class="ice-section ice-verse">
     <div class="ice-section-inner">
-      <div class="ice-kicker">— versículo do dia · 25 de abril</div>
+      <div class="ice-kicker">Versículo</div>
       <blockquote>
         "Porque o Senhor consolará a Sião; consolará a todos os seus lugares assolados, e fará o seu deserto como o <em>Éden</em>, e a sua solidão como o <em>jardim</em> do Senhor."
       </blockquote>
@@ -102,16 +67,21 @@
   <section class="ice-section ice-story" id="quem-somos">
     <div class="ice-section-inner ice-story-grid">
       <div>
-        <div class="ice-kicker">— quem somos</div>
-        <h2 class="ice-title">Um <em>jardim</em><br>em Brasília.</h2>
+        <div class="ice-kicker">Quem somos</div>
+        <h2 class="ice-title">Somos uma igreja.<br><em>Somos um jardim.</em></h2>
       </div>
       <div>
         <div class="ice-story-cols">
-          <p>Somos uma comunidade de pessoas imperfeitas que se reúnem aos domingos para compartilhar a perfeição de Cristo. Vivemos a fé em conjunto, oramos uns pelos outros e abrimos as portas para qualquer pessoa que queira chegar.</p>
-          <p>O nome Jardins não é por acaso. Deus criou o homem em um jardim e deseja cultivar em nós as belezas que Ele mesmo planejou. Aqui, cada pessoa é uma semente que pode florescer pela graça de Deus.</p>
-          <p>Não importa de onde você veio, o que carrega ou o que pensa de si mesmo. Há lugar para você. Venha como está. Floresça como Ele planejou.</p>
+          <p>Aqui pessoas imperfeitas vivenciam e compartilham o amor imerecido de Cristo. Somos uma comunidade local, simples e bíblica, reunida no Jardim Botânico para aprender, viver e oferecer a vida maravilhosa de Jesus.</p>
+          <p>O nome Jardins não é só geografia. Deus nos criou em um jardim e deseja cultivar em nós as belezas que Ele mesmo planejou. A igreja é esse lugar de cuidado, crescimento, arrependimento e esperança.</p>
+          <p>Nossa visão é ser uma igreja bíblica, evangelizadora e discipuladora. Por isso valorizamos pregação fiel, cuidado recíproco, serviço, generosidade, simplicidade e missão.</p>
         </div>
-        <div class="ice-pull">Todos podem ser transformados por Jesus.</div>
+        <div class="ice-photo-strip" aria-label="Fotos da comunidade ICE Jardins">
+          <img src="{{ "images/sobre/identidade.webp" | relURL }}" alt="Culto da ICE Jardins no auditório do Colégio INovar">
+          <img src="{{ "images/sobre/congregacao.webp" | relURL }}" alt="Equipe de recepção da ICE Jardins">
+          <img src="{{ "images/sobre/foto3.webp" | relURL }}" alt="Crianças participando de celebração na ICE Jardins">
+        </div>
+        <div class="ice-pull">{{ $church.mission }}.</div>
       </div>
     </div>
   </section>
@@ -119,9 +89,9 @@
   <section class="ice-section ice-pillars">
     <div class="ice-section-inner">
       <div class="ice-pillars-head">
-        <div class="ice-kicker">— os pilares que nos sustentam</div>
+        <div class="ice-kicker">Missão, visão e valores</div>
         <h2 class="ice-title">Nossa identidade</h2>
-        <p>Três raízes profundas. Uma só árvore que floresce.</p>
+        <p>{{ $church.vision }}. Dez valores dão forma a essa caminhada.</p>
       </div>
       <div class="ice-pillars-grid">
         <article class="ice-pillar">
@@ -141,30 +111,35 @@
           <div class="num">— 02</div>
           <div class="ice-pillar-icon" aria-hidden="true">
             <svg viewBox="0 0 100 90" focusable="false">
-              <circle cx="30" cy="40" r="9"/>
-              <path d="M22 78 Q22 56 30 52 Q38 56 38 78"/>
-              <circle cx="50" cy="32" r="11"/>
-              <path d="M40 78 Q40 50 50 46 Q60 50 60 78"/>
-              <circle cx="72" cy="40" r="9"/>
-              <path d="M64 78 Q64 56 72 52 Q80 56 80 78"/>
+              <circle cx="50" cy="42" r="24"/>
+              <path d="M50 18 Q62 42 50 66 M50 18 Q38 42 50 66"/>
+              <path d="M26 42 Q50 28 74 42 Q50 56 26 42"/>
+              <path d="M50 68 C50 58 42 54 42 46 C42 38 50 34 50 34 C50 34 58 38 58 46 C58 54 50 58 50 68 Z"/>
             </svg>
           </div>
-          <h3>Discipuladora</h3>
-          <p>Cada crente é chamado a crescer na fé e a discipular outros. Investimos em relacionamentos transformadores que levam à maturidade espiritual.</p>
+          <h3>Evangelizadora</h3>
+          <p>Movidos pela Grande Comissão. Cada membro é chamado a compartilhar a Boa Nova com a família, os amigos e a comunidade.</p>
         </article>
         <article class="ice-pillar">
           <div class="num">— 03</div>
           <div class="ice-pillar-icon" aria-hidden="true">
             <svg viewBox="0 0 80 90" focusable="false">
-              <circle cx="40" cy="40" r="22"/>
-              <path d="M18 40 Q40 25 62 40 Q40 55 18 40"/>
-              <path d="M40 18 Q50 40 40 62 M40 18 Q30 40 40 62"/>
-              <path d="M40 70 L40 84 M30 78 L50 78"/>
+              <circle cx="24" cy="42" r="8"/>
+              <path d="M17 78 Q17 58 24 54 Q31 58 31 78"/>
+              <circle cx="40" cy="34" r="10"/>
+              <path d="M31 78 Q31 52 40 48 Q49 52 49 78"/>
+              <circle cx="58" cy="42" r="8"/>
+              <path d="M51 78 Q51 58 58 54 Q65 58 65 78"/>
             </svg>
           </div>
-          <h3>Evangelizadora</h3>
-          <p>Movidos pela Grande Comissão. Cada membro é um embaixador de Cristo, chamado a compartilhar a Boa Nova com a família, os amigos e a comunidade.</p>
+          <h3>Discipuladora</h3>
+          <p>Cada crente é chamado a crescer na fé e a discipular outros. Investimos em relacionamentos transformadores que levam à maturidade espiritual.</p>
         </article>
+      </div>
+      <div class="ice-values-cloud" aria-label="Valores da ICE Jardins">
+        {{ range $church.values }}
+        <span>{{ . }}</span>
+        {{ end }}
       </div>
     </div>
   </section>
@@ -178,11 +153,11 @@
         <ul class="ice-visit-list">
           <li class="ice-visit-row">
             <div class="when">{{ $church.worshipTime }}<small>{{ $church.serviceDay }}</small></div>
-            <div><strong>Culto Inspirativo</strong><span>Pregação, oração e louvor em conjunto.</span></div>
+            <div><strong>{{ $church.worshipName }}</strong><span>Pregação expositiva, oração e louvor em conjunto.</span></div>
           </li>
           <li class="ice-visit-row">
             <div class="when">{{ $church.schoolTime }}<small>{{ $church.serviceDay }}</small></div>
-            <div><strong>Escola Bíblica Dominical</strong><span>Estudo aprofundado das Escrituras para adultos e crianças.</span></div>
+            <div><strong>{{ $church.schoolName }}</strong><span>Estudo aprofundado das Escrituras para adultos e crianças.</span></div>
           </li>
         </ul>
         <div class="ice-hero-actions mt-4">
@@ -200,7 +175,7 @@
     <div class="ice-section-inner">
       <div class="ice-section-head">
         <div>
-          <div class="ice-kicker">— da nossa mesa</div>
+          <div class="ice-kicker">Mensagens bíblicas</div>
           <h2 class="ice-title">Sermões <em>recentes</em></h2>
         </div>
         <a href="{{ "posts/" | relURL }}" class="ice-link">Ver todos os sermões →</a>
@@ -218,7 +193,7 @@
                 <path d="M200 80 L160 120 M200 80 L240 120"/>
                 <path d="M120 250 L280 250 L280 240 L120 240 Z" fill="#d4a44b" opacity="0.28"/>
               </g>
-              <circle cx="200" cy="62" r="30" fill="#d97442" opacity="0.42"/>
+              <circle cx="200" cy="62" r="30" fill="#6b8e4e" opacity="0.42"/>
             </svg>
             {{ else if eq $index 1 }}
             <svg viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true" focusable="false">
@@ -228,17 +203,17 @@
                 <circle cx="320" cy="65" r="3"/><circle cx="100" cy="120" r="3"/><circle cx="180" cy="130" r="3"/>
                 <circle cx="260" cy="115" r="3"/>
               </g>
-              <g fill="none" stroke="#7a9a86" stroke-width="1.5" opacity="0.62">
+              <g fill="none" stroke="#6b8e4e" stroke-width="1.5" opacity="0.62">
                 <path d="M0 200 Q100 180 200 200 T400 200"/>
                 <path d="M0 215 Q100 200 200 215 T400 215"/>
               </g>
             </svg>
             {{ else }}
             <svg viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-              <g fill="#d97442" opacity="0.5">
+              <g fill="#6b8e4e" opacity="0.5">
                 <path d="M200 60 C170 60 160 90 200 130 C240 90 230 60 200 60 Z"/>
               </g>
-              <g fill="none" stroke="#d97442" stroke-width="1" opacity="0.5">
+              <g fill="none" stroke="#6b8e4e" stroke-width="1" opacity="0.5">
                 <path d="M180 100 L220 100 M195 85 L195 115 M205 85 L205 115"/>
               </g>
             </svg>

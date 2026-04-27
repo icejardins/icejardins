@@ -4,8 +4,7 @@
 <footer class="ice-footer">
   <div class="ice-footer-grid">
     <div class="ice-footer-brand">
-      <div class="ice-footer-tag">— ICE</div>
-      <h2>Jardins</h2>
+      <img class="ice-footer-logo" src="{{ $church.logoWhite | relURL }}" alt="{{ $church.shortName | default .Site.Title }}">
       <p>{{ $church.slogan }} em Brasília, no Jardim Botânico.</p>
     </div>
     <div class="ice-footer-col">
@@ -19,7 +18,7 @@
       <h3>Encontros</h3>
       <a href="{{ "visita/" | relURL }}">Culto · {{ $church.serviceDay }} {{ $church.worshipTime }}</a>
       <a href="{{ "visita/" | relURL }}">EBD · {{ $church.serviceDay }} {{ $church.schoolTime }}</a>
-      <a href="{{ $church.mapsUrl }}">Colégio In-Nova</a>
+      <a href="{{ $church.mapsUrl }}">Colégio INovar</a>
     </div>
     <div class="ice-footer-col">
       <h3>Contato</h3>

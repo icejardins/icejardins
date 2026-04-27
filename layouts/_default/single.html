@@ -19,7 +19,7 @@
   </nav>
 
   <header class="ice-sermon-header reveal">
-    <span class="ice-sermon-series">— Série · {{ $series }} · Parte 1 de 6</span>
+    <span class="ice-sermon-series">Série · {{ $series }} · Parte 1 de 6</span>
     <h1>{{ $title | safeHTML }}</h1>
     {{ with .Params.biblicalText }}<div class="ice-sermon-verse-ref">{{ . }}</div>{{ end }}
     {{ with .Params.subtitle }}<p class="ice-sermon-summary">{{ . }}</p>{{ end }}
@@ -34,7 +34,7 @@
   <section class="ice-reader-card reveal" data-sermon-reader aria-label="Leitor em voz alta do sermão">
     <div class="ice-reader-mark" aria-hidden="true">¶</div>
     <div class="ice-reader-main">
-      <div class="ice-kicker">— leitura do sermão</div>
+      <div class="ice-kicker">Leitura do sermão</div>
       <h2>Ouça o texto em voz alta.</h2>
       <p data-reader-status>O leitor usa a voz disponível no seu navegador. O texto completo está logo abaixo.</p>
       <div class="ice-reader-controls">
@@ -58,7 +58,7 @@
     <div class="ice-section-inner reveal">
       <div class="ice-section-head">
         <div>
-          <div class="ice-kicker">— continue</div>
+          <div class="ice-kicker">Continue</div>
           <h2 class="ice-title">Próximos sermões da <em>série</em></h2>
         </div>
         <a href="{{ "posts/" | relURL }}" class="ice-link">Toda a série →</a>
