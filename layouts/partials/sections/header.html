@@ -5,8 +5,8 @@
   <nav class="navbar navbar-expand-lg ice-nav" aria-label="Navegação principal">
     <div class="ice-nav-inner">
       <a class="ice-brand" href="{{ .Site.Home.RelPermalink }}" aria-label="{{ $church.fullName | default .Site.Title }}">
-        <span class="ice-brand-main">ICE</span>
-        <span class="ice-brand-script">jardins</span>
+        <img class="ice-brand-logo ice-brand-logo-color" src="{{ $church.logoColor | relURL }}" alt="{{ $church.shortName | default .Site.Title }}">
+        <img class="ice-brand-logo ice-brand-logo-white" src="{{ $church.logoWhite | relURL }}" alt="">
       </a>
 
       <button class="navbar-toggler ice-nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"

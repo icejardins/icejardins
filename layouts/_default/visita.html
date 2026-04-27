@@ -13,7 +13,7 @@
 <main class="ice-visit-page">
   <section class="ice-page-hero is-light">
     <div class="ice-page-hero-inner">
-      <div class="ice-page-kicker">— sua primeira visita</div>
+      <div class="ice-page-kicker">Sua primeira visita</div>
       <h1 class="ice-page-title">Você é muito<br><em>bem-vindo.</em></h1>
       <p class="ice-page-copy">Domingos na {{ $church.shortName }} são simples, acolhedores e centrados na Palavra. Venha como você está.</p>
       <div class="ice-hero-actions mt-4">
@@ -26,14 +26,14 @@
   <section class="ice-section">
     <div class="ice-section-inner">
       <div>
-        <div class="ice-kicker">— programação</div>
+        <div class="ice-kicker">Programação</div>
         <h2 class="ice-title">Nossa manhã<br>de domingo.</h2>
       </div>
 
       <div class="ice-visit-page-grid">
         <article class="ice-schedule-card">
           <div class="ice-time-badge">{{ $church.worshipTime }}</div>
-          <h3>Louvor e Culto</h3>
+          <h3>{{ $church.worshipName }}</h3>
           <p>Adoração comunitária e pregação cristocêntrica, expositiva e cheia de esperança.</p>
         </article>
         <article class="ice-schedule-card">
@@ -43,18 +43,18 @@
         </article>
         <article class="ice-schedule-card">
           <div class="ice-time-badge">{{ $church.schoolTime }}</div>
-          <h3>Escola Bíblica</h3>
+          <h3>{{ $church.schoolName }}</h3>
           <p>Classes para adultos e crianças, com estudo bíblico e cuidado por faixa etária.</p>
         </article>
       </div>
 
       <div class="ice-detail-band">
         <div>
-          <h3>O Culto Matinal</h3>
+          <h3>O Culto Expositivo</h3>
           <p>Começamos com louvor, oração e uma mensagem bíblica. A duração média é de 1h20min, com ambiente simples e acolhedor.</p>
         </div>
         <div>
-          <h3>Escola Dominical</h3>
+          <h3>Escola Bíblica Dominical</h3>
           <p>Depois do café, seguimos para classes temáticas. Crianças também têm uma estrutura segura e direcionada para cada idade.</p>
         </div>
       </div>
@@ -64,7 +64,7 @@
   <section class="ice-section ice-visit" id="mapa">
     <div class="ice-section-inner ice-visit-grid">
       <div>
-        <div class="ice-kicker">— localização</div>
+        <div class="ice-kicker">Localização</div>
         <h2 class="ice-title">Estamos no<br>Colégio In-Nova.</h2>
         <p class="ice-copy mt-4">
           {{ $church.venue }}<br>

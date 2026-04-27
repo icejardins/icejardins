@@ -1,27 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,600&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700&display=swap");
 
 :root {
-  --ice-bone: #f6f2ea;
-  --ice-bone-2: #ece5d6;
-  --ice-paper: #faf7f1;
-  --ice-ink: #0d1f17;
-  --ice-moss: #1a3d2e;
-  --ice-moss-2: #2a5a44;
-  --ice-sage: #7a9a86;
-  --ice-leaf: #c8d6c0;
-  --ice-ember: #d97442;
-  --ice-ember-deep: #b8542a;
-  --ice-gold: #d4a44b;
-  --ice-text-1: #14251c;
-  --ice-text-2: #43544a;
-  --ice-text-3: #7b877d;
-  --ice-display: "Fraunces", "Cormorant Garamond", Georgia, serif;
-  --ice-serif: "Cormorant Garamond", Georgia, serif;
-  --ice-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --ice-hand: "Caveat", cursive;
-  --ice-shadow-sm: 0 10px 28px -22px rgba(13, 31, 23, 0.3);
-  --ice-shadow-md: 0 18px 48px -28px rgba(13, 31, 23, 0.32);
-  --ice-shadow-lg: 0 30px 90px -42px rgba(13, 31, 23, 0.42);
+  --ice-bone: #f5f1e8;
+  --ice-bone-2: #e8e0d0;
+  --ice-paper: #fbfaf7;
+  --ice-ink: #12302f;
+  --ice-moss: #126b67;
+  --ice-moss-2: #0e5552;
+  --ice-sage: #6b8e4e;
+  --ice-leaf: #dce5c7;
+  --ice-ember: #6b8e4e;
+  --ice-ember-deep: #3a5f0b;
+  --ice-gold: #b99752;
+  --ice-text-1: #252c2a;
+  --ice-text-2: #4f5b58;
+  --ice-text-3: #6c7976;
+  --ice-display: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ice-serif: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ice-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ice-hand: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ice-shadow-sm: 0 10px 28px -22px rgba(18, 48, 47, 0.28);
+  --ice-shadow-md: 0 18px 48px -28px rgba(18, 48, 47, 0.3);
+  --ice-shadow-lg: 0 30px 90px -42px rgba(18, 48, 47, 0.4);
 }
 
 html {
@@ -90,10 +90,11 @@ a:hover {
 }
 
 .ice-brand {
-  align-items: baseline;
+  align-items: center;
   color: var(--ice-moss);
   display: inline-flex;
-  gap: 0.35rem;
+  flex: 0 0 auto;
+  gap: 0;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -101,6 +102,18 @@ a:hover {
 .ice-brand:hover {
   color: var(--ice-moss);
   text-decoration: none;
+}
+
+.ice-brand-logo {
+  display: block;
+  height: clamp(2.35rem, 4vw, 3rem);
+  max-width: min(14rem, 42vw);
+  object-fit: contain;
+  width: auto;
+}
+
+.ice-brand-logo-white {
+  display: none;
 }
 
 .ice-brand-main {
@@ -131,9 +144,11 @@ a:hover {
 
 .ice-nav-links .nav-link {
   color: var(--ice-text-2) !important;
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   padding: 0.35rem 0 !important;
+  text-transform: uppercase;
 }
 
 .ice-nav-links .nav-link:hover,
@@ -162,8 +177,8 @@ a:hover {
 }
 
 .ice-nav-whatsapp {
-  background: rgba(217, 116, 66, 0.1);
-  border: 1px solid rgba(217, 116, 66, 0.32);
+  background: rgba(107, 142, 78, 0.1);
+  border: 1px solid rgba(107, 142, 78, 0.32);
   color: var(--ice-ember);
 }
 
@@ -203,7 +218,7 @@ a:hover {
 }
 
 .ice-theme-orb:focus-visible {
-  outline: 3px solid rgba(217, 116, 66, 0.3);
+  outline: 3px solid rgba(107, 142, 78, 0.3);
   outline-offset: 2px;
 }
 
@@ -252,7 +267,7 @@ a:hover {
 }
 
 .ice-nav-toggle:focus {
-  box-shadow: 0 0 0 0.18rem rgba(217, 116, 66, 0.18);
+  box-shadow: 0 0 0 0.18rem rgba(107, 142, 78, 0.18);
 }
 
 .ice-nav-toggle span {
@@ -283,7 +298,18 @@ a:hover {
 .ice-hand {
   color: var(--ice-gold);
   font-family: var(--ice-hand);
-  font-size: 1.35rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ice-footer-logo {
+  display: block;
+  height: auto;
+  margin-bottom: 1.3rem;
+  max-width: 250px;
+  width: min(100%, 250px);
 }
 
 .ice-footer-brand h2 {
@@ -381,10 +407,12 @@ a:hover {
 .ice-page-kicker {
   color: var(--ice-ember);
   font-family: var(--ice-hand);
-  font-size: clamp(1.35rem, 2.1vw, 1.75rem);
-  font-weight: 600;
-  line-height: 1.1;
-  margin-bottom: 0.75rem;
+  font-size: clamp(0.76rem, 1.2vw, 0.92rem);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  line-height: 1.3;
+  margin-bottom: 0.95rem;
+  text-transform: uppercase;
 }
 
 .ice-title,
@@ -392,18 +420,18 @@ a:hover {
   color: var(--ice-moss);
   font-family: var(--ice-display);
   font-size: clamp(3rem, 6vw, 5rem);
-  font-variation-settings: "opsz" 144;
-  font-weight: 300;
+  font-weight: 800;
   letter-spacing: -0.035em;
   line-height: 0.98;
   margin: 0;
+  text-transform: uppercase;
 }
 
 .ice-title em,
 .ice-page-title em {
   color: var(--ice-ember);
   font-style: italic;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .ice-copy,
@@ -495,7 +523,7 @@ a:hover {
 .ice-home-hero {
   align-items: center;
   background:
-    radial-gradient(ellipse at 88% 22%, rgba(217, 116, 66, 0.12), transparent 42%),
+    radial-gradient(ellipse at 88% 22%, rgba(107, 142, 78, 0.12), transparent 42%),
     linear-gradient(180deg, var(--ice-paper), var(--ice-bone));
   display: grid;
   gap: clamp(3rem, 6vw, 5.5rem);
@@ -564,34 +592,37 @@ a:hover {
 .ice-hero-eyebrow {
   color: var(--ice-ember);
   font-family: var(--ice-hand);
-  font-size: clamp(1.55rem, 2.5vw, 2rem);
-  font-weight: 600;
+  font-size: clamp(0.78rem, 1.3vw, 0.95rem);
+  font-weight: 800;
+  letter-spacing: 0.16em;
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 .ice-home-hero h1 {
   color: var(--ice-moss);
   font-family: var(--ice-display);
-  font-size: clamp(4.1rem, 8vw, 8.8rem);
-  font-variation-settings: "opsz" 144;
-  font-weight: 300;
-  letter-spacing: -0.045em;
-  line-height: 0.92;
+  font-size: clamp(3.2rem, 6.2vw, 6.6rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  line-height: 0.96;
   margin: 0 0 1.8rem;
+  text-transform: uppercase;
+  word-break: normal;
 }
 
 .ice-home-hero h1 em {
   color: var(--ice-ember);
   font-style: italic;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .ice-hero-sub {
   color: var(--ice-text-2);
-  font-family: var(--ice-display);
+  font-family: var(--ice-sans);
   font-size: clamp(1.25rem, 2.1vw, 1.55rem);
-  font-style: italic;
-  font-weight: 300;
+  font-style: normal;
+  font-weight: 500;
   line-height: 1.45;
   margin: 0 0 2.4rem;
   max-width: 560px;
@@ -617,6 +648,7 @@ a:hover {
   height: 100%;
   overflow: hidden;
   position: relative;
+  z-index: 1;
 }
 
 .ice-hero-illustration {
@@ -630,7 +662,7 @@ a:hover {
   color: var(--ice-sage);
   pointer-events: none;
   position: absolute;
-  z-index: 2;
+  z-index: 0;
 }
 
 .ice-leaf-bg-tl {
@@ -649,18 +681,18 @@ a:hover {
 }
 
 .ice-hero-frame img {
-  filter: saturate(0.9) contrast(1.02);
+  filter: saturate(0.95) contrast(1.03);
   height: 100%;
   object-fit: cover;
-  object-position: center 35%;
-  opacity: 0.88;
+  object-position: center center;
+  opacity: 0.92;
   width: 100%;
 }
 
 .ice-hero-frame::after {
   background:
-    radial-gradient(circle at 72% 28%, rgba(217, 116, 66, 0.2), transparent 42%),
-    linear-gradient(180deg, rgba(13, 31, 23, 0.02), rgba(13, 31, 23, 0.28));
+    radial-gradient(circle at 72% 28%, rgba(107, 142, 78, 0.18), transparent 42%),
+    linear-gradient(180deg, rgba(18, 48, 47, 0.02), rgba(18, 48, 47, 0.42));
   content: "";
   inset: 0;
   position: absolute;
@@ -686,9 +718,10 @@ a:hover {
 
 .ice-hero-img-label {
   bottom: 1.5rem;
-  font-family: var(--ice-display);
-  font-size: 0.95rem;
-  font-style: italic;
+  font-family: var(--ice-sans);
+  font-size: 0.88rem;
+  font-style: normal;
+  font-weight: 600;
   left: 1.5rem;
   max-width: 280px;
   opacity: 0.9;
@@ -728,8 +761,10 @@ a:hover {
   color: var(--ice-moss);
   font-family: var(--ice-display);
   font-size: 1.45rem;
-  font-weight: 400;
+  font-weight: 800;
+  letter-spacing: -0.03em;
   margin: 0 0 0.25rem;
+  text-transform: uppercase;
 }
 
 .ice-service-card p {
@@ -751,7 +786,7 @@ a:hover {
   display: block;
   font-family: var(--ice-display);
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 800;
 }
 
 .ice-service-times span {
@@ -786,7 +821,7 @@ a:hover {
   color: var(--ice-moss);
   font-family: var(--ice-display);
   font-size: clamp(2.3rem, 4.8vw, 4.4rem);
-  font-weight: 300;
+  font-weight: 700;
   letter-spacing: -0.025em;
   line-height: 1.16;
   margin: 0 auto 1.5rem;
@@ -800,9 +835,12 @@ a:hover {
 
 .ice-verse cite {
   color: var(--ice-text-3);
-  font-family: var(--ice-display);
-  font-size: 1.1rem;
-  font-style: italic;
+  font-family: var(--ice-sans);
+  font-size: 0.84rem;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .ice-story {
@@ -838,12 +876,34 @@ a:hover {
   padding: 0.35rem 0.45rem 0 0;
 }
 
+.ice-photo-strip {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: 1.1fr 0.9fr 0.9fr;
+  margin-top: 2rem;
+}
+
+.ice-photo-strip img {
+  aspect-ratio: 4 / 3;
+  border-radius: 6px;
+  box-shadow: var(--ice-shadow-sm);
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.ice-photo-strip img:first-child {
+  aspect-ratio: 16 / 10;
+  grid-row: span 2;
+}
+
 .ice-pull {
   border-left: 2px solid var(--ice-ember);
   color: var(--ice-moss);
   font-family: var(--ice-display);
   font-size: clamp(1.55rem, 2.5vw, 2.05rem);
   font-style: italic;
+  font-weight: 700;
   line-height: 1.35;
   margin-top: 2.5rem;
   max-width: 720px;
@@ -886,6 +946,27 @@ a:hover {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.ice-values-cloud {
+  border-top: 1px solid rgba(246, 242, 234, 0.16);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+  padding-top: clamp(2rem, 4vw, 3rem);
+}
+
+.ice-values-cloud span {
+  border: 1px solid rgba(246, 242, 234, 0.24);
+  border-radius: 999px;
+  color: rgba(246, 242, 234, 0.86);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 0.6rem 0.85rem;
+  text-transform: uppercase;
+}
+
 .ice-pillar {
   border-top: 1px solid rgba(246, 242, 234, 0.16);
   padding-top: 1.5rem;
@@ -919,10 +1000,11 @@ a:hover {
   color: var(--ice-bone);
   font-family: var(--ice-display);
   font-size: clamp(2.1rem, 3.5vw, 2.7rem);
-  font-weight: 400;
+  font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1;
   margin: 0 0 1rem;
+  text-transform: uppercase;
 }
 
 .ice-pillar h3 em {
@@ -970,7 +1052,8 @@ a:hover {
   color: var(--ice-ember);
   font-family: var(--ice-display);
   font-size: 1.8rem;
-  font-style: italic;
+  font-style: normal;
+  font-weight: 800;
   line-height: 1;
 }
 
@@ -991,8 +1074,10 @@ a:hover {
   display: block;
   font-family: var(--ice-display);
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 800;
+  letter-spacing: -0.03em;
   line-height: 1.12;
+  text-transform: uppercase;
 }
 
 .ice-visit-row span {
@@ -1059,25 +1144,29 @@ a:hover {
 .ice-map-label {
   color: var(--ice-gold);
   font-family: var(--ice-hand);
-  font-size: 1.55rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
   margin-bottom: 0.8rem;
+  text-transform: uppercase;
 }
 
 .ice-map-card h3 {
   color: var(--ice-bone);
   font-family: var(--ice-display);
   font-size: clamp(2.1rem, 4vw, 3rem);
-  font-weight: 400;
+  font-weight: 800;
   letter-spacing: -0.025em;
   line-height: 1.05;
   margin: 0 0 1.2rem;
+  text-transform: uppercase;
 }
 
 .ice-map-address {
   color: rgba(246, 242, 234, 0.82);
-  font-family: var(--ice-display);
+  font-family: var(--ice-sans);
   font-size: 1.05rem;
-  font-style: italic;
+  font-style: normal;
   line-height: 1.65;
   margin: 0;
   max-width: 440px;
@@ -1223,7 +1312,7 @@ a:hover {
 }
 
 .ice-sermon-art-1::before {
-  background: radial-gradient(circle at 50% 28%, rgba(217, 116, 66, 0.34), transparent 52%);
+  background: radial-gradient(circle at 50% 28%, rgba(107, 142, 78, 0.28), transparent 52%);
   content: "";
   inset: 0;
   position: absolute;
@@ -1258,7 +1347,7 @@ a:hover {
 }
 
 .ice-sermon-image::after {
-  background: radial-gradient(circle at 35% 55%, rgba(217, 116, 66, 0.28), transparent 62%);
+  background: radial-gradient(circle at 35% 55%, rgba(107, 142, 78, 0.22), transparent 62%);
   content: "";
   inset: 0;
   mix-blend-mode: screen;
@@ -1296,7 +1385,8 @@ a:hover {
   color: var(--ice-moss);
   font-family: var(--ice-display);
   font-size: clamp(1.45rem, 2.3vw, 1.95rem);
-  font-weight: 500;
+  font-weight: 800;
+  letter-spacing: -0.035em;
   line-height: 1.16;
   margin: 0 0 0.8rem;
 }
@@ -1315,7 +1405,7 @@ a:hover {
 
 .ice-closing {
   background:
-    radial-gradient(ellipse at 50% 100%, rgba(217, 116, 66, 0.15), transparent 72%),
+    radial-gradient(ellipse at 50% 100%, rgba(107, 142, 78, 0.14), transparent 72%),
     var(--ice-paper);
   text-align: center;
   overflow: hidden;
@@ -1368,9 +1458,10 @@ a:hover {
 
 .ice-closing p {
   color: var(--ice-text-2);
-  font-family: var(--ice-display);
+  font-family: var(--ice-sans);
   font-size: clamp(1.25rem, 2.2vw, 1.55rem);
-  font-style: italic;
+  font-style: normal;
+  font-weight: 500;
   line-height: 1.5;
   margin: 1.6rem auto 2.4rem;
   max-width: 650px;
@@ -1388,7 +1479,7 @@ a:hover {
 
 .ice-page-hero.is-light {
   background:
-    radial-gradient(ellipse at 80% 18%, rgba(217, 116, 66, 0.12), transparent 50%),
+    radial-gradient(ellipse at 80% 18%, rgba(107, 142, 78, 0.12), transparent 50%),
     var(--ice-paper);
   color: var(--ice-moss);
 }
@@ -1419,9 +1510,10 @@ a:hover {
 
 .ice-page-hero .ice-page-copy {
   color: rgba(246, 242, 234, 0.82);
-  font-family: var(--ice-display);
+  font-family: var(--ice-sans);
   font-size: clamp(1.25rem, 2vw, 1.45rem);
-  font-style: italic;
+  font-style: normal;
+  font-weight: 500;
   margin: 1.4rem 0 0;
   max-width: 720px;
 }
@@ -1434,11 +1526,12 @@ a:hover {
   color: var(--ice-gold);
   display: block;
   font-family: var(--ice-hand);
-  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
-  font-weight: 600;
-  letter-spacing: 0;
-  line-height: 1.1;
+  font-size: clamp(0.82rem, 1.2vw, 1rem);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  line-height: 1.3;
   margin-bottom: 0.85rem;
+  text-transform: uppercase;
 }
 
 .ice-page-hero.is-light .ice-page-copy {
@@ -1488,7 +1581,8 @@ a:hover {
   color: var(--ice-text-3);
   font-family: var(--ice-display);
   font-size: 0.82rem;
-  font-style: italic;
+  font-style: normal;
+  font-weight: 800;
   letter-spacing: 0.18em;
   margin-bottom: 1.1rem;
   text-transform: uppercase;
@@ -1509,9 +1603,12 @@ a:hover {
   color: var(--ice-text-2);
   display: block;
   font-family: var(--ice-display);
-  font-size: 0.95rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   padding: 0.55rem 0 0.55rem 1rem;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .ice-toc nav a:hover {
@@ -1527,12 +1624,13 @@ a:hover {
   color: var(--ice-moss);
   font-family: var(--ice-display);
   font-size: clamp(3rem, 6vw, 5rem);
-  font-weight: 300;
+  font-weight: 800;
   letter-spacing: -0.035em;
   line-height: 0.95;
   margin: 0 0 0.75rem;
   padding-top: 1.8rem;
   scroll-margin-top: 110px;
+  text-transform: uppercase;
 }
 
 .ice-belief-content h2::before {
@@ -1667,7 +1765,8 @@ a:hover {
   color: var(--ice-ember);
   font-family: var(--ice-display);
   font-size: 2.35rem;
-  font-style: italic;
+  font-style: normal;
+  font-weight: 800;
   line-height: 1;
   margin-bottom: 1rem;
 }
@@ -1676,8 +1775,10 @@ a:hover {
   color: var(--ice-moss);
   font-family: var(--ice-display);
   font-size: 1.65rem;
-  font-weight: 400;
+  font-weight: 800;
+  letter-spacing: -0.03em;
   margin: 0 0 0.7rem;
+  text-transform: uppercase;
 }
 
 .ice-schedule-card p {
@@ -1702,8 +1803,10 @@ a:hover {
   color: var(--ice-moss);
   font-family: var(--ice-display);
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 800;
+  letter-spacing: -0.03em;
   margin: 0 0 1rem;
+  text-transform: uppercase;
 }
 
 .ice-detail-band p {
@@ -1800,7 +1903,7 @@ a:hover {
   color: var(--ice-moss);
   font-family: var(--ice-display);
   font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 400;
+  font-weight: 800;
   letter-spacing: -0.025em;
   line-height: 1.1;
   margin: 0 0 1rem;
@@ -1868,7 +1971,7 @@ a:hover {
 
 .ice-series-band {
   background:
-    radial-gradient(ellipse at 0% 50%, rgba(217, 116, 66, 0.15), transparent 60%),
+    radial-gradient(ellipse at 0% 50%, rgba(107, 142, 78, 0.14), transparent 60%),
     var(--ice-moss);
   color: var(--ice-bone);
 }
@@ -1962,7 +2065,7 @@ a:hover {
 }
 
 .ice-sermon-series {
-  background: rgba(217, 116, 66, 0.1);
+  background: rgba(107, 142, 78, 0.1);
   border-radius: 999px;
   color: var(--ice-ember);
   display: inline-block;
@@ -1978,7 +2081,7 @@ a:hover {
   color: var(--ice-moss);
   font-family: var(--ice-display);
   font-size: clamp(3.2rem, 6vw, 5.4rem);
-  font-weight: 300;
+  font-weight: 800;
   letter-spacing: -0.035em;
   line-height: 1;
   margin: 0 0 1rem;
@@ -1986,9 +2089,10 @@ a:hover {
 
 .ice-sermon-summary {
   color: var(--ice-text-2);
-  font-family: var(--ice-display);
+  font-family: var(--ice-sans);
   font-size: clamp(1.25rem, 2vw, 1.45rem);
-  font-style: italic;
+  font-style: normal;
+  font-weight: 500;
   line-height: 1.5;
   margin: 0 0 2rem;
   max-width: 780px;
@@ -2225,9 +2329,12 @@ a:hover {
   color: var(--ice-text-2);
   display: block;
   font-family: var(--ice-display);
-  font-size: 0.98rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   padding: 0.58rem 0 0.58rem 1rem;
   text-decoration: none;
+  text-transform: uppercase;
   transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
@@ -2254,7 +2361,8 @@ a:hover {
   color: var(--ice-ember);
   font-family: var(--ice-display);
   font-size: 0.82rem;
-  font-style: italic;
+  font-style: normal;
+  font-weight: 800;
   letter-spacing: 0.14em;
   margin-bottom: 0.8rem;
   text-transform: uppercase;
@@ -2277,9 +2385,10 @@ a:hover {
 
 .ice-belief-subtitle {
   color: var(--ice-text-2) !important;
-  font-family: var(--ice-display) !important;
+  font-family: var(--ice-sans) !important;
   font-size: clamp(1.25rem, 2vw, 1.55rem) !important;
-  font-style: italic;
+  font-style: normal;
+  font-weight: 500;
   line-height: 1.45 !important;
   margin: 0 0 1.6rem !important;
 }
@@ -2290,9 +2399,9 @@ a:hover {
   border-radius: 4px;
   box-shadow: var(--ice-shadow-sm);
   color: var(--ice-text-1);
-  font-family: var(--ice-display);
-  font-size: clamp(1.25rem, 2.1vw, 1.55rem);
-  line-height: 1.62;
+  font-family: var(--ice-sans);
+  font-size: clamp(1.02rem, 1.7vw, 1.2rem);
+  line-height: 1.76;
   padding: clamp(1.5rem, 3vw, 2.2rem);
 }
 
@@ -2302,10 +2411,13 @@ a:hover {
   color: var(--ice-bone);
   display: inline-block;
   font-family: var(--ice-display);
-  font-size: 0.9rem;
-  font-style: italic;
+  font-size: 0.78rem;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.08em;
   margin: 0 0.6rem 0.35rem 0;
   padding: 0.25rem 0.7rem;
+  text-transform: uppercase;
   vertical-align: middle;
 }
 
@@ -2411,7 +2523,7 @@ a:hover {
 
 .ice-sermon-list-art-1 {
   background:
-    radial-gradient(circle at 68% 32%, rgba(217, 116, 66, 0.28), transparent 36%),
+    radial-gradient(circle at 68% 32%, rgba(107, 142, 78, 0.26), transparent 36%),
     linear-gradient(135deg, #7c512f, var(--ice-ink));
 }
 
@@ -2466,7 +2578,7 @@ a:hover {
 }
 
 .ice-sermon-meta span {
-  background: rgba(217, 116, 66, 0.1);
+  background: rgba(107, 142, 78, 0.1);
   border-radius: 999px;
   color: var(--ice-ember);
   display: inline-block;
@@ -2633,7 +2745,7 @@ a:hover {
   color: var(--ice-moss);
   font-family: var(--ice-display);
   font-size: clamp(1.55rem, 3vw, 2.2rem);
-  font-weight: 400;
+  font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.1;
   margin: 0 0 0.45rem;
@@ -2702,24 +2814,32 @@ a:hover {
 
 html.ice-dark,
 html.ice-dark body {
-  background: #0a130e !important;
+  background: #071817 !important;
   color: #edf4ea !important;
 }
 
 html.ice-dark body.light > *,
 body.ice-dark > * {
-  background-color: #0a130e !important;
+  background-color: #071817 !important;
   color: #edf4ea !important;
 }
 
 html.ice-dark #content {
-  background: #0a130e !important;
+  background: #071817 !important;
 }
 
 html.ice-dark .ice-site-header {
-  background: rgba(10, 19, 14, 0.92) !important;
+  background: rgba(7, 24, 23, 0.92) !important;
   border-bottom-color: rgba(216, 230, 214, 0.12);
   box-shadow: 0 14px 44px -34px rgba(0, 0, 0, 0.9);
+}
+
+html.ice-dark .ice-brand-logo-color {
+  display: none;
+}
+
+html.ice-dark .ice-brand-logo-white {
+  display: block;
 }
 
 html.ice-dark .ice-brand-main,
@@ -2732,7 +2852,7 @@ html.ice-dark .ice-theme-orb {
 html.ice-dark .ice-brand-script,
 html.ice-dark .ice-nav-links .nav-link.active,
 html.ice-dark .ice-nav-links .nav-link:hover {
-  color: #e58a58 !important;
+  color: #b8d38d !important;
 }
 
 html.ice-dark .ice-nav-cta,
@@ -2744,18 +2864,18 @@ html.ice-dark .ice-theme-orb {
 html.ice-dark .ice-nav-cta:hover {
   background: #edf4ea;
   border-color: #edf4ea;
-  color: #0a130e !important;
+  color: #071817 !important;
 }
 
 html.ice-dark .ice-nav-whatsapp {
-  background: rgba(229, 138, 88, 0.14);
-  border-color: rgba(229, 138, 88, 0.38);
-  color: #f3a074 !important;
+  background: rgba(184, 211, 141, 0.12);
+  border-color: rgba(184, 211, 141, 0.36);
+  color: #b8d38d !important;
 }
 
 html.ice-dark .ice-nav-whatsapp:hover {
-  background: #d97442;
-  color: #0a130e !important;
+  background: #b8d38d;
+  color: #071817 !important;
 }
 
 html.ice-dark .ice-theme-symbol {
@@ -2763,12 +2883,12 @@ html.ice-dark .ice-theme-symbol {
 }
 
 html.ice-dark .ice-theme-moon {
-  background: #0a130e;
+  background: #071817;
   transform: translateX(-0.18rem);
 }
 
 html.ice-dark .ice-theme-leaf {
-  background: #7a9a86;
+  background: #6b8e4e;
 }
 
 html.ice-dark .ice-home,
@@ -2789,9 +2909,9 @@ html.ice-dark .ice-home-hero,
 html.ice-dark .ice-closing,
 html.ice-dark .ice-page-hero.is-light {
   background:
-    radial-gradient(ellipse at 78% 18%, rgba(217, 116, 66, 0.16), transparent 46%),
-    radial-gradient(ellipse at 18% 86%, rgba(122, 154, 134, 0.13), transparent 44%),
-    #0f1b14 !important;
+    radial-gradient(ellipse at 78% 18%, rgba(184, 211, 141, 0.13), transparent 46%),
+    radial-gradient(ellipse at 18% 86%, rgba(18, 107, 103, 0.18), transparent 44%),
+    #0b2422 !important;
 }
 
 html.ice-dark .ice-pillars,
@@ -2801,7 +2921,7 @@ html.ice-dark .ice-map-card,
 html.ice-dark .ice-reading-card {
   background:
     radial-gradient(ellipse at 80% 0%, rgba(212, 164, 75, 0.14), transparent 55%),
-    #06100c !important;
+    #061615 !important;
   color: #edf4ea !important;
 }
 
@@ -2839,7 +2959,7 @@ html.ice-dark .ice-read,
 html.ice-dark .ice-link,
 html.ice-dark .ice-kicker,
 html.ice-dark .ice-page-kicker {
-  color: #e58a58 !important;
+  color: #b8d38d !important;
 }
 
 html.ice-dark .ice-copy,
@@ -2868,14 +2988,14 @@ html.ice-dark .ice-schedule-card,
 html.ice-dark .ice-detail-band,
 html.ice-dark .ice-belief-content blockquote,
 html.ice-dark .ice-related-card {
-  background: #17251c !important;
+  background: #102b29 !important;
   border-color: rgba(237, 244, 234, 0.12) !important;
   box-shadow: 0 30px 80px -46px rgba(0, 0, 0, 0.95);
   color: #edf4ea !important;
 }
 
 html.ice-dark .ice-service-card {
-  border-left-color: #e58a58;
+  border-left-color: #b8d38d;
 }
 
 html.ice-dark .ice-service-card h2,
@@ -2884,7 +3004,7 @@ html.ice-dark .ice-service-times strong {
 }
 
 html.ice-dark .ice-service-card .label {
-  color: #e58a58 !important;
+  color: #b8d38d !important;
 }
 
 html.ice-dark .ice-service-card p,
@@ -2895,13 +3015,13 @@ html.ice-dark .ice-service-times span {
 html.ice-dark .ice-btn-primary {
   background: #edf4ea;
   border-color: #edf4ea;
-  color: #0a130e !important;
+  color: #071817 !important;
 }
 
 html.ice-dark .ice-btn-primary:hover {
   background: #d4a44b;
   border-color: #d4a44b;
-  color: #0a130e !important;
+  color: #071817 !important;
 }
 
 html.ice-dark .ice-btn-ghost {
@@ -2914,14 +3034,14 @@ html.ice-dark .ice-btn-outline {
 }
 
 html.ice-dark .ice-btn-outline:hover {
-  border-color: #e58a58;
-  color: #e58a58 !important;
+  border-color: #b8d38d;
+  color: #b8d38d !important;
 }
 
 html.ice-dark .ice-time-badge,
 html.ice-dark .ice-visit-row .when,
 html.ice-dark .ice-sermon-series {
-  color: #f3a074 !important;
+  color: #b8d38d !important;
 }
 
 html.ice-dark .ice-search-input {
@@ -2933,8 +3053,8 @@ html.ice-dark .ice-search-input {
 html.ice-dark .ice-footer,
 body.light > .ice-footer,
 body.ice-dark > .ice-footer {
-  background: #06100c !important;
-  background-color: #06100c !important;
+  background: #061615 !important;
+  background-color: #061615 !important;
   color: #edf4ea !important;
 }
 
@@ -2972,25 +3092,25 @@ body.ice-dark > .ice-footer .ice-footer-bottom {
 }
 
 html.ice-dark .whatsapp-float {
-  background: #d97442;
-  color: #0a130e;
+  background: #6b8e4e;
+  color: #071817;
 }
 
 html.ice-dark .ice-nav-collapse {
-  background: rgba(10, 19, 14, 0.98);
+  background: rgba(7, 24, 23, 0.98);
   border-top-color: rgba(237, 244, 234, 0.12);
 }
 
 html.ice-dark .ice-player-card {
   background:
     radial-gradient(ellipse at 82% 0%, rgba(212, 164, 75, 0.14), transparent 55%),
-    #06100c !important;
+    #061615 !important;
   color: #edf4ea !important;
 }
 
 html.ice-dark .ice-reader-card {
-  background: #17251c !important;
-  border-left-color: #e58a58;
+  background: #102b29 !important;
+  border-left-color: #b8d38d;
   box-shadow: 0 30px 80px -46px rgba(0, 0, 0, 0.95);
   color: #edf4ea !important;
 }
@@ -3010,14 +3130,14 @@ html.ice-dark .ice-reader-share {
 
 html.ice-dark .ice-belief-article-text,
 html.ice-dark .ice-belief-references {
-  background: #17251c !important;
+  background: #102b29 !important;
   border-color: rgba(237, 244, 234, 0.12) !important;
   color: #edf4ea !important;
 }
 
 html.ice-dark .ice-belief-article-text span {
   background: #edf4ea;
-  color: #0a130e;
+  color: #071817;
 }
 
 html.ice-dark .ice-belief-subtitle,
@@ -3034,7 +3154,7 @@ html.ice-dark .ice-belief-toc-link {
 
 html.ice-dark .ice-belief-toc-link:hover,
 html.ice-dark .ice-belief-toc-link.active {
-  border-color: #e58a58;
+  border-color: #b8d38d;
   color: #edf4ea;
 }
 
@@ -3068,6 +3188,14 @@ html.ice-dark .ice-player-actions a {
 
   .ice-story-cols {
     columns: 1;
+  }
+
+  .ice-photo-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .ice-photo-strip img:first-child {
+    grid-row: auto;
   }
 
   .ice-filter-row {
@@ -3164,7 +3292,7 @@ html.ice-dark .ice-player-actions a {
   }
 
   .ice-home-hero h1 {
-    font-size: clamp(3.35rem, 16vw, 4.8rem);
+    font-size: clamp(2.65rem, 11.5vw, 3.5rem);
   }
 
   .ice-hero-actions .ice-btn,

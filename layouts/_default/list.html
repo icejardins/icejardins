@@ -21,7 +21,7 @@
         <span>Biblioteca · {{ len $pages }} sermões</span>
         {{ with $featured }}<span>Atualizado · {{ .Date.Format "02/01/2006" }}</span>{{ end }}
       </div>
-      <h1 class="ice-page-title"><span class="ice-hand">— da nossa mesa</span>Sermões<br>para <em>cultivar</em><br>a sua fé.</h1>
+      <h1 class="ice-page-title"><span class="ice-hand">Pregação fiel</span>Sermões<br>para <em>cultivar</em><br>a sua fé.</h1>
       <p class="ice-page-copy">Pregações expositivas, série a série. Leia, medite e volte à Palavra durante a semana.</p>
     </div>
   </section>
@@ -44,7 +44,7 @@
         </svg>
       </div>
       <div class="ice-featured-text">
-        <div class="ice-kicker">— sermão da semana</div>
+        <div class="ice-kicker">Sermão da semana</div>
         <div class="ice-meta-line">Série · {{ .Params.series | default "Joel" }} · Parte 1 de 6</div>
         <h2>{{ $featuredTitle | safeHTML }}</h2>
         <p>{{ .Params.subtitle | default (.Summary | plainify) | truncate 220 }}</p>
@@ -57,7 +57,7 @@
 
   <div class="ice-filter-row reveal">
     <div>
-      <div class="ice-kicker">— biblioteca</div>
+      <div class="ice-kicker">Biblioteca</div>
       <h2 class="ice-title">Todos os <em>sermões</em></h2>
     </div>
     <div class="ice-filter-pills" aria-label="Filtrar por série">
@@ -99,7 +99,7 @@
     <div class="ice-section-inner reveal">
       <div class="ice-section-head">
         <div>
-          <div class="ice-kicker">— por séries</div>
+          <div class="ice-kicker">Por séries</div>
           <h2 class="ice-title">Estudos <em>contínuos</em></h2>
         </div>
         <a href="{{ "series/" | relURL }}" class="ice-link is-gold">Ver todas →</a>
