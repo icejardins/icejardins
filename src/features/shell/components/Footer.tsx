@@ -37,7 +37,7 @@ export function Footer() {
       <section className={styles.bottom}>
         <div className="container py-4 d-flex flex-column flex-lg-row align-items-center justify-content-between gap-3">
           <div className="d-flex align-items-center gap-2">
-            <img src="logo-ice-jardins-01.png" alt="ICE Jardins" width={32} height={32} />
+            <img src="/images/logo-ice-jardins-01.png" alt="ICE Jardins" width={32} height={32} />
             <span>
               © {new Date().getFullYear()} {site.title}
             </span>

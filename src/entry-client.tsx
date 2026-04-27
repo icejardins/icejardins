@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import "@/styles/main.css";
+import "./styles/main.css";
 import { AppProviders } from "@/app/AppProviders";
 import { AppRoutes } from "@/app/AppRoutes";
 

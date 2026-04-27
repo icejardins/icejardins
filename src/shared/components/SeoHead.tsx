@@ -9,6 +9,18 @@ type SeoHeadProps = {
   canonicalPath?: string;
 };
 
+function toAbsoluteUrl(value: string | null | undefined, baseUrl: string) {
+  if (!value) {
+    return null;
+  }
+
+  if (/^https?:\/\//i.test(value)) {
+    return value;
+  }
+
+  return `${baseUrl}${value.startsWith("/") ? value : `/${value}`}`;
+}
+
 export function SeoHead({
   title,
   description,
@@ -20,6 +32,7 @@ export function SeoHead({
   const path = canonicalPath ?? location.pathname;
   const canonicalUrl = `${site.baseUrl}${path === "/" ? "/" : path.replace(/\/+$/, "/")}`;
   const metaDescription = description ?? site.description;
+  const imageUrl = toAbsoluteUrl(image, site.baseUrl);
 
   return (
     <Helmet>
@@ -31,7 +44,7 @@ export function SeoHead({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:url" content={canonicalUrl} />
-      {image ? <meta property="og:image" content={image} /> : null}
+      {imageUrl ? <meta property="og:image" content={imageUrl} /> : null}
       <meta name="twitter:card" content="summary_large_image" />
       <link rel="canonical" href={canonicalUrl} />
     </Helmet>

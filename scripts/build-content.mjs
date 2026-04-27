@@ -13,6 +13,7 @@ const rootDir = process.cwd();
 const contentDir = path.join(rootDir, "content");
 const generatedDir = path.join(rootDir, "src", "content", "generated");
 const staticDir = path.join(rootDir, "static");
+const configuredBaseUrl = process.env.SITE_URL ?? process.env.VITE_SITE_URL;
 
 const YOUTUBE_SHORTCODE_REGEX = /\{\{<\s*youtube\s+([^\s>]+)\s*>\}\}/g;
 
@@ -382,7 +383,7 @@ async function main() {
 
   const siteConfig = {
     title: String(hugoConfig.title ?? "ICE Jardins"),
-    baseUrl: String(hugoConfig.baseURL ?? "https://icejardins.org.br/").replace(/\/+$/, ""),
+    baseUrl: String(configuredBaseUrl ?? hugoConfig.baseURL ?? "https://icejardins.com.br/").replace(/\/+$/, ""),
     languageCode: String(hugoConfig.languageCode ?? "pt-br"),
     description: String(
       siteParams.description ?? "Igreja Cristã Evangélica Jardins em Brasília."

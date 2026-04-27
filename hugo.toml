@@ -1,4 +1,4 @@
-baseURL = 'https://icejardins.org.br/'
+baseURL = 'https://icejardins.com.br/'
 languageCode = 'pt-br'
 title = 'ICE Jardins - Igreja Cristã Evangélica Jardins'
 theme = 'hugo-profile'

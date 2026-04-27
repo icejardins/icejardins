@@ -1,0 +1,70 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "npm ci",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "cleanUrls": false,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/2026/04/joel-1-a-chegada-do-dia-do-senhor/",
+      "destination": "/posts/joel-1-a-chegada-do-dia-do-senhor/",
+      "permanent": true
+    },
+    {
+      "source": "/2026/04/joel-1-a-chegada-do-dia-do-senhor",
+      "destination": "/posts/joel-1-a-chegada-do-dia-do-senhor/",
+      "permanent": true
+    },
+    {
+      "source": "/2026/04/joel-21-11-deus-em-guerra-contra-seu-povo/",
+      "destination": "/posts/joel-2_1-11_deus-em-guerra-contra-seu-povo/",
+      "permanent": true
+    },
+    {
+      "source": "/2026/04/joel-21-11-deus-em-guerra-contra-seu-povo",
+      "destination": "/posts/joel-2_1-11_deus-em-guerra-contra-seu-povo/",
+      "permanent": true
+    },
+    {
+      "source": "/2026/04/joel-212-17-rasguem-o-coracao-e-nao-as-roupas/",
+      "destination": "/posts/joel-2_12-17_rasguem-o-coracao-e-nao-as-roupas/",
+      "permanent": true
+    },
+    {
+      "source": "/2026/04/joel-212-17-rasguem-o-coracao-e-nao-as-roupas",
+      "destination": "/posts/joel-2_12-17_rasguem-o-coracao-e-nao-as-roupas/",
+      "permanent": true
+    },
+    {
+      "source": "/2026/04/joel-218-32-a-compaixao-de-deus/",
+      "destination": "/posts/joel-2-18-32-a-compaix-o-de-deus/",
+      "permanent": true
+    },
+    {
+      "source": "/2026/04/joel-218-32-a-compaixao-de-deus",
+      "destination": "/posts/joel-2-18-32-a-compaix-o-de-deus/",
+      "permanent": true
+    },
+    {
+      "source": "/2026/04/joel-31-17-o-dia-do-senhor-julgamento-e-restauracao/",
+      "destination": "/posts/joel-3-1-17-o-dia-do-senhor-julgamento-e-restaura-o/",
+      "permanent": true
+    },
+    {
+      "source": "/2026/04/joel-31-17-o-dia-do-senhor-julgamento-e-restauracao",
+      "destination": "/posts/joel-3-1-17-o-dia-do-senhor-julgamento-e-restaura-o/",
+      "permanent": true
+    },
+    {
+      "source": "/2026/04/joel-317-21-os-resultados-do-dia-do-senhor/",
+      "destination": "/posts/joel-3-17-21-os-resultados-do-dia-do-senhor/",
+      "permanent": true
+    },
+    {
+      "source": "/2026/04/joel-317-21-os-resultados-do-dia-do-senhor",
+      "destination": "/posts/joel-3-17-21-os-resultados-do-dia-do-senhor/",
+      "permanent": true
+    }
+  ]
+}
