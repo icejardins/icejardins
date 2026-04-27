@@ -384,31 +384,6 @@ a:hover {
   z-index: 1000;
 }
 
-.whatsapp-float::before,
-.whatsapp-float::after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 82'%3E%3Cg fill='none' stroke='%236b8e4e' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M49 68C25 63 11 48 15 29C18 14 30 7 43 7' stroke-width='3.2'/%3E%3Cpath d='M33 58C28 48 31 40 40 35' stroke-width='1.8'/%3E%3Cpath d='M22 45C17 36 20 27 29 22' stroke-width='1.8'/%3E%3C/g%3E%3Cg fill='%23b8d38d' stroke='%23f6f2ea' stroke-width='1'%3E%3Cpath d='M39 35C31 34 27 28 28 20C36 21 41 27 39 35Z'/%3E%3Cpath d='M22 45C14 46 9 41 8 34C16 33 22 37 22 45Z'/%3E%3Cpath d='M34 58C26 60 20 55 19 47C27 47 33 51 34 58Z'/%3E%3Cpath d='M45 11C37 11 32 6 32 1C40 1 45 5 45 11Z'/%3E%3C/g%3E%3C/svg%3E");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  content: "";
-  height: 4.65rem;
-  pointer-events: none;
-  position: absolute;
-  top: -0.38rem;
-  width: 3.15rem;
-  z-index: 1;
-}
-
-.whatsapp-float::before {
-  left: -1.8rem;
-  transform: rotate(-7deg);
-}
-
-.whatsapp-float::after {
-  right: -1.8rem;
-  transform: scaleX(-1) rotate(-7deg);
-}
-
 .whatsapp-float svg {
   height: 1.75rem;
   position: relative;
@@ -423,14 +398,6 @@ a:hover {
   color: #ffffff !important;
   text-decoration: none;
   transform: translateY(-2px) scale(1.03);
-}
-
-.whatsapp-float:hover::before {
-  transform: translate(-2px, -1px) rotate(-10deg);
-}
-
-.whatsapp-float:hover::after {
-  transform: translate(2px, -1px) scaleX(-1) rotate(-10deg);
 }
 
 .ice-section {
@@ -3409,20 +3376,6 @@ html.ice-dark .ice-player-actions a {
   .whatsapp-float svg {
     height: 1.42rem;
     width: 1.42rem;
-  }
-
-  .whatsapp-float::before {
-    height: 3.7rem;
-    left: -1.38rem;
-    top: -0.28rem;
-    width: 2.5rem;
-  }
-
-  .whatsapp-float::after {
-    height: 3.7rem;
-    right: -1.38rem;
-    top: -0.28rem;
-    width: 2.5rem;
   }
 }
 
