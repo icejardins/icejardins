@@ -44,7 +44,7 @@ defaultContentLanguageInSubdir = false
   whatsappNumber = "5561982624952"
   whatsapp = "https://api.whatsapp.com/send?phone=5561982624952"
   whatsappMessage = "Olá! Tenho interesse em visitar a ICE Jardins. Pode me ajudar?"
-  venue = "Auditório do Colégio In-Nova"
+  venue = "Auditório do Colégio INovar"
   venueNote = "antigo COC Jardim Botânico"
   addressLine1 = "Condomínio Estância Jardim Botânico II, Lotes 1-3 e 4"
   addressLine2 = "SH Jardim Botânico"
@@ -56,8 +56,8 @@ defaultContentLanguageInSubdir = false
   schoolTime = "11h"
   schoolName = "EBD"
   coffeeTime = "10h50"
-  mapsUrl = "https://www.google.com/maps/dir/?api=1&destination=Col%C3%A9gio%20In-Nova%2C%20Condom%C3%ADnio%20Est%C3%A2ncia%20Jardim%20Bot%C3%A2nico%20II%2C%20Bras%C3%ADlia%20-%20DF%2C%2071686-301"
-  mapEmbedUrl = "https://maps.google.com/maps?q=Col%C3%A9gio%20In-Nova%2C%20Condom%C3%ADnio%20Est%C3%A2ncia%20Jardim%20Bot%C3%A2nico%20II%2C%20Bras%C3%ADlia%20-%20DF%2C%2071686-301&t=&z=16&ie=UTF8&iwloc=&output=embed"
+  mapsUrl = "https://www.google.com/maps/dir/?api=1&destination=Col%C3%A9gio%20INovar%2C%20Condom%C3%ADnio%20Est%C3%A2ncia%20Jardim%20Bot%C3%A2nico%20II%2C%20Bras%C3%ADlia%20-%20DF%2C%2071686-301"
+  mapEmbedUrl = "https://maps.google.com/maps?q=Col%C3%A9gio%20INovar%2C%20Condom%C3%ADnio%20Est%C3%A2ncia%20Jardim%20Bot%C3%A2nico%20II%2C%20Bras%C3%ADlia%20-%20DF%2C%2071686-301&t=&z=16&ie=UTF8&iwloc=&output=embed"
 
 [params.font]
   fontSize = "1rem"
