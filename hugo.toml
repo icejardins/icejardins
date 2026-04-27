@@ -22,10 +22,10 @@ defaultContentLanguageInSubdir = false
     weight = 1
 
 [params]
-  favicon = "/images/fav.webp"
+  favicon = "images/fav.webp"
   animate = false
   description = "Igreja Cristã Evangélica Jardins, uma igreja bíblica, evangelizadora e discipuladora no Jardim Botânico, em Brasília. Culto expositivo aos domingos às 9h30 e EBD às 11h."
-  images = ["/images/sobre/identidade.webp"]
+  images = ["images/sobre/identidade.webp"]
   hostName = "https://icejardins.org.br"
 
 [params.church]
@@ -36,9 +36,9 @@ defaultContentLanguageInSubdir = false
   mission = "Aprender, viver e oferecer a vida maravilhosa de Cristo"
   vision = "Ser uma igreja bíblica, evangelizadora e discipuladora"
   values = ["Glória de Deus", "Pregação fiel", "Intencionalidade", "Serviço", "Cuidado recíproco", "Simplicidade", "Liderança bíblica", "Parceria com a família", "Generosidade", "Missões"]
-  logoColor = "/images/branding/logo-color.png"
-  logoWhite = "/images/branding/logo-white.png"
-  logoBlack = "/images/branding/logo-black.png"
+  logoColor = "images/branding/logo-color.png"
+  logoWhite = "images/branding/logo-white.png"
+  logoBlack = "images/branding/logo-black.png"
   email = "secretaria@icejardins.org.br"
   phone = "+55 61 98262-4952"
   whatsappNumber = "5561982624952"
