@@ -1,4 +1,4 @@
-﻿.hero {
+.hero {
   min-height: 74vh;
   display: grid;
   place-items: center;
@@ -19,6 +19,7 @@
 .hero p {
   font-size: clamp(1.1rem, 3vw, 1.65rem);
   margin-bottom: 2rem;
+  white-space: pre-line;
 }
 
 .sectionSpace {
