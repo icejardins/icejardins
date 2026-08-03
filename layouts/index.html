@@ -1,11 +1,14 @@
 {{ define "head" }}
 <meta name="description" content="{{ .Site.Params.description }}">
-<link rel="stylesheet" href="{{ (printf "%scss/index.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all">
+<link rel="stylesheet" href="{{ (printf " %scss/index.css" (.Site.Params.staticPath | default "" )) | relURL }}"
+    media="all">
 <!-- fontawesome -->
-<script defer src="{{ (printf "%sfontawesome-6/all-6.4.2.js" (.Site.Params.staticPath | default "")) | relURL }}"></script>
+<script defer src="{{ (printf " %sfontawesome-6/all-6.4.2.js" (.Site.Params.staticPath | default "" )) | relURL
+    }}"></script>
 <style>
     .hero-section {
-        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('{{ "images/sobre/identidade.webp" | relURL }}') no-repeat center center;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+        url('{{ "images/sobre/identidade.webp" | relURL }}') no-repeat center center;
         background-size: cover;
         color: white;
         padding: 100px 0;
@@ -14,21 +17,25 @@
         display: flex;
         align-items: center;
     }
+
     .hero-section h1 {
         font-size: 4rem;
         font-weight: 800;
         margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
+
     .hero-section p.lead {
         font-size: 1.75rem;
         font-weight: 300;
         margin-bottom: 40px;
-        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     }
+
     .section-padding {
         padding: 90px 0;
     }
+
     .card-identidade {
         border: none;
         border-radius: 20px;
@@ -36,10 +43,12 @@
         background: var(--background-color);
         height: 100%;
     }
+
     .card-identidade:hover {
         transform: translateY(-10px);
-        box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
     }
+
     .icon-wrapper {
         width: 90px;
         height: 90px;
@@ -53,26 +62,32 @@
         margin: 0 auto 25px;
         box-shadow: 0 10px 20px rgba(204, 107, 2, 0.3);
     }
+
     .cultos-section {
         background: linear-gradient(135deg, var(--primary-color), #b05c01);
         color: white;
     }
+
     .dark .cultos-section {
         background: linear-gradient(135deg, #1f1f1f, #111);
         border-top: 3px solid var(--primary-color);
     }
+
     .culto-card {
         background: rgba(255, 255, 255, 0.95);
         border-radius: 15px;
         border-left: 6px solid var(--primary-color);
         transition: transform 0.3s ease;
     }
+
     .dark .culto-card {
         background: #2a2a2a;
     }
+
     .culto-card:hover {
         transform: scale(1.02);
     }
+
     .btn-hero {
         border-radius: 50px;
         padding: 15px 40px;
@@ -82,6 +97,7 @@
         transition: all 0.3s ease;
         border: 2px solid white;
     }
+
     .btn-hero:hover {
         background-color: var(--primary-color);
         border-color: var(--primary-color);
@@ -101,7 +117,8 @@
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <h1 class="display-3">ICE Jardins</h1>
-                <p class="lead font-italic">"Pessoas imperfeitas compartilhando a perfeição de Cristo<br>Domingos, 9h30, auditório do Colégio Innova"</p>
+                <p class="lead font-italic">"Pessoas imperfeitas compartilhando a perfeição de Cristo<br>Dom, 9h30,
+                    auditório do Colégio Innova"</p>
                 <a href="#quem-somos" class="btn btn-hero btn-outline-light mt-4">Conheça a Igreja</a>
             </div>
         </div>
@@ -114,17 +131,28 @@
         <div class="row align-items-center">
             <div class="col-lg-6 mb-5 mb-lg-0">
                 <div class="position-relative">
-                    <img src="{{ "images/sobre/congregacao.webp" | relURL }}" alt="Congregação da ICE Jardins" class="img-fluid shadow-lg" style="object-fit: cover; height: 100%; min-height: 450px; border-radius: 20px;">
-                    <div class="position-absolute d-none d-md-block" style="bottom: -30px; right: -30px; width: 150px; height: 150px; background-color: var(--primary-color); border-radius: 20px; z-index: -1;"></div>
+                    <img src="{{ " images/sobre/congregacao.webp" | relURL }}" alt="Congregação da ICE Jardins"
+                        class="img-fluid shadow-lg"
+                        style="object-fit: cover; height: 100%; min-height: 450px; border-radius: 20px;">
+                    <div class="position-absolute d-none d-md-block"
+                        style="bottom: -30px; right: -30px; width: 150px; height: 150px; background-color: var(--primary-color); border-radius: 20px; z-index: -1;">
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6 px-lg-5">
-                <h2 class="font-weight-bold mb-4" style="color: var(--primary-color); font-size: 2.5rem;">Quem Somos</h2>
-                <p class="lead" style="font-size: 1.25rem;">Somos uma comunidade em Brasília onde pessoas imperfeitas vivenciam e compartilham o amor imerecido de Cristo.</p>
-                <p class="mt-4" style="font-size: 1.1rem; line-height: 1.8;">O nome <strong style="color: var(--primary-color);">Jardins</strong> não é por acaso. Deus nos criou em um jardim e deseja cultivar em nós as belezas que Ele mesmo planejou. Aqui, cada pessoa é uma semente que pode florescer pela graça de Deus.</p>
-                
-                <div class="mt-5 p-4 rounded" style="background-color: var(--secondary-background-color); border-left: 5px solid var(--primary-color);">
-                    <h5 class="mb-0 font-weight-bold" style="color: var(--text-color);">Todos podem ser transformados por Jesus!</h5>
+                <h2 class="font-weight-bold mb-4" style="color: var(--primary-color); font-size: 2.5rem;">Quem Somos
+                </h2>
+                <p class="lead" style="font-size: 1.25rem;">Somos uma comunidade em Brasília onde pessoas imperfeitas
+                    vivenciam e compartilham o amor imerecido de Cristo.</p>
+                <p class="mt-4" style="font-size: 1.1rem; line-height: 1.8;">O nome <strong
+                        style="color: var(--primary-color);">Jardins</strong> não é por acaso. Deus nos criou em um
+                    jardim e deseja cultivar em nós as belezas que Ele mesmo planejou. Aqui, cada pessoa é uma semente
+                    que pode florescer pela graça de Deus.</p>
+
+                <div class="mt-5 p-4 rounded"
+                    style="background-color: var(--secondary-background-color); border-left: 5px solid var(--primary-color);">
+                    <h5 class="mb-0 font-weight-bold" style="color: var(--text-color);">Todos podem ser transformados
+                        por Jesus!</h5>
                 </div>
             </div>
         </div>
@@ -138,7 +166,7 @@
             <h2 class="font-weight-bold" style="color: var(--primary-color); font-size: 2.5rem;">Nossa Identidade</h2>
             <p class="text-muted" style="font-size: 1.2rem;">Os pilares que sustentam nossa comunidade</p>
         </div>
-        
+
         <div class="row text-center">
             <!-- Bíblica -->
             <div class="col-lg-4 col-md-6 mb-4">
@@ -148,7 +176,9 @@
                             <i class="fas fa-book-open"></i>
                         </div>
                         <h4 class="card-title font-weight-bold mb-3">Bíblica</h4>
-                        <p class="card-text text-muted" style="line-height: 1.7;">Toda a nossa fé e prática são fundamentadas nas Escrituras Sagradas. A Bíblia é a nossa autoridade final em todas as questões de fé e conduta.</p>
+                        <p class="card-text text-muted" style="line-height: 1.7;">Toda a nossa fé e prática são
+                            fundamentadas nas Escrituras Sagradas. A Bíblia é a nossa autoridade final em todas as
+                            questões de fé e conduta.</p>
                     </div>
                 </div>
             </div>
@@ -160,7 +190,9 @@
                             <i class="fas fa-users"></i>
                         </div>
                         <h4 class="card-title font-weight-bold mb-3">Discipuladora</h4>
-                        <p class="card-text text-muted" style="line-height: 1.7;">Acreditamos que cada crente é chamado a crescer na fé e a discipular outros. Investimos em relacionamentos transformadores que levam à maturidade espiritual.</p>
+                        <p class="card-text text-muted" style="line-height: 1.7;">Acreditamos que cada crente é chamado
+                            a crescer na fé e a discipular outros. Investimos em relacionamentos transformadores que
+                            levam à maturidade espiritual.</p>
                     </div>
                 </div>
             </div>
@@ -172,7 +204,9 @@
                             <i class="fas fa-globe-americas"></i>
                         </div>
                         <h4 class="card-title font-weight-bold mb-3">Evangelizadora</h4>
-                        <p class="card-text text-muted" style="line-height: 1.7;">Somos movidos pela Grande Comissão. Cada membro é um embaixador de Cristo, chamado a compartilhar a Boa Nova com a família, os amigos e a comunidade.</p>
+                        <p class="card-text text-muted" style="line-height: 1.7;">Somos movidos pela Grande Comissão.
+                            Cada membro é um embaixador de Cristo, chamado a compartilhar a Boa Nova com a família, os
+                            amigos e a comunidade.</p>
                     </div>
                 </div>
             </div>
@@ -182,7 +216,8 @@
 
 <!-- Imagem de Transição -->
 <section>
-    <img src="{{ "images/sobre/comunidade.webp" | relURL }}" alt="Comunidade ICE Jardins" class="img-fluid w-100 shadow-lg" style="height: 450px; object-fit: cover;">
+    <img src="{{ " images/sobre/comunidade.webp" | relURL }}" alt="Comunidade ICE Jardins"
+        class="img-fluid w-100 shadow-lg" style="height: 450px; object-fit: cover;">
 </section>
 
 <!-- Nossos Cultos & Localização -->
@@ -192,8 +227,9 @@
             <!-- Cultos -->
             <div class="col-lg-5 mb-5 mb-lg-0">
                 <h2 class="font-weight-bold mb-4" style="font-size: 2.2rem;">Nossos Cultos</h2>
-                <p class="mb-4 text-light">Junte-se a nós aos domingos. Há um lugar preparado para você e sua família.</p>
-                
+                <p class="mb-4 text-light">Junte-se a nós aos domingos. Há um lugar preparado para você e sua família.
+                </p>
+
                 <div class="d-flex align-items-center mb-4 p-4 text-dark shadow-sm culto-card">
                     <i class="far fa-clock fa-2x" style="color: var(--primary-color);"></i>
                     <div class="ms-4">
@@ -201,7 +237,7 @@
                         <p class="mb-0 text-muted font-weight-bold">Domingos às 9h30</p>
                     </div>
                 </div>
-                
+
                 <div class="d-flex align-items-center p-4 text-dark shadow-sm culto-card">
                     <i class="fas fa-book-reader fa-2x" style="color: var(--primary-color);"></i>
                     <div class="ms-4">
@@ -210,11 +246,11 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Localização -->
             <div class="col-lg-6 offset-lg-1">
                 <h2 class="font-weight-bold mb-4" style="font-size: 2.2rem;">Como Nos Encontrar</h2>
-                
+
                 <div class="mb-5 d-flex">
                     <i class="fas fa-map-marker-alt fa-2x mt-1 mr-4"></i>
                     <div class="ms-3">
@@ -227,19 +263,20 @@
                         </p>
                     </div>
                 </div>
-                
+
                 <div class="d-flex">
                     <i class="fas fa-envelope fa-2x mt-1 mr-4"></i>
                     <div class="ms-3">
                         <h4 class="font-weight-bold mb-2">E-mail</h4>
                         <p class="mb-0" style="font-size: 1.1rem;">
-                            <a href="mailto:secretaria@icejardins.org.br" class="text-white text-decoration-underline">secretaria@icejardins.org.br</a>
+                            <a href="mailto:secretaria@icejardins.org.br"
+                                class="text-white text-decoration-underline">secretaria@icejardins.org.br</a>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- Mensagem Final -->
         <div class="row mt-5 pt-5 text-center" style="border-top: 1px solid rgba(255,255,255,0.2);">
             <div class="col-12">

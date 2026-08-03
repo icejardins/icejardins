@@ -7,7 +7,7 @@ export type HomeIdentityItem = {
 export const homeContent = {
   hero: {
     title: "ICE Jardins",
-    subtitle: "Pessoas imperfeitas compartilhando a perfeição de Cristo\nDomingos, 9h30, auditório do Colégio Innova",
+    subtitle: "Pessoas imperfeitas compartilhando a perfeição de Cristo\nDom, 9h30, auditório do Colégio Innova",
     ctaLabel: "Conheça a Igreja",
     ctaTarget: "#quem-somos"
   },
