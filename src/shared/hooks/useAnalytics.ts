@@ -15,10 +15,27 @@ export function useAnalytics() {
       return;
     }
 
-    ReactGA.initialize(measurementId, {
-      gtagOptions: { send_page_view: false }
-    });
-    initialized.current = true;
+    const initGA = () => {
+      if (initialized.current) return;
+      ReactGA.initialize(measurementId, {
+        gtagOptions: { send_page_view: false }
+      });
+      initialized.current = true;
+
+      ReactGA.send({
+        hitType: "pageview",
+        page: `${pathname}${search}`,
+        title: document.title
+      });
+    };
+
+    if (typeof window !== "undefined" && "requestIdleCallback" in window) {
+      const handle = window.requestIdleCallback(initGA, { timeout: 2500 });
+      return () => window.cancelIdleCallback(handle);
+    }
+
+    const timer = setTimeout(initGA, 1500);
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {

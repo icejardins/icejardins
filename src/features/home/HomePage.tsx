@@ -1,5 +1,6 @@
-﻿import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { SeoHead } from "@/shared/components/SeoHead";
+import { Icon } from "@/shared/components/Icon";
 import { getSiteConfig } from "@/content/repositories/contentRepository";
 import { homeContent } from "@/content/data/homeContent";
 import styles from "./HomePage.module.css";
@@ -51,6 +52,8 @@ export default function HomePage() {
                     key={image.src}
                     src={image.src}
                     alt={image.alt}
+                    width={800}
+                    height={535}
                     className={`${styles.imageCover} ${styles.carouselImage} ${
                       index === activeAboutImage ? styles.carouselImageActive : ""
                     }`}
@@ -90,7 +93,7 @@ export default function HomePage() {
               <div key={item.title} className="col-lg-4 col-md-6">
                 <article className={styles.identityCard}>
                   <div className={styles.iconWrap}>
-                    <i className={item.iconClass} aria-hidden="true" />
+                    <Icon name={item.iconClass} />
                   </div>
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
@@ -105,6 +108,8 @@ export default function HomePage() {
         <img
           src={homeContent.images.community}
           alt="Comunidade ICE Jardins"
+          width={800}
+          height={535}
           className={styles.bannerImage}
           loading="lazy"
         />
@@ -119,7 +124,7 @@ export default function HomePage() {
               <div className="d-grid gap-3">
                 {homeContent.worship.items.map((item) => (
                   <article key={item.title} className={styles.worshipCard}>
-                    <i className={item.iconClass} aria-hidden="true" />
+                    <Icon name={item.iconClass} />
                     <div>
                       <h3>{item.title}</h3>
                       <p>{item.time}</p>
