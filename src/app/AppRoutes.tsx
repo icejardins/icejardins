@@ -1,18 +1,15 @@
-import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router";
+import HomePage from "@/features/home/HomePage";
+import VisitPage from "@/features/visit/VisitPage";
+import FaithPage from "@/features/faith/FaithPage";
+import BlogListPage from "@/features/blog/BlogListPage";
+import BlogPostPage from "@/features/blog/BlogPostPage";
+import TaxonomyPage from "@/features/blog/TaxonomyPage";
+import ContentPage from "@/features/pages/ContentPage";
+import NotFoundPage from "@/features/common/NotFoundPage";
 import { MainLayout } from "@/features/shell/layouts/MainLayout";
-import { PageLoader } from "@/shared/components/PageLoader";
 import { useScrollToTop } from "@/shared/hooks/useScrollToTop";
 import { useAnalytics } from "@/shared/hooks/useAnalytics";
-
-const HomePage = lazy(() => import("@/features/home/HomePage"));
-const VisitPage = lazy(() => import("@/features/visit/VisitPage"));
-const FaithPage = lazy(() => import("@/features/faith/FaithPage"));
-const BlogListPage = lazy(() => import("@/features/blog/BlogListPage"));
-const BlogPostPage = lazy(() => import("@/features/blog/BlogPostPage"));
-const TaxonomyPage = lazy(() => import("@/features/blog/TaxonomyPage"));
-const ContentPage = lazy(() => import("@/features/pages/ContentPage"));
-const NotFoundPage = lazy(() => import("@/features/common/NotFoundPage"));
 
 function RouterEffects() {
   useScrollToTop();
@@ -22,7 +19,7 @@ function RouterEffects() {
 
 export function AppRoutes() {
   return (
-    <Suspense fallback={<PageLoader />}>
+    <>
       <RouterEffects />
       <Routes>
         <Route element={<MainLayout />}>
@@ -40,6 +37,6 @@ export function AppRoutes() {
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
-    </Suspense>
+    </>
   );
 }
