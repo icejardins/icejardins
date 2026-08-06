@@ -1,4 +1,5 @@
-﻿import { getSiteConfig } from "@/content/repositories/contentRepository";
+import { getSiteConfig } from "@/content/repositories/contentRepository";
+import { Icon } from "@/shared/components/Icon";
 import styles from "./WhatsAppFloat.module.css";
 
 export function WhatsAppFloat() {
@@ -16,7 +17,7 @@ export function WhatsAppFloat() {
       aria-label="Fale conosco pelo WhatsApp"
       title="Fale conosco pelo WhatsApp"
     >
-      <i className={`bi bi-whatsapp ${styles.icon}`} aria-hidden="true" />
+      <Icon name="whatsapp" className={styles.icon} />
     </a>
   );
 }

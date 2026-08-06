@@ -77,7 +77,10 @@ export function Header() {
               src={brandLogoSrc}
               alt="ICE Jardins"
               className={styles.brandLogo}
+              width={400}
+              height={172}
               loading="eager"
+              fetchPriority="high"
             />
           </Link>
 
