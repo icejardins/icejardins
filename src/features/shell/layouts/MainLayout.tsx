@@ -1,4 +1,4 @@
-﻿import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router";
 import { Header } from "@/features/shell/components/Header";
 import { Footer } from "@/features/shell/components/Footer";
 import { WhatsAppFloat } from "@/features/shell/components/WhatsAppFloat";

@@ -1,4 +1,4 @@
-﻿import { Link, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router";
 import { getPageBySlug, getSiteConfig } from "@/content/repositories/contentRepository";
 import { SeoHead } from "@/shared/components/SeoHead";
 

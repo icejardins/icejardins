@@ -1,4 +1,4 @@
-﻿import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { SeoHead } from "@/shared/components/SeoHead";
 import { getSiteConfig } from "@/content/repositories/contentRepository";
 

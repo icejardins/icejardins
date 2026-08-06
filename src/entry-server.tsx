@@ -1,5 +1,5 @@
-﻿import { renderToString } from "react-dom/server";
-import { StaticRouter } from "react-router-dom/server";
+import { renderToString } from "react-dom/server";
+import { StaticRouter } from "react-router";
 import { HelmetProvider } from "react-helmet-async";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";

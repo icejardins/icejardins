@@ -1,4 +1,4 @@
-﻿import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { getRecentPosts, getSiteConfig } from "@/content/repositories/contentRepository";
 import { formatDate } from "@/core/utils/formatDate";
 import styles from "./Footer.module.css";

@@ -1,4 +1,4 @@
-﻿import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router";
 import { useEffect, useMemo, useState } from "react";
 import { getSiteConfig } from "@/content/repositories/contentRepository";
 import { useTheme } from "@/features/shell/components/ThemeProvider";
