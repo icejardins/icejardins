@@ -1,4 +1,4 @@
-﻿export function formatDate(value: string | null): string {
+export function formatDate(value: string | null): string {
   if (!value) {
     return "";
   }
@@ -11,6 +11,7 @@
   return new Intl.DateTimeFormat("pt-BR", {
     day: "2-digit",
     month: "long",
-    year: "numeric"
+    year: "numeric",
+    timeZone: "UTC"
   }).format(parsed);
 }
