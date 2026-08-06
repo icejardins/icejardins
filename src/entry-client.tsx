@@ -22,7 +22,7 @@ const app = (
   </HelmetProvider>
 );
 
-if (rootElement.hasChildNodes()) {
+if (rootElement.firstElementChild !== null) {
   hydrateRoot(rootElement, app);
 } else {
   createRoot(rootElement).render(app);
