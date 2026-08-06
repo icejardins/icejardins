@@ -1,4 +1,4 @@
-﻿import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import type { Post } from "@/core/types/content";
 import { formatDate } from "@/core/utils/formatDate";
 import styles from "./PostCard.module.css";

@@ -1,6 +1,6 @@
 ﻿# ICE Jardins React
 
-Migração do site institucional de Hugo para React + Vite, mantendo conteúdo e identidade visual.
+Site institucional da Igreja Cristã Evangélica Jardins em Brasília, desenvolvido em React + Vite, mantendo conteúdo e identidade visual.
 
 ## Stack
 

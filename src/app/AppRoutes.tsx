@@ -1,5 +1,5 @@
-﻿import { lazy, Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
+import { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router";
 import { MainLayout } from "@/features/shell/layouts/MainLayout";
 import { PageLoader } from "@/shared/components/PageLoader";
 import { useScrollToTop } from "@/shared/hooks/useScrollToTop";

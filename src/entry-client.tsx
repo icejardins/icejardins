@@ -1,5 +1,5 @@
-﻿import { createRoot, hydrateRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import { createRoot, hydrateRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router";
 import { HelmetProvider } from "react-helmet-async";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
