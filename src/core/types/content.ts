@@ -1,4 +1,4 @@
-﻿export type MenuItem = {
+export type MenuItem = {
   name: string;
   url: string;
   weight: number;
@@ -19,6 +19,7 @@ export type SiteConfig = {
   baseUrl: string;
   languageCode: string;
   description: string;
+  googleAnalyticsId?: string;
   menu: MenuItem[];
   navbar: {
     brandName: string;

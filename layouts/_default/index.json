@@ -1,6 +1,0 @@
-{{- $.Scratch.Add "index" slice -}}
-{{- range .RegularPagesRecursive -}}
-    {{- $desc := .Params.description | default .Params.subtitle | default (.Summary | plainify | truncate 150) -}}
-    {{- $.Scratch.Add "index" (dict "title" .Title "description" $desc "content" .Content "image" (strings.TrimPrefix "/" .Params.image | relURL) "permalink" .Permalink) -}}
-{{- end -}}
-{{- $.Scratch.Get "index" | jsonify -}}

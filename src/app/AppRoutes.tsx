@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { MainLayout } from "@/features/shell/layouts/MainLayout";
 import { PageLoader } from "@/shared/components/PageLoader";
 import { useScrollToTop } from "@/shared/hooks/useScrollToTop";
+import { useAnalytics } from "@/shared/hooks/useAnalytics";
 
 const HomePage = lazy(() => import("@/features/home/HomePage"));
 const VisitPage = lazy(() => import("@/features/visit/VisitPage"));
@@ -15,6 +16,7 @@ const NotFoundPage = lazy(() => import("@/features/common/NotFoundPage"));
 
 function RouterEffects() {
   useScrollToTop();
+  useAnalytics();
   return null;
 }
 

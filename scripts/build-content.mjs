@@ -1,4 +1,4 @@
-﻿import fs from "node:fs/promises";
+import fs from "node:fs/promises";
 import path from "node:path";
 import matter from "gray-matter";
 import { parse as parseToml } from "toml";
@@ -237,48 +237,19 @@ function registerTaxonomy(map, name) {
   });
 }
 
-function mapMenuItems(rawMenuItems) {
-  if (!Array.isArray(rawMenuItems)) {
-    return [];
-  }
-
-  return [...rawMenuItems]
-    .map((item) => ({
-      name: String(item.name ?? ""),
-      url: String(item.url ?? "/"),
-      weight: Number(item.weight ?? 0)
-    }))
-    .sort((a, b) => a.weight - b.weight)
-    .filter((item) => item.name && item.url);
-}
-
 function toPosixPath(value) {
   return value.split(path.sep).join("/");
-}
-
-function readTomlValue(source, camelKey, fallback) {
-  if (!source || typeof source !== "object") {
-    return fallback;
-  }
-
-  if (source[camelKey] !== undefined) {
-    return source[camelKey];
-  }
-
-  const lowerKey = camelKey.toLowerCase();
-  if (source[lowerKey] !== undefined) {
-    return source[lowerKey];
-  }
-
-  return fallback;
 }
 
 async function main() {
   await fs.mkdir(generatedDir, { recursive: true });
   await fs.mkdir(staticDir, { recursive: true });
 
-  const hugoRaw = await fs.readFile(path.join(rootDir, "hugo.toml"), "utf8");
-  const hugoConfig = parseToml(hugoRaw);
+  const siteConfigRaw = await fs.readFile(
+    path.join(rootDir, "src", "content", "site.json"),
+    "utf8"
+  );
+  const siteConfigData = JSON.parse(siteConfigRaw.replace(/^\uFEFF/, ""));
 
   const pageFiles = (await getMarkdownFiles(contentDir)).filter((filePath) => {
     const relativePath = toPosixPath(path.relative(contentDir, filePath));
@@ -377,45 +348,12 @@ async function main() {
   const postsIndexRaw = await fs.readFile(postsIndexPath, "utf8");
   const postsIndex = parseFrontmatter(postsIndexRaw);
 
-  const siteParams = hugoConfig.params ?? {};
-  const colorParams = siteParams.color ?? {};
-  const footerParams = siteParams.footer ?? {};
-
   const siteConfig = {
-    title: String(hugoConfig.title ?? "ICE Jardins"),
-    baseUrl: String(configuredBaseUrl ?? hugoConfig.baseURL ?? "https://icejardins.com.br/").replace(/\/+$/, ""),
-    languageCode: String(hugoConfig.languageCode ?? "pt-br"),
-    description: String(
-      siteParams.description ?? "Igreja Cristã Evangélica Jardins em Brasília."
-    ),
-    menu: mapMenuItems(hugoConfig.menu?.main),
-    navbar: {
-      brandName: String(siteParams.navbar?.brandName ?? hugoConfig.title ?? "ICE Jardins"),
-      sticky: Boolean(siteParams.navbar?.stickyNavBar?.enable ?? true),
-      showOnScrollUp: Boolean(siteParams.navbar?.stickyNavBar?.showOnScrollUp ?? true)
-    },
-    contact: {
-      email: String((siteParams.contact?.btnLink ?? "").replace("mailto:", "") || "secretaria@icejardins.org.br")
-    },
-    social: {
-      facebook: String(footerParams.socialNetworks?.facebook ?? ""),
-      instagram: String(footerParams.socialNetworks?.instagram ?? ""),
-      whatsapp: String(footerParams.socialNetworks?.whatsapp ?? "")
-    },
+    ...siteConfigData,
+    baseUrl: String(configuredBaseUrl ?? siteConfigData.baseUrl ?? "https://icejardins.com.br").replace(/\/+$/, ""),
     blog: {
-      title: String(postsIndex.data.title ?? "Sermões"),
-      description: String(postsIndex.data.description ?? "Sermões e publicações recentes")
-    },
-    theme: {
-      textColor: String(readTomlValue(colorParams, "textColor", "#12383A")),
-      secondaryTextColor: String(readTomlValue(colorParams, "secondaryTextColor", "#4D6B6D")),
-      textLinkColor: String(readTomlValue(colorParams, "textLinkColor", "#145F63")),
-      backgroundColor: String(readTomlValue(colorParams, "backgroundColor", "#F4F8F8")),
-      secondaryBackgroundColor: String(
-        readTomlValue(colorParams, "secondaryBackgroundColor", "#F1F7F7")
-      ),
-      primaryColor: String(readTomlValue(colorParams, "primaryColor", "#145F63")),
-      secondaryColor: String(readTomlValue(colorParams, "secondaryColor", "#E2F0F1"))
+      title: String(postsIndex.data.title ?? siteConfigData.blog?.title ?? "Sermões"),
+      description: String(postsIndex.data.description ?? siteConfigData.blog?.description ?? "Sermões e publicações recentes")
     }
   };
 
