@@ -66,7 +66,7 @@ export function Header() {
 
   const showSearch = query.trim().length > 0;
   const brandLogoSrc =
-    theme === "light" ? "/images/logo-ice-jardins-01.png" : "/images/logo-ice-jardins-03.png";
+    theme === "light" ? "/images/logo-ice-jardins-01.webp" : "/images/logo-ice-jardins-03.webp";
 
   return (
     <header className={styles.wrapper} id="site-header">
@@ -77,8 +77,8 @@ export function Header() {
               src={brandLogoSrc}
               alt="ICE Jardins"
               className={styles.brandLogo}
-              width={400}
-              height={172}
+              width={240}
+              height={103}
               loading="eager"
               fetchPriority="high"
             />
