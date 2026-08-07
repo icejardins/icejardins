@@ -14,7 +14,7 @@ export default defineConfig({
     }
   },
   build: {
-    sourcemap: true
+    sourcemap: "hidden"
   },
   server: {
     port: 5173

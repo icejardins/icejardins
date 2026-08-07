@@ -1,4 +1,4 @@
-﻿import fs from "node:fs/promises";
+import fs from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 
@@ -28,11 +28,31 @@ async function main() {
 
   const { render } = await import(pathToFileURL(serverBundlePath).href);
 
+  // Inlining CSS to remove render-blocking stylesheet requests
+  const cssMatch = templateRaw.match(/<link rel="stylesheet"[^>]+href="(\/assets\/[^"]+\.css)"[^>]*>/);
+  let cssContent = "";
+  let cssLinkTag = "";
+
+  if (cssMatch) {
+    cssLinkTag = cssMatch[0];
+    const cssRelativePath = cssMatch[1].replace(/^\//, "");
+    const cssFilePath = path.join(distDir, cssRelativePath);
+    try {
+      cssContent = await fs.readFile(cssFilePath, "utf8");
+    } catch {
+      cssContent = "";
+    }
+  }
+
   for (const route of uniqueRoutes) {
     const rendered = await render(route);
-    const html = templateRaw
+    let html = templateRaw
       .replace("<!--app-head-->", rendered.headTags ?? "")
       .replace("<!--app-html-->", rendered.appHtml ?? "");
+
+    if (cssContent && cssLinkTag) {
+      html = html.replace(cssLinkTag, `<style>${cssContent}</style>`);
+    }
 
     const outputPath =
       route === "/"
