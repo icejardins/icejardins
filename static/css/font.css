@@ -1,17 +1,25 @@
-/* Google Fonts Montserrat carregado via preconnect no index.html */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/montserrat-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/montserrat-italic.woff2') format('woff2');
+}
 
 body {
-    font-family: "Montserrat", sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
 }
 
-.secondary-font, #secondary-font {
-    font-family: "Montserrat", sans-serif;
-}
-
-.primary-font, #primary-font {
-    font-family: "Montserrat", sans-serif;
-}
-
+.secondary-font, #secondary-font,
+.primary-font, #primary-font,
 .default-font, #default-font {
-    font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
