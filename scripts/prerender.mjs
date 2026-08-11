@@ -86,6 +86,18 @@ async function main() {
       headTags = headTags.replace(/<title[^>]*>.*?<\/title>/gi, "");
     }
 
+    // Guarantee a unique, valid <link rel="canonical"> tag in <head>
+    const canonicalMatch = headTags.match(/<link\s+rel="canonical"[^>]*href="([^"]+)"[^>]*\/?>/i);
+    if (canonicalMatch) {
+      const canonicalUrl = canonicalMatch[1];
+      if (html.includes('rel="canonical"')) {
+        html = html.replace(/<link\s+rel="canonical"[^>]*\/?>/i, `<link rel="canonical" href="${canonicalUrl}" />`);
+      } else {
+        html = html.replace("</head>", `<link rel="canonical" href="${canonicalUrl}" />\n</head>`);
+      }
+      headTags = headTags.replace(/<link\s+rel="canonical"[^>]*\/?>/gi, "");
+    }
+
     html = html
       .replace("<!--app-head-->", headTags)
       .replace("<!--app-html-->", appHtml);
