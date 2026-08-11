@@ -46,7 +46,7 @@ function buildChurchSchema(baseUrl: string) {
     logo: `${baseUrl}/images/logo-ice-jardins-01.webp`,
     image: `${baseUrl}/images/sobre/identidade.webp`,
     description:
-      "Igreja Cristã Evangélica Jardins no Jardim Botânico em Brasília - DF. Uma comunidade dedicada ao ensino da Bíblia, à comunhão e à adoração a Deus.",
+      "Igreja Cristã Evangélica Jardins no Jardim Botânico em Brasília - DF. Comunidade dedicada ao ensino da Bíblia, à comunhão e adoração.",
     email: "secretaria@icejardins.org.br",
     telephone: "+55-61-98262-4952",
     priceRange: "Gratuito",
