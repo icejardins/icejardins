@@ -14,7 +14,22 @@ export default defineConfig({
     }
   },
   build: {
-    sourcemap: "hidden"
+    sourcemap: "hidden",
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes("node_modules")) {
+            if (id.includes("react") || id.includes("react-dom") || id.includes("react-router")) {
+              return "vendor-react";
+            }
+            if (id.includes("bootstrap")) {
+              return "vendor-bootstrap";
+            }
+            return "vendor";
+          }
+        }
+      }
+    }
   },
   server: {
     port: 5173
