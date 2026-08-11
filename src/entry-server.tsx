@@ -22,7 +22,8 @@ export async function render(url: string) {
   const headTags = [
     helmetContext.helmet?.title?.toString?.() ?? "",
     helmetContext.helmet?.meta?.toString?.() ?? "",
-    helmetContext.helmet?.link?.toString?.() ?? ""
+    helmetContext.helmet?.link?.toString?.() ?? "",
+    helmetContext.helmet?.script?.toString?.() ?? ""
   ].join("");
 
   return {

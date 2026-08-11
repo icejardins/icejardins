@@ -48,6 +48,30 @@ export default function BlogPostPage() {
     );
   }
 
+  const blogPostingSchema = post
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: post.title,
+        description: post.description,
+        image: post.image ? [`${site.baseUrl}${post.image.startsWith("/") ? post.image : `/${post.image}`}`] : undefined,
+        datePublished: post.date,
+        inLanguage: "pt-BR",
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": shareUrl
+        },
+        author: {
+          "@type": "Organization",
+          name: "ICE Jardins",
+          url: site.baseUrl
+        },
+        publisher: {
+          "@id": `${site.baseUrl}/#organization`
+        }
+      }
+    : undefined;
+
   return (
     <>
       <SeoHead
@@ -55,6 +79,7 @@ export default function BlogPostPage() {
         description={post.description}
         image={post.image}
         canonicalPath={canonicalPath}
+        jsonLd={blogPostingSchema}
       />
 
       <div className={styles.progress} aria-hidden="true">

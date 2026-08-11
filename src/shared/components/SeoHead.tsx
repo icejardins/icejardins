@@ -8,6 +8,7 @@ type SeoHeadProps = {
   image?: string | null;
   canonicalPath?: string;
   noindex?: boolean;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 };
 
 function toAbsoluteUrl(value: string | null | undefined, baseUrl: string) {
@@ -34,12 +35,99 @@ function buildCanonicalUrl(baseUrl: string, rawPath: string): string {
   return `${cleanBaseUrl}${pathWithTrailingSlash}`;
 }
 
+function buildChurchSchema(baseUrl: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    "@id": `${baseUrl}/#organization`,
+    name: "Igreja Cristã Evangélica Jardins",
+    alternateName: "ICE Jardins",
+    url: `${baseUrl}/`,
+    logo: `${baseUrl}/images/logo-ice-jardins-01.webp`,
+    image: `${baseUrl}/images/sobre/identidade.webp`,
+    description:
+      "Igreja Cristã Evangélica Jardins em Brasília. Uma comunidade dedicada ao ensino da Bíblia, à comunhão e à adoração a Deus.",
+    email: "secretaria@icejardins.org.br",
+    telephone: "+55-61-98262-4952",
+    sameAs: [
+      "https://www.facebook.com/icejardins/",
+      "https://www.instagram.com/icejardins/",
+      "https://wa.me/5561982624952"
+    ],
+    address: {
+      "@type": "PostalAddress",
+      streetAddress:
+        "Condomínio Estância Jardim Botânico II, SH Jardim Botânico (Colégio In-Nova)",
+      addressLocality: "Brasília",
+      addressRegion: "DF",
+      postalCode: "71686-301",
+      addressCountry: "BR"
+    }
+  };
+}
+
+function buildWebSiteSchema(baseUrl: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${baseUrl}/#website`,
+    url: `${baseUrl}/`,
+    name: "ICE Jardins",
+    description: "Igreja Cristã Evangélica Jardins em Brasília",
+    inLanguage: "pt-BR",
+    publisher: {
+      "@id": `${baseUrl}/#organization`
+    }
+  };
+}
+
+function buildBreadcrumbSchema(baseUrl: string, rawPath: string, title: string) {
+  if (!rawPath || rawPath === "/") {
+    return null;
+  }
+
+  const cleanPath = rawPath.startsWith("/") ? rawPath : `/${rawPath}`;
+  const segments = cleanPath.split("/").filter(Boolean);
+
+  const items = [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Início",
+      item: `${baseUrl}/`
+    }
+  ];
+
+  let currentPath = "";
+  segments.forEach((segment, index) => {
+    currentPath += `/${segment}`;
+    const isLast = index === segments.length - 1;
+    const name = isLast
+      ? title.split("|")[0].trim()
+      : segment.charAt(0).toUpperCase() + segment.slice(1);
+
+    items.push({
+      "@type": "ListItem",
+      position: index + 2,
+      name,
+      item: `${baseUrl}${currentPath}/`
+    });
+  });
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items
+  };
+}
+
 export function SeoHead({
   title,
   description,
   image,
   canonicalPath,
-  noindex = false
+  noindex = false,
+  jsonLd
 }: SeoHeadProps) {
   const location = useLocation();
   const site = getSiteConfig();
@@ -47,6 +135,23 @@ export function SeoHead({
   const canonicalUrl = buildCanonicalUrl(site.baseUrl, path);
   const metaDescription = description ?? site.description;
   const imageUrl = toAbsoluteUrl(image, site.baseUrl);
+
+  const defaultSchemas: Record<string, unknown>[] = [
+    buildChurchSchema(site.baseUrl),
+    buildWebSiteSchema(site.baseUrl)
+  ];
+
+  const breadcrumb = buildBreadcrumbSchema(site.baseUrl, path, title);
+  if (breadcrumb) {
+    defaultSchemas.push(breadcrumb);
+  }
+
+  const customSchemas = Array.isArray(jsonLd)
+    ? jsonLd
+    : jsonLd
+      ? [jsonLd]
+      : [];
+  const allSchemas = [...defaultSchemas, ...customSchemas];
 
   return (
     <Helmet>
@@ -64,6 +169,11 @@ export function SeoHead({
       <link rel="canonical" href={canonicalUrl} />
       <link rel="alternate" hrefLang={site.languageCode} href={canonicalUrl} />
       <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
+      {allSchemas.map((schema, index) => (
+        <script key={index} type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
+      ))}
     </Helmet>
   );
 }
