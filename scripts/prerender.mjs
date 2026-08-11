@@ -52,6 +52,16 @@ async function main() {
     }
   }
 
+  // Move module script tags from <head> to the end of <body> with defer attribute to keep them out of critical render path
+  const scriptMatches = [...template.matchAll(/<script type="module"[^>]*><\/script>/g)];
+  for (const match of scriptMatches) {
+    const scriptTag = match[0].includes("defer")
+      ? match[0]
+      : match[0].replace('<script type="module"', '<script type="module" defer');
+    template = template.replace(match[0], "");
+    template = template.replace("</body>", `${scriptTag}\n</body>`);
+  }
+
   for (const route of uniqueRoutes) {
     const rendered = await render(route);
     let html = template
