@@ -20,6 +20,7 @@ export type SiteConfig = {
   languageCode: string;
   description: string;
   googleAnalyticsId?: string;
+  googleAdsId?: string;
   menu: MenuItem[];
   navbar: {
     brandName: string;
