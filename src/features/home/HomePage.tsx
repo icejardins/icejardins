@@ -57,7 +57,7 @@ export default function HomePage() {
                     className={`${styles.imageCover} ${styles.carouselImage} ${
                       index === activeAboutImage ? styles.carouselImageActive : ""
                     }`}
-                    loading={index === 0 ? "eager" : "lazy"}
+                    loading="lazy"
                   />
                 ))}
                 <div className={styles.carouselIndicators} aria-hidden="true">
