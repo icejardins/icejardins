@@ -5,28 +5,38 @@ import { getSiteConfig } from "@/content/repositories/contentRepository";
 
 const siteConfig = getSiteConfig();
 const measurementId = import.meta.env.VITE_GA_ID || siteConfig.googleAnalyticsId;
+const googleAdsId = import.meta.env.VITE_GADS_ID || siteConfig.googleAdsId;
 
 export function useAnalytics() {
   const { pathname, search } = useLocation();
   const initialized = useRef(false);
 
   useEffect(() => {
-    if (!measurementId || initialized.current) {
+    if ((!measurementId && !googleAdsId) || initialized.current) {
       return;
     }
 
     const initGA = () => {
       if (initialized.current) return;
-      ReactGA.initialize(measurementId, {
-        gtagOptions: { send_page_view: false }
-      });
+
+      const trackers: Array<{ trackingId: string; gtagOptions?: Record<string, unknown> }> = [];
+      if (measurementId) {
+        trackers.push({ trackingId: measurementId, gtagOptions: { send_page_view: false } });
+      }
+      if (googleAdsId) {
+        trackers.push({ trackingId: googleAdsId });
+      }
+
+      ReactGA.initialize(trackers);
       initialized.current = true;
 
-      ReactGA.send({
-        hitType: "pageview",
-        page: `${pathname}${search}`,
-        title: document.title
-      });
+      if (measurementId) {
+        ReactGA.send({
+          hitType: "pageview",
+          page: `${pathname}${search}`,
+          title: document.title
+        });
+      }
     };
 
     if (typeof window !== "undefined" && "requestIdleCallback" in window) {
