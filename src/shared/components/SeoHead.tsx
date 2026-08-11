@@ -41,14 +41,15 @@ function buildChurchSchema(baseUrl: string) {
     "@type": "Church",
     "@id": `${baseUrl}/#organization`,
     name: "Igreja Cristã Evangélica Jardins",
-    alternateName: "ICE Jardins",
+    alternateName: ["ICE Jardins", "Igreja Evangélica Jardins"],
     url: `${baseUrl}/`,
     logo: `${baseUrl}/images/logo-ice-jardins-01.webp`,
     image: `${baseUrl}/images/sobre/identidade.webp`,
     description:
-      "Igreja Cristã Evangélica Jardins em Brasília. Uma comunidade dedicada ao ensino da Bíblia, à comunhão e à adoração a Deus.",
+      "Igreja Cristã Evangélica Jardins no Jardim Botânico em Brasília - DF. Uma comunidade dedicada ao ensino da Bíblia, à comunhão e à adoração a Deus.",
     email: "secretaria@icejardins.org.br",
     telephone: "+55-61-98262-4952",
+    priceRange: "Gratuito",
     sameAs: [
       "https://www.facebook.com/icejardins/",
       "https://www.instagram.com/icejardins/",
@@ -58,7 +59,7 @@ function buildChurchSchema(baseUrl: string) {
       "@type": "PostalAddress",
       streetAddress:
         "Condomínio Estância Jardim Botânico II, SH Jardim Botânico (Colégio In-Nova)",
-      addressLocality: "Brasília",
+      addressLocality: "Jardim Botânico",
       addressRegion: "DF",
       postalCode: "71686-301",
       addressCountry: "BR"
@@ -68,6 +69,28 @@ function buildChurchSchema(baseUrl: string) {
       latitude: "-15.8797754",
       longitude: "-47.8154745"
     },
+    hasMap: "https://maps.google.com/?q=-15.8797754,-47.8154745",
+    areaServed: [
+      {
+        "@type": "AdministrativeArea",
+        name: "Jardim Botânico, Brasília - DF"
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: "Lago Sul, Brasília - DF"
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: "Brasília, DF"
+      }
+    ],
+    knowsAbout: [
+      "Bíblia Sagrada",
+      "Jesus Cristo",
+      "Evangelho",
+      "Discipulado Cristão",
+      "Ensino Bíblico"
+    ],
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
@@ -172,6 +195,14 @@ export function SeoHead({
       <title>{title}</title>
       <meta name="description" content={metaDescription} />
       {noindex ? <meta name="robots" content="noindex, follow" /> : null}
+      <meta name="geo.region" content="BR-DF" />
+      <meta name="geo.placename" content="Jardim Botânico, Brasília - DF" />
+      <meta name="geo.position" content="-15.8797754;-47.8154745" />
+      <meta name="ICBM" content="-15.8797754, -47.8154745" />
+      <meta
+        name="keywords"
+        content="Igreja Cristã Evangélica, ICE Jardins, Igreja no Jardim Botânico, Igreja Evangélica Brasília, Culto de Domingo Jardim Botânico, Colégio In-Nova Jardim Botânico, Igreja Brasília DF, Jardim Botânico DF"
+      />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content={site.title} />
       <meta property="og:title" content={title} />
