@@ -52,8 +52,8 @@ export default function HomePage() {
                     key={image.src}
                     src={image.src}
                     alt={image.alt}
-                    width={800}
-                    height={535}
+                    width={600}
+                    height={402}
                     className={`${styles.imageCover} ${styles.carouselImage} ${
                       index === activeAboutImage ? styles.carouselImageActive : ""
                     }`}
@@ -108,8 +108,8 @@ export default function HomePage() {
         <img
           src={homeContent.images.community}
           alt="Comunidade ICE Jardins"
-          width={800}
-          height={535}
+          width={600}
+          height={402}
           className={styles.bannerImage}
           loading="lazy"
         />
