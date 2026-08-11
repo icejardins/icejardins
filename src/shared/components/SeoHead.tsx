@@ -7,6 +7,7 @@ type SeoHeadProps = {
   description?: string;
   image?: string | null;
   canonicalPath?: string;
+  noindex?: boolean;
 };
 
 function toAbsoluteUrl(value: string | null | undefined, baseUrl: string) {
@@ -21,16 +22,29 @@ function toAbsoluteUrl(value: string | null | undefined, baseUrl: string) {
   return `${baseUrl}${value.startsWith("/") ? value : `/${value}`}`;
 }
 
+function buildCanonicalUrl(baseUrl: string, rawPath: string): string {
+  const cleanBaseUrl = baseUrl.replace(/\/+$/, "");
+  if (!rawPath || rawPath === "/") {
+    return `${cleanBaseUrl}/`;
+  }
+
+  const cleanPath = rawPath.startsWith("/") ? rawPath : `/${rawPath}`;
+  const pathWithTrailingSlash = cleanPath.endsWith("/") ? cleanPath : `${cleanPath}/`;
+
+  return `${cleanBaseUrl}${pathWithTrailingSlash}`;
+}
+
 export function SeoHead({
   title,
   description,
   image,
-  canonicalPath
+  canonicalPath,
+  noindex = false
 }: SeoHeadProps) {
   const location = useLocation();
   const site = getSiteConfig();
   const path = canonicalPath ?? location.pathname;
-  const canonicalUrl = `${site.baseUrl}${path === "/" ? "/" : path.replace(/\/+$/, "/")}`;
+  const canonicalUrl = buildCanonicalUrl(site.baseUrl, path);
   const metaDescription = description ?? site.description;
   const imageUrl = toAbsoluteUrl(image, site.baseUrl);
 
@@ -39,6 +53,7 @@ export function SeoHead({
       <html lang={site.languageCode} />
       <title>{title}</title>
       <meta name="description" content={metaDescription} />
+      {noindex ? <meta name="robots" content="noindex, follow" /> : null}
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content={site.title} />
       <meta property="og:title" content={title} />

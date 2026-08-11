@@ -7,7 +7,7 @@ export default function NotFoundPage() {
 
   return (
     <section className="container py-5">
-      <SeoHead title={`Página não encontrada | ${site.title}`} />
+      <SeoHead title={`Página não encontrada | ${site.title}`} noindex />
       <h1>Página não encontrada</h1>
       <p>O endereço acessado não existe ou foi movido.</p>
       <Link to="/">Voltar ao início</Link>

@@ -40,7 +40,7 @@ export default function BlogPostPage() {
   if (!post) {
     return (
       <section className="container py-5">
-        <SeoHead title={`Sermão não encontrado | ${site.title}`} canonicalPath="/posts/" />
+        <SeoHead title={`Sermão não encontrado | ${site.title}`} noindex />
         <h1>Sermão não encontrado</h1>
         <p>O conteúdo que você procurou não está disponível.</p>
         <Link to="/posts/">Voltar para sermões</Link>
