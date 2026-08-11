@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import { getSiteConfig } from "@/content/repositories/contentRepository";
 import { useTheme } from "@/features/shell/components/ThemeProvider";
 import type { SearchDocument } from "@/core/types/content";
+import { OptimizedImage } from "@/shared/components/OptimizedImage";
 import styles from "./Header.module.css";
 
 function normalizeRoute(route: string) {
@@ -73,14 +74,14 @@ export function Header() {
       <nav className={`navbar navbar-expand-lg ${styles.navbar}`} aria-label="Navegação principal">
         <div className="container-fluid px-3 px-lg-5">
           <Link className={`navbar-brand ${styles.brand}`} to="/" aria-label="Página inicial ICE Jardins">
-            <img
+            <OptimizedImage
               src={brandLogoSrc}
               alt="ICE Jardins"
               className={styles.brandLogo}
               width={240}
               height={103}
               loading="eager"
-              fetchPriority="high"
+              showSkeleton={false}
             />
           </Link>
 
