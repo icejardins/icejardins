@@ -1,7 +1,6 @@
 import { Link } from "react-router";
 import { getRecentPosts, getSiteConfig } from "@/content/repositories/contentRepository";
 import { formatDate } from "@/core/utils/formatDate";
-import { OptimizedImage } from "@/shared/components/OptimizedImage";
 import styles from "./Footer.module.css";
 
 export function Footer() {
@@ -17,7 +16,7 @@ export function Footer() {
             {recentPosts.map((post) => (
               <div key={post.slug} className="col-lg-4 col-md-6">
                 <article className={styles.postCard}>
-                  {post.image ? <OptimizedImage src={post.image} alt={post.title} loading="lazy" /> : null}
+                  {post.image ? <img src={post.image} alt={post.title} loading="lazy" /> : null}
                   <div className={styles.postBody}>
                     <h3>
                       <Link to={post.route}>{post.title}</Link>
@@ -38,7 +37,7 @@ export function Footer() {
       <section className={styles.bottom}>
         <div className="container py-4 d-flex flex-column flex-lg-row align-items-center justify-content-between gap-3">
           <div className="d-flex align-items-center gap-2">
-            <OptimizedImage src="/images/logo-ice-jardins-01.webp" alt="ICE Jardins" width={36} height={15} showSkeleton={false} />
+            <img src="/images/logo-ice-jardins-01.webp" alt="ICE Jardins" width={36} height={15} />
             <span>
               © {new Date().getFullYear()} {site.title}
             </span>

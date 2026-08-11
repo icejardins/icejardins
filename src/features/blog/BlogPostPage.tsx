@@ -2,7 +2,6 @@ import { Link, useParams } from "react-router";
 import { useEffect, useMemo, useState } from "react";
 import { getPostBySlug, getSiteConfig } from "@/content/repositories/contentRepository";
 import { SeoHead } from "@/shared/components/SeoHead";
-import { OptimizedImage } from "@/shared/components/OptimizedImage";
 import { formatDate } from "@/core/utils/formatDate";
 import { slugify } from "@/core/utils/slugify";
 import styles from "./BlogPostPage.module.css";
@@ -98,12 +97,7 @@ export default function BlogPostPage() {
             </header>
 
             {post.image ? (
-              <OptimizedImage
-                src={post.image}
-                alt={post.title}
-                className={styles.featuredImage}
-                loading="eager"
-              />
+              <img src={post.image} alt={post.title} className={styles.featuredImage} loading="eager" />
             ) : null}
 
             <div
