@@ -62,6 +62,8 @@ export function SeoHead({
       {imageUrl ? <meta property="og:image" content={imageUrl} /> : null}
       <meta name="twitter:card" content="summary_large_image" />
       <link rel="canonical" href={canonicalUrl} />
+      <link rel="alternate" hrefLang={site.languageCode} href={canonicalUrl} />
+      <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
     </Helmet>
   );
 }
