@@ -52,14 +52,13 @@ async function main() {
     }
   }
 
-  // Move module script tags from <head> to the end of <body> with defer attribute to keep them out of critical render path
-  const scriptMatches = [...template.matchAll(/<script type="module"[^>]*><\/script>/g)];
-  for (const match of scriptMatches) {
-    const scriptTag = match[0].includes("defer")
-      ? match[0]
-      : match[0].replace('<script type="module"', '<script type="module" defer');
-    template = template.replace(match[0], "");
-    template = template.replace("</body>", `${scriptTag}\n</body>`);
+  // Convert static script module tags to dynamic post-render imports to completely clear initial critical request chain
+  const scriptSrcMatch = template.match(/<script type="module"[^>]*src="([^"]+)"[^>]*><\/script>/);
+  if (scriptSrcMatch) {
+    const scriptSrc = scriptSrcMatch[1];
+    template = template.replace(scriptSrcMatch[0], "");
+    const dynamicScriptLoader = `<script type="module">window.addEventListener('DOMContentLoaded', () => import('${scriptSrc}'));</script>`;
+    template = template.replace("</body>", `${dynamicScriptLoader}\n</body>`);
   }
 
   for (const route of uniqueRoutes) {
