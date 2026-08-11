@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { SeoHead } from "@/shared/components/SeoHead";
 import { Icon } from "@/shared/components/Icon";
+import { OptimizedImage } from "@/shared/components/OptimizedImage";
 import { getSiteConfig } from "@/content/repositories/contentRepository";
 import { homeContent } from "@/content/data/homeContent";
 import styles from "./HomePage.module.css";
@@ -48,7 +49,7 @@ export default function HomePage() {
             <div className="col-lg-6">
               <div className={styles.aboutCarousel} role="region" aria-label="Galeria de imagens da seção Quem Somos">
                 {aboutCarouselImages.map((image, index) => (
-                  <img
+                  <OptimizedImage
                     key={image.src}
                     src={image.src}
                     alt={image.alt}
@@ -105,7 +106,7 @@ export default function HomePage() {
       </section>
 
       <section>
-        <img
+        <OptimizedImage
           src={homeContent.images.community}
           alt="Comunidade ICE Jardins"
           width={800}

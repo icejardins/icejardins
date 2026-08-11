@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import type { Post } from "@/core/types/content";
 import { formatDate } from "@/core/utils/formatDate";
+import { OptimizedImage } from "@/shared/components/OptimizedImage";
 import styles from "./PostCard.module.css";
 
 type PostCardProps = {
@@ -12,7 +13,7 @@ export function PostCard({ post }: PostCardProps) {
     <article className={styles.card}>
       {post.image ? (
         <Link to={post.route} className={styles.imageLink}>
-          <img src={post.image} alt={post.title} loading="lazy" />
+          <OptimizedImage src={post.image} alt={post.title} loading="lazy" />
         </Link>
       ) : null}
       <div className={styles.body}>
