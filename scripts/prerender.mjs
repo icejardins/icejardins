@@ -63,9 +63,32 @@ async function main() {
 
   for (const route of uniqueRoutes) {
     const rendered = await render(route);
-    let html = template
-      .replace("<!--app-head-->", rendered.headTags ?? "")
-      .replace("<!--app-html-->", rendered.appHtml ?? "");
+
+    let headTags = rendered.headTags ?? "";
+    let appHtml = rendered.appHtml ?? "";
+
+    // Move any helmet/head elements that rendered inside appHtml body to headTags
+    const headElementsInBody = [
+      ...appHtml.matchAll(/<(title|meta|link|script type="application\/ld\+json")[^>]*>(.*?<\/(title|script)>)?/gi)
+    ];
+    for (const match of headElementsInBody) {
+      headTags += match[0];
+      appHtml = appHtml.replace(match[0], "");
+    }
+
+    let html = template;
+
+    // Guarantee a unique, valid <title> tag in <head>
+    const titleMatch = headTags.match(/<title[^>]*>(.*?)<\/title>/i);
+    if (titleMatch) {
+      const pageTitle = titleMatch[1];
+      html = html.replace(/<title>.*?<\/title>/i, `<title>${pageTitle}</title>`);
+      headTags = headTags.replace(/<title[^>]*>.*?<\/title>/gi, "");
+    }
+
+    html = html
+      .replace("<!--app-head-->", headTags)
+      .replace("<!--app-html-->", appHtml);
 
     const outputPath =
       route === "/"
