@@ -350,7 +350,7 @@ async function main() {
 
   const siteConfig = {
     ...siteConfigData,
-    baseUrl: String(configuredBaseUrl ?? siteConfigData.baseUrl ?? "https://icejardins.com.br").replace(/\/+$/, ""),
+    baseUrl: String(configuredBaseUrl ?? siteConfigData.baseUrl ?? "https://icejardins.org.br").replace(/\/+$/, ""),
     blog: {
       title: String(postsIndex.data.title ?? siteConfigData.blog?.title ?? "Sermões"),
       description: String(postsIndex.data.description ?? siteConfigData.blog?.description ?? "Sermões e publicações recentes")

@@ -1,4 +1,4 @@
-﻿# ICE Jardins React
+# ICE Jardins React
 
 Site institucional da Igreja Cristã Evangélica Jardins em Brasília, desenvolvido em React + Vite, mantendo conteúdo e identidade visual.
 
@@ -65,7 +65,7 @@ Dados gerados automaticamente para o app ficam em `src/content/generated/`.
 ## Publicacao no Vercel
 
 - Branch de producao React: `vercel-react-prod`
-- Dominio planejado: `https://icejardins.com.br`
+- Dominio planejado: `https://icejardins.org.br`
 - Build command: `npm run build`
 - Output directory: `dist`
 - Install command: `npm ci`
