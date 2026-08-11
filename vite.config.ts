@@ -15,6 +15,7 @@ export default defineConfig({
   },
   build: {
     sourcemap: "hidden",
+    modulePreload: false,
     rollupOptions: {
       output: {
         manualChunks(id) {
