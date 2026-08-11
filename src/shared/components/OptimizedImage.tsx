@@ -44,7 +44,7 @@ export function OptimizedImage({
   alt,
   avifSrc: customAvifSrc,
   webpSrc: customWebpSrc,
-  autoFormats = true,
+  autoFormats = false,
   aspectRatio,
   objectFit,
   showSkeleton = true,
