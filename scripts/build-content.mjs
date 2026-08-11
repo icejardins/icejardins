@@ -392,17 +392,65 @@ async function main() {
     return left.localeCompare(right);
   });
 
+  const todayIso = new Date().toISOString().split("T")[0];
+  const postDates = posts.map((p) => p.date).filter(Boolean);
+  const latestPostDate = postDates.length > 0 ? new Date(postDates[0]).toISOString().split("T")[0] : todayIso;
+
+  const postRouteMap = new Map();
+  for (const post of posts) {
+    const route = normalizeRoute(post.route);
+    const dateStr = post.date ? new Date(post.date).toISOString().split("T")[0] : latestPostDate;
+    postRouteMap.set(route, dateStr);
+  }
+
   const sitemapEntries = sortedRoutes
     .map((route) => {
       const cleanedRoute = route === "/" ? "/" : route.replace(/\/+$/, "/");
-      return `  <url><loc>${siteConfig.baseUrl}${cleanedRoute}</loc></url>`;
+      const loc = `${siteConfig.baseUrl}${cleanedRoute}`;
+      let lastmod = latestPostDate;
+      let changefreq = "weekly";
+      let priority = "0.8";
+
+      if (cleanedRoute === "/") {
+        lastmod = latestPostDate;
+        changefreq = "daily";
+        priority = "1.0";
+      } else if (cleanedRoute === "/visita/" || cleanedRoute === "/fe/") {
+        lastmod = todayIso;
+        changefreq = "weekly";
+        priority = "0.9";
+      } else if (postRouteMap.has(cleanedRoute)) {
+        lastmod = postRouteMap.get(cleanedRoute);
+        changefreq = "monthly";
+        priority = "0.8";
+      } else if (cleanedRoute.startsWith("/tags/") || cleanedRoute.startsWith("/categorias/")) {
+        lastmod = latestPostDate;
+        changefreq = "weekly";
+        priority = "0.6";
+      }
+
+      return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
     })
     .join("\n");
 
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapEntries}\n</urlset>\n`;
   const robotsTxt = `User-agent: *\nAllow: /\n\nSitemap: ${siteConfig.baseUrl}/sitemap.xml\n`;
 
+  const rssItems = posts
+    .slice(0, 20)
+    .map((post) => {
+      const postUrl = `${siteConfig.baseUrl}${normalizeRoute(post.route)}`;
+      const pubDate = post.date ? new Date(post.date).toUTCString() : new Date().toUTCString();
+      const description = post.description ? post.description.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;") : "";
+      const title = post.title ? post.title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;") : "";
+      return `    <item>\n      <title>${title}</title>\n      <link>${postUrl}</link>\n      <guid isPermaLink="true">${postUrl}</guid>\n      <pubDate>${pubDate}</pubDate>\n      <description>${description}</description>\n    </item>`;
+    })
+    .join("\n");
+
+  const rssXml = `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0">\n  <channel>\n    <title>${siteConfig.title}</title>\n    <link>${siteConfig.baseUrl}/</link>\n    <description>${siteConfig.description}</description>\n    <language>pt-br</language>\n    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>\n${rssItems}\n  </channel>\n</rss>\n`;
+
   await fs.writeFile(path.join(staticDir, "sitemap.xml"), sitemapXml, "utf8");
+  await fs.writeFile(path.join(staticDir, "rss.xml"), rssXml, "utf8");
   await fs.writeFile(path.join(staticDir, "robots.txt"), robotsTxt, "utf8");
 
   await fs.writeFile(

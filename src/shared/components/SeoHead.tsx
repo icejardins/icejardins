@@ -62,7 +62,20 @@ function buildChurchSchema(baseUrl: string) {
       addressRegion: "DF",
       postalCode: "71686-301",
       addressCountry: "BR"
-    }
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "-15.8797754",
+      longitude: "-47.8154745"
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Sunday",
+        opens: "09:30",
+        closes: "12:00"
+      }
+    ]
   };
 }
 
@@ -169,6 +182,12 @@ export function SeoHead({
       <link rel="canonical" href={canonicalUrl} />
       <link rel="alternate" hrefLang={site.languageCode} href={canonicalUrl} />
       <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
+      <link
+        rel="alternate"
+        type="application/rss+xml"
+        title={`Feed RSS - ${site.title}`}
+        href={`${site.baseUrl}/rss.xml`}
+      />
       {allSchemas.map((schema, index) => (
         <script key={index} type="application/ld+json">
           {JSON.stringify(schema)}
