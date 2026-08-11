@@ -24,6 +24,7 @@ export function Header() {
   const [query, setQuery] = useState("");
   const [searchDocs, setSearchDocs] = useState<SearchDocument[]>([]);
   const [isSearchReady, setIsSearchReady] = useState(false);
+  const [hasRequestedSearch, setHasRequestedSearch] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -31,6 +32,10 @@ export function Header() {
   }, [location.pathname]);
 
   useEffect(() => {
+    if (!hasRequestedSearch) {
+      return;
+    }
+
     async function loadSearchIndex() {
       try {
         const response = await fetch("/search-index.json");
@@ -48,7 +53,13 @@ export function Header() {
     }
 
     loadSearchIndex();
-  }, []);
+  }, [hasRequestedSearch]);
+
+  const handleSearchInteraction = () => {
+    if (!hasRequestedSearch) {
+      setHasRequestedSearch(true);
+    }
+  };
 
   const filteredResults = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -138,7 +149,12 @@ export function Header() {
                 className="form-control"
                 placeholder="Buscar sermões e páginas"
                 value={query}
-                onChange={(event) => setQuery(event.target.value)}
+                onFocus={handleSearchInteraction}
+                onPointerDown={handleSearchInteraction}
+                onChange={(event) => {
+                  handleSearchInteraction();
+                  setQuery(event.target.value);
+                }}
               />
             </div>
           </div>

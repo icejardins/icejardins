@@ -16,21 +16,7 @@ export default defineConfig({
   build: {
     sourcemap: "hidden",
     modulePreload: false,
-    rollupOptions: {
-      output: {
-        manualChunks(id) {
-          if (id.includes("node_modules")) {
-            if (id.includes("react") || id.includes("react-dom") || id.includes("react-router")) {
-              return "vendor-react";
-            }
-            if (id.includes("bootstrap")) {
-              return "vendor-bootstrap";
-            }
-            return "vendor";
-          }
-        }
-      }
-    }
+    chunkSizeWarningLimit: 1000
   },
   server: {
     port: 5173
