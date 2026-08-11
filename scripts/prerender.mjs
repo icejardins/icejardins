@@ -28,31 +28,35 @@ async function main() {
 
   const { render } = await import(pathToFileURL(serverBundlePath).href);
 
-  // Inlining CSS to remove render-blocking stylesheet requests
-  const cssMatch = templateRaw.match(/<link rel="stylesheet"[^>]+href="(\/assets\/[^"]+\.css)"[^>]*>/);
-  let cssContent = "";
-  let cssLinkTag = "";
+  // Inlining ALL CSS files to eliminate render-blocking stylesheet requests
+  const cssMatches = [...templateRaw.matchAll(/<link rel="stylesheet"[^>]+href="(\/assets\/[^"]+\.css)"[^>]*>/g)];
+  let combinedCss = "";
 
-  if (cssMatch) {
-    cssLinkTag = cssMatch[0];
-    const cssRelativePath = cssMatch[1].replace(/^\//, "");
+  for (const match of cssMatches) {
+    const cssRelativePath = match[1].replace(/^\//, "");
     const cssFilePath = path.join(distDir, cssRelativePath);
     try {
-      cssContent = await fs.readFile(cssFilePath, "utf8");
+      const cssContent = await fs.readFile(cssFilePath, "utf8");
+      combinedCss += cssContent + "\n";
     } catch {
-      cssContent = "";
+      // ignore missing css
+    }
+  }
+
+  let template = templateRaw;
+  if (combinedCss && cssMatches.length > 0) {
+    const firstLinkTag = cssMatches[0][0];
+    template = template.replace(firstLinkTag, `<style>${combinedCss}</style>`);
+    for (let i = 1; i < cssMatches.length; i++) {
+      template = template.replace(cssMatches[i][0], "");
     }
   }
 
   for (const route of uniqueRoutes) {
     const rendered = await render(route);
-    let html = templateRaw
+    let html = template
       .replace("<!--app-head-->", rendered.headTags ?? "")
       .replace("<!--app-html-->", rendered.appHtml ?? "");
-
-    if (cssContent && cssLinkTag) {
-      html = html.replace(cssLinkTag, `<style>${cssContent}</style>`);
-    }
 
     const outputPath =
       route === "/"
