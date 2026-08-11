@@ -66,16 +66,6 @@ async function main() {
 
     let headTags = rendered.headTags ?? "";
     let appHtml = rendered.appHtml ?? "";
-
-    // Move any helmet/head elements that rendered inside appHtml body to headTags
-    const headElementsInBody = [
-      ...appHtml.matchAll(/<(title|meta|link|script type="application\/ld\+json")[^>]*>(.*?<\/(title|script)>)?/gi)
-    ];
-    for (const match of headElementsInBody) {
-      headTags += match[0];
-      appHtml = appHtml.replace(match[0], "");
-    }
-
     let html = template;
 
     // Guarantee a unique, valid <title> tag in <head>
