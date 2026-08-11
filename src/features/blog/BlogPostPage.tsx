@@ -40,13 +40,37 @@ export default function BlogPostPage() {
   if (!post) {
     return (
       <section className="container py-5">
-        <SeoHead title={`Sermão não encontrado | ${site.title}`} canonicalPath="/posts/" />
+        <SeoHead title={`Sermão não encontrado | ${site.title}`} noindex />
         <h1>Sermão não encontrado</h1>
         <p>O conteúdo que você procurou não está disponível.</p>
         <Link to="/posts/">Voltar para sermões</Link>
       </section>
     );
   }
+
+  const blogPostingSchema = post
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: post.title,
+        description: post.description,
+        image: post.image ? [`${site.baseUrl}${post.image.startsWith("/") ? post.image : `/${post.image}`}`] : undefined,
+        datePublished: post.date,
+        inLanguage: "pt-BR",
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": shareUrl
+        },
+        author: {
+          "@type": "Organization",
+          name: "ICE Jardins",
+          url: site.baseUrl
+        },
+        publisher: {
+          "@id": `${site.baseUrl}/#organization`
+        }
+      }
+    : undefined;
 
   return (
     <>
@@ -55,6 +79,7 @@ export default function BlogPostPage() {
         description={post.description}
         image={post.image}
         canonicalPath={canonicalPath}
+        jsonLd={blogPostingSchema}
       />
 
       <div className={styles.progress} aria-hidden="true">

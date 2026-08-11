@@ -10,7 +10,7 @@ export default function ContentPage() {
   if (!page) {
     return (
       <section className="container py-5">
-        <SeoHead title={`Página não encontrada | ${site.title}`} />
+        <SeoHead title={`Página não encontrada | ${site.title}`} noindex />
         <h1>Página não encontrada</h1>
         <p>Não encontramos a página solicitada.</p>
         <Link to="/">Ir para a página inicial</Link>
