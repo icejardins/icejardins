@@ -9,6 +9,7 @@ type SeoHeadProps = {
   canonicalPath?: string;
   noindex?: boolean;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  adsConversionSendTo?: string;
 };
 
 function toAbsoluteUrl(value: string | null | undefined, baseUrl: string) {
@@ -163,7 +164,8 @@ export function SeoHead({
   image,
   canonicalPath,
   noindex = false,
-  jsonLd
+  jsonLd,
+  adsConversionSendTo
 }: SeoHeadProps) {
   const location = useLocation();
   const site = getSiteConfig();
@@ -224,6 +226,11 @@ export function SeoHead({
           {JSON.stringify(schema)}
         </script>
       ))}
+      {adsConversionSendTo ? (
+        <script>
+          {`gtag('event', 'conversion', {'send_to': '${adsConversionSendTo}'});`}
+        </script>
+      ) : null}
     </Helmet>
   );
 }

@@ -68,12 +68,56 @@ async function main() {
     let appHtml = rendered.appHtml ?? "";
     let html = template;
 
+    // React 19 SSR renders metadata and script tags directly into the rendered tree.
+    // Extract them so they can be hoisted into <head>.
+    const extractedHeadTags = [];
+
+    // Extract <title>
+    const titleMatches = [...appHtml.matchAll(/<title[^>]*>(.*?)<\/title>/gi)];
+    for (const match of titleMatches) {
+      appHtml = appHtml.replace(match[0], "");
+      headTags += `\n    ${match[0]}`;
+    }
+
+    // Extract <meta>
+    const metaMatches = [...appHtml.matchAll(/<meta\s+[^>]*\/?>/gi)];
+    for (const match of metaMatches) {
+      appHtml = appHtml.replace(match[0], "");
+      extractedHeadTags.push(match[0]);
+    }
+
+    // Extract <link>
+    const linkMatches = [...appHtml.matchAll(/<link\s+[^>]*\/?>/gi)];
+    for (const match of linkMatches) {
+      appHtml = appHtml.replace(match[0], "");
+      extractedHeadTags.push(match[0]);
+    }
+
+    // Extract <script> (JSON-LD, gtag event snippets)
+    const scriptMatches = [...appHtml.matchAll(/<script(?:\s+[^>]*)?>[\s\S]*?<\/script>/gi)];
+    for (const match of scriptMatches) {
+      appHtml = appHtml.replace(match[0], "");
+      extractedHeadTags.push(match[0]);
+    }
+
+    if (extractedHeadTags.length > 0) {
+      headTags += `\n    ${extractedHeadTags.join("\n    ")}`;
+    }
+
     // Guarantee a unique, valid <title> tag in <head>
     const titleMatch = headTags.match(/<title[^>]*>(.*?)<\/title>/i);
     if (titleMatch) {
       const pageTitle = titleMatch[1];
       html = html.replace(/<title>.*?<\/title>/i, `<title>${pageTitle}</title>`);
       headTags = headTags.replace(/<title[^>]*>.*?<\/title>/gi, "");
+    }
+
+    // Guarantee a unique, valid <meta name="description"> in <head>
+    const descMatch = headTags.match(/<meta\s+name="description"\s+content="([^"]*)"[^>]*\/?>/i);
+    if (descMatch) {
+      const descContent = descMatch[1];
+      html = html.replace(/<meta\s+name="description"\s+content="[^"]*"[^>]*\/?>/i, `<meta name="description" content="${descContent}" />`);
+      headTags = headTags.replace(/<meta\s+name="description"\s+content="[^"]*"[^>]*\/?>/gi, "");
     }
 
     // Guarantee a unique, valid <link rel="canonical"> tag in <head>
@@ -83,14 +127,22 @@ async function main() {
       if (html.includes('rel="canonical"')) {
         html = html.replace(/<link\s+rel="canonical"[^>]*\/?>/i, `<link rel="canonical" href="${canonicalUrl}" />`);
       } else {
-        html = html.replace("</head>", `<link rel="canonical" href="${canonicalUrl}" />\n</head>`);
+        html = html.replace("</head>", `    <link rel="canonical" href="${canonicalUrl}" />\n  </head>`);
       }
       headTags = headTags.replace(/<link\s+rel="canonical"[^>]*\/?>/gi, "");
     }
 
-    html = html
-      .replace("<!--app-head-->", headTags)
-      .replace("<!--app-html-->", appHtml);
+    if (html.includes("<!--app-head-->")) {
+      html = html.replace("<!--app-head-->", headTags);
+    } else {
+      html = html.replace("</head>", `${headTags}\n  </head>`);
+    }
+
+    if (html.includes("<!--app-html-->")) {
+      html = html.replace("<!--app-html-->", appHtml);
+    } else {
+      html = html.replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`);
+    }
 
     const outputPath =
       route === "/"

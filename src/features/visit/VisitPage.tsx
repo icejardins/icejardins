@@ -18,6 +18,7 @@ export default function VisitPage() {
         title={`Planeje sua visita | ${site.title}`}
         description={visitContent.hero.description}
         canonicalPath="/visita/"
+        adsConversionSendTo={site.googleAdsConversionSendTo || "AW-672119654/J5EqCJCKyOsZEOb2vsAC"}
       />
 
       <section className={styles.hero}>
