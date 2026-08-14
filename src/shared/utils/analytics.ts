@@ -42,6 +42,6 @@ export function trackAdsConversion(options?: ConversionOptions) {
     window.gtag("event", "conversion", payload);
   } else {
     window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push(arguments);
+    window.dataLayer.push(["event", "conversion", payload]);
   }
 }
