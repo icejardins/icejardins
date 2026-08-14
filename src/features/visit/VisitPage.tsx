@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { SeoHead } from "@/shared/components/SeoHead";
 import { visitContent } from "@/content/data/visitContent";
 import { getSiteConfig } from "@/content/repositories/contentRepository";
@@ -6,6 +7,10 @@ import styles from "./VisitPage.module.css";
 
 export default function VisitPage() {
   const site = getSiteConfig();
+
+  useEffect(() => {
+    trackAdsConversion();
+  }, []);
 
   return (
     <>

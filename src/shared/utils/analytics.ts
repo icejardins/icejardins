@@ -40,10 +40,8 @@ export function trackAdsConversion(options?: ConversionOptions) {
 
   if (typeof window.gtag === "function") {
     window.gtag("event", "conversion", payload);
-  } else if (Array.isArray(window.dataLayer)) {
-    window.dataLayer.push({
-      event: "conversion",
-      ...payload
-    });
+  } else {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(arguments);
   }
 }
