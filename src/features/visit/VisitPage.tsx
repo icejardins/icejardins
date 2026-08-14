@@ -1,6 +1,7 @@
-﻿import { SeoHead } from "@/shared/components/SeoHead";
+import { SeoHead } from "@/shared/components/SeoHead";
 import { visitContent } from "@/content/data/visitContent";
 import { getSiteConfig } from "@/content/repositories/contentRepository";
+import { trackAdsConversion } from "@/shared/utils/analytics";
 import styles from "./VisitPage.module.css";
 
 export default function VisitPage() {
@@ -63,7 +64,11 @@ export default function VisitPage() {
               <div className="col-lg-5">
                 <h2>{visitContent.location.title}</h2>
                 <p>{visitContent.location.description}</p>
-                <a className={`btn btn-lg ${styles.ctaButton}`} href={visitContent.location.buttonLink}>
+                <a
+                  className={`btn btn-lg ${styles.ctaButton}`}
+                  href={visitContent.location.buttonLink}
+                  onClick={() => trackAdsConversion()}
+                >
                   {visitContent.location.buttonLabel}
                 </a>
                 <article className={styles.addressCard}>

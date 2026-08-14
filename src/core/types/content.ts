@@ -21,6 +21,7 @@ export type SiteConfig = {
   description: string;
   googleAnalyticsId?: string;
   googleAdsId?: string;
+  googleAdsConversionSendTo?: string;
   menu: MenuItem[];
   navbar: {
     brandName: string;
