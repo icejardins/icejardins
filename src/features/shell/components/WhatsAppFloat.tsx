@@ -1,5 +1,6 @@
 import { getSiteConfig } from "@/content/repositories/contentRepository";
 import { Icon } from "@/shared/components/Icon";
+import { trackAdsConversion } from "@/shared/utils/analytics";
 import styles from "./WhatsAppFloat.module.css";
 
 export function WhatsAppFloat() {
@@ -16,6 +17,7 @@ export function WhatsAppFloat() {
       rel="noreferrer"
       aria-label="Fale conosco pelo WhatsApp"
       title="Fale conosco pelo WhatsApp"
+      onClick={() => trackAdsConversion()}
     >
       <Icon name="whatsapp" className={styles.icon} />
     </a>

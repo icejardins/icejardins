@@ -3,6 +3,7 @@ import { SeoHead } from "@/shared/components/SeoHead";
 import { Icon } from "@/shared/components/Icon";
 import { getSiteConfig } from "@/content/repositories/contentRepository";
 import { homeContent } from "@/content/data/homeContent";
+import { trackAdsConversion } from "@/shared/utils/analytics";
 import styles from "./HomePage.module.css";
 
 const aboutCarouselImages = [
@@ -150,7 +151,12 @@ export default function HomePage() {
               <article className={styles.locationCard}>
                 <h3>E-mail</h3>
                 <p>
-                  <a href={`mailto:${homeContent.location.email}`}>{homeContent.location.email}</a>
+                  <a
+                    href={`mailto:${homeContent.location.email}`}
+                    onClick={() => trackAdsConversion()}
+                  >
+                    {homeContent.location.email}
+                  </a>
                 </p>
               </article>
             </div>

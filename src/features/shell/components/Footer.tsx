@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { getRecentPosts, getSiteConfig } from "@/content/repositories/contentRepository";
 import { formatDate } from "@/core/utils/formatDate";
+import { trackAdsConversion } from "@/shared/utils/analytics";
 import styles from "./Footer.module.css";
 
 export function Footer() {
@@ -54,7 +55,12 @@ export function Footer() {
               </a>
             ) : null}
             {site.social.whatsapp ? (
-              <a href={site.social.whatsapp} target="_blank" rel="noreferrer">
+              <a
+                href={site.social.whatsapp}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => trackAdsConversion()}
+              >
                 WhatsApp
               </a>
             ) : null}
