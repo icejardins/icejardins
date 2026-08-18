@@ -41,7 +41,7 @@ O tratamento será realizado conforme a finalidade aplicável e com fundamento n
 
 O site utiliza o armazenamento local do navegador para lembrar sua preferência de tema. Essa informação permanece no seu dispositivo e não identifica você diretamente para a ICE Jardins.
 
-Também utilizamos **Google Analytics** e **Google Ads** para obter estatísticas de audiência e medir resultados de campanhas. Esses serviços podem utilizar cookies, identificadores e dados de navegação, como endereço IP, página acessada, navegador e informações aproximadas de localização. O tratamento realizado pelo Google também está sujeito aos próprios termos e políticas da empresa. Consulte [como o Google usa dados em sites parceiros](https://policies.google.com/technologies/partner-sites?hl=pt-BR) e [como o Google usa cookies](https://policies.google.com/technologies/cookies?hl=pt-BR).
+Também utilizamos **Google Analytics** e **Google Ads** para obter estatísticas de audiência e medir resultados de campanhas. Algumas publicações incorporam vídeos do **YouTube**; ao carregar ou reproduzir esses vídeos, o Google pode receber dados técnicos e de interação. Esses serviços podem utilizar cookies, identificadores e dados de navegação, como endereço IP, página acessada, navegador e informações aproximadas de localização. O tratamento realizado pelo Google também está sujeito aos próprios termos e políticas da empresa. Consulte [como o Google usa dados em sites parceiros](https://policies.google.com/technologies/partner-sites?hl=pt-BR) e [como o Google usa cookies](https://policies.google.com/technologies/cookies?hl=pt-BR).
 
 Você pode bloquear ou excluir cookies nas configurações do seu navegador. Essa escolha pode afetar algumas medições ou funcionalidades. As opções de anúncios do Google também podem ser gerenciadas na [Minha Central de Anúncios](https://myadcenter.google.com/).
 
@@ -50,7 +50,7 @@ Você pode bloquear ou excluir cookies nas configurações do seu navegador. Ess
 Podemos compartilhar dados, na medida necessária, com:
 
 - fornecedores de hospedagem, infraestrutura, segurança, análise e comunicação que apoiam a operação do site;
-- Google, para os serviços de Analytics e Ads;
+- Google, para os serviços de Analytics, Ads e vídeos do YouTube;
 - Meta e WhatsApp, quando você decide utilizar os links para essas plataformas;
 - autoridades públicas ou terceiros, quando houver obrigação legal, ordem válida ou necessidade de proteger direitos da ICE Jardins ou de outras pessoas.
 

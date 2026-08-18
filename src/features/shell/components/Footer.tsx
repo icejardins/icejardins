@@ -45,6 +45,7 @@ export function Footer() {
           </div>
           <div className={styles.footerLinks}>
             <Link to="/privacy/">Política de Privacidade</Link>
+            <Link to="/terms/">Termos de Serviço</Link>
             {site.social.facebook ? (
               <a href={site.social.facebook} target="_blank" rel="noreferrer">
                 Facebook
