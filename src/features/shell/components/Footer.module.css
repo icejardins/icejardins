@@ -75,19 +75,18 @@
   background-color: color-mix(in srgb, var(--secondary-background-color) 86%, var(--background-color));
 }
 
-.socialLinks {
+.footerLinks {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
-.socialLinks a {
+.footerLinks a {
   color: var(--text-color);
   text-decoration: none;
 }
 
-.socialLinks a:hover,
-.socialLinks a:focus-visible {
+.footerLinks a:hover,
+.footerLinks a:focus-visible {
   color: var(--primary-color);
 }
-

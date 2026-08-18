@@ -43,7 +43,8 @@ export function Footer() {
               © {new Date().getFullYear()} {site.title}
             </span>
           </div>
-          <div className={styles.socialLinks}>
+          <div className={styles.footerLinks}>
+            <Link to="/privacy/">Política de Privacidade</Link>
             {site.social.facebook ? (
               <a href={site.social.facebook} target="_blank" rel="noreferrer">
                 Facebook
@@ -70,4 +71,3 @@ export function Footer() {
     </footer>
   );
 }
-
