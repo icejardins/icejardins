@@ -378,8 +378,8 @@ Data/Hora: ${timestamp}
             <p style="font-size: 14px; color: #4D6B6D; margin-top: 0;">Nossa igreja está de portas abertas para você e sua família:</p>
             
             <p style="font-size: 14px; margin: 4px 0;">
-              📍 <strong>Endereço:</strong> Av. do Sol, Condomínio Solar da Serra, Jardim Botânico, Brasília - DF<br />
-              ⏰ <strong>Cultos:</strong> Domingos às 9h e às 18h
+              📍 <strong>Endereço:</strong> Auditório do Colégio In-Nova, Condomínio Estância Jardim Botânico II, Jardim Botânico, Brasília - DF<br />
+              ⏰ <strong>Culto:</strong> Domingos às 09:30h
             </p>
 
             <p style="font-size: 13px; color: #888; margin-top: 28px; text-align: center;">
@@ -402,8 +402,8 @@ Você pode acessar a página do guia e fazer o download no link abaixo:
 ${guidePageUrl}
 
 Venha nos fazer uma visita!
-Endereço: Av. do Sol, Condomínio Solar da Serra, Jardim Botânico, Brasília - DF
-Cultos: Domingos às 9h e às 18h
+Endereço: Auditório do Colégio In-Nova, Condomínio Estância Jardim Botânico II, Jardim Botânico, Brasília - DF
+Culto: Domingos às 09:30h
 
 Igreja Cristã Evangélica Jardins
 https://icejardins.org.br

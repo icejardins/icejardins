@@ -139,11 +139,11 @@ export default function ThankYouGuidePage() {
             <div className={styles.scheduleGrid}>
               <div className={styles.scheduleItem}>
                 <i className="bi bi-clock-fill me-2 text-primary" />
-                Domingo · 09:00 — Escola Bíblica (EBD)
+                Domingo · 09:30 — Louvor e Culto Inspirativo
               </div>
               <div className={styles.scheduleItem}>
                 <i className="bi bi-clock-fill me-2 text-primary" />
-                Domingo · 18:00 — Culto de Celebração
+                Domingo · 11:00 — Escola Bíblica Dominical (EBD)
               </div>
             </div>
 

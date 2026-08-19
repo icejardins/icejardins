@@ -465,12 +465,12 @@ export default function LandingPage() {
 
                 <ul className={styles.scheduleList}>
                   <li className={styles.scheduleItem}>
-                    <span className={styles.scheduleBadge}>Dom · 09:00</span>
-                    <span>Escola Bíblica Dominical (EBD)</span>
+                    <span className={styles.scheduleBadge}>Dom · 09:30</span>
+                    <span>Louvor e Culto Inspirativo</span>
                   </li>
                   <li className={styles.scheduleItem}>
-                    <span className={styles.scheduleBadge}>Dom · 18:00</span>
-                    <span>Culto de Celebração e Adoração</span>
+                    <span className={styles.scheduleBadge}>Dom · 11:00</span>
+                    <span>Escola Bíblica Dominical (EBD)</span>
                   </li>
                 </ul>
 
@@ -496,8 +496,8 @@ export default function LandingPage() {
               <div className={styles.churchInfoCard}>
                 <h3>Onde Estamos</h3>
                 <p className={styles.locationDetail}>
-                  <strong>Endereço:</strong> Av. do Sol, Condomínio Solar da Serra, Jardim
-                  Botânico, Brasília - DF, CEP 71680-389.
+                  <strong>Endereço:</strong> Auditório do Colégio In-Nova (antigo COC), Condomínio
+                  Estância Jardim Botânico II, SH Jardim Botânico, Brasília — DF, CEP 71686-301.
                 </p>
                 <p className={styles.locationDetail}>
                   <strong>E-mail:</strong> secretaria@icejardins.org.br
