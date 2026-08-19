@@ -8,6 +8,8 @@ import TaxonomyPage from "@/features/blog/TaxonomyPage";
 import ContentPage from "@/features/pages/ContentPage";
 import NotFoundPage from "@/features/common/NotFoundPage";
 import LandingPage from "@/features/landing/LandingPage";
+import ThankYouGuidePage from "@/features/landing/ThankYouGuidePage";
+import UnsubscribePage from "@/features/landing/UnsubscribePage";
 import { MainLayout } from "@/features/shell/layouts/MainLayout";
 import { useScrollToTop } from "@/shared/hooks/useScrollToTop";
 
@@ -22,6 +24,8 @@ export function AppRoutesStatic() {
       <RouterEffects />
       <Routes>
         <Route path="landing" element={<LandingPage />} />
+        <Route path="obrigado-guia" element={<ThankYouGuidePage />} />
+        <Route path="descadastro" element={<UnsubscribePage />} />
         <Route element={<MainLayout />}>
           <Route index element={<HomePage />} />
           <Route path="visita" element={<VisitPage />} />

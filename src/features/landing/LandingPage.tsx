@@ -530,7 +530,7 @@ export default function LandingPage() {
           <p className="mb-0">
             <Link to="/">Início</Link> · <Link to="/visita/">Visita</Link> ·{" "}
             <Link to="/fe/">No que cremos</Link> · <Link to="/posts/">Sermões</Link> ·{" "}
-            <Link to="/privacy/">Privacidade</Link>
+            <Link to="/privacy/">Privacidade</Link> · <Link to="/descadastro/">Descadastro</Link>
           </p>
         </div>
       </footer>

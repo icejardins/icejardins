@@ -352,6 +352,9 @@ Data/Hora: ${timestamp}
     // 2. Email confirmation & resource guide to the visitor
     try {
       const visitorSubject = "Seu guia gratuito: Quando a cabeça não para — ICE Jardins";
+      const unsubscribeUrl = `https://icejardins.org.br/descadastro?email=${encodeURIComponent(cleanEmail)}`;
+      const guidePageUrl = "https://icejardins.org.br/obrigado-guia";
+
       const visitorHtml = `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #12383A; line-height: 1.6;">
           <div style="background: #145F63; padding: 28px 24px; border-radius: 8px 8px 0 0; text-align: center;">
@@ -364,8 +367,8 @@ Data/Hora: ${timestamp}
             <p style="font-size: 16px;">O guia <strong>"Quando a cabeça não para: Um guia para encontrar calma num mundo agitado"</strong> foi preparado com ferramentas práticas e uma perspectiva de paz verdadeira.</p>
 
             <div style="text-align: center; margin: 32px 0;">
-              <a href="https://icejardins.org.br/downloads/quando-a-cabeca-nao-para.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #145F63; color: #ffffff; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 4px 12px rgba(20,95,99,0.25);">
-                📥 Baixar o Guia em PDF
+              <a href="${guidePageUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #145F63; color: #ffffff; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 4px 12px rgba(20,95,99,0.25);">
+                📖 Acessar e Baixar o Guia
               </a>
             </div>
 
@@ -382,6 +385,10 @@ Data/Hora: ${timestamp}
             <p style="font-size: 13px; color: #888; margin-top: 28px; text-align: center;">
               Igreja Cristã Evangélica Jardins · <a href="https://icejardins.org.br" style="color: #145F63;">icejardins.org.br</a>
             </p>
+
+            <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid #E2F0F1; font-size: 12px; color: #777; text-align: center; line-height: 1.5;">
+              Você recebeu este e-mail porque solicitou o guia em nosso site. Se não deseja mais receber nossos e-mails, <a href="${unsubscribeUrl}" style="color: #145F63; text-decoration: underline;">clique aqui para cancelar</a>.
+            </div>
           </div>
         </div>
       `;
@@ -391,8 +398,8 @@ Olá, ${cleanName}!
 
 Aqui está o seu guia gratuito: "Quando a cabeça não para: Um guia para encontrar calma num mundo agitado".
 
-Você pode acessar e baixar o arquivo PDF no link abaixo:
-https://icejardins.org.br/downloads/quando-a-cabeca-nao-para.pdf
+Você pode acessar a página do guia e fazer o download no link abaixo:
+${guidePageUrl}
 
 Venha nos fazer uma visita!
 Endereço: Av. do Sol, Condomínio Solar da Serra, Jardim Botânico, Brasília - DF
@@ -400,6 +407,9 @@ Cultos: Domingos às 9h e às 18h
 
 Igreja Cristã Evangélica Jardins
 https://icejardins.org.br
+
+---
+Você recebeu este e-mail porque solicitou o guia em nosso site. Se não deseja mais receber nossos e-mails, clique aqui para cancelar: ${unsubscribeUrl}
       `.trim();
 
       const rawVisitorEmail = createRawEmail({
