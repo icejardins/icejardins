@@ -118,7 +118,9 @@ function createRawEmail({
   replyTo,
   subject,
   html,
-  text
+  text,
+  listUnsubscribe,
+  listUnsubscribePost
 }: {
   to: string;
   from: string;
@@ -126,6 +128,8 @@ function createRawEmail({
   subject: string;
   html: string;
   text: string;
+  listUnsubscribe?: string;
+  listUnsubscribePost?: string;
 }): string {
   const utf8Subject = `=?utf-8?B?${Buffer.from(subject).toString("base64")}?=`;
   const boundary = `__boundary_${Date.now().toString(16)}__`;
@@ -136,6 +140,8 @@ function createRawEmail({
     replyTo ? `Reply-To: ${replyTo}` : "",
     `Subject: ${utf8Subject}`,
     "MIME-Version: 1.0",
+    listUnsubscribe ? `List-Unsubscribe: ${listUnsubscribe}` : "",
+    listUnsubscribePost ? `List-Unsubscribe-Post: ${listUnsubscribePost}` : "",
     `Content-Type: multipart/alternative; boundary="${boundary}"`
   ].filter(Boolean);
 
@@ -351,15 +357,17 @@ Data/Hora: ${timestamp}
 
     // 2. Email confirmation & resource guide to the visitor
     try {
-      const visitorSubject = "Seu guia gratuito: Quando a cabeça não para — ICE Jardins";
+      const visitorSubject = "Aqui está o seu material: Quando a cabeça não para";
       const unsubscribeUrl = `https://icejardins.org.br/descadastro?email=${encodeURIComponent(cleanEmail)}`;
+      const unsubscribeMailto = `mailto:${impersonatedUser}?subject=${encodeURIComponent(`Descadastro: ${cleanEmail}`)}`;
+      const listUnsubscribeHeader = `<${unsubscribeUrl}>, <${unsubscribeMailto}>`;
       const guidePageUrl = "https://icejardins.org.br/obrigado-guia";
 
       const visitorHtml = `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #12383A; line-height: 1.6;">
           <div style="background: #145F63; padding: 28px 24px; border-radius: 8px 8px 0 0; text-align: center;">
             <h1 style="color: #ffffff; margin: 0; font-size: 22px;">Olá, ${cleanName}!</h1>
-            <p style="color: #E2F0F1; margin: 8px 0 0; font-size: 15px;">Aqui está o seu guia gratuito.</p>
+            <p style="color: #E2F0F1; margin: 8px 0 0; font-size: 15px;">Aqui está o seu material.</p>
           </div>
           <div style="background: #ffffff; padding: 32px 24px; border-radius: 0 0 8px 8px; border: 1px solid #E2F0F1; border-top: none;">
             <p style="font-size: 16px;">Ficamos muito felizes pelo seu contato. A ansiedade e o excesso de pensamentos são desafios reais, mas você não precisa passar por isso sozinho(a).</p>
@@ -396,7 +404,7 @@ Data/Hora: ${timestamp}
       const visitorText = `
 Olá, ${cleanName}!
 
-Aqui está o seu guia gratuito: "Quando a cabeça não para: Um guia para encontrar calma num mundo agitado".
+Aqui está o seu material: "Quando a cabeça não para: Um guia para encontrar calma num mundo agitado".
 
 Você pode acessar a página do guia e fazer o download no link abaixo:
 ${guidePageUrl}
@@ -417,7 +425,9 @@ Você recebeu este e-mail porque solicitou o guia em nosso site. Se não deseja 
         from: `ICE Jardins <${impersonatedUser}>`,
         subject: visitorSubject,
         html: visitorHtml,
-        text: visitorText
+        text: visitorText,
+        listUnsubscribe: listUnsubscribeHeader,
+        listUnsubscribePost: "List-Unsubscribe=One-Click"
       });
 
       await gmail.users.messages.send({
