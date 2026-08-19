@@ -96,12 +96,38 @@ export default function LandingPage() {
     setErrorMessage(null);
   };
 
+  const resourceStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "DigitalDocument",
+    name: "Quando a cabeça não para: Um guia para encontrar calma num mundo agitado",
+    description:
+      "Um guia prático e bíblico para lidar com a ansiedade, desacelerar a mente e encontrar descanso e paz verdadeira.",
+    url: "https://icejardins.org.br/landing/",
+    image: "https://icejardins.org.br/images/quando-a-cabeca-nao-para-cover.png",
+    encodingFormat: "application/pdf",
+    inLanguage: "pt-BR",
+    isAccessibleForFree: true,
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "BRL",
+      availability: "https://schema.org/InStock"
+    },
+    publisher: {
+      "@type": "Church",
+      name: "Igreja Cristã Evangélica Jardins",
+      url: "https://icejardins.org.br"
+    }
+  };
+
   return (
     <div className={styles.landingWrapper}>
       <SeoHead
         title={`Quando a cabeça não para — Guia Gratuito | ${site.title}`}
         description="A ansiedade pode provocar insônia e uma sensação de pensamentos descontrolados. Baixe gratuitamente este guia com exercícios práticos e reflexões sobre a verdadeira paz."
         canonicalPath="/landing/"
+        image="/images/quando-a-cabeca-nao-para-cover.png"
+        jsonLd={resourceStructuredData}
         adsConversionSendTo={site.googleAdsConversionSendTo}
       />
 
