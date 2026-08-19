@@ -76,13 +76,18 @@ export default function ThankYouGuidePage() {
           <div className="row g-4 align-items-center">
             <div className="col-lg-5">
               <div className={styles.coverCard}>
-                <img
-                  src="/images/quando-a-cabeca-nao-para-cover.png"
-                  alt="Capa do Guia Quando a cabeça não para"
-                  width={320}
-                  height={400}
-                  className={styles.coverImage}
-                />
+                <picture>
+                  <source srcSet="/images/quando-a-cabeca-nao-para-cover.webp" type="image/webp" />
+                  <img
+                    src="/images/quando-a-cabeca-nao-para-cover.webp"
+                    alt="Capa do Guia Quando a cabeça não para"
+                    width={320}
+                    height={240}
+                    className={styles.coverImage}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               </div>
             </div>
 

@@ -375,14 +375,18 @@ export default function LandingPage() {
             {/* Book Cover Card */}
             <div className="col-lg-5">
               <div className={styles.bookCoverCard}>
-                <img
-                  src="/images/quando-a-cabeca-nao-para-cover.png"
-                  alt="Capa do Guia Quando a cabeça não para"
-                  width={380}
-                  height={475}
-                  className={styles.coverImage}
-                  loading="lazy"
-                />
+                <picture>
+                  <source srcSet="/images/quando-a-cabeca-nao-para-cover.webp" type="image/webp" />
+                  <img
+                    src="/images/quando-a-cabeca-nao-para-cover.webp"
+                    alt="Capa do Guia Quando a cabeça não para"
+                    width={380}
+                    height={285}
+                    className={styles.coverImage}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
                 <div className={styles.coverBadge}>
                   <i className="bi bi-file-earmark-pdf-fill text-danger" />
                   Formato Digital (PDF) · Acesso Imediato
