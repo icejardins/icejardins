@@ -7,6 +7,7 @@ import BlogPostPage from "@/features/blog/BlogPostPage";
 import TaxonomyPage from "@/features/blog/TaxonomyPage";
 import ContentPage from "@/features/pages/ContentPage";
 import NotFoundPage from "@/features/common/NotFoundPage";
+import LandingPage from "@/features/landing/LandingPage";
 import { MainLayout } from "@/features/shell/layouts/MainLayout";
 import { useScrollToTop } from "@/shared/hooks/useScrollToTop";
 
@@ -20,6 +21,7 @@ export function AppRoutesStatic() {
     <>
       <RouterEffects />
       <Routes>
+        <Route path="landing" element={<LandingPage />} />
         <Route element={<MainLayout />}>
           <Route index element={<HomePage />} />
           <Route path="visita" element={<VisitPage />} />

@@ -42,8 +42,50 @@ function htmlTagInjector(): Plugin {
   };
 }
 
+function apiDevServer(): Plugin {
+  return {
+    name: "api-dev-server",
+    configureServer(server) {
+      server.middlewares.use(async (req, res, next) => {
+        if (req.url?.startsWith("/api/send-lead")) {
+          let body = "";
+          req.on("data", (chunk) => {
+            body += chunk;
+          });
+          req.on("end", async () => {
+            try {
+              const apiModule = await server.ssrLoadModule("/api/send-lead.ts");
+              const handler = apiModule.default || apiModule;
+              const mockReq = Object.assign(req, { body });
+              const mockRes = {
+                setHeader: (k: string, v: string) => res.setHeader(k, v),
+                status: (code: number) => {
+                  res.statusCode = code;
+                  return mockRes;
+                },
+                json: (data: any) => {
+                  res.setHeader("Content-Type", "application/json");
+                  res.end(JSON.stringify(data));
+                },
+                end: () => res.end()
+              };
+              await handler(mockReq, mockRes);
+            } catch (err: any) {
+              res.statusCode = 500;
+              res.setHeader("Content-Type", "application/json");
+              res.end(JSON.stringify({ error: err.message || "Internal server error" }));
+            }
+          });
+          return;
+        }
+        next();
+      });
+    }
+  };
+}
+
 export default defineConfig({
-  plugins: [react(), htmlTagInjector()],
+  plugins: [react(), htmlTagInjector(), apiDevServer()],
   publicDir: "static",
   ssr: {
     noExternal: ["react-helmet-async"]
