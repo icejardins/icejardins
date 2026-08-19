@@ -23,7 +23,13 @@ const app = (
 );
 
 if (rootElement.firstElementChild !== null) {
-  hydrateRoot(rootElement, app);
+  hydrateRoot(rootElement, app, {
+    onRecoverableError(error) {
+      if (typeof console !== "undefined" && import.meta.env.DEV) {
+        console.warn("Hydration recoverable event:", error);
+      }
+    }
+  });
 } else {
   createRoot(rootElement).render(app);
 }

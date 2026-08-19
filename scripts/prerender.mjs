@@ -69,34 +69,30 @@ async function main() {
     let html = template;
 
     // React 19 SSR renders metadata and script tags directly into the rendered tree.
-    // Extract them so they can be hoisted into <head>.
+    // Copy them into <head> for crawlers while preserving appHtml for perfect client hydration.
     const extractedHeadTags = [];
 
     // Extract <title>
     const titleMatches = [...appHtml.matchAll(/<title[^>]*>(.*?)<\/title>/gi)];
     for (const match of titleMatches) {
-      appHtml = appHtml.replace(match[0], "");
       headTags += `\n    ${match[0]}`;
     }
 
     // Extract <meta>
     const metaMatches = [...appHtml.matchAll(/<meta\s+[^>]*\/?>/gi)];
     for (const match of metaMatches) {
-      appHtml = appHtml.replace(match[0], "");
       extractedHeadTags.push(match[0]);
     }
 
     // Extract <link>
     const linkMatches = [...appHtml.matchAll(/<link\s+[^>]*\/?>/gi)];
     for (const match of linkMatches) {
-      appHtml = appHtml.replace(match[0], "");
       extractedHeadTags.push(match[0]);
     }
 
     // Extract <script> (JSON-LD, gtag event snippets)
     const scriptMatches = [...appHtml.matchAll(/<script(?:\s+[^>]*)?>[\s\S]*?<\/script>/gi)];
     for (const match of scriptMatches) {
-      appHtml = appHtml.replace(match[0], "");
       extractedHeadTags.push(match[0]);
     }
 
