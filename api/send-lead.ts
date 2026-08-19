@@ -258,6 +258,10 @@ export default async function handler(req: any, res: any) {
       process.env.NOTIFICATION_EMAIL ||
       "secretaria@icejardins.org.br";
 
+    const fromName = process.env.EMAIL_FROM_NAME || "ICE Jardins";
+    const fromAddress = process.env.EMAIL_FROM_ADDRESS || impersonatedUser;
+    const replyToAddress = process.env.EMAIL_REPLY_TO || impersonatedUser;
+
     if (!clientEmail || !privateKey) {
       console.warn(
         "[api/send-lead] Google Service Account credentials are not configured in environment variables.",
@@ -422,7 +426,8 @@ Você recebeu este e-mail porque solicitou o guia em nosso site. Se não deseja 
 
       const rawVisitorEmail = createRawEmail({
         to: cleanEmail,
-        from: `ICE Jardins <${impersonatedUser}>`,
+        from: `${fromName} <${fromAddress}>`,
+        replyTo: replyToAddress,
         subject: visitorSubject,
         html: visitorHtml,
         text: visitorText,
