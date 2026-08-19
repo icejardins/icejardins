@@ -364,7 +364,7 @@ async function main() {
     )
   };
 
-  const routes = new Set(["/", "/posts/"]);
+  const routes = new Set(["/", "/posts/", "/landing/", "/obrigado-guia/", "/descadastro/"]);
 
   for (const page of pages) {
     routes.add(normalizeRoute(page.route));
@@ -415,7 +415,7 @@ async function main() {
         lastmod = latestPostDate;
         changefreq = "daily";
         priority = "1.0";
-      } else if (cleanedRoute === "/visita/" || cleanedRoute === "/fe/") {
+      } else if (cleanedRoute === "/visita/" || cleanedRoute === "/fe/" || cleanedRoute === "/landing/") {
         lastmod = todayIso;
         changefreq = "weekly";
         priority = "0.9";
