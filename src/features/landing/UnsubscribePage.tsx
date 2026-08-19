@@ -22,12 +22,11 @@ export default function UnsubscribePage() {
           <div className={styles.topBarInner}>
             <Link to="/" className={styles.brandLink} title="Página Inicial">
               <img
-                src="/images/logo/logo-ice-jardins.svg"
+                src="/images/logo-ice-jardins-01.webp"
                 alt="Logo ICE Jardins"
                 className={styles.churchLogo}
-                onError={(e) => {
-                  (e.target as HTMLElement).style.display = "none";
-                }}
+                width={120}
+                height={52}
               />
               <span>ICE Jardins</span>
             </Link>

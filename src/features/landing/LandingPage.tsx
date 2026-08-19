@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useState, useRef, useEffect, type FormEvent } from "react";
 import { Link } from "react-router";
 import { SeoHead } from "@/shared/components/SeoHead";
 import { getSiteConfig } from "@/content/repositories/contentRepository";
@@ -22,10 +22,15 @@ export default function LandingPage() {
   const [visitorType, setVisitorType] = useState<string>(VISITOR_TYPE_OPTIONS[0].value);
   const [phone, setPhone] = useState("");
   const [website, setWebsite] = useState(""); // Honeypot anti-spam
-  const [formLoadedAt, setFormLoadedAt] = useState<number>(() => Date.now()); // Time-check bot defense
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  // Time-check bot defense (populated client-side only to avoid SSR hydration mismatch)
+  const formLoadedAtRef = useRef<number>(0);
+  useEffect(() => {
+    formLoadedAtRef.current = Date.now();
+  }, []);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -61,7 +66,7 @@ export default function LandingPage() {
           visitorType: visitorType.trim(),
           phone: phone.trim(),
           website: website.trim(),
-          formLoadedAt
+          formLoadedAt: formLoadedAtRef.current || Date.now()
         })
       });
 
@@ -91,7 +96,7 @@ export default function LandingPage() {
     setVisitorType(VISITOR_TYPE_OPTIONS[0].value);
     setPhone("");
     setWebsite("");
-    setFormLoadedAt(Date.now());
+    formLoadedAtRef.current = Date.now();
     setIsSuccess(false);
     setErrorMessage(null);
   };
@@ -103,7 +108,7 @@ export default function LandingPage() {
     description:
       "Um guia prático e bíblico para lidar com a ansiedade, desacelerar a mente e encontrar descanso e paz verdadeira.",
     url: "https://icejardins.org.br/landing/",
-    image: "https://icejardins.org.br/images/quando-a-cabeca-nao-para-cover.png",
+    image: "https://icejardins.org.br/images/quando-a-cabeca-nao-para-cover.webp",
     encodingFormat: "application/pdf",
     inLanguage: "pt-BR",
     isAccessibleForFree: true,
@@ -126,7 +131,7 @@ export default function LandingPage() {
         title={`Quando a cabeça não para — Guia Gratuito | ${site.title}`}
         description="A ansiedade pode provocar insônia e uma sensação de pensamentos descontrolados. Baixe gratuitamente este guia com exercícios práticos e reflexões sobre a verdadeira paz."
         canonicalPath="/landing/"
-        image="/images/quando-a-cabeca-nao-para-cover.png"
+        image="/images/quando-a-cabeca-nao-para-cover.webp"
         jsonLd={resourceStructuredData}
         adsConversionSendTo={site.googleAdsConversionSendTo}
       />
@@ -137,12 +142,11 @@ export default function LandingPage() {
           <div className={styles.topBarInner}>
             <Link to="/" className={styles.brandLink} title="Voltar para a página inicial da ICE Jardins">
               <img
-                src="/images/logo/logo-ice-jardins.svg"
+                src="/images/logo-ice-jardins-01.webp"
                 alt="Logo ICE Jardins"
                 className={styles.churchLogo}
-                onError={(e) => {
-                  (e.target as HTMLElement).style.display = "none";
-                }}
+                width={120}
+                height={52}
               />
               <span>ICE Jardins</span>
             </Link>
