@@ -34,7 +34,7 @@ export default function UnsubscribePage() {
         </div>
       </header>
 
-      <main className={styles.contentContainer}>
+      <main id="main-content" className={styles.contentContainer}>
         <div className={styles.unsubscribeCard}>
           <div className={styles.iconWrap}>
             <i className="bi bi-envelope-x-fill" />
