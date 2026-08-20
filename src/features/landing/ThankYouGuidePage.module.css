@@ -310,7 +310,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background: #25d366;
+  background: #128c7e;
   color: #ffffff;
   text-decoration: none;
   font-weight: 700;
@@ -319,7 +319,7 @@
 }
 
 .btnWhatsapp:hover {
-  background: #1ebc57;
+  background: #075e54;
   color: #ffffff;
 }
 

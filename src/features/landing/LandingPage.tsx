@@ -159,8 +159,9 @@ export default function LandingPage() {
         </div>
       </header>
 
-      {/* HERO SECTION WITH FORM */}
-      <section className={styles.hero}>
+      <main id="main-content">
+        {/* HERO SECTION WITH FORM */}
+        <section className={styles.hero}>
         <div className="container">
           <div className="row align-items-center g-5">
             {/* Left Column: Copy & Value Proposition */}
@@ -527,6 +528,7 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+      </main>
 
       {/* FOOTER */}
       <footer className={styles.landingFooter}>

@@ -37,8 +37,9 @@ export default function ThankYouGuidePage() {
         </div>
       </header>
 
-      {/* HERO / DOWNLOAD SECTION */}
-      <section className={styles.heroSection}>
+      <main id="main-content">
+        {/* HERO / DOWNLOAD SECTION */}
+        <section className={styles.heroSection}>
         <div className="container">
           <div className={styles.successPill}>
             <i className="bi bi-check-lg" />
@@ -169,6 +170,7 @@ export default function ThankYouGuidePage() {
           </div>
         </div>
       </section>
+      </main>
 
       {/* FOOTER */}
       <footer className={styles.footer}>

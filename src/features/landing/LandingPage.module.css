@@ -613,8 +613,8 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.65rem 1.2rem;
-  background: #25d366;
-  border: 1.5px solid #25d366;
+  background: #128c7e;
+  border: 1.5px solid #128c7e;
   border-radius: 999px;
   color: #ffffff;
   font-weight: 700;
@@ -624,7 +624,8 @@
 }
 
 .churchBtnWhatsapp:hover {
-  background: #1ebc57;
+  background: #075e54;
+  border-color: #075e54;
   color: #ffffff;
 }
 
