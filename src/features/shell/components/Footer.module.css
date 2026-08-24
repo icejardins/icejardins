@@ -1,4 +1,4 @@
-﻿.footer {
+.footer {
   margin-top: 3rem;
   background-color: var(--secondary-background-color);
   border-top: 1px solid color-mix(in srgb, var(--secondary-text-color) 20%, transparent);
@@ -25,6 +25,31 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+}
+
+.resourceImageWrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #e2f0f1 0%, #d4e8ea 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.resourceImage {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(18, 56, 58, 0.15);
+}
+
+:global([data-theme="dark"]) .resourceImageWrap {
+  background: linear-gradient(135deg, #142022 0%, #1c272a 100%);
 }
 
 .postBody {

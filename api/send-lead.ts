@@ -200,8 +200,25 @@ export default async function handler(req: any, res: any) {
       });
     }
 
-    const body: LeadData = typeof req.body === "string" ? JSON.parse(req.body) : req.body || {};
-    const { name, email, visitorType, phone, website, formLoadedAt } = body;
+    const body = (typeof req.body === "string" ? JSON.parse(req.body) : req.body || {}) as LeadData & {
+      resourceTitle?: string;
+      resourceSlug?: string;
+      resourceSubtitle?: string;
+      resourceDescription?: string;
+      resourcePdfUrl?: string;
+    };
+    const {
+      name,
+      email,
+      visitorType,
+      phone,
+      website,
+      formLoadedAt,
+      resourceTitle,
+      resourceSlug,
+      resourceSubtitle,
+      resourceDescription
+    } = body;
 
     // 2. Honeypot anti-spam protection: if the hidden website field is filled, silently return success
     if (website && website.trim().length > 0) {
@@ -243,8 +260,12 @@ export default async function handler(req: any, res: any) {
     }
 
     const cleanName = name.trim();
-    const cleanVisitorType = (visitorType || "Visitante").trim();
+    const cleanVisitorType = visitorType?.trim() || null;
     const cleanPhone = phone?.trim() || "Não informado";
+    const cleanResourceTitle = resourceTitle?.trim() || "Quando a cabeça não para";
+    const cleanResourceSlug = resourceSlug?.trim() || "quando-a-cabeca-nao-para";
+    const cleanResourceSubtitle = resourceSubtitle?.trim() || "";
+    const cleanResourceDescription = resourceDescription?.trim() || "";
     const timestamp = new Date().toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" });
 
     const { clientEmail, privateKey } = getServiceAccountCredentials();
@@ -268,7 +289,7 @@ export default async function handler(req: any, res: any) {
         {
           hasClientEmail: !!clientEmail,
           hasPrivateKey: !!privateKey,
-          data: { cleanName, cleanEmail, cleanVisitorType, cleanPhone, timestamp, clientIp }
+          data: { cleanName, cleanEmail, cleanVisitorType, cleanPhone, cleanResourceTitle, timestamp, clientIp }
         }
       );
 
@@ -278,7 +299,7 @@ export default async function handler(req: any, res: any) {
         mock: true,
         message:
           "Lead recebido com sucesso (Ambiente sem credenciais do Google configuradas).",
-        data: { name: cleanName, email: cleanEmail }
+        data: { name: cleanName, email: cleanEmail, resourceTitle: cleanResourceTitle }
       });
     }
 
@@ -295,16 +316,22 @@ export default async function handler(req: any, res: any) {
     const gmail = google.gmail({ version: "v1", auth: jwtClient });
 
     // 1. Email notification to Church Staff / Leadership
-    const churchSubject = `Novo Visitante Landing Page: ${cleanName} (${cleanVisitorType})`;
+    const churchSubject = cleanVisitorType
+      ? `Novo Lead de Recurso (${cleanResourceTitle}): ${cleanName} (${cleanVisitorType})`
+      : `Novo Lead de Recurso (${cleanResourceTitle}): ${cleanName}`;
     const churchHtml = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #12383A; line-height: 1.6;">
         <div style="background: #145F63; padding: 24px; border-radius: 8px 8px 0 0; text-align: center;">
-          <h2 style="color: #ffffff; margin: 0; font-size: 20px;">ICE Jardins — Novo Lead de Visitante</h2>
+          <h2 style="color: #ffffff; margin: 0; font-size: 20px;">ICE Jardins — Novo Lead de Recurso</h2>
         </div>
         <div style="background: #F4F8F8; padding: 24px; border-radius: 0 0 8px 8px; border: 1px solid #E2F0F1; border-top: none;">
-          <p style="font-size: 16px; margin-top: 0;">Um visitante solicitou o guia <strong>"Quando a cabeça não para"</strong> através da Landing Page:</p>
+          <p style="font-size: 16px; margin-top: 0;">Um visitante solicitou o material <strong>"${cleanResourceTitle}"</strong> através do site:</p>
           
           <table style="width: 100%; border-collapse: collapse; margin: 20px 0; background: #ffffff; border-radius: 6px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+            <tr>
+              <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; font-weight: bold; width: 35%; color: #4D6B6D;">Recurso:</td>
+              <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #12383A; font-weight: 600;">${cleanResourceTitle}</td>
+            </tr>
             <tr>
               <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; font-weight: bold; width: 35%; color: #4D6B6D;">Nome:</td>
               <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #12383A; font-weight: 600;">${cleanName}</td>
@@ -313,10 +340,14 @@ export default async function handler(req: any, res: any) {
               <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; font-weight: bold; color: #4D6B6D;">E-mail:</td>
               <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #12383A;"><a href="mailto:${cleanEmail}" style="color: #145F63;">${cleanEmail}</a></td>
             </tr>
-            <tr>
+            ${
+              cleanVisitorType
+                ? `<tr>
               <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; font-weight: bold; color: #4D6B6D;">Perfil / Pessoa:</td>
               <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #12383A;"><strong>${cleanVisitorType}</strong></td>
-            </tr>
+            </tr>`
+                : ""
+            }
             <tr>
               <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; font-weight: bold; color: #4D6B6D;">WhatsApp / Telefone:</td>
               <td style="padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #12383A;">${cleanPhone}</td>
@@ -335,13 +366,12 @@ export default async function handler(req: any, res: any) {
     `;
 
     const churchText = `
-ICE Jardins — Novo Lead de Visitante
-Recurso: Quando a cabeça não para
+ICE Jardins — Novo Lead de Recurso
+Recurso: ${cleanResourceTitle}
 
 Nome: ${cleanName}
 E-mail: ${cleanEmail}
-Perfil / Pessoa: ${cleanVisitorType}
-WhatsApp / Telefone: ${cleanPhone}
+${cleanVisitorType ? `Perfil / Pessoa: ${cleanVisitorType}\n` : ""}WhatsApp / Telefone: ${cleanPhone}
 Data/Hora: ${timestamp}
     `.trim();
 
@@ -361,11 +391,15 @@ Data/Hora: ${timestamp}
 
     // 2. Email confirmation & resource guide to the visitor
     try {
-      const visitorSubject = "Aqui está o seu material: Quando a cabeça não para";
+      const visitorSubject = `Aqui está o seu material: ${cleanResourceTitle}`;
       const unsubscribeUrl = `https://icejardins.org.br/descadastro?email=${encodeURIComponent(cleanEmail)}`;
       const unsubscribeMailto = `mailto:${impersonatedUser}?subject=${encodeURIComponent(`Descadastro: ${cleanEmail}`)}`;
       const listUnsubscribeHeader = `<${unsubscribeUrl}>, <${unsubscribeMailto}>`;
-      const guidePageUrl = "https://icejardins.org.br/obrigado-guia";
+      const guidePageUrl = `https://icejardins.org.br/recursos/${cleanResourceSlug}/obrigado/`;
+
+      const fullResourceTitleDisplay = cleanResourceSubtitle
+        ? `${cleanResourceTitle}: ${cleanResourceSubtitle}`
+        : cleanResourceTitle;
 
       const visitorHtml = `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #12383A; line-height: 1.6;">
@@ -374,13 +408,13 @@ Data/Hora: ${timestamp}
             <p style="color: #E2F0F1; margin: 8px 0 0; font-size: 15px;">Aqui está o seu material.</p>
           </div>
           <div style="background: #ffffff; padding: 32px 24px; border-radius: 0 0 8px 8px; border: 1px solid #E2F0F1; border-top: none;">
-            <p style="font-size: 16px;">Ficamos muito felizes pelo seu contato. A ansiedade e o excesso de pensamentos são desafios reais, mas você não precisa passar por isso sozinho(a).</p>
+            <p style="font-size: 16px;">Ficamos muito felizes pelo seu contato. O material <strong>"${fullResourceTitleDisplay}"</strong> foi preparado com dedicação e base bíblica para enriquecer sua caminhada e vida espiritual.</p>
             
-            <p style="font-size: 16px;">O guia <strong>"Quando a cabeça não para: Um guia para encontrar calma num mundo agitado"</strong> foi preparado com ferramentas práticas e uma perspectiva de paz verdadeira.</p>
+            ${cleanResourceDescription ? `<p style="font-size: 15px; color: #4D6B6D; line-height: 1.6;">${cleanResourceDescription}</p>` : ""}
 
             <div style="text-align: center; margin: 32px 0;">
               <a href="${guidePageUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #145F63; color: #ffffff; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 4px 12px rgba(20,95,99,0.25);">
-                📖 Acessar e Baixar o Guia
+                📖 Acessar e Baixar: ${cleanResourceTitle}
               </a>
             </div>
 
@@ -399,7 +433,7 @@ Data/Hora: ${timestamp}
             </p>
 
             <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid #E2F0F1; font-size: 12px; color: #777; text-align: center; line-height: 1.5;">
-              Você recebeu este e-mail porque solicitou o guia em nosso site. Se não deseja mais receber nossos e-mails, <a href="${unsubscribeUrl}" style="color: #145F63; text-decoration: underline;">clique aqui para cancelar</a>.
+              Você recebeu este e-mail porque solicitou este material em nosso site. Se não deseja mais receber nossos e-mails, <a href="${unsubscribeUrl}" style="color: #145F63; text-decoration: underline;">clique aqui para cancelar</a>.
             </div>
           </div>
         </div>
@@ -408,9 +442,9 @@ Data/Hora: ${timestamp}
       const visitorText = `
 Olá, ${cleanName}!
 
-Aqui está o seu material: "Quando a cabeça não para: Um guia para encontrar calma num mundo agitado".
+Aqui está o seu material: "${fullResourceTitleDisplay}".
 
-Você pode acessar a página do guia e fazer o download no link abaixo:
+Você pode acessar a página do material e fazer o download no link abaixo:
 ${guidePageUrl}
 
 Venha nos fazer uma visita!
@@ -421,7 +455,7 @@ Igreja Cristã Evangélica Jardins
 https://icejardins.org.br
 
 ---
-Você recebeu este e-mail porque solicitou o guia em nosso site. Se não deseja mais receber nossos e-mails, clique aqui para cancelar: ${unsubscribeUrl}
+Você recebeu este e-mail porque solicitou este material em nosso site. Se não deseja mais receber nossos e-mails, clique aqui para cancelar: ${unsubscribeUrl}
       `.trim();
 
       const rawVisitorEmail = createRawEmail({

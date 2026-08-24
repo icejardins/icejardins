@@ -26,6 +26,11 @@
       "name": "Sermões",
       "url": "/posts/",
       "weight": 5
+    },
+    {
+      "name": "Recursos",
+      "url": "/recursos/",
+      "weight": 6
     }
   ],
   "navbar": {
@@ -44,6 +49,10 @@
   "blog": {
     "title": "Sermões",
     "description": "Nossos sermões e postagens mais recentes."
+  },
+  "resources": {
+    "title": "Recursos",
+    "description": "Guias, e-books e materiais gratuitos para fortalecer sua fé."
   },
   "theme": {
     "textColor": "#12383A",

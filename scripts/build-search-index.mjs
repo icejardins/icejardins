@@ -1,4 +1,4 @@
-﻿import fs from "node:fs/promises";
+import fs from "node:fs/promises";
 import path from "node:path";
 
 const rootDir = process.cwd();
@@ -15,13 +15,15 @@ function stripHtml(input) {
 }
 
 async function main() {
-  const [pagesRaw, postsRaw] = await Promise.all([
+  const [pagesRaw, postsRaw, resourcesRaw] = await Promise.all([
     fs.readFile(path.join(generatedDir, "pages.json"), "utf8"),
-    fs.readFile(path.join(generatedDir, "posts.json"), "utf8")
+    fs.readFile(path.join(generatedDir, "posts.json"), "utf8"),
+    fs.readFile(path.join(generatedDir, "resources.json"), "utf8").catch(() => "[]")
   ]);
 
   const pages = JSON.parse(pagesRaw.replace(/^\uFEFF/, ""));
   const posts = JSON.parse(postsRaw.replace(/^\uFEFF/, ""));
+  const resources = JSON.parse(resourcesRaw.replace(/^\uFEFF/, ""));
 
   const docs = [
     ...pages.map((page) => ({
@@ -37,6 +39,13 @@ async function main() {
       content: stripHtml(post.bodyHtml),
       image: post.image,
       permalink: post.route
+    })),
+    ...resources.map((resource) => ({
+      title: resource.title,
+      description: resource.description,
+      content: stripHtml(resource.bodyHtml),
+      image: resource.image,
+      permalink: resource.route
     }))
   ];
 

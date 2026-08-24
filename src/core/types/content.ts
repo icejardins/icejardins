@@ -40,6 +40,10 @@ export type SiteConfig = {
     title: string;
     description: string;
   };
+  resources?: {
+    title: string;
+    description: string;
+  };
   theme: ThemeTokens;
 };
 
@@ -47,6 +51,41 @@ export type TocHeading = {
   depth: number;
   text: string;
   id: string;
+};
+
+export type ResourceFeature = {
+  number?: string;
+  title: string;
+  description: string;
+};
+
+export type ResourceTestimonial = {
+  quote: string;
+  author: string;
+};
+
+export type Resource = {
+  slug: string;
+  route: string;
+  title: string;
+  subtitle: string | null;
+  description: string;
+  date: string | null;
+  image: string | null;
+  pdfUrl: string | null;
+  badge: string | null;
+  format: string | null;
+  category: string | null;
+  tags: string[];
+  actionType: "lead-form" | "direct-download" | "article";
+  features: ResourceFeature[];
+  testimonial: ResourceTestimonial | null;
+  readingTime: number;
+  summary: string;
+  bodyHtml: string;
+  toc: TocHeading[];
+  plainText: string;
+  sourcePath: string;
 };
 
 export type PageContent = {

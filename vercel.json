@@ -36,6 +36,16 @@
   ],
   "redirects": [
     {
+      "source": "/landing/",
+      "destination": "/recursos/",
+      "permanent": true
+    },
+    {
+      "source": "/landing",
+      "destination": "/recursos/",
+      "permanent": true
+    },
+    {
       "source": "/2026/04/joel-1-a-chegada-do-dia-do-senhor/",
       "destination": "/posts/joel-1-a-chegada-do-dia-do-senhor/",
       "permanent": true

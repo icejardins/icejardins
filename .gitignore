@@ -1,4 +1,4 @@
-﻿# Build and Release Folders
+# Build and Release Folders
 bin/
 bin-debug/
 bin-release/
@@ -57,6 +57,7 @@ dist
 dist-ssr
 
 # Generated static artifacts
+src/content/generated/
 static/search-index.json
 static/sitemap.xml
 static/robots.txt

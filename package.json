@@ -12,7 +12,8 @@
     "prerender": "node scripts/prerender.mjs",
     "build": "npm run build:content && npm run build:search-index && npm run build:client && npm run build:ssr && npm run prerender",
     "preview": "vite preview",
-    "check": "tsc --noEmit"
+    "check": "tsc --noEmit",
+    "postinstall": "npm run build:content"
   },
   "dependencies": {
     "bootstrap": "^5.3.8",

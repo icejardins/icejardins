@@ -253,12 +253,22 @@ async function main() {
 
   const pageFiles = (await getMarkdownFiles(contentDir)).filter((filePath) => {
     const relativePath = toPosixPath(path.relative(contentDir, filePath));
-    return !relativePath.startsWith("posts/");
+    return !relativePath.startsWith("posts/") && !relativePath.startsWith("recursos/");
   });
 
   const postFiles = (await getMarkdownFiles(path.join(contentDir, "posts"))).filter(
     (filePath) => path.basename(filePath) !== "_index.md"
   );
+
+  let resourceFiles = [];
+  const recursosDir = path.join(contentDir, "recursos");
+  try {
+    resourceFiles = (await getMarkdownFiles(recursosDir)).filter(
+      (filePath) => path.basename(filePath) !== "_index.md"
+    );
+  } catch {
+    resourceFiles = [];
+  }
 
   const pages = [];
   for (const filePath of pageFiles) {
@@ -344,9 +354,69 @@ async function main() {
     return right.date.localeCompare(left.date);
   });
 
+  const resources = [];
+  for (const filePath of resourceFiles) {
+    const relativePath = toPosixPath(path.relative(recursosDir, filePath));
+    const slug = relativePath.replace(/\.md$/, "");
+    const fileContent = await fs.readFile(filePath, "utf8");
+    const parsed = parseFrontmatter(fileContent);
+    const { html, toc } = await markdownToHtmlAndToc(parsed.content);
+    const plainText = stripHtml(html);
+
+    const tags = ensureArray(parsed.data.tags);
+    const readingTime = estimateReadingTime(plainText);
+
+    resources.push({
+      slug,
+      route: normalizeRoute(`/recursos/${slug}/`),
+      title: String(parsed.data.title ?? slug),
+      subtitle: parsed.data.subtitle ? String(parsed.data.subtitle) : null,
+      description: String(parsed.data.description ?? buildSummary(plainText)),
+      date: toIsoDate(parsed.data.date),
+      image: parsed.data.image ? String(parsed.data.image) : null,
+      pdfUrl: parsed.data.pdfUrl ? String(parsed.data.pdfUrl) : null,
+      badge: parsed.data.badge ? String(parsed.data.badge) : null,
+      format: parsed.data.format ? String(parsed.data.format) : "Digital (PDF)",
+      category: parsed.data.category ? String(parsed.data.category) : "E-book & Guia",
+      tags,
+      actionType: parsed.data.actionType || (parsed.data.pdfUrl ? "lead-form" : "article"),
+      features: Array.isArray(parsed.data.features) ? parsed.data.features : [],
+      testimonial: parsed.data.testimonial && typeof parsed.data.testimonial === "object" ? parsed.data.testimonial : null,
+      readingTime,
+      summary: String(parsed.data.description ?? buildSummary(plainText)),
+      bodyHtml: html,
+      toc,
+      plainText,
+      sourcePath: `recursos/${relativePath}`
+    });
+  }
+
+  resources.sort((left, right) => {
+    if (!left.date && !right.date) {
+      return left.slug.localeCompare(right.slug);
+    }
+
+    if (!left.date) {
+      return 1;
+    }
+
+    if (!right.date) {
+      return -1;
+    }
+
+    return right.date.localeCompare(left.date);
+  });
+
   const postsIndexPath = path.join(contentDir, "posts", "_index.md");
   const postsIndexRaw = await fs.readFile(postsIndexPath, "utf8");
   const postsIndex = parseFrontmatter(postsIndexRaw);
+
+  let recursosIndex = { data: {} };
+  try {
+    const recursosIndexPath = path.join(contentDir, "recursos", "_index.md");
+    const recursosIndexRaw = await fs.readFile(recursosIndexPath, "utf8");
+    recursosIndex = parseFrontmatter(recursosIndexRaw);
+  } catch {}
 
   const siteConfig = {
     ...siteConfigData,
@@ -354,6 +424,10 @@ async function main() {
     blog: {
       title: String(postsIndex.data.title ?? siteConfigData.blog?.title ?? "Sermões"),
       description: String(postsIndex.data.description ?? siteConfigData.blog?.description ?? "Sermões e publicações recentes")
+    },
+    resources: {
+      title: String(recursosIndex.data.title ?? siteConfigData.resources?.title ?? "Recursos"),
+      description: String(recursosIndex.data.description ?? siteConfigData.resources?.description ?? "Guias, e-books e materiais gratuitos para fortalecer sua fé")
     }
   };
 
@@ -364,7 +438,7 @@ async function main() {
     )
   };
 
-  const routes = new Set(["/", "/posts/", "/landing/", "/obrigado-guia/", "/descadastro/"]);
+  const routes = new Set(["/", "/posts/", "/recursos/", "/obrigado-guia/", "/descadastro/"]);
 
   for (const page of pages) {
     routes.add(normalizeRoute(page.route));
@@ -372,6 +446,11 @@ async function main() {
 
   for (const post of posts) {
     routes.add(normalizeRoute(post.route));
+  }
+
+  for (const resource of resources) {
+    routes.add(normalizeRoute(resource.route));
+    routes.add(normalizeRoute(`/recursos/${resource.slug}/obrigado/`));
   }
 
   for (const tag of taxonomies.tags) {
@@ -415,7 +494,7 @@ async function main() {
         lastmod = latestPostDate;
         changefreq = "daily";
         priority = "1.0";
-      } else if (cleanedRoute === "/visita/" || cleanedRoute === "/fe/" || cleanedRoute === "/landing/") {
+      } else if (cleanedRoute === "/visita/" || cleanedRoute === "/fe/" || cleanedRoute === "/recursos/" || cleanedRoute.startsWith("/recursos/")) {
         lastmod = todayIso;
         changefreq = "weekly";
         priority = "0.9";
@@ -469,6 +548,11 @@ async function main() {
     "utf8"
   );
   await fs.writeFile(
+    path.join(generatedDir, "resources.json"),
+    `${JSON.stringify(resources, null, 2)}\n`,
+    "utf8"
+  );
+  await fs.writeFile(
     path.join(generatedDir, "taxonomies.json"),
     `${JSON.stringify(taxonomies, null, 2)}\n`,
     "utf8"
@@ -479,7 +563,7 @@ async function main() {
     "utf8"
   );
 
-  console.log(`Generated ${pages.length} pages, ${posts.length} posts, ${sortedRoutes.length} routes.`);
+  console.log(`Generated ${pages.length} pages, ${posts.length} posts, ${resources.length} resources, ${sortedRoutes.length} routes.`);
 }
 
 main().catch((error) => {
