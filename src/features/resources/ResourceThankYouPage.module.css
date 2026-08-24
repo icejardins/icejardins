@@ -1,0 +1,397 @@
+.pageWrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.topBar {
+  background: #145f63;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.9rem 0;
+  color: #ffffff;
+}
+
+.topBarInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brandLink {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+}
+
+.brandLink:hover {
+  color: #e2f0f1;
+}
+
+.churchLogo {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+
+.topBarBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+}
+
+.heroSection {
+  background: linear-gradient(145deg, #145f63 0%, #0e4447 100%);
+  color: #ffffff;
+  padding: 4.5rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.heroSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 30%, rgba(20, 95, 99, 0.4), transparent 70%);
+  pointer-events: none;
+}
+
+.successPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.heroTitle {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.heroSubtitle {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+.mainDownloadBox {
+  max-width: 540px;
+  margin: 0 auto;
+  background: #ffffff;
+  color: #12383a;
+  border-radius: 1.5rem;
+  padding: 2.2rem 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.downloadButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  height: 56px;
+  background: #145f63;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.85rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  box-shadow: 0 6px 20px rgba(20, 95, 99, 0.35);
+  transition: all 0.2s ease-in-out;
+}
+
+.downloadButton:hover {
+  background: #0e4447;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(20, 95, 99, 0.45);
+}
+
+.downloadMeta {
+  font-size: 0.82rem;
+  color: #557274;
+  margin-top: 0.85rem;
+  margin-bottom: 0;
+}
+
+/* CONTENT SECTION */
+.contentSection {
+  padding: 5rem 0;
+  background-color: var(--background-color);
+}
+
+.coverCard {
+  background: #e2f0f1;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  border: 1px solid rgba(20, 95, 99, 0.12);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coverImage {
+  max-width: 100%;
+  max-height: 340px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(18, 56, 58, 0.2);
+  margin: 0 auto;
+}
+
+.stepsCard {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2.2rem 2rem;
+  border: 1px solid rgba(20, 95, 99, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.stepsCard h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #12383a;
+  margin-bottom: 1.5rem;
+}
+
+.stepList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stepItem {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.stepNumber {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: #e2f0f1;
+  color: #145f63;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.stepText h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #12383a;
+}
+
+.stepText p {
+  font-size: 0.9rem;
+  color: #557274;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* INVITATION SECTION */
+.invitationSection {
+  padding: 4.5rem 0;
+  background: #e7f8f8;
+  border-top: 1px solid rgba(20, 95, 99, 0.1);
+}
+
+.invitationCard {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.invitationCard h2 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 800;
+  color: #12383a;
+  margin-bottom: 1rem;
+}
+
+.invitationCard p {
+  font-size: 1.05rem;
+  color: #4d6b6d;
+  max-width: 620px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.scheduleGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 500px;
+  margin: 0 auto 2.5rem;
+}
+
+.scheduleItem {
+  background: #f4f8f8;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #12383a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(20, 95, 99, 0.08);
+}
+
+.actionButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #145f63;
+  color: #ffffff;
+  padding: 0.85rem 1.8rem;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.btnPrimary:hover {
+  background: #0e4447;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btnWhatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #25d366;
+  color: #ffffff;
+  padding: 0.85rem 1.8rem;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.btnWhatsapp:hover {
+  opacity: 0.9;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* FOOTER */
+.footer {
+  background: #12383a;
+  color: #e2f0f1;
+  padding: 2.5rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: auto;
+}
+
+.footer a {
+  color: #def7ec;
+  text-decoration: none;
+  margin: 0 0.35rem;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footerUnsubscribe {
+  font-size: 0.78rem;
+  color: #8da4a6;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+:global([data-theme="dark"]) .pageWrapper {
+  background-color: #121a1c;
+}
+
+:global([data-theme="dark"]) .stepsCard,
+:global([data-theme="dark"]) .invitationCard,
+:global([data-theme="dark"]) .mainDownloadBox {
+  background: #1c272a;
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #f4f8f8;
+}
+
+:global([data-theme="dark"]) .stepsCard h2,
+:global([data-theme="dark"]) .invitationCard h2,
+:global([data-theme="dark"]) .stepText h3 {
+  color: #f4f8f8;
+}
+
+:global([data-theme="dark"]) .coverCard {
+  background: #182326;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+:global([data-theme="dark"]) .scheduleItem {
+  background: #142022;
+  color: #e2f0f1;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+:global([data-theme="dark"]) .invitationSection {
+  background: #142022;
+  border-top-color: rgba(255, 255, 255, 0.08);
+}

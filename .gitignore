@@ -17,9 +17,6 @@ bin-release/
 *.ipa
 *.apk
 
-# Hugo
-public/
-resources/
 # Backup Files
 *.markdown~
 *.md~

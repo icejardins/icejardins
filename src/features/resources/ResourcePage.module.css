@@ -1,0 +1,730 @@
+.wrapper {
+  background-color: #f4f8f8;
+  color: #12383a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TOP BAR */
+.topBar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2f0f1;
+  padding: 14px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.topBarInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brandLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #145f63;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.churchLogo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.topBarNav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.allResourcesLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #145f63;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.allResourcesLink:hover {
+  background-color: #e2f0f1;
+  color: #0e4447;
+}
+
+.topBarBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #145f63;
+  background-color: #e2f0f1;
+  padding: 6px 12px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* HERO SECTION */
+.hero {
+  padding: 60px 0 70px;
+  background: linear-gradient(180deg, #ffffff 0%, #f4f8f8 100%);
+  border-bottom: 1px solid #e2f0f1;
+}
+
+.categoryPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #e2f0f1;
+  color: #145f63;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+.pulseDot {
+  width: 8px;
+  height: 8px;
+  background-color: #25d366;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.heroTitle {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #12383a;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.heroSubtitle {
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  font-weight: 600;
+  color: #145f63;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.heroLead {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: #4d6b6d;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.trustBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #e2f0f1;
+}
+
+.trustBadgeItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #12383a;
+}
+
+.trustBadgeItem i {
+  color: #145f63;
+  font-size: 1.1rem;
+}
+
+/* FORM CARD */
+.formCard {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 36px 32px;
+  box-shadow: 0 12px 40px rgba(18, 56, 58, 0.08);
+  border: 1px solid #e2f0f1;
+  position: relative;
+}
+
+.formHeader {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.formTitle {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #12383a;
+  margin-bottom: 8px;
+}
+
+.formSubtitle {
+  font-size: 0.92rem;
+  color: #4d6b6d;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.formGroup {
+  margin-bottom: 16px;
+}
+
+.label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #12383a;
+  margin-bottom: 6px;
+}
+
+.labelOptional {
+  font-weight: normal;
+  color: #6b8587;
+  font-size: 0.82rem;
+}
+
+.input,
+.select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #c8dedf;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #12383a;
+  background-color: #ffffff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.input:focus,
+.select:focus {
+  outline: none;
+  border-color: #145f63;
+  box-shadow: 0 0 0 3px rgba(20, 95, 99, 0.15);
+}
+
+.honeypotField {
+  display: none !important;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  z-index: -1;
+}
+
+.submitButton {
+  width: 100%;
+  background: linear-gradient(135deg, #145f63 0%, #0e4447 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 20px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+  margin-top: 20px;
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(20, 95, 99, 0.3);
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.privacyNote {
+  font-size: 0.78rem;
+  color: #6b8587;
+  text-align: center;
+  margin-top: 14px;
+  margin-bottom: 0;
+}
+
+.errorAlert {
+  background-color: #fde8e8;
+  color: #c81e1e;
+  border: 1px solid #f8b4b4;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 0.88rem;
+  margin-bottom: 16px;
+}
+
+/* SUCCESS CARD */
+.successCard {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.successIconWrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #def7ec;
+  color: #0e9f6e;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.successTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #12383a;
+  margin-bottom: 8px;
+}
+
+.successText {
+  font-size: 0.95rem;
+  color: #4d6b6d;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.downloadCtaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #25d366;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.05rem;
+  padding: 14px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.downloadCtaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+  color: #ffffff;
+}
+
+.resetButton {
+  background: none;
+  border: none;
+  color: #145f63;
+  font-size: 0.85rem;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 18px;
+}
+
+/* DETAILS & FEATURES */
+.detailsSection {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.sectionHeader {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.sectionCategory {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #145f63;
+  margin-bottom: 8px;
+}
+
+.sectionHeader h2 {
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  font-weight: 800;
+  color: #12383a;
+  margin-bottom: 14px;
+}
+
+.sectionHeader p {
+  font-size: 1.05rem;
+  color: #4d6b6d;
+  line-height: 1.6;
+}
+
+.bookCoverCard {
+  background: linear-gradient(145deg, #e2f0f1 0%, #f4f8f8 100%);
+  border-radius: 20px;
+  padding: 36px 24px;
+  text-align: center;
+  border: 1px solid #c8dedf;
+  box-shadow: 0 8px 30px rgba(18, 56, 58, 0.05);
+}
+
+.coverImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(18, 56, 58, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.bookCoverCard:hover .coverImage {
+  transform: translateY(-4px);
+}
+
+.coverBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #12383a;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.featureCard {
+  background-color: #f4f8f8;
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid #e2f0f1;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.featureCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(18, 56, 58, 0.06);
+}
+
+.featureNumber {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #145f63;
+  opacity: 0.3;
+  margin-bottom: 4px;
+}
+
+.featureCard h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #12383a;
+  margin-bottom: 8px;
+}
+
+.featureCard p {
+  font-size: 0.95rem;
+  color: #4d6b6d;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* MARKDOWN CONTENT BODY */
+.contentBodySection {
+  padding: 50px 0;
+  background-color: #f8fbfb;
+  border-top: 1px solid #e2f0f1;
+}
+
+.contentBodyCard {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 36px 40px;
+  border: 1px solid #e2f0f1;
+  max-width: 860px;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(18, 56, 58, 0.04);
+}
+
+.contentBodyCard h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #12383a;
+  margin-top: 20px;
+  margin-bottom: 14px;
+}
+
+.contentBodyCard p,
+.contentBodyCard ul {
+  font-size: 1.05rem;
+  color: #4d6b6d;
+  line-height: 1.7;
+}
+
+/* TESTIMONIAL */
+.testimonialSection {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #145f63 0%, #0e4447 100%);
+  color: #ffffff;
+}
+
+.testimonialCard {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonialQuoteIcon {
+  font-size: 3.5rem;
+  line-height: 1;
+  opacity: 0.35;
+  margin-bottom: -10px;
+}
+
+.testimonialQuote {
+  font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.testimonialAuthor {
+  font-size: 1rem;
+  font-weight: 700;
+  opacity: 0.85;
+  letter-spacing: 0.02em;
+}
+
+/* CHURCH INFO */
+.churchSection {
+  padding: 70px 0;
+  background-color: #ffffff;
+  border-top: 1px solid #e2f0f1;
+}
+
+.churchInfoCard {
+  background-color: #f4f8f8;
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid #e2f0f1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.churchInfoCard h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #12383a;
+  margin-bottom: 14px;
+}
+
+.locationDetail {
+  font-size: 0.95rem;
+  color: #4d6b6d;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.scheduleList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.scheduleItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px dashed #c8dedf;
+  font-size: 0.95rem;
+  color: #12383a;
+}
+
+.scheduleItem:last-child {
+  border-bottom: none;
+}
+
+.scheduleBadge {
+  background-color: #145f63;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.78rem;
+  padding: 3px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.churchActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.churchBtnOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  border: 1.5px solid #145f63;
+  color: #145f63;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.churchBtnOutline:hover {
+  background-color: #145f63;
+  color: #ffffff;
+}
+
+.churchBtnWhatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #25d366;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.churchBtnWhatsapp:hover {
+  opacity: 0.9;
+  color: #ffffff;
+}
+
+/* FOOTER */
+.resourceFooter {
+  background-color: #12383a;
+  color: #e2f0f1;
+  padding: 32px 0;
+  text-align: center;
+  font-size: 0.88rem;
+  margin-top: auto;
+}
+
+.resourceFooter a {
+  color: #def7ec;
+  text-decoration: none;
+  margin: 0 6px;
+}
+
+.resourceFooter a:hover {
+  text-decoration: underline;
+}
+
+:global([data-theme="dark"]) .wrapper {
+  background-color: #121a1c;
+  color: #f4f8f8;
+}
+
+:global([data-theme="dark"]) .topBar {
+  background-color: #182326;
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+:global([data-theme="dark"]) .hero {
+  background: linear-gradient(180deg, #182326 0%, #121a1c 100%);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+:global([data-theme="dark"]) .heroTitle {
+  color: #f4f8f8;
+}
+
+:global([data-theme="dark"]) .heroSubtitle {
+  color: #def7ec;
+}
+
+:global([data-theme="dark"]) .heroLead {
+  color: #9ab4b6;
+}
+
+:global([data-theme="dark"]) .formCard {
+  background-color: #1c272a;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+:global([data-theme="dark"]) .formTitle {
+  color: #f4f8f8;
+}
+
+:global([data-theme="dark"]) .label {
+  color: #e2f0f1;
+}
+
+:global([data-theme="dark"]) .input,
+:global([data-theme="dark"]) .select {
+  background-color: #142022;
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #f4f8f8;
+}
+
+:global([data-theme="dark"]) .detailsSection,
+:global([data-theme="dark"]) .churchSection {
+  background-color: #121a1c;
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+:global([data-theme="dark"]) .sectionHeader h2 {
+  color: #f4f8f8;
+}
+
+:global([data-theme="dark"]) .featureCard,
+:global([data-theme="dark"]) .bookCoverCard,
+:global([data-theme="dark"]) .churchInfoCard,
+:global([data-theme="dark"]) .contentBodyCard {
+  background-color: #1c272a;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+:global([data-theme="dark"]) .featureCard h3,
+:global([data-theme="dark"]) .churchInfoCard h3,
+:global([data-theme="dark"]) .contentBodyCard h2 {
+  color: #f4f8f8;
+}

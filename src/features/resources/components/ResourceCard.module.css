@@ -1,0 +1,223 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(20, 95, 99, 0.12);
+  box-shadow: 0 4px 20px rgba(18, 56, 58, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(18, 56, 58, 0.12);
+  border-color: rgba(20, 95, 99, 0.28);
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  background: linear-gradient(145deg, #e2f0f1 0%, #d8ecee 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 24px;
+  overflow: hidden;
+}
+
+.image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(18, 56, 58, 0.15);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover .image {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 10px 24px rgba(18, 56, 58, 0.22);
+}
+
+.badgeOverlay {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(20, 95, 99, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 5px 12px;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.formatBadge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #145f63;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 24px;
+}
+
+.categoryRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.categoryTag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #145f63;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 8px;
+  color: #12383a;
+}
+
+.title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.title a:hover {
+  color: #145f63;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #4d6b6d;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #557274;
+  line-height: 1.55;
+  margin-bottom: 18px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tagsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+  margin-top: auto;
+}
+
+.tagPill {
+  display: inline-block;
+  background: #f4f8f8;
+  color: #4d6b6d;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(20, 95, 99, 0.08);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid rgba(20, 95, 99, 0.08);
+  margin-top: auto;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #145f63;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 9px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: 100%;
+  justify-content: center;
+}
+
+.ctaButton:hover {
+  background: #0e4447;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(20, 95, 99, 0.25);
+}
+
+:global([data-theme="dark"]) .card {
+  background: #1c272a;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+:global([data-theme="dark"]) .title {
+  color: #e2f0f1;
+}
+
+:global([data-theme="dark"]) .subtitle {
+  color: #9ab4b6;
+}
+
+:global([data-theme="dark"]) .description {
+  color: #8da4a6;
+}
+
+:global([data-theme="dark"]) .tagPill {
+  background: #142022;
+  color: #9ab4b6;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+:global([data-theme="dark"]) .footer {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
