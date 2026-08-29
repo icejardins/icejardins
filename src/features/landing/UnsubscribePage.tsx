@@ -20,15 +20,19 @@ export default function UnsubscribePage() {
       <header className={styles.topBar}>
         <div className="container">
           <div className={styles.topBarInner}>
-            <Link to="/" className={styles.brandLink} title="Página Inicial">
+            <Link
+              to="/"
+              className={styles.brandLink}
+              title="Página Inicial"
+              aria-label="Página inicial da ICE Jardins"
+            >
               <img
                 src="/images/logo-ice-jardins-01.webp"
-                alt="Logo ICE Jardins"
+                alt="ICE Jardins"
                 className={styles.churchLogo}
                 width={120}
                 height={52}
               />
-              <span>ICE Jardins</span>
             </Link>
           </div>
         </div>
