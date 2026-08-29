@@ -504,7 +504,7 @@ export default function ResourcePage() {
                     famílias.
                   </p>
 
-                  <h4 className="h6 fw-bold text-uppercase tracking-wider mb-3 text-secondary">
+                  <h4 className={styles.scheduleHeading}>
                     Nossos Encontros Semanais:
                   </h4>
 
