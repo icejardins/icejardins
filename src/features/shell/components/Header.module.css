@@ -20,9 +20,9 @@
 }
 
 .brandLogo {
-  width: clamp(104px, 16vw, 190px);
+  width: clamp(104px, 16vw, 180px);
   height: auto;
-  aspect-ratio: 240 / 103;
+  aspect-ratio: 180 / 77;
   display: block;
 }
 
