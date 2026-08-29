@@ -121,7 +121,9 @@ export default defineConfig({
   },
   build: {
     sourcemap: "hidden",
-    modulePreload: false,
+    modulePreload: {
+      polyfill: false
+    },
     chunkSizeWarningLimit: 800,
     rollupOptions: {
       output: {

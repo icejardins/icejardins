@@ -52,14 +52,6 @@ async function main() {
     }
   }
 
-  // Convert static script module tags to dynamic post-render imports to completely clear initial critical request chain
-  const scriptSrcMatch = template.match(/<script type="module"[^>]*src="([^"]+)"[^>]*><\/script>/);
-  if (scriptSrcMatch) {
-    const scriptSrc = scriptSrcMatch[1];
-    template = template.replace(scriptSrcMatch[0], "");
-    const dynamicScriptLoader = `<script type="module">window.addEventListener('DOMContentLoaded', () => import('${scriptSrc}'));</script>`;
-    template = template.replace("</body>", `${dynamicScriptLoader}\n</body>`);
-  }
 
   for (const route of uniqueRoutes) {
     const rendered = await render(route);
