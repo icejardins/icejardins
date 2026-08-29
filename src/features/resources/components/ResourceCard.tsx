@@ -20,6 +20,8 @@ export function ResourceCard({ resource, priority = false }: ResourceCardProps) 
           <img
             src={resource.image}
             alt={resource.title}
+            width={420}
+            height={315}
             className={styles.image}
             loading={priority ? "eager" : "lazy"}
             fetchPriority={priority ? "high" : undefined}

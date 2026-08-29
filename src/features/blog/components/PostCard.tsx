@@ -16,6 +16,8 @@ export function PostCard({ post, priority = false }: PostCardProps) {
           <img
             src={post.image}
             alt={post.title}
+            width={600}
+            height={338}
             loading={priority ? "eager" : "lazy"}
             fetchPriority={priority ? "high" : undefined}
             decoding="async"

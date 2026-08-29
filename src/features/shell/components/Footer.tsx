@@ -56,12 +56,22 @@ export function Footer() {
                         <img
                           src={item.image}
                           alt={item.title}
+                          width={370}
+                          height={480}
                           className={styles.resourceImage}
                           loading="lazy"
+                          decoding="async"
                         />
                       </div>
                     ) : (
-                      <img src={item.image} alt={item.title} loading="lazy" />
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        width={400}
+                        height={225}
+                        loading="lazy"
+                        decoding="async"
+                      />
                     )
                   ) : null}
                   <div className={styles.postBody}>
