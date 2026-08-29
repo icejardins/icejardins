@@ -120,19 +120,20 @@
   align-items: center;
   gap: 8px;
   background: #25d366;
-  color: #ffffff;
+  color: #0b2b1d;
   font-size: 1rem;
   font-weight: 700;
   padding: 12px 26px;
   border-radius: 999px;
   text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .helpBtn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
-  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  background: #20ba5a;
+  color: #0b2b1d;
 }
 
 :global([data-theme="dark"]) .header {

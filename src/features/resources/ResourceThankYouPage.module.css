@@ -319,19 +319,20 @@
 .btnWhatsapp {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  background: #25d366;
-  color: #ffffff;
-  padding: 0.85rem 1.8rem;
-  border-radius: 0.75rem;
-  text-decoration: none;
+  gap: 8px;
+  background-color: #25d366;
+  color: #0b2b1d;
   font-weight: 700;
-  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  padding: 12px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .btnWhatsapp:hover {
-  opacity: 0.9;
-  color: #ffffff;
+  background-color: #20ba5a;
+  color: #0b2b1d;
   transform: translateY(-2px);
 }
 

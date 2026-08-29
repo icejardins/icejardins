@@ -624,18 +624,18 @@
   align-items: center;
   gap: 6px;
   background-color: #25d366;
-  color: #ffffff;
+  color: #0b2b1d;
   font-weight: 700;
   font-size: 0.9rem;
   padding: 8px 16px;
   border-radius: 8px;
   text-decoration: none;
-  transition: opacity 0.2s;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .churchBtnWhatsapp:hover {
-  opacity: 0.9;
-  color: #ffffff;
+  background-color: #20ba5a;
+  color: #0b2b1d;
 }
 
 /* FOOTER */
