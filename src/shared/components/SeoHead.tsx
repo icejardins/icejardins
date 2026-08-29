@@ -10,6 +10,7 @@ type SeoHeadProps = {
   noindex?: boolean;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   adsConversionSendTo?: string;
+  preloadImage?: string | null;
 };
 
 function toAbsoluteUrl(value: string | null | undefined, baseUrl: string) {
@@ -165,7 +166,8 @@ export function SeoHead({
   canonicalPath,
   noindex = false,
   jsonLd,
-  adsConversionSendTo
+  adsConversionSendTo,
+  preloadImage
 }: SeoHeadProps) {
   const location = useLocation();
   const site = getSiteConfig();
@@ -221,6 +223,9 @@ export function SeoHead({
         title={`Feed RSS - ${site.title}`}
         href={`${site.baseUrl}/rss.xml`}
       />
+      {preloadImage ? (
+        <link rel="preload" as="image" href={preloadImage} />
+      ) : null}
       {allSchemas.map((schema, index) => (
         <script key={index} type="application/ld+json">
           {JSON.stringify(schema)}

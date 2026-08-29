@@ -38,6 +38,7 @@ export default function ResourceListPage() {
         title={`${pageTitle} | ${site.title}`}
         description={pageDescription}
         canonicalPath="/recursos/"
+        preloadImage={allResources[0]?.image || undefined}
       />
 
       <header className={styles.header}>
@@ -76,9 +77,9 @@ export default function ResourceListPage() {
 
         {filteredResources.length > 0 ? (
           <div className="row g-4 justify-content-center">
-            {filteredResources.map((resource) => (
+            {filteredResources.map((resource, index) => (
               <div key={resource.slug} className="col-lg-6 col-md-6 col-sm-12">
-                <ResourceCard resource={resource} />
+                <ResourceCard resource={resource} priority={index === 0} />
               </div>
             ))}
           </div>

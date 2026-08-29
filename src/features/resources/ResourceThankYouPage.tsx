@@ -65,6 +65,7 @@ export default function ResourceThankYouPage({ defaultSlug }: ResourceThankYouPa
         description={pageDescription}
         canonicalPath={canonicalPath}
         noindex={true}
+        preloadImage={resource.image || undefined}
       />
 
       {/* TOP BRAND BAR */}
@@ -142,7 +143,8 @@ export default function ResourceThankYouPage({ defaultSlug }: ResourceThankYouPa
                       width={320}
                       height={240}
                       className={styles.coverImage}
-                      loading="lazy"
+                      loading="eager"
+                      fetchPriority="high"
                       decoding="async"
                     />
                   </div>

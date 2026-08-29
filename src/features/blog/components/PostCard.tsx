@@ -5,14 +5,21 @@ import styles from "./PostCard.module.css";
 
 type PostCardProps = {
   post: Post;
+  priority?: boolean;
 };
 
-export function PostCard({ post }: PostCardProps) {
+export function PostCard({ post, priority = false }: PostCardProps) {
   return (
     <article className={styles.card}>
       {post.image ? (
         <Link to={post.route} className={styles.imageLink}>
-          <img src={post.image} alt={post.title} loading="lazy" />
+          <img
+            src={post.image}
+            alt={post.title}
+            loading={priority ? "eager" : "lazy"}
+            fetchPriority={priority ? "high" : undefined}
+            decoding="async"
+          />
         </Link>
       ) : null}
       <div className={styles.body}>

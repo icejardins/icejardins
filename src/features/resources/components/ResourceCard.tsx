@@ -4,9 +4,10 @@ import styles from "./ResourceCard.module.css";
 
 interface ResourceCardProps {
   resource: Resource;
+  priority?: boolean;
 }
 
-export function ResourceCard({ resource }: ResourceCardProps) {
+export function ResourceCard({ resource, priority = false }: ResourceCardProps) {
   const ctaLabel =
     resource.actionType === "lead-form" || resource.pdfUrl
       ? "Baixar Gratuitamente"
@@ -20,7 +21,8 @@ export function ResourceCard({ resource }: ResourceCardProps) {
             src={resource.image}
             alt={resource.title}
             className={styles.image}
-            loading="lazy"
+            loading={priority ? "eager" : "lazy"}
+            fetchPriority={priority ? "high" : undefined}
             decoding="async"
           />
           {resource.badge ? (

@@ -80,6 +80,7 @@ export default function BlogPostPage() {
         image={post.image}
         canonicalPath={canonicalPath}
         jsonLd={blogPostingSchema}
+        preloadImage={post.image || undefined}
       />
 
       <div className={styles.progress} aria-hidden="true">
@@ -97,7 +98,14 @@ export default function BlogPostPage() {
             </header>
 
             {post.image ? (
-              <img src={post.image} alt={post.title} className={styles.featuredImage} loading="eager" />
+              <img
+                src={post.image}
+                alt={post.title}
+                className={styles.featuredImage}
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+              />
             ) : null}
 
             <div

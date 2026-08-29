@@ -27,6 +27,7 @@ export default function BlogListPage() {
         title={`${site.blog.title} | ${site.title}`}
         description={site.blog.description}
         canonicalPath="/posts/"
+        preloadImage={pagination.items[0]?.image || undefined}
       />
 
       <section className="container py-5">
@@ -38,9 +39,9 @@ export default function BlogListPage() {
         <div className="row g-4">
           <div className="col-lg-9">
             <div className="row g-4">
-              {pagination.items.map((post) => (
+              {pagination.items.map((post, index) => (
                 <div key={post.slug} className="col-lg-6 col-md-6">
-                  <PostCard post={post} />
+                  <PostCard post={post} priority={index === 0} />
                 </div>
               ))}
             </div>

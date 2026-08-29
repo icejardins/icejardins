@@ -168,6 +168,7 @@ export default function ResourcePage() {
         image={resource.image || undefined}
         jsonLd={resourceStructuredData}
         adsConversionSendTo={site.googleAdsConversionSendTo}
+        preloadImage={resource.image || undefined}
       />
 
       {/* TOP BRAND BAR */}
@@ -429,7 +430,8 @@ export default function ResourcePage() {
                         width={380}
                         height={285}
                         className={styles.coverImage}
-                        loading="lazy"
+                        loading="eager"
+                        fetchPriority="high"
                         decoding="async"
                       />
                       <div className={styles.coverBadge}>
