@@ -287,7 +287,6 @@ async function main() {
       layout: parsed.data.layout ? String(parsed.data.layout) : null,
       bodyHtml: html,
       toc,
-      plainText,
       sourcePath: relativePath
     });
   }
@@ -333,7 +332,6 @@ async function main() {
       summary: scriptureSummary,
       bodyHtml: html,
       toc,
-      plainText,
       sourcePath: `posts/${relativePath}`
     });
   }
@@ -386,7 +384,6 @@ async function main() {
       summary: String(parsed.data.description ?? buildSummary(plainText)),
       bodyHtml: html,
       toc,
-      plainText,
       sourcePath: `recursos/${relativePath}`
     });
   }

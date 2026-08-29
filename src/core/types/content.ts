@@ -84,7 +84,7 @@ export type Resource = {
   summary: string;
   bodyHtml: string;
   toc: TocHeading[];
-  plainText: string;
+  plainText?: string;
   sourcePath: string;
 };
 
@@ -96,7 +96,7 @@ export type PageContent = {
   layout: string | null;
   bodyHtml: string;
   toc: TocHeading[];
-  plainText: string;
+  plainText?: string;
   sourcePath: string;
 };
 
@@ -114,7 +114,7 @@ export type Post = {
   summary: string;
   bodyHtml: string;
   toc: TocHeading[];
-  plainText: string;
+  plainText?: string;
   sourcePath: string;
 };
 
