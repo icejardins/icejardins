@@ -69,9 +69,9 @@ function buildChurchSchema(baseUrl: string) {
     geo: {
       "@type": "GeoCoordinates",
       latitude: "-15.8797754",
-      longitude: "-47.8154745"
+      longitude: "-47.8128996"
     },
-    hasMap: "https://maps.google.com/?q=-15.8797754,-47.8154745",
+    hasMap: "https://maps.app.goo.gl/ddMo7kUUDr6fHYyX9",
     areaServed: [
       {
         "@type": "AdministrativeArea",
@@ -201,8 +201,8 @@ export function SeoHead({
       {noindex ? <meta name="robots" content="noindex, follow" /> : null}
       <meta name="geo.region" content="BR-DF" />
       <meta name="geo.placename" content="Jardim Botânico, Brasília - DF" />
-      <meta name="geo.position" content="-15.8797754;-47.8154745" />
-      <meta name="ICBM" content="-15.8797754, -47.8154745" />
+      <meta name="geo.position" content="-15.8797754;-47.8128996" />
+      <meta name="ICBM" content="-15.8797754, -47.8128996" />
       <meta
         name="keywords"
         content="Igreja Cristã Evangélica, ICE Jardins, Igreja no Jardim Botânico, Igreja Evangélica Brasília, Culto de Domingo Jardim Botânico, Colégio In-Nova Jardim Botânico, Igreja Brasília DF, Jardim Botânico DF"

@@ -550,7 +550,7 @@ export default function ResourcePage() {
 
                   <div className="mt-3">
                     <a
-                      href="https://maps.google.com/?q=Igreja+Crist%C3%A3+Evang%C3%A9lica+Jardins"
+                      href="https://maps.app.goo.gl/ddMo7kUUDr6fHYyX9"
                       target="_blank"
                       rel="noopener noreferrer"
                       className={styles.churchBtnOutline}

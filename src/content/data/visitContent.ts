@@ -1,4 +1,4 @@
-﻿export const visitContent = {
+export const visitContent = {
   hero: {
     title: "Você é muito bem-vindo na Jardins!",
     description:
@@ -54,6 +54,6 @@
       "Brasília — DF, 71686-301"
     ],
     mapEmbed:
-      "https://maps.google.com/maps?q=Condom%C3%ADnio%20Est%C3%A2ncia%20Jardim%20Bot%C3%A2nico%20II,%20Bras%C3%ADlia&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      "https://maps.google.com/maps?q=Igreja%20Crist%C3%A3%20Evang%C3%A9lica%20Jardins&t=&z=16&ie=UTF8&iwloc=&output=embed"
   }
 };
