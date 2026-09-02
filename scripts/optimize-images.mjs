@@ -1,23 +1,20 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import { execFile } from "node:child_process";
-import { promisify } from "node:util";
+import sharp from "sharp";
 
-const execFileAsync = promisify(execFile);
 const rootDir = process.cwd();
 const postsDir = path.join(rootDir, "static", "images", "posts");
 const sobreDir = path.join(rootDir, "static", "images", "sobre");
 const doacoesDir = path.join(rootDir, "static", "images", "doacoes");
 const contentPostsDir = path.join(rootDir, "content", "posts");
 
-async function convertWithCwebp(inputPath, outputPath, options = {}) {
+async function convertWithSharp(inputPath, outputPath, options = {}) {
   const { width, height, quality = 75 } = options;
-  const args = ["-q", String(quality), "-m", "6"];
+  let pipeline = sharp(inputPath);
   if (width && height) {
-    args.push("-resize", String(width), String(height));
+    pipeline = pipeline.resize(width, height, { fit: "cover" });
   }
-  args.push(inputPath, "-o", outputPath);
-  await execFileAsync("cwebp", args);
+  await pipeline.webp({ quality, effort: 6 }).toFile(outputPath);
 }
 
 async function optimizePosts() {
@@ -36,7 +33,7 @@ async function optimizePosts() {
 
     const statBefore = await fs.stat(inputPath);
 
-    await convertWithCwebp(inputPath, tempOutputPath, { width: 640, height: 360, quality: 75 });
+    await convertWithSharp(inputPath, tempOutputPath, { width: 640, height: 360, quality: 75 });
     const statAfter = await fs.stat(tempOutputPath);
 
     if (file !== outputName) {
@@ -58,7 +55,7 @@ async function optimizeDoacoes() {
 
     console.log("\nOptimizing doações QR code...");
     if (await fs.stat(qrPng).catch(() => null)) {
-      await convertWithCwebp(qrPng, qrWebp, { width: 380, height: 380, quality: 80 });
+      await convertWithSharp(qrPng, qrWebp, { width: 380, height: 380, quality: 80 });
       const statWebp = await fs.stat(qrWebp);
       console.log(`✓ qrcode-pix.webp generated (${(statWebp.size / 1024).toFixed(1)} KiB)`);
     }
@@ -83,7 +80,7 @@ async function optimizeSobre() {
 
     const statBefore = await fs.stat(inputPath);
 
-    await convertWithCwebp(inputPath, tempOutputPath, { quality: 80 });
+    await convertWithSharp(inputPath, tempOutputPath, { quality: 80 });
     const statAfter = await fs.stat(tempOutputPath);
 
     if (file !== outputName) {

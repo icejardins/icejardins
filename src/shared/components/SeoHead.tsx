@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router";
-import { getSiteConfig } from "@/content/repositories/contentRepository";
+import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
 
 type SeoHeadProps = {
   title: string;
@@ -8,8 +8,12 @@ type SeoHeadProps = {
   image?: string | null;
   canonicalPath?: string;
   noindex?: boolean;
+  type?: "website" | "article";
+  publishedTime?: string | null;
+  author?: string;
+  section?: string;
+  tags?: string[];
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
-  adsConversionSendTo?: string;
   preloadImage?: string | null;
 };
 
@@ -57,10 +61,13 @@ function buildChurchSchema(baseUrl: string) {
     email: "secretaria@icejardins.org.br",
     telephone: "+55-61-98262-4952",
     priceRange: "Gratuito",
+    publicAccess: true,
+    isAccessibleForFree: true,
     sameAs: [
       "https://www.facebook.com/icejardins/",
       "https://www.instagram.com/icejardins/",
-      "https://wa.me/5561982624952"
+      "https://wa.me/5561982624952",
+      "https://maps.app.goo.gl/ddMo7kUUDr6fHYyX9"
     ],
     address: {
       "@type": "PostalAddress",
@@ -186,8 +193,12 @@ export function SeoHead({
   image,
   canonicalPath,
   noindex = false,
+  type = "website",
+  publishedTime,
+  author,
+  section,
+  tags,
   jsonLd,
-  adsConversionSendTo,
   preloadImage
 }: SeoHeadProps) {
   const location = useLocation();
@@ -226,7 +237,7 @@ export function SeoHead({
       <meta name="geo.placename" content="Jardim Botânico, Brasília - DF" />
       <meta name="geo.position" content="-15.8797754;-47.8128996" />
       <meta name="ICBM" content="-15.8797754, -47.8128996" />
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={type} />
       <meta property="og:site_name" content={site.title} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
@@ -234,10 +245,24 @@ export function SeoHead({
       {imageUrl ? <meta property="og:image" content={imageUrl} /> : null}
       {imageUrl ? <meta property="og:image:secure_url" content={imageUrl} /> : null}
       {imageUrl ? <meta property="og:image:alt" content={title} /> : null}
+      {imageUrl ? <meta property="og:image:width" content="1200" /> : null}
+      {imageUrl ? <meta property="og:image:height" content="630" /> : null}
       {imageUrl ? <meta name="twitter:image" content={imageUrl} /> : null}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
+      {type === "article" && publishedTime ? (
+        <meta property="article:published_time" content={publishedTime} />
+      ) : null}
+      {type === "article" && author ? (
+        <meta property="article:author" content={author} />
+      ) : null}
+      {type === "article" && section ? (
+        <meta property="article:section" content={section} />
+      ) : null}
+      {type === "article" && tags
+        ? tags.map((t) => <meta key={t} property="article:tag" content={t} />)
+        : null}
       <link rel="canonical" href={canonicalUrl} />
       <link rel="alternate" hrefLang={site.languageCode} href={canonicalUrl} />
       <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
@@ -255,11 +280,6 @@ export function SeoHead({
           {JSON.stringify(schema)}
         </script>
       ))}
-      {adsConversionSendTo ? (
-        <script>
-          {`gtag('event', 'conversion', {'send_to': '${adsConversionSendTo}'});`}
-        </script>
-      ) : null}
     </Helmet>
   );
 }

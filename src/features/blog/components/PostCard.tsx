@@ -1,10 +1,10 @@
 import { Link } from "react-router";
-import type { Post } from "@/core/types/content";
+import type { Post, PostMeta } from "@/core/types/content";
 import { formatDate } from "@/core/utils/formatDate";
 import styles from "./PostCard.module.css";
 
 type PostCardProps = {
-  post: Post;
+  post: Post | PostMeta;
   priority?: boolean;
 };
 

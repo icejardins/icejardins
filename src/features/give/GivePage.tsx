@@ -1,8 +1,36 @@
 import { useState } from "react";
 import { SeoHead } from "@/shared/components/SeoHead";
+import { Icon } from "@/shared/components/Icon";
 import { giveContent } from "@/content/data/giveContent";
-import { getSiteConfig } from "@/content/repositories/contentRepository";
+import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
 import styles from "./GivePage.module.css";
+
+function CopyButton({
+  id,
+  text,
+  label,
+  copiedId,
+  onCopy
+}: {
+  id: string;
+  text: string;
+  label: string;
+  copiedId: string | null;
+  onCopy: (text: string, id: string) => void;
+}) {
+  const isCopied = copiedId === id;
+  return (
+    <button
+      type="button"
+      className={`${styles.copyButton} ${isCopied ? styles.copiedState : ""}`}
+      onClick={() => onCopy(text, id)}
+      aria-label={label}
+    >
+      <Icon name={isCopied ? "check2-circle" : "copy"} />
+      {isCopied ? "Copiado!" : "Copiar"}
+    </button>
+  );
+}
 
 export default function GivePage() {
   const site = getSiteConfig();
@@ -80,7 +108,7 @@ export default function GivePage() {
               <article className={styles.card}>
                 <div className={styles.cardHeader}>
                   <h3>
-                    <i className="bi bi-qr-code-scan" aria-hidden="true" />
+                    <Icon name="qr-code-scan" />
                     {giveContent.pix.title}
                   </h3>
                   <span className={styles.cardBadge}>{giveContent.pix.badge}</span>
@@ -104,7 +132,7 @@ export default function GivePage() {
                     download="qrcode-pix-icejardins.png"
                     className={styles.downloadQrBtn}
                   >
-                    <i className="bi bi-download" aria-hidden="true" />
+                    <Icon name="download" />
                     Baixar imagem do QR Code
                   </a>
                 </div>
@@ -115,22 +143,13 @@ export default function GivePage() {
                       <span className={styles.infoLabel}>Chave PIX (CNPJ)</span>
                       <span className={styles.infoValue}>{giveContent.pix.formattedKey}</span>
                     </div>
-                    <button
-                      type="button"
-                      className={`${styles.copyButton} ${
-                        copiedId === "pix-key" ? styles.copiedState : ""
-                      }`}
-                      onClick={() => handleCopy(giveContent.pix.rawKey, "pix-key")}
-                      aria-label="Copiar chave PIX"
-                    >
-                      <i
-                        className={`bi ${
-                          copiedId === "pix-key" ? "bi-check2-circle" : "bi-copy"
-                        }`}
-                        aria-hidden="true"
-                      />
-                      {copiedId === "pix-key" ? "Copiado!" : "Copiar"}
-                    </button>
+                    <CopyButton
+                      id="pix-key"
+                      text={giveContent.pix.rawKey}
+                      label="Copiar chave PIX"
+                      copiedId={copiedId}
+                      onCopy={handleCopy}
+                    />
                   </div>
 
                   <div className={styles.infoItem}>
@@ -155,7 +174,7 @@ export default function GivePage() {
               <article className={styles.card}>
                 <div className={styles.cardHeader}>
                   <h3>
-                    <i className="bi bi-bank" aria-hidden="true" />
+                    <Icon name="bank" />
                     {giveContent.bankTransfer.title}
                   </h3>
                   <span className={styles.cardBadge}>{giveContent.bankTransfer.badge}</span>
@@ -182,22 +201,13 @@ export default function GivePage() {
                       <span className={styles.infoLabel}>CNPJ</span>
                       <span className={styles.infoValue}>{giveContent.bankTransfer.cnpj}</span>
                     </div>
-                    <button
-                      type="button"
-                      className={`${styles.copyButton} ${
-                        copiedId === "bb-cnpj" ? styles.copiedState : ""
-                      }`}
-                      onClick={() => handleCopy(giveContent.bankTransfer.rawCnpj, "bb-cnpj")}
-                      aria-label="Copiar CNPJ"
-                    >
-                      <i
-                        className={`bi ${
-                          copiedId === "bb-cnpj" ? "bi-check2-circle" : "bi-copy"
-                        }`}
-                        aria-hidden="true"
-                      />
-                      {copiedId === "bb-cnpj" ? "Copiado!" : "Copiar"}
-                    </button>
+                    <CopyButton
+                      id="bb-cnpj"
+                      text={giveContent.bankTransfer.rawCnpj}
+                      label="Copiar CNPJ"
+                      copiedId={copiedId}
+                      onCopy={handleCopy}
+                    />
                   </div>
 
                   <div className={styles.infoItem}>
@@ -205,22 +215,13 @@ export default function GivePage() {
                       <span className={styles.infoLabel}>Agência</span>
                       <span className={styles.infoValue}>{giveContent.bankTransfer.agency}</span>
                     </div>
-                    <button
-                      type="button"
-                      className={`${styles.copyButton} ${
-                        copiedId === "bb-agency" ? styles.copiedState : ""
-                      }`}
-                      onClick={() => handleCopy(giveContent.bankTransfer.agency, "bb-agency")}
-                      aria-label="Copiar Agência"
-                    >
-                      <i
-                        className={`bi ${
-                          copiedId === "bb-agency" ? "bi-check2-circle" : "bi-copy"
-                        }`}
-                        aria-hidden="true"
-                      />
-                      {copiedId === "bb-agency" ? "Copiado!" : "Copiar"}
-                    </button>
+                    <CopyButton
+                      id="bb-agency"
+                      text={giveContent.bankTransfer.agency}
+                      label="Copiar Agência"
+                      copiedId={copiedId}
+                      onCopy={handleCopy}
+                    />
                   </div>
 
                   <div className={styles.infoItem}>
@@ -228,22 +229,13 @@ export default function GivePage() {
                       <span className={styles.infoLabel}>Conta Corrente</span>
                       <span className={styles.infoValue}>{giveContent.bankTransfer.account}</span>
                     </div>
-                    <button
-                      type="button"
-                      className={`${styles.copyButton} ${
-                        copiedId === "bb-account" ? styles.copiedState : ""
-                      }`}
-                      onClick={() => handleCopy(giveContent.bankTransfer.account, "bb-account")}
-                      aria-label="Copiar Conta"
-                    >
-                      <i
-                        className={`bi ${
-                          copiedId === "bb-account" ? "bi-check2-circle" : "bi-copy"
-                        }`}
-                        aria-hidden="true"
-                      />
-                      {copiedId === "bb-account" ? "Copiado!" : "Copiar"}
-                    </button>
+                    <CopyButton
+                      id="bb-account"
+                      text={giveContent.bankTransfer.account}
+                      label="Copiar Conta"
+                      copiedId={copiedId}
+                      onCopy={handleCopy}
+                    />
                   </div>
                 </div>
               </article>
@@ -254,7 +246,7 @@ export default function GivePage() {
               <article className={styles.card}>
                 <div className={styles.cardHeader}>
                   <h3>
-                    <i className="bi bi-globe2" aria-hidden="true" />
+                    <Icon name="globe2" />
                     {giveContent.international.title}
                   </h3>
                   <span className={styles.cardBadge}>{giveContent.international.badge}</span>
@@ -274,22 +266,13 @@ export default function GivePage() {
                       <span className={styles.infoLabel}>Código SWIFT / BIC</span>
                       <span className={styles.infoValue}>{giveContent.international.swift}</span>
                     </div>
-                    <button
-                      type="button"
-                      className={`${styles.copyButton} ${
-                        copiedId === "intl-swift" ? styles.copiedState : ""
-                      }`}
-                      onClick={() => handleCopy(giveContent.international.swift, "intl-swift")}
-                      aria-label="Copiar SWIFT"
-                    >
-                      <i
-                        className={`bi ${
-                          copiedId === "intl-swift" ? "bi-check2-circle" : "bi-copy"
-                        }`}
-                        aria-hidden="true"
-                      />
-                      {copiedId === "intl-swift" ? "Copiado!" : "Copiar"}
-                    </button>
+                    <CopyButton
+                      id="intl-swift"
+                      text={giveContent.international.swift}
+                      label="Copiar SWIFT"
+                      copiedId={copiedId}
+                      onCopy={handleCopy}
+                    />
                   </div>
 
                   <div className={styles.infoItem}>
@@ -297,22 +280,13 @@ export default function GivePage() {
                       <span className={styles.infoLabel}>IBAN</span>
                       <span className={styles.infoValue}>{giveContent.international.iban}</span>
                     </div>
-                    <button
-                      type="button"
-                      className={`${styles.copyButton} ${
-                        copiedId === "intl-iban" ? styles.copiedState : ""
-                      }`}
-                      onClick={() => handleCopy(giveContent.international.iban, "intl-iban")}
-                      aria-label="Copiar IBAN"
-                    >
-                      <i
-                        className={`bi ${
-                          copiedId === "intl-iban" ? "bi-check2-circle" : "bi-copy"
-                        }`}
-                        aria-hidden="true"
-                      />
-                      {copiedId === "intl-iban" ? "Copiado!" : "Copiar"}
-                    </button>
+                    <CopyButton
+                      id="intl-iban"
+                      text={giveContent.international.iban}
+                      label="Copiar IBAN"
+                      copiedId={copiedId}
+                      onCopy={handleCopy}
+                    />
                   </div>
 
                   <div className={styles.infoItem}>
@@ -332,7 +306,7 @@ export default function GivePage() {
               <article className={`${styles.card} ${styles.usaCard}`}>
                 <div className={styles.cardHeader}>
                   <h3>
-                    <i className="bi bi-flag-fill" aria-hidden="true" />
+                    <Icon name="flag-fill" />
                     {giveContent.usaDonations.title}
                   </h3>
                   <span className={styles.cardBadge}>{giveContent.usaDonations.badge}</span>
@@ -346,7 +320,7 @@ export default function GivePage() {
                     rel="noopener noreferrer"
                     className={styles.usaButton}
                   >
-                    <i className="bi bi-box-arrow-up-right" aria-hidden="true" />
+                    <Icon name="box-arrow-up-right" />
                     {giveContent.usaDonations.buttonLabel}
                   </a>
                   <p className={styles.usaNote}>{giveContent.usaDonations.note}</p>
@@ -358,7 +332,7 @@ export default function GivePage() {
           {/* Receipts and Contact */}
           <section className={styles.receiptsBlock}>
             <h3>
-              <i className="bi bi-envelope-paper-heart" aria-hidden="true" />
+              <Icon name="envelope-paper-heart" />
               {giveContent.receipts.title}
             </h3>
             <p>{giveContent.receipts.description}</p>
@@ -367,7 +341,7 @@ export default function GivePage() {
                 href={`mailto:${giveContent.receipts.email}?subject=Comprovante%20de%20Contribuicao`}
                 className={styles.emailBtn}
               >
-                <i className="bi bi-envelope" aria-hidden="true" />
+                <Icon name="envelope" />
                 {giveContent.receipts.email}
               </a>
               <a
@@ -376,7 +350,7 @@ export default function GivePage() {
                 rel="noopener noreferrer"
                 className={styles.whatsBtn}
               >
-                <i className="bi bi-whatsapp" aria-hidden="true" />
+                <Icon name="whatsapp" />
                 Falar pelo WhatsApp
               </a>
             </div>

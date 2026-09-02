@@ -2,7 +2,8 @@
 date = '2026-04-22T10:03:56-03:00'
 draft = false
 title = 'No que cremos?'
-tags = []
+description = 'Conheça a confissão de fé e os fundamentos teológicos e bíblicos da Igreja Cristã Evangélica Jardins (ICE Jardins) em Brasília - DF.'
+tags = ["fe", "doutrina", "teologia", "biblia"]
 layout = "fe"
 +++
 

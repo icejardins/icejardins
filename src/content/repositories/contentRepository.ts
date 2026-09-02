@@ -2,20 +2,21 @@ import type {
   PageContent,
   PaginationResult,
   Post,
+  PostMeta,
   Resource,
   SiteConfig,
   Taxonomies
 } from "@/core/types/content";
 import { slugify } from "@/core/utils/slugify";
-import siteConfigJson from "@/content/generated/site-config.json";
 import pagesJson from "@/content/generated/pages.json";
-import postsJson from "@/content/generated/posts.json";
+import postsMetaJson from "@/content/generated/posts-meta.json";
 import resourcesJson from "@/content/generated/resources.json";
 import taxonomiesJson from "@/content/generated/taxonomies.json";
+export { getSiteConfig } from "./siteConfigRepository";
+export { getPostBySlug } from "./postBodyRepository";
 
-const siteConfig = siteConfigJson as SiteConfig;
 const pages = pagesJson as PageContent[];
-const posts = (postsJson as Post[]).slice();
+const posts = (postsMetaJson as unknown as PostMeta[]).slice();
 const resources = (resourcesJson as Resource[]).slice();
 const taxonomies = taxonomiesJson as Taxonomies;
 
@@ -52,15 +53,10 @@ resources.sort((left, right) => {
 });
 
 const pageBySlug = new Map(pages.map((page) => [page.slug, page]));
-const postBySlug = new Map(posts.map((post) => [post.slug, post]));
 const resourceBySlug = new Map(resources.map((resource) => [resource.slug, resource]));
 
 const tagsBySlug = new Map(taxonomies.tags.map((tag) => [tag.slug, tag]));
 const categoriesBySlug = new Map(taxonomies.categories.map((category) => [category.slug, category]));
-
-export function getSiteConfig(): SiteConfig {
-  return siteConfig;
-}
 
 export function getAllPages(): PageContent[] {
   return pages;
@@ -70,16 +66,12 @@ export function getPageBySlug(slug: string): PageContent | undefined {
   return pageBySlug.get(slug);
 }
 
-export function getAllPosts(): Post[] {
+export function getAllPosts(): PostMeta[] {
   return posts;
 }
 
-export function getRecentPosts(limit = 3): Post[] {
+export function getRecentPosts(limit = 3): PostMeta[] {
   return posts.slice(0, limit);
-}
-
-export function getPostBySlug(slug: string): Post | undefined {
-  return postBySlug.get(slug);
 }
 
 export function getAllResources(): Resource[] {
@@ -116,7 +108,7 @@ export function getCategories() {
   return taxonomies.categories;
 }
 
-export function getPostsByTagSlug(tagSlug: string): Post[] {
+export function getPostsByTagSlug(tagSlug: string): PostMeta[] {
   const tag = tagsBySlug.get(tagSlug);
   if (!tag) {
     return [];
@@ -125,7 +117,7 @@ export function getPostsByTagSlug(tagSlug: string): Post[] {
   return posts.filter((post) => post.tags.some((item) => slugify(item) === tag.slug));
 }
 
-export function getPostsByCategorySlug(categorySlug: string): Post[] {
+export function getPostsByCategorySlug(categorySlug: string): PostMeta[] {
   const category = categoriesBySlug.get(categorySlug);
   if (!category) {
     return [];

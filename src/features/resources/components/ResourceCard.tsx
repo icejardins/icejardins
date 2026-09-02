@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { Icon } from "@/shared/components/Icon";
 import type { Resource } from "@/core/types/content";
 import styles from "./ResourceCard.module.css";
 
@@ -29,13 +30,13 @@ export function ResourceCard({ resource, priority = false }: ResourceCardProps) 
           />
           {resource.badge ? (
             <span className={styles.badgeOverlay}>
-              <i className="bi bi-gift-fill" aria-hidden="true" />
+              <Icon name="gift-fill" />
               {resource.badge}
             </span>
           ) : null}
           {resource.format ? (
             <span className={styles.formatBadge}>
-              <i className="bi bi-file-earmark-pdf-fill text-danger" aria-hidden="true" />
+              <Icon name="file-earmark-pdf-fill" className="text-danger" />
               {resource.format}
             </span>
           ) : null}
@@ -70,9 +71,9 @@ export function ResourceCard({ resource, priority = false }: ResourceCardProps) 
         ) : null}
 
         <div className={styles.footer}>
-          <Link to={resource.route} className={styles.ctaButton}>
+          <Link to={resource.route} className={styles.ctaButton} aria-label={`${ctaLabel}: ${resource.title}`}>
             <span>{ctaLabel}</span>
-            <i className="bi bi-arrow-right" aria-hidden="true" />
+            <Icon name="arrow-right" />
           </Link>
         </div>
       </div>

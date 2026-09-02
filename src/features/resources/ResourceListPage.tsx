@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import { Link } from "react-router";
 import { getAllResources, getSiteConfig } from "@/content/repositories/contentRepository";
 import { SeoHead } from "@/shared/components/SeoHead";
+import { Icon } from "@/shared/components/Icon";
 import { ResourceCard } from "./components/ResourceCard";
 import styles from "./ResourceListPage.module.css";
 
@@ -35,8 +36,8 @@ export default function ResourceListPage() {
   return (
     <>
       <SeoHead
-        title={`${pageTitle} | ${site.title}`}
-        description={pageDescription}
+        title={`Recursos e E-books Cristãos Gratuitos | ${site.title}`}
+        description="Baixe gratuitamente guias práticos, e-books e devocionais da Igreja Cristã Evangélica Jardins (Brasília - DF) para fortalecer sua fé e caminhada com Deus."
         canonicalPath="/recursos/"
         preloadImage={allResources[0]?.image || undefined}
       />
@@ -44,7 +45,7 @@ export default function ResourceListPage() {
       <header className={styles.header}>
         <div className="container">
           <div className={styles.pill}>
-            <i className="bi bi-collection-fill" aria-hidden="true" />
+            <Icon name="collection-fill" />
             Materiais Gratuitos
           </div>
           <h1 className={styles.title}>{pageTitle}</h1>
@@ -85,7 +86,7 @@ export default function ResourceListPage() {
           </div>
         ) : (
           <div className={styles.emptyState}>
-            <i className={`bi bi-inbox ${styles.emptyStateIcon}`} aria-hidden="true" />
+            <Icon name="inbox" className={styles.emptyStateIcon} />
             <h3>Nenhum recurso encontrado nesta categoria</h3>
             <p>Selecione outra categoria ou volte para ver todos os materiais.</p>
             <button
@@ -99,7 +100,7 @@ export default function ResourceListPage() {
         )}
 
         <div className={styles.helpBox}>
-          <i className="bi bi-chat-heart-fill fs-2 mb-3 d-inline-block text-warning" aria-hidden="true" />
+          <Icon name="chat-heart-fill" className="fs-2 mb-3 d-inline-block text-warning" />
           <h3>Dúvidas ou sugestões de temas?</h3>
           <p>
             Nossa equipe pastoral e liderança estão sempre à disposição para conversar, orar com
@@ -111,7 +112,7 @@ export default function ResourceListPage() {
             rel="noopener noreferrer"
             className={styles.helpBtn}
           >
-            <i className="bi bi-whatsapp" aria-hidden="true" />
+            <Icon name="whatsapp" />
             Fale com a gente no WhatsApp
           </a>
         </div>

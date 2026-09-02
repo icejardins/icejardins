@@ -317,6 +317,8 @@ async function main() {
     const readingTime = estimateReadingTime(plainText);
     const scriptureSummary = buildScriptureSummary(html, plainText);
     const description = String(parsed.data.description ?? parsed.data.subtitle ?? scriptureSummary);
+    const youtubeMatch = parsed.content.match(/\{\{<\s*youtube\s+([^\s>]+)\s*>\}\}/);
+    const youtubeId = youtubeMatch ? youtubeMatch[1] : null;
 
     posts.push({
       slug,
@@ -330,6 +332,7 @@ async function main() {
       categories,
       readingTime,
       summary: scriptureSummary,
+      youtubeId,
       bodyHtml: html,
       toc,
       sourcePath: `posts/${relativePath}`
@@ -486,7 +489,14 @@ async function main() {
     postRouteMap.set(route, dateStr);
   }
 
+  const excludedFromSitemap = new Set([
+    "/obrigado-guia/",
+    "/descadastro/",
+    ...resources.map((r) => normalizeRoute(`/recursos/${r.slug}/obrigado/`))
+  ]);
+
   const sitemapEntries = sortedRoutes
+    .filter((route) => !excludedFromSitemap.has(route))
     .map((route) => {
       const cleanedRoute = route === "/" ? "/" : route.replace(/\/+$/, "/");
       const loc = `${siteConfig.baseUrl}${cleanedRoute}`;
@@ -523,7 +533,7 @@ async function main() {
     .join("\n");
 
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapEntries}\n</urlset>\n`;
-  const robotsTxt = `User-agent: *\nAllow: /\n\nSitemap: ${siteConfig.baseUrl}/sitemap.xml\n`;
+  const robotsTxt = `User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /descadastro/\nDisallow: /obrigado-guia/\nDisallow: /recursos/*/obrigado/\n\nSitemap: ${siteConfig.baseUrl}/sitemap.xml\n`;
 
   const rssItems = posts
     .slice(0, 20)
@@ -536,7 +546,7 @@ async function main() {
     })
     .join("\n");
 
-  const rssXml = `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0">\n  <channel>\n    <title>${siteConfig.title}</title>\n    <link>${siteConfig.baseUrl}/</link>\n    <description>${siteConfig.description}</description>\n    <language>pt-br</language>\n    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>\n${rssItems}\n  </channel>\n</rss>\n`;
+  const rssXml = `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n  <channel>\n    <title>${siteConfig.title}</title>\n    <link>${siteConfig.baseUrl}/</link>\n    <atom:link href="${siteConfig.baseUrl}/rss.xml" rel="self" type="application/rss+xml" />\n    <description>${siteConfig.description}</description>\n    <language>pt-br</language>\n    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>\n${rssItems}\n  </channel>\n</rss>\n`;
 
   await fs.writeFile(path.join(staticDir, "sitemap.xml"), sitemapXml, "utf8");
   await fs.writeFile(path.join(staticDir, "rss.xml"), rssXml, "utf8");
@@ -555,6 +565,12 @@ async function main() {
   await fs.writeFile(
     path.join(generatedDir, "posts.json"),
     `${JSON.stringify(posts, null, 2)}\n`,
+    "utf8"
+  );
+  const postsMeta = posts.map(({ bodyHtml, toc, ...meta }) => meta);
+  await fs.writeFile(
+    path.join(generatedDir, "posts-meta.json"),
+    `${JSON.stringify(postsMeta, null, 2)}\n`,
     "utf8"
   );
   await fs.writeFile(

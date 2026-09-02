@@ -96,7 +96,7 @@ export default defineConfig({
     }
   },
   build: {
-    sourcemap: "hidden",
+    sourcemap: false,
     modulePreload: {
       polyfill: false
     },

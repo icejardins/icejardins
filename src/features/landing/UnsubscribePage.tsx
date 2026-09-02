@@ -1,6 +1,7 @@
 import { useSearchParams, Link } from "react-router";
 import { SeoHead } from "@/shared/components/SeoHead";
-import { getSiteConfig } from "@/content/repositories/contentRepository";
+import { Icon } from "@/shared/components/Icon";
+import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
 import styles from "./UnsubscribePage.module.css";
 
 export default function UnsubscribePage() {
@@ -41,7 +42,7 @@ export default function UnsubscribePage() {
       <main id="main-content" className={styles.contentContainer}>
         <div className={styles.unsubscribeCard}>
           <div className={styles.iconWrap}>
-            <i className="bi bi-envelope-x-fill" />
+            <Icon name="envelope-x-fill" />
           </div>
 
           <h1 className={styles.title}>Inscrição Cancelada</h1>
@@ -57,7 +58,7 @@ export default function UnsubscribePage() {
           </p>
 
           <Link to="/" className={styles.btnBack}>
-            <i className="bi bi-house-door-fill" />
+            <Icon name="house-door-fill" />
             Voltar para o site principal
           </Link>
         </div>

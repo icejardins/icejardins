@@ -1,6 +1,6 @@
 import { Link, NavLink, useLocation } from "react-router";
 import { useEffect, useMemo, useState } from "react";
-import { getSiteConfig } from "@/content/repositories/contentRepository";
+import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
 import { useTheme } from "@/features/shell/components/ThemeProvider";
 import type { SearchDocument } from "@/core/types/content";
 import styles from "./Header.module.css";

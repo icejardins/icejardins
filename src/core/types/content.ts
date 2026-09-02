@@ -100,7 +100,7 @@ export type PageContent = {
   sourcePath: string;
 };
 
-export type Post = {
+export type PostMeta = {
   slug: string;
   route: string;
   title: string;
@@ -112,10 +112,14 @@ export type Post = {
   categories: string[];
   readingTime: number;
   summary: string;
+  youtubeId?: string | null;
+  sourcePath: string;
+};
+
+export type Post = PostMeta & {
   bodyHtml: string;
   toc: TocHeading[];
   plainText?: string;
-  sourcePath: string;
 };
 
 export type Taxonomy = {

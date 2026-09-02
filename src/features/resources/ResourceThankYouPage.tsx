@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router";
 import { SeoHead } from "@/shared/components/SeoHead";
+import { Icon } from "@/shared/components/Icon";
 import {
   getResourceBySlug,
   getAllResources,
@@ -88,7 +89,7 @@ export default function ResourceThankYouPage({ defaultSlug }: ResourceThankYouPa
             </Link>
 
             <span className={styles.topBarBadge}>
-              <i className="bi bi-check-circle-fill" aria-hidden="true" />
+              <Icon name="check-circle-fill" />
               Download Liberado
             </span>
           </div>
@@ -100,7 +101,7 @@ export default function ResourceThankYouPage({ defaultSlug }: ResourceThankYouPa
         <section className={styles.heroSection}>
           <div className="container">
             <div className={styles.successPill}>
-              <i className="bi bi-check-lg" aria-hidden="true" />
+              <Icon name="check-lg" />
               Solicitação Confirmada
             </div>
 
@@ -119,7 +120,7 @@ export default function ResourceThankYouPage({ defaultSlug }: ResourceThankYouPa
                   className={styles.downloadButton}
                   download={`${resource.slug}-ice-jardins.pdf`}
                 >
-                  <i className="bi bi-file-earmark-arrow-down-fill" aria-hidden="true" />
+                  <Icon name="file-earmark-arrow-down-fill" />
                   Baixar {resource.format || "o Material em PDF"}
                 </a>
                 <p className={styles.downloadMeta}>
@@ -206,18 +207,18 @@ export default function ResourceThankYouPage({ defaultSlug }: ResourceThankYouPa
 
               <div className={styles.scheduleGrid}>
                 <div className={styles.scheduleItem}>
-                  <i className="bi bi-clock-fill me-2 text-primary" aria-hidden="true" />
+                  <Icon name="clock-fill" className="me-2 text-primary" />
                   Domingo · 09:30 — Louvor e Culto Inspirativo
                 </div>
                 <div className={styles.scheduleItem}>
-                  <i className="bi bi-clock-fill me-2 text-primary" aria-hidden="true" />
+                  <Icon name="clock-fill" className="me-2 text-primary" />
                   Domingo · 11:00 — Escola Bíblica Dominical (EBD)
                 </div>
               </div>
 
               <div className={styles.actionButtons}>
                 <Link to="/visita/" className={styles.btnPrimary}>
-                  <i className="bi bi-compass" aria-hidden="true" />
+                  <Icon name="compass" />
                   Planejar minha visita
                 </Link>
                 <a
@@ -226,7 +227,7 @@ export default function ResourceThankYouPage({ defaultSlug }: ResourceThankYouPa
                   rel="noopener noreferrer"
                   className={styles.btnWhatsapp}
                 >
-                  <i className="bi bi-whatsapp" aria-hidden="true" />
+                  <Icon name="whatsapp" />
                   Falar com a Secretaria no WhatsApp
                 </a>
               </div>

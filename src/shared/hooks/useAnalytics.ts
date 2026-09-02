@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router";
-import { getSiteConfig } from "@/content/repositories/contentRepository";
+import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
 
 const siteConfig = getSiteConfig();
 const measurementId = import.meta.env.VITE_GA_ID || siteConfig.googleAnalyticsId;

@@ -24,8 +24,8 @@ export default function TaxonomyPage({ taxonomyType }: TaxonomyPageProps) {
   return (
     <section className="container py-5">
       <SeoHead
-        title={`${title} | ${site.blog.title}`}
-        description={`Publicações filtradas por ${isTag ? "tag" : "categoria"}: ${title}`}
+        title={`${title} - Sermões Bíblicos | ${site.title}`}
+        description={`Sermões e mensagens bíblicas sobre "${title}" pregadas na Igreja Cristã Evangélica Jardins em Brasília - DF.`}
         canonicalPath={`/${isTag ? "tags" : "categorias"}/${slug}/`}
       />
 

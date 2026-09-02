@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router";
 import { useEffect, useMemo, useState } from "react";
-import { getPostBySlug, getSiteConfig } from "@/content/repositories/contentRepository";
+import { getPostBySlug } from "@/content/repositories/postBodyRepository";
+import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
 import { SeoHead } from "@/shared/components/SeoHead";
 import { formatDate } from "@/core/utils/formatDate";
 import { slugify } from "@/core/utils/slugify";
@@ -48,29 +49,54 @@ export default function BlogPostPage() {
     );
   }
 
-  const blogPostingSchema = post
+  const videoId = (post as any).youtubeId || post.bodyHtml.match(/embed\/([a-zA-Z0-9_-]+)/)?.[1];
+
+  const blogPostingSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    image: post.image ? [`${site.baseUrl}${post.image.startsWith("/") ? post.image : `/${post.image}`}`] : undefined,
+    datePublished: post.date,
+    dateModified: post.date,
+    inLanguage: "pt-BR",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": shareUrl
+    },
+    author: {
+      "@type": "Person",
+      name: "Pr. Davi Ribeiro",
+      affiliation: {
+        "@type": "Church",
+        name: "ICE Jardins",
+        url: site.baseUrl
+      }
+    },
+    publisher: {
+      "@id": `${site.baseUrl}/#organization`
+    }
+  };
+
+  const videoUploadDate = post.date
+    ? post.date.includes("T")
+      ? post.date
+      : `${post.date}T09:30:00-03:00`
+    : new Date().toISOString();
+
+  const videoSchema = videoId
     ? {
         "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        headline: post.title,
+        "@type": "VideoObject",
+        name: post.title,
         description: post.description,
-        image: post.image ? [`${site.baseUrl}${post.image.startsWith("/") ? post.image : `/${post.image}`}`] : undefined,
-        datePublished: post.date,
-        inLanguage: "pt-BR",
-        mainEntityOfPage: {
-          "@type": "WebPage",
-          "@id": shareUrl
-        },
-        author: {
-          "@type": "Organization",
-          name: "ICE Jardins",
-          url: site.baseUrl
-        },
-        publisher: {
-          "@id": `${site.baseUrl}/#organization`
-        }
+        thumbnailUrl: `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`,
+        uploadDate: videoUploadDate,
+        embedUrl: `https://www.youtube.com/embed/${videoId}`
       }
-    : undefined;
+    : null;
+
+  const pageSchemas = [blogPostingSchema, ...(videoSchema ? [videoSchema] : [])];
 
   return (
     <>
@@ -79,7 +105,12 @@ export default function BlogPostPage() {
         description={post.description}
         image={post.image}
         canonicalPath={canonicalPath}
-        jsonLd={blogPostingSchema}
+        type="article"
+        publishedTime={post.date}
+        author="Pr. Davi Ribeiro"
+        section={post.categories?.[0]}
+        tags={post.tags}
+        jsonLd={pageSchemas}
         preloadImage={post.image || undefined}
       />
 

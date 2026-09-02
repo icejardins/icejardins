@@ -24,8 +24,8 @@ export default function BlogListPage() {
   return (
     <>
       <SeoHead
-        title={`${site.blog.title} | ${site.title}`}
-        description={site.blog.description}
+        title="Sermões e Mensagens Bíblicas | Igreja Cristã Evangélica Jardins - Brasília DF"
+        description="Ouça e leia os sermões expositivos da ICE Jardins no Jardim Botânico, Brasília - DF. Mensagens bíblicas centradas no Evangelho de Jesus Cristo para fortalecer sua fé."
         canonicalPath="/posts/"
         preloadImage={pagination.items[0]?.image || undefined}
       />

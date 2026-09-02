@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { SeoHead } from "@/shared/components/SeoHead";
 import { Icon } from "@/shared/components/Icon";
-import { getSiteConfig } from "@/content/repositories/contentRepository";
+import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
 import { homeContent } from "@/content/data/homeContent";
 import { trackAdsConversion } from "@/shared/utils/analytics";
 import styles from "./HomePage.module.css";

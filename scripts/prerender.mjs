@@ -27,31 +27,7 @@ async function main() {
   const uniqueRoutes = [...new Set(routes)];
 
   const { render } = await import(pathToFileURL(serverBundlePath).href);
-
-  // Inlining ALL CSS files to eliminate render-blocking stylesheet requests
-  const cssMatches = [...templateRaw.matchAll(/<link rel="stylesheet"[^>]+href="(\/assets\/[^"]+\.css)"[^>]*>/g)];
-  let combinedCss = "";
-
-  for (const match of cssMatches) {
-    const cssRelativePath = match[1].replace(/^\//, "");
-    const cssFilePath = path.join(distDir, cssRelativePath);
-    try {
-      const cssContent = await fs.readFile(cssFilePath, "utf8");
-      combinedCss += cssContent + "\n";
-    } catch {
-      // ignore missing css
-    }
-  }
-
-  let template = templateRaw;
-  if (combinedCss && cssMatches.length > 0) {
-    const firstLinkTag = cssMatches[0][0];
-    template = template.replace(firstLinkTag, `<style>${combinedCss}</style>`);
-    for (let i = 1; i < cssMatches.length; i++) {
-      template = template.replace(cssMatches[i][0], "");
-    }
-  }
-
+  const template = templateRaw;
 
   for (const route of uniqueRoutes) {
     const rendered = await render(route);
@@ -59,6 +35,9 @@ async function main() {
     let headTags = rendered.headTags ?? "";
     let appHtml = rendered.appHtml ?? "";
     let html = template;
+
+    // Filter out client-only conversion tracking snippets that shouldn't be baked into static HTML
+    headTags = headTags.replace(/<script>\s*gtag\('event',\s*'conversion'[\s\S]*?<\/script>/gi, "");
 
     // React 19 SSR renders metadata and script tags directly into the rendered tree.
     // Copy them into <head> for crawlers while preserving appHtml for perfect client hydration.
@@ -149,6 +128,52 @@ async function main() {
   }
 
   console.log(`Prerendered ${uniqueRoutes.length} routes.`);
+
+  // Prerender 404 page for hosting platforms (e.g. Vercel 404.html)
+  try {
+    const rendered404 = await render("/404-not-found/");
+    let headTags404 = rendered404.headTags ?? "";
+    let appHtml404 = rendered404.appHtml ?? "";
+    let html404 = template;
+
+    const titleMatches404 = [...appHtml404.matchAll(/<title[^>]*>(.*?)<\/title>/gi)];
+    for (const match of titleMatches404) {
+      headTags404 += `\n    ${match[0]}`;
+    }
+    const metaMatches404 = [...appHtml404.matchAll(/<meta\s+[^>]*\/?>/gi)];
+    for (const match of metaMatches404) {
+      headTags404 += `\n    ${match[0]}`;
+    }
+
+    const titleMatch404 = headTags404.match(/<title[^>]*>(.*?)<\/title>/i);
+    if (titleMatch404) {
+      html404 = html404.replace(/<title>.*?<\/title>/i, `<title>${titleMatch404[1]}</title>`);
+      headTags404 = headTags404.replace(/<title[^>]*>.*?<\/title>/gi, "");
+    }
+
+    if (html404.includes("<!--app-head-->")) {
+      html404 = html404.replace("<!--app-head-->", headTags404);
+    } else {
+      html404 = html404.replace("</head>", `${headTags404}\n  </head>`);
+    }
+
+    const cleanAppHtml404 = appHtml404
+      .replace(/<title[^>]*>[\s\S]*?<\/title>/gi, "")
+      .replace(/<meta\s+[^>]*\/?>/gi, "")
+      .replace(/<link\s+[^>]*\/?>/gi, "")
+      .replace(/<script(?:\s+[^>]*)?>[\s\S]*?<\/script>/gi, "");
+
+    if (html404.includes("<!--app-html-->")) {
+      html404 = html404.replace("<!--app-html-->", cleanAppHtml404);
+    } else {
+      html404 = html404.replace('<div id="root"></div>', `<div id="root">${cleanAppHtml404}</div>`);
+    }
+
+    await fs.writeFile(path.join(distDir, "404.html"), html404, "utf8");
+    console.log("Prerendered 404.html");
+  } catch (err) {
+    console.warn("Could not generate 404.html:", err.message);
+  }
 }
 
 main().catch((error) => {

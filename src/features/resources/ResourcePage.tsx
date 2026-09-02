@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect, type FormEvent } from "react";
 import { Link, useParams } from "react-router";
 import { SeoHead } from "@/shared/components/SeoHead";
+import { Icon } from "@/shared/components/Icon";
 import { getResourceBySlug, getSiteConfig } from "@/content/repositories/contentRepository";
 import { trackAdsConversion } from "@/shared/utils/analytics";
 import styles from "./ResourcePage.module.css";
@@ -43,7 +44,7 @@ export default function ResourcePage() {
                 />
               </Link>
               <Link to="/recursos/" className={styles.allResourcesLink}>
-                <i className="bi bi-arrow-left" aria-hidden="true" />
+                <Icon name="arrow-left" />
                 Ver todos os recursos
               </Link>
             </div>
@@ -56,7 +57,7 @@ export default function ResourcePage() {
             O material ou guia que você procurou não está disponível ou foi movido.
           </p>
           <Link to="/recursos/" className={styles.churchBtnOutline}>
-            <i className="bi bi-collection-fill" aria-hidden="true" />
+            <Icon name="collection-fill" />
             Explorar outros recursos
           </Link>
         </main>
@@ -167,7 +168,6 @@ export default function ResourcePage() {
         canonicalPath={resource.route}
         image={resource.image || undefined}
         jsonLd={resourceStructuredData}
-        adsConversionSendTo={site.googleAdsConversionSendTo}
         preloadImage={resource.image || undefined}
       />
 
@@ -192,11 +192,11 @@ export default function ResourcePage() {
 
             <nav className={styles.topBarNav}>
               <Link to="/recursos/" className={styles.allResourcesLink}>
-                <i className="bi bi-collection-fill" aria-hidden="true" />
+                <Icon name="collection-fill" />
                 Todos os Recursos
               </Link>
               <span className={styles.topBarBadge}>
-                <i className="bi bi-gift-fill" aria-hidden="true" />
+                <Icon name="gift-fill" />
                 {resource.badge || "Recurso Gratuito"}
               </span>
             </nav>
@@ -226,15 +226,15 @@ export default function ResourcePage() {
 
                   <div className={styles.trustBadges}>
                     <div className={styles.trustBadgeItem}>
-                      <i className="bi bi-check-circle-fill" aria-hidden="true" />
+                      <Icon name="check-circle-fill" />
                       <span>Acesso Imediato</span>
                     </div>
                     <div className={styles.trustBadgeItem}>
-                      <i className="bi bi-check-circle-fill" aria-hidden="true" />
+                      <Icon name="check-circle-fill" />
                       <span>100% Gratuito</span>
                     </div>
                     <div className={styles.trustBadgeItem}>
-                      <i className="bi bi-check-circle-fill" aria-hidden="true" />
+                      <Icon name="check-circle-fill" />
                       <span>Sem Spam</span>
                     </div>
                   </div>
@@ -247,7 +247,7 @@ export default function ResourcePage() {
                   {isSuccess ? (
                     <div className={styles.successCard}>
                       <div className={styles.successIconWrap}>
-                        <i className="bi bi-check-lg" aria-hidden="true" />
+                        <Icon name="check-lg" />
                       </div>
                       <h2 className={styles.successTitle}>Tudo pronto!</h2>
                       <p className={styles.successText}>
@@ -263,7 +263,7 @@ export default function ResourcePage() {
                           className={styles.downloadCtaButton}
                           download={`${resource.slug}-ice-jardins.pdf`}
                         >
-                          <i className="bi bi-file-earmark-arrow-down-fill" aria-hidden="true" />
+                          <Icon name="file-earmark-arrow-down-fill" />
                           Baixar o Material em PDF
                         </a>
                       ) : null}
@@ -290,7 +290,7 @@ export default function ResourcePage() {
                         rel="noopener noreferrer"
                         className={styles.downloadCtaButton}
                       >
-                        <i className="bi bi-file-earmark-arrow-down-fill" aria-hidden="true" />
+                        <Icon name="file-earmark-arrow-down-fill" />
                         Baixar Arquivo PDF
                       </a>
                     </div>
@@ -305,7 +305,7 @@ export default function ResourcePage() {
 
                       {errorMessage && (
                         <div className={styles.errorAlert} role="alert">
-                          <i className="bi bi-exclamation-triangle-fill me-2" aria-hidden="true" />
+                          <Icon name="exclamation-triangle-fill" className="me-2" />
                           {errorMessage}
                         </div>
                       )}
@@ -389,13 +389,13 @@ export default function ResourcePage() {
                           ) : (
                             <>
                               Baixar o Guia Gratuito
-                              <i className="bi bi-arrow-right" aria-hidden="true" />
+                              <Icon name="arrow-right" />
                             </>
                           )}
                         </button>
 
                         <p className={styles.privacyNote}>
-                          <i className="bi bi-shield-lock me-1" aria-hidden="true" />
+                          <Icon name="shield-lock" className="me-1" />
                           Respeitamos sua privacidade. Seus dados estão seguros e não enviamos spam.
                         </p>
                       </form>
@@ -435,7 +435,7 @@ export default function ResourcePage() {
                         decoding="async"
                       />
                       <div className={styles.coverBadge}>
-                        <i className="bi bi-file-earmark-pdf-fill text-danger" aria-hidden="true" />
+                        <Icon name="file-earmark-pdf-fill" className="text-danger" />
                         {resource.format || "Formato Digital"} · Acesso Imediato
                       </div>
                     </div>
@@ -482,7 +482,7 @@ export default function ResourcePage() {
             <div className="container">
               <div className={styles.testimonialCard}>
                 <div className={styles.testimonialQuoteIcon}>
-                  <i className="bi bi-quote" aria-hidden="true" />
+                  <Icon name="quote" />
                 </div>
                 <p className={styles.testimonialQuote}>"{resource.testimonial.quote}"</p>
                 <p className={styles.testimonialAuthor}>— {resource.testimonial.author}</p>
@@ -521,7 +521,7 @@ export default function ResourcePage() {
 
                   <div className={styles.churchActions}>
                     <Link to="/visita/" className={styles.churchBtnOutline}>
-                      <i className="bi bi-compass" aria-hidden="true" />
+                      <Icon name="compass" />
                       Planeje sua visita
                     </Link>
                     <a
@@ -530,7 +530,7 @@ export default function ResourcePage() {
                       rel="noopener noreferrer"
                       className={styles.churchBtnWhatsapp}
                     >
-                      <i className="bi bi-whatsapp" aria-hidden="true" />
+                      <Icon name="whatsapp" />
                       Fale no WhatsApp
                     </a>
                   </div>
@@ -555,7 +555,7 @@ export default function ResourcePage() {
                       rel="noopener noreferrer"
                       className={styles.churchBtnOutline}
                     >
-                      <i className="bi bi-geo-alt-fill" aria-hidden="true" />
+                      <Icon name="geo-alt-fill" />
                       Abrir no Google Maps
                     </a>
                   </div>
