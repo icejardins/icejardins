@@ -178,8 +178,10 @@ export function SeoHead({
   const site = getSiteConfig();
   const path = canonicalPath ?? location.pathname;
   const canonicalUrl = buildCanonicalUrl(site.baseUrl, path);
+  const DEFAULT_OG_IMAGE = "/images/sobre/identidade.webp";
+  const resolvedImage = image || DEFAULT_OG_IMAGE;
+  const imageUrl = toAbsoluteUrl(resolvedImage, site.baseUrl);
   const metaDescription = description ?? site.description;
-  const imageUrl = toAbsoluteUrl(image, site.baseUrl);
 
   const defaultSchemas: Record<string, unknown>[] = [
     buildChurchSchema(site.baseUrl),
@@ -214,7 +216,12 @@ export function SeoHead({
       <meta property="og:description" content={metaDescription} />
       <meta property="og:url" content={canonicalUrl} />
       {imageUrl ? <meta property="og:image" content={imageUrl} /> : null}
+      {imageUrl ? <meta property="og:image:secure_url" content={imageUrl} /> : null}
+      {imageUrl ? <meta property="og:image:alt" content={title} /> : null}
+      {imageUrl ? <meta name="twitter:image" content={imageUrl} /> : null}
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={metaDescription} />
       <link rel="canonical" href={canonicalUrl} />
       <link rel="alternate" hrefLang={site.languageCode} href={canonicalUrl} />
       <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
