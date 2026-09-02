@@ -89,11 +89,12 @@ export default function GivePage() {
                       className={styles.qrCodeImg}
                       width={190}
                       height={190}
-                      loading="eager"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <a
-                    href={giveContent.pix.qrCodeImage}
+                    href="/images/doacoes/qrcode-pix.png"
                     download="qrcode-pix-icejardins.png"
                     className={styles.downloadQrBtn}
                   >

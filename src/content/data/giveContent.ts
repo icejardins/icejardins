@@ -21,7 +21,7 @@ export const giveContent = {
     title: "PIX",
     badge: "Mais Prático & Instantâneo",
     description: "Faça sua contribuição rapidamente apontando a câmera do seu aplicativo de banco ou copiando a chave.",
-    qrCodeImage: "/images/doacoes/qrcode-pix.png",
+    qrCodeImage: "/images/doacoes/qrcode-pix.webp",
     keyType: "CNPJ",
     formattedKey: "35.896.960/0001-66",
     rawKey: "35896960000166",

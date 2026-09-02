@@ -1,11 +1,24 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import sharp from "sharp";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
 
+const execFileAsync = promisify(execFile);
 const rootDir = process.cwd();
 const postsDir = path.join(rootDir, "static", "images", "posts");
 const sobreDir = path.join(rootDir, "static", "images", "sobre");
+const doacoesDir = path.join(rootDir, "static", "images", "doacoes");
 const contentPostsDir = path.join(rootDir, "content", "posts");
+
+async function convertWithCwebp(inputPath, outputPath, options = {}) {
+  const { width, height, quality = 75 } = options;
+  const args = ["-q", String(quality), "-m", "6"];
+  if (width && height) {
+    args.push("-resize", String(width), String(height));
+  }
+  args.push(inputPath, "-o", outputPath);
+  await execFileAsync("cwebp", args);
+}
 
 async function optimizePosts() {
   const files = await fs.readdir(postsDir);
@@ -23,14 +36,9 @@ async function optimizePosts() {
 
     const statBefore = await fs.stat(inputPath);
 
-    await sharp(inputPath)
-      .resize(800, 450, { fit: "cover" })
-      .webp({ quality: 80, effort: 6 })
-      .toFile(tempOutputPath);
-
+    await convertWithCwebp(inputPath, tempOutputPath, { width: 640, height: 360, quality: 75 });
     const statAfter = await fs.stat(tempOutputPath);
 
-    // If input was jpg, remove old jpg file
     if (file !== outputName) {
       await fs.unlink(inputPath);
     }
@@ -40,6 +48,22 @@ async function optimizePosts() {
     console.log(
       `✓ ${file} (${(statBefore.size / 1024).toFixed(1)} KiB) -> ${outputName} (${(statAfter.size / 1024).toFixed(1)} KiB)`
     );
+  }
+}
+
+async function optimizeDoacoes() {
+  try {
+    const qrPng = path.join(doacoesDir, "qrcode-pix.png");
+    const qrWebp = path.join(doacoesDir, "qrcode-pix.webp");
+
+    console.log("\nOptimizing doações QR code...");
+    if (await fs.stat(qrPng).catch(() => null)) {
+      await convertWithCwebp(qrPng, qrWebp, { width: 380, height: 380, quality: 80 });
+      const statWebp = await fs.stat(qrWebp);
+      console.log(`✓ qrcode-pix.webp generated (${(statWebp.size / 1024).toFixed(1)} KiB)`);
+    }
+  } catch (err) {
+    console.warn("Could not optimize doacoes:", err.message);
   }
 }
 
@@ -59,12 +83,7 @@ async function optimizeSobre() {
 
     const statBefore = await fs.stat(inputPath);
 
-    // Keep aspect ratio with max width 1200
-    await sharp(inputPath)
-      .resize({ width: 1200, withoutEnlargement: true })
-      .webp({ quality: 80, effort: 6 })
-      .toFile(tempOutputPath);
-
+    await convertWithCwebp(inputPath, tempOutputPath, { quality: 80 });
     const statAfter = await fs.stat(tempOutputPath);
 
     if (file !== outputName) {
@@ -98,6 +117,7 @@ async function updateMarkdownFrontmatter() {
 
 async function main() {
   await optimizePosts();
+  await optimizeDoacoes();
   await optimizeSobre();
   await updateMarkdownFrontmatter();
   console.log("\nAll images optimized successfully!");
