@@ -100,6 +100,7 @@ export function Footer() {
             </span>
           </div>
           <div className={styles.footerLinks}>
+            <Link to="/contribuir/">Contribua</Link>
             <Link to="/privacy/">Política de Privacidade</Link>
             <Link to="/terms/">Termos de Serviço</Link>
             {site.social.facebook ? (

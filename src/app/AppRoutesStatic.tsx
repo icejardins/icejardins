@@ -8,6 +8,7 @@ import TaxonomyPage from "@/features/blog/TaxonomyPage";
 import ResourceListPage from "@/features/resources/ResourceListPage";
 import ResourcePage from "@/features/resources/ResourcePage";
 import ResourceThankYouPage from "@/features/resources/ResourceThankYouPage";
+import GivePage from "@/features/give/GivePage";
 import ContentPage from "@/features/pages/ContentPage";
 import NotFoundPage from "@/features/common/NotFoundPage";
 import UnsubscribePage from "@/features/landing/UnsubscribePage";
@@ -36,6 +37,9 @@ export function AppRoutesStatic() {
           <Route path="posts" element={<BlogListPage />} />
           <Route path="posts/:slug" element={<BlogPostPage />} />
           <Route path="recursos" element={<ResourceListPage />} />
+          <Route path="contribuir" element={<GivePage />} />
+          <Route path="doacoes" element={<Navigate to="/contribuir/" replace />} />
+          <Route path="doe" element={<Navigate to="/contribuir/" replace />} />
           <Route path="tags/:slug" element={<TaxonomyPage taxonomyType="tag" />} />
           <Route
             path="categorias/:slug"

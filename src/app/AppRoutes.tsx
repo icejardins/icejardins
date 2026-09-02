@@ -13,6 +13,7 @@ const TaxonomyPage = lazy(() => import("@/features/blog/TaxonomyPage"));
 const ResourceListPage = lazy(() => import("@/features/resources/ResourceListPage"));
 const ResourcePage = lazy(() => import("@/features/resources/ResourcePage"));
 const ResourceThankYouPage = lazy(() => import("@/features/resources/ResourceThankYouPage"));
+const GivePage = lazy(() => import("@/features/give/GivePage"));
 const ContentPage = lazy(() => import("@/features/pages/ContentPage"));
 const NotFoundPage = lazy(() => import("@/features/common/NotFoundPage"));
 const UnsubscribePage = lazy(() => import("@/features/landing/UnsubscribePage"));
@@ -41,6 +42,9 @@ export function AppRoutes() {
             <Route path="posts" element={<BlogListPage />} />
             <Route path="posts/:slug" element={<BlogPostPage />} />
             <Route path="recursos" element={<ResourceListPage />} />
+            <Route path="contribuir" element={<GivePage />} />
+            <Route path="doacoes" element={<Navigate to="/contribuir/" replace />} />
+            <Route path="doe" element={<Navigate to="/contribuir/" replace />} />
             <Route path="tags/:slug" element={<TaxonomyPage taxonomyType="tag" />} />
             <Route
               path="categorias/:slug"

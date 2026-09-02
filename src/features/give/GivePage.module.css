@@ -1,0 +1,447 @@
+.hero {
+  background: linear-gradient(135deg, var(--brand-700), var(--brand-900));
+  color: #ffffff;
+  padding: 5rem 0 4.5rem;
+  border-radius: 0 0 1.2rem 1.2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.heroSubtitle {
+  max-width: 800px;
+  margin: 0 auto 1.8rem;
+  line-height: 1.8;
+  font-size: 1.15rem;
+  opacity: 0.95;
+}
+
+.verseBox {
+  max-width: 720px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 1rem;
+  padding: 1.2rem 1.6rem;
+}
+
+.verseBox p {
+  margin: 0 0 0.35rem;
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.verseBox cite {
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--brand-200);
+}
+
+.pageSection {
+  padding: 4rem 0 5.5rem;
+}
+
+/* Vision / Project Highlight Card */
+.projectCard {
+  background: var(--secondary-background-color);
+  border-radius: 1.2rem;
+  border: 1px solid color-mix(in srgb, var(--brand-500) 25%, transparent);
+  border-left: 6px solid var(--brand-500);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.06);
+  padding: 2.2rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.projectBadge {
+  background: var(--brand-500);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.projectCard h2 {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.projectLead {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-color);
+  line-height: 1.7;
+  margin-bottom: 0.9rem;
+}
+
+.projectBody {
+  color: var(--secondary-text-color);
+  line-height: 1.75;
+  margin-bottom: 1.2rem;
+}
+
+.projectHighlight {
+  background: color-mix(in srgb, var(--background-color) 70%, var(--secondary-background-color));
+  border-radius: 0.8rem;
+  padding: 1rem 1.2rem;
+  font-style: italic;
+  color: var(--text-color);
+  border-left: 4px solid var(--brand-600);
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+/* Section Header */
+.methodsHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.methodsHeader h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.methodsHeader p {
+  color: var(--secondary-text-color);
+  font-size: 1.05rem;
+}
+
+/* Contribution Cards */
+.card {
+  background: var(--secondary-background-color);
+  border-radius: 1.2rem;
+  border: 1px solid color-mix(in srgb, var(--secondary-text-color) 16%, transparent);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+  border-color: color-mix(in srgb, var(--brand-500) 40%, transparent);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.cardHeader h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 0;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cardBadge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: var(--brand-100);
+  color: var(--brand-800);
+}
+
+.cardDescription {
+  color: var(--secondary-text-color);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* PIX Specific styles */
+.pixContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.qrCodeWrap {
+  background: #ffffff;
+  padding: 0.9rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border: 2px solid var(--brand-200);
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.qrCodeImg {
+  width: 190px;
+  height: 190px;
+  display: block;
+  image-rendering: pixelated;
+}
+
+.downloadQrBtn {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--brand-700);
+  background: transparent;
+  border: 1px solid var(--brand-300);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.downloadQrBtn:hover {
+  background: var(--brand-100);
+  color: var(--brand-900);
+  border-color: var(--brand-500);
+}
+
+/* Key-Value Fields Grid */
+.infoGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: auto;
+}
+
+.infoItem {
+  background: color-mix(in srgb, var(--background-color) 70%, var(--secondary-background-color));
+  border: 1px solid color-mix(in srgb, var(--secondary-text-color) 12%, transparent);
+  border-radius: 0.75rem;
+  padding: 0.75rem 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.infoContent {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.infoLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--secondary-text-color);
+  margin-bottom: 0.15rem;
+}
+
+.infoValue {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-color);
+  font-family: monospace, sans-serif;
+  word-break: break-all;
+}
+
+.infoValueText {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/* Copy Button */
+.copyButton {
+  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--brand-500) 30%, transparent);
+  color: var(--brand-700);
+  border-radius: 0.5rem;
+  padding: 0.45rem 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.copyButton:hover {
+  background: var(--brand-700);
+  color: #ffffff;
+  border-color: var(--brand-700);
+}
+
+.copiedState {
+  background: #198754 !important;
+  color: #ffffff !important;
+  border-color: #198754 !important;
+}
+
+/* USA Card Special Styles */
+.usaCard {
+  border-top: 5px solid #0d6efd;
+}
+
+.usaButton {
+  background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+  color: #ffffff;
+  border: none;
+  font-weight: 700;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(13, 110, 253, 0.3);
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+}
+
+.usaButton:hover,
+.usaButton:focus-visible {
+  background: linear-gradient(135deg, #0b5ed7, #0a58ca);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4);
+}
+
+.usaNote {
+  font-size: 0.82rem;
+  color: var(--secondary-text-color);
+  margin-top: 0.85rem;
+  text-align: center;
+}
+
+/* Receipts Box */
+.receiptsBlock {
+  margin-top: 4rem;
+  background: var(--secondary-background-color);
+  border-radius: 1.2rem;
+  border: 1px solid color-mix(in srgb, var(--secondary-text-color) 16%, transparent);
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.receiptsBlock h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.receiptsBlock p {
+  max-width: 680px;
+  color: var(--secondary-text-color);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.receiptsActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.emailBtn,
+.whatsBtn {
+  font-weight: 700;
+  padding: 0.75rem 1.4rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.emailBtn {
+  background: transparent;
+  border: 2px solid var(--brand-700);
+  color: var(--brand-700);
+}
+
+.emailBtn:hover {
+  background: var(--brand-700);
+  color: #ffffff;
+}
+
+.whatsBtn {
+  background: #25d366;
+  color: #ffffff;
+  border: 2px solid #25d366;
+}
+
+.whatsBtn:hover {
+  background: #1ebc59;
+  border-color: #1ebc59;
+  color: #ffffff;
+}
+
+/* Dark Mode Overrides */
+:global(.dark) .hero {
+  background: linear-gradient(135deg, #132729, #0a1718);
+}
+
+:global(.dark) .cardBadge {
+  background: #1b2f31;
+  color: #8fcbce;
+}
+
+:global(.dark) .copyButton {
+  color: #8fcbce;
+  border-color: rgba(143, 203, 206, 0.3);
+}
+
+:global(.dark) .copyButton:hover {
+  background: #145f63;
+  color: #ffffff;
+}
+
+:global(.dark) .emailBtn {
+  border-color: #8fcbce;
+  color: #8fcbce;
+}
+
+:global(.dark) .emailBtn:hover {
+  background: #145f63;
+  color: #ffffff;
+  border-color: #145f63;
+}

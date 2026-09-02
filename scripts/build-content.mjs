@@ -435,7 +435,14 @@ async function main() {
     )
   };
 
-  const routes = new Set(["/", "/posts/", "/recursos/", "/obrigado-guia/", "/descadastro/"]);
+  const routes = new Set([
+    "/",
+    "/posts/",
+    "/recursos/",
+    "/contribuir/",
+    "/obrigado-guia/",
+    "/descadastro/"
+  ]);
 
   for (const page of pages) {
     routes.add(normalizeRoute(page.route));
