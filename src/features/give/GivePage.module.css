@@ -65,7 +65,7 @@
 }
 
 .projectBadge {
-  background: var(--brand-500);
+  background: var(--brand-800);
   color: #ffffff;
   font-size: 0.8rem;
   font-weight: 800;
@@ -405,19 +405,25 @@
 
 .whatsBtn {
   background: #25d366;
-  color: #ffffff;
+  color: #0b3032;
   border: 2px solid #25d366;
+  font-weight: 800;
 }
 
 .whatsBtn:hover {
   background: #1ebc59;
   border-color: #1ebc59;
-  color: #ffffff;
+  color: #0b3032;
 }
 
 /* Dark Mode Overrides */
 :global(.dark) .hero {
   background: linear-gradient(135deg, #132729, #0a1718);
+}
+
+:global(.dark) .projectBadge {
+  background: #1b2f31;
+  color: #8fcbce;
 }
 
 :global(.dark) .cardBadge {
