@@ -1,8 +1,7 @@
 export const giveContent = {
   hero: {
     title: "Dízimos, Ofertas e Doações",
-    subtitle:
-      "Tudo o que temos vem de Deus. Contribuir é um ato de adoração, gratidão e compromisso com o avanço do Evangelho.",
+    subtitle: "Tudo o que temos vem de Deus.",
     verse:
       "“Cada um dê conforme determinou em seu coração, não com pesar ou por obrigação, pois Deus ama quem dá com alegria.”",
     reference: "2 Coríntios 9:7"
