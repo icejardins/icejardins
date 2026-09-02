@@ -6,8 +6,8 @@ export type HomeIdentityItem = {
 
 export const homeContent = {
   hero: {
-    title: "ICE Jardins",
-    subtitle: "Pessoas imperfeitas compartilhando a perfeição de Cristo\nDom, 9h30, Colégio Innova",
+    title: "Igreja Cristã Evangélica Jardins",
+    subtitle: "Pessoas imperfeitas compartilhando a perfeição de Cristo\nDomingos, 9h30 • Jardim Botânico (Colégio In-Nova)",
     ctaLabel: "Conheça a Igreja",
     ctaTarget: "#quem-somos"
   },
@@ -38,8 +38,8 @@ export const homeContent = {
     }
   ] as HomeIdentityItem[],
   worship: {
-    title: "Nossos Cultos",
-    description: "Junte-se a nós aos domingos. Há um lugar preparado para você e sua família.",
+    title: "Horários dos Cultos de Domingo",
+    description: "Junte-se a nós aos domingos no Jardim Botânico. Há um lugar preparado para você e sua família.",
     items: [
       {
         title: "Culto Inspirativo",
@@ -47,14 +47,14 @@ export const homeContent = {
         iconClass: "bi bi-clock"
       },
       {
-        title: "Escola Dominical",
+        title: "Escola Dominical & Ministério Infantil",
         time: "Domingos às 11h00",
         iconClass: "bi bi-book"
       }
     ]
   },
   location: {
-    title: "Como Nos Encontrar",
+    title: "Como Chegar à ICE Jardins (Jardim Botânico)",
     place: "Auditório do Colégio In-Nova",
     details: [
       "(antigo COC Jardim Botânico)",

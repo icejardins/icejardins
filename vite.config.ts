@@ -19,43 +19,19 @@ function htmlTagInjector(): Plugin {
           return html.replace("<!--google-tag-->", "");
         }
 
-        let script = `\n    <!-- Google tag (gtag.js) deferred -->\n`;
+        let script = `\n    <!-- Google tag (gtag.js) -->\n`;
+        script += `    <script async src="https://www.googletagmanager.com/gtag/js?id=${primaryId}"></script>\n`;
         script += `    <script>\n`;
         script += `      window.dataLayer = window.dataLayer || [];\n`;
         script += `      function gtag(){window.dataLayer.push(arguments);}\n`;
         script += `      gtag('js', new Date());\n`;
 
         if (gaId) {
-          script += `      gtag('config', '${gaId}', { send_page_view: false });\n`;
+          script += `      gtag('config', '${gaId}');\n`;
         }
         if (gadsId) {
           script += `      gtag('config', '${gadsId}');\n`;
         }
-
-        script += `      (function() {\n`;
-        script += `        var loaded = false;\n`;
-        script += `        function loadGtag() {\n`;
-        script += `          if (loaded) return;\n`;
-        script += `          loaded = true;\n`;
-        script += `          var s = document.createElement('script');\n`;
-        script += `          s.async = true;\n`;
-        script += `          s.src = 'https://www.googletagmanager.com/gtag/js?id=${primaryId}';\n`;
-        script += `          document.head.appendChild(s);\n`;
-        script += `          window.removeEventListener('scroll', loadGtag);\n`;
-        script += `          window.removeEventListener('pointerdown', loadGtag);\n`;
-        script += `          window.removeEventListener('touchstart', loadGtag);\n`;
-        script += `          window.removeEventListener('keydown', loadGtag);\n`;
-        script += `        }\n`;
-        script += `        window.addEventListener('scroll', loadGtag, { passive: true, once: true });\n`;
-        script += `        window.addEventListener('pointerdown', loadGtag, { passive: true, once: true });\n`;
-        script += `        window.addEventListener('touchstart', loadGtag, { passive: true, once: true });\n`;
-        script += `        window.addEventListener('keydown', loadGtag, { passive: true, once: true });\n`;
-        script += `        if ('requestIdleCallback' in window) {\n`;
-        script += `          window.requestIdleCallback(function() { setTimeout(loadGtag, 3500); });\n`;
-        script += `        } else {\n`;
-        script += `          setTimeout(loadGtag, 3500);\n`;
-        script += `        }\n`;
-        script += `      })();\n`;
         script += `    </script>`;
 
         return html.replace("<!--google-tag-->", script);

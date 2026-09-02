@@ -43,7 +43,12 @@ function buildChurchSchema(baseUrl: string) {
     "@type": "Church",
     "@id": `${baseUrl}/#organization`,
     name: "Igreja Cristã Evangélica Jardins",
-    alternateName: ["ICE Jardins", "Igreja Evangélica Jardins"],
+    alternateName: [
+      "ICE Jardins",
+      "Igreja Evangélica Jardins",
+      "Igreja Cristã Evangélica Jardim Botânico",
+      "Igreja no Jardim Botânico"
+    ],
     url: `${baseUrl}/`,
     logo: `${baseUrl}/images/logo-ice-jardins-01.webp`,
     image: `${baseUrl}/images/sobre/identidade.webp`,

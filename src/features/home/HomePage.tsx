@@ -31,7 +31,11 @@ export default function HomePage() {
 
   return (
     <>
-      <SeoHead title={site.title} description={site.description} canonicalPath="/" />
+      <SeoHead
+        title="Igreja Cristã Evangélica Jardins | Jardim Botânico - Brasília DF"
+        description={site.description}
+        canonicalPath="/"
+      />
 
       <section className={styles.hero}>
         <div className="container text-center">
