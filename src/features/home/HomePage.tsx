@@ -35,6 +35,7 @@ export default function HomePage() {
         title="Igreja Cristã Evangélica Jardins | Jardim Botânico - Brasília DF"
         description={site.description}
         canonicalPath="/"
+        preloadImage="/images/sobre/identidade.webp"
       />
 
       <section className={styles.hero}>

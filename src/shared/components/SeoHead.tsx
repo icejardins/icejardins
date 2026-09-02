@@ -248,7 +248,7 @@ export function SeoHead({
         href={`${site.baseUrl}/rss.xml`}
       />
       {preloadImage ? (
-        <link rel="preload" as="image" href={preloadImage} />
+        <link rel="preload" as="image" href={preloadImage} fetchPriority="high" />
       ) : null}
       {allSchemas.map((schema, index) => (
         <script key={index} type="application/ld+json">
