@@ -7,14 +7,16 @@ export const giveContent = {
     reference: "2 Coríntios 9:7"
   },
   project: {
-    badge: "Visão & Futuro",
-    title: "Aquisição do Terreno & Construção do Templo",
-    lead:
-      "A ICE Jardins deu um passo significativo de fé: adquirimos o terreno próprio da igreja e estamos honrando o pagamento das cartas de consórcio.",
-    body:
-      "Cremos firmemente que o Senhor proverá cada etapa da construção do nosso templo. Cada contribuição fortalece essa visão, permitindo que a igreja tenha uma sede própria dedicada à adoração, acolhimento de famílias, discipulado de crianças e jovens, e serviço à nossa comunidade.",
-    highlight:
-      "“Pois quem sou eu, e quem é o meu povo, para que pudéssemos contribuir tão generosamente? De ti vêm todas as coisas, e das tuas próprias mãos to damos.” — 1 Crônicas 29:14"
+    badge: "Missão e legado",
+    title: "Para que as próximas gerações conheçam Jesus",
+    paragraphs: [
+      "Nossa missão é aprender, viver e oferecer a vida maravilhosa de Jesus Cristo. Queremos vivê-la hoje e transmiti-la às gerações que virão.",
+      "Queremos ver crianças crescer no conhecimento de Jesus, jovens amadurecer na fé e famílias encontrar acolhimento e cuidado. Queremos formar discípulos que sirvam à comunidade e compartilhem o evangelho com pessoas que ainda não o conhecem.",
+      "Tudo o que fazemos está a serviço dessa missão. Nossa igreja é um lugar para o ensino da Palavra, cuidado de pessoas e para o preparo de uma nova geração que segue Jesus e ensina outros a segui-lo.",
+      "Nossa igreja já tem a propriedade da futura sede e seguimos honrando nossos compromissos. Temos confiança na provisão de Deus e, com responsabilidade no planejamento, estamos preparando os próximos passos para a construção de um espaço onde nossos filhos, seus filhos e muitas outras pessoas encontrem esperança numa comunidade fiel ao evangelho.",
+      "Sua contribuição participa dessa história e ajuda a preparar um espaço para quem ainda vai chegar. O legado que desejamos deixar são vidas alcançadas pelo evangelho, uma fé transmitida com fidelidade e uma comunidade disposta a servir."
+    ],
+    callout: "Participe dessa missão. Contribua para as próximas etapas."
   },
   pix: {
     title: "PIX",

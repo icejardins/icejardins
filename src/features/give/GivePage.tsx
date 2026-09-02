@@ -56,11 +56,17 @@ export default function GivePage() {
           <article className={styles.projectCard}>
             <span className={styles.projectBadge}>{giveContent.project.badge}</span>
             <h2>{giveContent.project.title}</h2>
-            <p className={styles.projectLead}>{giveContent.project.lead}</p>
-            <p className={styles.projectBody}>{giveContent.project.body}</p>
-            <blockquote className={styles.projectHighlight}>
-              {giveContent.project.highlight}
-            </blockquote>
+            {giveContent.project.paragraphs.map((text, idx) => (
+              <p
+                key={idx}
+                className={idx === 0 ? styles.projectLead : styles.projectBody}
+              >
+                {text}
+              </p>
+            ))}
+            <div className={styles.projectHighlight}>
+              <strong>{giveContent.project.callout}</strong>
+            </div>
           </article>
 
           <div className={styles.methodsHeader}>

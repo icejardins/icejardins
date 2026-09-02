@@ -99,14 +99,18 @@
 }
 
 .projectHighlight {
-  background: color-mix(in srgb, var(--background-color) 70%, var(--secondary-background-color));
+  background: color-mix(in srgb, var(--brand-100) 50%, var(--background-color));
   border-radius: 0.8rem;
-  padding: 1rem 1.2rem;
-  font-style: italic;
+  padding: 1.1rem 1.3rem;
   color: var(--text-color);
   border-left: 4px solid var(--brand-600);
-  margin: 0;
-  font-size: 0.98rem;
+  margin-top: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+:global(.dark) .projectHighlight {
+  background: color-mix(in srgb, var(--brand-950) 40%, var(--secondary-background-color));
 }
 
 /* Section Header */
