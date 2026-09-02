@@ -25,9 +25,9 @@ export function PostCard({ post, priority = false }: PostCardProps) {
         </Link>
       ) : null}
       <div className={styles.body}>
-        <h3>
+        <h2>
           <Link to={post.route}>{post.title}</Link>
-        </h3>
+        </h2>
         <p>{post.summary}</p>
       </div>
       <footer className={styles.footer}>

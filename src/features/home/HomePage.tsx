@@ -42,7 +42,7 @@ export default function HomePage() {
         <div className="container text-center">
           <h1>{homeContent.hero.title}</h1>
           <p>{homeContent.hero.subtitle}</p>
-          <a href={homeContent.hero.ctaTarget} className="btn btn-outline-light btn-lg">
+          <a href={homeContent.hero.ctaTarget} className={styles.heroButton}>
             {homeContent.hero.ctaLabel}
           </a>
         </div>
@@ -163,7 +163,7 @@ export default function HomePage() {
                       href={homeContent.location.mapUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="btn btn-sm btn-outline-light d-inline-flex align-items-center gap-2"
+                      className={styles.mapButton}
                     >
                       <Icon name="bi bi-geo-alt" />
                       {homeContent.location.mapLabel}

@@ -1,5 +1,6 @@
 import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
+import purgecss from "@fullhuman/postcss-purgecss";
 import path from "node:path";
 import fs from "node:fs";
 
@@ -106,6 +107,51 @@ function apiDevServer(): Plugin {
 export default defineConfig({
   plugins: [react(), htmlTagInjector(), apiDevServer()],
   publicDir: "static",
+  css: {
+    postcss: {
+      plugins: [
+        purgecss({
+          content: [
+            path.resolve(import.meta.dirname, "index.html"),
+            path.resolve(import.meta.dirname, "src/**/*.{tsx,ts,jsx,js,html}"),
+            path.resolve(import.meta.dirname, "content/**/*.{md,json}"),
+            path.resolve(import.meta.dirname, "scripts/**/*.{mjs,js}")
+          ],
+          safelist: {
+            standard: [
+              /^_.*/,
+              "collapse",
+              "collapsing",
+              "show",
+              "active",
+              "dark",
+              "table",
+              "blockquote",
+              /^nav/,
+              /^modal/,
+              /^carousel/,
+              /^btn/,
+              /^bi/,
+              /^text-/,
+              /^bg-/,
+              /^col-/,
+              /^row/,
+              /^g-/,
+              /^d-/,
+              /^py-/,
+              /^mb-/,
+              /^ms-/,
+              /^me-/,
+              /^container/
+            ],
+            deep: [/^_.*/, /^dark/, /^data-theme/, /^carousel/],
+            greedy: [/^_.*/]
+          },
+          defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || []
+        })
+      ]
+    }
+  },
   ssr: {
     noExternal: ["react-helmet-async"]
   },
