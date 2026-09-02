@@ -84,6 +84,22 @@ function buildChurchSchema(baseUrl: string) {
       },
       {
         "@type": "AdministrativeArea",
+        name: "Jardins Mangueiral, Brasília - DF"
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: "Tororó, Brasília - DF"
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: "Altiplano Leste, Brasília - DF"
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: "São Bartolomeu, Brasília - DF"
+      },
+      {
+        "@type": "AdministrativeArea",
         name: "Lago Sul, Brasília - DF"
       },
       {

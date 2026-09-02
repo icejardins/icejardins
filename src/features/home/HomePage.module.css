@@ -177,6 +177,7 @@
   margin-bottom: 0.8rem;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  font-style: normal;
 }
 
 .locationCard h3 {
@@ -188,6 +189,13 @@
 .locationCard p {
   margin-bottom: 0;
   line-height: 1.6;
+}
+
+.regionNote {
+  margin-top: 0.5rem;
+  opacity: 0.9;
+  border-top: 1px dashed rgba(255, 255, 255, 0.2);
+  padding-top: 0.4rem;
 }
 
 .locationCard a {
@@ -206,9 +214,10 @@
   margin-bottom: 0.5rem;
 }
 
-.closing h4 {
+.closingInvitation {
   margin: 0;
   font-weight: 700;
+  font-size: 1.25rem;
 }
 
 :global(.dark) .worshipSection {

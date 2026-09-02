@@ -56,6 +56,7 @@ export const homeContent = {
   location: {
     title: "Como Chegar à ICE Jardins (Jardim Botânico)",
     place: "Auditório do Colégio In-Nova",
+    regionNote: "Acolhendo famílias do Jardim Botânico, Jardins Mangueiral, Tororó, Altiplano Leste, São Bartolomeu e Lago Sul.",
     details: [
       "(antigo COC Jardim Botânico)",
       "Condomínio Estância Jardim Botânico II",

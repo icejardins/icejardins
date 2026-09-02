@@ -141,7 +141,7 @@ export default function HomePage() {
 
             <div className="col-lg-6 offset-lg-1">
               <h2>{homeContent.location.title}</h2>
-              <article className={styles.locationCard}>
+              <address className={styles.locationCard}>
                 <h3>{homeContent.location.place}</h3>
                 <p>
                   {homeContent.location.details.map((line) => (
@@ -151,8 +151,13 @@ export default function HomePage() {
                     </span>
                   ))}
                 </p>
-              </article>
-              <article className={styles.locationCard}>
+                {homeContent.location.regionNote ? (
+                  <p className={styles.regionNote}>
+                    <small>{homeContent.location.regionNote}</small>
+                  </p>
+                ) : null}
+              </address>
+              <address className={styles.locationCard}>
                 <h3>E-mail</h3>
                 <p>
                   <a
@@ -162,13 +167,13 @@ export default function HomePage() {
                     {homeContent.location.email}
                   </a>
                 </p>
-              </article>
+              </address>
             </div>
           </div>
 
           <div className={styles.closing}>
             <h3>{homeContent.closing.quote}</h3>
-            <h4>{homeContent.closing.invitation}</h4>
+            <p className={styles.closingInvitation}>{homeContent.closing.invitation}</p>
           </div>
         </div>
       </section>
