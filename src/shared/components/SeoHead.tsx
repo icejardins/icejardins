@@ -208,10 +208,6 @@ export function SeoHead({
       <meta name="geo.placename" content="Jardim Botânico, Brasília - DF" />
       <meta name="geo.position" content="-15.8797754;-47.8128996" />
       <meta name="ICBM" content="-15.8797754, -47.8128996" />
-      <meta
-        name="keywords"
-        content="Igreja Cristã Evangélica, ICE Jardins, Igreja no Jardim Botânico, Igreja Evangélica Brasília, Culto de Domingo Jardim Botânico, Colégio In-Nova Jardim Botânico, Igreja Brasília DF, Jardim Botânico DF"
-      />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content={site.title} />
       <meta property="og:title" content={title} />
