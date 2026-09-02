@@ -156,6 +156,19 @@ export default function HomePage() {
                     <small>{homeContent.location.regionNote}</small>
                   </p>
                 ) : null}
+                {homeContent.location.mapUrl ? (
+                  <p className="mt-3 mb-0">
+                    <a
+                      href={homeContent.location.mapUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn btn-sm btn-outline-light d-inline-flex align-items-center gap-2"
+                    >
+                      <Icon name="bi bi-geo-alt" />
+                      {homeContent.location.mapLabel}
+                    </a>
+                  </p>
+                ) : null}
               </address>
               <address className={styles.locationCard}>
                 <h3>E-mail</h3>
