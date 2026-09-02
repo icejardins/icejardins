@@ -126,10 +126,17 @@ async function main() {
       html = html.replace("</head>", `${headTags}\n  </head>`);
     }
 
+    // Strip metadata and scripts out of appHtml so #root contains only valid body markup
+    const cleanAppHtml = appHtml
+      .replace(/<title[^>]*>[\s\S]*?<\/title>/gi, "")
+      .replace(/<meta\s+[^>]*\/?>/gi, "")
+      .replace(/<link\s+[^>]*\/?>/gi, "")
+      .replace(/<script(?:\s+[^>]*)?>[\s\S]*?<\/script>/gi, "");
+
     if (html.includes("<!--app-html-->")) {
-      html = html.replace("<!--app-html-->", appHtml);
+      html = html.replace("<!--app-html-->", cleanAppHtml);
     } else {
-      html = html.replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`);
+      html = html.replace('<div id="root"></div>', `<div id="root">${cleanAppHtml}</div>`);
     }
 
     const outputPath =
