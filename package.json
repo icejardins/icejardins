@@ -11,6 +11,7 @@
     "build:ssr": "vite build --ssr src/entry-server.tsx --outDir dist-ssr",
     "prerender": "node scripts/prerender.mjs",
     "build": "npm run build:content && npm run build:search-index && npm run build:client && npm run build:ssr && npm run prerender",
+    "optimize:images": "node scripts/optimize-images.mjs",
     "preview": "vite preview",
     "check": "tsc --noEmit",
     "postinstall": "npm run build:content"
@@ -36,6 +37,7 @@
     "remark": "^15.0.1",
     "remark-gfm": "^4.0.1",
     "remark-rehype": "^11.1.2",
+    "sharp": "^0.35.4",
     "toml": "^5.0.0",
     "typescript": "^7.0.2",
     "unist-util-visit": "^5.1.0",
