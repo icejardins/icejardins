@@ -1,0 +1,12 @@
+# Igreja Cristã Evangélica Jardins (ICE Jardins)
+
+> Comunidade cristã evangélica localizada no Jardim Botânico em Brasília - DF, dedicada à adoração a Deus, comunhão cristã e pregação expositiva da Bíblia Sagrada.
+
+## Páginas Principais
+
+- [Início](https://icejardins.org.br/): Apresentação da comunidade, valores, horários e boas-vindas.
+- [Planeje sua Visita](https://icejardins.org.br/visita/): Informações práticas para visitantes, localização no Colégio In-Nova, programação e ministério infantil.
+- [No que Cremos](https://icejardins.org.br/fe/): Declaração de fé e fundamentos doutrinários e teológicos.
+- [Sermões e Mensagens Bíblicas](https://icejardins.org.br/posts/): Arquivo de pregações expositivas com textos e vídeos integrados.
+- [Recursos e E-books Gratuitos](https://icejardins.org.br/recursos/): Materiais devocionais, guias práticos e estudos bíblicos para download gratuito.
+- [Contribuições e Doações](https://icejardins.org.br/contribuir/): Formas de apoiar o ministério local e o projeto de construção do templo via PIX, transferência bancária e internacional.

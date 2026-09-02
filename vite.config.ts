@@ -20,7 +20,6 @@ function htmlTagInjector(): Plugin {
         }
 
         let script = `\n    <!-- Google tag (gtag.js) -->\n`;
-        script += `    <script async src="https://www.googletagmanager.com/gtag/js?id=${primaryId}"></script>\n`;
         script += `    <script>\n`;
         script += `      window.dataLayer = window.dataLayer || [];\n`;
         script += `      function gtag(){window.dataLayer.push(arguments);}\n`;
@@ -32,6 +31,26 @@ function htmlTagInjector(): Plugin {
         if (gadsId) {
           script += `      gtag('config', '${gadsId}');\n`;
         }
+
+        script += `      (function(){\n`;
+        script += `        var loaded = false;\n`;
+        script += `        function load(){\n`;
+        script += `          if (loaded) return;\n`;
+        script += `          loaded = true;\n`;
+        script += `          var s = document.createElement('script');\n`;
+        script += `          s.async = true;\n`;
+        script += `          s.src = 'https://www.googletagmanager.com/gtag/js?id=${primaryId}';\n`;
+        script += `          document.head.appendChild(s);\n`;
+        script += `        }\n`;
+        script += `        if ('requestIdleCallback' in window) {\n`;
+        script += `          requestIdleCallback(function(){ setTimeout(load, 1500); });\n`;
+        script += `        } else {\n`;
+        script += `          setTimeout(load, 2500);\n`;
+        script += `        }\n`;
+        script += `        ['touchstart','scroll','mousemove','click'].forEach(function(e){\n`;
+        script += `          window.addEventListener(e, load, { once: true, passive: true });\n`;
+        script += `        });\n`;
+        script += `      })();\n`;
         script += `    </script>`;
 
         return html.replace("<!--google-tag-->", script);

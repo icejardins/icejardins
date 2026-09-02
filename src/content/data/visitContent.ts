@@ -26,7 +26,7 @@ export const visitContent = {
       title: "Escola Bíblica",
       place: "Diversas Salas",
       description: "Salas temáticas para adultos e EBD especial para cada idade das crianças.",
-      accent: "#2E8B90"
+      accent: "#1E757A"
     }
   ],
   details: {
