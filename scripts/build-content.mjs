@@ -498,7 +498,13 @@ async function main() {
         lastmod = latestPostDate;
         changefreq = "daily";
         priority = "1.0";
-      } else if (cleanedRoute === "/visita/" || cleanedRoute === "/fe/" || cleanedRoute === "/recursos/" || cleanedRoute.startsWith("/recursos/")) {
+      } else if (
+        cleanedRoute === "/visita/" ||
+        cleanedRoute === "/fe/" ||
+        cleanedRoute === "/contribuir/" ||
+        cleanedRoute === "/recursos/" ||
+        cleanedRoute.startsWith("/recursos/")
+      ) {
         lastmod = todayIso;
         changefreq = "weekly";
         priority = "0.9";
