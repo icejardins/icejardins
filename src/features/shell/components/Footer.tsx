@@ -1,10 +1,6 @@
 import { Link, useLocation } from "react-router";
-import {
-  getRecentPosts,
-  getRecentResources,
-  getSiteConfig
-} from "@/content/repositories/contentRepository";
-import { formatDate } from "@/core/utils/formatDate";
+import { getSiteConfig } from "@/content/repositories/contentRepository";
+import { Icon } from "@/shared/components/Icon";
 import { trackAdsConversion } from "@/shared/utils/analytics";
 import styles from "./Footer.module.css";
 
@@ -13,135 +9,201 @@ export function Footer() {
   const location = useLocation();
 
   const isEnglish = location.pathname.startsWith("/en");
-  const isResourcesRoute = location.pathname.startsWith("/recursos");
-  const recentPosts = getRecentPosts(3);
-  const recentResources = getRecentResources(3);
-
-  const showResources = isResourcesRoute && recentResources.length > 0;
-  const recentItems = showResources
-    ? recentResources.map((res) => ({
-        slug: res.slug,
-        title: res.title,
-        route: res.route,
-        image: res.image,
-        summary: res.summary || res.description,
-        date: res.date,
-        actionLabel: res.actionType === "lead-form" || res.pdfUrl ? "Baixar" : "Acessar",
-        isResource: true
-      }))
-    : recentPosts.map((post) => ({
-        slug: post.slug,
-        title: post.title,
-        route: post.route,
-        image: post.image,
-        summary: post.summary,
-        date: post.date,
-        actionLabel: isEnglish ? "Read" : "Ler",
-        isResource: false
-      }));
-
-  const sectionTitle = isEnglish
-    ? "Recent Publications"
-    : showResources
-      ? "Recursos recentes"
-      : "Publicações recentes";
 
   return (
     <footer className={styles.footer}>
-      {recentItems.length > 0 ? (
-        <section className="container py-5" aria-label={sectionTitle}>
-          <h2 className={styles.recentTitle}>{sectionTitle}</h2>
-          <div className="row g-4">
-            {recentItems.map((item) => (
-              <div key={item.slug} className="col-lg-4 col-md-6">
-                <article className={styles.postCard}>
-                  {item.image ? (
-                    item.isResource ? (
-                      <div className={styles.resourceImageWrap}>
-                        <img
-                          src={item.image}
-                          alt={item.title}
-                          width={370}
-                          height={480}
-                          className={styles.resourceImage}
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </div>
-                    ) : (
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        width={400}
-                        height={225}
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    )
-                  ) : null}
-                  <div className={styles.postBody}>
-                    <h3>
-                      <Link to={item.route}>{item.title}</Link>
-                    </h3>
-                    <p>{item.summary}</p>
-                  </div>
-                  <div className={styles.postMeta}>
-                    <span>{formatDate(item.date)}</span>
-                    <Link to={item.route}>{item.actionLabel}</Link>
-                  </div>
-                </article>
+      <div className="container py-5">
+        <div className="row g-4">
+          {/* Coluna 1: Identidade da Igreja e WhatsApp */}
+          <div className="col-lg-4 col-md-6">
+            <div className={styles.brandCol}>
+              <div className={styles.brandLogo}>
+                <img
+                  src="/images/logo-ice-jardins-01.webp"
+                  alt="ICE Jardins"
+                  width={48}
+                  height={20}
+                />
+                <span className={styles.brandName}>ICE Jardins</span>
               </div>
-            ))}
-          </div>
-        </section>
-      ) : null}
-
-      <section className={styles.bottom}>
-        <div className="container py-4 d-flex flex-column flex-lg-row align-items-center justify-content-between gap-3">
-          <div className="d-flex align-items-center gap-2">
-            <img src="/images/logo-ice-jardins-01.webp" alt="ICE Jardins" width={36} height={15} />
-            <span>
-              © {new Date().getFullYear()} {site.title}
-            </span>
-          </div>
-          <div className={styles.footerLinks}>
-            {isEnglish ? (
-              <>
-                <Link to="/en/give/">Give</Link>
-                <Link to="/en/faith/">What We Believe</Link>
-                <Link to="/privacy/">Privacy Policy</Link>
-                <Link to="/terms/">Terms of Service</Link>
-              </>
-            ) : (
-              <>
-                <Link to="/contribuir/">Contribua</Link>
-                <Link to="/privacy/">Política de Privacidade</Link>
-                <Link to="/terms/">Termos de Serviço</Link>
-              </>
-            )}
-            {site.social.facebook ? (
-              <a href={site.social.facebook} target="_blank" rel="noreferrer">
-                Facebook
-              </a>
-            ) : null}
-            {site.social.instagram ? (
-              <a href={site.social.instagram} target="_blank" rel="noreferrer">
-                Instagram
-              </a>
-            ) : null}
-            {site.social.whatsapp ? (
+              <p className={styles.brandDesc}>
+                {isEnglish
+                  ? "Evangelical Christian Church in Jardim Botânico, Brasília - DF. A biblical community dedicated to teaching God's Word, fellowship, and worship."
+                  : "Igreja Cristã Evangélica no Jardim Botânico, Brasília - DF. Uma comunidade dedicada ao ensino da Bíblia, à comunhão e à adoração a Deus."}
+              </p>
               <a
-                href={site.social.whatsapp}
+                href="https://wa.me/5561982624952"
                 target="_blank"
                 rel="noreferrer"
+                className={styles.whatsAppBtn}
                 onClick={() => trackAdsConversion()}
               >
-                WhatsApp
+                <Icon name="whatsapp" className={styles.whatsAppIcon} />
+                <span>(61) 98262-4952 · {isEnglish ? "Chat on WhatsApp" : "Falar no WhatsApp"}</span>
               </a>
-            ) : null}
+            </div>
+          </div>
+
+          {/* Coluna 2: Horários dos Cultos */}
+          <div className="col-lg-3 col-md-6">
+            <h3 className={styles.colTitle}>
+              {isEnglish ? "Service Times" : "Horários dos Cultos"}
+            </h3>
+            <ul className={styles.serviceList}>
+              <li>
+                <div className={styles.serviceItem}>
+                  <Icon name="clock" className={styles.itemIcon} />
+                  <div>
+                    <strong>{isEnglish ? "Worship Service" : "Culto Inspirativo"}</strong>
+                    <span>{isEnglish ? "Sundays at 9:30 AM" : "Domingos às 9h30"}</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div className={styles.serviceItem}>
+                  <Icon name="book" className={styles.itemIcon} />
+                  <div>
+                    <strong>
+                      {isEnglish ? "Sunday School & Kids" : "Escola Dominical & Infantil"}
+                    </strong>
+                    <span>{isEnglish ? "Sundays at 11:00 AM" : "Domingos às 11h00"}</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <Link to="/visita/" className={styles.visitLink}>
+              {isEnglish ? "Plan your visit →" : "Planeje sua visita →"}
+            </Link>
+          </div>
+
+          {/* Coluna 3: Endereço no Jardim Botânico */}
+          <div className="col-lg-3 col-md-6">
+            <h3 className={styles.colTitle}>
+              {isEnglish ? "Where We Meet" : "No Jardim Botânico"}
+            </h3>
+            <div className={styles.locationInfo}>
+              <div className={styles.locationItem}>
+                <Icon name="geo-alt" className={styles.itemIcon} />
+                <div>
+                  <strong>Auditório do Colégio In-Nova</strong>
+                  <p className={styles.addressText}>
+                    (antigo COC Jardim Botânico)
+                    <br />
+                    Condomínio Estância Jardim Botânico II
+                    <br />
+                    Brasília — DF, CEP 71686-301
+                  </p>
+                </div>
+              </div>
+              <a
+                href="https://maps.app.goo.gl/ddMo7kUUDr6fHYyX9"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.mapLink}
+              >
+                <Icon name="compass" />
+                {isEnglish ? "Open in Google Maps / Waze →" : "Abrir no Google Maps / Waze →"}
+              </a>
+            </div>
+          </div>
+
+          {/* Coluna 4: Links Rápidos */}
+          <div className="col-lg-2 col-md-6">
+            <h3 className={styles.colTitle}>
+              {isEnglish ? "Quick Links" : "Links Rápidos"}
+            </h3>
+            <ul className={styles.quickLinks}>
+              <li>
+                <Link to={isEnglish ? "/en/" : "/"}>
+                  {isEnglish ? "Home" : "Início"}
+                </Link>
+              </li>
+              <li>
+                <Link to={isEnglish ? "/en/faith/" : "/fe/"}>
+                  {isEnglish ? "What We Believe" : "No que cremos"}
+                </Link>
+              </li>
+              <li>
+                <Link to="/visita/">
+                  {isEnglish ? "Visit Us" : "Visita"}
+                </Link>
+              </li>
+              <li>
+                <Link to="/posts/">
+                  {isEnglish ? "Sermons" : "Sermões"}
+                </Link>
+              </li>
+              <li>
+                <Link to="/recursos/">
+                  {isEnglish ? "Resources" : "Recursos"}
+                </Link>
+              </li>
+              <li>
+                <Link to={isEnglish ? "/en/give/" : "/contribuir/"}>
+                  {isEnglish ? "Give" : "Contribua"}
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* Barra Inferior */}
+      <div className={styles.bottomBar}>
+        <div className="container py-3 d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+          <p className={styles.copyright}>
+            © {new Date().getFullYear()} {site.title}.{" "}
+            {isEnglish ? "All rights reserved." : "Todos os direitos reservados."}
+          </p>
+          <div className={styles.legalAndSocial}>
+            <div className={styles.legalLinks}>
+              <Link to="/privacy/">
+                {isEnglish ? "Privacy Policy" : "Política de Privacidade"}
+              </Link>
+              <span>·</span>
+              <Link to="/terms/">
+                {isEnglish ? "Terms of Service" : "Termos de Serviço"}
+              </Link>
+            </div>
+            <div className={styles.socialLinks}>
+              {site.social.instagram ? (
+                <a
+                  href={site.social.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.socialIcon}
+                  aria-label="Instagram"
+                >
+                  <Icon name="instagram" />
+                </a>
+              ) : null}
+              {site.social.facebook ? (
+                <a
+                  href={site.social.facebook}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.socialIcon}
+                  aria-label="Facebook"
+                >
+                  <Icon name="facebook" />
+                </a>
+              ) : null}
+              {site.social.whatsapp ? (
+                <a
+                  href={site.social.whatsapp}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.socialIcon}
+                  onClick={() => trackAdsConversion()}
+                  aria-label="WhatsApp"
+                >
+                  <Icon name="whatsapp" />
+                </a>
+              ) : null}
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 }

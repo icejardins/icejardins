@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 import { SeoHead } from "@/shared/components/SeoHead";
 import { Icon } from "@/shared/components/Icon";
-import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
+import { getSiteConfig, getRecentPosts } from "@/content/repositories/contentRepository";
+import { formatDate } from "@/core/utils/formatDate";
 import { homeContent } from "@/content/data/homeContent";
 import { trackAdsConversion } from "@/shared/utils/analytics";
 import styles from "./HomePage.module.css";
@@ -19,6 +21,7 @@ const aboutCarouselImages = [
 
 export default function HomePage() {
   const site = getSiteConfig();
+  const recentPosts = getRecentPosts(3);
   const [activeAboutImage, setActiveAboutImage] = useState(0);
 
   useEffect(() => {
@@ -120,6 +123,68 @@ export default function HomePage() {
           loading="lazy"
         />
       </section>
+
+      {recentPosts.length > 0 ? (
+        <section className={`${styles.sectionSpace} ${styles.sermonsSection}`}>
+          <div className="container">
+            <div className={styles.sermonsHeader}>
+              <h2>Últimos Sermões</h2>
+              <p>
+                Mensagens bíblicas expositivas pregadas aos domingos para edificar sua vida e sua família.
+              </p>
+            </div>
+
+            <div className="row g-4">
+              {recentPosts.map((post) => (
+                <div key={post.slug} className="col-lg-4 col-md-6">
+                  <article className={styles.sermonCard}>
+                    {post.image ? (
+                      <Link to={post.route} className={styles.sermonImageWrap}>
+                        <img
+                          src={post.image}
+                          alt={post.title}
+                          width={400}
+                          height={225}
+                          className={styles.sermonImage}
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </Link>
+                    ) : null}
+
+                    <div className={styles.sermonBody}>
+                      <div className={styles.sermonMeta}>
+                        <span className={styles.sermonBadge}>Sermão</span>
+                        <span>{formatDate(post.date)}</span>
+                      </div>
+
+                      <h3 className={styles.sermonTitle}>
+                        <Link to={post.route}>{post.title}</Link>
+                      </h3>
+
+                      {post.summary ? (
+                        <p className={styles.sermonSummary}>{post.summary}</p>
+                      ) : null}
+                    </div>
+
+                    <div className={styles.sermonFooter}>
+                      <Link to={post.route} className={styles.sermonAction}>
+                        Ler sermão →
+                      </Link>
+                    </div>
+                  </article>
+                </div>
+              ))}
+            </div>
+
+            <div className={styles.allSermonsWrap}>
+              <Link to="/posts/" className={styles.allSermonsButton}>
+                Ver todos os sermões →
+              </Link>
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section className={`${styles.sectionSpace} ${styles.worshipSection}`}>
         <div className="container">
