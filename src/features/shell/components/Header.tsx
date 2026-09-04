@@ -35,6 +35,7 @@ export function Header() {
     ? [
         { name: "Home", url: "/en/" },
         { name: "About", url: "/en/#about" },
+        { name: "What We Believe", url: "/en/faith/" },
         { name: "Visit", url: "/visita/" },
         { name: "Give", url: "/en/give/" }
       ]
@@ -45,12 +46,16 @@ export function Header() {
     if (targetLang === "en") {
       if (location.pathname.startsWith("/contribuir") || location.pathname.startsWith("/doacoes") || location.pathname.startsWith("/doe")) {
         navigate("/en/give/");
+      } else if (location.pathname.startsWith("/fe")) {
+        navigate("/en/faith/");
       } else {
         navigate("/en/");
       }
     } else {
       if (location.pathname.startsWith("/en/give")) {
         navigate("/contribuir/");
+      } else if (location.pathname.startsWith("/en/faith")) {
+        navigate("/fe/");
       } else {
         navigate("/");
       }

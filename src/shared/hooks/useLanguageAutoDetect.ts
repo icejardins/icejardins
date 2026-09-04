@@ -19,6 +19,8 @@ export function useLanguageAutoDetect() {
         navigate("/en/", { replace: true });
       } else if (pathname === "/contribuir" || pathname === "/contribua" || pathname === "/doacoes" || pathname === "/doe") {
         navigate("/en/give/", { replace: true });
+      } else if (pathname === "/fe") {
+        navigate("/en/faith/", { replace: true });
       }
     }
   }, [location.pathname, navigate]);

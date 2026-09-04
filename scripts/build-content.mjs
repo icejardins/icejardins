@@ -281,7 +281,7 @@ async function main() {
 
     pages.push({
       slug,
-      route: normalizeRoute(buildPageRoute(slug)),
+      route: normalizeRoute(parsed.data.route ?? buildPageRoute(slug)),
       title: String(parsed.data.title ?? slug),
       description: String(parsed.data.description ?? buildSummary(plainText)),
       layout: parsed.data.layout ? String(parsed.data.layout) : null,
@@ -442,6 +442,7 @@ async function main() {
     "/",
     "/en/",
     "/en/give/",
+    "/en/faith/",
     "/posts/",
     "/recursos/",
     "/contribuir/",
@@ -516,6 +517,7 @@ async function main() {
         cleanedRoute === "/contribuir/" ||
         cleanedRoute === "/en/" ||
         cleanedRoute === "/en/give/" ||
+        cleanedRoute === "/en/faith/" ||
         cleanedRoute === "/recursos/" ||
         cleanedRoute.startsWith("/recursos/")
       ) {

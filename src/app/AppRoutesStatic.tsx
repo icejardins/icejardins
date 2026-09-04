@@ -3,6 +3,7 @@ import HomePage from "@/features/home/HomePage";
 import HomePageEn from "@/features/home/HomePageEn";
 import VisitPage from "@/features/visit/VisitPage";
 import FaithPage from "@/features/faith/FaithPage";
+import FaithPageEn from "@/features/faith/FaithPageEn";
 import BlogListPage from "@/features/blog/BlogListPage";
 import BlogPostPage from "@/features/blog/BlogPostPage";
 import TaxonomyPage from "@/features/blog/TaxonomyPage";
@@ -30,6 +31,7 @@ export function AppRoutesStatic() {
         <Route path="landing" element={<Navigate to="/recursos/" replace />} />
         <Route path="contribua" element={<Navigate to="/contribuir/" replace />} />
         <Route path="give" element={<Navigate to="/en/give/" replace />} />
+        <Route path="faith" element={<Navigate to="/en/faith/" replace />} />
         <Route path="recursos/:slug" element={<ResourcePage />} />
         <Route path="recursos/:slug/obrigado" element={<ResourceThankYouPage />} />
         <Route path="obrigado-guia" element={<ResourceThankYouPage defaultSlug="quando-a-cabeca-nao-para" />} />
@@ -38,6 +40,8 @@ export function AppRoutesStatic() {
           <Route index element={<HomePage />} />
           <Route path="en" element={<HomePageEn />} />
           <Route path="en/give" element={<GivePageEn />} />
+          <Route path="en/faith" element={<FaithPageEn />} />
+          <Route path="en/fe" element={<Navigate to="/en/faith/" replace />} />
           <Route path="en/contribuir" element={<Navigate to="/en/give/" replace />} />
           <Route path="en/contribua" element={<Navigate to="/en/give/" replace />} />
           <Route path="visita" element={<VisitPage />} />

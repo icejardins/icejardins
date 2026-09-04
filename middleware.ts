@@ -2,17 +2,20 @@ export default function middleware(request: Request) {
   const url = new URL(request.url);
   const pathname = url.pathname.replace(/\/+$/, "") || "/";
 
-  // Only consider root ("/") and contribution routes
+  // Only consider root ("/"), contribution, and faith routes
   const isRoot = pathname === "/";
   const isContribute =
     pathname === "/contribuir" ||
     pathname === "/contribua" ||
     pathname === "/doacoes" ||
     pathname === "/doe";
+  const isFaith = pathname === "/fe";
 
-  if (!isRoot && !isContribute) {
+  if (!isRoot && !isContribute && !isFaith) {
     return;
   }
+
+  const dest = isRoot ? "/en/" : isFaith ? "/en/faith/" : "/en/give/";
 
   // 1. Check user explicit cookie preference
   const cookieHeader = request.headers.get("cookie") || "";
@@ -23,14 +26,12 @@ export default function middleware(request: Request) {
     return; // User explicitly prefers Portuguese
   }
   if (pref === "en") {
-    const dest = isRoot ? "/en/" : "/en/give/";
     return Response.redirect(new URL(dest, request.url), 307);
   }
 
   // 2. Check Accept-Language header
   const acceptLanguage = request.headers.get("accept-language") || "";
   if (checkEnglishPreference(acceptLanguage)) {
-    const dest = isRoot ? "/en/" : "/en/give/";
     return Response.redirect(new URL(dest, request.url), 307);
   }
 
@@ -71,6 +72,8 @@ export const config = {
     "/doacoes",
     "/doacoes/",
     "/doe",
-    "/doe/"
+    "/doe/",
+    "/fe",
+    "/fe/"
   ]
 };

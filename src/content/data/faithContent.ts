@@ -1,4 +1,4 @@
-﻿export const faithIntro = {
+export const faithIntro = {
   heroTitle: "No que cremos?",
   heroSubtitle: "A Confissão de Fé da Igreja Cristã Evangélica do Brasil.",
   heroHighlight: "Você tem o direito de saber em que cremos.",
@@ -8,3 +8,15 @@
     "Boas igrejas possuem confissões de fé e as publicam... Fica a dica."
   ]
 };
+
+export const faithIntroEn = {
+  heroTitle: "What We Believe",
+  heroSubtitle: "The Confession of Faith of the Evangelical Christian Church of Brazil (ICEB).",
+  heroHighlight: "You have the right to know what we believe.",
+  intro: [
+    "A confession of faith is an honest, transparent way to declare what a church community believes.",
+    "The Bible holds higher authority than any confession of faith. A confession is simply a summary of how a church interprets the Scriptures, helping us walk in unity regarding the central truths of the Christian faith.",
+    "Healthy churches have confessions of faith and publish them openly... Food for thought."
+  ]
+};
+

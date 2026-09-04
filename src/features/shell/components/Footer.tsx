@@ -12,6 +12,7 @@ export function Footer() {
   const site = getSiteConfig();
   const location = useLocation();
 
+  const isEnglish = location.pathname.startsWith("/en");
   const isResourcesRoute = location.pathname.startsWith("/recursos");
   const recentPosts = getRecentPosts(3);
   const recentResources = getRecentResources(3);
@@ -35,11 +36,15 @@ export function Footer() {
         image: post.image,
         summary: post.summary,
         date: post.date,
-        actionLabel: "Ler",
+        actionLabel: isEnglish ? "Read" : "Ler",
         isResource: false
       }));
 
-  const sectionTitle = showResources ? "Recursos recentes" : "Publicações recentes";
+  const sectionTitle = isEnglish
+    ? "Recent Publications"
+    : showResources
+      ? "Recursos recentes"
+      : "Publicações recentes";
 
   return (
     <footer className={styles.footer}>
@@ -100,9 +105,20 @@ export function Footer() {
             </span>
           </div>
           <div className={styles.footerLinks}>
-            <Link to="/contribuir/">Contribua</Link>
-            <Link to="/privacy/">Política de Privacidade</Link>
-            <Link to="/terms/">Termos de Serviço</Link>
+            {isEnglish ? (
+              <>
+                <Link to="/en/give/">Give</Link>
+                <Link to="/en/faith/">What We Believe</Link>
+                <Link to="/privacy/">Privacy Policy</Link>
+                <Link to="/terms/">Terms of Service</Link>
+              </>
+            ) : (
+              <>
+                <Link to="/contribuir/">Contribua</Link>
+                <Link to="/privacy/">Política de Privacidade</Link>
+                <Link to="/terms/">Termos de Serviço</Link>
+              </>
+            )}
             {site.social.facebook ? (
               <a href={site.social.facebook} target="_blank" rel="noreferrer">
                 Facebook

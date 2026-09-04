@@ -9,6 +9,7 @@ const HomePage = lazy(() => import("@/features/home/HomePage"));
 const HomePageEn = lazy(() => import("@/features/home/HomePageEn"));
 const VisitPage = lazy(() => import("@/features/visit/VisitPage"));
 const FaithPage = lazy(() => import("@/features/faith/FaithPage"));
+const FaithPageEn = lazy(() => import("@/features/faith/FaithPageEn"));
 const BlogListPage = lazy(() => import("@/features/blog/BlogListPage"));
 const BlogPostPage = lazy(() => import("@/features/blog/BlogPostPage"));
 const TaxonomyPage = lazy(() => import("@/features/blog/TaxonomyPage"));
@@ -37,6 +38,7 @@ export function AppRoutes() {
           <Route path="landing" element={<Navigate to="/recursos/" replace />} />
           <Route path="contribua" element={<Navigate to="/contribuir/" replace />} />
           <Route path="give" element={<Navigate to="/en/give/" replace />} />
+          <Route path="faith" element={<Navigate to="/en/faith/" replace />} />
           <Route path="recursos/:slug" element={<ResourcePage />} />
           <Route path="recursos/:slug/obrigado" element={<ResourceThankYouPage />} />
           <Route path="obrigado-guia" element={<ResourceThankYouPage defaultSlug="quando-a-cabeca-nao-para" />} />
@@ -45,6 +47,8 @@ export function AppRoutes() {
             <Route index element={<HomePage />} />
             <Route path="en" element={<HomePageEn />} />
             <Route path="en/give" element={<GivePageEn />} />
+            <Route path="en/faith" element={<FaithPageEn />} />
+            <Route path="en/fe" element={<Navigate to="/en/faith/" replace />} />
             <Route path="en/contribuir" element={<Navigate to="/en/give/" replace />} />
             <Route path="en/contribua" element={<Navigate to="/en/give/" replace />} />
             <Route path="visita" element={<VisitPage />} />
