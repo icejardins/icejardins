@@ -168,9 +168,23 @@ export function Header() {
                   type="button"
                   className={styles.themeButton}
                   onClick={toggleTheme}
-                  aria-label={`Alternar tema. Tema atual: ${theme}`}
+                  aria-label={
+                    theme === "dark"
+                      ? isEnglish
+                        ? "Light theme - Toggle theme"
+                        : "Tema Claro - Alternar tema"
+                      : isEnglish
+                        ? "Dark theme - Toggle theme"
+                        : "Tema Escuro - Alternar tema"
+                  }
                 >
-                  {theme === "dark" ? "Claro" : "Escuro"}
+                  {theme === "dark"
+                    ? isEnglish
+                      ? "Light"
+                      : "Claro"
+                    : isEnglish
+                      ? "Dark"
+                      : "Escuro"}
                 </button>
               </li>
               <li className="nav-item d-flex align-items-center">
@@ -179,7 +193,7 @@ export function Header() {
                     type="button"
                     className={`${styles.langBtn} ${!isEnglish ? styles.langBtnActive : ""}`}
                     onClick={() => handleLanguageChange("pt")}
-                    aria-label="Versão em Português"
+                    aria-label="PT - Versão em Português"
                   >
                     PT
                   </button>
@@ -187,7 +201,7 @@ export function Header() {
                     type="button"
                     className={`${styles.langBtn} ${isEnglish ? styles.langBtnActive : ""}`}
                     onClick={() => handleLanguageChange("en")}
-                    aria-label="English version"
+                    aria-label="EN - English version"
                   >
                     EN
                   </button>
@@ -196,13 +210,13 @@ export function Header() {
             </ul>
             <div className={styles.searchBox}>
               <label htmlFor="site-search" className="visually-hidden">
-                Buscar conteúdo
+                {isEnglish ? "Search content" : "Buscar conteúdo"}
               </label>
               <input
                 id="site-search"
                 type="search"
                 className="form-control"
-                placeholder="Buscar sermões e páginas"
+                placeholder={isEnglish ? "Search sermons and pages" : "Buscar sermões e páginas"}
                 value={query}
                 onFocus={handleSearchInteraction}
                 onPointerDown={handleSearchInteraction}
@@ -217,11 +231,23 @@ export function Header() {
       </nav>
 
       {showSearch ? (
-        <section className={styles.searchResults} aria-live="polite" aria-label="Resultados da busca">
+        <section
+          className={styles.searchResults}
+          aria-live="polite"
+          aria-label={isEnglish ? "Search results" : "Resultados da busca"}
+        >
           <div className="container py-3">
-            {!isSearchReady ? <p className="mb-0">Carregando índice de busca...</p> : null}
+            {!isSearchReady ? (
+              <p className="mb-0">
+                {isEnglish ? "Loading search index..." : "Carregando índice de busca..."}
+              </p>
+            ) : null}
             {isSearchReady && filteredResults.length === 0 ? (
-              <p className="mb-0">Nenhum resultado encontrado para “{query}”.</p>
+              <p className="mb-0">
+                {isEnglish
+                  ? `No results found for “${query}”.`
+                  : `Nenhum resultado encontrado para “${query}”.`}
+              </p>
             ) : null}
             {filteredResults.length > 0 ? (
               <ul className={styles.searchList}>

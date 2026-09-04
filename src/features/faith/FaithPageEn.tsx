@@ -1,4 +1,5 @@
-import { getPageBySlug, getSiteConfig } from "@/content/repositories/contentRepository";
+import { getPageBySlug } from "@/content/repositories/pageContentRepository";
+import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
 import { faithIntroEn } from "@/content/data/faithContent";
 import { SeoHead } from "@/shared/components/SeoHead";
 import styles from "./FaithPage.module.css";

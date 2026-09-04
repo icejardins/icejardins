@@ -1,21 +1,15 @@
 import type {
-  PageContent,
   PaginationResult,
-  Post,
   PostMeta,
   Resource,
-  SiteConfig,
   Taxonomies
 } from "@/core/types/content";
 import { slugify } from "@/core/utils/slugify";
-import pagesJson from "@/content/generated/pages.json";
 import postsMetaJson from "@/content/generated/posts-meta.json";
 import resourcesJson from "@/content/generated/resources.json";
 import taxonomiesJson from "@/content/generated/taxonomies.json";
 export { getSiteConfig } from "./siteConfigRepository";
-export { getPostBySlug } from "./postBodyRepository";
 
-const pages = pagesJson as PageContent[];
 const posts = (postsMetaJson as unknown as PostMeta[]).slice();
 const resources = (resourcesJson as Resource[]).slice();
 const taxonomies = taxonomiesJson as Taxonomies;
@@ -52,19 +46,10 @@ resources.sort((left, right) => {
   return right.date.localeCompare(left.date);
 });
 
-const pageBySlug = new Map(pages.map((page) => [page.slug, page]));
 const resourceBySlug = new Map(resources.map((resource) => [resource.slug, resource]));
 
 const tagsBySlug = new Map(taxonomies.tags.map((tag) => [tag.slug, tag]));
 const categoriesBySlug = new Map(taxonomies.categories.map((category) => [category.slug, category]));
-
-export function getAllPages(): PageContent[] {
-  return pages;
-}
-
-export function getPageBySlug(slug: string): PageContent | undefined {
-  return pageBySlug.get(slug);
-}
 
 export function getAllPosts(): PostMeta[] {
   return posts;

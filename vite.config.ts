@@ -4,11 +4,18 @@ import purgecss from "@fullhuman/postcss-purgecss";
 import path from "node:path";
 import fs from "node:fs";
 
-function htmlTagInjector(): Plugin {
+function htmlTagInjector(isProd: boolean): Plugin {
   return {
     name: "html-tag-injector",
     transformIndexHtml(html: string) {
       try {
+        if (!isProd) {
+          html = html.replace("<!--google-tag-->", "");
+          if (!process.env.VITE_ENABLE_ANALYTICS_DEV) {
+            return html;
+          }
+        }
+
         const siteJsonPath = path.resolve(import.meta.dirname, "src/content/site.json");
         const siteConfig = JSON.parse(fs.readFileSync(siteJsonPath, "utf-8"));
 
@@ -21,6 +28,7 @@ function htmlTagInjector(): Plugin {
         }
 
         let script = `\n    <!-- Google tag (gtag.js) -->\n`;
+        script += `    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />\n`;
         script += `    <script>\n`;
         script += `      window.dataLayer = window.dataLayer || [];\n`;
         script += `      function gtag(){window.dataLayer.push(arguments);}\n`;
@@ -41,6 +49,7 @@ function htmlTagInjector(): Plugin {
         script += `          var s = document.createElement('script');\n`;
         script += `          s.async = true;\n`;
         script += `          s.src = 'https://www.googletagmanager.com/gtag/js?id=${primaryId}';\n`;
+        script += `          s.onerror = function(){};\n`;
         script += `          document.head.appendChild(s);\n`;
         script += `        }\n`;
         script += `        if ('requestIdleCallback' in window) {\n`;
@@ -104,9 +113,12 @@ function apiDevServer(): Plugin {
   };
 }
 
-export default defineConfig({
-  plugins: [react(), htmlTagInjector(), apiDevServer()],
-  publicDir: "static",
+export default defineConfig(({ command, mode }) => {
+  const isProd = mode === "production" || command === "build";
+
+  return {
+    plugins: [react(), htmlTagInjector(isProd), apiDevServer()],
+    publicDir: "static",
   css: {
     postcss: {
       plugins: [
@@ -184,4 +196,5 @@ export default defineConfig({
   server: {
     port: 5173
   }
+};
 });

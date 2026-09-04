@@ -41,7 +41,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  background-color: #25d366;
+  background-color: #0b7548;
   color: #ffffff !important;
   font-weight: 600;
   font-size: 0.92rem;
@@ -50,15 +50,15 @@
   text-decoration: none;
   width: fit-content;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.25);
+  box-shadow: 0 2px 8px rgba(11, 117, 72, 0.25);
 }
 
 .whatsAppBtn:hover,
 .whatsAppBtn:focus-visible {
-  background-color: #1faa53;
+  background-color: #085936;
   color: #ffffff !important;
   transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+  box-shadow: 0 4px 14px rgba(11, 117, 72, 0.35);
 }
 
 .whatsAppIcon {

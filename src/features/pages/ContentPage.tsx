@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router";
-import { getPageBySlug, getSiteConfig } from "@/content/repositories/contentRepository";
+import { getPageBySlug } from "@/content/repositories/pageContentRepository";
+import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
 import { SeoHead } from "@/shared/components/SeoHead";
 import styles from "./ContentPage.module.css";
 

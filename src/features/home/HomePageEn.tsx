@@ -59,9 +59,12 @@ export default function HomePageEn() {
                   <img
                     key={image.src}
                     src={image.src}
+                    srcSet={`${image.src.replace(".webp", "-400.webp")} 400w, ${image.src} 600w`}
+                    sizes="(max-width: 768px) 100vw, 600px"
                     alt={image.alt}
                     width={600}
                     height={402}
+                    decoding="async"
                     className={`${styles.imageCover} ${styles.carouselImage} ${
                       index === activeAboutImage ? styles.carouselImageActive : ""
                     }`}
@@ -115,9 +118,12 @@ export default function HomePageEn() {
       <section>
         <img
           src={homeContentEn.images.community}
+          srcSet={`${homeContentEn.images.community.replace(".webp", "-400.webp")} 400w, ${homeContentEn.images.community} 600w`}
+          sizes="(max-width: 768px) 100vw, 600px"
           alt="ICE Jardins Community"
           width={600}
           height={402}
+          decoding="async"
           className={styles.bannerImage}
           loading="lazy"
         />
