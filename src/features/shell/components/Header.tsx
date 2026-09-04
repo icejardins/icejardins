@@ -1,7 +1,8 @@
-import { Link, NavLink, useLocation } from "react-router";
+import { Link, NavLink, useLocation, useNavigate } from "react-router";
 import { useEffect, useMemo, useState } from "react";
 import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
 import { useTheme } from "@/features/shell/components/ThemeProvider";
+import { setLanguagePreference } from "@/shared/utils/language";
 import type { SearchDocument } from "@/core/types/content";
 import styles from "./Header.module.css";
 
@@ -26,6 +27,35 @@ export function Header() {
   const [isSearchReady, setIsSearchReady] = useState(false);
   const [hasRequestedSearch, setHasRequestedSearch] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const isEnglish = location.pathname.startsWith("/en");
+
+  const menuItems = isEnglish
+    ? [
+        { name: "Home", url: "/en/" },
+        { name: "About", url: "/en/#about" },
+        { name: "Visit", url: "/visita/" },
+        { name: "Give", url: "/en/give/" }
+      ]
+    : site.menu;
+
+  const handleLanguageChange = (targetLang: "pt" | "en") => {
+    setLanguagePreference(targetLang);
+    if (targetLang === "en") {
+      if (location.pathname.startsWith("/contribuir") || location.pathname.startsWith("/doacoes") || location.pathname.startsWith("/doe")) {
+        navigate("/en/give/");
+      } else {
+        navigate("/en/");
+      }
+    } else {
+      if (location.pathname.startsWith("/en/give")) {
+        navigate("/contribuir/");
+      } else {
+        navigate("/");
+      }
+    }
+  };
 
   useEffect(() => {
     setIsOpen(false);
@@ -81,9 +111,9 @@ export function Header() {
 
   return (
     <header className={styles.wrapper} id="site-header">
-      <nav className={`navbar navbar-expand-lg ${styles.navbar}`} aria-label="Navegação principal">
+      <nav className={`navbar navbar-expand-lg ${styles.navbar}`} aria-label={isEnglish ? "Main navigation" : "Navegação principal"}>
         <div className="container-fluid px-3 px-lg-5">
-          <Link className={`navbar-brand ${styles.brand}`} to="/" aria-label="Página inicial ICE Jardins">
+          <Link className={`navbar-brand ${styles.brand}`} to={isEnglish ? "/en/" : "/"} aria-label="Página inicial ICE Jardins">
             <img
               src={brandLogoSrc}
               alt="ICE Jardins"
@@ -100,7 +130,7 @@ export function Header() {
             className="navbar-toggler"
             aria-controls="navbar-content"
             aria-expanded={isOpen}
-            aria-label="Abrir menu"
+            aria-label={isEnglish ? "Open menu" : "Abrir menu"}
             onClick={() => setIsOpen((current) => !current)}
           >
             <span className="navbar-toggler-icon" />
@@ -108,7 +138,7 @@ export function Header() {
 
           <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`} id="navbar-content">
             <ul className={`navbar-nav ms-auto ${styles.menu}`}>
-              {site.menu.map((item) => (
+              {menuItems.map((item) => (
                 <li key={item.url} className="nav-item">
                   <NavLink
                     to={item.url}
@@ -137,6 +167,26 @@ export function Header() {
                 >
                   {theme === "dark" ? "Claro" : "Escuro"}
                 </button>
+              </li>
+              <li className="nav-item d-flex align-items-center">
+                <div className={styles.langSwitcher} role="group" aria-label="Language selector">
+                  <button
+                    type="button"
+                    className={`${styles.langBtn} ${!isEnglish ? styles.langBtnActive : ""}`}
+                    onClick={() => handleLanguageChange("pt")}
+                    aria-label="Versão em Português"
+                  >
+                    PT
+                  </button>
+                  <button
+                    type="button"
+                    className={`${styles.langBtn} ${isEnglish ? styles.langBtnActive : ""}`}
+                    onClick={() => handleLanguageChange("en")}
+                    aria-label="English version"
+                  >
+                    EN
+                  </button>
+                </div>
               </li>
             </ul>
             <div className={styles.searchBox}>

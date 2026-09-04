@@ -64,6 +64,38 @@
   color: var(--primary-color);
 }
 
+.langSwitcher {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid color-mix(in srgb, var(--secondary-text-color) 30%, transparent);
+  border-radius: 999px;
+  padding: 2px;
+  margin-left: 0.65rem;
+  background: color-mix(in srgb, var(--secondary-background-color) 60%, transparent);
+}
+
+.langBtn {
+  background: transparent;
+  border: none;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.28rem 0.55rem;
+  border-radius: 999px;
+  color: var(--secondary-text-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.langBtn:hover {
+  color: var(--text-color);
+}
+
+.langBtnActive {
+  background: var(--primary-color);
+  color: #ffffff !important;
+}
+
 .searchBox {
   width: 100%;
   max-width: 300px;
@@ -120,5 +152,9 @@
 
   .themeButton {
     margin: 0.6rem 0;
+  }
+
+  .langSwitcher {
+    margin: 0.6rem 0 0.6rem 0.5rem;
   }
 }

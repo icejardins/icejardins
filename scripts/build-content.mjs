@@ -440,6 +440,8 @@ async function main() {
 
   const routes = new Set([
     "/",
+    "/en/",
+    "/en/give/",
     "/posts/",
     "/recursos/",
     "/contribuir/",
@@ -512,6 +514,8 @@ async function main() {
         cleanedRoute === "/visita/" ||
         cleanedRoute === "/fe/" ||
         cleanedRoute === "/contribuir/" ||
+        cleanedRoute === "/en/" ||
+        cleanedRoute === "/en/give/" ||
         cleanedRoute === "/recursos/" ||
         cleanedRoute.startsWith("/recursos/")
       ) {
