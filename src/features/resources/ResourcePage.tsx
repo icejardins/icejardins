@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router";
 import { SeoHead } from "@/shared/components/SeoHead";
 import { Icon } from "@/shared/components/Icon";
 import { getResourceBySlug, getSiteConfig } from "@/content/repositories/contentRepository";
-import { trackAdsConversion } from "@/shared/utils/analytics";
+import { trackEbookConversion, trackWhatsAppConversion } from "@/shared/utils/analytics";
 import styles from "./ResourcePage.module.css";
 
 export default function ResourcePage() {
@@ -114,7 +114,7 @@ export default function ResourcePage() {
         );
       }
 
-      trackAdsConversion();
+      trackEbookConversion(resource?.title);
       setIsSuccess(true);
     } catch (err: any) {
       console.error("[ResourcePage] Submit error:", err);
@@ -529,6 +529,7 @@ export default function ResourcePage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className={styles.churchBtnWhatsapp}
+                      onClick={() => trackWhatsAppConversion("recursos_cta")}
                     >
                       <Icon name="whatsapp" />
                       Fale no WhatsApp

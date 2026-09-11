@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router";
 import { getSiteConfig } from "@/content/repositories/contentRepository";
 import { Icon } from "@/shared/components/Icon";
-import { trackAdsConversion } from "@/shared/utils/analytics";
+import { trackWhatsAppConversion } from "@/shared/utils/analytics";
 import styles from "./Footer.module.css";
 
 export function Footer() {
@@ -36,7 +36,7 @@ export function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 className={styles.whatsAppBtn}
-                onClick={() => trackAdsConversion()}
+                onClick={() => trackWhatsAppConversion("footer_cta")}
               >
                 <Icon name="whatsapp" className={styles.whatsAppIcon} />
                 <span>(61) 98262-4952 · {isEnglish ? "Chat on WhatsApp" : "Falar no WhatsApp"}</span>
@@ -194,7 +194,7 @@ export function Footer() {
                   target="_blank"
                   rel="noreferrer"
                   className={styles.socialIcon}
-                  onClick={() => trackAdsConversion()}
+                  onClick={() => trackWhatsAppConversion("footer_social")}
                   aria-label="WhatsApp"
                 >
                   <Icon name="whatsapp" />

@@ -5,7 +5,13 @@
   "description": "Igreja Cristã Evangélica Jardins no Jardim Botânico em Brasília - DF. Comunidade dedicada ao ensino da Bíblia, à comunhão e adoração. Venha nos visitar!",
   "googleAnalyticsId": "G-JDD6SZKK8E",
   "googleAdsId": "AW-672119654",
-  "googleAdsConversionSendTo": "AW-672119654/J5EqCJCKyOsZEOb2vsAC",
+  "googleAdsConversionSendTo": "AW-672119654/o57hCLe8nfEcEOb2vsAC",
+  "googleAdsConversions": {
+    "ebookDownload": "AW-672119654/o57hCLe8nfEcEOb2vsAC",
+    "reliantDonation": "AW-672119654/-LRrCKSqtPQcEOb2vsAC",
+    "whatsAppContact": "AW-672119654/dO8MCKeqtPQcEOb2vsAC",
+    "pageView": "AW-672119654/J5EqCJCKyOsZEOb2vsAC"
+  },
   "menu": [
     {
       "name": "Início",

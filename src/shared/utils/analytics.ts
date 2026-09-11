@@ -7,7 +7,13 @@ declare global {
   }
 }
 
-export const DEFAULT_ADS_CONVERSION_SEND_TO = "AW-672119654/J5EqCJCKyOsZEOb2vsAC";
+// Google Ads Conversion Labels
+export const ADS_CONVERSION_EBOOK = "AW-672119654/o57hCLe8nfEcEOb2vsAC";
+export const ADS_CONVERSION_RELIANT = "AW-672119654/-LRrCKSqtPQcEOb2vsAC";
+export const ADS_CONVERSION_WHATSAPP = "AW-672119654/dO8MCKeqtPQcEOb2vsAC";
+export const ADS_CONVERSION_PAGEVIEW = "AW-672119654/J5EqCJCKyOsZEOb2vsAC";
+
+export const DEFAULT_ADS_CONVERSION_SEND_TO = ADS_CONVERSION_EBOOK;
 
 export interface ConversionOptions {
   sendTo?: string;
@@ -28,6 +34,7 @@ export function trackAdsConversion(options?: ConversionOptions) {
   const siteConfig = getSiteConfig();
   const sendTo =
     options?.sendTo ||
+    siteConfig.googleAdsConversions?.ebookDownload ||
     siteConfig.googleAdsConversionSendTo ||
     DEFAULT_ADS_CONVERSION_SEND_TO;
 
@@ -45,3 +52,49 @@ export function trackAdsConversion(options?: ConversionOptions) {
     window.dataLayer.push(["event", "conversion", payload]);
   }
 }
+
+/**
+ * Rastreia conversão de download de e-book (Lead Form) no Google Ads
+ */
+export function trackEbookConversion(ebookTitle?: string) {
+  const siteConfig = getSiteConfig();
+  const sendTo = siteConfig.googleAdsConversions?.ebookDownload || ADS_CONVERSION_EBOOK;
+  trackAdsConversion({
+    sendTo,
+    value: 1.0,
+    currency: "USD",
+    resource_title: ebookTitle
+  });
+}
+
+/**
+ * Rastreia clique de doação internacional / EUA via Reliant no Google Ads
+ */
+export function trackReliantDonationConversion() {
+  const siteConfig = getSiteConfig();
+  const sendTo = siteConfig.googleAdsConversions?.reliantDonation || ADS_CONVERSION_RELIANT;
+  trackAdsConversion({
+    sendTo,
+    value: 50.0,
+    currency: "USD"
+  });
+}
+
+/**
+ * Rastreia clique de contato (WhatsApp / Recepção / E-mail) no Google Ads
+ */
+export function trackContactConversion(origin?: string) {
+  const siteConfig = getSiteConfig();
+  const sendTo = siteConfig.googleAdsConversions?.whatsAppContact || ADS_CONVERSION_WHATSAPP;
+  trackAdsConversion({
+    sendTo,
+    value: 5.0,
+    currency: "USD",
+    contact_origin: origin
+  });
+}
+
+/**
+ * Alias semântico para contato via WhatsApp
+ */
+export const trackWhatsAppConversion = trackContactConversion;

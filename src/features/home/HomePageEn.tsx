@@ -5,7 +5,7 @@ import { Icon } from "@/shared/components/Icon";
 import { getRecentPosts } from "@/content/repositories/contentRepository";
 import { formatDate } from "@/core/utils/formatDate";
 import { homeContentEn } from "@/content/data/homeContentEn";
-import { trackAdsConversion } from "@/shared/utils/analytics";
+import { trackContactConversion } from "@/shared/utils/analytics";
 import styles from "./HomePage.module.css";
 
 const aboutCarouselImages = [
@@ -246,7 +246,7 @@ export default function HomePageEn() {
                 <p>
                   <a
                     href={`mailto:${homeContentEn.location.email}`}
-                    onClick={() => trackAdsConversion()}
+                    onClick={() => trackContactConversion("home_en_email")}
                   >
                     {homeContentEn.location.email}
                   </a>

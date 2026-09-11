@@ -6,6 +6,7 @@ import {
   getAllResources,
   getSiteConfig
 } from "@/content/repositories/contentRepository";
+import { trackWhatsAppConversion } from "@/shared/utils/analytics";
 import styles from "./ResourceThankYouPage.module.css";
 
 interface ResourceThankYouPageProps {
@@ -226,6 +227,7 @@ export default function ResourceThankYouPage({ defaultSlug }: ResourceThankYouPa
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.btnWhatsapp}
+                  onClick={() => trackWhatsAppConversion("resource_thank_you")}
                 >
                   <Icon name="whatsapp" />
                   Falar com a Secretaria no WhatsApp

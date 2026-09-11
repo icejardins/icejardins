@@ -2,6 +2,7 @@ import { useState } from "react";
 import { SeoHead } from "@/shared/components/SeoHead";
 import { Icon } from "@/shared/components/Icon";
 import { giveContentEn } from "@/content/data/giveContentEn";
+import { trackReliantDonationConversion, trackWhatsAppConversion } from "@/shared/utils/analytics";
 import styles from "./GivePage.module.css";
 
 function CopyButton({
@@ -119,6 +120,7 @@ export default function GivePageEn() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.usaButton}
+                    onClick={() => trackReliantDonationConversion()}
                   >
                     <Icon name="box-arrow-up-right" />
                     {giveContentEn.usaDonations.buttonLabel}
@@ -333,6 +335,7 @@ export default function GivePageEn() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.whatsBtn}
+                onClick={() => trackWhatsAppConversion("give_en_receipts")}
               >
                 <Icon name="whatsapp" />
                 Chat on WhatsApp

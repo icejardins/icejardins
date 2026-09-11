@@ -1,11 +1,9 @@
 import { SeoHead } from "@/shared/components/SeoHead";
 import { visitContent } from "@/content/data/visitContent";
-import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
-import { trackAdsConversion } from "@/shared/utils/analytics";
+import { trackContactConversion } from "@/shared/utils/analytics";
 import styles from "./VisitPage.module.css";
 
 export default function VisitPage() {
-  const site = getSiteConfig();
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -54,45 +52,13 @@ export default function VisitPage() {
     ]
   };
 
-  const worshipEventSchema = {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    name: "Culto Inspirativo de Domingo",
-    description: "Culto comunitário de adoração, comunhão e pregação bíblica expositiva na ICE Jardins.",
-    eventSchedule: {
-      "@type": "Schedule",
-      repeatFrequency: "P1W",
-      byDay: "https://schema.org/Sunday",
-      startTime: "09:30",
-      endTime: "11:00"
-    },
-    location: {
-      "@type": "Place",
-      name: "Auditório do Colégio In-Nova (ICE Jardins)",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Condomínio Estância Jardim Botânico II, SH Jardim Botânico",
-        addressLocality: "Jardim Botânico",
-        addressRegion: "DF",
-        postalCode: "71686-301",
-        addressCountry: "BR"
-      }
-    },
-    isAccessibleForFree: true,
-    organizer: {
-      "@type": "Church",
-      name: "Igreja Cristã Evangélica Jardins",
-      url: site.baseUrl
-    }
-  };
-
   return (
     <>
       <SeoHead
         title="Planeje sua Visita | Igreja Evangélica no Jardim Botânico - Brasília DF"
         description="Venha visitar a Igreja Cristã Evangélica Jardins no Jardim Botânico, Brasília - DF. Culto de domingo às 9h30 e Escola Dominical às 11h. Um lugar acolhedor para você e sua família."
         canonicalPath="/visita/"
-        jsonLd={[faqSchema, worshipEventSchema]}
+        jsonLd={faqSchema}
       />
 
       <section className={styles.hero}>
@@ -147,7 +113,7 @@ export default function VisitPage() {
                 <a
                   className={`btn btn-lg ${styles.ctaButton}`}
                   href={visitContent.location.buttonLink}
-                  onClick={() => trackAdsConversion()}
+                  onClick={() => trackContactConversion("visit_reception")}
                 >
                   {visitContent.location.buttonLabel}
                 </a>

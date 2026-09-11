@@ -22,6 +22,12 @@ export type SiteConfig = {
   googleAnalyticsId?: string;
   googleAdsId?: string;
   googleAdsConversionSendTo?: string;
+  googleAdsConversions?: {
+    ebookDownload?: string;
+    reliantDonation?: string;
+    whatsAppContact?: string;
+    pageView?: string;
+  };
   menu: MenuItem[];
   navbar: {
     brandName: string;

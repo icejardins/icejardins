@@ -3,6 +3,7 @@ import { SeoHead } from "@/shared/components/SeoHead";
 import { Icon } from "@/shared/components/Icon";
 import { giveContent } from "@/content/data/giveContent";
 import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
+import { trackReliantDonationConversion, trackWhatsAppConversion } from "@/shared/utils/analytics";
 import styles from "./GivePage.module.css";
 
 function CopyButton({
@@ -319,6 +320,7 @@ export default function GivePage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.usaButton}
+                    onClick={() => trackReliantDonationConversion()}
                   >
                     <Icon name="box-arrow-up-right" />
                     {giveContent.usaDonations.buttonLabel}
@@ -349,6 +351,7 @@ export default function GivePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.whatsBtn}
+                onClick={() => trackWhatsAppConversion("give_pt_receipts")}
               >
                 <Icon name="whatsapp" />
                 Falar pelo WhatsApp

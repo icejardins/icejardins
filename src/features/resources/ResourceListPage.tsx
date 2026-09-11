@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { getAllResources, getSiteConfig } from "@/content/repositories/contentRepository";
 import { SeoHead } from "@/shared/components/SeoHead";
 import { Icon } from "@/shared/components/Icon";
+import { trackWhatsAppConversion } from "@/shared/utils/analytics";
 import { ResourceCard } from "./components/ResourceCard";
 import styles from "./ResourceListPage.module.css";
 
@@ -111,6 +112,7 @@ export default function ResourceListPage() {
             target="_blank"
             rel="noopener noreferrer"
             className={styles.helpBtn}
+            onClick={() => trackWhatsAppConversion("resource_list")}
           >
             <Icon name="whatsapp" />
             Fale com a gente no WhatsApp
