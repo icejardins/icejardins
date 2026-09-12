@@ -38,11 +38,26 @@ export default function HomePage() {
         title="Igreja Cristã Evangélica Jardins | Jardim Botânico - Brasília DF"
         description={site.description}
         canonicalPath="/"
-        preloadImage="/images/sobre/identidade.webp"
+        preloadImage="/images/sobre/identidade-400.webp"
       />
 
       <section className={styles.hero}>
-        <div className="container text-center">
+        <div className={styles.heroBgWrap} aria-hidden="true">
+          <img
+            src="/images/sobre/identidade.webp"
+            srcSet="/images/sobre/identidade-400.webp 400w, /images/sobre/identidade.webp 800w"
+            sizes="100vw"
+            alt=""
+            width={800}
+            height={266}
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
+            className={styles.heroBgImg}
+          />
+          <div className={styles.heroOverlay} />
+        </div>
+        <div className={`container text-center ${styles.heroContent}`}>
           <h1>{homeContent.hero.title}</h1>
           <p>{homeContent.hero.subtitle}</p>
           <a href={homeContent.hero.ctaTarget} className={styles.heroButton}>

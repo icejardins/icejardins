@@ -53,11 +53,11 @@ function htmlTagInjector(isProd: boolean): Plugin {
         script += `          document.head.appendChild(s);\n`;
         script += `        }\n`;
         script += `        if ('requestIdleCallback' in window) {\n`;
-        script += `          requestIdleCallback(function(){ setTimeout(load, 1500); });\n`;
+        script += `          requestIdleCallback(function(){ setTimeout(load, 3500); });\n`;
         script += `        } else {\n`;
-        script += `          setTimeout(load, 2500);\n`;
+        script += `          setTimeout(load, 4000);\n`;
         script += `        }\n`;
-        script += `        ['touchstart','scroll','mousemove','click'].forEach(function(e){\n`;
+        script += `        ['touchstart','scroll','keydown','click'].forEach(function(e){\n`;
         script += `          window.addEventListener(e, load, { once: true, passive: true });\n`;
         script += `        });\n`;
         script += `      })();\n`;
@@ -139,24 +139,19 @@ export default defineConfig(({ command, mode }) => {
               "dark",
               "table",
               "blockquote",
-              /^nav/,
+              "navbar-toggler",
+              "navbar-toggler-icon",
+              "navbar-collapse",
+              "nav-link",
+              "navbar-nav",
+              "nav-item",
+              "visually-hidden",
+              "spinner-border",
+              "spinner-border-sm",
               /^modal/,
-              /^carousel/,
-              /^btn/,
-              /^bi/,
-              /^text-/,
-              /^bg-/,
-              /^col-/,
-              /^row/,
-              /^g-/,
-              /^d-/,
-              /^py-/,
-              /^mb-/,
-              /^ms-/,
-              /^me-/,
-              /^container/
+              /^bi-/
             ],
-            deep: [/^_.*/, /^dark/, /^data-theme/, /^carousel/],
+            deep: [/^_.*/, /^dark/, /^data-theme/],
             greedy: [/^_.*/]
           },
           defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || []

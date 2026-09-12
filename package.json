@@ -14,7 +14,9 @@
     "optimize:images": "node scripts/optimize-images.mjs",
     "preview": "vite preview",
     "check": "tsc --noEmit",
-    "postinstall": "npm run build:content"
+    "postinstall": "npm run build:content",
+    "audit": "node scripts/audit-lighthouse.mjs",
+    "audit:live": "AUDIT_BASE_URL=https://icejardins.org.br node scripts/audit-lighthouse.mjs"
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
@@ -32,6 +34,7 @@
     "@types/react-dom": "^19.2.4",
     "@vitejs/plugin-react": "^6.0.5",
     "gray-matter": "^4.0.3",
+    "lighthouse": "^13.4.1",
     "rehype-slug": "^6.0.0",
     "rehype-stringify": "^10.0.1",
     "remark": "^15.0.1",

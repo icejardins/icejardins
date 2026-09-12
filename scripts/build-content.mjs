@@ -498,6 +498,15 @@ async function main() {
     ...resources.map((r) => normalizeRoute(`/recursos/${r.slug}/obrigado/`))
   ]);
 
+  const bilingualPairs = {
+    "/": { pt: "/", en: "/en/" },
+    "/en/": { pt: "/", en: "/en/" },
+    "/contribuir/": { pt: "/contribuir/", en: "/en/give/" },
+    "/en/give/": { pt: "/contribuir/", en: "/en/give/" },
+    "/fe/": { pt: "/fe/", en: "/en/faith/" },
+    "/en/faith/": { pt: "/fe/", en: "/en/faith/" }
+  };
+
   const sitemapEntries = sortedRoutes
     .filter((route) => !excludedFromSitemap.has(route))
     .map((route) => {
@@ -534,11 +543,16 @@ async function main() {
         priority = "0.6";
       }
 
-      return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
+      const pair = bilingualPairs[cleanedRoute];
+      const alternates = pair
+        ? `\n    <xhtml:link rel="alternate" hreflang="pt-BR" href="${siteConfig.baseUrl}${pair.pt}"/>\n    <xhtml:link rel="alternate" hreflang="en" href="${siteConfig.baseUrl}${pair.en}"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${siteConfig.baseUrl}${pair.pt}"/>`
+        : "";
+
+      return `  <url>\n    <loc>${loc}</loc>${alternates}\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
     })
     .join("\n");
 
-  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapEntries}\n</urlset>\n`;
+  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${sitemapEntries}\n</urlset>\n`;
   const robotsTxt = `User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /descadastro/\nDisallow: /obrigado-guia/\nDisallow: /recursos/*/obrigado/\n\nSitemap: ${siteConfig.baseUrl}/sitemap.xml\n`;
 
   const rssItems = posts

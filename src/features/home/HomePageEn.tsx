@@ -37,11 +37,26 @@ export default function HomePageEn() {
         title="ICE Jardins Evangelical Christian Church | Brasília, Brazil"
         description="ICE Jardins Evangelical Christian Church in Jardim Botânico, Brasília - DF, Brazil. A biblical community dedicated to teaching the Word, fellowship, and worship. Come visit us!"
         canonicalPath="/en/"
-        preloadImage="/images/sobre/identidade.webp"
+        preloadImage="/images/sobre/identidade-400.webp"
       />
 
       <section className={styles.hero}>
-        <div className="container text-center">
+        <div className={styles.heroBgWrap} aria-hidden="true">
+          <img
+            src="/images/sobre/identidade.webp"
+            srcSet="/images/sobre/identidade-400.webp 400w, /images/sobre/identidade.webp 800w"
+            sizes="100vw"
+            alt=""
+            width={800}
+            height={266}
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
+            className={styles.heroBgImg}
+          />
+          <div className={styles.heroOverlay} />
+        </div>
+        <div className={`container text-center ${styles.heroContent}`}>
           <h1>{homeContentEn.hero.title}</h1>
           <p>{homeContentEn.hero.subtitle}</p>
           <a href={homeContentEn.hero.ctaTarget} className={styles.heroButton}>

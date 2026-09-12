@@ -94,9 +94,10 @@ async function optimizeSobre() {
       `✓ ${file} (${(statBefore.size / 1024).toFixed(1)} KiB) -> ${outputName} (${(statAfter.size / 1024).toFixed(1)} KiB)`
     );
 
-    if (["congregacao", "foto3", "comunidade"].includes(baseName)) {
+    if (["congregacao", "foto3", "comunidade", "identidade"].includes(baseName)) {
       const resp400Path = path.join(sobreDir, `${baseName}-400.webp`);
-      await convertWithSharp(finalOutputPath, resp400Path, { width: 400, height: 268, quality: 80 });
+      const h = baseName === "identidade" ? 133 : 268;
+      await convertWithSharp(finalOutputPath, resp400Path, { width: 400, height: h, quality: 80 });
       console.log(`  ✓ Generated ${baseName}-400.webp`);
     }
   }

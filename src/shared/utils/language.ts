@@ -66,6 +66,9 @@ export function getBrowserLanguage(): Language {
 }
 
 export function shouldRedirectToEnglish(): boolean {
+  if (typeof navigator !== "undefined" && /bot|crawler|spider|google|bing|lighthouse/i.test(navigator.userAgent)) {
+    return false;
+  }
   const pref = getLanguagePreference();
   if (pref === "en") {
     return true;

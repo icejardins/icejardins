@@ -41,23 +41,36 @@ function buildCanonicalUrl(baseUrl: string, rawPath: string): string {
   return `${cleanBaseUrl}${pathWithTrailingSlash}`;
 }
 
-function buildChurchSchema(baseUrl: string) {
+const BILINGUAL_PAIRS: Record<string, { pt: string; en: string }> = {
+  "/": { pt: "/", en: "/en/" },
+  "/en/": { pt: "/", en: "/en/" },
+  "/contribuir/": { pt: "/contribuir/", en: "/en/give/" },
+  "/en/give/": { pt: "/contribuir/", en: "/en/give/" },
+  "/fe/": { pt: "/fe/", en: "/en/faith/" },
+  "/en/faith/": { pt: "/fe/", en: "/en/faith/" }
+};
+
+function buildChurchSchema(baseUrl: string, isEnglish = false) {
   return {
     "@context": "https://schema.org",
     "@type": "Church",
     "@id": `${baseUrl}/#organization`,
-    name: "Igreja Cristã Evangélica Jardins",
+    name: isEnglish
+      ? "ICE Jardins Evangelical Christian Church"
+      : "Igreja Cristã Evangélica Jardins",
     alternateName: [
       "ICE Jardins",
       "Igreja Evangélica Jardins",
       "Igreja Cristã Evangélica Jardim Botânico",
-      "Igreja no Jardim Botânico"
+      "Igreja no Jardim Botânico",
+      "ICE Jardins Church"
     ],
     url: `${baseUrl}/`,
     logo: `${baseUrl}/images/logo-ice-jardins-01.webp`,
     image: `${baseUrl}/images/sobre/identidade.webp`,
-    description:
-      "Igreja Cristã Evangélica Jardins no Jardim Botânico em Brasília - DF. Comunidade dedicada ao ensino da Bíblia, à comunhão e adoração.",
+    description: isEnglish
+      ? "ICE Jardins Evangelical Christian Church in Jardim Botânico, Brasília - DF, Brazil. A biblical community dedicated to the teaching of the Scriptures, fellowship, and worship."
+      : "Igreja Cristã Evangélica Jardins no Jardim Botânico em Brasília - DF. Comunidade dedicada ao ensino da Bíblia, à comunhão e adoração.",
     email: "secretaria@icejardins.org.br",
     telephone: "+55-61-98262-4952",
     priceRange: "Gratuito",
@@ -132,23 +145,25 @@ function buildChurchSchema(baseUrl: string) {
   };
 }
 
-function buildWebSiteSchema(baseUrl: string) {
+function buildWebSiteSchema(baseUrl: string, isEnglish = false) {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": `${baseUrl}/#website`,
     url: `${baseUrl}/`,
-    name: "ICE Jardins",
-    description: "Igreja Cristã Evangélica Jardins em Brasília",
-    inLanguage: "pt-BR",
+    name: isEnglish ? "ICE Jardins Church" : "ICE Jardins",
+    description: isEnglish
+      ? "ICE Jardins Evangelical Christian Church in Jardim Botânico, Brasília, Brazil"
+      : "Igreja Cristã Evangélica Jardins em Brasília",
+    inLanguage: isEnglish ? "en-US" : "pt-BR",
     publisher: {
       "@id": `${baseUrl}/#organization`
     }
   };
 }
 
-function buildBreadcrumbSchema(baseUrl: string, rawPath: string, title: string) {
-  if (!rawPath || rawPath === "/") {
+function buildBreadcrumbSchema(baseUrl: string, rawPath: string, title: string, isEnglish = false) {
+  if (!rawPath || rawPath === "/" || rawPath === "/en" || rawPath === "/en/") {
     return null;
   }
 
@@ -159,14 +174,17 @@ function buildBreadcrumbSchema(baseUrl: string, rawPath: string, title: string) 
     {
       "@type": "ListItem",
       position: 1,
-      name: "Início",
-      item: `${baseUrl}/`
+      name: isEnglish ? "Home" : "Início",
+      item: isEnglish ? `${baseUrl}/en/` : `${baseUrl}/`
     }
   ];
 
   let currentPath = "";
   segments.forEach((segment, index) => {
     currentPath += `/${segment}`;
+    if (isEnglish && index === 0 && segment === "en") {
+      return;
+    }
     const isLast = index === segments.length - 1;
     const name = isLast
       ? title.split("|")[0].trim()
@@ -174,7 +192,7 @@ function buildBreadcrumbSchema(baseUrl: string, rawPath: string, title: string) 
 
     items.push({
       "@type": "ListItem",
-      position: index + 2,
+      position: items.length + 1,
       name,
       item: `${baseUrl}${currentPath}/`
     });
@@ -210,12 +228,23 @@ export function SeoHead({
   const imageUrl = toAbsoluteUrl(resolvedImage, site.baseUrl);
   const metaDescription = description ?? site.description;
 
+  const isEnglish = path.startsWith("/en/") || path === "/en";
+  const htmlLang = isEnglish ? "en" : "pt-br";
+  const ogLocale = isEnglish ? "en_US" : "pt_BR";
+
+  const normalizedPath = path.startsWith("/")
+    ? path.endsWith("/")
+      ? path
+      : `${path}/`
+    : `/${path}/`;
+  const bilingualPair = BILINGUAL_PAIRS[normalizedPath];
+
   const defaultSchemas: Record<string, unknown>[] = [
-    buildChurchSchema(site.baseUrl),
-    buildWebSiteSchema(site.baseUrl)
+    buildChurchSchema(site.baseUrl, isEnglish),
+    buildWebSiteSchema(site.baseUrl, isEnglish)
   ];
 
-  const breadcrumb = buildBreadcrumbSchema(site.baseUrl, path, title);
+  const breadcrumb = buildBreadcrumbSchema(site.baseUrl, path, title, isEnglish);
   if (breadcrumb) {
     defaultSchemas.push(breadcrumb);
   }
@@ -229,7 +258,7 @@ export function SeoHead({
 
   return (
     <Helmet>
-      <html lang={site.languageCode} />
+      <html lang={htmlLang} />
       <title>{title}</title>
       <meta name="description" content={metaDescription} />
       {noindex ? <meta name="robots" content="noindex, follow" /> : null}
@@ -237,8 +266,9 @@ export function SeoHead({
       <meta name="geo.placename" content="Jardim Botânico, Brasília - DF" />
       <meta name="geo.position" content="-15.8797754;-47.8128996" />
       <meta name="ICBM" content="-15.8797754, -47.8128996" />
+      <meta property="og:locale" content={ogLocale} />
       <meta property="og:type" content={type} />
-      <meta property="og:site_name" content={site.title} />
+      <meta property="og:site_name" content={isEnglish ? "ICE Jardins Church" : site.title} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:url" content={canonicalUrl} />
@@ -264,8 +294,16 @@ export function SeoHead({
         ? tags.map((t) => <meta key={t} property="article:tag" content={t} />)
         : null}
       <link rel="canonical" href={canonicalUrl} />
-      <link rel="alternate" hrefLang={site.languageCode} href={canonicalUrl} />
-      <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
+      {bilingualPair
+        ? [
+            <link key="alt-pt" rel="alternate" hrefLang="pt-BR" href={`${site.baseUrl}${bilingualPair.pt}`} />,
+            <link key="alt-en" rel="alternate" hrefLang="en" href={`${site.baseUrl}${bilingualPair.en}`} />,
+            <link key="alt-def" rel="alternate" hrefLang="x-default" href={`${site.baseUrl}${bilingualPair.pt}`} />
+          ]
+        : [
+            <link key="alt-lang" rel="alternate" hrefLang={isEnglish ? "en" : "pt-BR"} href={canonicalUrl} />,
+            <link key="alt-def" rel="alternate" hrefLang="x-default" href={canonicalUrl} />
+          ]}
       <link
         rel="alternate"
         type="application/rss+xml"

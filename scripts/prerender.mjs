@@ -99,6 +99,11 @@ async function main() {
       headTags = headTags.replace(/<link\s+rel="canonical"[^>]*\/?>/gi, "");
     }
 
+    // Set correct <html lang="..."> attribute for English vs Portuguese routes
+    const isEnRoute = route.startsWith("/en/") || route === "/en";
+    const targetLang = isEnRoute ? "en" : "pt-br";
+    html = html.replace(/<html(?:\s+lang="[^"]*")?/i, `<html lang="${targetLang}"`);
+
     if (html.includes("<!--app-head-->")) {
       html = html.replace("<!--app-head-->", headTags);
     } else {

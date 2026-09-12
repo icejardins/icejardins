@@ -15,6 +15,12 @@ export default function middleware(request: Request) {
     return;
   }
 
+  const userAgent = request.headers.get("user-agent") || "";
+  // Never redirect search engine crawlers or audit tools
+  if (/googlebot|bingbot|yandex|baiduspider|duckduckbot|slurp|facebookexternalhit|twitterbot|linkedinbot|whatsapp|applebot|petalbot|semrushbot|ahrefsbot|lighthouse/i.test(userAgent)) {
+    return;
+  }
+
   const dest = isRoot ? "/en/" : isFaith ? "/en/faith/" : "/en/give/";
 
   // 1. Check user explicit cookie preference
