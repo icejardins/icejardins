@@ -22,7 +22,7 @@ function htmlTagInjector(isProd: boolean): Plugin {
         const gaId = process.env.VITE_GA_ID || siteConfig.googleAnalyticsId;
         const gadsId = process.env.VITE_GADS_ID || siteConfig.googleAdsId;
 
-        const primaryId = gaId || gadsId;
+        const primaryId = gadsId || gaId;
         if (!primaryId) {
           return html.replace("<!--google-tag-->", "");
         }
@@ -34,11 +34,11 @@ function htmlTagInjector(isProd: boolean): Plugin {
         script += `      function gtag(){window.dataLayer.push(arguments);}\n`;
         script += `      gtag('js', new Date());\n`;
 
-        if (gaId) {
-          script += `      gtag('config', '${gaId}');\n`;
-        }
         if (gadsId) {
           script += `      gtag('config', '${gadsId}');\n`;
+        }
+        if (gaId) {
+          script += `      gtag('config', '${gaId}');\n`;
         }
 
         script += `      (function(){\n`;
@@ -52,10 +52,12 @@ function htmlTagInjector(isProd: boolean): Plugin {
         script += `          s.onerror = function(){};\n`;
         script += `          document.head.appendChild(s);\n`;
         script += `        }\n`;
+        script += `        window.__loadAnalytics = load;\n`;
+        script += `        window.addEventListener('load-analytics', load, { once: true });\n`;
         script += `        if ('requestIdleCallback' in window) {\n`;
-        script += `          requestIdleCallback(function(){ setTimeout(load, 3500); });\n`;
+        script += `          requestIdleCallback(function(){ setTimeout(load, 2000); });\n`;
         script += `        } else {\n`;
-        script += `          setTimeout(load, 4000);\n`;
+        script += `          setTimeout(load, 2500);\n`;
         script += `        }\n`;
         script += `        ['touchstart','scroll','keydown','click'].forEach(function(e){\n`;
         script += `          window.addEventListener(e, load, { once: true, passive: true });\n`;

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link, useParams } from "react-router";
 import { SeoHead } from "@/shared/components/SeoHead";
 import { Icon } from "@/shared/components/Icon";
@@ -6,7 +7,7 @@ import {
   getAllResources,
   getSiteConfig
 } from "@/content/repositories/contentRepository";
-import { trackWhatsAppConversion } from "@/shared/utils/analytics";
+import { trackEbookConversion, trackWhatsAppConversion } from "@/shared/utils/analytics";
 import styles from "./ResourceThankYouPage.module.css";
 
 interface ResourceThankYouPageProps {
@@ -20,6 +21,12 @@ export default function ResourceThankYouPage({ defaultSlug }: ResourceThankYouPa
 
   const activeSlug = slug || defaultSlug || (allResources.length > 0 ? allResources[0].slug : "");
   const resource = getResourceBySlug(activeSlug) || (allResources.length > 0 ? allResources[0] : null);
+
+  useEffect(() => {
+    if (resource?.title) {
+      trackEbookConversion(resource.title);
+    }
+  }, [resource?.title]);
 
   if (!resource) {
     return (

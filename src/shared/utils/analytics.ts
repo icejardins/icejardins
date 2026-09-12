@@ -4,6 +4,7 @@ declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
     dataLayer?: unknown[];
+    __loadAnalytics?: () => void;
   }
 }
 
@@ -29,6 +30,12 @@ export interface ConversionOptions {
 export function trackAdsConversion(options?: ConversionOptions) {
   if (typeof window === "undefined") {
     return;
+  }
+
+  if (typeof window.__loadAnalytics === "function") {
+    window.__loadAnalytics();
+  } else {
+    window.dispatchEvent(new Event("load-analytics"));
   }
 
   const siteConfig = getSiteConfig();
@@ -62,7 +69,7 @@ export function trackEbookConversion(ebookTitle?: string) {
   trackAdsConversion({
     sendTo,
     value: 1.0,
-    currency: "USD",
+    currency: "BRL",
     resource_title: ebookTitle
   });
 }
@@ -89,7 +96,7 @@ export function trackContactConversion(origin?: string) {
   trackAdsConversion({
     sendTo,
     value: 5.0,
-    currency: "USD",
+    currency: "BRL",
     contact_origin: origin
   });
 }
