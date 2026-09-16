@@ -5,7 +5,7 @@ date = '2022-12-31'
 draft = false
 categorias = ['Sermões', 'Efésios', 'Novo Testamento']
 tags = ['Efésios', 'Novo Testamento', 'Batalha Espiritual', 'Oração', 'Armadura de Deus']
-image = "/images/posts/serie-efesios.webp"
+image = "/images/posts/efesios-6-10-24-vida-e-guerra-a-armadura-de-deus.webp"
 +++
 
 Vida é guerra. Ef. 6:10-24

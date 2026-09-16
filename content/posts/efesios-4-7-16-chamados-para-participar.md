@@ -5,7 +5,7 @@ date = '2026-08-01'
 draft = false
 categorias = ['Sermões', 'Efésios', 'Novo Testamento']
 tags = ['Efésios', 'Novo Testamento', 'Dons Espirituais', 'Maturidade', 'Serviço']
-image = "/images/posts/serie-efesios.webp"
+image = "/images/posts/efesios-4-7-16-chamados-para-participar.webp"
 +++
 
 ## Chamados para participar: quando cada parte cumpre sua função

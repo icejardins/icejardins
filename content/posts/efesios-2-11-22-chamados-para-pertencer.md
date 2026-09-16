@@ -5,7 +5,7 @@ date = '2026-08-01'
 draft = false
 categorias = ['Sermões', 'Efésios', 'Novo Testamento']
 tags = ['Efésios', 'Novo Testamento', 'Igreja', 'Reconciliação', 'Unidade']
-image = "/images/posts/serie-efesios.webp"
+image = "/images/posts/efesios-2-11-22-chamados-para-pertencer.webp"
 +++
 
 ## Chamados para pertencer: de distantes a morada de Deus

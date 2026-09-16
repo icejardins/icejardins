@@ -5,7 +5,7 @@ date = '2022-08-17'
 draft = false
 categorias = ['Sermões', 'Efésios', 'Novo Testamento']
 tags = ['Efésios', 'Novo Testamento', 'Graça e Paz', 'Identidade em Cristo', 'Doutrina']
-image = "/images/posts/serie-efesios.webp"
+image = "/images/posts/efesios-1-1-2-por-que-estudar-efesios.webp"
 +++
 
 Efésios tem apenas 6 capítulos. Ele ocupa 4 páginas na minha Bíblia e tem somente 155 versículos, você precisará de 20 min. para ler em voz alta. Esse pequeno livro é cheio da beleza e do poder divino. Ele é considerado um dos livros mais influentes da igreja e da história. Por que Efésios importa? Algumas razões.
