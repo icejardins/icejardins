@@ -5,7 +5,7 @@ date = '2025-05-02'
 draft = false
 categorias = ['Sermões', 'Jeremias', 'Antigo Testamento']
 tags = ['Jeremias', 'Antigo Testamento', 'Glória', 'Conhecimento de Deus', 'Humildade']
-image = "/images/posts/serie-jeremias.webp"
+image = "/images/posts/jeremias-8-4-9-26-quem-voce-conhece.webp"
 +++
 
 ## I. Nossa Glória Não É o Que Temos (9:23).

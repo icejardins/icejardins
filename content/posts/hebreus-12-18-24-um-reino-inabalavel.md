@@ -5,7 +5,7 @@ date = '2024-10-04'
 draft = false
 categorias = ['Sermões', 'Hebreus', 'Novo Testamento']
 tags = ['Hebreus', 'Novo Testamento', 'Reino de Deus', 'Nova Aliança', 'Graça']
-image = "/images/posts/serie-hebreus.webp"
+image = "/images/posts/hebreus-12-18-24-um-reino-inabalavel.webp"
 +++
 
 ## I. Monte Sinai (12:18–21)

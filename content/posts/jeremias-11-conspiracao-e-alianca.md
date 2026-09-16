@@ -5,7 +5,7 @@ date = '2025-05-17'
 draft = false
 categorias = ['Sermões', 'Jeremias', 'Antigo Testamento']
 tags = ['Jeremias', 'Antigo Testamento', 'Aliança', 'Oposição', 'Fidelidade']
-image = "/images/posts/serie-jeremias.webp"
+image = "/images/posts/jeremias-11-conspiracao-e-alianca.webp"
 +++
 
 ## I. Ouça o seu Deus (11:1-5).

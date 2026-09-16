@@ -5,7 +5,7 @@ date = '2023-08-06'
 draft = false
 categorias = ['Sermões', 'Gálatas', 'Novo Testamento']
 tags = ['Gálatas', 'Novo Testamento', 'Cruz', 'Nova Criação', 'Consagração']
-image = "/images/posts/serie-galatas.webp"
+image = "/images/posts/galatas-6-11-18-a-gloria-na-cruz-de-cristo.webp"
 +++
 
 De todas os símbolos que poderiam ter sido escolhidos para identificar a fé cristã, qual seria o mais estranho para a época? Certamente a cruz. Para nós ela é linda, mas para o primeiro século ela remetia para um instrumento de execução.

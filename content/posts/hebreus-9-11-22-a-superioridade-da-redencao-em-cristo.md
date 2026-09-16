@@ -5,7 +5,7 @@ date = '2024-07-07'
 draft = false
 categorias = ['Sermões', 'Hebreus', 'Novo Testamento']
 tags = ['Hebreus', 'Novo Testamento', 'Expiação', 'Sangue de Cristo', 'Redenção']
-image = "/images/posts/serie-hebreus.webp"
+image = "/images/posts/hebreus-9-11-22-a-superioridade-da-redencao-em-cristo.webp"
 +++
 
 Resumos são ferramentas poderosas para simplificar e entender informações complexas de forma rápida. Eles nos ajudam a captar os pontos principais sem perder o contexto essencial. Da mesma forma, as Escrituras frequentemente usam resumos para nos guiar no entendimento das grandes verdades teológicas. Paulo faz isso em Romanos e os sermões de Moisés em Deuteronômio são resumos do Pentateuco. Hebreus 9-10 também funciona como um resumo crucial da obra redentora de Cristo. Portanto, vamos explorar Hebreus 9:11-22 e compreender a superioridade da redenção em Cristo.

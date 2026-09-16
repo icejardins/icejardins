@@ -5,7 +5,7 @@ date = '2025-03-28'
 draft = false
 categorias = ['Sermões', 'Jeremias', 'Antigo Testamento']
 tags = ['Jeremias', 'Antigo Testamento', 'Aliança', 'Idolatria', 'Fidelidade']
-image = "/images/posts/serie-jeremias.webp"
+image = "/images/posts/jeremias-2-1-3-5-analise-de-um-divorcio.webp"
 +++
 
 ## I. Esquecemos o que Deus fez por nós (2:5–8).

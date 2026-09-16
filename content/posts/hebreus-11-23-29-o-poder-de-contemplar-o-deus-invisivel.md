@@ -5,7 +5,7 @@ date = '2024-08-30'
 draft = false
 categorias = ['Sermões', 'Hebreus', 'Novo Testamento']
 tags = ['Hebreus', 'Novo Testamento', 'Moisés', 'Renúncia', 'Perseverança']
-image = "/images/posts/serie-hebreus.webp"
+image = "/images/posts/hebreus-11-23-29-o-poder-de-contemplar-o-deus-invisivel.webp"
 +++
 
 Sua vida é diferente por crer em Deus? Como ela seria diferente se você não acreditasse em Deus? Não pense em atividades religiosas como ir à igreja. Pense na sua vida cotidiana. Você vive do jeito que vive por causa de Deus? Ou sua vida é resultado de um fluxo constante de escolhas para proteger sua segurança e conforto?

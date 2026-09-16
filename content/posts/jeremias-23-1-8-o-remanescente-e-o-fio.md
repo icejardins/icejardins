@@ -5,7 +5,7 @@ date = '2025-08-16'
 draft = false
 categorias = ['Sermões', 'Jeremias', 'Antigo Testamento']
 tags = ['Jeremias', 'Antigo Testamento', 'Pastor', 'Messias', 'Esperança']
-image = "/images/posts/serie-jeremias.webp"
+image = "/images/posts/jeremias-23-1-8-o-remanescente-e-o-fio.webp"
 +++
 
 ## I. Maus Pastores Dispersam as Ovelhas (23:1–2a).

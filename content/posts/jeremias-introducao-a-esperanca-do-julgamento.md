@@ -5,7 +5,7 @@ date = '2025-03-28'
 draft = false
 categorias = ['Sermões', 'Jeremias', 'Antigo Testamento']
 tags = ['Jeremias', 'Antigo Testamento', 'Profecia', 'Julgamento', 'Esperança']
-image = "/images/posts/serie-jeremias.webp"
+image = "/images/posts/jeremias-introducao-a-esperanca-do-julgamento.webp"
 +++
 
 Fui multado algumas vezes por passar em pardais acima do limite da via. As notificações que chegam no meu aplicativo são lembretes de que sou culpado. É uma justiça real, mal feito, mal punido. Todos que recebemos essas multas compartilham da sensação incômoda de que a justiça nos alcançou. Essa sensação de culpa é pedagógica e corretiva, pois revela a importância de limites estabelecidos.

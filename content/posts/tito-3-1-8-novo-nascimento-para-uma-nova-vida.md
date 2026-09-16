@@ -5,7 +5,7 @@ date = '2025-02-24'
 draft = false
 categorias = ['Sermões', 'Tito', 'Novo Testamento']
 tags = ['Tito', 'Novo Testamento', 'Regeneração', 'Graça Salvadora', 'Boas Obras']
-image = "/images/posts/serie-tito.webp"
+image = "/images/posts/tito-3-1-8-novo-nascimento-para-uma-nova-vida.webp"
 +++
 
 Nicodemos era uma pessoa muito respeitada na época de Jesus. Ele era fariseu e fazia parte do tribunal religioso de Israel. Ele era piedoso, conhecedor de teologia e admirado. Para os padrões daquela sociedade, ele era um homem honrado, admirado, do bem.

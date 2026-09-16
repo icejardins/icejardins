@@ -5,7 +5,7 @@ date = '2026-07-24'
 draft = false
 categorias = ['Sermões', '1 João', 'Novo Testamento']
 tags = ['1 João', 'Novo Testamento', 'Testemunho Divino', 'Vida Eterna', 'Fé']
-image = "/images/posts/serie-1-joao.webp"
+image = "/images/posts/1-joao-5-6-12-o-testemunho-de-deus-acerca-do-seu-filho.webp"
 +++
 
 **O TESTEMUNHO DE DEUS ACERCA DO SEU FILHO**1 Jo 5:6–12

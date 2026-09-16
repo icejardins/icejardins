@@ -5,7 +5,7 @@ date = '2026-06-12'
 draft = false
 categorias = ['Sermões', '1 João', 'Novo Testamento']
 tags = ['1 João', 'Novo Testamento', 'Segurança da Salvação', 'Graça', 'Oração']
-image = "/images/posts/serie-1-joao.webp"
+image = "/images/posts/1-joao-3-18-24-deus-e-maior-que-o-nosso-coracao.webp"
 +++
 
 Poucas coisas são tão difíceis quanto conviver com uma consciência que nos acusa. Você ora, mas se sente indigno. Serve, mas tudo parece insuficiente. Confessa pecados, mas ainda se sente condenado. Tenta descansar na graça, mas o coração fica desenterrando acusações.

@@ -5,7 +5,7 @@ date = '2023-12-10'
 draft = false
 categorias = ['Sermões', 'Tiago', 'Novo Testamento']
 tags = ['Tiago', 'Novo Testamento', 'Oração', 'Restauração', 'Vida Comunitária']
-image = "/images/posts/serie-tiago.webp"
+image = "/images/posts/tiago-5-13-20-vida-de-fe-oracao-e-cuidado.webp"
 +++
 
 Hoje, concluiremos a exposição da carta de Tiago que trata sobre as características de uma fé prática. O tema do nosso sermão é Vida de fé, baseado em Tiago 5:13-20.

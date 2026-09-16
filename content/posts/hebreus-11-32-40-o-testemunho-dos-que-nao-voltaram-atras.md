@@ -5,7 +5,7 @@ date = '2024-09-13'
 draft = false
 categorias = ['Sermões', 'Hebreus', 'Novo Testamento']
 tags = ['Hebreus', 'Novo Testamento', 'Perseverança', 'Sofrimento', 'Vitória']
-image = "/images/posts/serie-hebreus.webp"
+image = "/images/posts/hebreus-11-32-40-o-testemunho-dos-que-nao-voltaram-atras.webp"
 +++
 
 Quando enfrentamos oposição por causa do evangelho, podemos vencer ou ser derrotados; escapar ou sofrer; sermos libertos ou até morrer. Resultados positivos são mais espirituais que os negativos? A resposta geralmente é: não. Resultados positivos não indicam uma fé maior ou menor. Nem sempre a fé vem acompanhada de um sucesso estrondoso ou de um livramento cinematográfico.

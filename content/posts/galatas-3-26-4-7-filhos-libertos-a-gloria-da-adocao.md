@@ -5,7 +5,7 @@ date = '2023-04-15'
 draft = false
 categorias = ['Sermões', 'Gálatas', 'Novo Testamento']
 tags = ['Gálatas', 'Novo Testamento', 'Adoção', 'Herdeiros', 'Espírito Santo']
-image = "/images/posts/serie-galatas.webp"
+image = "/images/posts/galatas-3-26-4-7-filhos-libertos-a-gloria-da-adocao.webp"
 +++
 
 A adoção é desafiadora. Uma família adotante ouve coisas difíceis. Frases como: “além desses, vocês têm seus próprios filhos?” “vocês não tem medo do histórico familiar deles?” “Acho que não conseguiria amar tanto um filho adotivo quanto um biológico.” Essas frases revelam um vício mental de pessoas que não compreendem o que é a adoção.

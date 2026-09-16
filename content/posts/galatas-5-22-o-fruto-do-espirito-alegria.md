@@ -5,7 +5,7 @@ date = '2023-05-20'
 draft = false
 categorias = ['Sermões', 'Gálatas', 'Novo Testamento']
 tags = ['Gálatas', 'Novo Testamento', 'Fruto do Espírito', 'Alegria', 'Esperança']
-image = "/images/posts/serie-galatas.webp"
+image = "/images/posts/galatas-5-22-o-fruto-do-espirito-alegria.webp"
 +++
 
 Como ter alegria? FILIPENSES 3:1; 4:4

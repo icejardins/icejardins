@@ -5,7 +5,7 @@ date = '2023-10-02'
 draft = false
 categorias = ['Sermões', 'Tiago', 'Novo Testamento']
 tags = ['Tiago', 'Novo Testamento', 'Prática da Fé', 'Palavra', 'Tentação']
-image = "/images/posts/serie-tiago.webp"
+image = "/images/posts/tiago-1-13-27-provacoes-e-praticantes-da-palavra.webp"
 +++
 
 Vimos no sermão anterior que Deus é soberano nas provações. Por causa disso, essas provações, nas mãos de um Deus sábio, podem ser fonte de alegria, porque Ele concede sabedoria generosamente para que possamos enfrentar e perseverar em situações difíceis. Mas as provações têm um lado sombrio, e Tiago quer nos proteger de algo aqui. Ele passa a explicar uma segunda grande verdade na passagem de hoje.

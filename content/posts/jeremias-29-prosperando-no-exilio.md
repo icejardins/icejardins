@@ -5,7 +5,7 @@ date = '2025-09-21'
 draft = false
 categorias = ['Sermões', 'Jeremias', 'Antigo Testamento']
 tags = ['Jeremias', 'Antigo Testamento', 'Exílio', 'Planos de Paz', 'Esperança']
-image = "/images/posts/serie-jeremias.webp"
+image = "/images/posts/jeremias-29-prosperando-no-exilio.webp"
 +++
 
 ## I. Prosperar no Exílio (29:4-9).

@@ -5,7 +5,7 @@ date = '2025-09-19'
 draft = false
 categorias = ['Sermões', 'Jeremias', 'Antigo Testamento']
 tags = ['Jeremias', 'Antigo Testamento', 'Falsos Profetas', 'Verdade', 'Caráter de Deus']
-image = "/images/posts/serie-jeremias.webp"
+image = "/images/posts/jeremias-26-28-a-paternidade-de-deus.webp"
 +++
 
 ## Introdução: Uma família conhecida passou por isso. Imaginem a cena. Eles estavam viajando de ônibus no exterior. Tudo estava indo relativamente bem na viagem. Alguns aproveitaram para observar as lindas paisagens, enquanto outros tiravam um cochilo. Numa das paradas, subiu um senhor idoso, com roupas surradas, chapéu e com um cheiro terrível. Ele não se sentou por perto, mas todos no ônibus, cujas janelas estavam fechadas, sentiram o odor espalhado pelo ar.

@@ -5,7 +5,7 @@ date = '2024-06-16'
 draft = false
 categorias = ['Sermões', 'Hebreus', 'Novo Testamento']
 tags = ['Hebreus', 'Novo Testamento', 'Sumo Sacerdote', 'Intercessão', 'Salvação Completa']
-image = "/images/posts/serie-hebreus.webp"
+image = "/images/posts/hebreus-7-23-28-jesus-o-sumo-sacerdote-perfeito.webp"
 +++
 
 Você já se perguntou por que precisamos de um mediador? Imagine estar em um tribunal, esperando por uma sentença condenatória que seria inevitável. De repente, um advogado perfeito se apresenta, alguém que nunca perdeu um caso e está sempre disponível para defendê-lo. Esta é a imagem de Jesus como nosso sumo sacerdote. Hoje, vamos explorar como Ele, sendo perfeito e permanente, intercede por nós de uma maneira insubstituível.

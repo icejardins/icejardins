@@ -5,7 +5,7 @@ date = '2023-12-15'
 draft = false
 categorias = ['Sermões', '3 João', 'Novo Testamento']
 tags = ['3 João', 'Novo Testamento', 'Hospitalidade', 'Acolhimento', 'Comunhão']
-image = "/images/posts/serie-3-joao.webp"
+image = "/images/posts/3-joao-1-1-14-a-pratica-da-hospitalidade-biblica.webp"
 +++
 
 A 3ª Carta de João foi escrita para um homem chamado Gaio. Ele é alguém que pode ter perdido recursos e a saúde. Os estudiosos suspeitam disso por três razões:

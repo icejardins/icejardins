@@ -5,7 +5,7 @@ date = '2023-03-04'
 draft = false
 categorias = ['Sermões', 'Gálatas', 'Novo Testamento']
 tags = ['Gálatas', 'Novo Testamento', 'Fidelidade', 'Verdade', 'Alerta Pastoral']
-image = "/images/posts/serie-galatas.webp"
+image = "/images/posts/galatas-1-6-10-o-apostolo-surpreso-nao-ha-outro-evangelho.webp"
 +++
 
 Quando pensamos em alguém que começou muito bem e terminou muito mal, lembramos do Rei Salomão. Ele teve riquezas e sabedoria indescritíveis, usufruiu de paz e de admiração de outros povos. Contudo, seu fim foi descrito assim, em I Rs 11:4-6.

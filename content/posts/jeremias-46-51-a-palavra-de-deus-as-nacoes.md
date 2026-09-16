@@ -5,7 +5,7 @@ date = '2025-11-16'
 draft = false
 categorias = ['Sermões', 'Jeremias', 'Antigo Testamento']
 tags = ['Jeremias', 'Antigo Testamento', 'Soberania Global', 'Julgamento das Nações', 'Salvação']
-image = "/images/posts/serie-jeremias.webp"
+image = "/images/posts/jeremias-46-51-a-palavra-de-deus-as-nacoes.webp"
 +++
 
 O livro de Jeremias de um modo geral profetiza a ruína de Israel por ter, há muito tempo, abandonado Deus como sua fonte de esperança e ter ido atrás de cisternas que não podiam reter águas. Como resultado, Deus usou as nações para castigarem Israel como sendo Sua disciplina. Agora Deus fala sobre o castigo dessas nações.

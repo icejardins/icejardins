@@ -5,7 +5,7 @@ date = '2025-05-02'
 draft = false
 categorias = ['Sermões', 'Jeremias', 'Antigo Testamento']
 tags = ['Jeremias', 'Antigo Testamento', 'Religiosidade', 'Templo', 'Sinceridade']
-image = "/images/posts/serie-jeremias.webp"
+image = "/images/posts/jeremias-7-1-8-3-o-sermao-do-templo.webp"
 +++
 
 **Queridos irmãos, existe algo profundamente frustrante em descobrir que aquilo que parecia ser luz, na verdade escondia trevas.** Poucas coisas nos decepcionam tanto quanto a hipocrisia — especialmente vinda daqueles que deveriam ser exemplos de fé.

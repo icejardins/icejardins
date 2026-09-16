@@ -5,7 +5,7 @@ date = '2023-04-21'
 draft = false
 categorias = ['Sermões', 'Gálatas', 'Novo Testamento']
 tags = ['Gálatas', 'Novo Testamento', 'Crescimento Espiritual', 'Discipulado', 'Aliança']
-image = "/images/posts/serie-galatas.webp"
+image = "/images/posts/galatas-4-8-31-libertos-para-crescer.webp"
 +++
 
 Gálatas 4:8-31 é um texto que abre uma janela para o coração pastoral de Paulo. Paulo foi duro até aqui. Ele chamou os Gálatas de insensatos e os confrontou com questões importantes do evangelho. Há um tempo onde ser firmeza é necessário, especialmente para alertar uma igreja que estava perdendo o evangelho, renunciando a Palavra.

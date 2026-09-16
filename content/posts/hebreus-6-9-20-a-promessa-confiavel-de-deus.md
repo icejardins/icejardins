@@ -5,7 +5,7 @@ date = '2024-05-19'
 draft = false
 categorias = ['Sermões', 'Hebreus', 'Novo Testamento']
 tags = ['Hebreus', 'Novo Testamento', 'Esperança', 'Promessas', 'Segurança']
-image = "/images/posts/serie-hebreus.webp"
+image = "/images/posts/hebreus-6-9-20-a-promessa-confiavel-de-deus.webp"
 +++
 
 ## I. Esperamos coisas melhores (6:9–12)

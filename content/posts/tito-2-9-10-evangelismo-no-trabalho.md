@@ -5,7 +5,7 @@ date = '2025-02-17'
 draft = false
 categorias = ['Sermões', 'Tito', 'Novo Testamento']
 tags = ['Tito', 'Novo Testamento', 'Trabalho Cristão', 'Testemunho', 'Ética']
-image = "/images/posts/serie-tito.webp"
+image = "/images/posts/tito-2-9-10-evangelismo-no-trabalho.webp"
 +++
 
 Quantos aqui deixaram o carro aberto de propósito no estacionamento? Isso é uma prova que você crê na depravação da humanidade. Algo que revela com mais profundidade e amplitude a total depravação da humanidade é a escravidão que consiste no ato de reduzir pessoas feitas à imagem de Deus à mercadorias a serem exploradas.

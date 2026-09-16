@@ -5,7 +5,7 @@ date = '2023-11-06'
 draft = false
 categorias = ['Sermões', 'Tiago', 'Novo Testamento']
 tags = ['Tiago', 'Novo Testamento', 'Controle da Língua', 'Sabedoria', 'Paz']
-image = "/images/posts/serie-tiago.webp"
+image = "/images/posts/tiago-3-1-18-o-poder-da-lingua-e-a-sabedoria-do-alto.webp"
 +++
 
 Muitos textos em provérbios tratam a respeito de como usamos a língua. Sim, é um tema humilhante para todos nós. Pv. 10:19, diz:

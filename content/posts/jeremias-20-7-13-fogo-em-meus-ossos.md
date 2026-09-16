@@ -5,7 +5,7 @@ date = '2025-08-06'
 draft = false
 categorias = ['Sermões', 'Jeremias', 'Antigo Testamento']
 tags = ['Jeremias', 'Antigo Testamento', 'Perseverança', 'Lamento', 'Paixão pela Palavra']
-image = "/images/posts/serie-jeremias.webp"
+image = "/images/posts/jeremias-20-7-13-fogo-em-meus-ossos.webp"
 +++
 
 Às vezes, o brilhantismo se manifesta muito cedo. Pense em Mozart. Ele compôs suas primeiras obras aos 5 anos de idade e aos 8 já se apresentava aos monarcas europeus. Outro compositor brilhante foi Bach que morreu em 1750 sem grande fama além de Leipzig; suas sinfonias e cantatas só foram redescobertas e celebradas a partir da apresentação do “St. Matthew Passion” em 1829, quase 80 anos após seu falecimento.

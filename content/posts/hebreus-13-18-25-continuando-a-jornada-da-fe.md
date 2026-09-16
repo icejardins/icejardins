@@ -5,7 +5,7 @@ date = '2024-11-03'
 draft = false
 categorias = ['Sermões', 'Hebreus', 'Novo Testamento']
 tags = ['Hebreus', 'Novo Testamento', 'Bênção Pastoral', 'Oração', 'Graça']
-image = "/images/posts/serie-hebreus.webp"
+image = "/images/posts/hebreus-13-18-25-continuando-a-jornada-da-fe.webp"
 +++
 
 Introdução A vida é cheia de despedidas. Estamos chegando no final da exposição em Hebreus, e a partir da próxima semana, iniciaremos o livro de Joel. Assim como nós, o autor e seus leitores seguiram suas jornadas de fé. O amor entre o escritor e seus leitores permaneceria, e eles continuariam a lutar pela fé até o fim. Para nós, o mesmo é verdadeiro.

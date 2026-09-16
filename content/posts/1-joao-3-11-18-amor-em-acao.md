@@ -5,7 +5,7 @@ date = '2026-06-10'
 draft = false
 categorias = ['Sermões', '1 João', 'Novo Testamento']
 tags = ['1 João', 'Novo Testamento', 'Amor Cristão', 'Generosidade', 'Comunidade']
-image = "/images/posts/serie-1-joao.webp"
+image = "/images/posts/1-joao-3-11-18-amor-em-acao.webp"
 +++
 
 > **11** Porque a mensagem que vocês ouviram desde o princípio é esta: que nos amemos uns aos outros. 12Não sejamos como Caim, que era do Maligno e matou o seu irmão. E por que o matou? Porque as suas obras eram más, e as de seu irmão eram justas. 13Irmãos, não se admirem se o mundo odeia vocês. 14Nós sabemos que já passamos da morte para a vida, porque amamos os irmãos. Quem não ama permanece na morte. 15Todo aquele que odeia o seu irmão é assassino, e vocês sabem que todo assassino não tem a vida eterna permanente em si. 16Nisto conhecemos o amor: que Cristo deu a sua vida por nós; portanto, também nós devemos dar a nossa vida pelos irmãos. 17Ora, se alguém possui recursos deste mundo e vê seu irmão passar necessidade, mas fecha o coração para essa pessoa, como pode permanecer nele o amor de Deus? 18Filhinhos, não amemos de palavra, nem da boca para fora, mas de fato e de verdade.

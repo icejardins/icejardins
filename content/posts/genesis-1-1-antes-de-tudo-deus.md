@@ -5,7 +5,7 @@ date = '2026-09-05'
 draft = false
 categorias = ['Sermões', 'Gênesis', 'Antigo Testamento']
 tags = ['Gênesis', 'Antigo Testamento', 'Criação', 'Soberania', 'Cosmovisão']
-image = "/images/posts/serie-genesis.webp"
+image = "/images/posts/genesis-1-1-antes-de-tudo-deus.webp"
 +++
 
 Quase sempre começamos nossas histórias conosco no centro: o que desejamos, o que perdemos, o que tememos, o que planejamos. Mesmo quando pensamos em Deus, frequentemente perguntamos primeiro o que ele pode fazer por nossa vida. A Bíblia apresenta uma outra narração sobre a história: “No princípio, Deus.”

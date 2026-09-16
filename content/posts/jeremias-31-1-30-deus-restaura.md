@@ -5,7 +5,7 @@ date = '2025-10-04'
 draft = false
 categorias = ['Sermões', 'Jeremias', 'Antigo Testamento']
 tags = ['Jeremias', 'Antigo Testamento', 'Nova Aliança', 'Amor Eterno', 'Restauração']
-image = "/images/posts/serie-jeremias.webp"
+image = "/images/posts/jeremias-31-1-30-deus-restaura.webp"
 +++
 
 Deus restaura completamente o que foi completamente devastado.

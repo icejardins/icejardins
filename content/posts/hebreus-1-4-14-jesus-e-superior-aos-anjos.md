@@ -5,7 +5,7 @@ date = '2024-03-03'
 draft = false
 categorias = ['Sermões', 'Hebreus', 'Novo Testamento']
 tags = ['Hebreus', 'Novo Testamento', 'Cristologia', 'Adoração', 'Exaltação']
-image = "/images/posts/serie-hebreus.webp"
+image = "/images/posts/hebreus-1-4-14-jesus-e-superior-aos-anjos.webp"
 +++
 
 Desde o início do livro, o foco é Cristo. Hebreus é um livro cristocêntrico. Em última análise, o evangelho se resume a três questões: Quem é Jesus? Quais foram as suas obras ou qual foi sua missão? E, por fim, qual é o significado disso para nós?

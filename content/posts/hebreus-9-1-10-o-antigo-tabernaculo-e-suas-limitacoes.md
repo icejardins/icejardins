@@ -5,7 +5,7 @@ date = '2024-06-28'
 draft = false
 categorias = ['Sermões', 'Hebreus', 'Novo Testamento']
 tags = ['Hebreus', 'Novo Testamento', 'Tabernáculo', 'Antiga Aliança', 'Tipologia']
-image = "/images/posts/serie-hebreus.webp"
+image = "/images/posts/hebreus-9-1-10-o-antigo-tabernaculo-e-suas-limitacoes.webp"
 +++
 
 As pessoas tendem a confiar mais naquilo que podem ver e tocar. Tem gente que se sente mais seguro com dinheiro em caso do que no banco. Durante a guerra, percebeu-se que crianças dormiam melhor se estivessem segurando um pedaço de pão. Esta tendência humana de precisar ver para crer pode explicar por que os israelitas tinham tanto apego pela antiga aliança, que envolvia tantos rituais práticos e visíveis.

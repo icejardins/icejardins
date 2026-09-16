@@ -5,7 +5,7 @@ date = '2026-08-07'
 draft = false
 categorias = ['Sermões', '2 João', 'Novo Testamento']
 tags = ['2 João', 'Novo Testamento', 'Verdade e Amor', 'Ortodoxia', 'Perseverança']
-image = "/images/posts/serie-2-joao.webp"
+image = "/images/posts/2-joao-1-1-13-o-que-cremos-sobre-jesus-importa.webp"
 +++
 
 ## Introdução. Em nossos dias, uma frase parece irrefutável: “O importante é o amor”. Mas amar como, a quem e segundo qual definição? Em nome do amor, pessoas escondem a verdade para evitar conversas difíceis. Em nome da verdade, gente sem muita sensibilidade chama dureza de fidelidade. A Bíblia não permite separar verdade de amor.

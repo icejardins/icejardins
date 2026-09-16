@@ -5,7 +5,7 @@ date = '2023-03-17'
 draft = false
 categorias = ['Sermões', 'Gálatas', 'Novo Testamento']
 tags = ['Gálatas', 'Novo Testamento', 'Justificação pela Fé', 'Graça', 'Cruz']
-image = "/images/posts/serie-galatas.webp"
+image = "/images/posts/galatas-2-1-21-libertos-pela-fe.webp"
 +++
 
 A principal verdade que vimos até aqui em Gálatas é que: “a alegria de Deus em nós não é baseada em nossa performance para ele”. Por um lado, isso é libertador; por outro, pode parecer frustrante. Quer dizer que não podemos fazer nada para agradar a Deus? A resposta dessa pergunta revela o segredo, num certo sentido, da vida cristã.

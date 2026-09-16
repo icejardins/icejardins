@@ -5,7 +5,7 @@ date = '2024-06-09'
 draft = false
 categorias = ['Sermões', 'Hebreus', 'Novo Testamento']
 tags = ['Hebreus', 'Novo Testamento', 'Sacerdócio', 'Nova Aliança', 'Melquisedeque']
-image = "/images/posts/serie-hebreus.webp"
+image = "/images/posts/hebreus-7-11-22-um-sacerdocio-superior.webp"
 +++
 
 Hoje, vamos falar sobre a perfeição, conceito muitas vezes banalizado. Usamos a palavra 'perfeito' de forma corriqueira, mas será que entendemos o verdadeiro significado quando aplicado a Jesus?

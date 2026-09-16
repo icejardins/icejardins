@@ -5,7 +5,7 @@ date = '2026-08-21'
 draft = false
 categorias = ['Sermões', '3 João', 'Novo Testamento']
 tags = ['3 João', 'Novo Testamento', 'Humildade', 'Liderança Bíblica', 'Exemplo']
-image = "/images/posts/serie-3-joao.webp"
+image = "/images/posts/3-joao-1-9-15-quando-cristo-ocupa-o-primeiro-lugar.webp"
 +++
 
 > **9** Escrevi algumas palavras à igreja, mas Diótrefes, que gosta de exercer a primazia entre eles, não nos dá acolhida. 10Por isso, quando eu for aí, farei com que se lembre das obras que ele pratica, proferindo contra nós palavras caluniosas. E, não satisfeito com isso, ele não recebe os irmãos, impede os que querem recebê-los e os expulsa da igreja. 11Amado, não imite o que é mau, e sim o que é bom. Quem pratica o bem procede de Deus; quem pratica o mal jamais viu a Deus. 12Quanto a Demétrio, todos dão bom testemunho dele, até a própria verdade. E nós também damos testemunho, e você sabe que o nosso testemunho é verdadeiro. 13Muitas coisas tinha para lhe escrever, mas não quis fazê-lo com tinta e pena, 14pois espero vê-lo em breve. Então conversaremos pessoalmente. 15A paz esteja com você. Os amigos mandam saudações. Dê saudações aos amigos, um por um.

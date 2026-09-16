@@ -5,7 +5,7 @@ date = '2025-05-24'
 draft = false
 categorias = ['Sermões', 'Jeremias', 'Antigo Testamento']
 tags = ['Jeremias', 'Antigo Testamento', 'Dúvida', 'Providência', 'Consolo']
-image = "/images/posts/serie-jeremias.webp"
+image = "/images/posts/jeremias-12-quando-deus-parece-distante.webp"
 +++
 
 ## I. Jeremias tem uma questão sincera (12:1-4).

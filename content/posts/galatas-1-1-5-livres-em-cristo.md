@@ -5,7 +5,7 @@ date = '2023-02-25'
 draft = false
 categorias = ['Sermões', 'Gálatas', 'Novo Testamento']
 tags = ['Gálatas', 'Novo Testamento', 'Graça', 'Liberdade', 'Legalismo']
-image = "/images/posts/serie-galatas.webp"
+image = "/images/posts/galatas-1-1-5-livres-em-cristo.webp"
 +++
 
 A índia é conhecida como a terra de um milhão de deuses. Há deuses por todos os lados. Motoristas têm deuses nos painéis dos carros, as ruas são coalhadas com vendinhas de produtos religiosos, gente adorando árvores nas calçadas. Os indianos são extremamente religiosos e se esforçam para serem aceitos pelas divindades; Contudo, paz não exatamente um termo para definir a Índia.

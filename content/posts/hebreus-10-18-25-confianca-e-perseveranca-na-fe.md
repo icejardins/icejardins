@@ -5,7 +5,7 @@ date = '2024-07-25'
 draft = false
 categorias = ['Sermões', 'Hebreus', 'Novo Testamento']
 tags = ['Hebreus', 'Novo Testamento', 'Comunhão', 'Ousadia na Oração', 'Igreja']
-image = "/images/posts/serie-hebreus.webp"
+image = "/images/posts/hebreus-10-18-25-confianca-e-perseveranca-na-fe.webp"
 +++
 
 Os destinatários da Epístola aos Hebreus enfrentavam perseguição e desafios para manter sua fé. Esta carta os encoraja, lembrando-os da superioridade de Cristo e da nova aliança. Hoje, nós também podemos nos identificar com esses desafios e encontrar encorajamento na mensagem de Hebreus.

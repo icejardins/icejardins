@@ -5,7 +5,7 @@ date = '2025-06-28'
 draft = false
 categorias = ['Sermões', 'Jeremias', 'Antigo Testamento']
 tags = ['Jeremias', 'Antigo Testamento', 'Autopiedade', 'Restauração', 'Ministério']
-image = "/images/posts/serie-jeremias.webp"
+image = "/images/posts/jeremias-15-10-21-da-desilusao-ao-arrependimento.webp"
 +++
 
 ## I. Reclamar pode levar à desilusão (15:10-14).

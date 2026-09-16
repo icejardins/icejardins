@@ -5,7 +5,7 @@ date = '2026-05-21'
 draft = false
 categorias = ['Sermões', '1 João', 'Novo Testamento']
 tags = ['1 João', 'Novo Testamento', 'Redenção', 'Graça', 'Vitória em Cristo']
-image = "/images/posts/serie-1-joao.webp"
+image = "/images/posts/1-joao-3-4-10-por-que-jesus-veio.webp"
 +++
 
 4 Todo aquele que pratica o pecado também transgride a lei, porque o pecado é a transgressão da lei. 5 E vocês sabem que ele se manifestou para tirar os pecados, e nele não existe pecado. 6 Todo aquele que permanece nele não vive pecando; todo aquele que vive pecando não o viu, nem o conheceu. 7 Filhinhos, não se deixem enganar por ninguém. Aquele que pratica a justiça é justo, assim como ele é justo. 8 Aquele que pratica o pecado procede do diabo, porque o diabo vive pecando desde o princípio. Para isto se manifestou o Filho de Deus: para destruir as obras do diabo. 9 Todo aquele que é nascido de Deus não vive na prática de pecado, porque nele permanece a semente divina; esse não pode viver pecando, porque é nascido de Deus. 10 Nisto são manifestos os filhos de Deus e os filhos do diabo: todo aquele que não pratica a justiça não procede de Deus, e o mesmo vale para aquele que não ama o seu irmão.

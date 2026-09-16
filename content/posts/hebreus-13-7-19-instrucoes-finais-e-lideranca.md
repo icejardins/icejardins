@@ -5,7 +5,7 @@ date = '2024-10-25'
 draft = false
 categorias = ['Sermões', 'Hebreus', 'Novo Testamento']
 tags = ['Hebreus', 'Novo Testamento', 'Liderança', 'Imutabilidade de Cristo', 'Vida Cristã']
-image = "/images/posts/serie-hebreus.webp"
+image = "/images/posts/hebreus-13-7-19-instrucoes-finais-e-lideranca.webp"
 +++
 
 Os cristãos devem se inspirar na fé dos seus lideres e proteger esta fé enquanto sofrem na jornada espiritual.

@@ -5,7 +5,7 @@ date = '2026-06-18'
 draft = false
 categorias = ['Sermões', '1 João', 'Novo Testamento']
 tags = ['1 João', 'Novo Testamento', 'Discernimento', 'Doutrina', 'Verdade']
-image = "/images/posts/serie-1-joao.webp"
+image = "/images/posts/1-joao-4-1-6-testem-os-espiritos.webp"
 +++
 
 1 Amados, não deem crédito a qualquer espírito, mas provem os espíritos para ver se procedem de Deus; porque muitos falsos profetas têm saído mundo afora. 2 Nisto vocês reconhecem o Espírito de Deus: todo espírito que confessa que Jesus Cristo veio em carne é de Deus; 3 e todo espírito que não confessa isso a respeito de Jesus não procede de Deus; pelo contrário, este é o espírito do anticristo, a respeito do qual vocês ouviram dizer que viria e que agora já está no mundo.

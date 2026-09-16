@@ -5,7 +5,7 @@ date = '2024-08-23'
 draft = false
 categorias = ['Sermões', 'Hebreus', 'Novo Testamento']
 tags = ['Hebreus', 'Novo Testamento', 'Fé', 'Esperança Eterna', 'Patriarcas']
-image = "/images/posts/serie-hebreus.webp"
+image = "/images/posts/hebreus-11-20-22-olhando-com-fe-alem-da-morte.webp"
 +++
 
 Hebreus 11:13 13Todos estes morreram na fé. Não obtiveram as promessas, mas viram-nas de longe e se alegraram com elas, confessando que eram estrangeiros e peregrinos na terra.

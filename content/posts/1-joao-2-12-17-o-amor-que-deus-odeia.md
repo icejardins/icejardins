@@ -5,7 +5,7 @@ date = '2026-05-01'
 draft = false
 categorias = ['Sermões', '1 João', 'Novo Testamento']
 tags = ['1 João', 'Novo Testamento', 'Santidade', 'Mundo', 'Perdão']
-image = "/images/posts/serie-1-joao.webp"
+image = "/images/posts/1-joao-2-12-17-o-amor-que-deus-odeia.webp"
 +++
 
 > **12** Filhinhos, escrevo a vocês, porque os seus pecados são perdoados por causa do nome de Jesus. 13Pais, escrevo a vocês, porque conhecem aquele que existe desde o princípio. Jovens, escrevo a vocês, porque vocês têm vencido o Maligno. 14Filhinhos, escrevi a vocês, porque conhecem o Pai. Pais, escrevi a vocês, porque conhecem aquele que existe desde o princípio. Jovens, escrevi a vocês, porque são fortes, e a palavra de Deus permanece em vocês, e vocês já venceram o Maligno. 15Não amem o mundo nem as coisas que há no mundo. Se alguém amar o mundo, o amor do Pai não está nele. 16Porque tudo o que há no mundo — os desejos da carne, os desejos dos olhos e a soberba da vida — não procede do Pai, mas procede do mundo. 17Ora, o mundo passa, bem como os seus desejos; mas aquele que faz a vontade de Deus permanece para sempre.

@@ -5,7 +5,7 @@ date = '2023-06-10'
 draft = false
 categorias = ['Sermões', 'Gálatas', 'Novo Testamento']
 tags = ['Gálatas', 'Novo Testamento', 'Fruto do Espírito', 'Fidelidade', 'Caráter Cristão']
-image = "/images/posts/serie-galatas.webp"
+image = "/images/posts/galatas-5-22-o-fruto-do-espirito-fidelidade.webp"
 +++
 
 Estamos quase no final da nossa série sobre o Fruto do Espírito. Ele é descrito aqui em Gálatas pelas 9 virtudes que lemos. Elas se fazem presentes na vida das pessoas e nas comunidades vitalmente ligadas a Jesus e demonstram o caráter de Jesus que se forma em nós.

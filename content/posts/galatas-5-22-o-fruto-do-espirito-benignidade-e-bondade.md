@@ -5,7 +5,7 @@ date = '2023-06-04'
 draft = false
 categorias = ['Sermões', 'Gálatas', 'Novo Testamento']
 tags = ['Gálatas', 'Novo Testamento', 'Fruto do Espírito', 'Bondade', 'Relacionamentos']
-image = "/images/posts/serie-galatas.webp"
+image = "/images/posts/galatas-5-22-o-fruto-do-espirito-benignidade-e-bondade.webp"
 +++
 
 Boa noite, estamos quase na metade de nossa série sobre o Fruto do Espírito. Estamos observando a enorme transformação que Deus produz em nós, pelo seu Espírito para nos fazer mais parecidos com Jesus. No texto que lemos, que é a base de nossa minissérie, Paulo cita nove virtudes que compõem o fruto do Espírito e que refletem o caráter de Jesus. São elas: amor, alegria, paz, longanimidade, benignidade, bondade, fidelidade, mansidão, domínio próprio.

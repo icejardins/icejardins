@@ -5,7 +5,7 @@ date = '2023-05-06'
 draft = false
 categorias = ['Sermões', 'Gálatas', 'Novo Testamento']
 tags = ['Gálatas', 'Novo Testamento', 'Espírito Santo', 'Fruto do Espírito', 'Santificação']
-image = "/images/posts/serie-galatas.webp"
+image = "/images/posts/galatas-5-16-26-andar-no-espirito.webp"
 +++
 
 No culto anterior, vimos como Paulo chamou os gálatas a viverem a liberdade. Eles devem manifestar sua liberdade em Cristo servindo amorosamente aos outros. (vv. 13-15). Agora Paulo amplia a ideia explicando que a liberdade e o progresso espiritual ocorrem apenas pelo poder do Espírito.

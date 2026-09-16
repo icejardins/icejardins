@@ -5,7 +5,7 @@ date = '2023-10-21'
 draft = false
 categorias = ['Sermões', 'Tiago', 'Novo Testamento']
 tags = ['Tiago', 'Novo Testamento', 'Justiça Social', 'Amor ao Próximo', 'Lei Real']
-image = "/images/posts/serie-tiago.webp"
+image = "/images/posts/tiago-2-1-13-o-perigo-da-parcialidade.webp"
 +++
 
 Quando pensamos nos atributos de Deus, pensamos que Ele é amor, graça, misericórdia, justiça, onipotência, onisciência, onipresença, santidade, ira justa. Um dos atributos pouco listados é o atributo da imparcialidade.

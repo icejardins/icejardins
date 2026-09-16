@@ -5,7 +5,7 @@ date = '2024-04-14'
 draft = false
 categorias = ['Sermões', 'Hebreus', 'Novo Testamento']
 tags = ['Hebreus', 'Novo Testamento', 'Descanso', 'Fé', 'Perseverança']
-image = "/images/posts/serie-hebreus.webp"
+image = "/images/posts/hebreus-4-1-7-o-descanso-de-deus.webp"
 +++
 
 ## I. Descanse pela Fé (4:1–2)

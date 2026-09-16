@@ -5,7 +5,7 @@ date = '2025-10-25'
 draft = false
 categorias = ['Sermões', 'Jeremias', 'Antigo Testamento']
 tags = ['Jeremias', 'Antigo Testamento', 'Inerrância', 'Autoridade das Escrituras', 'Perseguição']
-image = "/images/posts/serie-jeremias.webp"
+image = "/images/posts/jeremias-36-38-desafio-mortal.webp"
 +++
 
 Obedecer é difícil, mas desafiar a palavra de Deus é mortal.

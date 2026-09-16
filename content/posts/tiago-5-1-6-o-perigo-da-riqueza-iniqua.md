@@ -5,7 +5,7 @@ date = '2023-11-25'
 draft = false
 categorias = ['Sermões', 'Tiago', 'Novo Testamento']
 tags = ['Tiago', 'Novo Testamento', 'Mordomia', 'Alerta aos Ricos', 'Justiça']
-image = "/images/posts/serie-tiago.webp"
+image = "/images/posts/tiago-5-1-6-o-perigo-da-riqueza-iniqua.webp"
 +++
 
 Chegamos ao último capítulo de Tiago. Um texto bem duro que condena firmemente os pecados dos ricos. Sim, o texto faz um alerta muito severo para os ricos.

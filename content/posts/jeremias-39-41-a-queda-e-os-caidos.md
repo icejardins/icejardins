@@ -5,7 +5,7 @@ date = '2025-11-01'
 draft = false
 categorias = ['Sermões', 'Jeremias', 'Antigo Testamento']
 tags = ['Jeremias', 'Antigo Testamento', 'Juízo', 'Humildade', 'Cumprimento Profético']
-image = "/images/posts/serie-jeremias.webp"
+image = "/images/posts/jeremias-39-41-a-queda-e-os-caidos.webp"
 +++
 
 Chegou o dia fatídico. Aconteceu. Lemos 38 capítulos sobre o futuro julgamento de Deus, agora chegou a hora.

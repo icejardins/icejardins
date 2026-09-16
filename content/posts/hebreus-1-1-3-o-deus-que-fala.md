@@ -5,7 +5,7 @@ date = '2024-02-23'
 draft = false
 categorias = ['Sermões', 'Hebreus', 'Novo Testamento']
 tags = ['Hebreus', 'Novo Testamento', 'Revelação', 'Cristologia', 'Palavra de Deus']
-image = "/images/posts/serie-hebreus.webp"
+image = "/images/posts/hebreus-1-1-3-o-deus-que-fala.webp"
 +++
 
 Muitas vezes temos dúvidas sobre com devemos ler o AT. O livro de Hebreus nos dá importantes orientações sobre como interpretar corretamente o Antigo Testamento, tendo Cristo como o cumprimento de coisas. Contudo, a história da teologia e a história da igreja demonstram que existem formas muito erradas de ler o AT.

@@ -5,7 +5,7 @@ date = '2026-04-11'
 draft = false
 categorias = ['Sermões', '1 João', 'Novo Testamento']
 tags = ['1 João', 'Novo Testamento', 'Cristologia', 'Encarnação', 'Comunhão']
-image = "/images/posts/serie-1-joao.webp"
+image = "/images/posts/1-joao-1-1-4-uma-vida-inigualavel.webp"
 +++
 
 porque Jesus é o Verbo encarnado, a vida eterna entrou na história; por isso, ele deve ser conhecido corretamente, compartilhado fielmente e desfrutado com alegria, comunhão e segurança.

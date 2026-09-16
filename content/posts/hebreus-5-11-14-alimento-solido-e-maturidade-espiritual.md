@@ -5,7 +5,7 @@ date = '2024-05-04'
 draft = false
 categorias = ['Sermões', 'Hebreus', 'Novo Testamento']
 tags = ['Hebreus', 'Novo Testamento', 'Maturidade', 'Discernimento', 'Crescimento']
-image = "/images/posts/serie-hebreus.webp"
+image = "/images/posts/hebreus-5-11-14-alimento-solido-e-maturidade-espiritual.webp"
 +++
 
 > **11** A esse respeito temos muitas coisas a dizer, coisas difíceis de explicar, porque vocês ficaram com preguiça de ouvir. 12Pois, quando já deviam ser mestres, levando em conta o tempo decorrido, vocês têm, novamente, necessidade de alguém que lhes ensine quais são os princípios elementares dos oráculos de Deus. Passaram a ter necessidade de leite e não de alimento sólido. 13Ora, todo aquele que se alimenta de leite é inexperiente na palavra da justiça, porque é criança. 14Mas o alimento sólido é para os adultos, para aqueles que, pela prática, têm as suas faculdades exercitadas para discernir não somente o bem, mas também o mal.

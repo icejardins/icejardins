@@ -5,7 +5,7 @@ date = '2026-08-16'
 draft = false
 categorias = ['Sermões', '3 João', 'Novo Testamento']
 tags = ['3 João', 'Novo Testamento', 'Missões', 'Generosidade', 'Cooperação']
-image = "/images/posts/serie-3-joao.webp"
+image = "/images/posts/3-joao-1-1-8-por-causa-do-nome.webp"
 +++
 
 > **3** João 1 O presbítero ao amado Gaio, a quem eu amo na verdade. 2Amado, peço a Deus que tudo corra bem com você e que esteja com boa saúde, assim como vai bem a sua alma. 3Pois fiquei muito alegre quando os irmãos vieram e deram testemunho de que você é fiel à verdade e vive de acordo com a verdade. 4Não tenho maior alegria do que esta, a de ouvir que os meus filhos vivem de acordo com a verdade. 5Amado, você tem sido fiel no que faz pelos irmãos, mesmo quando são estrangeiros. 6Estes deram testemunho, diante da igreja, do amor que você tem. Você fará bem encaminhando-os em sua jornada de um modo que agrada a Deus. 7Pois foi por causa do Nome que eles saíram, sem receber nada dos gentios. 8Portanto, devemos acolher esses irmãos, para que nos tornemos cooperadores com eles na proclamação da verdade.

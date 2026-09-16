@@ -5,7 +5,7 @@ date = '2025-08-29'
 draft = false
 categorias = ['Sermões', 'Jeremias', 'Antigo Testamento']
 tags = ['Jeremias', 'Antigo Testamento', 'Submissão', 'Disciplina Divina', 'Providência']
-image = "/images/posts/serie-jeremias.webp"
+image = "/images/posts/jeremias-24-ir-ou-ficar.webp"
 +++
 
 ## I. A Visão de Jeremias (24:1-3)

@@ -5,7 +5,7 @@ date = '2026-04-24'
 draft = false
 categorias = ['Sermões', '1 João', 'Novo Testamento']
 tags = ['1 João', 'Novo Testamento', 'Obediência', 'Amor Fraternal', 'Vida Cristã']
-image = "/images/posts/serie-1-joao.webp"
+image = "/images/posts/1-joao-2-3-11-conheca-obedeca-e-ame.webp"
 +++
 
 **1 João 2:6** — “quem diz que permanece nele, esse deve também andar assim como ele andou.”

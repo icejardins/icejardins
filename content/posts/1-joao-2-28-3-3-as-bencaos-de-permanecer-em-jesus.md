@@ -5,7 +5,7 @@ date = '2026-05-16'
 draft = false
 categorias = ['Sermões', '1 João', 'Novo Testamento']
 tags = ['1 João', 'Novo Testamento', 'Filiação', 'Esperança', 'Segunda Vinda']
-image = "/images/posts/serie-1-joao.webp"
+image = "/images/posts/1-joao-2-28-3-3-as-bencaos-de-permanecer-em-jesus.webp"
 +++
 
 > **28** E agora, filhinhos, permaneçam nele, para que, quando ele se manifestar, tenhamos confiança e não sejamos envergonhados, tendo de nos afastar dele no dia da sua vinda. 29Se sabem que ele é justo, reconheçam também que todo aquele que pratica a justiça é nascido de Deus. 1Vejam que grande amor o Pai nos tem concedido, a ponto de sermos chamados filhos de Deus; e, de fato, somos filhos de Deus. Por essa razão, o mundo não nos conhece, porque não o conheceu. 2Amados, agora somos filhos de Deus, mas ainda não se manifestou o que haveremos de ser. Sabemos que, quando ele se manifestar, seremos semelhantes a ele, porque haveremos de vê-lo como ele é. 3E todo o que tem essa esperança nele purifica a si mesmo, assim como ele é puro.

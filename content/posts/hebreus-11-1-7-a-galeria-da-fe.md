@@ -5,7 +5,7 @@ date = '2024-08-10'
 draft = false
 categorias = ['Sermões', 'Hebreus', 'Novo Testamento']
 tags = ['Hebreus', 'Novo Testamento', 'Heróis da Fé', 'Fé Bíblica', 'Confiança']
-image = "/images/posts/serie-hebreus.webp"
+image = "/images/posts/hebreus-11-1-7-a-galeria-da-fe.webp"
 +++
 
 A galeria da fé.

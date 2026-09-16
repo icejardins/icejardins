@@ -5,7 +5,7 @@ date = '2023-09-23'
 draft = false
 categorias = ['Sermões', 'Tiago', 'Novo Testamento']
 tags = ['Tiago', 'Novo Testamento', 'Integridade', 'Sabedoria', 'Perseverança']
-image = "/images/posts/serie-tiago.webp"
+image = "/images/posts/tiago-1-1-12-integridade-e-provas.webp"
 +++
 
 Integridade! Gente integra parece uma espécie em extinção em muitas áreas. Não é só na política, mas no universo dos esportes e até da religião. E não são apenas os líderes. Gente simples também sacrifica valores importantes para obter vantagens mínimas. Sacrificamos nossa integridade pelas razões mais triviais.

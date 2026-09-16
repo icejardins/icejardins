@@ -5,7 +5,7 @@ date = '2025-03-28'
 draft = false
 categorias = ['Sermões', 'Jeremias', 'Antigo Testamento']
 tags = ['Jeremias', 'Antigo Testamento', 'Chamado', 'Vocação', 'Coragem']
-image = "/images/posts/serie-jeremias.webp"
+image = "/images/posts/jeremias-1-anatomia-do-chamado.webp"
 +++
 
 ## I. Deus chama Jeremias (1:5).
