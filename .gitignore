@@ -55,6 +55,7 @@ dist-ssr
 
 # Generated static artifacts
 src/content/generated/
+static/data/
 static/search-index.json
 static/sitemap.xml
 static/robots.txt

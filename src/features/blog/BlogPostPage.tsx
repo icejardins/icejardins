@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { getPostBySlug } from "@/content/repositories/postBodyRepository";
 import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
 import { SeoHead } from "@/shared/components/SeoHead";
@@ -14,6 +14,28 @@ export default function BlogPostPage() {
   const site = getSiteConfig();
   const post = getPostBySlug(slug);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [loadedBodyHtml, setLoadedBodyHtml] = useState<string | null>(post?.bodyHtml || null);
+
+  useEffect(() => {
+    if (post?.bodyHtml) {
+      setLoadedBodyHtml(post.bodyHtml);
+      return;
+    }
+    if (contentRef.current && contentRef.current.innerHTML.trim().length > 0) {
+      return;
+    }
+    if (slug) {
+      fetch(`/data/posts/${slug}.json`)
+        .then((res) => res.json())
+        .then((data) => {
+          if (data?.bodyHtml) {
+            setLoadedBodyHtml(data.bodyHtml);
+          }
+        })
+        .catch(() => {});
+    }
+  }, [slug, post?.bodyHtml]);
 
   useEffect(() => {
     function updateProgress() {
@@ -51,7 +73,7 @@ export default function BlogPostPage() {
     );
   }
 
-  const videoId = (post as any).youtubeId || post.bodyHtml.match(/embed\/([a-zA-Z0-9_-]+)/)?.[1];
+  const videoId = (post as any).youtubeId || post.bodyHtml.match(/data-video-id="([a-zA-Z0-9_-]+)"/)?.[1] || post.bodyHtml.match(/embed\/([a-zA-Z0-9_-]+)/)?.[1];
 
   const blogPostingSchema = {
     "@context": "https://schema.org",
@@ -170,8 +192,10 @@ export default function BlogPostPage() {
             ) : null}
 
             <div
+              ref={contentRef}
               className={styles.content}
-              dangerouslySetInnerHTML={{ __html: post.bodyHtml }}
+              dangerouslySetInnerHTML={loadedBodyHtml ? { __html: loadedBodyHtml } : undefined}
+              suppressHydrationWarning
             />
 
             <section className={styles.welcomeBanner} aria-label="Participe dos nossos cultos">

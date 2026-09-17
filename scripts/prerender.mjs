@@ -119,6 +119,22 @@ async function main() {
       html = html.replace("</head>", `${headTags}\n  </head>`);
     }
 
+    // Deduplicate duplicate link, meta, or script tags in entire <head>
+    const seenHeadLines = new Set();
+    html = html
+      .split("\n")
+      .filter((line) => {
+        const trimmed = line.trim();
+        if (trimmed.startsWith("<link") || trimmed.startsWith("<meta") || trimmed.startsWith("<script")) {
+          if (seenHeadLines.has(trimmed)) {
+            return false;
+          }
+          seenHeadLines.add(trimmed);
+        }
+        return true;
+      })
+      .join("\n");
+
     // Strip metadata and scripts out of appHtml so #root contains only valid body markup
     const cleanAppHtml = appHtml
       .replace(/<title[^>]*>[\s\S]*?<\/title>/gi, "")

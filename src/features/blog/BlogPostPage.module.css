@@ -69,7 +69,8 @@
   padding-top: 56.25%;
   border-radius: 0.9rem;
   overflow: hidden;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
+  background-color: #111;
 }
 
 .content :global(.video-embed iframe) {
@@ -78,6 +79,61 @@
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.content :global(.video-facade-btn) {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content :global(.video-facade-btn img) {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.content :global(.video-facade-btn:hover img) {
+  transform: scale(1.02);
+  filter: brightness(0.9);
+}
+
+.content :global(.video-play-btn) {
+  position: relative;
+  z-index: 2;
+  width: 68px;
+  height: 48px;
+  background: rgba(33, 33, 33, 0.85);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.content :global(.video-play-btn svg) {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+  margin-left: 3px;
+}
+
+.content :global(.video-facade-btn:hover .video-play-btn) {
+  background: #e02424;
+  transform: scale(1.08);
 }
 
 .sidebar {
@@ -232,7 +288,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.4rem;
-  background: #25d366;
+  background: #0d7348;
   color: #fff;
   font-weight: 700;
   font-size: 0.98rem;
@@ -243,7 +299,7 @@
 
 .btnWhatsapp:hover,
 .btnWhatsapp:focus-visible {
-  background: #1ebc59;
+  background: #095a38;
   color: #fff;
   transform: translateY(-1px);
 }

@@ -45,6 +45,7 @@ function htmlTagInjector(isProd: boolean): Plugin {
         script += `        var loaded = false;\n`;
         script += `        function load(){\n`;
         script += `          if (loaded) return;\n`;
+        script += `          if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') return;\n`;
         script += `          loaded = true;\n`;
         script += `          var s = document.createElement('script');\n`;
         script += `          s.async = true;\n`;

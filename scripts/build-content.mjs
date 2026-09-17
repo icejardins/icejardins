@@ -58,7 +58,7 @@ function preprocessMarkdown(markdown) {
   const withEmbeds = markdown.replace(
     YOUTUBE_SHORTCODE_REGEX,
     (_, videoId) =>
-      `<div class="video-embed"><iframe src="https://www.youtube.com/embed/${videoId}" title="Vídeo do Sermão no YouTube" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>`
+      `<div class="video-embed" data-video-id="${videoId}"><button type="button" class="video-facade-btn" aria-label="Assistir ao vídeo no YouTube" onclick="this.parentElement.innerHTML='<iframe src=\\'https://www.youtube.com/embed/${videoId}?autoplay=1\\' title=\\'Vídeo do Sermão no YouTube\\' allow=\\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\\' referrerpolicy=\\'strict-origin-when-cross-origin\\' allowfullscreen></iframe>'"><img src="https://i.ytimg.com/vi/${videoId}/hqdefault.jpg" alt="Miniatura do Sermão no YouTube" loading="lazy" width="480" height="360" /><span class="video-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button></div>`
   );
 
   // Demote any H1 in markdown content to H2 to preserve strict single-H1 semantic hierarchy
@@ -617,12 +617,23 @@ async function main() {
     `${JSON.stringify(posts, null, 2)}\n`,
     "utf8"
   );
-  const postsMeta = posts.map(({ bodyHtml, toc, ...meta }) => meta);
+  const postsMeta = posts.map(({ bodyHtml, ...meta }) => meta);
   await fs.writeFile(
     path.join(generatedDir, "posts-meta.json"),
     `${JSON.stringify(postsMeta, null, 2)}\n`,
     "utf8"
   );
+
+  const postsDataDir = path.join(staticDir, "data", "posts");
+  await fs.mkdir(postsDataDir, { recursive: true });
+  for (const p of posts) {
+    await fs.writeFile(
+      path.join(postsDataDir, `${p.slug}.json`),
+      JSON.stringify({ bodyHtml: p.bodyHtml, toc: p.toc }),
+      "utf8"
+    );
+  }
+
   await fs.writeFile(
     path.join(generatedDir, "resources.json"),
     `${JSON.stringify(resources, null, 2)}\n`,
