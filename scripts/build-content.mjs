@@ -55,11 +55,14 @@ async function getMarkdownFiles(dirPath) {
 }
 
 function preprocessMarkdown(markdown) {
-  return markdown.replace(
+  const withEmbeds = markdown.replace(
     YOUTUBE_SHORTCODE_REGEX,
     (_, videoId) =>
       `<div class="video-embed"><iframe src="https://www.youtube.com/embed/${videoId}" title="Video do YouTube" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`
   );
+
+  // Demote any H1 in markdown content to H2 to preserve strict single-H1 semantic hierarchy
+  return withEmbeds.replace(/^#\s+(.+)$/gm, "## $1");
 }
 
 function parseFrontmatter(rawContent) {
@@ -177,6 +180,15 @@ function stripHtmlToText(value) {
     .replace(/<[^>]+>/g, " ")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function cleanMetaDescription(text, maxLength = 155) {
+  if (!text) return "";
+  const cleaned = stripHtmlToText(text);
+  if (cleaned.length <= maxLength) return cleaned;
+  const truncated = cleaned.slice(0, maxLength);
+  const lastSpace = truncated.lastIndexOf(" ");
+  return `${(lastSpace > 80 ? truncated.slice(0, lastSpace) : truncated).trimEnd()}...`;
 }
 
 function buildScriptureSummary(html, fallbackPlainText) {
@@ -316,7 +328,10 @@ async function main() {
 
     const readingTime = estimateReadingTime(plainText);
     const scriptureSummary = buildScriptureSummary(html, plainText);
-    const description = String(parsed.data.description ?? parsed.data.subtitle ?? scriptureSummary);
+    const explicitDescription = parsed.data.description ? String(parsed.data.description).trim() : null;
+    const description = explicitDescription || cleanMetaDescription(parsed.data.subtitle || scriptureSummary, 150);
+    const seoTitle = parsed.data.seoTitle ? String(parsed.data.seoTitle).trim() : null;
+    const faq = Array.isArray(parsed.data.faq) ? parsed.data.faq : null;
     const youtubeMatch = parsed.content.match(/\{\{<\s*youtube\s+([^\s>]+)\s*>\}\}/);
     const youtubeId = youtubeMatch ? youtubeMatch[1] : null;
 
@@ -324,8 +339,10 @@ async function main() {
       slug,
       route: normalizeRoute(`/posts/${slug}/`),
       title: String(parsed.data.title ?? slug),
+      seoTitle,
       subtitle: parsed.data.subtitle ? String(parsed.data.subtitle) : null,
       description,
+      faq,
       date: toIsoDate(parsed.data.date),
       image: parsed.data.image ? String(parsed.data.image) : null,
       tags,
