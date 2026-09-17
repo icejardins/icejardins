@@ -155,3 +155,114 @@
     position: static;
   }
 }
+
+.welcomeBanner {
+  margin-top: 3.5rem;
+  padding: 2rem;
+  background: var(--secondary-background-color, #e7f8f8);
+  border: 1px solid color-mix(in srgb, var(--primary-color) 25%, transparent);
+  border-left: 6px solid var(--primary-color);
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(20, 95, 99, 0.08);
+}
+
+.welcomeBannerHeader {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.welcomeIconWrap {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.welcomeBannerTitle {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.welcomeBannerText {
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.welcomeBannerActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.btnVisit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.4rem;
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.98rem;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btnVisit:hover,
+.btnVisit:focus-visible {
+  background: color-mix(in srgb, var(--primary-color) 85%, #000);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.btnWhatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.4rem;
+  background: #25d366;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.98rem;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btnWhatsapp:hover,
+.btnWhatsapp:focus-visible {
+  background: #1ebc59;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 576px) {
+  .welcomeBanner {
+    padding: 1.4rem 1.1rem;
+  }
+  .welcomeBannerHeader {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .welcomeBannerActions {
+    flex-direction: column;
+  }
+  .btnVisit,
+  .btnWhatsapp {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

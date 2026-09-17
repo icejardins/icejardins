@@ -5,6 +5,8 @@ import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
 import { SeoHead } from "@/shared/components/SeoHead";
 import { formatDate } from "@/core/utils/formatDate";
 import { slugify } from "@/core/utils/slugify";
+import { Icon } from "@/shared/components/Icon";
+import { trackContactConversion } from "@/shared/utils/analytics";
 import styles from "./BlogPostPage.module.css";
 
 export default function BlogPostPage() {
@@ -167,6 +169,36 @@ export default function BlogPostPage() {
               className={styles.content}
               dangerouslySetInnerHTML={{ __html: post.bodyHtml }}
             />
+
+            <section className={styles.welcomeBanner} aria-label="Participe dos nossos cultos">
+              <div className={styles.welcomeBannerHeader}>
+                <div className={styles.welcomeIconWrap} aria-hidden="true">
+                  <Icon name="chat-heart-fill" />
+                </div>
+                <div>
+                  <h3 className={styles.welcomeBannerTitle}>Venha Estudar a Bíblia Conosco</h3>
+                  <p className={styles.welcomeBannerText}>
+                    Gostou deste estudo? Participe dos nossos cultos presenciais aos domingos às 9h30 no Jardim Botânico - DF ou converse com nossa equipe pastoral pelo WhatsApp.
+                  </p>
+                </div>
+              </div>
+              <div className={styles.welcomeBannerActions}>
+                <Link to="/visita/" className={styles.btnVisit}>
+                  <Icon name="clock-fill" /> Planejar Visita aos Domingos
+                </Link>
+                <a
+                  href={`https://wa.me/5561982624952?text=${encodeURIComponent(
+                    `Olá! Li o estudo "${post.title}" no site da ICE Jardins e gostaria de conversar com a equipe pastoral.`
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.btnWhatsapp}
+                  onClick={() => trackContactConversion("sermon_welcome_banner")}
+                >
+                  <Icon name="whatsapp" /> Falar com a Equipe Pastoral
+                </a>
+              </div>
+            </section>
           </article>
 
           <aside className="col-lg-3">
