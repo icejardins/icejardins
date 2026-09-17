@@ -19,6 +19,7 @@
     "audit:live": "AUDIT_BASE_URL=https://icejardins.org.br node scripts/audit-lighthouse.mjs"
   },
   "dependencies": {
+    "@types/node": "^26.1.2",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
     "googleapis": "^176.0.0",
@@ -29,7 +30,6 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^8.0.0",
-    "@types/node": "^26.1.2",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
     "@vitejs/plugin-react": "^6.0.5",

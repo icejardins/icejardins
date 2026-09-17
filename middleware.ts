@@ -69,6 +69,7 @@ function checkEnglishPreference(acceptLanguage: string): boolean {
 }
 
 export const config = {
+  runtime: "nodejs",
   matcher: [
     "/",
     "/contribuir",
