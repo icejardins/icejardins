@@ -123,3 +123,10 @@ Se você está aqui no primeiro domingo do ano sem ainda ter encontrado Jesus, o
 Os crentes são chamados a voltar ao evangelho. Viver em arrependimento e missão. A cruz não é uma lembrança, é um alicerce.
 
 E como igreja, que sejamos marcados pela cruz, unidos pela cruz e guiados pela cruz. Que nossas conversas, nosso louvor, nossos discipulados, nossa comunhão no cafezinho exalem o Cristo crucificado e ressurreto. Jesus foi enviado para abençoar. Receba a benção do arrependimento, da fé e da vida abundante.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube NH5FZesKG-g >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

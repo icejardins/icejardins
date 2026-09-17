@@ -147,3 +147,10 @@ Como os anjos servem ao Filho? Como eles servem e ministram à igreja?
 Que coisas em sua vida você considera supremas? Como a realidade da superioridade de Cristo sobre todas as coisas muda a maneira como você vê essas coisas? Como a supremacia de Cristo afeta a maneira como você vive sua vida no dia a dia?
 
 Como o ministério e a guerra espiritual dos anjos em nome da igreja servem de incentivo à sua fé em Cristo?
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube AShKjX9yhX8 >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

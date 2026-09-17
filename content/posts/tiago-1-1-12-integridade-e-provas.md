@@ -145,3 +145,10 @@ Ele deixou a Alemanha e foi estudar na Inglaterra. Lá ele ia diariamente ao Mus
 O livro de Tiago tem algo a dizer a todos aqui. Deste lado da eternidade, todos experimentamos uma distância entre o que dizemos e o que fazemos. É a triste realidade. Contudo, os crentes verdadeiros esperam pelo dia em que o pecado não estará presente, e lutam, com a ajuda do Espírito, para viver uma vida santa.
 
 Que Deus use esse livro e seu Espírito para mudar nossas vidas para que possamos desenvolver uma fé viva e nos tornar cristãos práticos. Amém.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube q3ZM_qnFl74 >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

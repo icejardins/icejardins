@@ -147,3 +147,10 @@ Esse é o ponto de Jeremias 31: **a verdadeira mudança não acontece em Deus, m
 Essa é também a nossa história. Em Cristo, Deus se apresentou como o Marido que nos ama, o Pai que nos adota, o Pastor que nos guia. Mas cabe a nós responder com fé, arrependimento e obediência.
 
 A restauração completa começa quando reconhecemos que precisamos ser reconstruídos por completo. E a boa notícia é: Deus ainda restaura completamente aquilo que o pecado devastou por completo.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube PFReQF3Jsew >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

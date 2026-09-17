@@ -199,3 +199,10 @@ Como os versículos 10–14 reiteram o tema principal da carta? Por que aqueles 
 O que significa algo sair do portão? Como os sacrifícios da antiga aliança sofriam fora do portão? Como isso aponta para Jesus? O que significa para nós sair do acampamento com Jesus? Qual o papel de sair do acampamento com Jesus em nosso discipulado e testemunho cristão?
 
 O que você frequentemente busca em busca de segurança e proteção em vez de suportar a desgraça por Cristo? Que relação a cidade vindoura de Deus tem com nosso sofrimento? Como a realidade de uma cidade eterna o motiva a perseverar na fé?
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube qw6ct1n422Q >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

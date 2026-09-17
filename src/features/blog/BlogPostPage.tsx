@@ -92,9 +92,13 @@ export default function BlogPostPage() {
         "@type": "VideoObject",
         name: post.title,
         description: post.description,
-        thumbnailUrl: `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`,
+        thumbnailUrl: [
+          `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`,
+          `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
+        ],
         uploadDate: videoUploadDate,
-        embedUrl: `https://www.youtube.com/embed/${videoId}`
+        embedUrl: `https://www.youtube.com/embed/${videoId}`,
+        contentUrl: `https://www.youtube.com/watch?v=${videoId}`
       }
     : null;
 

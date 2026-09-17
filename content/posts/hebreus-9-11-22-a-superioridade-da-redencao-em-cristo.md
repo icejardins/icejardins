@@ -137,3 +137,10 @@ O sacrifício de Cristo é perfeito e eficaz
 > **11** Quando, porém, Cristo veio como sumo sacerdote dos bens já realizados, mediante o maior e mais perfeito tabernáculo, não feito por mãos humanas, quer dizer, não desta criação, 12e não pelo sangue de bodes e de bezerros, mas pelo seu próprio sangue, ele entrou no Santuário, uma vez por todas, e obteve uma eterna redenção. 13Portanto, se o sangue de bodes e de touros e a cinza de uma novilha, aspergidos sobre os contaminados, os santificam quanto à purificação da carne, 14muito mais o sangue de Cristo, que, pelo Espírito eterno, a si mesmo ofereceu sem mácula a Deus, purificará a nossa consciência de obras mortas, para servirmos ao Deus vivo!
 
 > **15** Por isso mesmo, ele é o Mediador da nova aliança, a fim de que os que foram chamados recebam a promessa da herança eterna, visto que houve uma morte para remissão das transgressões que foram cometidas sob a primeira aliança. 16Porque, onde há um testamento, é necessário constatar a morte de quem o fez. 17Sim, porque um testamento só é confirmado depois da morte de quem o fez, pois de maneira nenhuma um testamento tem força de lei enquanto ainda vive quem o fez. 18Por isso, nem a primeira aliança foi estabelecida sem sangue. 19Porque, havendo Moisés proclamado a todo o povo todos os mandamentos conforme a lei, pegou o sangue dos bezerros e dos bodes, com água, lã tingida de escarlate e hissopo e aspergiu não só o próprio livro, como também todo o povo, 20dizendo: “Este é o sangue da aliança que Deus ordenou para vocês.” 21Igualmente também aspergiu com sangue o tabernáculo e todos os utensílios do serviço sagrado. 22De fato, segundo a lei, quase todas as coisas são purificadas com sangue; e sem derramamento de sangue não há remissão.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube fO8pgiA9Fp8 >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

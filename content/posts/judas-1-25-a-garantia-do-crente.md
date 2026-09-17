@@ -121,3 +121,10 @@ Precisamos saber como argumentar, e não apenas ter bons argumentos. Não adiant
 Em resumo: Uma fé foi entregue de uma vez por todas aos santos; vale a pena lutar por essa fé; Essa fé sofre repetidamente ameaças internas por crentes professos, e; todo crente genuíno deve lutar pela fé.
 
 > **1** Judas, servo de Jesus Cristo e irmão de Tiago, aos que foram chamados, são amados em Deus Pai e guardados em Jesus Cristo. 2Que a misericórdia, a paz e o amor lhes sejam multiplicados. 3Amados, quando eu me empenhava para escrever-lhes a respeito da salvação que temos em comum, senti que era necessário corresponder-me com vocês, para exortá-los a lutar pela fé que uma vez por todas foi entregue aos santos. 4Pois certos indivíduos, cuja sentença de condenação foi promulgada há muito tempo, se infiltraram no meio de vocês sem serem notados. São pessoas ímpias, que transformam em libertinagem a graça do nosso Deus e negam o nosso único Soberano e Senhor, Jesus Cristo.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube eb-5Pkk8FM0 >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

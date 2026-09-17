@@ -174,3 +174,10 @@ Qual é o papel do discipulado na igreja local na ordem que o autor dá nos vers
 Como poderia uma igreja enfatizar melhor a vida em antecipação à vinda de Cristo? Como a escatologia influencia a vida diária? Como isso afeta sua vida diária? Como isso deve afetar nosso discipulado e a vida da igreja?
 
 Mohler, RA, Jr. Exaltando Jesus em Hebreus (p. 154–160). Referência Holmann.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube PWM9rISBDC8 >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

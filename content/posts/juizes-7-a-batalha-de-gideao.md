@@ -77,3 +77,10 @@ A pergunta dessa noite é em quem confiamos? Quando enfrentamos dificuldades int
 Oração: “Senhor dos exércitos, ajuda-nos a confiar em Ti e na tua direção. Você é nosso comandante e desejamos confiar em ti e contigo superar as adversidades. Em cada luta que viemos enfrentar, sabemos que podemos confiar no Seu poder. Nossa batalha mais feroz já foi ganha - Jesus conquistou a vitória sobre nossos pecados na cruz. Se há alguém aqui não pertence a Ti, Senhor, os convoca a se alistar no teu exército, resgata-os da prisão de Satanás. Isso oramos, em Seu Nome forte e poderoso, Amém.
 
 “É difícil, senão impossível, ter fé em alguém que você não conhece ou conhece mal. É extremamente difícil confiar em alguém que você não entende ou sobre quem está mal-informado. A ignorância de Gideão sobre a Palavra de Deus foi um fator forte em sua capacidade de confiar em Yahweh. Ele teve dificuldade em entender a natureza e o caráter de Deus. Se não inculcarmos a Palavra de Deus em nossas vidas, iremos manifestar a mesma incredulidade, a mesma temosia em crer que foi manifesta em Gideão. ” -K. Larson Younger Jr.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube obnSR3lXqmk >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

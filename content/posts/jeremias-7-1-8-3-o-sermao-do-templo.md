@@ -159,3 +159,10 @@ Refletir e Discutir
 ### 9. O que devemos pensar de versículos desafiadores como Jeremias 7:29? Há alguma aplicação para nós hoje?
 
 ### 10. O que a vida de Sansão nos ensina sobre temer a Deus e andar em seu Espírito?
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube JhlKMwf55j8 >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

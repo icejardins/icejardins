@@ -131,3 +131,10 @@ Bem-aventurado é aquele que suporta com perseverança a provação. Porque, de
 > **17** Toda boa dádiva e todo dom perfeito vêm lá do alto, descendo do Pai das luzes, em quem não pode existir variação ou sombra de mudança. 18Pois, segundo o seu querer, ele nos gerou pela palavra da verdade, para que fôssemos como que primícias das suas criaturas.
 
 > **19** Vocês sabem estas coisas, meus amados irmãos. Cada um esteja pronto para ouvir, mas seja tardio para falar e tardio para ficar irado. 20Porque a ira humana não produz a justiça de Deus. 21Portanto, deixando toda impureza e acúmulo de maldade, acolham com mansidão a palavra implantada em vocês, a qual é poderosa para salvá-los.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube 6H76m1erO5c >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

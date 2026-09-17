@@ -133,3 +133,10 @@ Cristo é o nosso sacerdote – nosso sumo sacerdote perfeito. Só podemos compr
 ### B. Um Sacrifício Único
 
 ### C. O Plano Eterno de Deus
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube REw5TPvbxqs >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

@@ -103,3 +103,10 @@ Eles tratavam apenas de realidades palpáveis, como comida, bebida, lavagens div
 O autor de Hebreus mostra que nem mesmo o mais elevado dos sacrifícios – o do sumo sacerdote no Dia da Expiação no Santo dos Santos – podia limpar a consciência do adorador ou trazer novidade de vida. Por isso, os sacrifícios continuaram a ser oferecidos em Israel, pois não proporcionavam a purificação total do pecado. Assim que um sacrifício era feito, já havia necessidade de outro.
 
 O contraste não poderia ser mais claro. Embora a antiga aliança exigisse ofertas incessantes e imperfeitas que não podiam purificar as profundezas do coração humano, Cristo realizou a purificação final e completa. Jesus é a esperança da nova aliança. Quando ele apareceu como sumo sacerdote (Hebreus 9:11), tudo mudou.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube voSo40Q5U7A >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

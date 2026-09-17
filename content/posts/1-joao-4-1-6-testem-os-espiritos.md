@@ -171,3 +171,10 @@ Para quem ainda não crê, lembre-se que Jesus não é mais uma opção espiritu
 Para a igreja, este texto é uma advertência e uma esperança. A advertência: falsos ensinos existem e podem entrar no meio do povo de Deus. A esperança: Deus não abandonou sua igreja. Ele nos deu sua Palavra, seu Espírito e o testemunho verdadeiro sobre seu Filho.
 
 Portanto, testem os espíritos e se apeguem à Palavra e confiantes no Espírito de Deus. Porque aquele que está em vocês é maior do que aquele que está no mundo.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube j_28LOjBiWg >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

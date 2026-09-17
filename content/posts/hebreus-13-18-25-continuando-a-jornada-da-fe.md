@@ -183,3 +183,10 @@ Que possamos colocar em prática esses três aspectos da fé, e que Deus nos dê
 8. O que o comando para saudar (dar boas-vindas, abraçar) todos os nossos líderes e todos os santos revela sobre como a comunidade santa do povo de Deus deve ser, e quais são algumas maneiras práticas pelas quais os membros da comunidade demonstram isso?
 
 9. Quais são as maneiras pelas quais tudo o que o autor enfatizou nesses versículos depende da graça de Deus — Seu favor imerecido e bondade para conosco?
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube 18jGwkfC_d8 >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

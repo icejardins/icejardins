@@ -167,3 +167,10 @@ Qual é o significado de conectar Sião à nova Jerusalém escatológica? Como o
 Por que o sangue de Jesus é superior ao sacrifício de sangue oferecido por Abel? Por que o autor compara o sangue oferecido por Abel com o sangue oferecido por Jesus?
 
 Como a imagem gloriosa de Sião nesta passagem ajuda você a perseverar na fé? Por que você acha que o escritor escolheu usar essa imagem para motivar seus leitores a perseverar até o fim?
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube Ie1yPqUEX94 >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

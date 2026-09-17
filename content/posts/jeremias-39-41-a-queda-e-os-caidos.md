@@ -117,3 +117,10 @@ A morte do nosso orgulho só acontece quando descansamos na humildade de Jesus, 
 Ao aceitar Jesus, percebemos que nossa alma esteve completamente intoxicada por si mesma e agora ela consegue respirar o bom perfume de Cristo. Nessa jornada, seguimos matando, dia a dia, aquele monstro que vivia escondido e confortável dentro de nós.
 
 Sem Cristo, estávamos perdidos e sem perceber o juízo de Deus que vem contra aqueles que vivem em rebeldia consciente ou inconsciente contra Ele. Se você vive ainda assim, corra para a Jesus, negue sua própria vida e receba a vida eterna.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube alA9ctZCVR8 >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

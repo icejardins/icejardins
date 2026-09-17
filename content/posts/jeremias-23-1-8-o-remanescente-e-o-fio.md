@@ -151,3 +151,10 @@ Quando alguém não frutifica, esse ramo é cortado e jogado fora. Há um contra
 No tempo de Jeremias, havia ramos não conectados com Deus. Havia apenas um remanescente espiritual dentro da nação. Na vinha de Deus, poucos ainda estavam vivos e dando fruto. Os secos foram podados e cortados.
 
 Deus poda o mal e restaura o bem. Deus se relaciona assim com o mundo e conosco. Ele chama pessoas, um remanescente, que o reconhece como fonte de vida, gente que permanece nEle, gente que se permite ser recolhida quando está perdida. Aqueles que desejam ser parte desse remanescente precisam entender que precisam se conectar e permanecer neste fio condutor, que é Jesus.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube 1ROewinRkG0 >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

@@ -195,3 +195,10 @@ Andar pelo Espírito Gálatas 5: 16-26
 > **22** Mas o fruto do Espírito é: amor, alegria, paz, longanimidade, benignidade, bondade, fidelidade, 23mansidão, domínio próprio. Contra estas coisas não há lei. 24E os que são de Cristo Jesus crucificaram a carne, com as suas paixões e os seus desejos.
 
 > **25** Se vivemos no Espírito, andemos também no Espírito. 26Não nos deixemos possuir de vanglória, provocando uns aos outros, tendo inveja uns dos outros.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube VytG9kRnMlQ >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

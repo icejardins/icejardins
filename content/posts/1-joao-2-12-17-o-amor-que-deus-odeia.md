@@ -129,3 +129,10 @@ Se você ainda não crê, o chamado é simples: não entregue sua vida ao que pa
 Se você já crê, pare de negociar o coração com o mundo. Você não foi salvo para ser mais comportado do que o vizinho. Você foi salvo para amar a Deus acima de todas as coisas.
 
 E, como igreja, que o Senhor nos livre de uma fé que fala de Cristo, mas que é apaixonada pelo presente século. Que ele nos faça um povo contente no Pai, forte na Palavra e livre da sedução do mundo. Porque aqueles que verdadeiramente amam e seguem a Cristo não devem se apaixonar pelas coisas deste mundo, mas pelo Pai, que lhes dá tudo o que realmente precisam. Amém.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube EENpgr85vhg >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

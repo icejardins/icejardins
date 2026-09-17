@@ -149,3 +149,10 @@ Então, no fim, João nos deixa com dois modelos: Caim e Cristo. Um tira a vida.
 É por isso que esse texto funciona como diagnóstico espiritual. A pergunta é: como está sua vida de amor? Ela se parece com Caim ou com Cristo? Seu coração se fecha ou se doa? Seu amor é apenas discurso ou é real? Você ama de palavra ou de fato e de verdade?
 
 O mundo é marcado pelo ódio. A igreja deve ser marcada pelo amor. O protótipo do mundo é Caim. O protótipo da igreja é Cristo.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube KR0baT_Td8M >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

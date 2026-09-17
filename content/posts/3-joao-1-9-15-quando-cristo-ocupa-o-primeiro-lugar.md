@@ -141,3 +141,10 @@ Um bom indicativo de que você está amadurecendo é perceber que você não pre
 Diótrefes queria a primazia, Gaio andava na verdade e Demétrio tinha a verdade como testemunha dele. João disse: “Não imite o que é mau, e sim o que é bom.” Esse é o chamado. Não permita que o orgulho dos outros molde como você reage. Não permita que sua sede por importância governe sua vida.
 
 Olhe para Jesus, siga o Rei servo, faça e imite o bem, ande na verdade e tenha a verdade seja sua testemunha de que você não luta mais pelo primeiro lugar porque sabe e vive com a certeza de que Jesus ocupa o lugar do qual Ele é digno.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube 5o4nP_EIhd4 >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

@@ -173,3 +173,10 @@ Como então os ricos devem viver? Encerramos lendo 1 Timóteo 6:17-19.
 > “17Exorte os ricos deste mundo a que não sejam orgulhosos, nem depositem a sua esperança na instabilidade da riqueza, mas em Deus, que tudo nos proporciona ricamente para o nosso prazer. 18Que eles façam o bem, sejam ricos em boas obras, generosos em dar e prontos a repartir; 19ajuntando para si mesmos um tesouro que é sólido fundamento para o futuro, a fim de tomarem posse da verdadeira vida.”
 
 Ricos não sejam orgulhosos, não confiem nas riquezas, confiem em Deus. Façam o bem, sejam ricos em boas obras e generosos. Assim vocês ajuntarão um tesouro nos céus.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube B6aYgskg1SU >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

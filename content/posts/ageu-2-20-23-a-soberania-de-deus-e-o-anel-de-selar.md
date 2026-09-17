@@ -163,3 +163,10 @@ A casa de Deus merece nossa prioridade
 A maior glória da casa de Deus é ser habitada pelo Deus da glória
 
 A história tem seu clímax na vitória de Cristo.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube gH6cwMnvgK0 >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

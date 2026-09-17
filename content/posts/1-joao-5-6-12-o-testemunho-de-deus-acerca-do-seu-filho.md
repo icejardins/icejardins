@@ -193,3 +193,10 @@ Talvez você seja um cristão angustiado com as variações de sua fé, preocupa
 Deus não está esperando que você mereça a vida eterna. Ele oferece vida como um dom concedido por intermédio de seu Filho. Creia no testemunho de Deus. Arrependa-se de sua incredulidade. Descanse na obra de Cristo. Receba o Filho pela fé.
 
 Porque quem tem o Filho tem a vida; quem não tem o Filho de Deus não tem a vida.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube voBx21HIY44 >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

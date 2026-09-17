@@ -149,3 +149,10 @@ Nossa esperança está firmada em um Deus que ressuscita os mortos, que abençoa
 4. O que Deus fez na vida de José para construir sua fé de que Deus, com o tempo, levaria os filhos de Israel de volta à Terra Prometida?
 
 5. Por que você acha que José queria que eles carregassem seus ossos de volta para Canaã quando retornassem — apesar de ter sido tão bem-sucedido no Egito?
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube dAJdH5nKVlU >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

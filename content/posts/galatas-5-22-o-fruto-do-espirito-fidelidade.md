@@ -223,3 +223,10 @@ Por causa da fidelidade dele para conosco, ouviremos de seus lábios: Muito bem,
 O quê? Bom e fiel? Se você conhece o seu coração como eu conheço o meu, como podemos acreditar que iremos ouvir essas palavras do nosso Senhor quando o encontrarmos cara a cara? Como isso pode acontecer?
 
 Somente pela graça, quando descansamos na fidelidade dEle em nosso favor. É por causa disso que ouviremos essas palavras. É pela graça que ouviremos essas palavras: “muito bem, servo bom e fiel”. Enquanto ansiamos por esse dia, vamos viver vidas marcadas pela fidelidade, vidas de amor compromissado. Amém.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube mmJYq7TGrms >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

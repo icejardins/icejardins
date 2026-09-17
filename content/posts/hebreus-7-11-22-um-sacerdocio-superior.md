@@ -129,3 +129,10 @@ O que o envio de seu Filho por Deus para ser o mediador perfeito revela sobre a 
 Como você pode se lembrar ativamente da graça soberana de Deus e do amor redentor de Deus por você em Cristo, o sacerdote suficiente? Como é que a nossa salvação e nova esperança em Cristo nos permite aproximar-nos de Deus?
 
 Por que precisamos de Cristo para cumprir os ofícios de profeta, sacerdote e rei? De que maneira Cristo cumpre isso? Como esse tríplice ofício demonstra a perfeição de Cristo?
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube ZjPe4T6MOnA >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

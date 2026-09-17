@@ -153,3 +153,10 @@ Os destinatários desta carta estavam convivendo com a ameaça ou com a persegui
 E agora, diante das lutas e das tentações que enfrentamos, nossa fé confessará Cristo? Vamos nos apegar a Ele, resistindo às soluções fáceis do mundo? Que nossa fé, como a dos antigos heróis, permaneça firme, sabendo que nossa esperança está em Cristo, a promessa final e eterna.
 
 10:36 Vocês precisam perseverar, para que, havendo feito a vontade de Deus, alcancem a promessa.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube 1BciT2b8jJU >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

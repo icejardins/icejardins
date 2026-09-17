@@ -194,3 +194,10 @@ e. Trigo, vinho e azeite: Porque eles negligenciaram o Senhor, Ele negligenciou 
 ### 8. Existe um exemplo em sua vida de sua desobediência levando à falta de florescimento?
 
 ### 9. Você entregou sua vida a Deus, tendo reconhecido sua própria desobediência e o sacrifício de Cristo em seu lugar?
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube -k7SlW98jKg >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

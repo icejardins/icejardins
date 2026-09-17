@@ -161,3 +161,10 @@ A galeria da fé Hebreus 11:1–10
 > **7** Pela fé, Noé, divinamente instruído a respeito de acontecimentos que ainda não se viam e sendo temente a Deus, construiu uma arca para a salvação de sua família. Assim, ele condenou o mundo e se tornou herdeiro da justiça que vem da fé.
 
 > **8** Pela fé, Abraão, quando chamado, obedeceu, a fim de ir para um lugar que devia receber como herança; e partiu sem saber para onde ia. 9Pela fé, peregrinou na terra da promessa como em terra alheia, habitando em tendas com Isaque e Jacó, herdeiros com ele da mesma promessa. 10Porque Abraão aguardava a cidade que tem fundamentos, da qual Deus é o arquiteto e construtor.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube of4D3EBICGE >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

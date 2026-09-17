@@ -151,3 +151,10 @@ A desobediência é o oposto. É assumir um risco do tamanho do homem para ter u
 4. Quais são as semelhanças entre um profeta do Antigo Testamento e um pregador do Novo Testamento? Quais são as diferenças?
 
 ### 5. Qual é a distinção entre um chamado geral para servir a Deus e um chamado específico para o serviço vocacional?
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube sJxCT2Q6FUs >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

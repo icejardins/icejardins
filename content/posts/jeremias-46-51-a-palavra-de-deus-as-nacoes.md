@@ -149,3 +149,10 @@ O encorajamento continua em Lamentações: (Lm 3:28–33)
 > **28** Que ele se assente solitário e fique em silêncio, porque esse jugo Deus pôs sobre ele. 29Ponha a sua boca no pó; talvez ainda haja esperança. 30Dê a face ao que o fere e suporte todas as afrontas. 31O Senhor não rejeitará para sempre. 32Ainda que entristeça alguém, terá compaixão segundo a grandeza das suas misericórdias. 33Porque não aflige nem entristece de bom grado os filhos dos homens.
 
 Deus os enviou para um tempo certo no exílio conforme os avisou várias vezes. O Senhor não os rejeitaria para sempre. Deus prometeu bençãos para eles e não deixaria de cumprir. A disciplina para quem é filho de Deus pode ser severa, mas não é eterna. Deus disciplina e nos capacita a suportar a disciplina. Ele é um Deus bom e sábio.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube olRapEZ1n3w >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

@@ -175,3 +175,10 @@ Quando somos controlados pelo Espírito demonstramos seu fruto, que se manifesta
 ## A sabedoria lá do alto
 
 > **13** Quem entre vocês é sábio e inteligente? Mostre as suas obras em mansidão de sabedoria, mediante a sua boa conduta. 14Se, pelo contrário, vocês têm em seu coração inveja amargurada e sentimento de rivalidade, não se gloriem disso, nem mintam contra a verdade. 15Esta não é a sabedoria que desce lá do alto; pelo contrário, é terrena, animal e demoníaca. 16Pois, onde há inveja e rivalidade, aí há confusão e toda espécie de coisas ruins. 17Mas a sabedoria lá do alto é, primeiramente, pura; depois, pacífica, gentil, amigável, cheia de misericórdia e de bons frutos, imparcial, sem fingimento. 18Ora, é em paz que se semeia o fruto da justiça, para os que promovem a paz.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube PoLnCVc35ws >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

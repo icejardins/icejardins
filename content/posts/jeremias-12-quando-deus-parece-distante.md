@@ -125,3 +125,10 @@ Jeremias pensou que Deus o havia esquecido. Mas Deus chamou o profeta para arran
 Neste contexto, Deus encoraja Jeremias a correr com os que vão a cavalo. Essa metáfora é angustiante por sinalizar mais perseguição. Mas ela é também encorajadora. Nós precisamos ouvir isso de vez em quando. Nós ficamos desanimados quando acreditamos ou quando de fato somos tratados de forma injusta. Jesus prometeu tribulações e que estaria conosco.
 
 Quando nos sentimos rejeitados ou esquecidos, lembremos: Deus está escrevendo uma história maior. Mesmo quando não entendemos o plano, somos chamados a correr com perseverança, sabendo que o justo viverá pela fé. Se você se cansa correndo com homens que vão a pé, como poderá competir com os que vão a cavalo?
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube DwvI6wUSR1o >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

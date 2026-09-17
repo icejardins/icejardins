@@ -211,3 +211,10 @@ A última menção a essa igreja está em ap. 2:1-7, onde Jesus os acusa de tere
 Pense nisso: Priscila, aquila, apolo, Paulo, Timóteo e depois João ensinaram aquela igreja. Que herança. Mas depois de 40 anos daquela primeira geração de crentes, eles perderam o primeiro amor.
 
 Eles foram elogiados por não aceitar heresias, mas eles perderam o amor. Eles tinham um ensino gelado. Você deve se perguntar: seu culto a Jesus é mecânico? Você o ama ou Ele apenas serve para algum propósito em sua vida? Jesus os chamou ao arrependimento. É isso que precisamos fazer se perdemos o primeiro amor: voltar a adorar Jesus pelo que Ele é e pelo que Ele fez.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube X9cs3aaO7k8 >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

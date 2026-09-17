@@ -155,3 +155,10 @@ Libertos pela Graça.
 I – Definição de legalismo
 
 II – O evangelho destrói o legalismo.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube -8mUxGzkuc4 >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

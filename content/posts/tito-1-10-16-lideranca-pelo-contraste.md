@@ -151,3 +151,10 @@ O dever de confrontar. (Tt 1:10-16) Ideia Principal: Para que a igreja seja sól
 ### B. Eles mentem em sua profissão (o exterior) (1: 16).
 
 ser apegado à palavra fiel, que está de acordo com a doutrina, para que possa exortar pelo reto ensino e convencer os que contradizem este ensino. 10Porque existem muitos, especialmente os da circuncisão, que 0são insubordinados, falam coisas sem sentido e enganam os outros. 11É preciso fazer com que se calem, porque andam pervertendo casas inteiras, ensinando o que não devem, movidos por vergonhosa ganância. 12Foi um dos cretenses, um próprio profeta deles, que disse: “Os cretenses são sempre mentirosos, feras terríveis, comilões preguiçosos.” 13Este testemunho é verdadeiro. Portanto, repreenda-os severamente, para que sejam sadios na fé 14e não se ocupem com fábulas judaicas, nem com mandamentos de gente que se desvia da verdade. 15Todas as coisas são puras para os puros; mas, para os impuros e descrentes, nada é puro. Porque tanto a mente como a consciência deles estão corrompidas. 16Afirmam que conhecem a Deus, mas o negam por meio do que fazem; é por isso que são abomináveis, desobedientes e reprovados para qualquer boa obra.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube PXX26CcmaFE >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

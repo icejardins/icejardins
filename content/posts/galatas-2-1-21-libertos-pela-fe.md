@@ -153,3 +153,10 @@ Jesus não somente nos ama. Ele pagou o preço por nós. Ele se entregou na cruz
 ### B. Pela fé em Cristo, estamos vivos para Deus.
 
 ## IV. Libertos pela Fé
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube a_GTo1tjCHM >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

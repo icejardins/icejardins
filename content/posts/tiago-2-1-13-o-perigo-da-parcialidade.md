@@ -141,3 +141,10 @@ A Lei da liberdade é o evangelho. É a fé no Cristo que suportou a ira de Deus
 No v 13, Tiago está dizendo que quem não é misericordioso é ainda um incrédulo e, portanto, será julgado pelos seus pecados, incluindo sua parcialidade. Mas aquele que recebeu misericórdia, deve mostrar misericórdia como prova de ter sido alvo da misericórdia divina. Quem recebeu misericórdia triunfa sobre o julgamento. Não há condenação para aqueles que estão em Cristo Jesus. Romanos 8:1a
 
 Não minimize o pecado da parcialidade. Ele é totalmente contraditório com uma vida que recebeu a graça do evangelho. Saiba, você que ainda não crê, apenas este único pecado é suficiente para condenar você, da mesma forma como se você fosse um adúltero ou assassino.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube 5thJXiYwprI >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

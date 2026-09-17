@@ -177,3 +177,10 @@ Se você já crê, então até onde essa verdade penetrou na sua vida? Ela parou
 Em Gaio, a verdade desceu ao coração e chegou até os pés porque ele caminhava na verdade. Ela apareceu nas mãos que serviram. Não seria maravilhoso que pessoas que tiverem o privilégio de viver com você pudessem dizer: “Há verdade ali.” Há amor naquela irmã.
 
 Isso seria maravilhoso, não por causa de você, mas porque isso tornaria mais fácil de ver a beleza de outro nome. Que vale a pena viver por causa desse Nome, vale a penas servir a causa desse Nome, vale a pena ir por causa desse Nome. Porque o herói não é Gaio, nem somos nós. O herói é Jesus Cristo.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube 5kJtNGElchM >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

@@ -151,3 +151,10 @@ Essa ação concreta de bondade e de benignidade em nosso favor foi custosa e é
 > Tito 3:3-7 Pois nós também, outrora, éramos néscios, desobedientes, desgarrados, escravos de toda sorte de paixões e prazeres, vivendo em malícia e inveja, odiosos e odiando-nos uns aos outros. 4Quando, porém, se manifestou a benignidade de Deus, nosso Salvador, e o seu amor para com todos, 5não por obras de justiça praticadas por nós, mas segundo sua misericórdia, ele nos salvou mediante o lavar regenerador e renovador do Espírito Santo, 6que ele derramou sobre nós ricamente, por meio de Jesus Cristo, nosso Salvador, 7a fim de que, justificados por graça, nos tornemos seus herdeiros, segundo a esperança da vida eterna.
 
 Isso já aconteceu? Você já experimentou? Você conhece a bondade e a benignidade de Deus por você em Cristo? Você pode. Se renda a Ele em fé hoje. Vamos orar.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube Y0q72OAqUvI >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

@@ -157,3 +157,10 @@ Como você responderia a alguém que dissesse: “Não preciso de teologia ou da
 Por que Jesus é superior a Josué no contexto desta passagem?
 
 Quais foram as “boas novas” pregadas sob a antiga aliança? Por que foi a mesma mensagem que ouvimos pregada sob a nova aliança? O que significa ter fé? Batiza-las
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube x9tsApYKyOk >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

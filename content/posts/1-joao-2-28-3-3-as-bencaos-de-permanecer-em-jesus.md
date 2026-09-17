@@ -137,3 +137,10 @@ Se assim é, por que você desejaria permanecer em qualquer outro lugar que não
 Se você já crê, permaneça nele. Não trate sua comunhão com Cristo como detalhe. Seu presente e seu futuro dependem disso. E como igreja, que sejamos um povo que vive à luz da vinda de Cristo, seguro da filiação, cheio de esperança e sério na santidade.
 
 Porque quem permanece em Cristo não apenas sobrevive até o fim. Quem permanece em Cristo experimenta, desde já, as bênçãos dessa comunhão. Amém.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube 0HcDlx12TWE >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

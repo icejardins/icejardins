@@ -58,7 +58,7 @@ function preprocessMarkdown(markdown) {
   const withEmbeds = markdown.replace(
     YOUTUBE_SHORTCODE_REGEX,
     (_, videoId) =>
-      `<div class="video-embed"><iframe src="https://www.youtube.com/embed/${videoId}" title="Video do YouTube" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`
+      `<div class="video-embed"><iframe src="https://www.youtube.com/embed/${videoId}" title="Vídeo do Sermão no YouTube" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>`
   );
 
   // Demote any H1 in markdown content to H2 to preserve strict single-H1 semantic hierarchy

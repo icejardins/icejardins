@@ -149,3 +149,10 @@ Nossa vida pela fé se dá no ambiente da graça que confia na provisão da cruz
 As escolhas que fizemos na semana passada revelam o quanto confiamos em Cristo e o entesouramos. Como será a nossa próxima semana?
 
 > **23** Pela fé, Moisés, depois de nascer, foi escondido por seus pais durante três meses, porque viram que era um menino bonito e não temeram o decreto do rei. 24Pela fé, Moisés, sendo homem feito, recusou ser chamado filho da filha de Faraó, 25preferindo ser maltratado junto com o povo de Deus a usufruir prazeres transitórios do pecado. 26Ele entendeu que ser desprezado por causa de Cristo era uma riqueza maior do que os tesouros do Egito, porque contemplava a recompensa. 27Pela fé, Moisés abandonou o Egito, não ficando amedrontado com a ira do rei, pois permaneceu firme como quem vê aquele que é invisível. 28Pela fé, celebrou a Páscoa e o derramamento do sangue, para que o exterminador não tocasse nos primogênitos dos israelitas. 29Pela fé, os israelitas atravessaram o mar Vermelho como por terra seca. Quando os egípcios tentaram fazer o mesmo, foram engolidos pelo mar.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube L47Auar16qI >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

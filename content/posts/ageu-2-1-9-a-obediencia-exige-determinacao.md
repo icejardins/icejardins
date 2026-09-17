@@ -85,3 +85,10 @@ Finalmente, vemos o ápice desses poucos versículos e, finalmente, o ápice de 
 ### 9. Você já experimentou a paz que vem da confiança em Jesus, o templo maior?
 
 Fries, M., Rummage, S., & Gallaty, R. (2015
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube icwXg_mc--M >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

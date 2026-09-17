@@ -149,3 +149,10 @@ Nossa promessa de vida não é melhor do que a vida do nosso Senhor. Jesus nos p
 Portanto, de uma forma estranha, há uma desilusão a caminho quando em nossa obediência somos perseguidos. O desafio é o de não cair na amargura e na autopiedade como Jeremias pecou aqui. A tensão entre ser bem-aventurado e sofrer por Cristo é inevitável, mas pecar por autopiedade é uma escolha, uma escolha da qual devemos nos arrepender.
 
 É possível que você esteja vivendo uma fase silenciosa de frustração. Você ora, serve, lê a Palavra, mas a resposta de Deus parece demorada ou distante. Como Jeremias, você age com zelo, mas Deus parece demorar. Uma desilusão pode estar virando amargura e autopiedade. Você pode estar sofrendo para continuar. A Palavra do Senhor para você é a mesma: volte, se arrependa. Descanse na Palavra preciosa e não nos sentimentos. Retome sua posição diante de Deus. A fidelidade pode ser dolorosa, mas ela nunca é em vão.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube N4Rcnh1dyrg >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

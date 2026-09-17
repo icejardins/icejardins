@@ -137,3 +137,10 @@ Spurgeon comentou assim este versículo:
 obstáculos, e não meios de proclamação do Salvador que dizemos adorar.
 
 Quando você está em posição subalterna, inferior, quando você é o escravo, não o mestre, então você descobrirá com muita facilidade quão real e genuína é a sua profissão de fé. Um verdadeiro cristão não ocupa uma função apenas por acidente ou por decisões acertadas ou equivocadas na carreira. Um Deus soberano colocou você lá para que, por intermédio da sua vida, pessoas vejam a beleza de Deus, do nosso Senhor Jesus, enquanto você serve essas pessoas como serviria Jesus.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube 3ZLmxepq774 >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

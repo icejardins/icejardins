@@ -155,3 +155,10 @@ Permanecemos no pecado? Ficamos em paz com a transgressão? Achamos que santidad
 Mas, se o Espírito de Deus o fez nascer de novo, então agradeça. Porque isso não veio de você. Foi Cristo quem veio. Foi Cristo quem pagou. Foi Cristo quem venceu. Foi Cristo quem refez. E é por isso que o cristão pode terminar esse texto com gratidão, não com desespero.
 
 Que alegria é ser filho de Deus. Que bênção é ter sido salvo. Que esperança é ter sido arrancado do domínio do pecado e da tirania de Satanás. Jesus, obrigado por teres encarnado, vivido uma vida sem pecado, morrido em nosso lugar a morte que merecíamos e ter ressuscitado para nossa justificação. Amém.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube 57nc_0wDqeo >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

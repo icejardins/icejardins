@@ -187,3 +187,10 @@ Também precisamos nos alegrar em ver como Deus nos abençoou de formas particul
 Podemos viver um tempo sem nos encontrar com Deus, mas jamais conseguirmos a prosperidade da alma sem Ele. Sempre que negligenciamos nossa fidelidade a Deus, corremos para outros deuses. A pergunta é se o choro daqueles homens era de arrependimento. O texto termina aqui. Só o choro não é suficiente. Vejam o que Joel 2:12-13 ensina:
 
 > **12** Ainda assim, agora mesmo, diz o Senhor: “Convertam-se a mim de todo o coração; com jejuns, com choro e com pranto. 13Rasguem o coração, e não as suas roupas.” Convertam-se ao Senhor, seu Deus, porque ele é bondoso e compassivo, tardio em irar-se e grande em misericórdia, e muda de ideia qu+anto ao mal que havia anunciado.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube dppfVB5OKNo >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

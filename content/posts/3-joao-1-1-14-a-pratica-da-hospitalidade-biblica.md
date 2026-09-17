@@ -167,3 +167,10 @@ Como aplicação final, eu gostaria de desafiar a cada irmão aqui a ser ainda m
 Pastor, minha casa é bem pequena. Convide uma pessoa. Pastor eu moro com meus pais descrentes... Faça um piquenique no Jardim Botânico, saia para comer um churrasquinho. Pastor, minha casa está em obras, não tenho nem mesa: Faça da sua igreja sua casa e seja acolhedor. Ajude pessoas se sentirem bem em nosso meio.
 
 Esta pequena carta tem várias outras lições, especialmente sobre abuso espiritual, mas eu oro para que esse tema central da hospitalidade desperte em nós o desejo de sermos parecidos com Gaio. Gente com coração hospitaleiro, disposta a servir sacrificialmente e com discernimento. Que nosso próximo ano seja marcado desta forma.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube nJStxuVRcqQ >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

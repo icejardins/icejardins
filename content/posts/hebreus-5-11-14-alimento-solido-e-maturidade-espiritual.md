@@ -171,3 +171,10 @@ De que forma você pratica o discernimento espiritual diariamente? Como você po
 Ao abrir as Escrituras, você sente que está em um território familiar ou desconhecido? O que as Escrituras têm a ver com nosso discernimento e maturidade espiritual? Como o conhecimento da Bíblia pode nos ajudar a discernir o bem do mal?
 
 Quem é, em última análise, responsável pela maturidade espiritual de um cristão – o indivíduo ou a igreja?
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube cbZcdPy9KwI >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

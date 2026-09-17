@@ -157,3 +157,10 @@ Que nossa vida de fé demonstre que estamos unidos com um Deus que pode nos surp
 Que a nossa vida de fé compreenda que Cristo está presente conosco em nossa alegria e no nosso sofrimento, e que Ele nos convida a orar com fé, a confessar pecados uns aos outros. Que em nós seja forjada uma comunidade de fé que se ama e que se preocupa com os que se desviam.
 
 C.S. Lewis afirma que Deus é bom, mas não é um Deus seguro. Deus vai nos conduzir para um ponto de não retorno, mas que é muito melhor do que onde estamos para a glória de seu Nome.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube y5m7URkls6w >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

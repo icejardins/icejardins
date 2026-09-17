@@ -127,3 +127,10 @@ Como o conteúdo teologicamente rico de Hebreus 1:1–3 impacta a maneira como v
 Qual dos dois principais erros que discutimos em relação à leitura do Antigo Testamento você acha que é mais prevalente em nossas igrejas e em nossa cultura hoje? Como você pode combater e prevenir a propagação desses erros em sua igreja?
 
 Por que é tão essencial que sejamos estudantes do Antigo Testamento tanto quanto do Novo Testamento? Qual é o perigo de sermos estudantes apenas do Novo Testamento? De que forma o Novo Testamento nos dá ferramentas para ler corretamente o Antigo Testamento?
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube ar6s1HC-TGY >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

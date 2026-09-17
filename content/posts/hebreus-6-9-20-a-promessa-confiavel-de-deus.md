@@ -123,3 +123,10 @@ Como a imutabilidade de Deus incentiva você a fugir para ele em tempos de dific
 Considere as outras passagens em Hebreus nas quais o autor fala sobre Jesus como nosso sumo sacerdote. Que implicações tem para nós Cristo entrando no lugar santíssimo em nosso favor? O que significa Cristo ser nosso precursor?
 
 Mohler, RA, Jr. Exaltando Jesus em Hebreus (p. 93–97). Referência Holmann.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube co7JpVFpev4 >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

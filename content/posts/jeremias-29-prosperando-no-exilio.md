@@ -117,3 +117,10 @@ O segredo, então, não é conhecer os pensamentos de Deus, mas a Pessoa de Deus
 23— Assim diz o Senhor: Não se glorie o sábio na sua sabedoria, nem o forte, na sua força, nem o rico, nas suas riquezas. 24Mas aquele que se gloria, glorie-se nisto: em me conhecer e saber que eu sou o Senhor e faço misericórdia, juízo e justiça na terra; porque destas coisas me agrado, diz o Senhor.
 
 Nossa confiança está em Deus. Nossa confiança está em Deus porque Ele sabe como as coisas acontecerão e está trabalhando em Seus planos para um bom fim. Se Deus diz agora o que fará no futuro, o mais importante é a mente de Deus que vem da presença de Deus.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube I36YM0heHD0 >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

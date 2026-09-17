@@ -85,3 +85,10 @@ Quando as dificuldades vierem, confie. Deus em sua soberania nos disciplina como
 Quando ouvir mensagens fáceis, desconfie. O Pai perfeito é severo e não promete atalhos — Ele oferece um caminho estreito, mas seguro, que conduz à vida verdadeira.
 
 Hebreus 11:16 diz: “Deus não se envergonha deles, de ser chamado o seu Deus.” Se Deus não se envergonha de nós em Cristo, então podemos viver com coragem, sabendo que já temos a única aprovação que importa: a aprovação dEle.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube McVRyvaNg8o >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro

@@ -117,3 +117,10 @@ Não existe neutralidade. Se Jesus é quem disse ser — o Filho de Deus ressusc
 A neutralidade é uma ilusão. Mesmo sem perceber, você está incluído na conspiração contra Deus. Mas há graça suficiente para quem se volta a Ele. Então, o que fazer?
 
 Ouça a voz de Deus. Lembre-se do que Ele já fez. Tema as consequências da indiferença. Combata a conspiração com a aliança — e confie que a graça é maior do que a culpa.
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube dq_MMpF2ypc >}}
+
+Graça e Paz,
+Pr. Davi Ribeiro
