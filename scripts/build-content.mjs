@@ -328,9 +328,21 @@ async function main() {
 
     const readingTime = estimateReadingTime(plainText);
     const scriptureSummary = buildScriptureSummary(html, plainText);
+    const postTitle = String(parsed.data.title ?? slug);
     const explicitDescription = parsed.data.description ? String(parsed.data.description).trim() : null;
-    const description = explicitDescription || cleanMetaDescription(parsed.data.subtitle || scriptureSummary, 150);
-    const seoTitle = parsed.data.seoTitle ? String(parsed.data.seoTitle).trim() : null;
+    let description = explicitDescription;
+    if (!description) {
+      const baseSub = parsed.data.subtitle || scriptureSummary;
+      if (baseSub && !baseSub.toLowerCase().includes("estudo") && !baseSub.toLowerCase().includes("explica")) {
+        description = cleanMetaDescription(`Estudo bíblico e explicação de ${postTitle}. ${baseSub}`, 155);
+      } else {
+        description = cleanMetaDescription(baseSub, 155);
+      }
+    }
+    let seoTitle = parsed.data.seoTitle ? String(parsed.data.seoTitle).trim() : null;
+    if (!seoTitle) {
+      seoTitle = `${postTitle} | Estudo Bíblico e Sermão`;
+    }
     const faq = Array.isArray(parsed.data.faq) ? parsed.data.faq : null;
     const youtubeMatch = parsed.content.match(/\{\{<\s*youtube\s+([^\s>]+)\s*>\}\}/);
     const youtubeId = youtubeMatch ? youtubeMatch[1] : null;
@@ -512,6 +524,7 @@ async function main() {
   const excludedFromSitemap = new Set([
     "/obrigado-guia/",
     "/descadastro/",
+    ...taxonomies.tags.map((t) => normalizeRoute(`/tags/${t.slug}/`)),
     ...resources.map((r) => normalizeRoute(`/recursos/${r.slug}/obrigado/`))
   ]);
 

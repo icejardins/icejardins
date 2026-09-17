@@ -1,4 +1,4 @@
-﻿.progress {
+.progress {
   position: fixed;
   top: 0;
   left: 0;
@@ -94,7 +94,8 @@
   padding: 1rem;
 }
 
-.sidebarBlock h2 {
+.sidebarBlock h2,
+.sidebarBlock h3 {
   font-size: 1.03rem;
   margin-top: 0;
 }

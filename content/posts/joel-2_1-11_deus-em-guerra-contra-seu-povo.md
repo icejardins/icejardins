@@ -1,7 +1,7 @@
 +++
 title = 'Joel 2:1-11 - Deus em Guerra Contra Seu Povo'
-seoTitle = 'Joel 2:1-11 Explicado: O Grande e Terrível Dia do Senhor | Estudo Bíblico'
-description = "Estudo bíblico e explicação de Joel 2:1-11: o alarme em Sião, o exército divino irresistível e a solenidade do Dia do Senhor em nossas vidas."
+seoTitle = 'Joel 2:1-11 Explicado: O Toque da Trombeta e o Dia do Senhor [Estudo Bíblico]'
+description = "Estudo bíblico e explicação detalhada de Joel 2:1-11 versículo por versículo: o toque de alarme em Sião, o exército divino e a solenidade do Dia do Senhor."
 subtitle = "Como você reage quando perde o controle sobre algo em sua vida?"
 date = '2026-04-23'
 draft = false

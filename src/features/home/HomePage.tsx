@@ -35,8 +35,8 @@ export default function HomePage() {
   return (
     <>
       <SeoHead
-        title="Igreja Cristã Evangélica Jardins | Jardim Botânico - Brasília DF"
-        description={site.description}
+        title="Igreja no Jardim Botânico - Brasília DF | ICE Jardins (Cultos aos Domingos)"
+        description="Igreja Cristã Evangélica no Jardim Botânico em Brasília - DF. Cultos solenes aos domingos às 9h30 e Escola Bíblica às 11h. Comunidade bíblica, acolhedora e centrada no Evangelho. Venha nos visitar!"
         canonicalPath="/"
         preloadImage="/images/sobre/identidade-400.webp"
       />

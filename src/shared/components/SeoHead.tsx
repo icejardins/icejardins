@@ -53,7 +53,7 @@ const BILINGUAL_PAIRS: Record<string, { pt: string; en: string }> = {
 function buildChurchSchema(baseUrl: string, isEnglish = false) {
   return {
     "@context": "https://schema.org",
-    "@type": "Church",
+    "@type": ["Church", "LocalBusiness"],
     "@id": `${baseUrl}/#organization`,
     name: isEnglish
       ? "ICE Jardins Evangelical Christian Church"

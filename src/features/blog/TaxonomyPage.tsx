@@ -27,6 +27,7 @@ export default function TaxonomyPage({ taxonomyType }: TaxonomyPageProps) {
         title={`${title} - Sermões Bíblicos | ${site.title}`}
         description={`Sermões e mensagens bíblicas sobre "${title}" pregadas na Igreja Cristã Evangélica Jardins em Brasília - DF.`}
         canonicalPath={`/${isTag ? "tags" : "categorias"}/${slug}/`}
+        noindex={isTag}
       />
 
       <header className="mb-4">

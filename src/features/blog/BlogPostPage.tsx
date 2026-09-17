@@ -173,7 +173,7 @@ export default function BlogPostPage() {
             <div className={styles.sidebar}>
               {relevantToc.length > 0 ? (
                 <section className={styles.sidebarBlock}>
-                  <h2>Conteúdo</h2>
+                  <h3>Conteúdo</h3>
                   <ul>
                     {relevantToc.map((heading) => (
                       <li key={heading.id}>
@@ -186,7 +186,7 @@ export default function BlogPostPage() {
 
               {post.tags.length > 0 ? (
                 <section className={styles.sidebarBlock}>
-                  <h2>Tags</h2>
+                  <h3>Tags</h3>
                   <div className={styles.tags}>
                     {post.tags.map((tag) => (
                       <Link key={tag} to={`/tags/${slugify(tag)}/`}>
@@ -198,7 +198,7 @@ export default function BlogPostPage() {
               ) : null}
 
               <section className={styles.sidebarBlock}>
-                <h2>Compartilhar</h2>
+                <h3>Compartilhar</h3>
                 <div className={styles.shareLinks}>
                   <a
                     href={`https://api.whatsapp.com/send?text=${encodeURIComponent(`${post.title}: ${shareUrl}`)}`}

@@ -34,8 +34,8 @@ export default function HomePageEn() {
   return (
     <>
       <SeoHead
-        title="ICE Jardins Evangelical Christian Church | Brasília, Brazil"
-        description="ICE Jardins Evangelical Christian Church in Jardim Botânico, Brasília - DF, Brazil. A biblical community dedicated to teaching the Word, fellowship, and worship. Come visit us!"
+        title="Christian Church in Brasília (Jardim Botânico) | ICE Jardins"
+        description="English-friendly evangelical Christian church in Jardim Botânico, Brasília - DF. Sunday worship at 9:30 AM. Bible-centered community welcoming expats, diplomats, and visitors."
         canonicalPath="/en/"
         preloadImage="/images/sobre/identidade-400.webp"
       />

@@ -1,7 +1,7 @@
 +++
 title = 'Joel 3:1-17 - O Dia do Senhor: Julgamento e Restauração'
-seoTitle = 'Joel 3:1-17 Explicado: O Dia do Senhor, Juízo e Restauração | Estudo Bíblico'
-description = "Explicação e estudo bíblico de Joel 3:1-17 sobre o Dia do Senhor, o Vale de Josafá, o julgamento das nações e a promessa de refúgio e restauração."
+seoTitle = 'Joel 3 Explicação Completa: O Dia do Senhor e Restauração [Estudo Bíblico]'
+description = "Estudo bíblico e explicação de Joel 3 versículo por versículo. Descubra o mistério do Vale de Josafá, o julgamento final e o refúgio seguro para o povo de Deus."
 subtitle = 'Joel 3:1-17 nos apresenta o Dia do Senhor como um tempo de juízo implacável sobre as nações e de plena restauração para o povo de Deus. Uma mensagem de justiça e graça que nos chama a confiar no Senhor como nosso refúgio eterno.'
 date = '2026-04-23'
 draft = false

@@ -1,7 +1,7 @@
 +++
 title = 'Joel 3:17-21 - Os Resultados do Dia do Senhor'
-seoTitle = 'Joel 3:17-21 Explicado: Os Resultados do Dia do Senhor | Estudo Bíblico'
-description = "Estudo bíblico e explicação de Joel 3:17-21: a restauração de Sião, a bênção da criação, o julgamento final e a morada eterna de Deus com Seu povo."
+seoTitle = 'Joel 3:17-21 Explicado: Os Resultados do Dia do Senhor e Sião [Estudo Bíblico]'
+description = "Estudo bíblico e explicação de Joel 3:17-21 versículo por versículo: a vitória do povo de Deus, a restauração de Sião e a morada eterna do Senhor com os Seus."
 subtitle = "A continuidade do cumprimento da promessa de Deus de Salvação do Homem, por meio da declaração de que todo aquele que invocar o nome do Senhor será salvo."
 date = '2026-04-23'
 draft = false

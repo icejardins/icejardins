@@ -1,7 +1,7 @@
 +++
 title = 'Joel 1 - A Chegada Do Dia Do Senhor'
-seoTitle = 'Joel 1 Explicado: A Chegada do Dia do Senhor | Estudo Bíblico e Devocional'
-description = "Estudo bíblico e explicação de Joel capítulo 1: a praga de gafanhotos, a devastação da terra, a chegada do Dia do Senhor e o chamado ao arrependimento."
+seoTitle = 'Joel 1 Explicado: A Chegada do Dia do Senhor [Estudo Bíblico e Sermão]'
+description = "Estudo bíblico e explicação de Joel capítulo 1 versículo por versículo: a praga de gafanhotos, a devastação e o chamado solene ao arrependimento sincero."
 subtitle = "A seriedade do pecado e a necessidade de redenção."
 date = '2026-04-23'
 draft = false

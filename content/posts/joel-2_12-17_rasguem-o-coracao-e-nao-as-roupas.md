@@ -1,7 +1,7 @@
 +++
 title = 'Joel 2:12-17 - Rasguem O Coração E Não As Roupas'
-seoTitle = 'Joel 2:12-17 Explicado: Rasguem o Coração e Não as Roupas | Estudo Bíblico'
-description = "Estudo e explicação de Joel 2:12-17. Descubra o significado bíblico de rasgar o coração e não as roupas e a urgência do verdadeiro arrependimento."
+seoTitle = 'Joel 2:12-17 Explicado: Rasguem o Coração e Não as Roupas [Estudo Completo]'
+description = "Estudo bíblico e explicação detalhada de Joel 2:12-17. Descubra o significado bíblico de rasgar o coração (Joel 2:12-13) e o arrependimento sincero."
 subtitle = "Nosso arrependimento é possível porque Jesus já se doou por nós na cruz. Ele teve suas vestes rasgadas, elas foram sorteadas. Ao invés disso, Ele teve sua carne rasgada por nós. Rasgada por chicotes, por pregos cravados e por uma lança no seu lado. Jesus sofreu o juízo que merecíamos, para que pudéssemos experimentar a restauração. Assim, ao rasgarmos nosso coração, encontramos não condenação, mas a graça transformadora de Deus."
 date = '2026-04-23'
 draft = false

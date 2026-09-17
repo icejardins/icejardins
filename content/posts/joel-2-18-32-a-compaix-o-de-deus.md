@@ -1,7 +1,7 @@
 +++
 title = 'Joel 2:18-32 - A Compaixão de Deus'
-seoTitle = 'Joel 2:18-32 Explicado: A Compaixão de Deus e o Pentecostes | Estudo Bíblico'
-description = "Estudo bíblico e explicação de Joel 2:18-32: a compaixão de Deus, a restauração do povo e a promessa do derramamento do Espírito Santo em Pentecostes."
+seoTitle = 'Joel 2:18-32 Explicação: A Compaixão de Deus e o Espírito Santo [Estudo Bíblico]'
+description = "Estudo e explicação detalhada de Joel 2:18-32 versículo por versículo. A compaixão divina, o derramamento do Espírito Santo e a salvação em Joel 2:32."
 subtitle = "A decisão de Deus em se compadecer do povo que ele mesmo afligia pelo pecado."
 date = '2026-04-23'
 draft = false
