@@ -1,11 +1,25 @@
 +++
 title = 'Joel 2:18-32 - A Compaixão de Deus'
+seoTitle = 'Joel 2:18-32 Explicado: A Compaixão de Deus e o Pentecostes | Estudo Bíblico'
+description = "Estudo bíblico e explicação de Joel 2:18-32: a compaixão de Deus, a restauração do povo e a promessa do derramamento do Espírito Santo em Pentecostes."
 subtitle = "A decisão de Deus em se compadecer do povo que ele mesmo afligia pelo pecado."
 date = '2026-04-23'
 draft = false
-tags = ["Joel", "Antigo Testamento"]
+tags = ["Joel", "Antigo Testamento", "Pentecostes", "Estudo Bíblico", "Espírito Santo"]
 categorias = ['Sermões', 'Joel', 'Antigo Testamento']
 image = "/images/posts/joel-2-18-32-a-compaix-o-de-deus.webp"
+
+[[faq]]
+question = "Qual é a explicação de Joel 2:18-32?"
+answer = "O trecho descreve a compaixão do Senhor após o arrependimento do povo, prometendo restauração agrícola, libertação e a grandiosa profecia do derramamento do Espírito Santo sobre toda a humanidade."
+
+[[faq]]
+question = "Como a profecia de Joel 2:28 se relaciona com o Pentecostes?"
+answer = "No livro de Atos dos Apóstolos (capítulo 2), o apóstolo Pedro cita expressamente Joel 2:28-32 para explicar o derramamento do Espírito Santo e o nascimento da Igreja cristã."
+
+[[faq]]
+question = "O que significa 'todo aquele que invocar o nome do Senhor será salvo' em Joel 2:32?"
+answer = "Aponta para a salvação universal pela graça, disponível a todos que reconhecem Jesus Cristo como Senhor e Salvador, transcendendo barreiras étnicas e culturais."
 +++
 
 
@@ -151,7 +165,7 @@ E ainda
 
 Estas declarações apontam não apenas para a forma como o povo de Deus permeia as demais nações, como os judeus em meio a outros povos serão chamados de volta a Sião, mas também de que este chamado alcançará aos servos e servas que o Senhor tem em outros lugares.
 
-# CONCLUSÃO
+## CONCLUSÃO
 
 Bênçãos do Senhor, Cuidado e Correção. O espírito foi derramado. Mas esta promessa se cumpriu. Isto aponta para a iminência de que a promessa do Dia do Senhor também se cumprirá. O que devemos fazer? Reconhecer, louvar e bendizer. Profetizar, sonhar e ministrar na vida uns dos outros pelo Espírito, na expectativa da volta do Senhor!
 

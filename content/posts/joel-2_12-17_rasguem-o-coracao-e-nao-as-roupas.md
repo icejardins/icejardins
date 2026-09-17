@@ -1,11 +1,25 @@
 +++
 title = 'Joel 2:12-17 - Rasguem O Coração E Não As Roupas'
+seoTitle = 'Joel 2:12-17 Explicado: Rasguem o Coração e Não as Roupas | Estudo Bíblico'
+description = "Estudo e explicação de Joel 2:12-17. Descubra o significado bíblico de rasgar o coração e não as roupas e a urgência do verdadeiro arrependimento."
 subtitle = "Nosso arrependimento é possível porque Jesus já se doou por nós na cruz. Ele teve suas vestes rasgadas, elas foram sorteadas. Ao invés disso, Ele teve sua carne rasgada por nós. Rasgada por chicotes, por pregos cravados e por uma lança no seu lado. Jesus sofreu o juízo que merecíamos, para que pudéssemos experimentar a restauração. Assim, ao rasgarmos nosso coração, encontramos não condenação, mas a graça transformadora de Deus."
 date = '2026-04-23'
 draft = false
-tags = ["Joel", "Antigo Testamento"]
+tags = ["Joel", "Antigo Testamento", "Arrependimento", "Estudo Bíblico"]
 categorias = ["Sermões", "Joel", "Antigo Testamento"]
 image = "/images/posts/joel-2_12-17_rasguem-o-coracao-e-nao-as-roupas.webp"
+
+[[faq]]
+question = "O que significa rasgar o coração e não as roupas em Joel 2:13?"
+answer = "No Antigo Testamento, rasgar as roupas era sinal de luto e dor. Em Joel 2:13, Deus adverte que não deseja apenas rituais externos ou fingimento de piedade, mas uma contrição interior sincera e um coração quebrantado."
+
+[[faq]]
+question = "Qual é a explicação dos versículos 12 e 13 de Joel 2?"
+answer = "Deus faz um chamado urgente ao arrependimento imediato ('agora mesmo') de todo o coração com jejum e luto, revelando que o Senhor é bondoso, compassivo, tardio em irar-se e pronto a perdoar."
+
+[[faq]]
+question = "Quais são os elementos do arrependimento bíblico?"
+answer = "O verdadeiro arrependimento bíblico é composto por três etapas fundamentais: contrição (dor real pelo pecado), confissão sincera diante de Deus e nova conduta prática de vida."
 +++
 
 
@@ -19,7 +33,7 @@ Que pergunta importante, não? De fato, quem poderá suportar o Dia do Senhor? Q
 
 O que um pecador e uma comunidade de fé podem fazer em um momento como este? Vemos a resposta em Joel 2:13 – Diante da realidade do Dia do Senhor, Joel nos apresenta a única resposta possível: arrependimento genuíno. Mas o que é arrependimento verdadeiro? Como ele se expressa em nossas vidas?” Veremos que o arrependimento verdadeiro possui três elementos: contrição, confissão e conduta.
 
-# I. CONTRIÇÃO 
+## I. CONTRIÇÃO 
 
 O dicionário Michaelis define contrição como: “Arrependimento ou dor profunda por ter pecado e ofendido a Deus, acompanhado pelo firme propósito de não mais pecar.”
 
@@ -97,7 +111,7 @@ Imagine uma criança que quebrou um vaso e esconde os pedaços debaixo do tapete
 
 O verdadeiro arrependimento envolve confissão. E a confissão permite a reconciliação e a restituição sempre que possível. Quando Zaqueu se arrependeu da sua busca de identidade no dinheiro, ele prometeu dar a metade dos seus bens aos pobres e restituir em quadruplo o que ele tinha extorquido. Confissão sem mudança é incompleta. A verdadeira confissão leva a uma transformação visível – uma nova conduta.
 
-# II. CONDUTA
+## II. CONDUTA
 O SENHOR disse ao povo de Israel para se voltar para Ele de todo o coração com jejum, choro e luto (Joel 2:12). Jejum é uma prática espiritual que aponta para depender exclusivamente de Deus. O jejum demonstra dependência de Deus. Choro e luto revelam pesar e tristeza pelo pecado.
 
 Jesus ensina que os bem-aventurados choram sua miséria espiritual. Precisamos lamentar de fato nosso pecado para perceber a doçura do evangelho. É triste ver pessoas indiferentes ao pecado. Nossa sociedade normaliza pecados. Normalizamos mentiras sociais em nome da etiqueta. Quando tratamos pecados com indiferença, pessoas simplesmente deixam de reagir diante da afirmação bíblica que Deus vai julgar a Terra.

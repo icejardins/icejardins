@@ -1,11 +1,25 @@
 +++
 title = 'Joel 3:1-17 - O Dia do Senhor: Julgamento e Restauração'
+seoTitle = 'Joel 3:1-17 Explicado: O Dia do Senhor, Juízo e Restauração | Estudo Bíblico'
+description = "Explicação e estudo bíblico de Joel 3:1-17 sobre o Dia do Senhor, o Vale de Josafá, o julgamento das nações e a promessa de refúgio e restauração."
 subtitle = 'Joel 3:1-17 nos apresenta o Dia do Senhor como um tempo de juízo implacável sobre as nações e de plena restauração para o povo de Deus. Uma mensagem de justiça e graça que nos chama a confiar no Senhor como nosso refúgio eterno.'
 date = '2026-04-23'
 draft = false
-tags = ["Joel", "Antigo Testamento", "Devocional"]
-categorias = ["Sermões", "Antigo Testamento"]
+tags = ["Joel", "Antigo Testamento", "Estudo Bíblico", "Escatologia", "Devocional"]
+categorias = ["Sermões", "Joel", "Antigo Testamento"]
 image = "/images/posts/joel-3-1-17-o-dia-do-senhor-julgamento-e-restaura-o.webp"
+
+[[faq]]
+question = "Qual é a explicação de Joel capítulo 3?"
+answer = "Joel 3 profetiza sobre os últimos dias e o Dia do Senhor, descrevendo a reunião das nações no Vale de Josafá para julgamento final e a plena restauração espiritual do povo de Deus."
+
+[[faq]]
+question = "O que representa o Vale de Josafá em Joel 3:2?"
+answer = "Josafá significa em hebraico 'O Senhor julga'. O vale representa o local simbólico e solene da decisão divina, onde Deus exercerá seu juízo justo sobre todas as nações opressoras."
+
+[[faq]]
+question = "Qual a mensagem de esperança de Joel 3:1-17 para os crentes?"
+answer = "Enquanto o Dia do Senhor é tempo de condenação para a impiedade, para aqueles que confiam em Cristo Ele é refúgio seguro, fortaleza inabalável e garantia de vida eterna."
 +++
 
 

@@ -1,11 +1,25 @@
 +++
 title = 'Joel 2:1-11 - Deus em Guerra Contra Seu Povo'
+seoTitle = 'Joel 2:1-11 Explicado: O Grande e Terrível Dia do Senhor | Estudo Bíblico'
+description = "Estudo bíblico e explicação de Joel 2:1-11: o alarme em Sião, o exército divino irresistível e a solenidade do Dia do Senhor em nossas vidas."
 subtitle = "Como você reage quando perde o controle sobre algo em sua vida?"
 date = '2026-04-23'
 draft = false
 categorias = ['Sermões', 'Joel', 'Antigo Testamento']
-tags = ["Joel", "Antigo Testamento"]
+tags = ["Joel", "Antigo Testamento", "Estudo Bíblico", "Dia do Senhor", "Profetas"]
 image = "/images/posts/joel-2_1-11_deus-em-guerra-contra-seu-povo.webp"
+
+[[faq]]
+question = "Qual é o tema de Joel 2:1-11?"
+answer = "Joel 2:1-11 retrata o alarme em Sião e a aproximação de um exército poderoso liderado pelo próprio Deus, servindo como prenúncio do grande e temível Dia do Senhor."
+
+[[faq]]
+question = "O que significa o toque de trombeta em Sião em Joel 2:1?"
+answer = "O toque da trombeta (shofar) era um sinal de alerta militar máximo e convocação solene da congregação diante de perigo iminente ou invasão."
+
+[[faq]]
+question = "Por que Deus guerreia contra o Seu próprio povo em Joel 2?"
+answer = "O juízo divino é um instrumento pedagógico e disciplinar para quebrar a soberba e a apatia espiritual, chamando a comunidade de volta à fidelidade e à graça de Deus."
 +++
 
 

@@ -96,12 +96,34 @@ export default function BlogPostPage() {
       }
     : null;
 
-  const pageSchemas = [blogPostingSchema, ...(videoSchema ? [videoSchema] : [])];
+  const faqList = (post as any).faq;
+  const faqSchema = Array.isArray(faqList) && faqList.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqList.map((item: any) => ({
+          "@type": "Question",
+          name: item.question || item.name,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer || item.acceptedAnswer?.text || item.text
+          }
+        }))
+      }
+    : null;
+
+  const pageSchemas = [
+    blogPostingSchema,
+    ...(videoSchema ? [videoSchema] : []),
+    ...(faqSchema ? [faqSchema] : [])
+  ];
+
+  const pageTitle = post.seoTitle || `${post.title} | ${site.title}`;
 
   return (
     <>
       <SeoHead
-        title={`${post.title} | ${site.title}`}
+        title={pageTitle}
         description={post.description}
         image={post.image}
         canonicalPath={canonicalPath}

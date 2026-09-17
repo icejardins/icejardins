@@ -142,6 +142,96 @@
     },
     {
       "source": "/2026/04/joel-317-21-os-resultados-do-dia-do-senhor",
+      "destination": "/posts/joel-317-21-os-resultados-do-dia-do-senhor/",
+      "permanent": true
+    },
+    {
+      "source": "/sobre-nos",
+      "destination": "/visita/",
+      "permanent": true
+    },
+    {
+      "source": "/sobre-nos/",
+      "destination": "/visita/",
+      "permanent": true
+    },
+    {
+      "source": "/como-chegar",
+      "destination": "/visita/",
+      "permanent": true
+    },
+    {
+      "source": "/como-chegar/",
+      "destination": "/visita/",
+      "permanent": true
+    },
+    {
+      "source": "/contato",
+      "destination": "/visita/",
+      "permanent": true
+    },
+    {
+      "source": "/contato/",
+      "destination": "/visita/",
+      "permanent": true
+    },
+    {
+      "source": "/joel-2_12-17_rasguem-o-coracao-e-nao-as-roupas",
+      "destination": "/posts/joel-2_12-17_rasguem-o-coracao-e-nao-as-roupas/",
+      "permanent": true
+    },
+    {
+      "source": "/joel-2_12-17_rasguem-o-coracao-e-nao-as-roupas/",
+      "destination": "/posts/joel-2_12-17_rasguem-o-coracao-e-nao-as-roupas/",
+      "permanent": true
+    },
+    {
+      "source": "/joel-3-1-17-o-dia-do-senhor-julgamento-e-restaura-o",
+      "destination": "/posts/joel-3-1-17-o-dia-do-senhor-julgamento-e-restaura-o/",
+      "permanent": true
+    },
+    {
+      "source": "/joel-3-1-17-o-dia-do-senhor-julgamento-e-restaura-o/",
+      "destination": "/posts/joel-3-1-17-o-dia-do-senhor-julgamento-e-restaura-o/",
+      "permanent": true
+    },
+    {
+      "source": "/joel-2_1-11_deus-em-guerra-contra-seu-povo",
+      "destination": "/posts/joel-2_1-11_deus-em-guerra-contra-seu-povo/",
+      "permanent": true
+    },
+    {
+      "source": "/joel-2_1-11_deus-em-guerra-contra-seu-povo/",
+      "destination": "/posts/joel-2_1-11_deus-em-guerra-contra-seu-povo/",
+      "permanent": true
+    },
+    {
+      "source": "/joel-2-18-32-a-compaix-o-de-deus",
+      "destination": "/posts/joel-2-18-32-a-compaix-o-de-deus/",
+      "permanent": true
+    },
+    {
+      "source": "/joel-2-18-32-a-compaix-o-de-deus/",
+      "destination": "/posts/joel-2-18-32-a-compaix-o-de-deus/",
+      "permanent": true
+    },
+    {
+      "source": "/joel-1-a-chegada-do-dia-do-senhor",
+      "destination": "/posts/joel-1-a-chegada-do-dia-do-senhor/",
+      "permanent": true
+    },
+    {
+      "source": "/joel-1-a-chegada-do-dia-do-senhor/",
+      "destination": "/posts/joel-1-a-chegada-do-dia-do-senhor/",
+      "permanent": true
+    },
+    {
+      "source": "/joel-3-17-21-os-resultados-do-dia-do-senhor",
+      "destination": "/posts/joel-3-17-21-os-resultados-do-dia-do-senhor/",
+      "permanent": true
+    },
+    {
+      "source": "/joel-3-17-21-os-resultados-do-dia-do-senhor/",
       "destination": "/posts/joel-3-17-21-os-resultados-do-dia-do-senhor/",
       "permanent": true
     }

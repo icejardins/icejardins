@@ -1,11 +1,21 @@
 +++
 title = 'Joel 3:17-21 - Os Resultados do Dia do Senhor'
+seoTitle = 'Joel 3:17-21 Explicado: Os Resultados do Dia do Senhor | Estudo Bíblico'
+description = "Estudo bíblico e explicação de Joel 3:17-21: a restauração de Sião, a bênção da criação, o julgamento final e a morada eterna de Deus com Seu povo."
 subtitle = "A continuidade do cumprimento da promessa de Deus de Salvação do Homem, por meio da declaração de que todo aquele que invocar o nome do Senhor será salvo."
 date = '2026-04-23'
 draft = false
-tags = ["Joel", "Antigo Testamento", "Devocional"]
-categorias = ["Sermões", "Antigo Testamento"]
+tags = ["Joel", "Antigo Testamento", "Estudo Bíblico", "Escatologia", "Devocional"]
+categorias = ["Sermões", "Joel", "Antigo Testamento"]
 image = "/images/posts/joel-3-17-21-os-resultados-do-dia-do-senhor.webp"
+
+[[faq]]
+question = "Qual é o tema principal de Joel 3:17-21?"
+answer = "O encerramento profético do livro de Joel anuncia os resultados definitivos do Dia do Senhor: a purificação de Jerusalém, o juízo sobre os inimigos e a presença santa e perpétua de Deus em Sião."
+
+[[faq]]
+question = "O que significa 'o Senhor habita em Sião' em Joel 3:21?"
+answer = "Expressa a comunhão restaurada e a presença tangível de Deus habitando no meio de Seu povo remanescente, consumada plenamente na Nova Jerusalém e na pessoa de Jesus Cristo."
 +++
 
 
@@ -21,7 +31,7 @@ A promessa do Grande Dia do Senhor e da libertação e restauração completa da
 
 Este aspecto da promessa de restauração do homem para o convívio de intimidade com seu criador, é o que nos leva de volta à bíblia diariamente. Não se trata apenas de um ponto na agenda celestial, mas de um desenvolvimento de eventos na história humana até a intervenção divina definitiva. Não se trata apenas um único momento em que Deus decide interromper a história de aflição e autodestruição, afirmando, nada mais quero com vocês, mas é ao mesmo tempo uma advertência coberta de eventos e sinais que apontam para uma necessidade urgente de arrependimento, de correção e de acerto da criatura com seu criador, do povo com o senu Rei, antes que ele execute juízo contra aqueles que lhe pertencem, mas não apenas isso, a promessa do Grande Dia do Senhor, como vimos, trazia consigo uma série de intervenções divinas em meio ao povo, a fim de prepará-lo para o dia do juízo, apontando para o caráter bondoso e misericordioso de Deus que, ciente de nossa incapacidade de agradá-lo e de observar a sua lei, devido nossa carnalidade escravizada pelo pecado, Ele viria a chamar, relembrar e doar de si mesmo ao povo que Ele conheceu, que Ele formou e amou.
 
-# PONTO 1 – O DIA DO SENHOR RESULTARÁ SA RESTAURAÇÃO DO SEU POVO (Verso 17)
+## PONTO 1 – O DIA DO SENHOR RESULTARÁ SA RESTAURAÇÃO DO SEU POVO (Verso 17)
 > **17** "Assim vocês saberão que eu sou o Senhor, o Deus de vocês, que habito em Sião, o meu santo monte. Jerusalém será santa; estranhos não passarão mais por ela. (Joel 3:17)
 
 Assim como? Ora! No advento destas coisas descritas neste livro, do juízo sobre judá e da restauração do remanescente. Do juízo de Deus sobre as nações inimigas e da forma como o seu povo será restaurado e vingado. Diante do escurecer dos luzeiros celestiais e da voz celeste fazendo tremerem céus e terra, diante destes poderes, todos saberão que o Senhor, o Deus de Israel, habita entre os homens.
@@ -44,7 +54,7 @@ Esta restauração do povo e da consciência do povo a respeito de quem eram e d
 
 Hoje temos condições de reconhecer o governo deste Deus, do seu Cristo, em oposição aos governos humanos, e com a consciência de que é a esta nação celestial que pertencemos, graças ao Espírito que entre nós foi derramado e opera desde já até que se manifesta o dia do Senhor.
 
-# PONTO 2 – O DIA DO SENHOR RESULTARÁ NA RESTAURAÇÃO DA CRIAÇÃO (Verso 18)
+## PONTO 2 – O DIA DO SENHOR RESULTARÁ NA RESTAURAÇÃO DA CRIAÇÃO (Verso 18)
 
 E acontecerá que, naquele dia, os montes destilarão vinho, e as colinas manarão leite, e todos os rios de Judá estarão cheios de água. Uma fonte sairá da Casa do Senhor e regará o vale de Sitim. (Joel 3:18)
 
@@ -58,7 +68,7 @@ E o grande Dia do Senhor tem este caráter de alegria e celebração, sim. Mas t
 
 Ao conversar com alguns irmãos, sempre ouvi da percepção deles como a palavra do Pregador era doce e agradável. E eu em muitos momento ficava como que me perguntando se eles tinham ouvido a mesma pregação que eu, por que sempre me via muito confrontado naquelas pregações. E não obstante, o livro de joel, mesmo sem declarar abertamente nenhum pecado, deixa claro que há um castigo, um chamado ao arrependimento e uma obra de misericórdia sendo operada por Deus no presente, ao mesmo tempo que entre uma promessa futura de consumação.
 
-# PONTO 3 – O DIA DO SENHOR RESULTARÁ NO JULGAMENTO DEFINITIVO DAS NAÇÕES (Verso 19)
+## PONTO 3 – O DIA DO SENHOR RESULTARÁ NO JULGAMENTO DEFINITIVO DAS NAÇÕES (Verso 19)
 
 > **2** O Egito se tornará uma desolação, e Edom se fará um deserto abandonado, por causa da violência que fizeram aos filhos de Judá, em cuja terra derramaram sangue inocente. (Joel 2:19)
 
@@ -76,7 +86,7 @@ Ele prometeu no gênesis a vitória. Ele prometeu a Abraão um descendente. Ele 
 
 Nós, a sua igreja, somos aqueles que receberam a partir de Deus o Espírito de convencimento; a partir dos Judeus o Cristo manifesto; a partir do Cristo a remissão dos pecados. Assim, somos aqueles que foram alcançados pelas bênçãos da promessa divina.
 
-# PONTO 4 – O DIA DO SENHOR RESULTARÁ NO CUMPRIMENTO FINAL E DEFINITIVO DA PROMESSA ETERNA (Versos 20 e 21)
+## PONTO 4 – O DIA DO SENHOR RESULTARÁ NO CUMPRIMENTO FINAL E DEFINITIVO DA PROMESSA ETERNA (Versos 20 e 21)
 
 > **20** Judá, porém, será habitada para sempre, e Jerusalém, de geração em geração. (Joel 3:20)
 

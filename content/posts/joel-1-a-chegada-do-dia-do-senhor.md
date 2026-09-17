@@ -1,11 +1,25 @@
 +++
 title = 'Joel 1 - A Chegada Do Dia Do Senhor'
+seoTitle = 'Joel 1 Explicado: A Chegada do Dia do Senhor | Estudo Bíblico e Devocional'
+description = "Estudo bíblico e explicação de Joel capítulo 1: a praga de gafanhotos, a devastação da terra, a chegada do Dia do Senhor e o chamado ao arrependimento."
 subtitle = "A seriedade do pecado e a necessidade de redenção."
 date = '2026-04-23'
 draft = false
 categorias = ['Sermões', 'Joel', 'Antigo Testamento']
-tags = ['Joel', 'Antigo Testamento']
+tags = ['Joel', 'Antigo Testamento', 'Estudo Bíblico', 'Devocional', 'Profetas Menores']
 image = "/images/posts/joel-1-a-chegada-do-dia-do-senhor.webp"
+
+[[faq]]
+question = "Qual é o tema principal de Joel capítulo 1?"
+answer = "O capítulo 1 de Joel trata da calamidade provocada por uma praga devastadora de gafanhotos, que serve de advertência histórica e profética sobre a proximidade do Dia do Senhor."
+
+[[faq]]
+question = "O que significa a praga de gafanhotos em Joel 1?"
+answer = "A praga de gafanhotos foi um juízo histórico real que desolou a agricultura e a economia de Judá, ilustrando como o pecado gera ruína e a necessidade urgente de voltar-se para Deus em lamentação sincera."
+
+[[faq]]
+question = "Como Joel 1 aponta para Jesus Cristo?"
+answer = "Ao expor a total incapacidade humana diante da calamidade e do juízo divino, Joel aponta para a necessidade de um Redentor, preparando o caminho para a salvação consumada em Cristo na cruz."
 +++
 
 A Bíblia tem como tema como Deus trata da calamidade causada pelo pecado e o que Deus precisou fazer para nos salvar em Cristo. O livro de Joel tem como pano de fundo a seriedade do pecado e a necessidade de redenção. Pense em como preparamos nossas casas para uma festa importante. Da mesma forma, Deus, em Sua soberania, prepara a história para o grande evento da redenção. Já estamos nos aproximando do Natal, e é sempre importante lembrar por que ele é necessário!

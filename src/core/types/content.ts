@@ -119,6 +119,8 @@ export type PostMeta = {
   readingTime: number;
   summary: string;
   youtubeId?: string | null;
+  seoTitle?: string | null;
+  faq?: Array<{ question?: string; answer?: string; name?: string; text?: string; acceptedAnswer?: { text: string } }> | null;
   sourcePath: string;
 };
 
