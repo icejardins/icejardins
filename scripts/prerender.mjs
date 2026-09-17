@@ -88,15 +88,24 @@ async function main() {
     }
 
     // Guarantee a unique, valid <link rel="canonical"> tag in <head>
-    const canonicalMatch = headTags.match(/<link\s+rel="canonical"[^>]*href="([^"]+)"[^>]*\/?>/i);
+    // Match <link ...> where rel="canonical" and extract href, regardless of attribute order
+    const canonicalMatch =
+      headTags.match(/<link\s+[^>]*rel="canonical"[^>]*href="([^"]+)"[^>]*\/?>/i) ||
+      headTags.match(/<link\s+[^>]*href="([^"]+)"[^>]*rel="canonical"[^>]*\/?>/i);
+
+    // Completely remove ANY existing canonical links from html template
+    html = html
+      .replace(/<link\s+[^>]*rel="canonical"[^>]*\/?>/gi, "")
+      .replace(/<link\s+[^>]*href="[^"]*"[^>]*rel="canonical"[^>]*\/?>/gi, "");
+
+    // Also completely remove ANY canonical links from headTags so it never duplicates
+    headTags = headTags
+      .replace(/<link\s+[^>]*rel="canonical"[^>]*\/?>/gi, "")
+      .replace(/<link\s+[^>]*href="[^"]*"[^>]*rel="canonical"[^>]*\/?>/gi, "");
+
     if (canonicalMatch) {
       const canonicalUrl = canonicalMatch[1];
-      if (html.includes('rel="canonical"')) {
-        html = html.replace(/<link\s+rel="canonical"[^>]*\/?>/i, `<link rel="canonical" href="${canonicalUrl}" />`);
-      } else {
-        html = html.replace("</head>", `    <link rel="canonical" href="${canonicalUrl}" />\n  </head>`);
-      }
-      headTags = headTags.replace(/<link\s+rel="canonical"[^>]*\/?>/gi, "");
+      html = html.replace("</head>", `    <link rel="canonical" href="${canonicalUrl}" />\n  </head>`);
     }
 
     // Set correct <html lang="..."> attribute for English vs Portuguese routes
