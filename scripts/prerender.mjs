@@ -105,7 +105,7 @@ async function main() {
 
     if (canonicalMatch) {
       const canonicalUrl = canonicalMatch[1];
-      html = html.replace("</head>", `    <link rel="canonical" href="${canonicalUrl}" />\n  </head>`);
+      html = html.replace("</head>", `    <link rel="canonical" href="${canonicalUrl}" data-rh="true" />\n  </head>`);
     }
 
     // Set correct <html lang="..."> attribute for English vs Portuguese routes

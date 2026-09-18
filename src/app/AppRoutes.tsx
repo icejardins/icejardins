@@ -3,7 +3,6 @@ import { Navigate, Route, Routes } from "react-router";
 import { MainLayout } from "@/features/shell/layouts/MainLayout";
 import { useScrollToTop } from "@/shared/hooks/useScrollToTop";
 import { useAnalytics } from "@/shared/hooks/useAnalytics";
-import { useLanguageAutoDetect } from "@/shared/hooks/useLanguageAutoDetect";
 
 const HomePage = lazy(() => import("@/features/home/HomePage"));
 const HomePageEn = lazy(() => import("@/features/home/HomePageEn"));
@@ -25,7 +24,6 @@ const UnsubscribePage = lazy(() => import("@/features/landing/UnsubscribePage"))
 function RouterEffects() {
   useScrollToTop();
   useAnalytics();
-  useLanguageAutoDetect();
   return null;
 }
 
