@@ -125,3 +125,7 @@ Antes de seu problema, Deus já era Deus; Antes de seu pecado, o propósito da g
 Nas próximas semanas, encontraremos luz e trevas, jardim e serpente, pecado e promessa, juízo e graça, famílias quebradas e uma aliança preservada. Por trás de todas essas histórias, veremos a fidelidade de Deus.
 
 O Deus que estava no princípio, que criou todas as coisas, que cumpre suas promessas em Cristo, caminha conosco, mas **A Bíblia não começa conosco, porque a realidade não começa em nós.**“No princípio, Deus.”
+
+## Assista ao Sermão em Vídeo
+
+{{< youtube sor5dt60q2g >}}
