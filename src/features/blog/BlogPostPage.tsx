@@ -59,7 +59,7 @@ export default function BlogPostPage() {
       return [];
     }
 
-    return post.toc.filter((item) => item.depth <= 3);
+    return (post.toc || []).filter((item) => item.depth <= 3);
   }, [post]);
 
   if (!post) {
@@ -73,7 +73,11 @@ export default function BlogPostPage() {
     );
   }
 
-  const videoId = (post as any).youtubeId || post.bodyHtml.match(/data-video-id="([a-zA-Z0-9_-]+)"/)?.[1] || post.bodyHtml.match(/embed\/([a-zA-Z0-9_-]+)/)?.[1];
+  const videoId =
+    post.youtubeId ||
+    (loadedBodyHtml || post.bodyHtml || "")?.match(/data-video-id="([a-zA-Z0-9_-]+)"/)?.[1] ||
+    (loadedBodyHtml || post.bodyHtml || "")?.match(/embed\/([a-zA-Z0-9_-]+)/)?.[1] ||
+    null;
 
   const blogPostingSchema = {
     "@context": "https://schema.org",
