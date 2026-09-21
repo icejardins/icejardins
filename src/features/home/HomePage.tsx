@@ -277,6 +277,75 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Spotlight Subpage: Land & Temple Building Project */}
+      <section className={styles.buildingSpotlightSection}>
+        <div className="container">
+          <article className={styles.buildingSpotlightCard}>
+            <div className="row align-items-center g-4">
+              <div className="col-lg-7">
+                <span className={styles.spotlightBadge}>
+                  <Icon name="building" /> {homeContent.buildingSpotlight.badge}
+                </span>
+                <h2 className={styles.spotlightTitle}>{homeContent.buildingSpotlight.title}</h2>
+                <p className={styles.spotlightSubtitle}>{homeContent.buildingSpotlight.subtitle}</p>
+                <p className={styles.spotlightStatusText}>
+                  {homeContent.buildingSpotlight.statusText}
+                </p>
+
+                <div className={styles.spotlightBulletsGrid}>
+                  {homeContent.buildingSpotlight.bullets.map((b, idx) => (
+                    <div key={idx} className={styles.spotlightBullet}>
+                      <span className={styles.spotlightBulletLabel}>{b.label}</span>
+                      <strong className={styles.spotlightBulletValue}>{b.value}</strong>
+                    </div>
+                  ))}
+                </div>
+
+                <div className={styles.spotlightActions}>
+                  <Link
+                    to={homeContent.buildingSpotlight.detailsLink}
+                    className={styles.btnSpotlightPrimary}
+                  >
+                    <Icon name="arrow-right-circle" /> {homeContent.buildingSpotlight.detailsLabel}
+                  </Link>
+                  <a
+                    href={homeContent.buildingSpotlight.earthUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.btnSpotlightOutline}
+                  >
+                    <Icon name="globe-americas" /> {homeContent.buildingSpotlight.earthLabel}
+                  </a>
+                </div>
+              </div>
+
+              <div className="col-lg-5">
+                <div className={styles.spotlightVisualWrapper}>
+                  <Link
+                    to={homeContent.buildingSpotlight.detailsLink}
+                    title="Acessar subpágina do projeto"
+                  >
+                    <img
+                      src={homeContent.buildingSpotlight.image}
+                      srcSet={`${homeContent.buildingSpotlight.image640} 640w, ${homeContent.buildingSpotlight.image1040} 1040w, ${homeContent.buildingSpotlight.image} 1376w`}
+                      sizes="(max-width: 991px) 100vw, 480px"
+                      alt="Concepção arquitetônica do futuro templo da ICE Jardins"
+                      className={styles.spotlightImage}
+                      width={640}
+                      height={360}
+                      loading="lazy"
+                    />
+                    <div className={styles.spotlightImageOverlay}>
+                      <span>Ver Subpágina & Diagnóstico →</span>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
     </>
   );
 }

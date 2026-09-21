@@ -6,26 +6,6 @@ export const giveContent = {
       "“Cada um dê conforme determinou em seu coração, não com pesar ou por obrigação, pois Deus ama quem dá com alegria.”",
     reference: "2 Coríntios 9:7"
   },
-  buildingSpotlight: {
-    badge: "Missão & Edificação • Próximas Gerações",
-    title: "Construção do Templo — Fazenda Taboquinha",
-    subtitle: "Para que as próximas gerações conheçam Jesus Cristo e encontrem esperança",
-    image: "/images/projetos/templo-ice-jardins-conceito.webp",
-    image640: "/images/projetos/templo-ice-jardins-conceito-640.webp",
-    image1040: "/images/projetos/templo-ice-jardins-conceito-1040.webp",
-    statusText:
-      "Nossa missão é viver e transmitir o evangelho às futuras gerações — acolhendo crianças, jovens e famílias em uma comunidade fiel a Cristo. Já adquirimos a propriedade de 24.368 m² na Fazenda Taboquinha (DF-140) para a nossa sede definitiva e seguimos honrando os pagamentos do terreno com fé e responsabilidade. Sua contribuição viabiliza a quitação do solo e prepara um espaço permanente para acolher quem ainda vai chegar.",
-    bullets: [
-      { label: "Área Adquirida", value: "24.368 m² (~2,44 ha)" },
-      { label: "Status do Terreno", value: "Ativo em Pagamento" },
-      { label: "Bacia de Alcance", value: "240.000+ pessoas" },
-      { label: "Complexo", value: "Nave, Ministério Infantil e Convivência" }
-    ],
-    detailsLink: "/contribuir/edificacao/",
-    detailsLabel: "Conhecer Projeto Completo & Diagnóstico",
-    earthUrl: "https://earth.google.com/earth/d/1KC_qk9um_6lkK5n5C-WTyGA_GdvzuE8_?usp=sharing",
-    earthLabel: "Ver no Google Earth (3D)"
-  },
   pix: {
     title: "PIX",
     badge: "Mais Prático & Instantâneo",

@@ -6,26 +6,6 @@ export const giveContentEn = {
       "“Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver.”",
     reference: "2 Corinthians 9:7"
   },
-  buildingSpotlight: {
-    badge: "Mission & Campus • Future Generations",
-    title: "Temple & Campus Project — Fazenda Taboquinha",
-    subtitle: "So that future generations may know Jesus Christ and find lasting hope",
-    image: "/images/projetos/templo-ice-jardins-conceito.webp",
-    image640: "/images/projetos/templo-ice-jardins-conceito-640.webp",
-    image1040: "/images/projetos/templo-ice-jardins-conceito-1040.webp",
-    statusText:
-      "Our mission is to live and pass on the gospel to generations to come — nurturing children, youth, and families in a Christ-centered community. We have secured 6.02 acres (24,368 m²) in the Jardim Botânico / Tororó corridor for our permanent home, which is actively being paid off. Your giving directly supports retiring the land debt and preparing a permanent sanctuary for those yet to come.",
-    bullets: [
-      { label: "Acquired Land", value: "6.02 Acres (24,368 m²)" },
-      { label: "Land Status", value: "Active Land Payments" },
-      { label: "Outreach Basin", value: "240,000+ residents" },
-      { label: "Campus Plan", value: "Sanctuary, Children's Wing & Fellowship" }
-    ],
-    detailsLink: "/en/give/building-project/",
-    detailsLabel: "Explore Building Project & Regional Study",
-    earthUrl: "https://earth.google.com/earth/d/1KC_qk9um_6lkK5n5C-WTyGA_GdvzuE8_?usp=sharing",
-    earthLabel: "View in Google Earth (3D)"
-  },
   usaDonations: {
     title: "US Donations (Tax-Deductible)",
     badge: "501(c)(3) Recommended for US Donors",

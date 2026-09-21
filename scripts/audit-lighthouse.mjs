@@ -19,6 +19,10 @@ const ROUTES = [
   "/recursos/",
   "/recursos/quando-a-cabeca-nao-para/",
   "/recursos/palavras-que-confortam/",
+  "/projetos/",
+  "/contribuir/edificacao/",
+  "/en/projects/",
+  "/en/give/building-project/",
   "/privacy/",
   "/terms/"
 ];
