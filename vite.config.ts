@@ -152,10 +152,11 @@ export default defineConfig(({ command, mode }) => {
               "spinner-border",
               "spinner-border-sm",
               /^modal/,
-              /^bi-/
+              /^bi-/,
+              /^leaflet/
             ],
-            deep: [/^_.*/, /^dark/, /^data-theme/],
-            greedy: [/^_.*/]
+            deep: [/^_.*/, /^dark/, /^data-theme/, /^leaflet/],
+            greedy: [/^_.*/, /^leaflet/]
           },
           defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || []
         })

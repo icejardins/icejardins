@@ -6,17 +6,25 @@ export const giveContent = {
       "“Cada um dê conforme determinou em seu coração, não com pesar ou por obrigação, pois Deus ama quem dá com alegria.”",
     reference: "2 Coríntios 9:7"
   },
-  project: {
-    badge: "Missão e legado",
-    title: "Para que as próximas gerações conheçam Jesus",
-    paragraphs: [
-      "Nossa missão é aprender, viver e oferecer a vida maravilhosa de Jesus Cristo. Queremos vivê-la hoje e transmiti-la às gerações que virão.",
-      "Queremos ver crianças crescer no conhecimento de Jesus, jovens amadurecer na fé e famílias encontrar acolhimento e cuidado. Queremos formar discípulos que sirvam à comunidade e compartilhem o evangelho com pessoas que ainda não o conhecem.",
-      "Tudo o que fazemos está a serviço dessa missão. Nossa igreja é um lugar para o ensino da Palavra, cuidado de pessoas e para o preparo de uma nova geração que segue Jesus e ensina outros a segui-lo.",
-      "Nossa igreja já tem a propriedade da futura sede e seguimos honrando nossos compromissos. Temos confiança na provisão de Deus e, com responsabilidade no planejamento, estamos preparando os próximos passos para a construção de um espaço onde nossos filhos, seus filhos e muitas outras pessoas encontrem esperança numa comunidade fiel ao evangelho.",
-      "Sua contribuição participa dessa história e ajuda a preparar um espaço para quem ainda vai chegar. O legado que desejamos deixar são vidas alcançadas pelo evangelho, uma fé transmitida com fidelidade e uma comunidade disposta a servir."
+  buildingSpotlight: {
+    badge: "Missão & Edificação • Próximas Gerações",
+    title: "Construção do Templo — Fazenda Taboquinha",
+    subtitle: "Para que as próximas gerações conheçam Jesus Cristo e encontrem esperança",
+    image: "/images/projetos/templo-ice-jardins-conceito.webp",
+    image640: "/images/projetos/templo-ice-jardins-conceito-640.webp",
+    image1040: "/images/projetos/templo-ice-jardins-conceito-1040.webp",
+    statusText:
+      "Nossa missão é viver e transmitir o evangelho às futuras gerações — acolhendo crianças, jovens e famílias em uma comunidade fiel a Cristo. Já adquirimos a propriedade de 24.368 m² na Fazenda Taboquinha (DF-140) para a nossa sede definitiva e seguimos honrando os pagamentos do terreno com fé e responsabilidade. Sua contribuição viabiliza a quitação do solo e prepara um espaço permanente para acolher quem ainda vai chegar.",
+    bullets: [
+      { label: "Área Adquirida", value: "24.368 m² (~2,44 ha)" },
+      { label: "Status do Terreno", value: "Ativo em Pagamento" },
+      { label: "Bacia de Alcance", value: "240.000+ pessoas" },
+      { label: "Complexo", value: "Nave, Ministério Infantil e Convivência" }
     ],
-    callout: "Participe dessa missão. Contribua para as próximas etapas."
+    detailsLink: "/contribuir/edificacao/",
+    detailsLabel: "Conhecer Projeto Completo & Diagnóstico",
+    earthUrl: "https://earth.google.com/earth/d/1KC_qk9um_6lkK5n5C-WTyGA_GdvzuE8_?usp=sharing",
+    earthLabel: "Ver no Google Earth (3D)"
   },
   pix: {
     title: "PIX",

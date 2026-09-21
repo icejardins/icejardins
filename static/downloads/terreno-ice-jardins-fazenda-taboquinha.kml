@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document id="document">
+	<name>Terreno da Igreja Cristã Evangélica Jardins - Fazenda Taboquinha - Gleba 01</name>
+	<description>Levantamento Planialtimétrico Cadastral - RA XXVII Jardim Botânico / DF</description>
+	<gx:CascadingStyle kml:id="__managed_style_0EA39D8C0241F6B5F1C9_highlight">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.1.0.0/card_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<color>ffffaa00</color>
+				<scale>0.96</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?id=391&amp;scale=4</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_1E31D427A841F6B5F1CC_highlight">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.1.0.0/card_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff0000ff</color>
+				<width>2.25</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>400000ff</color>
+			</PolyStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_0A1BB4593841F6B5F1CE">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_0A1BB4593841F6B5F1CE_normal</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_0A1BB4593841F6B5F1CE_highlight</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="__managed_style_0EA39D8C0241F6B5F1C9">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_0EA39D8C0241F6B5F1C9_normal</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_0EA39D8C0241F6B5F1C9_highlight</styleUrl>
+		</Pair>
+	</StyleMap>
+	<gx:CascadingStyle kml:id="__managed_style_058824D9BE41F6B5F1CC_highlight">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.1.0.0/card_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<color>ff00aaff</color>
+				<scale>1.32</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?id=304&amp;scale=4</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_058824D9BE41F6B5F1CC">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_058824D9BE41F6B5F1CC_normal</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_058824D9BE41F6B5F1CC_highlight</styleUrl>
+		</Pair>
+	</StyleMap>
+	<gx:CascadingStyle kml:id="__managed_style_058824D9BE41F6B5F1CC_normal">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.1.0.0/card_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<color>ff00aaff</color>
+				<scale>1.1</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?id=304&amp;scale=4</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>2</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_0EA39D8C0241F6B5F1C9_normal">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.1.0.0/card_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<color>ffffaa00</color>
+				<scale>0.8</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?id=391&amp;scale=4</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>2</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_0A1BB4593841F6B5F1CE_highlight">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.1.0.0/card_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_0A1BB4593841F6B5F1CE_normal">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.1.0.0/card_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>2</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_1E31D427A841F6B5F1CC_normal">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.1.0.0/card_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff0000ff</color>
+				<width>1.5</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>400000ff</color>
+			</PolyStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_1E31D427A841F6B5F1CC">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1E31D427A841F6B5F1CC_normal</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_1E31D427A841F6B5F1CC_highlight</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Placemark id="5ED46549A8000001">
+		<name>Perímetro - Gleba 01</name>
+		<description><![CDATA[
+        <b>Propriedade:</b> Fazenda Taboquinha - Gleba 01<br/>
+        <b>Área:</b> 24.368,29 m²<br/>
+        <b>Perímetro:</b> 675,37 m<br/>
+        <b>Município:</b> RA XXVII Jardim Botânico - DF<br/>
+        <b>Datum Horizontal:</b> SIRGAS 2000 / UTM fuso 23S
+      ]]></description>
+		<styleUrl>#__managed_style_1E31D427A841F6B5F1CC</styleUrl>
+		<Polygon>
+			<extrude>1</extrude>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-47.78492143,-15.86540961,0 -47.78496184,-15.86551174,0 -47.78496831,-15.86556421,0 -47.78496874,-15.86569029,0 -47.78495892,-15.86576743,0 -47.78495143,-15.86584662,0 -47.78495093999999,-15.86588574,0 -47.78495451000001,-15.86593652,0 -47.78495914,-15.8659877,0 -47.78495981999999,-15.86601332,0 -47.7849564,-15.86604374,0 -47.7849484,-15.8660713,0 -47.78492734,-15.86613614,0 -47.78491624,-15.86616823,0 -47.78489843,-15.86621614,0 -47.78488653,-15.86625593,0 -47.78488432,-15.86629034,0 -47.78489033,-15.86633261,0 -47.78489851,-15.86636657,0 -47.7827407,-15.86620092,0 -47.78273187000001,-15.86529788,0 -47.78492143,-15.86540961,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Folder id="5ED46549A8000002">
+		<name>Vértices e Marcos</name>
+		<open>1</open>
+		<styleUrl>#__managed_style_0A1BB4593841F6B5F1CE</styleUrl>
+		<Placemark id="5ED46549A8000003">
+			<name>M-01</name>
+			<description><![CDATA[<b>Vértice:</b> M-01<br/><b>Para:</b> M-02<br/><b>Azimute:</b> 179°47'00"<br/><b>Distância:</b> 100.0 m<br/><b>Este (UTM):</b> 201972.157 m<br/><b>Norte (UTM):</b> 8243984.894 m<br/><b>Latitude:</b> -15.86529788°<br/><b>Longitude:</b> -47.78273187°]]></description>
+			<styleUrl>#__managed_style_058824D9BE41F6B5F1CC</styleUrl>
+			<Point>
+				<coordinates>-47.78273187000001,-15.86529788,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="5ED46549A8000004">
+			<name>M-02</name>
+			<description><![CDATA[<b>Vértice:</b> M-02<br/><b>Para:</b> M-03<br/><b>Azimute:</b> 264°42'10"<br/><b>Distância:</b> 232.0 m<br/><b>Este (UTM):</b> 201972.535 m<br/><b>Norte (UTM):</b> 8243884.895 m<br/><b>Latitude:</b> -15.86620092°<br/><b>Longitude:</b> -47.78274070°]]></description>
+			<styleUrl>#__managed_style_058824D9BE41F6B5F1CC</styleUrl>
+			<Point>
+				<coordinates>-47.7827407,-15.86620092,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="5ED46549A8000005">
+			<name>M-03</name>
+			<description><![CDATA[<b>Vértice:</b> M-03<br/><b>Para:</b> P-01<br/><b>Azimute:</b> 12°24'07"<br/><b>Distância:</b> 3.87 m<br/><b>Este (UTM):</b> 201741.526 m<br/><b>Norte (UTM):</b> 8243863.476 m<br/><b>Latitude:</b> -15.86636657°<br/><b>Longitude:</b> -47.78489851°]]></description>
+			<styleUrl>#__managed_style_058824D9BE41F6B5F1CC</styleUrl>
+			<Point>
+				<coordinates>-47.78489851,-15.86636657,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="5ED46549A8000006">
+			<name>P-01</name>
+			<visibility>0</visibility>
+			<description><![CDATA[<b>Vértice:</b> P-01<br/><b>Para:</b> P-02<br/><b>Azimute:</b> 7°6'01"<br/><b>Distância:</b> 4.73 m<br/><b>Este (UTM):</b> 201742.358 m<br/><b>Norte (UTM):</b> 8243867.260 m<br/><b>Latitude:</b> -15.86633261°<br/><b>Longitude:</b> -47.78489033°]]></description>
+			<styleUrl>#__managed_style_0EA39D8C0241F6B5F1C9</styleUrl>
+			<Point>
+				<coordinates>-47.78489033,-15.86633261,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="5ED46549A8000007">
+			<name>P-02</name>
+			<visibility>0</visibility>
+			<description><![CDATA[<b>Vértice:</b> P-02<br/><b>Para:</b> P-03<br/><b>Azimute:</b> 355°41'22"<br/><b>Distância:</b> 3.81 m<br/><b>Este (UTM):</b> 201742.942 m<br/><b>Norte (UTM):</b> 8243871.951 m<br/><b>Latitude:</b> -15.86629034°<br/><b>Longitude:</b> -47.78488432°]]></description>
+			<styleUrl>#__managed_style_0EA39D8C0241F6B5F1C9</styleUrl>
+			<Point>
+				<coordinates>-47.78488432,-15.86629034,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="5ED46549A8000008">
+			<name>P-03</name>
+			<visibility>0</visibility>
+			<description><![CDATA[<b>Vértice:</b> P-03<br/><b>Para:</b> P-04<br/><b>Azimute:</b> 343°5'38"<br/><b>Distância:</b> 4.59 m<br/><b>Este (UTM):</b> 201742.655 m<br/><b>Norte (UTM):</b> 8243875.755 m<br/><b>Latitude:</b> -15.86625593°<br/><b>Longitude:</b> -47.78488653°]]></description>
+			<styleUrl>#__managed_style_0EA39D8C0241F6B5F1C9</styleUrl>
+			<Point>
+				<coordinates>-47.78488653,-15.86625593,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="5ED46549A8000009">
+			<name>P-04</name>
+			<visibility>0</visibility>
+			<description><![CDATA[<b>Vértice:</b> P-04<br/><b>Para:</b> P-05<br/><b>Azimute:</b> 339°28'39"<br/><b>Distância:</b> 5.64 m<br/><b>Este (UTM):</b> 201741.322 m<br/><b>Norte (UTM):</b> 8243880.143 m<br/><b>Latitude:</b> -15.86621614°<br/><b>Longitude:</b> -47.78489843°]]></description>
+			<styleUrl>#__managed_style_0EA39D8C0241F6B5F1C9</styleUrl>
+			<Point>
+				<coordinates>-47.78489843,-15.86621614,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="5ED46549A800000A">
+			<name>P-05</name>
+			<visibility>0</visibility>
+			<description><![CDATA[<b>Vértice:</b> P-05<br/><b>Para:</b> P-06<br/><b>Azimute:</b> 340°38'35"<br/><b>Distância:</b> 3.75 m<br/><b>Este (UTM):</b> 201739.345 m<br/><b>Norte (UTM):</b> 8243885.422 m<br/><b>Latitude:</b> -15.86616823°<br/><b>Longitude:</b> -47.78491624°]]></description>
+			<styleUrl>#__managed_style_0EA39D8C0241F6B5F1C9</styleUrl>
+			<Point>
+				<coordinates>-47.78491624,-15.86616823,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="5ED46549A800000B">
+			<name>P-06</name>
+			<visibility>0</visibility>
+			<description><![CDATA[<b>Vértice:</b> P-06<br/><b>Para:</b> P-07<br/><b>Azimute:</b> 341°44'26"<br/><b>Distância:</b> 7.53 m<br/><b>Este (UTM):</b> 201738.103 m<br/><b>Norte (UTM):</b> 8243888.960 m<br/><b>Latitude:</b> -15.86613614°<br/><b>Longitude:</b> -47.78492734°]]></description>
+			<styleUrl>#__managed_style_0EA39D8C0241F6B5F1C9</styleUrl>
+			<Point>
+				<coordinates>-47.78492734,-15.86613614,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="5ED46549A800000C">
+			<name>P-07</name>
+			<visibility>0</visibility>
+			<description><![CDATA[<b>Vértice:</b> P-07<br/><b>Para:</b> P-08<br/><b>Azimute:</b> 343°38'12"<br/><b>Distância:</b> 3.16 m<br/><b>Este (UTM):</b> 201735.744 m<br/><b>Norte (UTM):</b> 8243896.108 m<br/><b>Latitude:</b> -15.86607130°<br/><b>Longitude:</b> -47.78494840°]]></description>
+			<styleUrl>#__managed_style_0EA39D8C0241F6B5F1C9</styleUrl>
+			<Point>
+				<coordinates>-47.7849484,-15.8660713,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="5ED46549A800000D">
+			<name>P-08</name>
+			<visibility>0</visibility>
+			<description><![CDATA[<b>Vértice:</b> P-08<br/><b>Para:</b> P-09<br/><b>Azimute:</b> 353°2'58"<br/><b>Distância:</b> 3.38 m<br/><b>Este (UTM):</b> 201734.853 m<br/><b>Norte (UTM):</b> 8243899.145 m<br/><b>Latitude:</b> -15.86604374°<br/><b>Longitude:</b> -47.78495640°]]></description>
+			<styleUrl>#__managed_style_0EA39D8C0241F6B5F1C9</styleUrl>
+			<Point>
+				<coordinates>-47.7849564,-15.86604374,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="5ED46549A800000E">
+			<name>P-09</name>
+			<visibility>0</visibility>
+			<description><![CDATA[<b>Vértice:</b> P-09<br/><b>Para:</b> P-010<br/><b>Azimute:</b> 0°36'24"<br/><b>Distância:</b> 2.84 m<br/><b>Este (UTM):</b> 201734.443 m<br/><b>Norte (UTM):</b> 8243902.505 m<br/><b>Latitude:</b> -15.86601332°<br/><b>Longitude:</b> -47.78495982°]]></description>
+			<styleUrl>#__managed_style_0EA39D8C0241F6B5F1C9</styleUrl>
+			<Point>
+				<coordinates>-47.78495981999999,-15.86601332,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="5ED46549A800000F">
+			<name>P-010</name>
+			<visibility>0</visibility>
+			<description><![CDATA[<b>Vértice:</b> P-010<br/><b>Para:</b> P-011<br/><b>Azimute:</b> 4°16'55"<br/><b>Distância:</b> 5.70 m<br/><b>Este (UTM):</b> 201734.473 m<br/><b>Norte (UTM):</b> 8243905.340 m<br/><b>Latitude:</b> -15.86598770°<br/><b>Longitude:</b> -47.78495914°]]></description>
+			<styleUrl>#__managed_style_0EA39D8C0241F6B5F1C9</styleUrl>
+			<Point>
+				<coordinates>-47.78495914,-15.8659877,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="5ED46549A8000010">
+			<name>P-011</name>
+			<visibility>0</visibility>
+			<description><![CDATA[<b>Vértice:</b> P-011<br/><b>Para:</b> P-012<br/><b>Azimute:</b> 3°6'02"<br/><b>Distância:</b> 5.64 m<br/><b>Este (UTM):</b> 201734.898 m<br/><b>Norte (UTM):</b> 8243911.020 m<br/><b>Latitude:</b> -15.86593652°<br/><b>Longitude:</b> -47.78495451°]]></description>
+			<styleUrl>#__managed_style_0EA39D8C0241F6B5F1C9</styleUrl>
+			<Point>
+				<coordinates>-47.78495451000001,-15.86593652,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="5ED46549A8000011">
+			<name>P-012</name>
+			<visibility>0</visibility>
+			<description><![CDATA[<b>Vértice:</b> P-012<br/><b>Para:</b> P-013<br/><b>Azimute:</b> 358°31'54"<br/><b>Distância:</b> 4.34 m<br/><b>Este (UTM):</b> 201735.203 m<br/><b>Norte (UTM):</b> 8243916.648 m<br/><b>Latitude:</b> -15.86588574°<br/><b>Longitude:</b> -47.78495094°]]></description>
+			<styleUrl>#__managed_style_0EA39D8C0241F6B5F1C9</styleUrl>
+			<Point>
+				<coordinates>-47.78495093999999,-15.86588574,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="5ED46549A8000012">
+			<name>P-013</name>
+			<visibility>0</visibility>
+			<description><![CDATA[<b>Vértice:</b> P-013<br/><b>Para:</b> P-014<br/><b>Azimute:</b> 354°1'31"<br/><b>Distância:</b> 8.81 m<br/><b>Este (UTM):</b> 201735.092 m<br/><b>Norte (UTM):</b> 8243920.982 m<br/><b>Latitude:</b> -15.86584662°<br/><b>Longitude:</b> -47.78495143°]]></description>
+			<styleUrl>#__managed_style_0EA39D8C0241F6B5F1C9</styleUrl>
+			<Point>
+				<coordinates>-47.78495143,-15.86584662,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="5ED46549A8000013">
+			<name>P-014</name>
+			<visibility>0</visibility>
+			<description><![CDATA[<b>Vértice:</b> P-014<br/><b>Para:</b> P-015<br/><b>Azimute:</b> 352°11'15"<br/><b>Distância:</b> 8.60 m<br/><b>Este (UTM):</b> 201734.175 m<br/><b>Norte (UTM):</b> 8243929.742 m<br/><b>Latitude:</b> -15.86576743°<br/><b>Longitude:</b> -47.78495892°]]></description>
+			<styleUrl>#__managed_style_0EA39D8C0241F6B5F1C9</styleUrl>
+			<Point>
+				<coordinates>-47.78495892,-15.86576743,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="5ED46549A8000014">
+			<name>P-015</name>
+			<visibility>0</visibility>
+			<description><![CDATA[<b>Vértice:</b> P-015<br/><b>Para:</b> P-016<br/><b>Azimute:</b> 359°25'30"<br/><b>Distância:</b> 13.96 m<br/><b>Este (UTM):</b> 201733.006 m<br/><b>Norte (UTM):</b> 8243938.266 m<br/><b>Latitude:</b> -15.86569029°<br/><b>Longitude:</b> -47.78496874°]]></description>
+			<styleUrl>#__managed_style_0EA39D8C0241F6B5F1C9</styleUrl>
+			<Point>
+				<coordinates>-47.78496874,-15.86569029,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="5ED46549A8000015">
+			<name>P-016</name>
+			<visibility>0</visibility>
+			<description><![CDATA[<b>Vértice:</b> P-016<br/><b>Para:</b> P-017<br/><b>Azimute:</b> 6°6'34"<br/><b>Distância:</b> 5.86 m<br/><b>Este (UTM):</b> 201732.866 m<br/><b>Norte (UTM):</b> 8243952.222 m<br/><b>Latitude:</b> -15.86556421°<br/><b>Longitude:</b> -47.78496831°]]></description>
+			<styleUrl>#__managed_style_0EA39D8C0241F6B5F1C9</styleUrl>
+			<Point>
+				<coordinates>-47.78496831,-15.86556421,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="5ED46549A8000016">
+			<name>P-017</name>
+			<visibility>0</visibility>
+			<description><![CDATA[<b>Vértice:</b> P-017<br/><b>Para:</b> M-04<br/><b>Azimute:</b> 20°10'00"<br/><b>Distância:</b> 12.10 m<br/><b>Este (UTM):</b> 201733.489 m<br/><b>Norte (UTM):</b> 8243958.047 m<br/><b>Latitude:</b> -15.86551174°<br/><b>Longitude:</b> -47.78496184°]]></description>
+			<styleUrl>#__managed_style_0EA39D8C0241F6B5F1C9</styleUrl>
+			<Point>
+				<coordinates>-47.78496184,-15.86551174,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark id="5ED46549A8000017">
+			<name>M-04</name>
+			<description><![CDATA[<b>Vértice:</b> M-04<br/><b>Para:</b> M-01<br/><b>Azimute:</b> 86°13'16"<br/><b>Distância:</b> 235.01 m<br/><b>Este (UTM):</b> 201737.661 m<br/><b>Norte (UTM):</b> 8243969.406 m<br/><b>Latitude:</b> -15.86540961°<br/><b>Longitude:</b> -47.78492143°]]></description>
+			<styleUrl>#__managed_style_058824D9BE41F6B5F1CC</styleUrl>
+			<Point>
+				<coordinates>-47.78492143,-15.86540961,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

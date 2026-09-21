@@ -17,6 +17,8 @@ const ResourcePage = lazy(() => import("@/features/resources/ResourcePage"));
 const ResourceThankYouPage = lazy(() => import("@/features/resources/ResourceThankYouPage"));
 const GivePage = lazy(() => import("@/features/give/GivePage"));
 const GivePageEn = lazy(() => import("@/features/give/GivePageEn"));
+const ProjectsPage = lazy(() => import("@/features/projects/ProjectsPage"));
+const ProjectsPageEn = lazy(() => import("@/features/projects/ProjectsPageEn"));
 const ContentPage = lazy(() => import("@/features/pages/ContentPage"));
 const NotFoundPage = lazy(() => import("@/features/common/NotFoundPage"));
 const UnsubscribePage = lazy(() => import("@/features/landing/UnsubscribePage"));
@@ -45,16 +47,26 @@ export function AppRoutes() {
             <Route index element={<HomePage />} />
             <Route path="en" element={<HomePageEn />} />
             <Route path="en/give" element={<GivePageEn />} />
+            <Route path="en/give/building-project" element={<ProjectsPageEn />} />
+            <Route path="en/give/projects" element={<Navigate to="/en/give/building-project/" replace />} />
             <Route path="en/faith" element={<FaithPageEn />} />
             <Route path="en/fe" element={<Navigate to="/en/faith/" replace />} />
+            <Route path="en/projects" element={<Navigate to="/en/give/building-project/" replace />} />
+            <Route path="en/projetos" element={<Navigate to="/en/give/building-project/" replace />} />
             <Route path="en/contribuir" element={<Navigate to="/en/give/" replace />} />
             <Route path="en/contribua" element={<Navigate to="/en/give/" replace />} />
             <Route path="visita" element={<VisitPage />} />
             <Route path="fe" element={<FaithPage />} />
+            <Route path="projetos" element={<Navigate to="/contribuir/edificacao/" replace />} />
+            <Route path="projetos/construcao-do-templo" element={<Navigate to="/contribuir/edificacao/" replace />} />
             <Route path="posts" element={<BlogListPage />} />
             <Route path="posts/:slug" element={<BlogPostPage />} />
             <Route path="recursos" element={<ResourceListPage />} />
             <Route path="contribuir" element={<GivePage />} />
+            <Route path="contribuir/edificacao" element={<ProjectsPage />} />
+            <Route path="contribuir/projetos" element={<Navigate to="/contribuir/edificacao/" replace />} />
+            <Route path="contribuir/terreno" element={<Navigate to="/contribuir/edificacao/" replace />} />
+            <Route path="contribuir/construcao" element={<Navigate to="/contribuir/edificacao/" replace />} />
             <Route path="doacoes" element={<Navigate to="/contribuir/" replace />} />
             <Route path="doe" element={<Navigate to="/contribuir/" replace />} />
             <Route path="tags/:slug" element={<TaxonomyPage taxonomyType="tag" />} />

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router";
 import { SeoHead } from "@/shared/components/SeoHead";
 import { Icon } from "@/shared/components/Icon";
 import { giveContentEn } from "@/content/data/giveContentEn";
@@ -79,20 +80,68 @@ export default function GivePageEn() {
 
       <section className={styles.pageSection}>
         <div className="container">
-          {/* Highlight Vision / Land & Building Project */}
-          <article className={styles.projectCard}>
-            <span className={styles.projectBadge}>{giveContentEn.project.badge}</span>
-            <h2>{giveContentEn.project.title}</h2>
-            {giveContentEn.project.paragraphs.map((text, idx) => (
-              <p
-                key={idx}
-                className={idx === 0 ? styles.projectLead : styles.projectBody}
-              >
-                {text}
-              </p>
-            ))}
-            <div className={styles.projectHighlight}>
-              <strong>{giveContentEn.project.callout}</strong>
+          {/* Spotlight Subpage: Land & Temple Building Project */}
+          <article className={styles.buildingSpotlightCard}>
+            <div className="row align-items-center g-4">
+              <div className="col-lg-7">
+                <span className={styles.spotlightBadge}>
+                  <Icon name="building" /> {giveContentEn.buildingSpotlight.badge}
+                </span>
+                <h2 className={styles.spotlightTitle}>{giveContentEn.buildingSpotlight.title}</h2>
+                <p className={styles.spotlightSubtitle}>{giveContentEn.buildingSpotlight.subtitle}</p>
+                <p className={styles.spotlightStatusText}>
+                  {giveContentEn.buildingSpotlight.statusText}
+                </p>
+
+                <div className={styles.spotlightBulletsGrid}>
+                  {giveContentEn.buildingSpotlight.bullets.map((b, idx) => (
+                    <div key={idx} className={styles.spotlightBullet}>
+                      <span className={styles.spotlightBulletLabel}>{b.label}</span>
+                      <strong className={styles.spotlightBulletValue}>{b.value}</strong>
+                    </div>
+                  ))}
+                </div>
+
+                <div className={styles.spotlightActions}>
+                  <Link
+                    to={giveContentEn.buildingSpotlight.detailsLink}
+                    className={styles.btnSpotlightPrimary}
+                  >
+                    <Icon name="arrow-right-circle" /> {giveContentEn.buildingSpotlight.detailsLabel}
+                  </Link>
+                  <a
+                    href={giveContentEn.buildingSpotlight.earthUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.btnSpotlightOutline}
+                  >
+                    <Icon name="globe-americas" /> {giveContentEn.buildingSpotlight.earthLabel}
+                  </a>
+                </div>
+              </div>
+
+              <div className="col-lg-5">
+                <div className={styles.spotlightVisualWrapper}>
+                  <Link
+                    to={giveContentEn.buildingSpotlight.detailsLink}
+                    title="Explore building project subpage"
+                  >
+                    <img
+                      src={giveContentEn.buildingSpotlight.image}
+                      srcSet={`${giveContentEn.buildingSpotlight.image640} 640w, ${giveContentEn.buildingSpotlight.image1040} 1040w, ${giveContentEn.buildingSpotlight.image} 1376w`}
+                      sizes="(max-width: 991px) 100vw, 480px"
+                      alt="Architectural concept rendering of the future temple of ICE Jardins"
+                      className={styles.spotlightImage}
+                      width={640}
+                      height={360}
+                      loading="lazy"
+                    />
+                    <div className={styles.spotlightImageOverlay}>
+                      <span>Explore Subpage & 3D Map →</span>
+                    </div>
+                  </Link>
+                </div>
+              </div>
             </div>
           </article>
 

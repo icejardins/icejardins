@@ -1,0 +1,196 @@
+.mapWrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(20, 95, 99, 0.15);
+  background-color: var(--secondary-background-color, #f1f7f7);
+}
+
+.mapContainer {
+  width: 100%;
+  height: 480px;
+  min-height: 420px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure Leaflet tiles and panes are not affected by global img { max-width: 100% } */
+.mapContainer :global(.leaflet-container) {
+  width: 100% !important;
+  height: 100% !important;
+  font-family: inherit;
+  background-color: #0b3032;
+}
+
+.mapContainer :global(.leaflet-tile-pane) {
+  z-index: 200;
+}
+
+.mapContainer :global(.leaflet-tile) {
+  max-width: none !important;
+  max-height: none !important;
+  width: 256px !important;
+  height: 256px !important;
+  visibility: inherit !important;
+}
+
+.mapContainer :global(.leaflet-pane img) {
+  max-width: none !important;
+  max-height: none !important;
+}
+
+.mapContainer :global(.leaflet-control-zoom a) {
+  width: 44px !important;
+  height: 44px !important;
+  line-height: 44px !important;
+  font-size: 20px !important;
+  margin-bottom: 6px !important;
+  border-radius: 8px !important;
+}
+
+@media (max-width: 768px) {
+  .mapContainer {
+    height: 380px;
+    min-height: 340px;
+  }
+}
+
+.mapToolbar {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 1000;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.toolBtn {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: var(--text-color, #12383a);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  min-height: 44px;
+  border-radius: 999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.toolBtn:hover {
+  background: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.activeToolBtn {
+  background: var(--primary-color, #145f63);
+  color: #ffffff;
+  border-color: var(--primary-color, #145f63);
+}
+
+.activeToolBtn:hover {
+  background: var(--brand-800, #12585c);
+  color: #ffffff;
+}
+
+.mapLegend {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 10px 14px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  font-size: 0.82rem;
+  max-width: 280px;
+}
+
+.legendTitle {
+  font-weight: 700;
+  color: var(--text-color, #12383a);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legendDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: #00d2d3;
+  border: 2px solid #0f4b4f;
+  display: inline-block;
+}
+
+.legendText {
+  color: var(--secondary-text-color, #4d6b6d);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.ssrPlaceholder {
+  width: 100%;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0b3032 0%, #145f63 100%);
+  color: #ffffff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.ssrPlaceholder h3,
+.ssrPlaceholder h4,
+.ssrHeading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.ssrPlaceholder p {
+  max-width: 460px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1.5rem;
+}
+
+.quickActionGroup {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.quickBtn {
+  background: #ffffff;
+  color: #145f63;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.quickBtn:hover {
+  background: #e2f0f1;
+  color: #0b3032;
+  transform: translateY(-2px);
+}

@@ -36,6 +36,7 @@ export function Header() {
         { name: "Home", url: "/en/" },
         { name: "About", url: "/en/#about" },
         { name: "What We Believe", url: "/en/faith/" },
+        { name: "Building Project", url: "/en/give/building-project/" },
         { name: "Visit", url: "/visita/" },
         { name: "Give", url: "/en/give/" }
       ]
@@ -44,7 +45,16 @@ export function Header() {
   const handleLanguageChange = (targetLang: "pt" | "en") => {
     setLanguagePreference(targetLang);
     if (targetLang === "en") {
-      if (location.pathname.startsWith("/contribuir") || location.pathname.startsWith("/doacoes") || location.pathname.startsWith("/doe")) {
+      if (
+        location.pathname.startsWith("/contribuir/edificacao") ||
+        location.pathname.startsWith("/projetos")
+      ) {
+        navigate("/en/give/building-project/");
+      } else if (
+        location.pathname.startsWith("/contribuir") ||
+        location.pathname.startsWith("/doacoes") ||
+        location.pathname.startsWith("/doe")
+      ) {
         navigate("/en/give/");
       } else if (location.pathname.startsWith("/fe")) {
         navigate("/en/faith/");
@@ -52,7 +62,13 @@ export function Header() {
         navigate("/en/");
       }
     } else {
-      if (location.pathname.startsWith("/en/give")) {
+      if (
+        location.pathname.startsWith("/en/give/building-project") ||
+        location.pathname.startsWith("/en/projects") ||
+        location.pathname.startsWith("/en/projetos")
+      ) {
+        navigate("/contribuir/edificacao/");
+      } else if (location.pathname.startsWith("/en/give")) {
         navigate("/contribuir/");
       } else if (location.pathname.startsWith("/en/faith")) {
         navigate("/fe/");

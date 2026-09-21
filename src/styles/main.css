@@ -1,5 +1,6 @@
-﻿@import "/css/font.css";
+@import "/css/font.css";
 @import "./tokens.css";
+@import "leaflet/dist/leaflet.css";
 
 * {
   box-sizing: border-box;

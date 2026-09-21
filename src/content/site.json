@@ -21,11 +21,16 @@
     {
       "name": "Visita",
       "url": "/visita/",
-      "weight": 3
+      "weight": 2
     },
     {
       "name": "No que cremos",
       "url": "/fe/",
+      "weight": 3
+    },
+    {
+      "name": "Edificação",
+      "url": "/contribuir/edificacao/",
       "weight": 4
     },
     {

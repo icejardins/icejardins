@@ -6,17 +6,25 @@ export const giveContentEn = {
       "“Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver.”",
     reference: "2 Corinthians 9:7"
   },
-  project: {
-    badge: "Mission & Legacy",
-    title: "So That Future Generations May Know Jesus",
-    paragraphs: [
-      "Our mission is to learn, live, and offer the wonderful life of Jesus Christ. We want to live it today and pass it on to generations to come.",
-      "We want to see children grow in the knowledge of Jesus, young people mature in faith, and families find care and welcome. We want to raise disciples who serve the community and share the gospel with those who do not yet know Him.",
-      "Everything we do serves this mission. Our church is a place for biblical teaching, pastoral care, and preparing a new generation that follows Jesus and teaches others to follow Him.",
-      "Our church has already acquired the property for our future permanent facility and continues to honor all financial commitments. Trusting in God's provision and planning responsibly, we are preparing the next steps to build a home where our children, their children, and many others find hope in a community faithful to the gospel.",
-      "Your generosity is part of this story and helps prepare a place for those yet to come. The legacy we want to leave is lives redeemed by the gospel, a faith passed on faithfully, and a community ready to serve."
+  buildingSpotlight: {
+    badge: "Mission & Campus • Future Generations",
+    title: "Temple & Campus Project — Fazenda Taboquinha",
+    subtitle: "So that future generations may know Jesus Christ and find lasting hope",
+    image: "/images/projetos/templo-ice-jardins-conceito.webp",
+    image640: "/images/projetos/templo-ice-jardins-conceito-640.webp",
+    image1040: "/images/projetos/templo-ice-jardins-conceito-1040.webp",
+    statusText:
+      "Our mission is to live and pass on the gospel to generations to come — nurturing children, youth, and families in a Christ-centered community. We have secured 6.02 acres (24,368 m²) in the Jardim Botânico / Tororó corridor for our permanent home, which is actively being paid off. Your giving directly supports retiring the land debt and preparing a permanent sanctuary for those yet to come.",
+    bullets: [
+      { label: "Acquired Land", value: "6.02 Acres (24,368 m²)" },
+      { label: "Land Status", value: "Active Land Payments" },
+      { label: "Outreach Basin", value: "240,000+ residents" },
+      { label: "Campus Plan", value: "Sanctuary, Children's Wing & Fellowship" }
     ],
-    callout: "Join us in this mission. Partner with us for the next steps."
+    detailsLink: "/en/give/building-project/",
+    detailsLabel: "Explore Building Project & Regional Study",
+    earthUrl: "https://earth.google.com/earth/d/1KC_qk9um_6lkK5n5C-WTyGA_GdvzuE8_?usp=sharing",
+    earthLabel: "View in Google Earth (3D)"
   },
   usaDonations: {
     title: "US Donations (Tax-Deductible)",

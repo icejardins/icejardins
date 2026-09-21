@@ -12,6 +12,8 @@ import ResourcePage from "@/features/resources/ResourcePage";
 import ResourceThankYouPage from "@/features/resources/ResourceThankYouPage";
 import GivePage from "@/features/give/GivePage";
 import GivePageEn from "@/features/give/GivePageEn";
+import ProjectsPage from "@/features/projects/ProjectsPage";
+import ProjectsPageEn from "@/features/projects/ProjectsPageEn";
 import ContentPage from "@/features/pages/ContentPage";
 import NotFoundPage from "@/features/common/NotFoundPage";
 import UnsubscribePage from "@/features/landing/UnsubscribePage";
@@ -40,16 +42,26 @@ export function AppRoutesStatic() {
           <Route index element={<HomePage />} />
           <Route path="en" element={<HomePageEn />} />
           <Route path="en/give" element={<GivePageEn />} />
+          <Route path="en/give/building-project" element={<ProjectsPageEn />} />
+          <Route path="en/give/projects" element={<Navigate to="/en/give/building-project/" replace />} />
           <Route path="en/faith" element={<FaithPageEn />} />
           <Route path="en/fe" element={<Navigate to="/en/faith/" replace />} />
+          <Route path="en/projects" element={<Navigate to="/en/give/building-project/" replace />} />
+          <Route path="en/projetos" element={<Navigate to="/en/give/building-project/" replace />} />
           <Route path="en/contribuir" element={<Navigate to="/en/give/" replace />} />
           <Route path="en/contribua" element={<Navigate to="/en/give/" replace />} />
           <Route path="visita" element={<VisitPage />} />
           <Route path="fe" element={<FaithPage />} />
+          <Route path="projetos" element={<Navigate to="/contribuir/edificacao/" replace />} />
+          <Route path="projetos/construcao-do-templo" element={<Navigate to="/contribuir/edificacao/" replace />} />
           <Route path="posts" element={<BlogListPage />} />
           <Route path="posts/:slug" element={<BlogPostPage />} />
           <Route path="recursos" element={<ResourceListPage />} />
           <Route path="contribuir" element={<GivePage />} />
+          <Route path="contribuir/edificacao" element={<ProjectsPage />} />
+          <Route path="contribuir/projetos" element={<Navigate to="/contribuir/edificacao/" replace />} />
+          <Route path="contribuir/terreno" element={<Navigate to="/contribuir/edificacao/" replace />} />
+          <Route path="contribuir/construcao" element={<Navigate to="/contribuir/edificacao/" replace />} />
           <Route path="doacoes" element={<Navigate to="/contribuir/" replace />} />
           <Route path="doe" element={<Navigate to="/contribuir/" replace />} />
           <Route path="tags/:slug" element={<TaxonomyPage taxonomyType="tag" />} />

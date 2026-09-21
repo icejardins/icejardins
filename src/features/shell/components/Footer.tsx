@@ -129,6 +129,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to={isEnglish ? "/en/give/building-project/" : "/contribuir/edificacao/"}>
+                  {isEnglish ? "Building Project" : "Edificação & Templo"}
+                </Link>
+              </li>
+              <li>
                 <Link to="/posts/">
                   {isEnglish ? "Sermons" : "Sermões"}
                 </Link>

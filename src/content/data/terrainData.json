@@ -1,0 +1,251 @@
+{
+  "name": "Fazenda Taboquinha - Gleba 01",
+  "municipality": "RA XXVII Jardim Botânico - DF",
+  "datum": "SIRGAS 2000 / UTM fuso 23S",
+  "areaM2": 24368.29,
+  "areaHectares": 2.4368,
+  "perimeterM": 675.37,
+  "center": [
+    -15.86583,
+    -47.78385
+  ],
+  "polygon": [
+    [
+      -15.86540961,
+      -47.78492143
+    ],
+    [
+      -15.86551174,
+      -47.78496184
+    ],
+    [
+      -15.86556421,
+      -47.78496831
+    ],
+    [
+      -15.86569029,
+      -47.78496874
+    ],
+    [
+      -15.86576743,
+      -47.78495892
+    ],
+    [
+      -15.86584662,
+      -47.78495143
+    ],
+    [
+      -15.86588574,
+      -47.78495093999999
+    ],
+    [
+      -15.86593652,
+      -47.78495451000001
+    ],
+    [
+      -15.8659877,
+      -47.78495914
+    ],
+    [
+      -15.86601332,
+      -47.78495981999999
+    ],
+    [
+      -15.86604374,
+      -47.7849564
+    ],
+    [
+      -15.8660713,
+      -47.7849484
+    ],
+    [
+      -15.86613614,
+      -47.78492734
+    ],
+    [
+      -15.86616823,
+      -47.78491624
+    ],
+    [
+      -15.86621614,
+      -47.78489843
+    ],
+    [
+      -15.86625593,
+      -47.78488653
+    ],
+    [
+      -15.86629034,
+      -47.78488432
+    ],
+    [
+      -15.86633261,
+      -47.78489033
+    ],
+    [
+      -15.86636657,
+      -47.78489851
+    ],
+    [
+      -15.86620092,
+      -47.7827407
+    ],
+    [
+      -15.86529788,
+      -47.78273187000001
+    ],
+    [
+      -15.86540961,
+      -47.78492143
+    ]
+  ],
+  "vertices": [
+    {
+      "name": "M-01",
+      "lat": -15.86529788,
+      "lng": -47.78273187000001,
+      "description": "Vértice: M-01 | Para: M-02 | Azimute: 179°47'00\" | Distância: 100.0 m | Este (UTM): 201972.157 m | Norte (UTM): 8243984.894 m | Latitude: -15.86529788° | Longitude: -47.78273187°",
+      "rawDescription": "<b>Vértice:</b> M-01<br/><b>Para:</b> M-02<br/><b>Azimute:</b> 179°47'00\"<br/><b>Distância:</b> 100.0 m<br/><b>Este (UTM):</b> 201972.157 m<br/><b>Norte (UTM):</b> 8243984.894 m<br/><b>Latitude:</b> -15.86529788°<br/><b>Longitude:</b> -47.78273187°"
+    },
+    {
+      "name": "M-02",
+      "lat": -15.86620092,
+      "lng": -47.7827407,
+      "description": "Vértice: M-02 | Para: M-03 | Azimute: 264°42'10\" | Distância: 232.0 m | Este (UTM): 201972.535 m | Norte (UTM): 8243884.895 m | Latitude: -15.86620092° | Longitude: -47.78274070°",
+      "rawDescription": "<b>Vértice:</b> M-02<br/><b>Para:</b> M-03<br/><b>Azimute:</b> 264°42'10\"<br/><b>Distância:</b> 232.0 m<br/><b>Este (UTM):</b> 201972.535 m<br/><b>Norte (UTM):</b> 8243884.895 m<br/><b>Latitude:</b> -15.86620092°<br/><b>Longitude:</b> -47.78274070°"
+    },
+    {
+      "name": "M-03",
+      "lat": -15.86636657,
+      "lng": -47.78489851,
+      "description": "Vértice: M-03 | Para: P-01 | Azimute: 12°24'07\" | Distância: 3.87 m | Este (UTM): 201741.526 m | Norte (UTM): 8243863.476 m | Latitude: -15.86636657° | Longitude: -47.78489851°",
+      "rawDescription": "<b>Vértice:</b> M-03<br/><b>Para:</b> P-01<br/><b>Azimute:</b> 12°24'07\"<br/><b>Distância:</b> 3.87 m<br/><b>Este (UTM):</b> 201741.526 m<br/><b>Norte (UTM):</b> 8243863.476 m<br/><b>Latitude:</b> -15.86636657°<br/><b>Longitude:</b> -47.78489851°"
+    },
+    {
+      "name": "P-01",
+      "lat": -15.86633261,
+      "lng": -47.78489033,
+      "description": "Vértice: P-01 | Para: P-02 | Azimute: 7°6'01\" | Distância: 4.73 m | Este (UTM): 201742.358 m | Norte (UTM): 8243867.260 m | Latitude: -15.86633261° | Longitude: -47.78489033°",
+      "rawDescription": "<b>Vértice:</b> P-01<br/><b>Para:</b> P-02<br/><b>Azimute:</b> 7°6'01\"<br/><b>Distância:</b> 4.73 m<br/><b>Este (UTM):</b> 201742.358 m<br/><b>Norte (UTM):</b> 8243867.260 m<br/><b>Latitude:</b> -15.86633261°<br/><b>Longitude:</b> -47.78489033°"
+    },
+    {
+      "name": "P-02",
+      "lat": -15.86629034,
+      "lng": -47.78488432,
+      "description": "Vértice: P-02 | Para: P-03 | Azimute: 355°41'22\" | Distância: 3.81 m | Este (UTM): 201742.942 m | Norte (UTM): 8243871.951 m | Latitude: -15.86629034° | Longitude: -47.78488432°",
+      "rawDescription": "<b>Vértice:</b> P-02<br/><b>Para:</b> P-03<br/><b>Azimute:</b> 355°41'22\"<br/><b>Distância:</b> 3.81 m<br/><b>Este (UTM):</b> 201742.942 m<br/><b>Norte (UTM):</b> 8243871.951 m<br/><b>Latitude:</b> -15.86629034°<br/><b>Longitude:</b> -47.78488432°"
+    },
+    {
+      "name": "P-03",
+      "lat": -15.86625593,
+      "lng": -47.78488653,
+      "description": "Vértice: P-03 | Para: P-04 | Azimute: 343°5'38\" | Distância: 4.59 m | Este (UTM): 201742.655 m | Norte (UTM): 8243875.755 m | Latitude: -15.86625593° | Longitude: -47.78488653°",
+      "rawDescription": "<b>Vértice:</b> P-03<br/><b>Para:</b> P-04<br/><b>Azimute:</b> 343°5'38\"<br/><b>Distância:</b> 4.59 m<br/><b>Este (UTM):</b> 201742.655 m<br/><b>Norte (UTM):</b> 8243875.755 m<br/><b>Latitude:</b> -15.86625593°<br/><b>Longitude:</b> -47.78488653°"
+    },
+    {
+      "name": "P-04",
+      "lat": -15.86621614,
+      "lng": -47.78489843,
+      "description": "Vértice: P-04 | Para: P-05 | Azimute: 339°28'39\" | Distância: 5.64 m | Este (UTM): 201741.322 m | Norte (UTM): 8243880.143 m | Latitude: -15.86621614° | Longitude: -47.78489843°",
+      "rawDescription": "<b>Vértice:</b> P-04<br/><b>Para:</b> P-05<br/><b>Azimute:</b> 339°28'39\"<br/><b>Distância:</b> 5.64 m<br/><b>Este (UTM):</b> 201741.322 m<br/><b>Norte (UTM):</b> 8243880.143 m<br/><b>Latitude:</b> -15.86621614°<br/><b>Longitude:</b> -47.78489843°"
+    },
+    {
+      "name": "P-05",
+      "lat": -15.86616823,
+      "lng": -47.78491624,
+      "description": "Vértice: P-05 | Para: P-06 | Azimute: 340°38'35\" | Distância: 3.75 m | Este (UTM): 201739.345 m | Norte (UTM): 8243885.422 m | Latitude: -15.86616823° | Longitude: -47.78491624°",
+      "rawDescription": "<b>Vértice:</b> P-05<br/><b>Para:</b> P-06<br/><b>Azimute:</b> 340°38'35\"<br/><b>Distância:</b> 3.75 m<br/><b>Este (UTM):</b> 201739.345 m<br/><b>Norte (UTM):</b> 8243885.422 m<br/><b>Latitude:</b> -15.86616823°<br/><b>Longitude:</b> -47.78491624°"
+    },
+    {
+      "name": "P-06",
+      "lat": -15.86613614,
+      "lng": -47.78492734,
+      "description": "Vértice: P-06 | Para: P-07 | Azimute: 341°44'26\" | Distância: 7.53 m | Este (UTM): 201738.103 m | Norte (UTM): 8243888.960 m | Latitude: -15.86613614° | Longitude: -47.78492734°",
+      "rawDescription": "<b>Vértice:</b> P-06<br/><b>Para:</b> P-07<br/><b>Azimute:</b> 341°44'26\"<br/><b>Distância:</b> 7.53 m<br/><b>Este (UTM):</b> 201738.103 m<br/><b>Norte (UTM):</b> 8243888.960 m<br/><b>Latitude:</b> -15.86613614°<br/><b>Longitude:</b> -47.78492734°"
+    },
+    {
+      "name": "P-07",
+      "lat": -15.8660713,
+      "lng": -47.7849484,
+      "description": "Vértice: P-07 | Para: P-08 | Azimute: 343°38'12\" | Distância: 3.16 m | Este (UTM): 201735.744 m | Norte (UTM): 8243896.108 m | Latitude: -15.86607130° | Longitude: -47.78494840°",
+      "rawDescription": "<b>Vértice:</b> P-07<br/><b>Para:</b> P-08<br/><b>Azimute:</b> 343°38'12\"<br/><b>Distância:</b> 3.16 m<br/><b>Este (UTM):</b> 201735.744 m<br/><b>Norte (UTM):</b> 8243896.108 m<br/><b>Latitude:</b> -15.86607130°<br/><b>Longitude:</b> -47.78494840°"
+    },
+    {
+      "name": "P-08",
+      "lat": -15.86604374,
+      "lng": -47.7849564,
+      "description": "Vértice: P-08 | Para: P-09 | Azimute: 353°2'58\" | Distância: 3.38 m | Este (UTM): 201734.853 m | Norte (UTM): 8243899.145 m | Latitude: -15.86604374° | Longitude: -47.78495640°",
+      "rawDescription": "<b>Vértice:</b> P-08<br/><b>Para:</b> P-09<br/><b>Azimute:</b> 353°2'58\"<br/><b>Distância:</b> 3.38 m<br/><b>Este (UTM):</b> 201734.853 m<br/><b>Norte (UTM):</b> 8243899.145 m<br/><b>Latitude:</b> -15.86604374°<br/><b>Longitude:</b> -47.78495640°"
+    },
+    {
+      "name": "P-09",
+      "lat": -15.86601332,
+      "lng": -47.78495981999999,
+      "description": "Vértice: P-09 | Para: P-010 | Azimute: 0°36'24\" | Distância: 2.84 m | Este (UTM): 201734.443 m | Norte (UTM): 8243902.505 m | Latitude: -15.86601332° | Longitude: -47.78495982°",
+      "rawDescription": "<b>Vértice:</b> P-09<br/><b>Para:</b> P-010<br/><b>Azimute:</b> 0°36'24\"<br/><b>Distância:</b> 2.84 m<br/><b>Este (UTM):</b> 201734.443 m<br/><b>Norte (UTM):</b> 8243902.505 m<br/><b>Latitude:</b> -15.86601332°<br/><b>Longitude:</b> -47.78495982°"
+    },
+    {
+      "name": "P-010",
+      "lat": -15.8659877,
+      "lng": -47.78495914,
+      "description": "Vértice: P-010 | Para: P-011 | Azimute: 4°16'55\" | Distância: 5.70 m | Este (UTM): 201734.473 m | Norte (UTM): 8243905.340 m | Latitude: -15.86598770° | Longitude: -47.78495914°",
+      "rawDescription": "<b>Vértice:</b> P-010<br/><b>Para:</b> P-011<br/><b>Azimute:</b> 4°16'55\"<br/><b>Distância:</b> 5.70 m<br/><b>Este (UTM):</b> 201734.473 m<br/><b>Norte (UTM):</b> 8243905.340 m<br/><b>Latitude:</b> -15.86598770°<br/><b>Longitude:</b> -47.78495914°"
+    },
+    {
+      "name": "P-011",
+      "lat": -15.86593652,
+      "lng": -47.78495451000001,
+      "description": "Vértice: P-011 | Para: P-012 | Azimute: 3°6'02\" | Distância: 5.64 m | Este (UTM): 201734.898 m | Norte (UTM): 8243911.020 m | Latitude: -15.86593652° | Longitude: -47.78495451°",
+      "rawDescription": "<b>Vértice:</b> P-011<br/><b>Para:</b> P-012<br/><b>Azimute:</b> 3°6'02\"<br/><b>Distância:</b> 5.64 m<br/><b>Este (UTM):</b> 201734.898 m<br/><b>Norte (UTM):</b> 8243911.020 m<br/><b>Latitude:</b> -15.86593652°<br/><b>Longitude:</b> -47.78495451°"
+    },
+    {
+      "name": "P-012",
+      "lat": -15.86588574,
+      "lng": -47.78495093999999,
+      "description": "Vértice: P-012 | Para: P-013 | Azimute: 358°31'54\" | Distância: 4.34 m | Este (UTM): 201735.203 m | Norte (UTM): 8243916.648 m | Latitude: -15.86588574° | Longitude: -47.78495094°",
+      "rawDescription": "<b>Vértice:</b> P-012<br/><b>Para:</b> P-013<br/><b>Azimute:</b> 358°31'54\"<br/><b>Distância:</b> 4.34 m<br/><b>Este (UTM):</b> 201735.203 m<br/><b>Norte (UTM):</b> 8243916.648 m<br/><b>Latitude:</b> -15.86588574°<br/><b>Longitude:</b> -47.78495094°"
+    },
+    {
+      "name": "P-013",
+      "lat": -15.86584662,
+      "lng": -47.78495143,
+      "description": "Vértice: P-013 | Para: P-014 | Azimute: 354°1'31\" | Distância: 8.81 m | Este (UTM): 201735.092 m | Norte (UTM): 8243920.982 m | Latitude: -15.86584662° | Longitude: -47.78495143°",
+      "rawDescription": "<b>Vértice:</b> P-013<br/><b>Para:</b> P-014<br/><b>Azimute:</b> 354°1'31\"<br/><b>Distância:</b> 8.81 m<br/><b>Este (UTM):</b> 201735.092 m<br/><b>Norte (UTM):</b> 8243920.982 m<br/><b>Latitude:</b> -15.86584662°<br/><b>Longitude:</b> -47.78495143°"
+    },
+    {
+      "name": "P-014",
+      "lat": -15.86576743,
+      "lng": -47.78495892,
+      "description": "Vértice: P-014 | Para: P-015 | Azimute: 352°11'15\" | Distância: 8.60 m | Este (UTM): 201734.175 m | Norte (UTM): 8243929.742 m | Latitude: -15.86576743° | Longitude: -47.78495892°",
+      "rawDescription": "<b>Vértice:</b> P-014<br/><b>Para:</b> P-015<br/><b>Azimute:</b> 352°11'15\"<br/><b>Distância:</b> 8.60 m<br/><b>Este (UTM):</b> 201734.175 m<br/><b>Norte (UTM):</b> 8243929.742 m<br/><b>Latitude:</b> -15.86576743°<br/><b>Longitude:</b> -47.78495892°"
+    },
+    {
+      "name": "P-015",
+      "lat": -15.86569029,
+      "lng": -47.78496874,
+      "description": "Vértice: P-015 | Para: P-016 | Azimute: 359°25'30\" | Distância: 13.96 m | Este (UTM): 201733.006 m | Norte (UTM): 8243938.266 m | Latitude: -15.86569029° | Longitude: -47.78496874°",
+      "rawDescription": "<b>Vértice:</b> P-015<br/><b>Para:</b> P-016<br/><b>Azimute:</b> 359°25'30\"<br/><b>Distância:</b> 13.96 m<br/><b>Este (UTM):</b> 201733.006 m<br/><b>Norte (UTM):</b> 8243938.266 m<br/><b>Latitude:</b> -15.86569029°<br/><b>Longitude:</b> -47.78496874°"
+    },
+    {
+      "name": "P-016",
+      "lat": -15.86556421,
+      "lng": -47.78496831,
+      "description": "Vértice: P-016 | Para: P-017 | Azimute: 6°6'34\" | Distância: 5.86 m | Este (UTM): 201732.866 m | Norte (UTM): 8243952.222 m | Latitude: -15.86556421° | Longitude: -47.78496831°",
+      "rawDescription": "<b>Vértice:</b> P-016<br/><b>Para:</b> P-017<br/><b>Azimute:</b> 6°6'34\"<br/><b>Distância:</b> 5.86 m<br/><b>Este (UTM):</b> 201732.866 m<br/><b>Norte (UTM):</b> 8243952.222 m<br/><b>Latitude:</b> -15.86556421°<br/><b>Longitude:</b> -47.78496831°"
+    },
+    {
+      "name": "P-017",
+      "lat": -15.86551174,
+      "lng": -47.78496184,
+      "description": "Vértice: P-017 | Para: M-04 | Azimute: 20°10'00\" | Distância: 12.10 m | Este (UTM): 201733.489 m | Norte (UTM): 8243958.047 m | Latitude: -15.86551174° | Longitude: -47.78496184°",
+      "rawDescription": "<b>Vértice:</b> P-017<br/><b>Para:</b> M-04<br/><b>Azimute:</b> 20°10'00\"<br/><b>Distância:</b> 12.10 m<br/><b>Este (UTM):</b> 201733.489 m<br/><b>Norte (UTM):</b> 8243958.047 m<br/><b>Latitude:</b> -15.86551174°<br/><b>Longitude:</b> -47.78496184°"
+    },
+    {
+      "name": "M-04",
+      "lat": -15.86540961,
+      "lng": -47.78492143,
+      "description": "Vértice: M-04 | Para: M-01 | Azimute: 86°13'16\" | Distância: 235.01 m | Este (UTM): 201737.661 m | Norte (UTM): 8243969.406 m | Latitude: -15.86540961° | Longitude: -47.78492143°",
+      "rawDescription": "<b>Vértice:</b> M-04<br/><b>Para:</b> M-01<br/><b>Azimute:</b> 86°13'16\"<br/><b>Distância:</b> 235.01 m<br/><b>Este (UTM):</b> 201737.661 m<br/><b>Norte (UTM):</b> 8243969.406 m<br/><b>Latitude:</b> -15.86540961°<br/><b>Longitude:</b> -47.78492143°"
+    }
+  ]
+}

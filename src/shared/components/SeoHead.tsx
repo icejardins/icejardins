@@ -47,7 +47,11 @@ const BILINGUAL_PAIRS: Record<string, { pt: string; en: string }> = {
   "/contribuir/": { pt: "/contribuir/", en: "/en/give/" },
   "/en/give/": { pt: "/contribuir/", en: "/en/give/" },
   "/fe/": { pt: "/fe/", en: "/en/faith/" },
-  "/en/faith/": { pt: "/fe/", en: "/en/faith/" }
+  "/en/faith/": { pt: "/fe/", en: "/en/faith/" },
+  "/contribuir/edificacao/": { pt: "/contribuir/edificacao/", en: "/en/give/building-project/" },
+  "/en/give/building-project/": { pt: "/contribuir/edificacao/", en: "/en/give/building-project/" },
+  "/projetos/": { pt: "/contribuir/edificacao/", en: "/en/give/building-project/" },
+  "/en/projects/": { pt: "/contribuir/edificacao/", en: "/en/give/building-project/" }
 };
 
 function buildChurchSchema(baseUrl: string, isEnglish = false) {

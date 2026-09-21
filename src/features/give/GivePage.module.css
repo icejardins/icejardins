@@ -51,66 +51,215 @@
   padding: 4rem 0 5.5rem;
 }
 
-/* Vision / Project Highlight Card */
-.projectCard {
-  background: var(--secondary-background-color);
-  border-radius: 1.2rem;
-  border: 1px solid color-mix(in srgb, var(--brand-500) 25%, transparent);
-  border-left: 6px solid var(--brand-500);
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.06);
-  padding: 2.2rem;
+/* Spotlight Building Subpage Card */
+.buildingSpotlightCard {
+  background: linear-gradient(135deg, #0b3032 0%, #145f63 100%);
+  color: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2.5rem;
   margin-bottom: 3.5rem;
+  box-shadow: 0 16px 40px rgba(11, 48, 50, 0.16);
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.projectBadge {
-  background: var(--brand-800);
-  color: #ffffff;
+.buildingSpotlightCard::after {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.spotlightBadge {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffd700;
+  border: 1px solid rgba(255, 215, 0, 0.35);
   font-size: 0.8rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  padding: 0.35rem 0.9rem;
+  padding: 0.4rem 1rem;
   border-radius: 999px;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   margin-bottom: 1rem;
 }
 
-.projectCard h2 {
-  font-size: clamp(1.4rem, 3vw, 1.9rem);
+.spotlightTitle {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
   font-weight: 800;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
 }
 
-.projectLead {
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--text-color);
-  line-height: 1.7;
-  margin-bottom: 0.9rem;
-}
-
-.projectBody {
-  color: var(--secondary-text-color);
-  line-height: 1.75;
-  margin-bottom: 1.2rem;
-}
-
-.projectHighlight {
-  background: color-mix(in srgb, var(--brand-100) 50%, var(--background-color));
-  border-radius: 0.8rem;
-  padding: 1.1rem 1.3rem;
-  color: var(--text-color);
-  border-left: 4px solid var(--brand-600);
-  margin-top: 1.5rem;
+.spotlightSubtitle {
   font-size: 1.05rem;
-  line-height: 1.6;
+  color: #a7e4e7;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
 }
 
-:global(.dark) .projectHighlight {
-  background: color-mix(in srgb, var(--brand-950) 40%, var(--secondary-background-color));
+.spotlightStatusText {
+  font-size: 0.98rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
+}
+
+.spotlightBulletsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 576px) {
+  .spotlightBulletsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.spotlightBullet {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.65rem 0.9rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.spotlightBulletLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #a7e4e7;
+  font-weight: 600;
+}
+
+.spotlightBulletValue {
+  font-size: 0.95rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.spotlightActions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.btnSpotlightPrimary {
+  background: #ffd700;
+  color: #0b3032;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.btnSpotlightPrimary:hover {
+  background: #ffea75;
+  color: #082426;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.btnSpotlightOutline {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.btnSpotlightOutline:hover {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.spotlightVisualWrapper {
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.spotlightVisualWrapper a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.spotlightImage {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.spotlightVisualWrapper:hover .spotlightImage {
+  transform: scale(1.04);
+}
+
+.spotlightImageOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(11, 48, 50, 0.95) 0%, rgba(11, 48, 50, 0.4) 70%, transparent 100%);
+  color: #ffd700;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 1.25rem 1rem 0.75rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.pixDesignationNotice {
+  background: color-mix(in srgb, var(--brand-100) 70%, var(--background-color));
+  border-left: 4px solid var(--primary-color);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  color: var(--text-color);
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+:global(.dark) .pixDesignationNotice {
+  background: color-mix(in srgb, var(--brand-950) 50%, var(--secondary-background-color));
 }
 
 /* Section Header */
@@ -423,11 +572,6 @@
 /* Dark Mode Overrides */
 :global(.dark) .hero {
   background: linear-gradient(135deg, #132729, #0a1718);
-}
-
-:global(.dark) .projectBadge {
-  background: #1b2f31;
-  color: #8fcbce;
 }
 
 :global(.dark) .cardBadge {

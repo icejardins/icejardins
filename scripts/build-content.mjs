@@ -471,10 +471,14 @@ async function main() {
     "/",
     "/en/",
     "/en/give/",
+    "/en/give/building-project/",
     "/en/faith/",
+    "/en/projects/",
+    "/projetos/",
     "/posts/",
     "/recursos/",
     "/contribuir/",
+    "/contribuir/edificacao/",
     "/obrigado-guia/",
     "/descadastro/"
   ]);
@@ -534,7 +538,9 @@ async function main() {
     "/contribuir/": { pt: "/contribuir/", en: "/en/give/" },
     "/en/give/": { pt: "/contribuir/", en: "/en/give/" },
     "/fe/": { pt: "/fe/", en: "/en/faith/" },
-    "/en/faith/": { pt: "/fe/", en: "/en/faith/" }
+    "/en/faith/": { pt: "/fe/", en: "/en/faith/" },
+    "/projetos/": { pt: "/projetos/", en: "/en/projects/" },
+    "/en/projects/": { pt: "/projetos/", en: "/en/projects/" }
   };
 
   const sitemapEntries = sortedRoutes
@@ -553,10 +559,12 @@ async function main() {
       } else if (
         cleanedRoute === "/visita/" ||
         cleanedRoute === "/fe/" ||
+        cleanedRoute === "/projetos/" ||
         cleanedRoute === "/contribuir/" ||
         cleanedRoute === "/en/" ||
         cleanedRoute === "/en/give/" ||
         cleanedRoute === "/en/faith/" ||
+        cleanedRoute === "/en/projects/" ||
         cleanedRoute === "/recursos/" ||
         cleanedRoute.startsWith("/recursos/")
       ) {
