@@ -3,7 +3,11 @@ import { SeoHead } from "@/shared/components/SeoHead";
 import { Icon } from "@/shared/components/Icon";
 import { giveContent } from "@/content/data/giveContent";
 import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
-import { trackReliantDonationConversion, trackWhatsAppConversion } from "@/shared/utils/analytics";
+import {
+  trackPixDonationConversion,
+  trackReliantDonationConversion,
+  trackWhatsAppConversion
+} from "@/shared/utils/analytics";
 import styles from "./GivePage.module.css";
 
 function CopyButton({
@@ -55,6 +59,9 @@ export default function GivePage() {
       setTimeout(() => {
         setCopiedId((current) => (current === id ? null : current));
       }, 2500);
+      if (id === "pix-key") {
+        trackPixDonationConversion("give_page_copy_pix");
+      }
     } catch {
       // Ignore copy error
     }
@@ -115,6 +122,7 @@ export default function GivePage() {
                     href="/images/doacoes/qrcode-pix.png"
                     download="qrcode-pix-icejardins.png"
                     className={styles.downloadQrBtn}
+                    onClick={() => trackPixDonationConversion("give_page_download_qr")}
                   >
                     <Icon name="download" />
                     Baixar imagem do QR Code

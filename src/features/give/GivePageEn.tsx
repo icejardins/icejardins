@@ -2,7 +2,11 @@ import { useState } from "react";
 import { SeoHead } from "@/shared/components/SeoHead";
 import { Icon } from "@/shared/components/Icon";
 import { giveContentEn } from "@/content/data/giveContentEn";
-import { trackReliantDonationConversion, trackWhatsAppConversion } from "@/shared/utils/analytics";
+import {
+  trackPixDonationConversion,
+  trackReliantDonationConversion,
+  trackWhatsAppConversion
+} from "@/shared/utils/analytics";
 import styles from "./GivePage.module.css";
 
 function CopyButton({
@@ -53,6 +57,9 @@ export default function GivePageEn() {
       setTimeout(() => {
         setCopiedId((current) => (current === id ? null : current));
       }, 2500);
+      if (id === "pix-key") {
+        trackPixDonationConversion("give_en_copy_pix_key");
+      }
     } catch {
       // Ignore copy error
     }
@@ -201,6 +208,7 @@ export default function GivePageEn() {
                     href="/images/doacoes/qrcode-pix.png"
                     download="qrcode-pix-icejardins.png"
                     className={styles.downloadQrBtn}
+                    onClick={() => trackPixDonationConversion("give_en_download_qr")}
                   >
                     <Icon name="download" />
                     Download QR Code Image

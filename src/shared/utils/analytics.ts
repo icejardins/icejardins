@@ -13,6 +13,7 @@ export const ADS_CONVERSION_EBOOK = "AW-672119654/o57hCLe8nfEcEOb2vsAC";
 export const ADS_CONVERSION_RELIANT = "AW-672119654/-LRrCKSqtPQcEOb2vsAC";
 export const ADS_CONVERSION_WHATSAPP = "AW-672119654/dO8MCKeqtPQcEOb2vsAC";
 export const ADS_CONVERSION_PAGEVIEW = "AW-672119654/J5EqCJCKyOsZEOb2vsAC";
+export const ADS_CONVERSION_PIX = "AW-672119654/Aj75CM7b1IMdEOb2vsAC";
 
 export const DEFAULT_ADS_CONVERSION_SEND_TO = ADS_CONVERSION_EBOOK;
 
@@ -105,3 +106,20 @@ export function trackContactConversion(origin?: string) {
  * Alias semântico para contato via WhatsApp
  */
 export const trackWhatsAppConversion = trackContactConversion;
+
+/**
+ * Rastreia conversão de doação PIX iniciada no Google Ads
+ * Ação: Doação PIX Iniciada - ICE Jardins (ID: 7792307662, BEGIN_CHECKOUT)
+ * Identificador de Envio: AW-672119654/Aj75CM7b1IMdEOb2vsAC
+ * Valor de Referência: R$ 50,00 BRL
+ */
+export function trackPixDonationConversion(origin?: string) {
+  const siteConfig = getSiteConfig();
+  const sendTo = siteConfig.googleAdsConversions?.pixDonation || ADS_CONVERSION_PIX;
+  trackAdsConversion({
+    sendTo,
+    value: 50.0,
+    currency: "BRL",
+    transaction_origin: origin
+  });
+}

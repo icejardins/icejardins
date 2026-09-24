@@ -5,7 +5,7 @@ import { Icon } from "@/shared/components/Icon";
 import { projectsContent } from "@/content/data/projectsContent";
 import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
 import { TerrainMap } from "./components/TerrainMap";
-import { trackContactConversion } from "@/shared/utils/analytics";
+import { trackContactConversion, trackPixDonationConversion } from "@/shared/utils/analytics";
 import styles from "./ProjectsPage.module.css";
 
 export default function ProjectsPage() {
@@ -29,6 +29,7 @@ export default function ProjectsPage() {
       }
       setCopiedPix(true);
       setTimeout(() => setCopiedPix(false), 2500);
+      trackPixDonationConversion("edificacao_copy_pix");
     } catch {
       // Ignore copy error
     }

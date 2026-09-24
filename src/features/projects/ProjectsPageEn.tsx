@@ -4,7 +4,11 @@ import { SeoHead } from "@/shared/components/SeoHead";
 import { Icon } from "@/shared/components/Icon";
 import { projectsContentEn } from "@/content/data/projectsContentEn";
 import { TerrainMap } from "./components/TerrainMap";
-import { trackContactConversion, trackReliantDonationConversion } from "@/shared/utils/analytics";
+import {
+  trackContactConversion,
+  trackPixDonationConversion,
+  trackReliantDonationConversion
+} from "@/shared/utils/analytics";
 import styles from "./ProjectsPage.module.css";
 
 export default function ProjectsPageEn() {
@@ -27,6 +31,7 @@ export default function ProjectsPageEn() {
       }
       setCopiedPix(true);
       setTimeout(() => setCopiedPix(false), 2500);
+      trackPixDonationConversion("projects_en_copy_pix");
     } catch {
       // Ignore copy error
     }

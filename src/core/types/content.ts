@@ -27,6 +27,7 @@ export type SiteConfig = {
     reliantDonation?: string;
     whatsAppContact?: string;
     pageView?: string;
+    pixDonation?: string;
   };
   menu: MenuItem[];
   navbar: {
