@@ -565,5 +565,19 @@
     "prompt": "Classical biblical fine art oil painting, dramatic chiaroscuro lighting, sacred atmosphere, representing Tito 3:1-8 - Novo Nascimento para uma Nova Vida: Fomos salvos não por obras de justiça que tivéssemos feito, mas pela misericórdia e regeneração do Espírito Santo.. Reverent Christian art, rich color palette, cinematic composition, museum quality.",
     "target_webp": "/images/posts/tito-3-1-8-novo-nascimento-para-uma-nova-vida.webp",
     "has_custom_image": false
+  },
+  "genesis-2-1-3-o-descanso-que-ainda-nos-espera": {
+    "title": "Gênesis 2:1-3 - O Descanso que Ainda nos Espera",
+    "subtitle": "Só descansamos verdadeiramente quando repousamos na obra que Deus completou em Cristo.",
+    "prompt": "Realistic photograph-style biblical scene representing Genesis 2:1-3, God's holy rest after completing the creation. A breathtaking, pristine panoramic Eden landscape at early golden morning light, serene and calm. Lush untouched paradise with crystal-clear calm waters reflecting soft golden sun rays breaking through gentle misty morning clouds, ancient fertile hills, majestic peaceful trees, complete peace and divine rest, tranquil Sabbath stillness. Ultra-realistic, cinematic lighting, national geographic photography style, 8k, serene atmosphere.",
+    "target_webp": "/images/posts/genesis-2-1-3-o-descanso-que-ainda-nos-espera.webp",
+    "has_custom_image": true
+  },
+  "genesis-2-4-25-a-vida-como-deus-a-planejou": {
+    "title": "Gênesis 2:4-25 - A Vida Como Deus a Planejou",
+    "subtitle": "A vida encontra plenitude quando recebemos de Deus nossa identidade, vocação e relacionamentos e os vivemos segundo sua vontade.",
+    "prompt": "Realistic photograph-style biblical scene representing Genesis 2:4-25, life as God designed it in the Garden of Eden. A lush, pristine paradise landscape with majestic ancient trees laden with fruit, vibrant flowering plants, a crystal-clear gentle river meandering through fertile verdant ground with golden morning sunlight filtering through the canopy, peaceful atmosphere of harmony, purpose, and divine provision. National Geographic landscape photography style, ultra-realistic, cinematic lighting, 8k resolution, serene natural beauty.",
+    "target_webp": "/images/posts/genesis-2-4-25-a-vida-como-deus-a-planejou.webp",
+    "has_custom_image": true
   }
 }
