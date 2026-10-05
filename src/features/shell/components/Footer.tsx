@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router";
 import { getSiteConfig } from "@/content/repositories/contentRepository";
 import { Icon } from "@/shared/components/Icon";
-import { trackWhatsAppConversion } from "@/shared/utils/analytics";
+import { trackContactConversion, trackWhatsAppConversion } from "@/shared/utils/analytics";
 import styles from "./Footer.module.css";
 
 export function Footer() {
@@ -100,6 +100,7 @@ export function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 className={styles.mapLink}
+                onClick={() => trackContactConversion("footer_maps_directions")}
               >
                 <Icon name="compass" />
                 {isEnglish ? "Open in Google Maps / Waze →" : "Abrir no Google Maps / Waze →"}

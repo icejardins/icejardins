@@ -28,6 +28,7 @@ export type SiteConfig = {
     whatsAppContact?: string;
     pageView?: string;
     pixDonation?: string;
+    siteEngagement?: string;
   };
   menu: MenuItem[];
   navbar: {

@@ -6,7 +6,7 @@ import { SeoHead } from "@/shared/components/SeoHead";
 import { formatDate } from "@/core/utils/formatDate";
 import { slugify } from "@/core/utils/slugify";
 import { Icon } from "@/shared/components/Icon";
-import { trackContactConversion } from "@/shared/utils/analytics";
+import { trackContactConversion, trackEngagementConversion } from "@/shared/utils/analytics";
 import styles from "./BlogPostPage.module.css";
 
 export default function BlogPostPage() {
@@ -16,6 +16,19 @@ export default function BlogPostPage() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const contentRef = useRef<HTMLDivElement>(null);
   const [loadedBodyHtml, setLoadedBodyHtml] = useState<string | null>(post?.bodyHtml || null);
+  const trackedEngagementRef = useRef(false);
+
+  useEffect(() => {
+    trackedEngagementRef.current = false;
+    const timer = setTimeout(() => {
+      if (!trackedEngagementRef.current) {
+        trackedEngagementRef.current = true;
+        trackEngagementConversion("sermon_read_60s");
+      }
+    }, 60000);
+
+    return () => clearTimeout(timer);
+  }, [slug]);
 
   useEffect(() => {
     if (post?.bodyHtml) {
@@ -44,6 +57,10 @@ export default function BlogPostPage() {
       const current = document.documentElement.scrollTop;
       const progress = total <= 0 ? 0 : Math.min(100, (current / total) * 100);
       setScrollProgress(progress);
+      if (progress >= 70 && !trackedEngagementRef.current) {
+        trackedEngagementRef.current = true;
+        trackEngagementConversion("sermon_scroll_70");
+      }
     }
 
     updateProgress();

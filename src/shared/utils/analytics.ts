@@ -14,6 +14,7 @@ export const ADS_CONVERSION_RELIANT = "AW-672119654/-LRrCKSqtPQcEOb2vsAC";
 export const ADS_CONVERSION_WHATSAPP = "AW-672119654/dO8MCKeqtPQcEOb2vsAC";
 export const ADS_CONVERSION_PAGEVIEW = "AW-672119654/J5EqCJCKyOsZEOb2vsAC";
 export const ADS_CONVERSION_PIX = "AW-672119654/Aj75CM7b1IMdEOb2vsAC";
+export const ADS_CONVERSION_ENGAGEMENT = "AW-672119654/-sJ8CMGGtZIdEOb2vsAC";
 
 export const DEFAULT_ADS_CONVERSION_SEND_TO = ADS_CONVERSION_EBOOK;
 
@@ -123,3 +124,19 @@ export function trackPixDonationConversion(origin?: string) {
     transaction_origin: origin
   });
 }
+
+/**
+ * Rastreia engajamento ativo no site (leitura prolongada >60s ou interação com vídeo de pregação)
+ * Ação: Engajamento no Site (>60s ou Vídeo) (ID: 7823246145, ENGAGEMENT)
+ */
+export function trackEngagementConversion(source?: string) {
+  const siteConfig = getSiteConfig();
+  const sendTo = siteConfig.googleAdsConversions?.siteEngagement || ADS_CONVERSION_ENGAGEMENT;
+  trackAdsConversion({
+    sendTo,
+    value: 1.0,
+    currency: "BRL",
+    engagement_source: source
+  });
+}
+
