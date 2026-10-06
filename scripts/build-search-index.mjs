@@ -94,6 +94,20 @@ async function main() {
       permalink: "/es/donar/"
     },
     {
+      title: "Plan Your Visit | ICE Jardins Church in Brasília",
+      description: "Visit ICE Jardins Church in Jardim Botânico, Brasília - DF. Sunday worship at 9:30 AM and Sunday School at 11:00 AM. Welcoming community for expats, diplomats, visitors, and families.",
+      content: "Plan your visit to ICE Jardins Church Jardim Botânico Brasília DF Brazil Sunday worship service 9:30 AM Sunday School 11:00 AM children ministry kids auditorium Colégio In-Nova fellowship coffee welcome address location.",
+      image: null,
+      permalink: "/en/visit/"
+    },
+    {
+      title: "Planifique su Visita | Iglesia ICE Jardins en Brasília",
+      description: "Visite la Iglesia Cristiana Evangélica Jardins en Jardim Botânico, Brasília - DF. Culto dominical a las 9:30 AM y Escuela Dominical a las 11:00 AM. Una comunidad acogedora para toda la familia.",
+      content: "Planifique su visita Iglesia Cristiana Evangélica Jardins Jardim Botânico Brasília DF Brasil culto dominical 9:30 AM Escuela Dominical 11:00 AM ministerio infantil niños auditorio Colégio In-Nova comunión café bienvenida dirección.",
+      image: null,
+      permalink: "/es/visita/"
+    },
+    {
       title: "Projeto do Templo: Sede Definitiva | ICE Jardins",
       description: "Conheça o projeto do templo sede da ICE Jardins na Fazenda Taboquinha (Gleba 01), Jardim Botânico - DF. Dados habitacionais, terreno sendo pago, mapa 3D no Google Earth e como contribuir.",
       content: "Construção do novo templo sede da Igreja Cristã Evangélica Jardins na Fazenda Taboquinha Gleba 01 Jardim Botânico DF. Terreno de 24.368 m2 adquirido e sendo pago parcelado. Dados habitacionais, população do Jardim Botânico, Tororó, Mangueiral e São Sebastião. Visualização no Google Earth em 3D, download do arquivo KML, fases da obra, templo, ministério infantil, estacionamento e contribuição via PIX.",

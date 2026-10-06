@@ -86,7 +86,10 @@ export function Footer() {
                 </div>
               </li>
             </ul>
-            <Link to="/visita/" className={styles.visitLink}>
+            <Link
+              to={isSpanish ? "/es/visita/" : isEnglish ? "/en/visit/" : "/visita/"}
+              className={styles.visitLink}
+            >
               {isSpanish ? "Planifique su visita →" : isEnglish ? "Plan your visit →" : "Planeje sua visita →"}
             </Link>
           </div>
@@ -144,7 +147,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/visita/">
+                <Link to={isSpanish ? "/es/visita/" : isEnglish ? "/en/visit/" : "/visita/"}>
                   {isSpanish ? "Visita" : isEnglish ? "Visit Us" : "Visita"}
                 </Link>
               </li>

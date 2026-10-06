@@ -475,6 +475,7 @@ async function main() {
     "/en/give/building-project/",
     "/en/sermons/",
     "/en/faith/",
+    "/en/visit/",
     "/en/projects/",
     "/es/",
     "/es/donar/",
@@ -482,6 +483,7 @@ async function main() {
     "/es/donar/proyecto-edificacion/",
     "/es/sermones/",
     "/es/fe/",
+    "/es/visita/",
     "/es/proyectos/",
     "/projetos/",
     "/posts/",
@@ -563,7 +565,10 @@ async function main() {
     "/es/proyectos/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" },
     "/posts/": { pt: "/posts/", en: "/en/sermons/", es: "/es/sermones/" },
     "/en/sermons/": { pt: "/posts/", en: "/en/sermons/", es: "/es/sermones/" },
-    "/es/sermones/": { pt: "/posts/", en: "/en/sermons/", es: "/es/sermones/" }
+    "/es/sermones/": { pt: "/posts/", en: "/en/sermons/", es: "/es/sermones/" },
+    "/visita/": { pt: "/visita/", en: "/en/visit/", es: "/es/visita/" },
+    "/en/visit/": { pt: "/visita/", en: "/en/visit/", es: "/es/visita/" },
+    "/es/visita/": { pt: "/visita/", en: "/en/visit/", es: "/es/visita/" }
   };
 
   const sitemapEntries = sortedRoutes
@@ -581,6 +586,8 @@ async function main() {
         priority = "1.0";
       } else if (
         cleanedRoute === "/visita/" ||
+        cleanedRoute === "/en/visit/" ||
+        cleanedRoute === "/es/visita/" ||
         cleanedRoute === "/fe/" ||
         cleanedRoute === "/projetos/" ||
         cleanedRoute === "/contribuir/" ||

@@ -8,6 +8,8 @@ const HomePage = lazy(() => import("@/features/home/HomePage"));
 const HomePageEn = lazy(() => import("@/features/home/HomePageEn"));
 const HomePageEs = lazy(() => import("@/features/home/HomePageEs"));
 const VisitPage = lazy(() => import("@/features/visit/VisitPage"));
+const VisitPageEn = lazy(() => import("@/features/visit/VisitPageEn"));
+const VisitPageEs = lazy(() => import("@/features/visit/VisitPageEs"));
 const FaithPage = lazy(() => import("@/features/faith/FaithPage"));
 const FaithPageEn = lazy(() => import("@/features/faith/FaithPageEn"));
 const FaithPageEs = lazy(() => import("@/features/faith/FaithPageEs"));
@@ -44,6 +46,7 @@ export function AppRoutes() {
           <Route path="give" element={<Navigate to="/en/give/" replace />} />
           <Route path="donar" element={<Navigate to="/es/donar/" replace />} />
           <Route path="faith" element={<Navigate to="/en/faith/" replace />} />
+          <Route path="visit" element={<Navigate to="/en/visit/" replace />} />
           <Route path="recursos/:slug" element={<ResourcePage />} />
           <Route path="recursos/:slug/obrigado" element={<ResourceThankYouPage />} />
           <Route path="obrigado-guia" element={<ResourceThankYouPage defaultSlug="quando-a-cabeca-nao-para" />} />
@@ -59,6 +62,9 @@ export function AppRoutes() {
             <Route path="en/give/projects" element={<Navigate to="/en/give/temple-project/" replace />} />
             <Route path="en/faith" element={<FaithPageEn />} />
             <Route path="en/fe" element={<Navigate to="/en/faith/" replace />} />
+            <Route path="en/visit" element={<VisitPageEn />} />
+            <Route path="en/visita" element={<Navigate to="/en/visit/" replace />} />
+            <Route path="en/visitar" element={<Navigate to="/en/visit/" replace />} />
             <Route path="en/projects" element={<Navigate to="/en/give/temple-project/" replace />} />
             <Route path="en/projetos" element={<Navigate to="/en/give/temple-project/" replace />} />
             <Route path="en/contribuir" element={<Navigate to="/en/give/" replace />} />
@@ -75,12 +81,16 @@ export function AppRoutes() {
             <Route path="es/proyectos" element={<Navigate to="/es/donar/proyecto-templo/" replace />} />
             <Route path="es/fe" element={<FaithPageEs />} />
             <Route path="es/faith" element={<Navigate to="/es/fe/" replace />} />
+            <Route path="es/visita" element={<VisitPageEs />} />
+            <Route path="es/visit" element={<Navigate to="/es/visita/" replace />} />
+            <Route path="es/visitar" element={<Navigate to="/es/visita/" replace />} />
             <Route path="es/contribuir" element={<Navigate to="/es/donar/" replace />} />
             <Route path="es/contribua" element={<Navigate to="/es/donar/" replace />} />
             <Route path="es/give" element={<Navigate to="/es/donar/" replace />} />
             <Route path="es/ofrendar" element={<Navigate to="/es/donar/" replace />} />
             <Route path="es/dar" element={<Navigate to="/es/donar/" replace />} />
             <Route path="visita" element={<VisitPage />} />
+            <Route path="visitar" element={<Navigate to="/visita/" replace />} />
             <Route path="fe" element={<FaithPage />} />
             <Route path="projetos" element={<Navigate to="/contribuir/projeto-templo/" replace />} />
             <Route path="projetos/construcao-do-templo" element={<Navigate to="/contribuir/projeto-templo/" replace />} />

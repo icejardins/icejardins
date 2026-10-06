@@ -62,7 +62,10 @@ const MULTILINGUAL_PAIRS: Record<string, { pt: string; en: string; es: string }>
   "/es/proyectos/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" },
   "/posts/": { pt: "/posts/", en: "/en/sermons/", es: "/es/sermones/" },
   "/en/sermons/": { pt: "/posts/", en: "/en/sermons/", es: "/es/sermones/" },
-  "/es/sermones/": { pt: "/posts/", en: "/en/sermons/", es: "/es/sermones/" }
+  "/es/sermones/": { pt: "/posts/", en: "/en/sermons/", es: "/es/sermones/" },
+  "/visita/": { pt: "/visita/", en: "/en/visit/", es: "/es/visita/" },
+  "/en/visit/": { pt: "/visita/", en: "/en/visit/", es: "/es/visita/" },
+  "/es/visita/": { pt: "/visita/", en: "/en/visit/", es: "/es/visita/" }
 };
 
 function buildChurchSchema(baseUrl: string, lang: "pt" | "en" | "es" = "pt") {

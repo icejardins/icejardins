@@ -49,7 +49,7 @@ export function Header() {
         { name: "Lo que creemos", url: "/es/fe/" },
         { name: "Proyecto del Templo", url: "/es/donar/proyecto-templo/" },
         { name: "Sermones", url: "/es/sermones/" },
-        { name: "Visita", url: "/visita/" },
+        { name: "Visita", url: "/es/visita/" },
         { name: "Donar", url: "/es/donar/" }
       ]
     : isEnglish
@@ -59,7 +59,7 @@ export function Header() {
         { name: "What We Believe", url: "/en/faith/" },
         { name: "Temple Project", url: "/en/give/temple-project/" },
         { name: "Sermons", url: "/en/sermons/" },
-        { name: "Visit", url: "/visita/" },
+        { name: "Visit", url: "/en/visit/" },
         { name: "Give", url: "/en/give/" }
       ]
     : site.menu;
@@ -118,6 +118,12 @@ export function Header() {
         location.pathname.startsWith("/en/faith")
       ) {
         navigate("/es/fe/");
+      } else if (
+        location.pathname.startsWith("/visita") ||
+        location.pathname.startsWith("/visitar") ||
+        location.pathname.startsWith("/en/visit")
+      ) {
+        navigate("/es/visita/");
       } else {
         navigate("/es/");
       }
@@ -143,6 +149,12 @@ export function Header() {
         location.pathname.startsWith("/es/fe")
       ) {
         navigate("/en/faith/");
+      } else if (
+        location.pathname.startsWith("/visita") ||
+        location.pathname.startsWith("/visitar") ||
+        location.pathname.startsWith("/es/visita")
+      ) {
+        navigate("/en/visit/");
       } else {
         navigate("/en/");
       }
@@ -167,6 +179,12 @@ export function Header() {
         location.pathname.startsWith("/es/fe")
       ) {
         navigate("/fe/");
+      } else if (
+        location.pathname.startsWith("/en/visit") ||
+        location.pathname.startsWith("/es/visita") ||
+        location.pathname.startsWith("/visitar")
+      ) {
+        navigate("/visita/");
       } else {
         navigate("/");
       }

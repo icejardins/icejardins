@@ -275,6 +275,11 @@ export function getLocalizedPermalink(permalink: string, lang: "pt" | "en" | "es
     return lang === "es" ? "/es/fe/" : "/en/faith/";
   }
 
+  // Visit
+  if (permalink === "/visita/" || permalink === "/visitar/") {
+    return lang === "es" ? "/es/visita/" : "/en/visit/";
+  }
+
   // Taxonomies
   if (permalink.startsWith("/categorias/") || permalink.startsWith("/tags/")) {
     return `${permalink}?lang=${lang}`;

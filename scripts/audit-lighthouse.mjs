@@ -25,6 +25,8 @@ const ROUTES = [
   "/es/donar/proyecto-templo/",
   "/en/sermons/",
   "/es/sermones/",
+  "/en/visit/",
+  "/es/visita/",
   "/privacy/",
   "/terms/"
 ];
