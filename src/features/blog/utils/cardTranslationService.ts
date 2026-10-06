@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react";
+import sermonCardsTranslationsRaw from "@/content/data/sermonCardsTranslations.json";
 
 export interface TranslatedCardData {
   title: string;
   summary: string;
 }
+
+const staticTranslations: Record<
+  string,
+  { en?: TranslatedCardData; es?: TranslatedCardData }
+> = sermonCardsTranslationsRaw as any;
 
 const memoryCache = new Map<string, TranslatedCardData>();
 
@@ -20,6 +26,14 @@ export function getCachedCardTranslation(
     return memoryCache.get(cacheKey)!;
   }
 
+  // 1. Static build-time pre-translated data (always available, 0 network requests)
+  const staticItem = staticTranslations[slug]?.[lang];
+  if (staticItem && staticItem.title) {
+    memoryCache.set(cacheKey, staticItem);
+    return staticItem;
+  }
+
+  // 2. SessionStorage cache
   if (typeof window !== "undefined" && window.sessionStorage) {
     try {
       const stored = window.sessionStorage.getItem(getStorageKey(slug, lang));
@@ -84,28 +98,57 @@ export async function translateCardsBatch<
   });
 
   const queryText = queryBlocks.join("\n");
+  let fullTranslatedText = "";
 
-  const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=pt&tl=${targetLang}&dt=t`;
-  const res = await fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
-    },
-    body: `q=${encodeURIComponent(queryText)}`
-  });
+  // 1. Primary: Serverless API proxy backed by Google Cloud Translation API
+  try {
+    const apiRes = await fetch("/api/translate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        text: queryText,
+        targetLang
+      })
+    });
 
-  if (!res.ok) {
-    throw new Error(`Cards translation request failed with HTTP ${res.status}`);
+    if (apiRes.ok) {
+      const apiData = await apiRes.json();
+      fullTranslatedText = apiData.translatedText || "";
+    }
+  } catch {
+    // /api/translate not available (e.g. static local dev)
   }
 
-  const data = await res.json();
-  if (!Array.isArray(data) || !Array.isArray(data[0])) {
-    throw new Error("Invalid card translation response structure");
+  // 2. Secondary fallback
+  if (!fullTranslatedText) {
+    try {
+      const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=pt&tl=${targetLang}&dt=t`;
+      const res = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+        },
+        body: `q=${encodeURIComponent(queryText)}`
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        if (Array.isArray(data) && Array.isArray(data[0])) {
+          fullTranslatedText = data[0]
+            .map((item: any) => (Array.isArray(item) ? item[0] : ""))
+            .join("");
+        }
+      }
+    } catch {
+      // Non-blocking fallback
+    }
   }
 
-  const fullTranslatedText = data[0]
-    .map((item: any) => (Array.isArray(item) ? item[0] : ""))
-    .join("");
+  if (!fullTranslatedText) {
+    return resultMap;
+  }
 
   // 3. Parse tags from translated text
   const tagRegex = /\[\[([TS])_(\d+)\]\]\s*([\s\S]*?)(?=\s*\[\[[TS]_\d+\]\]|$)/g;
@@ -142,6 +185,24 @@ export async function translateCardsBatch<
   return resultMap;
 }
 
+function resolveInitialPosts<T extends { slug: string; title: string; summary: string }>(
+  posts: T[],
+  lang: "pt" | "en" | "es"
+): T[] {
+  if (lang === "pt") return posts;
+  return posts.map((post) => {
+    const cached = getCachedCardTranslation(post.slug, lang);
+    if (cached) {
+      return {
+        ...post,
+        title: cached.title,
+        summary: cached.summary
+      };
+    }
+    return post;
+  });
+}
+
 export function useTranslatedCards<T extends { slug: string; title: string; summary: string }>(
   posts: T[],
   lang: "pt" | "en" | "es"
@@ -150,7 +211,9 @@ export function useTranslatedCards<T extends { slug: string; title: string; summ
   isTranslating: boolean;
   error: string | null;
 } {
-  const [translatedPosts, setTranslatedPosts] = useState<T[]>(posts);
+  const [translatedPosts, setTranslatedPosts] = useState<T[]>(() =>
+    resolveInitialPosts(posts, lang)
+  );
   const [isTranslating, setIsTranslating] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -207,11 +270,9 @@ export function useTranslatedCards<T extends { slug: string; title: string; summ
         setTranslatedPosts(updated);
         setIsTranslating(false);
       })
-      .catch((err) => {
+      .catch(() => {
         if (!isMounted) return;
-        console.warn("Card translation failed:", err);
         setIsTranslating(false);
-        setError(err?.message || "Failed to translate cards");
       });
 
     return () => {

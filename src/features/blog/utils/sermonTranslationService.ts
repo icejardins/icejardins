@@ -1,3 +1,5 @@
+import sermonCardsTranslationsRaw from "@/content/data/sermonCardsTranslations.json";
+
 export interface TocItem {
   id: string;
   text: string;
@@ -9,6 +11,11 @@ export interface TranslatedPostData {
   bodyHtml: string;
   toc?: TocItem[];
 }
+
+const staticCardTranslations: Record<
+  string,
+  { en?: { title: string; summary: string }; es?: { title: string; summary: string } }
+> = sermonCardsTranslationsRaw as any;
 
 const memoryCache = new Map<string, TranslatedPostData>();
 
@@ -75,6 +82,32 @@ async function translateChunk(text: string, targetLang: "en" | "es"): Promise<st
     return text;
   }
 
+  // 1. Primary: Serverless API proxy backed by official Google Cloud Translation API (Service Account)
+  try {
+    const apiRes = await fetch("/api/translate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        text,
+        targetLang,
+        sourceLang: "pt",
+        format: "html"
+      })
+    });
+
+    if (apiRes.ok) {
+      const data = await apiRes.json();
+      if (data.translatedText) {
+        return data.translatedText;
+      }
+    }
+  } catch {
+    // Fallback if /api/translate is unreachable
+  }
+
+  // 2. Secondary fallback
   const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=pt&tl=${targetLang}&dt=t`;
   const res = await fetch(url, {
     method: "POST",
@@ -131,8 +164,10 @@ export async function translateSermon(
   const chunks = splitHtmlIntoChunks(masked, 12000);
   const tocTexts = (toc || []).map((t) => t.text).join("\n");
 
+  const preTranslatedTitle = staticCardTranslations[slug]?.[targetLang]?.title;
+
   const [translatedTitle, translatedTocRaw, ...translatedChunks] = await Promise.all([
-    translateChunk(title, targetLang),
+    preTranslatedTitle ? Promise.resolve(preTranslatedTitle) : translateChunk(title, targetLang),
     tocTexts ? translateChunk(tocTexts, targetLang) : Promise.resolve(""),
     ...chunks.map((chunk) => translateChunk(chunk, targetLang))
   ]);
@@ -145,7 +180,7 @@ export async function translateSermon(
   }));
 
   const result: TranslatedPostData = {
-    title: translatedTitle.trim() || title,
+    title: (translatedTitle || preTranslatedTitle || title).trim(),
     bodyHtml: translatedBodyHtml,
     toc: translatedToc
   };

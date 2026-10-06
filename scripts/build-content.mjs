@@ -8,6 +8,7 @@ import remarkRehype from "remark-rehype";
 import rehypeSlug from "rehype-slug";
 import rehypeStringify from "rehype-stringify";
 import { visit } from "unist-util-visit";
+import { syncSermonTranslations } from "./sync-sermon-translations.mjs";
 
 const rootDir = process.cwd();
 const contentDir = path.join(rootDir, "content");
@@ -700,6 +701,8 @@ async function main() {
     `${JSON.stringify(sortedRoutes, null, 2)}\n`,
     "utf8"
   );
+
+  await syncSermonTranslations();
 
   console.log(`Generated ${pages.length} pages, ${posts.length} posts, ${resources.length} resources, ${sortedRoutes.length} routes.`);
 }
