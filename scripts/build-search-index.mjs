@@ -14,6 +14,17 @@ function stripHtml(input) {
     .trim();
 }
 
+import { CATEGORY_TRANSLATIONS, TAG_TRANSLATIONS } from "../src/features/blog/utils/taxonomyTranslations.ts";
+
+function slugify(text) {
+  return String(text ?? "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
 async function main() {
   const [pagesRaw, postsRaw, resourcesRaw] = await Promise.all([
     fs.readFile(path.join(generatedDir, "pages.json"), "utf8"),
@@ -25,7 +36,63 @@ async function main() {
   const posts = JSON.parse(postsRaw.replace(/^\uFEFF/, ""));
   const resources = JSON.parse(resourcesRaw.replace(/^\uFEFF/, ""));
 
-  const docs = [
+  const institutionalDocs = [
+    {
+      title: "Igreja Cristã Evangélica Jardins | Brasília - DF",
+      description: "Comunidade cristã reformada e acolhedora no Jardim Botânico, Brasília - DF. Cultos aos domingos às 9h30.",
+      content: "Igreja Cristã Evangélica Jardins ICE Jardins Jardim Botânico Brasília DF cultos aos domingos 9h30 comunhão pregação expositiva discipulado ministério infantil.",
+      image: null,
+      permalink: "/"
+    },
+    {
+      title: "ICE Jardins Church | Evangelical Christian Church in Brasília",
+      description: "English-friendly evangelical Christian church in Jardim Botânico, Brasília - DF. Sunday worship at 9:30 AM. Bible-centered community welcoming expats, diplomats, and visitors.",
+      content: "ICE Jardins Church evangelical reformed Christian church Jardim Botânico Brasília DF Brazil Sunday worship 9:30 AM expats diplomats international visitors biblical expository preaching communion fellowship gospel faith.",
+      image: null,
+      permalink: "/en/"
+    },
+    {
+      title: "Iglesia ICE Jardins | Iglesia Cristiana Evangélica en Brasília",
+      description: "Comunidad cristiana evangélica y reformada en Jardim Botânico, Brasília - DF. Culto dominical a las 9:30 AM. Mensajes expositivos y calurosa bienvenida a hispanohablantes y familias.",
+      content: "Iglesia Cristiana Evangélica Jardins ICE Jardins Jardim Botânico Brasília DF Brasil culto dominical 9:30 AM predicación expositiva doctrina bíblica bienvenida hispanohablantes comunión fe en Jesucristo salvación.",
+      image: null,
+      permalink: "/es/"
+    },
+    {
+      title: "Sermões e Mensagens Bíblicas | ICE Jardins",
+      description: "Ouça e leia sermões expositivos e estudos bíblicos da Igreja Cristã Evangélica Jardins em Brasília - DF.",
+      content: "Sermões estudos bíblicos pregações mensagens expositivas Novo Testamento Antigo Testamento Evangelho Jesus Cristo ICE Jardins.",
+      image: null,
+      permalink: "/posts/"
+    },
+    {
+      title: "Sermons & Biblical Messages | ICE Jardins Church",
+      description: "Listen to and read expository sermons and biblical teachings from ICE Jardins Church in Brasília, Brazil.",
+      content: "Sermons biblical messages expository preaching New Testament Old Testament Gospel Jesus Christ ICE Jardins Brasília Brazil teachings study.",
+      image: null,
+      permalink: "/en/sermons/"
+    },
+    {
+      title: "Sermones y Mensajes Bíblicos | Iglesia ICE Jardins",
+      description: "Escuche y lea sermones expositivos y mensajes bíblicos de la Iglesia ICE Jardins en Brasília, Brasil.",
+      content: "Sermones estudios bíblicos predicaciones mensajes expositivos Nuevo Testamento Antiguo Testamento Evangelio Jesucristo Iglesia ICE Jardins Brasília Brasil fe doctrina.",
+      image: null,
+      permalink: "/es/sermones/"
+    },
+    {
+      title: "Giving & Donations | ICE Jardins Church",
+      description: "Support the ministries and church campus project of ICE Jardins Church. US tax-deductible giving via Reliant Mission, international wire, or PIX.",
+      content: "Giving donations tithes offerings ICE Jardins Church Brasília Brazil support Reliant Mission Acts 29 US tax-deductible wire transfer PIX bank.",
+      image: null,
+      permalink: "/en/give/"
+    },
+    {
+      title: "Donaciones y Ofrendas | Iglesia ICE Jardins",
+      description: "Apoye los ministerios y el proyecto del templo de la Iglesia ICE Jardins en Brasília. Donaciones vía PIX, transferencia bancaria y Reliant.",
+      content: "Donar donaciones ofrendas diezmos contribuciones Iglesia Cristiana Evangélica Jardins ICE Jardins Brasília Brasil soporte misionero Reliant PIX banco.",
+      image: null,
+      permalink: "/es/donar/"
+    },
     {
       title: "Projeto do Templo: Sede Definitiva | ICE Jardins",
       description: "Conheça o projeto do templo sede da ICE Jardins na Fazenda Taboquinha (Gleba 01), Jardim Botânico - DF. Dados habitacionais, terreno sendo pago, mapa 3D no Google Earth e como contribuir.",
@@ -46,7 +113,11 @@ async function main() {
       content: "Construcción del nuevo templo sede de la Iglesia Cristiana Evangélica Jardins en Fazenda Taboquinha Gleba 01 Jardim Botânico DF. Terreno de 24.368 m2 adquirido y en proceso de pago. Datos demográficos de Jardim Botânico, Tororó, Mangueiral y São Sebastião. Recorrido 3D en Google Earth, descarga de archivo KML, fases del proyecto, templo, ministerio infantil, estacionamiento y donación vía PIX y Reliant.",
       image: "/images/projetos/templo-ice-jardins-conceito.webp",
       permalink: "/es/donar/proyecto-templo/"
-    },
+    }
+  ];
+
+  const docs = [
+    ...institutionalDocs,
     ...pages.map((page) => ({
       title: page.title,
       description: page.description,
@@ -54,13 +125,37 @@ async function main() {
       image: null,
       permalink: page.route
     })),
-    ...posts.map((post) => ({
-      title: post.title,
-      description: post.description,
-      content: stripHtml(post.bodyHtml),
-      image: post.image,
-      permalink: post.route
-    })),
+    ...posts.map((post) => {
+      const localizedKeywords = [];
+      for (const cat of post.categories || []) {
+        const slug = slugify(cat);
+        const trans = CATEGORY_TRANSLATIONS[slug];
+        if (trans) {
+          localizedKeywords.push(trans.en, trans.es);
+        }
+      }
+      for (const tag of post.tags || []) {
+        const slug = slugify(tag);
+        const trans = TAG_TRANSLATIONS[slug];
+        if (trans) {
+          localizedKeywords.push(trans.en, trans.es);
+        }
+      }
+
+      const extraText = [
+        ...(post.categories || []),
+        ...(post.tags || []),
+        ...localizedKeywords
+      ].join(" ");
+
+      return {
+        title: post.title,
+        description: post.description,
+        content: `${stripHtml(post.bodyHtml)} ${extraText}`,
+        image: post.image,
+        permalink: post.route
+      };
+    }),
     ...resources.map((resource) => ({
       title: resource.title,
       description: resource.description,

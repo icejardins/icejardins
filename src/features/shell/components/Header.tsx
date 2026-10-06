@@ -3,7 +3,10 @@ import { useEffect, useMemo, useState } from "react";
 import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
 import { useTheme } from "@/features/shell/components/ThemeProvider";
 import { setLanguagePreference } from "@/shared/utils/language";
+import { Icon } from "@/shared/components/Icon";
 import type { SearchDocument } from "@/core/types/content";
+import { filterAndRankDocs } from "@/features/shell/utils/searchTranslationService";
+import { useMultilingualSearchResults } from "@/features/shell/hooks/useMultilingualSearchResults";
 import styles from "./Header.module.css";
 
 function normalizeRoute(route: string) {
@@ -205,18 +208,15 @@ export function Header() {
   };
 
   const filteredResults = useMemo(() => {
-    const normalizedQuery = query.trim().toLowerCase();
-    if (!normalizedQuery) {
+    if (!query.trim()) {
       return [];
     }
 
-    return searchDocs
-      .filter((doc) => {
-        const haystack = `${doc.title} ${doc.description} ${doc.content}`.toLowerCase();
-        return haystack.includes(normalizedQuery);
-      })
-      .slice(0, 8);
-  }, [query, searchDocs]);
+    return filterAndRankDocs(searchDocs, query, currentLang);
+  }, [query, searchDocs, currentLang]);
+
+  const { results: displayResults, isTranslating: isTranslatingResults } =
+    useMultilingualSearchResults(filteredResults, currentLang);
 
   const showSearch = query.trim().length > 0;
   const brandLogoSrc =
@@ -366,7 +366,7 @@ export function Header() {
                 {isSpanish ? "Cargando índice de búsqueda..." : isEnglish ? "Loading search index..." : "Carregando índice de busca..."}
               </p>
             ) : null}
-            {isSearchReady && filteredResults.length === 0 ? (
+            {isSearchReady && displayResults.length === 0 ? (
               <p className="mb-0">
                 {isSpanish
                   ? `No se encontraron resultados para “${query}”.`
@@ -375,17 +375,44 @@ export function Header() {
                     : `Nenhum resultado encontrado para “${query}”.`}
               </p>
             ) : null}
-            {filteredResults.length > 0 ? (
-              <ul className={styles.searchList}>
-                {filteredResults.map((result) => (
-                  <li key={`${result.permalink}-${result.title}`}>
-                    <Link to={result.permalink} onClick={() => setQuery("")}>
-                      <strong>{result.title}</strong>
-                      <span>{result.description}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+            {displayResults.length > 0 ? (
+              <>
+                {currentLang !== "pt" && (
+                  <div className={styles.searchStatusRow}>
+                    <span className={styles.searchStatusBadge}>
+                      {isTranslatingResults ? (
+                        <>
+                          <span className={styles.searchSpinner} aria-hidden="true" />
+                          <span>
+                            {isSpanish
+                              ? "Traduciendo resultados al español..."
+                              : "Translating results to English..."}
+                          </span>
+                        </>
+                      ) : (
+                        <>
+                          <Icon name="translate" />
+                          <span>
+                            {isSpanish
+                              ? "Resultados adaptados al español"
+                              : "Search results in English"}
+                          </span>
+                        </>
+                      )}
+                    </span>
+                  </div>
+                )}
+                <ul className={styles.searchList}>
+                  {displayResults.map((result) => (
+                    <li key={`${result.permalink}-${result.title}`}>
+                      <Link to={result.permalink} onClick={() => setQuery("")}>
+                        <strong>{result.title}</strong>
+                        <span>{result.description}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </>
             ) : null}
           </div>
         </section>
