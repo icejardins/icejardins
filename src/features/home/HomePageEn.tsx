@@ -6,6 +6,7 @@ import { getRecentPosts } from "@/content/repositories/contentRepository";
 import { formatDate } from "@/core/utils/formatDate";
 import { homeContentEn } from "@/content/data/homeContentEn";
 import { trackContactConversion } from "@/shared/utils/analytics";
+import { useTranslatedCards } from "@/features/blog/utils/cardTranslationService";
 import styles from "./HomePage.module.css";
 
 const aboutCarouselImages = [
@@ -21,6 +22,7 @@ const aboutCarouselImages = [
 
 export default function HomePageEn() {
   const recentPosts = getRecentPosts(3);
+  const { translatedPosts: translatedRecentPosts } = useTranslatedCards(recentPosts, "en");
   const [activeAboutImage, setActiveAboutImage] = useState(0);
 
   useEffect(() => {
@@ -155,11 +157,11 @@ export default function HomePageEn() {
             </div>
 
             <div className="row g-4">
-              {recentPosts.map((post) => (
+              {translatedRecentPosts.map((post) => (
                 <div key={post.slug} className="col-lg-4 col-md-6">
                   <article className={styles.sermonCard}>
                     {post.image ? (
-                      <Link to={post.route} className={styles.sermonImageWrap}>
+                      <Link to={`${post.route}?lang=en`} className={styles.sermonImageWrap}>
                         <img
                           src={post.image}
                           alt={post.title}

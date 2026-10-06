@@ -7,8 +7,10 @@ import {
   paginate
 } from "@/content/repositories/contentRepository";
 import { SeoHead } from "@/shared/components/SeoHead";
+import { Icon } from "@/shared/components/Icon";
 import { PostCard } from "@/features/blog/components/PostCard";
 import { TaxonomyList } from "@/features/blog/components/TaxonomyList";
+import { useTranslatedCards } from "@/features/blog/utils/cardTranslationService";
 import styles from "./BlogListPage.module.css";
 
 const PAGE_SIZE = 6;
@@ -26,6 +28,7 @@ export default function BlogListPage() {
 
   const allPosts = getAllPosts();
   const pagination = paginate(allPosts, Number.isFinite(page) ? page : 1, PAGE_SIZE);
+  const { translatedPosts, isTranslating } = useTranslatedCards(pagination.items, lang);
 
   const basePath = isSpanish ? "/es/sermones/" : isEnglish ? "/en/sermons/" : "/posts/";
 
@@ -66,12 +69,37 @@ export default function BlogListPage() {
         <header className="text-center mb-4">
           <h1>{headerTitle}</h1>
           <p>{headerDescription}</p>
+          {lang !== "pt" && (
+            <div>
+              <span className={styles.translationBadge}>
+                {isTranslating ? (
+                  <>
+                    <span className={styles.spinner} aria-hidden="true" />
+                    <span>
+                      {isSpanish
+                        ? "Traduciendo sermones al español..."
+                        : "Translating sermon cards to English..."}
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    <Icon name="translate" />
+                    <span>
+                      {isSpanish
+                        ? "Tarjetas de sermones traducidas al español"
+                        : "Sermon cards translated into English"}
+                    </span>
+                  </>
+                )}
+              </span>
+            </div>
+          )}
         </header>
 
         <div className="row g-4">
           <div className="col-lg-9">
             <div className="row g-4">
-              {pagination.items.map((post, index) => (
+              {translatedPosts.map((post, index) => (
                 <div key={post.slug} className="col-lg-6 col-md-6">
                   <PostCard post={post} priority={index === 0} lang={lang} />
                 </div>
@@ -109,11 +137,13 @@ export default function BlogListPage() {
                 title={isSpanish ? "Categorías" : isEnglish ? "Categories" : "Categorias"}
                 items={getCategories()}
                 basePath="/categorias"
+                lang={lang}
               />
               <TaxonomyList
                 title={isSpanish ? "Etiquetas" : isEnglish ? "Tags" : "Tags"}
                 items={getTags()}
                 basePath="/tags"
+                lang={lang}
               />
             </div>
           </div>
