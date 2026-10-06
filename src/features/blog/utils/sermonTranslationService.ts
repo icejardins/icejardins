@@ -115,7 +115,7 @@ async function translateChunk(text: string, targetLang: "en" | "es"): Promise<st
 
   // 1. Primary: Serverless API proxy backed by official Google Cloud Translation API (Service Account)
   try {
-    const apiRes = await fetch("/api/translate", {
+    const apiRes = await fetch("/api/translate/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

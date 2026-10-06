@@ -124,7 +124,7 @@ export async function translateCardsBatch<
 
   // 1. Primary: Serverless API proxy backed by Google Cloud Translation API (Service Account)
   try {
-    const apiRes = await fetch("/api/translate", {
+    const apiRes = await fetch("/api/translate/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

@@ -1,19 +1,25 @@
 import { google } from "googleapis";
 
 function getServiceAccountCredentials() {
-  const jsonEnv = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
+  const jsonEnv =
+    process.env.GOOGLE_SERVICE_ACCOUNT_JSON ||
+    process.env.GOOGLE_SERVICE_ACCOUNT ||
+    process.env.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS ||
+    process.env.GCP_SERVICE_ACCOUNT;
+
   if (jsonEnv) {
     try {
+      const trimmed = jsonEnv.trim();
       const parsed = JSON.parse(
-        jsonEnv.startsWith("{") ? jsonEnv : Buffer.from(jsonEnv, "base64").toString("utf8")
+        trimmed.startsWith("{") ? trimmed : Buffer.from(trimmed, "base64").toString("utf8")
       );
       return {
         clientEmail: parsed.client_email,
         privateKey: parsed.private_key,
         projectId: parsed.project_id
       };
-    } catch {
-      console.warn("[api/translate] Failed to parse GOOGLE_SERVICE_ACCOUNT_JSON");
+    } catch (e: any) {
+      console.warn("[api/translate] Failed to parse service account JSON:", e.message);
     }
   }
 
@@ -47,12 +53,17 @@ async function translateWithGoogleCloud(
   const credentials = getServiceAccountCredentials();
 
   if (!credentials.clientEmail || !credentials.privateKey) {
-    throw new Error("Missing Google Service Account credentials");
+    throw new Error(
+      `Credenciais da conta de serviço não encontradas. (email: ${!!credentials.clientEmail}, key: ${!!credentials.privateKey})`
+    );
   }
 
-  const auth = new google.auth.JWT({
-    email: credentials.clientEmail,
-    key: credentials.privateKey,
+  const auth = new google.auth.GoogleAuth({
+    credentials: {
+      client_email: credentials.clientEmail,
+      private_key: credentials.privateKey
+    },
+    projectId: credentials.projectId,
     scopes: [
       "https://www.googleapis.com/auth/cloud-translation",
       "https://www.googleapis.com/auth/cloud-platform"
@@ -61,16 +72,18 @@ async function translateWithGoogleCloud(
 
   const translate = google.translate({ version: "v2", auth });
 
-  const response = await translate.translations.list({
-    q: texts,
-    target: targetLang,
-    source: sourceLang,
-    format
+  const response = await translate.translations.translate({
+    requestBody: {
+      q: texts,
+      target: targetLang,
+      source: sourceLang,
+      format
+    }
   });
 
   const translations = response.data?.translations;
   if (!translations || !Array.isArray(translations)) {
-    throw new Error("Invalid response format from Google Cloud Translation API");
+    throw new Error("Resposta inválida da Google Cloud Translation API");
   }
 
   return translations.map((t) => t.translatedText || "");
@@ -94,12 +107,12 @@ async function translateWithPublicFallback(
   });
 
   if (!upstreamRes.ok) {
-    throw new Error(`Public fallback returned HTTP ${upstreamRes.status}`);
+    throw new Error(`Fallback público retornou HTTP ${upstreamRes.status}`);
   }
 
   const data = await upstreamRes.json();
   if (!Array.isArray(data) || !Array.isArray(data[0])) {
-    throw new Error("Invalid response from public fallback translation service");
+    throw new Error("Resposta inválida do serviço público de tradução");
   }
 
   return data[0].map((item: any) => (Array.isArray(item) ? item[0] : "")).join("");
@@ -124,16 +137,25 @@ export default async function handler(req: any, res: any) {
   }
 
   try {
+    let body = req.body;
+    if (typeof body === "string") {
+      try {
+        body = JSON.parse(body);
+      } catch {
+        body = {};
+      }
+    }
+
     const {
       text,
       texts,
       targetLang = "es",
       sourceLang = "pt",
       format = "html"
-    } = req.body || {};
+    } = body || {};
 
     if (targetLang !== "en" && targetLang !== "es") {
-      return res.status(400).json({ error: "targetLang must be 'en' or 'es'" });
+      return res.status(400).json({ error: "targetLang deve ser 'en' ou 'es'" });
     }
 
     const inputList: string[] = Array.isArray(texts)
@@ -143,26 +165,35 @@ export default async function handler(req: any, res: any) {
       : [];
 
     if (inputList.length === 0) {
-      return res.status(400).json({ error: "Provide 'text' (string) or 'texts' (array of strings)" });
+      return res.status(400).json({ error: "Forneça 'text' (string) ou 'texts' (array de strings)" });
     }
 
     let translatedList: string[];
+    let lastError: Error | null = null;
 
-    // 1. Primary: Official Google Cloud Translation API via Service Account
+    // 1. Primário: Google Cloud Translation API oficial via Conta de Serviço
     try {
       translatedList = await translateWithGoogleCloud(inputList, targetLang, sourceLang, format);
     } catch (gcloudErr: any) {
-      console.warn(
-        `[api/translate] Cloud Translation API failed (${gcloudErr.message}), falling back...`
-      );
+      console.warn(`[api/translate] Cloud Translation API falhou: ${gcloudErr.message}`);
+      lastError = gcloudErr;
 
-      // 2. Secondary: Public endpoint fallback (for local dev without credentials)
-      translatedList = await Promise.all(
-        inputList.map((item) => translateWithPublicFallback(item, targetLang, sourceLang))
-      );
+      // 2. Fallback secundário
+      try {
+        translatedList = await Promise.all(
+          inputList.map((item) => translateWithPublicFallback(item, targetLang, sourceLang))
+        );
+      } catch (fallbackErr: any) {
+        console.warn(`[api/translate] Fallback público também falhou: ${fallbackErr.message}`);
+        return res.status(500).json({
+          error: "Falha na tradução",
+          gcloudError: lastError?.message || String(lastError),
+          fallbackError: fallbackErr?.message || String(fallbackErr)
+        });
+      }
     }
 
-    // Cache successful responses on CDN Edge for 24h
+    // Cache no Edge CDN por 24h
     res.setHeader("Cache-Control", "public, s-maxage=86400, stale-while-revalidate=604800");
 
     if (typeof text === "string" && !Array.isArray(texts)) {
@@ -171,9 +202,9 @@ export default async function handler(req: any, res: any) {
 
     return res.status(200).json({ translations: translatedList });
   } catch (err: any) {
-    console.error("[api/translate] Fatal error:", err);
+    console.error("[api/translate] Erro fatal:", err);
     return res.status(500).json({
-      error: "Translation service failed",
+      error: "Erro interno no serviço de tradução",
       details: err?.message || String(err)
     });
   }
