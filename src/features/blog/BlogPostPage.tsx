@@ -14,6 +14,7 @@ import {
   translateSermon,
   type TranslatedPostData
 } from "./utils/sermonTranslationService";
+import { getLocalizedTagName } from "./utils/taxonomyTranslations";
 import styles from "./BlogPostPage.module.css";
 
 export default function BlogPostPage() {
@@ -435,7 +436,10 @@ export default function BlogPostPage() {
                 </div>
               </div>
               <div className={styles.welcomeBannerActions}>
-                <Link to="/visita/" className={styles.btnVisit}>
+                <Link
+                  to={activeLang === "es" ? "/es/visita/" : activeLang === "en" ? "/en/visit/" : "/visita/"}
+                  className={styles.btnVisit}
+                >
                   <Icon name="clock-fill" />{" "}
                   {activeLang === "es"
                     ? "Planificar Visita el Domingo"
@@ -492,11 +496,21 @@ export default function BlogPostPage() {
                 <section className={styles.sidebarBlock}>
                   <h3>{activeLang === "es" ? "Etiquetas" : "Tags"}</h3>
                   <div className={styles.tags}>
-                    {post.tags.map((tag) => (
-                      <Link key={tag} to={`/tags/${slugify(tag)}/`}>
-                        {tag}
-                      </Link>
-                    ))}
+                    {post.tags.map((tag) => {
+                      const tagSlug = slugify(tag);
+                      const localizedTag = getLocalizedTagName(tagSlug, tag, activeLang);
+                      const tagUrl =
+                        activeLang === "es"
+                          ? `/tags/${tagSlug}/?lang=es`
+                          : activeLang === "en"
+                          ? `/tags/${tagSlug}/?lang=en`
+                          : `/tags/${tagSlug}/`;
+                      return (
+                        <Link key={tag} to={tagUrl}>
+                          {localizedTag}
+                        </Link>
+                      );
+                    })}
                   </div>
                 </section>
               ) : null}

@@ -34,12 +34,18 @@ export function Header() {
 
   const searchParams = new URLSearchParams(location.search);
   const langParam = searchParams.get("lang");
-  const isSermonDetail =
-    location.pathname.startsWith("/posts/") &&
-    location.pathname !== "/posts/" &&
-    location.pathname !== "/posts";
-  const isEnglish = isSermonDetail ? langParam === "en" : location.pathname.startsWith("/en");
-  const isSpanish = isSermonDetail ? langParam === "es" : location.pathname.startsWith("/es");
+  const isSermonDetailOrTaxonomy =
+    (location.pathname.startsWith("/posts/") &&
+      location.pathname !== "/posts/" &&
+      location.pathname !== "/posts") ||
+    location.pathname.startsWith("/tags/") ||
+    location.pathname.startsWith("/categorias/");
+  const isEnglish = isSermonDetailOrTaxonomy
+    ? langParam === "en"
+    : location.pathname.startsWith("/en") || langParam === "en";
+  const isSpanish = isSermonDetailOrTaxonomy
+    ? langParam === "es"
+    : location.pathname.startsWith("/es") || langParam === "es";
   const currentLang: "pt" | "en" | "es" = isSpanish ? "es" : isEnglish ? "en" : "pt";
 
   const menuItems = isSpanish
@@ -84,8 +90,8 @@ export function Header() {
       return;
     }
 
-    // 2. Sermon Detail page
-    if (isSermonDetail) {
+    // 2. Sermon Detail or Taxonomy page
+    if (isSermonDetailOrTaxonomy) {
       if (targetLang === "es") {
         navigate(`${location.pathname}?lang=es`);
       } else if (targetLang === "en") {

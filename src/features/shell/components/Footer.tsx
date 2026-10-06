@@ -8,8 +8,10 @@ export function Footer() {
   const site = getSiteConfig();
   const location = useLocation();
 
-  const isEnglish = location.pathname.startsWith("/en");
-  const isSpanish = location.pathname.startsWith("/es");
+  const searchParams = new URLSearchParams(location.search);
+  const langParam = searchParams.get("lang");
+  const isEnglish = location.pathname.startsWith("/en") || langParam === "en";
+  const isSpanish = location.pathname.startsWith("/es") || langParam === "es";
 
   return (
     <footer className={styles.footer}>
