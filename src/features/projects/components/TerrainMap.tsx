@@ -7,7 +7,7 @@ interface TerrainMapProps {
   kmlDownloadUrl: string;
   googleEarthUrl: string;
   googleMapsUrl: string;
-  lang?: "pt" | "en";
+  lang?: "pt" | "en" | "es";
 }
 
 const MAP_TEXTS = {
@@ -58,21 +58,50 @@ const MAP_TEXTS = {
         <b>Municipality:</b> RA XXVII Jardim Botânico, Brasília - DF
       </div>
     `
+  },
+  es: {
+    ssrTitle: "Fazenda Taboquinha — Gleba 01",
+    ssrDesc:
+      "Área de 24.368,29 m² (~2,44 hectáreas) en el corredor Jardim Botânico / DF-140. Cargando mapa interactivo con imágenes satelitales y coordenadas catastrales...",
+    openGoogleEarth: "Abrir en Google Earth (3D)",
+    downloadKml: "Descargar KML",
+    googleMaps: "Google Maps",
+    satellite: "Satélite",
+    street: "Calles / Mapa",
+    recenter: "Centrar",
+    recenterTitle: "Recentrar en el polígono",
+    legendTitle: "Gleba 01 — ICE Jardins",
+    legendText:
+      "24.368 m² demarcados. Haga clic en los vértices amarillos (hitos M-01 a M-04) o blancos (P-01 a P-017) para ver detalles de rumbo y coordenadas.",
+    polygonPopup: `
+      <div style="font-family: inherit; font-size: 13px; line-height: 1.5; color: #12383a;">
+        <strong style="color: #145f63; font-size: 14px;">Fazenda Taboquinha — Gleba 01</strong><br/>
+        <b>Propietario:</b> Igreja Cristã Evangélica Jardins<br/>
+        <b>Área:</b> 24.368,29 m² (~2,44 hectáreas)<br/>
+        <b>Perímetro:</b> 675,37 metros<br/>
+        <b>Municipio:</b> RA XXVII Jardim Botânico, Brasília - DF
+      </div>
+    `
   }
 };
 
-function formatVertexPopup(vertex: (typeof terrainData.vertices)[0], isEn: boolean) {
+function formatVertexPopup(vertex: (typeof terrainData.vertices)[0], lang: "pt" | "en" | "es") {
   const isMainCorner = vertex.name.startsWith("M-");
-  const title = isEn
-    ? isMainCorner
-      ? `Corner Marker ${vertex.name}`
-      : `Boundary Point ${vertex.name}`
-    : isMainCorner
-      ? `Marco ${vertex.name}`
-      : `Ponto ${vertex.name}`;
+  const title =
+    lang === "en"
+      ? isMainCorner
+        ? `Corner Marker ${vertex.name}`
+        : `Boundary Point ${vertex.name}`
+      : lang === "es"
+        ? isMainCorner
+          ? `Hito ${vertex.name}`
+          : `Punto ${vertex.name}`
+        : isMainCorner
+          ? `Marco ${vertex.name}`
+          : `Ponto ${vertex.name}`;
 
   let descriptionHtml = vertex.rawDescription;
-  if (isEn) {
+  if (lang === "en") {
     descriptionHtml = descriptionHtml
       .replace(/<b>Vértice:<\/b>/g, "<b>Vertex:</b>")
       .replace(/<b>Para:<\/b>/g, "<b>To:</b>")
@@ -82,6 +111,16 @@ function formatVertexPopup(vertex: (typeof terrainData.vertices)[0], isEn: boole
       .replace(/<b>Norte \(UTM\):<\/b>/g, "<b>Northing (UTM):</b>")
       .replace(/<b>Latitude:<\/b>/g, "<b>Latitude:</b>")
       .replace(/<b>Longitude:<\/b>/g, "<b>Longitude:</b>");
+  } else if (lang === "es") {
+    descriptionHtml = descriptionHtml
+      .replace(/<b>Vértice:<\/b>/g, "<b>Vértice:</b>")
+      .replace(/<b>Para:<\/b>/g, "<b>Hacia:</b>")
+      .replace(/<b>Azimute:<\/b>/g, "<b>Azimut:</b>")
+      .replace(/<b>Distância:<\/b>/g, "<b>Distancia:</b>")
+      .replace(/<b>Este \(UTM\):<\/b>/g, "<b>Este (UTM):</b>")
+      .replace(/<b>Norte \(UTM\):<\/b>/g, "<b>Norte (UTM):</b>")
+      .replace(/<b>Latitude:<\/b>/g, "<b>Latitud:</b>")
+      .replace(/<b>Longitude:<\/b>/g, "<b>Longitud:</b>");
   }
 
   return `
@@ -216,7 +255,7 @@ export function TerrainMap({
             fillOpacity: 0.9
           }).addTo(map);
 
-          circleMarker.bindPopup(formatVertexPopup(vertex, isEn));
+          circleMarker.bindPopup(formatVertexPopup(vertex, lang));
         });
 
         // Fit map bounds to encompass the full polygon with padding

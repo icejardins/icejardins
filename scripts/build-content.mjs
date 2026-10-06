@@ -474,6 +474,11 @@ async function main() {
     "/en/give/building-project/",
     "/en/faith/",
     "/en/projects/",
+    "/es/",
+    "/es/donar/",
+    "/es/donar/proyecto-edificacion/",
+    "/es/fe/",
+    "/es/proyectos/",
     "/projetos/",
     "/posts/",
     "/recursos/",
@@ -532,15 +537,22 @@ async function main() {
     ...resources.map((r) => normalizeRoute(`/recursos/${r.slug}/obrigado/`))
   ]);
 
-  const bilingualPairs = {
-    "/": { pt: "/", en: "/en/" },
-    "/en/": { pt: "/", en: "/en/" },
-    "/contribuir/": { pt: "/contribuir/", en: "/en/give/" },
-    "/en/give/": { pt: "/contribuir/", en: "/en/give/" },
-    "/fe/": { pt: "/fe/", en: "/en/faith/" },
-    "/en/faith/": { pt: "/fe/", en: "/en/faith/" },
-    "/projetos/": { pt: "/projetos/", en: "/en/projects/" },
-    "/en/projects/": { pt: "/projetos/", en: "/en/projects/" }
+  const multilingualPairs = {
+    "/": { pt: "/", en: "/en/", es: "/es/" },
+    "/en/": { pt: "/", en: "/en/", es: "/es/" },
+    "/es/": { pt: "/", en: "/en/", es: "/es/" },
+    "/contribuir/": { pt: "/contribuir/", en: "/en/give/", es: "/es/donar/" },
+    "/en/give/": { pt: "/contribuir/", en: "/en/give/", es: "/es/donar/" },
+    "/es/donar/": { pt: "/contribuir/", en: "/en/give/", es: "/es/donar/" },
+    "/fe/": { pt: "/fe/", en: "/en/faith/", es: "/es/fe/" },
+    "/en/faith/": { pt: "/fe/", en: "/en/faith/", es: "/es/fe/" },
+    "/es/fe/": { pt: "/fe/", en: "/en/faith/", es: "/es/fe/" },
+    "/contribuir/edificacao/": { pt: "/contribuir/edificacao/", en: "/en/give/building-project/", es: "/es/donar/proyecto-edificacion/" },
+    "/en/give/building-project/": { pt: "/contribuir/edificacao/", en: "/en/give/building-project/", es: "/es/donar/proyecto-edificacion/" },
+    "/es/donar/proyecto-edificacion/": { pt: "/contribuir/edificacao/", en: "/en/give/building-project/", es: "/es/donar/proyecto-edificacion/" },
+    "/projetos/": { pt: "/projetos/", en: "/en/projects/", es: "/es/proyectos/" },
+    "/en/projects/": { pt: "/projetos/", en: "/en/projects/", es: "/es/proyectos/" },
+    "/es/proyectos/": { pt: "/projetos/", en: "/en/projects/", es: "/es/proyectos/" }
   };
 
   const sitemapEntries = sortedRoutes
@@ -561,10 +573,17 @@ async function main() {
         cleanedRoute === "/fe/" ||
         cleanedRoute === "/projetos/" ||
         cleanedRoute === "/contribuir/" ||
+        cleanedRoute === "/contribuir/edificacao/" ||
         cleanedRoute === "/en/" ||
         cleanedRoute === "/en/give/" ||
         cleanedRoute === "/en/faith/" ||
         cleanedRoute === "/en/projects/" ||
+        cleanedRoute === "/en/give/building-project/" ||
+        cleanedRoute === "/es/" ||
+        cleanedRoute === "/es/donar/" ||
+        cleanedRoute === "/es/fe/" ||
+        cleanedRoute === "/es/proyectos/" ||
+        cleanedRoute === "/es/donar/proyecto-edificacion/" ||
         cleanedRoute === "/recursos/" ||
         cleanedRoute.startsWith("/recursos/")
       ) {
@@ -581,9 +600,9 @@ async function main() {
         priority = "0.6";
       }
 
-      const pair = bilingualPairs[cleanedRoute];
+      const pair = multilingualPairs[cleanedRoute];
       const alternates = pair
-        ? `\n    <xhtml:link rel="alternate" hreflang="pt-BR" href="${siteConfig.baseUrl}${pair.pt}"/>\n    <xhtml:link rel="alternate" hreflang="en" href="${siteConfig.baseUrl}${pair.en}"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${siteConfig.baseUrl}${pair.pt}"/>`
+        ? `\n    <xhtml:link rel="alternate" hreflang="pt-BR" href="${siteConfig.baseUrl}${pair.pt}"/>\n    <xhtml:link rel="alternate" hreflang="en" href="${siteConfig.baseUrl}${pair.en}"/>\n    <xhtml:link rel="alternate" hreflang="es" href="${siteConfig.baseUrl}${pair.es}"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${siteConfig.baseUrl}${pair.pt}"/>`
         : "";
 
       return `  <url>\n    <loc>${loc}</loc>${alternates}\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;

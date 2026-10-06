@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router";
-import { shouldRedirectToEnglish } from "@/shared/utils/language";
+import { shouldRedirectToEnglish, shouldRedirectToSpanish } from "@/shared/utils/language";
 
 export function useLanguageAutoDetect() {
   const location = useLocation();
@@ -13,8 +13,15 @@ export function useLanguageAutoDetect() {
 
     const pathname = location.pathname.replace(/\/+$/, "") || "/";
 
-    // Only auto-redirect root and contribute routes if user should see English
-    if (shouldRedirectToEnglish()) {
+    if (shouldRedirectToSpanish()) {
+      if (pathname === "/") {
+        navigate("/es/", { replace: true });
+      } else if (pathname === "/contribuir" || pathname === "/contribua" || pathname === "/doacoes" || pathname === "/doe") {
+        navigate("/es/donar/", { replace: true });
+      } else if (pathname === "/fe") {
+        navigate("/es/fe/", { replace: true });
+      }
+    } else if (shouldRedirectToEnglish()) {
       if (pathname === "/") {
         navigate("/en/", { replace: true });
       } else if (pathname === "/contribuir" || pathname === "/contribua" || pathname === "/doacoes" || pathname === "/doe") {

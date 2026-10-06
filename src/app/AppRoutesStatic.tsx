@@ -1,9 +1,11 @@
 import { Navigate, Route, Routes } from "react-router";
 import HomePage from "@/features/home/HomePage";
 import HomePageEn from "@/features/home/HomePageEn";
+import HomePageEs from "@/features/home/HomePageEs";
 import VisitPage from "@/features/visit/VisitPage";
 import FaithPage from "@/features/faith/FaithPage";
 import FaithPageEn from "@/features/faith/FaithPageEn";
+import FaithPageEs from "@/features/faith/FaithPageEs";
 import BlogListPage from "@/features/blog/BlogListPage";
 import BlogPostPage from "@/features/blog/BlogPostPage";
 import TaxonomyPage from "@/features/blog/TaxonomyPage";
@@ -12,8 +14,10 @@ import ResourcePage from "@/features/resources/ResourcePage";
 import ResourceThankYouPage from "@/features/resources/ResourceThankYouPage";
 import GivePage from "@/features/give/GivePage";
 import GivePageEn from "@/features/give/GivePageEn";
+import GivePageEs from "@/features/give/GivePageEs";
 import ProjectsPage from "@/features/projects/ProjectsPage";
 import ProjectsPageEn from "@/features/projects/ProjectsPageEn";
+import ProjectsPageEs from "@/features/projects/ProjectsPageEs";
 import ContentPage from "@/features/pages/ContentPage";
 import NotFoundPage from "@/features/common/NotFoundPage";
 import UnsubscribePage from "@/features/landing/UnsubscribePage";
@@ -33,6 +37,7 @@ export function AppRoutesStatic() {
         <Route path="landing" element={<Navigate to="/recursos/" replace />} />
         <Route path="contribua" element={<Navigate to="/contribuir/" replace />} />
         <Route path="give" element={<Navigate to="/en/give/" replace />} />
+        <Route path="donar" element={<Navigate to="/es/donar/" replace />} />
         <Route path="faith" element={<Navigate to="/en/faith/" replace />} />
         <Route path="recursos/:slug" element={<ResourcePage />} />
         <Route path="recursos/:slug/obrigado" element={<ResourceThankYouPage />} />
@@ -50,6 +55,19 @@ export function AppRoutesStatic() {
           <Route path="en/projetos" element={<Navigate to="/en/give/building-project/" replace />} />
           <Route path="en/contribuir" element={<Navigate to="/en/give/" replace />} />
           <Route path="en/contribua" element={<Navigate to="/en/give/" replace />} />
+          <Route path="es" element={<HomePageEs />} />
+          <Route path="es/donar" element={<GivePageEs />} />
+          <Route path="es/donar/proyecto-edificacion" element={<ProjectsPageEs />} />
+          <Route path="es/donar/edificacion" element={<Navigate to="/es/donar/proyecto-edificacion/" replace />} />
+          <Route path="es/donar/proyectos" element={<Navigate to="/es/donar/proyecto-edificacion/" replace />} />
+          <Route path="es/proyectos" element={<Navigate to="/es/donar/proyecto-edificacion/" replace />} />
+          <Route path="es/fe" element={<FaithPageEs />} />
+          <Route path="es/faith" element={<Navigate to="/es/fe/" replace />} />
+          <Route path="es/contribuir" element={<Navigate to="/es/donar/" replace />} />
+          <Route path="es/contribua" element={<Navigate to="/es/donar/" replace />} />
+          <Route path="es/give" element={<Navigate to="/es/donar/" replace />} />
+          <Route path="es/ofrendar" element={<Navigate to="/es/donar/" replace />} />
+          <Route path="es/dar" element={<Navigate to="/es/donar/" replace />} />
           <Route path="visita" element={<VisitPage />} />
           <Route path="fe" element={<FaithPage />} />
           <Route path="projetos" element={<Navigate to="/contribuir/edificacao/" replace />} />

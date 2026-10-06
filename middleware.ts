@@ -21,7 +21,8 @@ export default function middleware(request: Request) {
     return;
   }
 
-  const dest = isRoot ? "/en/" : isFaith ? "/en/faith/" : "/en/give/";
+  const destEn = isRoot ? "/en/" : isFaith ? "/en/faith/" : "/en/give/";
+  const destEs = isRoot ? "/es/" : isFaith ? "/es/fe/" : "/es/donar/";
 
   // 1. Check user explicit cookie preference
   const cookieHeader = request.headers.get("cookie") || "";
@@ -32,20 +33,27 @@ export default function middleware(request: Request) {
     return; // User explicitly prefers Portuguese
   }
   if (pref === "en") {
-    return Response.redirect(new URL(dest, request.url), 307);
+    return Response.redirect(new URL(destEn, request.url), 307);
+  }
+  if (pref === "es") {
+    return Response.redirect(new URL(destEs, request.url), 307);
   }
 
   // 2. Check Accept-Language header
   const acceptLanguage = request.headers.get("accept-language") || "";
-  if (checkEnglishPreference(acceptLanguage)) {
-    return Response.redirect(new URL(dest, request.url), 307);
+  const preferredLang = detectPreferredLanguage(acceptLanguage);
+  if (preferredLang === "en") {
+    return Response.redirect(new URL(destEn, request.url), 307);
+  }
+  if (preferredLang === "es") {
+    return Response.redirect(new URL(destEs, request.url), 307);
   }
 
   return;
 }
 
-function checkEnglishPreference(acceptLanguage: string): boolean {
-  if (!acceptLanguage) return false;
+function detectPreferredLanguage(acceptLanguage: string): "pt" | "en" | "es" {
+  if (!acceptLanguage) return "pt";
 
   const parts = acceptLanguage.split(",").map((item) => {
     const [lang, qVal] = item.trim().split(";");
@@ -54,18 +62,29 @@ function checkEnglishPreference(acceptLanguage: string): boolean {
   });
 
   let enScore = 0;
+  let esScore = 0;
   let ptScore = 0;
 
   for (const part of parts) {
     if (part.lang.startsWith("en") && part.q > enScore) {
       enScore = part.q;
     }
+    if (part.lang.startsWith("es") && part.q > esScore) {
+      esScore = part.q;
+    }
     if (part.lang.startsWith("pt") && part.q > ptScore) {
       ptScore = part.q;
     }
   }
 
-  return enScore > 0 && enScore >= ptScore;
+  if (esScore > 0 && esScore >= ptScore && esScore >= enScore) {
+    return "es";
+  }
+  if (enScore > 0 && enScore >= ptScore && enScore > esScore) {
+    return "en";
+  }
+
+  return "pt";
 }
 
 export const config = {

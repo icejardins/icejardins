@@ -20,3 +20,15 @@ export const faithIntroEn = {
   ]
 };
 
+export const faithIntroEs = {
+  heroTitle: "¿En qué creemos?",
+  heroSubtitle: "La Confesión de Fe de la Iglesia Cristiana Evangélica de Brasil (ICEB).",
+  heroHighlight: "Usted tiene derecho a saber en qué creemos.",
+  intro: [
+    "Una confesión de fe es una forma honesta y transparente de dar a conocer lo que cree una comunidad.",
+    "La Biblia tiene mayor autoridad que cualquier confesión de fe. La confesión de fe es simplemente una síntesis de cómo una iglesia interpreta las Escrituras, ayudándonos a caminar en unidad en las verdades centrales de la fe.",
+    "Las iglesias saludables tienen confesiones de fe y las publican abiertamente... Vale la pena considerarlo."
+  ]
+};
+
+

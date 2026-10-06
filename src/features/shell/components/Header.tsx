@@ -30,8 +30,19 @@ export function Header() {
   const navigate = useNavigate();
 
   const isEnglish = location.pathname.startsWith("/en");
+  const isSpanish = location.pathname.startsWith("/es");
+  const currentLang: "pt" | "en" | "es" = isSpanish ? "es" : isEnglish ? "en" : "pt";
 
-  const menuItems = isEnglish
+  const menuItems = isSpanish
+    ? [
+        { name: "Inicio", url: "/es/" },
+        { name: "Nosotros", url: "/es/#about" },
+        { name: "Lo que creemos", url: "/es/fe/" },
+        { name: "Proyecto de Edificación", url: "/es/donar/proyecto-edificacion/" },
+        { name: "Visita", url: "/visita/" },
+        { name: "Donar", url: "/es/donar/" }
+      ]
+    : isEnglish
     ? [
         { name: "Home", url: "/en/" },
         { name: "About", url: "/en/#about" },
@@ -42,21 +53,50 @@ export function Header() {
       ]
     : site.menu;
 
-  const handleLanguageChange = (targetLang: "pt" | "en") => {
+  const handleLanguageChange = (targetLang: "pt" | "en" | "es") => {
     setLanguagePreference(targetLang);
-    if (targetLang === "en") {
+    if (targetLang === "es") {
       if (
         location.pathname.startsWith("/contribuir/edificacao") ||
-        location.pathname.startsWith("/projetos")
+        location.pathname.startsWith("/projetos") ||
+        location.pathname.startsWith("/en/give/building-project") ||
+        location.pathname.startsWith("/en/projects")
+      ) {
+        navigate("/es/donar/proyecto-edificacion/");
+      } else if (
+        location.pathname.startsWith("/contribuir") ||
+        location.pathname.startsWith("/doacoes") ||
+        location.pathname.startsWith("/doe") ||
+        location.pathname.startsWith("/en/give")
+      ) {
+        navigate("/es/donar/");
+      } else if (
+        location.pathname.startsWith("/fe") ||
+        location.pathname.startsWith("/en/faith")
+      ) {
+        navigate("/es/fe/");
+      } else {
+        navigate("/es/");
+      }
+    } else if (targetLang === "en") {
+      if (
+        location.pathname.startsWith("/contribuir/edificacao") ||
+        location.pathname.startsWith("/projetos") ||
+        location.pathname.startsWith("/es/donar/proyecto-edificacion") ||
+        location.pathname.startsWith("/es/proyectos")
       ) {
         navigate("/en/give/building-project/");
       } else if (
         location.pathname.startsWith("/contribuir") ||
         location.pathname.startsWith("/doacoes") ||
-        location.pathname.startsWith("/doe")
+        location.pathname.startsWith("/doe") ||
+        location.pathname.startsWith("/es/donar")
       ) {
         navigate("/en/give/");
-      } else if (location.pathname.startsWith("/fe")) {
+      } else if (
+        location.pathname.startsWith("/fe") ||
+        location.pathname.startsWith("/es/fe")
+      ) {
         navigate("/en/faith/");
       } else {
         navigate("/en/");
@@ -65,12 +105,20 @@ export function Header() {
       if (
         location.pathname.startsWith("/en/give/building-project") ||
         location.pathname.startsWith("/en/projects") ||
-        location.pathname.startsWith("/en/projetos")
+        location.pathname.startsWith("/en/projetos") ||
+        location.pathname.startsWith("/es/donar/proyecto-edificacion") ||
+        location.pathname.startsWith("/es/proyectos")
       ) {
         navigate("/contribuir/edificacao/");
-      } else if (location.pathname.startsWith("/en/give")) {
+      } else if (
+        location.pathname.startsWith("/en/give") ||
+        location.pathname.startsWith("/es/donar")
+      ) {
         navigate("/contribuir/");
-      } else if (location.pathname.startsWith("/en/faith")) {
+      } else if (
+        location.pathname.startsWith("/en/faith") ||
+        location.pathname.startsWith("/es/fe")
+      ) {
         navigate("/fe/");
       } else {
         navigate("/");
@@ -132,9 +180,9 @@ export function Header() {
 
   return (
     <header className={styles.wrapper} id="site-header">
-      <nav className={`navbar navbar-expand-lg ${styles.navbar}`} aria-label={isEnglish ? "Main navigation" : "Navegação principal"}>
+      <nav className={`navbar navbar-expand-lg ${styles.navbar}`} aria-label={isSpanish ? "Navegación principal" : isEnglish ? "Main navigation" : "Navegação principal"}>
         <div className="container-fluid px-3 px-lg-5">
-          <Link className={`navbar-brand ${styles.brand}`} to={isEnglish ? "/en/" : "/"} aria-label="Página inicial ICE Jardins">
+          <Link className={`navbar-brand ${styles.brand}`} to={isSpanish ? "/es/" : isEnglish ? "/en/" : "/"} aria-label={isSpanish ? "Página de inicio ICE Jardins" : isEnglish ? "ICE Jardins Home page" : "Página inicial ICE Jardins"}>
             <img
               src={brandLogoSrc}
               alt="ICE Jardins"
@@ -151,7 +199,7 @@ export function Header() {
             className="navbar-toggler"
             aria-controls="navbar-content"
             aria-expanded={isOpen}
-            aria-label={isEnglish ? "Open menu" : "Abrir menu"}
+            aria-label={isSpanish ? "Abrir menú" : isEnglish ? "Open menu" : "Abrir menu"}
             onClick={() => setIsOpen((current) => !current)}
           >
             <span className="navbar-toggler-icon" />
@@ -186,28 +234,36 @@ export function Header() {
                   onClick={toggleTheme}
                   aria-label={
                     theme === "dark"
-                      ? isEnglish
-                        ? "Light theme - Toggle theme"
-                        : "Tema Claro - Alternar tema"
-                      : isEnglish
-                        ? "Dark theme - Toggle theme"
-                        : "Tema Escuro - Alternar tema"
+                      ? isSpanish
+                        ? "Tema Claro - Cambiar tema"
+                        : isEnglish
+                          ? "Light theme - Toggle theme"
+                          : "Tema Claro - Alternar tema"
+                      : isSpanish
+                        ? "Tema Oscuro - Cambiar tema"
+                        : isEnglish
+                          ? "Dark theme - Toggle theme"
+                          : "Tema Escuro - Alternar tema"
                   }
                 >
                   {theme === "dark"
-                    ? isEnglish
-                      ? "Light"
-                      : "Claro"
-                    : isEnglish
-                      ? "Dark"
-                      : "Escuro"}
+                    ? isSpanish
+                      ? "Claro"
+                      : isEnglish
+                        ? "Light"
+                        : "Claro"
+                    : isSpanish
+                      ? "Oscuro"
+                      : isEnglish
+                        ? "Dark"
+                        : "Escuro"}
                 </button>
               </li>
               <li className="nav-item d-flex align-items-center">
                 <div className={styles.langSwitcher} role="group" aria-label="Language selector">
                   <button
                     type="button"
-                    className={`${styles.langBtn} ${!isEnglish ? styles.langBtnActive : ""}`}
+                    className={`${styles.langBtn} ${currentLang === "pt" ? styles.langBtnActive : ""}`}
                     onClick={() => handleLanguageChange("pt")}
                     aria-label="PT - Versão em Português"
                   >
@@ -215,24 +271,32 @@ export function Header() {
                   </button>
                   <button
                     type="button"
-                    className={`${styles.langBtn} ${isEnglish ? styles.langBtnActive : ""}`}
+                    className={`${styles.langBtn} ${currentLang === "en" ? styles.langBtnActive : ""}`}
                     onClick={() => handleLanguageChange("en")}
                     aria-label="EN - English version"
                   >
                     EN
+                  </button>
+                  <button
+                    type="button"
+                    className={`${styles.langBtn} ${currentLang === "es" ? styles.langBtnActive : ""}`}
+                    onClick={() => handleLanguageChange("es")}
+                    aria-label="ES - Versión en Español"
+                  >
+                    ES
                   </button>
                 </div>
               </li>
             </ul>
             <div className={styles.searchBox}>
               <label htmlFor="site-search" className="visually-hidden">
-                {isEnglish ? "Search content" : "Buscar conteúdo"}
+                {isSpanish ? "Buscar contenido" : isEnglish ? "Search content" : "Buscar conteúdo"}
               </label>
               <input
                 id="site-search"
                 type="search"
                 className="form-control"
-                placeholder={isEnglish ? "Search sermons and pages" : "Buscar sermões e páginas"}
+                placeholder={isSpanish ? "Buscar sermones y páginas" : isEnglish ? "Search sermons and pages" : "Buscar sermões e páginas"}
                 value={query}
                 onFocus={handleSearchInteraction}
                 onPointerDown={handleSearchInteraction}
@@ -250,19 +314,21 @@ export function Header() {
         <section
           className={styles.searchResults}
           aria-live="polite"
-          aria-label={isEnglish ? "Search results" : "Resultados da busca"}
+          aria-label={isSpanish ? "Resultados de la búsqueda" : isEnglish ? "Search results" : "Resultados da busca"}
         >
           <div className="container py-3">
             {!isSearchReady ? (
               <p className="mb-0">
-                {isEnglish ? "Loading search index..." : "Carregando índice de busca..."}
+                {isSpanish ? "Cargando índice de búsqueda..." : isEnglish ? "Loading search index..." : "Carregando índice de busca..."}
               </p>
             ) : null}
             {isSearchReady && filteredResults.length === 0 ? (
               <p className="mb-0">
-                {isEnglish
-                  ? `No results found for “${query}”.`
-                  : `Nenhum resultado encontrado para “${query}”.`}
+                {isSpanish
+                  ? `No se encontraron resultados para “${query}”.`
+                  : isEnglish
+                    ? `No results found for “${query}”.`
+                    : `Nenhum resultado encontrado para “${query}”.`}
               </p>
             ) : null}
             {filteredResults.length > 0 ? (

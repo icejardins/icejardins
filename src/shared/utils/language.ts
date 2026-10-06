@@ -1,4 +1,4 @@
-export type Language = "pt" | "en";
+export type Language = "pt" | "en" | "es";
 
 export const LANG_COOKIE_NAME = "ice_lang";
 
@@ -11,7 +11,7 @@ export function getLanguagePreference(): Language | null {
   const match = document.cookie.match(new RegExp(`(?:^|; )${LANG_COOKIE_NAME}=([^;]*)`));
   if (match) {
     const val = match[1].toLowerCase();
-    if (val === "pt" || val === "en") {
+    if (val === "pt" || val === "en" || val === "es") {
       return val;
     }
   }
@@ -19,7 +19,7 @@ export function getLanguagePreference(): Language | null {
   // 2. Check localStorage
   try {
     const stored = localStorage.getItem(LANG_COOKIE_NAME);
-    if (stored === "pt" || stored === "en") {
+    if (stored === "pt" || stored === "en" || stored === "es") {
       return stored;
     }
   } catch {
@@ -57,6 +57,9 @@ export function getBrowserLanguage(): Language {
     if (lower.startsWith("en")) {
       return "en";
     }
+    if (lower.startsWith("es")) {
+      return "es";
+    }
     if (lower.startsWith("pt")) {
       return "pt";
     }
@@ -73,10 +76,26 @@ export function shouldRedirectToEnglish(): boolean {
   if (pref === "en") {
     return true;
   }
-  if (pref === "pt") {
+  if (pref === "pt" || pref === "es") {
     return false;
   }
 
   // No explicit preference: check browser language
   return getBrowserLanguage() === "en";
+}
+
+export function shouldRedirectToSpanish(): boolean {
+  if (typeof navigator !== "undefined" && /bot|crawler|spider|google|bing|lighthouse/i.test(navigator.userAgent)) {
+    return false;
+  }
+  const pref = getLanguagePreference();
+  if (pref === "es") {
+    return true;
+  }
+  if (pref === "pt" || pref === "en") {
+    return false;
+  }
+
+  // No explicit preference: check browser language
+  return getBrowserLanguage() === "es";
 }

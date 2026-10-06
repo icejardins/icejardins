@@ -108,9 +108,10 @@ async function main() {
       html = html.replace("</head>", `    <link rel="canonical" href="${canonicalUrl}" data-rh="true" />\n  </head>`);
     }
 
-    // Set correct <html lang="..."> attribute for English vs Portuguese routes
+    // Set correct <html lang="..."> attribute for English, Spanish, vs Portuguese routes
     const isEnRoute = route.startsWith("/en/") || route === "/en";
-    const targetLang = isEnRoute ? "en" : "pt-br";
+    const isEsRoute = route.startsWith("/es/") || route === "/es";
+    const targetLang = isEnRoute ? "en" : isEsRoute ? "es" : "pt-br";
     html = html.replace(/<html(?:\s+lang="[^"]*")?/i, `<html lang="${targetLang}"`);
 
     if (html.includes("<!--app-head-->")) {
