@@ -87,8 +87,8 @@ export const homeContentEn = {
       { label: "Outreach Basin", value: "240,000+ residents" },
       { label: "Campus Plan", value: "Sanctuary, Children's Wing & Fellowship" }
     ],
-    detailsLink: "/en/give/building-project/",
-    detailsLabel: "Explore Building Project & Regional Study",
+    detailsLink: "/en/give/temple-project/",
+    detailsLabel: "Explore Temple Project & Regional Study",
     earthUrl: "https://earth.google.com/earth/d/1KC_qk9um_6lkK5n5C-WTyGA_GdvzuE8_?usp=sharing",
     earthLabel: "View in Google Earth (3D)"
   }

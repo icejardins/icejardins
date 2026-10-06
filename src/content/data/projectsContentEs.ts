@@ -3,7 +3,7 @@ import type { DemographicMetric, NeighborhoodReach, ProjectPhase } from "./proje
 export const projectsContentEs = {
   hero: {
     badge: "Proyectos ICE Jardins",
-    title: "Construcción de Nuestro Futuro Templo",
+    title: "Proyecto del Templo: Construcción de Nuestra Sede",
     subtitle: "Un espacio sagrado dedicado a Dios, construido para las generaciones venideras en Jardim Botânico y Tororó.",
     verse: "“Entonces les dije: Levantémonos y edifiquemos. Y esforzaron sus manos para bien.”",
     reference: "Nehemías 2:18",
@@ -271,7 +271,7 @@ export const projectsContentEs = {
   },
 
   givingCta: {
-    title: "Únase a Nosotros en la Construcción del Templo",
+    title: "Únase a Nosotros en el Proyecto del Templo",
     subtitle:
       "Sus oraciones y colaboración financiera ayudan a saldar las cuotas del terreno y preparar este lugar sagrado para las futuras generaciones.",
     usaTaxDeductible: "501(c)(3) Deducible de Impuestos para Donantes en EE.UU.",
@@ -286,6 +286,6 @@ export const projectsContentEs = {
     account: "22901-6",
     recipient: "IGREJA CRISTA EVANGELICA JARDINS - ICE JARDINS",
     whatsappUrl:
-      "https://wa.me/5561982624952?text=¡Hola!%20Me%20gustaría%20saber%20más%20sobre%20el%20Proyecto%20de%20Edificación%20de%20ICE%20Jardins"
+      "https://wa.me/5561982624952?text=¡Hola!%20Me%20gustaría%20saber%20más%20sobre%20el%20Proyecto%20del%20Templo%20de%20ICE%20Jardins"
   }
 };

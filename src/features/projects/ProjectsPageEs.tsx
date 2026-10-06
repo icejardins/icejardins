@@ -61,9 +61,9 @@ export default function ProjectsPageEs() {
   return (
     <>
       <SeoHead
-        title="Proyecto de Edificación: Sede Definitiva | Iglesia ICE Jardins"
+        title="Proyecto del Templo: Sede Definitiva | Iglesia ICE Jardins"
         description="Subpágina de la Iglesia ICE Jardins dedicada al proyecto de construcción del templo y sede definitiva en Fazenda Taboquinha, Jardim Botânico, Brasília. Diagnóstico demográfico, recorrido 3D en Google Earth, estado del terreno y formas de donar."
-        canonicalPath="/es/donar/proyecto-edificacion/"
+        canonicalPath="/es/donar/proyecto-templo/"
         image="/images/projetos/templo-ice-jardins-conceito.webp"
         jsonLd={projectSchemaEs}
       />
@@ -85,7 +85,7 @@ export default function ProjectsPageEs() {
               <span className={styles.breadcrumbSep}>/</span>
             </li>
             <li aria-current="page" className={styles.breadcrumbCurrent}>
-              Proyecto de Edificación (Fazenda Taboquinha)
+              Proyecto del Templo (Fazenda Taboquinha)
             </li>
           </ol>
         </div>
@@ -144,7 +144,7 @@ export default function ProjectsPageEs() {
 
             <div className={styles.statusActions}>
               <a href="#how-to-partner" className={styles.ctaContributeBtn}>
-                <Icon name="heart-fill" /> Colaborar con el Proyecto de Edificación
+                <Icon name="heart-fill" /> Colaborar con el Proyecto del Templo
               </a>
               <a
                 href={projectsContentEs.givingCta.whatsappUrl}

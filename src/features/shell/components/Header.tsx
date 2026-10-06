@@ -29,8 +29,11 @@ export function Header() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const isEnglish = location.pathname.startsWith("/en");
-  const isSpanish = location.pathname.startsWith("/es");
+  const searchParams = new URLSearchParams(location.search);
+  const langParam = searchParams.get("lang");
+  const isSermonPage = location.pathname.startsWith("/posts/");
+  const isEnglish = isSermonPage ? langParam === "en" : location.pathname.startsWith("/en");
+  const isSpanish = isSermonPage ? langParam === "es" : location.pathname.startsWith("/es");
   const currentLang: "pt" | "en" | "es" = isSpanish ? "es" : isEnglish ? "en" : "pt";
 
   const menuItems = isSpanish
@@ -38,7 +41,7 @@ export function Header() {
         { name: "Inicio", url: "/es/" },
         { name: "Nosotros", url: "/es/#about" },
         { name: "Lo que creemos", url: "/es/fe/" },
-        { name: "Proyecto de Edificación", url: "/es/donar/proyecto-edificacion/" },
+        { name: "Proyecto del Templo", url: "/es/donar/proyecto-templo/" },
         { name: "Visita", url: "/visita/" },
         { name: "Donar", url: "/es/donar/" }
       ]
@@ -47,7 +50,7 @@ export function Header() {
         { name: "Home", url: "/en/" },
         { name: "About", url: "/en/#about" },
         { name: "What We Believe", url: "/en/faith/" },
-        { name: "Building Project", url: "/en/give/building-project/" },
+        { name: "Temple Project", url: "/en/give/temple-project/" },
         { name: "Visit", url: "/visita/" },
         { name: "Give", url: "/en/give/" }
       ]
@@ -57,12 +60,14 @@ export function Header() {
     setLanguagePreference(targetLang);
     if (targetLang === "es") {
       if (
+        location.pathname.startsWith("/contribuir/projeto-templo") ||
         location.pathname.startsWith("/contribuir/edificacao") ||
         location.pathname.startsWith("/projetos") ||
+        location.pathname.startsWith("/en/give/temple-project") ||
         location.pathname.startsWith("/en/give/building-project") ||
         location.pathname.startsWith("/en/projects")
       ) {
-        navigate("/es/donar/proyecto-edificacion/");
+        navigate("/es/donar/proyecto-templo/");
       } else if (
         location.pathname.startsWith("/contribuir") ||
         location.pathname.startsWith("/doacoes") ||
@@ -75,17 +80,21 @@ export function Header() {
         location.pathname.startsWith("/en/faith")
       ) {
         navigate("/es/fe/");
+      } else if (location.pathname.startsWith("/posts/")) {
+        navigate(`${location.pathname}?lang=es`);
       } else {
         navigate("/es/");
       }
     } else if (targetLang === "en") {
       if (
+        location.pathname.startsWith("/contribuir/projeto-templo") ||
         location.pathname.startsWith("/contribuir/edificacao") ||
         location.pathname.startsWith("/projetos") ||
+        location.pathname.startsWith("/es/donar/proyecto-templo") ||
         location.pathname.startsWith("/es/donar/proyecto-edificacion") ||
         location.pathname.startsWith("/es/proyectos")
       ) {
-        navigate("/en/give/building-project/");
+        navigate("/en/give/temple-project/");
       } else if (
         location.pathname.startsWith("/contribuir") ||
         location.pathname.startsWith("/doacoes") ||
@@ -98,18 +107,22 @@ export function Header() {
         location.pathname.startsWith("/es/fe")
       ) {
         navigate("/en/faith/");
+      } else if (location.pathname.startsWith("/posts/")) {
+        navigate(`${location.pathname}?lang=en`);
       } else {
         navigate("/en/");
       }
     } else {
       if (
+        location.pathname.startsWith("/en/give/temple-project") ||
         location.pathname.startsWith("/en/give/building-project") ||
         location.pathname.startsWith("/en/projects") ||
         location.pathname.startsWith("/en/projetos") ||
+        location.pathname.startsWith("/es/donar/proyecto-templo") ||
         location.pathname.startsWith("/es/donar/proyecto-edificacion") ||
         location.pathname.startsWith("/es/proyectos")
       ) {
-        navigate("/contribuir/edificacao/");
+        navigate("/contribuir/projeto-templo/");
       } else if (
         location.pathname.startsWith("/en/give") ||
         location.pathname.startsWith("/es/donar")
@@ -120,6 +133,8 @@ export function Header() {
         location.pathname.startsWith("/es/fe")
       ) {
         navigate("/fe/");
+      } else if (location.pathname.startsWith("/posts/")) {
+        navigate(location.pathname);
       } else {
         navigate("/");
       }

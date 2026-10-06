@@ -27,25 +27,25 @@ async function main() {
 
   const docs = [
     {
-      title: "Construção do Futuro Templo | Projetos ICE Jardins",
-      description: "Conheça o projeto de construção do novo templo da ICE Jardins na Fazenda Taboquinha (Gleba 01), Jardim Botânico - DF. Dados habitacionais, terreno sendo pago, mapa 3D no Google Earth e como contribuir.",
+      title: "Projeto do Templo: Sede Definitiva | ICE Jardins",
+      description: "Conheça o projeto do templo sede da ICE Jardins na Fazenda Taboquinha (Gleba 01), Jardim Botânico - DF. Dados habitacionais, terreno sendo pago, mapa 3D no Google Earth e como contribuir.",
       content: "Construção do novo templo sede da Igreja Cristã Evangélica Jardins na Fazenda Taboquinha Gleba 01 Jardim Botânico DF. Terreno de 24.368 m2 adquirido e sendo pago parcelado. Dados habitacionais, população do Jardim Botânico, Tororó, Mangueiral e São Sebastião. Visualização no Google Earth em 3D, download do arquivo KML, fases da obra, templo, ministério infantil, estacionamento e contribuição via PIX.",
       image: "/images/projetos/templo-ice-jardins-conceito.webp",
-      permalink: "/projetos/"
+      permalink: "/contribuir/projeto-templo/"
     },
     {
-      title: "Future Church Campus & Temple Building Project | ICE Jardins Church",
-      description: "Learn about the future church building project of ICE Jardins Church at Fazenda Taboquinha (Gleba 01), Jardim Botânico, Brasília. Housing data, outreach potential, 3D Google Earth tour, land status (currently being paid off), and giving options.",
+      title: "Temple Project: Future Church Campus | ICE Jardins Church",
+      description: "Learn about the future church campus and temple project of ICE Jardins Church at Fazenda Taboquinha (Gleba 01), Jardim Botânico, Brasília. Housing data, outreach potential, 3D Google Earth tour, land status (currently being paid off), and giving options.",
       content: "Building the permanent church campus of ICE Jardins Church at Fazenda Taboquinha Gleba 01 Jardim Botânico Brasília DF Brazil. 6-acre land acquired and currently being paid off. Demographic data for Jardim Botânico, Tororó, Mangueiral, and São Sebastião. Google Earth 3D tour, KML file download, project phases, sanctuary, children's ministry, parking, and tax-deductible US giving via Reliant Mission Acts 29.",
       image: "/images/projetos/templo-ice-jardins-conceito.webp",
-      permalink: "/en/projects/"
+      permalink: "/en/give/temple-project/"
     },
     {
-      title: "Construcción del Futuro Templo | Proyectos ICE Jardins",
-      description: "Conozca el proyecto de construcción del nuevo templo de ICE Jardins en Fazenda Taboquinha (Gleba 01), Jardim Botânico - DF. Datos habitacionales, terreno en pago, mapa 3D en Google Earth y cómo donar.",
+      title: "Proyecto del Templo: Sede Definitiva | ICE Jardins",
+      description: "Conozca el proyecto del templo sede de ICE Jardins en Fazenda Taboquinha (Gleba 01), Jardim Botânico - DF. Datos habitacionales, terreno en pago, mapa 3D en Google Earth y cómo donar.",
       content: "Construcción del nuevo templo sede de la Iglesia Cristiana Evangélica Jardins en Fazenda Taboquinha Gleba 01 Jardim Botânico DF. Terreno de 24.368 m2 adquirido y en proceso de pago. Datos demográficos de Jardim Botânico, Tororó, Mangueiral y São Sebastião. Recorrido 3D en Google Earth, descarga de archivo KML, fases del proyecto, templo, ministerio infantil, estacionamiento y donación vía PIX y Reliant.",
       image: "/images/projetos/templo-ice-jardins-conceito.webp",
-      permalink: "/es/proyectos/"
+      permalink: "/es/donar/proyecto-templo/"
     },
     ...pages.map((page) => ({
       title: page.title,

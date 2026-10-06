@@ -162,8 +162,8 @@ export default function GivePage() {
                 <div className={styles.pixDesignationNotice}>
                   <Icon name="info-circle" />
                   <span>
-                    <strong>Deseja ofertar para a Edificação?</strong> Você pode escrever{" "}
-                    <em>"Edificação"</em> ou <em>"Terreno"</em> na descrição do PIX ou
+                    <strong>Deseja ofertar para o Projeto do Templo?</strong> Você pode escrever{" "}
+                    <em>"Projeto do Templo"</em> ou <em>"Terreno"</em> na descrição do PIX ou
                     transferência bancária.
                   </span>
                 </div>

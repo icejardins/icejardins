@@ -471,11 +471,13 @@ async function main() {
     "/",
     "/en/",
     "/en/give/",
+    "/en/give/temple-project/",
     "/en/give/building-project/",
     "/en/faith/",
     "/en/projects/",
     "/es/",
     "/es/donar/",
+    "/es/donar/proyecto-templo/",
     "/es/donar/proyecto-edificacion/",
     "/es/fe/",
     "/es/proyectos/",
@@ -483,6 +485,7 @@ async function main() {
     "/posts/",
     "/recursos/",
     "/contribuir/",
+    "/contribuir/projeto-templo/",
     "/contribuir/edificacao/",
     "/obrigado-guia/",
     "/descadastro/"
@@ -547,12 +550,15 @@ async function main() {
     "/fe/": { pt: "/fe/", en: "/en/faith/", es: "/es/fe/" },
     "/en/faith/": { pt: "/fe/", en: "/en/faith/", es: "/es/fe/" },
     "/es/fe/": { pt: "/fe/", en: "/en/faith/", es: "/es/fe/" },
-    "/contribuir/edificacao/": { pt: "/contribuir/edificacao/", en: "/en/give/building-project/", es: "/es/donar/proyecto-edificacion/" },
-    "/en/give/building-project/": { pt: "/contribuir/edificacao/", en: "/en/give/building-project/", es: "/es/donar/proyecto-edificacion/" },
-    "/es/donar/proyecto-edificacion/": { pt: "/contribuir/edificacao/", en: "/en/give/building-project/", es: "/es/donar/proyecto-edificacion/" },
-    "/projetos/": { pt: "/projetos/", en: "/en/projects/", es: "/es/proyectos/" },
-    "/en/projects/": { pt: "/projetos/", en: "/en/projects/", es: "/es/proyectos/" },
-    "/es/proyectos/": { pt: "/projetos/", en: "/en/projects/", es: "/es/proyectos/" }
+    "/contribuir/projeto-templo/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" },
+    "/en/give/temple-project/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" },
+    "/es/donar/proyecto-templo/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" },
+    "/contribuir/edificacao/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" },
+    "/en/give/building-project/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" },
+    "/es/donar/proyecto-edificacion/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" },
+    "/projetos/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" },
+    "/en/projects/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" },
+    "/es/proyectos/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" }
   };
 
   const sitemapEntries = sortedRoutes
@@ -573,16 +579,19 @@ async function main() {
         cleanedRoute === "/fe/" ||
         cleanedRoute === "/projetos/" ||
         cleanedRoute === "/contribuir/" ||
+        cleanedRoute === "/contribuir/projeto-templo/" ||
         cleanedRoute === "/contribuir/edificacao/" ||
         cleanedRoute === "/en/" ||
         cleanedRoute === "/en/give/" ||
         cleanedRoute === "/en/faith/" ||
         cleanedRoute === "/en/projects/" ||
+        cleanedRoute === "/en/give/temple-project/" ||
         cleanedRoute === "/en/give/building-project/" ||
         cleanedRoute === "/es/" ||
         cleanedRoute === "/es/donar/" ||
         cleanedRoute === "/es/fe/" ||
         cleanedRoute === "/es/proyectos/" ||
+        cleanedRoute === "/es/donar/proyecto-templo/" ||
         cleanedRoute === "/es/donar/proyecto-edificacion/" ||
         cleanedRoute === "/recursos/" ||
         cleanedRoute.startsWith("/recursos/")

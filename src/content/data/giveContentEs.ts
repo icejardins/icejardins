@@ -53,7 +53,7 @@ export const giveContentEs = {
   receipts: {
     title: "Comprobantes y Contacto",
     description:
-      "Si desea enviar su comprobante de donación o especificar el destino de su ofrenda (Diezmos, Ofrenda General, Proyecto de Edificación), no dude en ponerse en contacto con la administración de la iglesia:",
+      "Si desea enviar su comprobante de donación o especificar el destino de su ofrenda (Diezmos, Ofrenda General, Proyecto del Templo), no dude en ponerse en contacto con la administración de la iglesia:",
     email: "secretaria@icejardins.org.br",
     whatsappLink: "https://wa.me/5561982624952"
   }

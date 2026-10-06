@@ -87,8 +87,8 @@ export const homeContentEs = {
       { label: "Cuenca de Alcance", value: "240.000+ residentes" },
       { label: "Plan del Complejo", value: "Templo, Ministerio Infantil y Convivencia" }
     ],
-    detailsLink: "/es/donar/proyecto-edificacion/",
-    detailsLabel: "Conocer Proyecto de Edificación y Estudio Regional",
+    detailsLink: "/es/donar/proyecto-templo/",
+    detailsLabel: "Conocer el Proyecto del Templo y Estudio Regional",
     earthUrl: "https://earth.google.com/earth/d/1KC_qk9um_6lkK5n5C-WTyGA_GdvzuE8_?usp=sharing",
     earthLabel: "Ver en Google Earth (3D)"
   }

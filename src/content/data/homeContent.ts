@@ -91,8 +91,8 @@ export const homeContent = {
       { label: "Bacia de Alcance", value: "240.000+ pessoas" },
       { label: "Complexo", value: "Nave, Ministério Infantil e Convivência" }
     ],
-    detailsLink: "/contribuir/edificacao/",
-    detailsLabel: "Conhecer Projeto Completo & Diagnóstico",
+    detailsLink: "/contribuir/projeto-templo/",
+    detailsLabel: "Conhecer o Projeto do Templo e Diagnóstico",
     earthUrl: "https://earth.google.com/earth/d/1KC_qk9um_6lkK5n5C-WTyGA_GdvzuE8_?usp=sharing",
     earthLabel: "Ver no Google Earth (3D)"
   }

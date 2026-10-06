@@ -53,7 +53,7 @@ export const giveContentEn = {
   receipts: {
     title: "Receipts & Contact",
     description:
-      "If you would like to send your donation receipt or designate your gift (Tithes, General Offering, Building Project), feel free to contact our church administration:",
+      "If you would like to send your donation receipt or designate your gift (Tithes, General Offering, Temple Project), feel free to contact our church administration:",
     email: "secretaria@icejardins.org.br",
     whatsappLink: "https://wa.me/5561982624952"
   }

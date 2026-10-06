@@ -175,7 +175,7 @@ export default function HomePageEs() {
                     <div className={styles.sermonBody}>
                       <div className={styles.sermonMeta}>
                         <span className={styles.sermonBadge}>Sermón</span>
-                        <span>{formatDate(post.date)}</span>
+                        <span>{formatDate(post.date, "es")}</span>
                       </div>
 
                       <h3 className={styles.sermonTitle}>
@@ -323,7 +323,7 @@ export default function HomePageEs() {
                 <div className={styles.spotlightVisualWrapper}>
                   <Link
                     to={homeContentEs.buildingSpotlight.detailsLink}
-                    title="Conocer el proyecto de edificación"
+                    title="Conocer el proyecto del templo"
                   >
                     <img
                       src={homeContentEs.buildingSpotlight.image}

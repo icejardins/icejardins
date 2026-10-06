@@ -1,5 +1,5 @@
-import { Link, useParams } from "react-router";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { Link, useParams, useSearchParams } from "react-router";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { getPostBySlug } from "@/content/repositories/postBodyRepository";
 import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
 import { SeoHead } from "@/shared/components/SeoHead";
@@ -7,12 +7,32 @@ import { formatDate } from "@/core/utils/formatDate";
 import { slugify } from "@/core/utils/slugify";
 import { Icon } from "@/shared/components/Icon";
 import { trackContactConversion, trackEngagementConversion } from "@/shared/utils/analytics";
+import { getBrowserLanguage, getLanguagePreference } from "@/shared/utils/language";
+import { SermonTranslator } from "./components/SermonTranslator";
+import {
+  getGoogleTranslateFallbackUrl,
+  translateSermon,
+  type TranslatedPostData
+} from "./utils/sermonTranslationService";
 import styles from "./BlogPostPage.module.css";
 
 export default function BlogPostPage() {
   const { slug = "" } = useParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const site = getSiteConfig();
   const post = getPostBySlug(slug);
+
+  const langParam = searchParams.get("lang");
+  const initialLang: "pt" | "en" | "es" =
+    langParam === "es" ? "es" : langParam === "en" ? "en" : "pt";
+
+  const [activeLang, setActiveLang] = useState<"pt" | "en" | "es">(initialLang);
+  const [isTranslating, setIsTranslating] = useState(false);
+  const [loadingTargetLang, setLoadingTargetLang] = useState<"en" | "es" | null>(null);
+  const [translationError, setTranslationError] = useState<string | null>(null);
+  const [translatedData, setTranslatedData] = useState<TranslatedPostData | null>(null);
+  const [dismissedSuggestion, setDismissedSuggestion] = useState(false);
+
   const [scrollProgress, setScrollProgress] = useState(0);
   const contentRef = useRef<HTMLDivElement>(null);
   const [loadedBodyHtml, setLoadedBodyHtml] = useState<string | null>(post?.bodyHtml || null);
@@ -71,13 +91,152 @@ export default function BlogPostPage() {
   const canonicalPath = post?.route ?? "/posts/";
   const shareUrl = `${site.baseUrl}${canonicalPath}`;
 
+  const executeTranslation = useCallback(
+    async (targetLang: "en" | "es") => {
+      if (!post) return;
+      setIsTranslating(true);
+      setLoadingTargetLang(targetLang);
+      setTranslationError(null);
+
+      try {
+        let body = loadedBodyHtml || post.bodyHtml || "";
+        if (!body) {
+          try {
+            const res = await fetch(`/data/posts/${slug}.json`);
+            if (res.ok) {
+              const data = await res.json();
+              if (data?.bodyHtml) {
+                body = data.bodyHtml;
+                setLoadedBodyHtml(data.bodyHtml);
+              }
+            }
+          } catch {
+            // ignore network read errors; proceed
+          }
+        }
+
+        const result = await translateSermon(slug, post.title, body, post.toc, targetLang);
+        setTranslatedData(result);
+        setActiveLang(targetLang);
+      } catch {
+        setTranslationError(
+          targetLang === "es"
+            ? "No se pudo cargar la traducción al español en este momento."
+            : "Could not load the English translation at this time."
+        );
+      } finally {
+        setIsTranslating(false);
+        setLoadingTargetLang(null);
+      }
+    },
+    [post, loadedBodyHtml, slug]
+  );
+
+  // Sync translation when URL ?lang= parameter changes or on first mount
+  useEffect(() => {
+    const urlLang = searchParams.get("lang");
+    if (urlLang === "es" || urlLang === "en") {
+      if (activeLang !== urlLang || !translatedData) {
+        executeTranslation(urlLang);
+      }
+    } else if (!urlLang && activeLang !== "pt") {
+      setActiveLang("pt");
+    }
+  }, [searchParams, slug, activeLang, translatedData, executeTranslation]);
+
+  // Reset state when post slug changes
+  useEffect(() => {
+    setTranslatedData(null);
+    setTranslationError(null);
+    setDismissedSuggestion(false);
+    const urlLang = searchParams.get("lang");
+    if (urlLang === "es" || urlLang === "en") {
+      executeTranslation(urlLang);
+    } else {
+      setActiveLang("pt");
+    }
+  }, [slug]);
+
+  const handleSelectLanguage = (targetLang: "pt" | "en" | "es") => {
+    if (targetLang === "pt") {
+      setActiveLang("pt");
+      setTranslationError(null);
+      setSearchParams(
+        (prev) => {
+          const next = new URLSearchParams(prev);
+          next.delete("lang");
+          return next;
+        },
+        { replace: true }
+      );
+      return;
+    }
+
+    setSearchParams(
+      (prev) => {
+        const next = new URLSearchParams(prev);
+        next.set("lang", targetLang);
+        return next;
+      },
+      { replace: true }
+    );
+
+    executeTranslation(targetLang);
+  };
+
+  const handleRetry = () => {
+    if (loadingTargetLang) {
+      executeTranslation(loadingTargetLang);
+    } else if (activeLang === "en" || activeLang === "es") {
+      executeTranslation(activeLang);
+    } else {
+      const urlLang = searchParams.get("lang");
+      if (urlLang === "en" || urlLang === "es") {
+        executeTranslation(urlLang);
+      }
+    }
+  };
+
+  const suggestedLang = useMemo(() => {
+    if (activeLang !== "pt" || dismissedSuggestion) {
+      return null;
+    }
+    if (typeof window === "undefined") {
+      return null;
+    }
+    const pref = getLanguagePreference() || getBrowserLanguage();
+    if (pref === "es") return "es";
+    if (pref === "en") return "en";
+    return null;
+  }, [activeLang, dismissedSuggestion]);
+
+  // Update browser tab title dynamically when translation is active
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      if (activeLang !== "pt" && translatedData?.title) {
+        document.title = `${translatedData.title} | ${site.title}`;
+      } else if (activeLang === "pt" && post) {
+        document.title = post.seoTitle || `${post.title} | ${site.title}`;
+      }
+    }
+  }, [activeLang, translatedData?.title, post, site.title]);
+
+  const displayTitle =
+    activeLang !== "pt" && translatedData?.title ? translatedData.title : post?.title || "";
+
+  const displayBodyHtml =
+    activeLang !== "pt" && translatedData?.bodyHtml ? translatedData.bodyHtml : loadedBodyHtml;
+
   const relevantToc = useMemo(() => {
     if (!post) {
       return [];
     }
 
-    return (post.toc || []).filter((item) => item.depth <= 3);
-  }, [post]);
+    const sourceToc =
+      activeLang !== "pt" && translatedData?.toc ? translatedData.toc : post.toc || [];
+
+    return sourceToc.filter((item) => item.depth <= 3);
+  }, [post, activeLang, translatedData]);
 
   if (!post) {
     return (
@@ -101,7 +260,9 @@ export default function BlogPostPage() {
     "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
-    image: post.image ? [`${site.baseUrl}${post.image.startsWith("/") ? post.image : `/${post.image}`}`] : undefined,
+    image: post.image
+      ? [`${site.baseUrl}${post.image.startsWith("/") ? post.image : `/${post.image}`}`]
+      : undefined,
     datePublished: post.date,
     dateModified: post.date,
     inLanguage: "pt-BR",
@@ -146,20 +307,21 @@ export default function BlogPostPage() {
     : null;
 
   const faqList = (post as any).faq;
-  const faqSchema = Array.isArray(faqList) && faqList.length > 0
-    ? {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: faqList.map((item: any) => ({
-          "@type": "Question",
-          name: item.question || item.name,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: item.answer || item.acceptedAnswer?.text || item.text
-          }
-        }))
-      }
-    : null;
+  const faqSchema =
+    Array.isArray(faqList) && faqList.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqList.map((item: any) => ({
+            "@type": "Question",
+            name: item.question || item.name,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.answer || item.acceptedAnswer?.text || item.text
+            }
+          }))
+        }
+      : null;
 
   const pageSchemas = [
     blogPostingSchema,
@@ -168,6 +330,16 @@ export default function BlogPostPage() {
   ];
 
   const pageTitle = post.seoTitle || `${post.title} | ${site.title}`;
+
+  const readingTimeText =
+    activeLang === "es"
+      ? `${post.readingTime} min de lectura`
+      : activeLang === "en"
+      ? `${post.readingTime} min read`
+      : `${post.readingTime} min de leitura`;
+
+  const fallbackUrl =
+    activeLang !== "pt" ? getGoogleTranslateFallbackUrl(shareUrl, activeLang) : undefined;
 
   return (
     <>
@@ -191,18 +363,30 @@ export default function BlogPostPage() {
 
       <section className="container py-5">
         <div className="row g-4">
-          <article className="col-lg-9">
+          <article className="col-lg-9" lang={activeLang === "es" ? "es" : activeLang === "en" ? "en" : "pt-BR"}>
             <header className={styles.header}>
-              <h1>{post.title}</h1>
+              <h1>{displayTitle}</h1>
               <p>
-                {formatDate(post.date)} • {post.readingTime} min de leitura
+                {formatDate(post.date, activeLang)} • {readingTimeText}
               </p>
+
+              <SermonTranslator
+                currentLang={activeLang}
+                isLoading={isTranslating}
+                loadingTargetLang={loadingTargetLang}
+                error={translationError}
+                onSelectLanguage={handleSelectLanguage}
+                onRetry={handleRetry}
+                fallbackUrl={fallbackUrl}
+                suggestedLang={suggestedLang}
+                onDismissSuggestion={() => setDismissedSuggestion(true)}
+              />
             </header>
 
             {post.image ? (
               <img
                 src={post.image}
-                alt={post.title}
+                alt={displayTitle}
                 width={800}
                 height={450}
                 className={styles.featuredImage}
@@ -215,36 +399,69 @@ export default function BlogPostPage() {
             <div
               ref={contentRef}
               className={styles.content}
-              dangerouslySetInnerHTML={loadedBodyHtml ? { __html: loadedBodyHtml } : undefined}
+              dangerouslySetInnerHTML={displayBodyHtml ? { __html: displayBodyHtml } : undefined}
               suppressHydrationWarning
             />
 
-            <section className={styles.welcomeBanner} aria-label="Participe dos nossos cultos">
+            <section
+              className={styles.welcomeBanner}
+              aria-label={
+                activeLang === "es"
+                  ? "Participe de nuestros cultos"
+                  : activeLang === "en"
+                  ? "Join our services"
+                  : "Participe dos nossos cultos"
+              }
+            >
               <div className={styles.welcomeBannerHeader}>
                 <div className={styles.welcomeIconWrap} aria-hidden="true">
                   <Icon name="chat-heart-fill" />
                 </div>
                 <div>
-                  <h3 className={styles.welcomeBannerTitle}>Venha Estudar a Bíblia Conosco</h3>
+                  <h3 className={styles.welcomeBannerTitle}>
+                    {activeLang === "es"
+                      ? "Venga a Estudiar la Biblia con Nosotros"
+                      : activeLang === "en"
+                      ? "Come Study the Bible With Us"
+                      : "Venha Estudar a Bíblia Conosco"}
+                  </h3>
                   <p className={styles.welcomeBannerText}>
-                    Gostou deste estudo? Participe dos nossos cultos presenciais aos domingos às 9h30 no Jardim Botânico - DF ou converse com nossa equipe pastoral pelo WhatsApp.
+                    {activeLang === "es"
+                      ? "¿Le gustó este estudio? Participe de nuestros cultos dominicales a las 9:30 en Jardim Botânico - DF o converse con nuestro equipo pastoral por WhatsApp."
+                      : activeLang === "en"
+                      ? "Did you enjoy this study? Join our Sunday services in person at 9:30 AM in Jardim Botânico - DF or reach out to our pastoral team via WhatsApp."
+                      : "Gostou deste estudo? Participe dos nossos cultos presenciais aos domingos às 9h30 no Jardim Botânico - DF ou converse com nossa equipe pastoral pelo WhatsApp."}
                   </p>
                 </div>
               </div>
               <div className={styles.welcomeBannerActions}>
                 <Link to="/visita/" className={styles.btnVisit}>
-                  <Icon name="clock-fill" /> Planejar Visita aos Domingos
+                  <Icon name="clock-fill" />{" "}
+                  {activeLang === "es"
+                    ? "Planificar Visita el Domingo"
+                    : activeLang === "en"
+                    ? "Plan a Sunday Visit"
+                    : "Planejar Visita aos Domingos"}
                 </Link>
                 <a
                   href={`https://wa.me/5561982624952?text=${encodeURIComponent(
-                    `Olá! Li o estudo "${post.title}" no site da ICE Jardins e gostaria de conversar com a equipe pastoral.`
+                    activeLang === "es"
+                      ? `¡Hola! Leí el estudio "${displayTitle}" en el sitio de ICE Jardins y me gustaría conversar con el equipo pastoral.`
+                      : activeLang === "en"
+                      ? `Hello! I read the study "${displayTitle}" on the ICE Jardins website and would like to talk with the pastoral team.`
+                      : `Olá! Li o estudo "${post.title}" no site da ICE Jardins e gostaria de conversar com a equipe pastoral.`
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.btnWhatsapp}
                   onClick={() => trackContactConversion("sermon_welcome_banner")}
                 >
-                  <Icon name="whatsapp" /> Falar com a Equipe Pastoral
+                  <Icon name="whatsapp" />{" "}
+                  {activeLang === "es"
+                    ? "Hablar con el Equipo Pastoral"
+                    : activeLang === "en"
+                    ? "Talk to Pastoral Team"
+                    : "Falar com a Equipe Pastoral"}
                 </a>
               </div>
             </section>
@@ -254,7 +471,13 @@ export default function BlogPostPage() {
             <div className={styles.sidebar}>
               {relevantToc.length > 0 ? (
                 <section className={styles.sidebarBlock}>
-                  <h3>Conteúdo</h3>
+                  <h3>
+                    {activeLang === "es"
+                      ? "Contenido"
+                      : activeLang === "en"
+                      ? "Table of Contents"
+                      : "Conteúdo"}
+                  </h3>
                   <ul>
                     {relevantToc.map((heading) => (
                       <li key={heading.id}>
@@ -267,7 +490,7 @@ export default function BlogPostPage() {
 
               {post.tags.length > 0 ? (
                 <section className={styles.sidebarBlock}>
-                  <h3>Tags</h3>
+                  <h3>{activeLang === "es" ? "Etiquetas" : "Tags"}</h3>
                   <div className={styles.tags}>
                     {post.tags.map((tag) => (
                       <Link key={tag} to={`/tags/${slugify(tag)}/`}>
@@ -279,17 +502,23 @@ export default function BlogPostPage() {
               ) : null}
 
               <section className={styles.sidebarBlock}>
-                <h3>Compartilhar</h3>
+                <h3>
+                  {activeLang === "es"
+                    ? "Compartir"
+                    : activeLang === "en"
+                    ? "Share"
+                    : "Compartilhar"}
+                </h3>
                 <div className={styles.shareLinks}>
                   <a
-                    href={`https://api.whatsapp.com/send?text=${encodeURIComponent(`${post.title}: ${shareUrl}`)}`}
+                    href={`https://api.whatsapp.com/send?text=${encodeURIComponent(`${displayTitle}: ${shareUrl}`)}`}
                     target="_blank"
                     rel="noreferrer"
                   >
                     WhatsApp
                   </a>
                   <a
-                    href={`mailto:?subject=${encodeURIComponent(post.title)}&body=${encodeURIComponent(shareUrl)}`}
+                    href={`mailto:?subject=${encodeURIComponent(displayTitle)}&body=${encodeURIComponent(shareUrl)}`}
                   >
                     E-mail
                   </a>
@@ -304,9 +533,15 @@ export default function BlogPostPage() {
         type="button"
         className={styles.toTop}
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        aria-label="Voltar ao topo"
+        aria-label={
+          activeLang === "es"
+            ? "Volver arriba"
+            : activeLang === "en"
+            ? "Back to top"
+            : "Voltar ao topo"
+        }
       >
-        Topo
+        {activeLang === "es" ? "Arriba" : activeLang === "en" ? "Top" : "Topo"}
       </button>
     </>
   );

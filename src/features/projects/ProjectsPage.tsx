@@ -59,9 +59,9 @@ export default function ProjectsPage() {
   return (
     <>
       <SeoHead
-        title={`Projeto de Edificação do Novo Templo | ${site.title}`}
+        title={`Projeto do Templo: Sede Definitiva | ${site.title}`}
         description="Subpágina de contribuições da ICE Jardins dedicada ao projeto do terreno e construção do templo na Fazenda Taboquinha (Gleba 01), Jardim Botânico - DF. Dados habitacionais, potencial de alcance, 3D no Google Earth e PIX."
-        canonicalPath="/contribuir/edificacao/"
+        canonicalPath="/contribuir/projeto-templo/"
         image="/images/projetos/templo-ice-jardins-conceito.webp"
         jsonLd={projectSchema}
       />
@@ -83,7 +83,7 @@ export default function ProjectsPage() {
               <span className={styles.breadcrumbSep}>/</span>
             </li>
             <li aria-current="page" className={styles.breadcrumbCurrent}>
-              Edificação do Templo (Fazenda Taboquinha)
+              Projeto do Templo (Fazenda Taboquinha)
             </li>
           </ol>
         </div>

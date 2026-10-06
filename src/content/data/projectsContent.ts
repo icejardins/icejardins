@@ -302,7 +302,7 @@ export const projectsContent = {
     agency: "3596-3",
     account: "22901-6",
     recipient: "IGREJA CRISTA EVANGELICA JARDINS - ICE JARDINS",
-    whatsappUrl: "https://wa.me/5561982624952?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Projeto%20de%20Constru%C3%A7%C3%A3o%20do%20Templo%20da%20ICE%20Jardins",
+    whatsappUrl: "https://wa.me/5561982624952?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Projeto%20do%20Templo%20da%20ICE%20Jardins",
     internationalUrl: "https://reliant.org/acts29br.jardins"
   }
 };

@@ -152,13 +152,13 @@ export function Footer() {
                 <Link
                   to={
                     isSpanish
-                      ? "/es/donar/proyecto-edificacion/"
+                      ? "/es/donar/proyecto-templo/"
                       : isEnglish
-                        ? "/en/give/building-project/"
-                        : "/contribuir/edificacao/"
+                        ? "/en/give/temple-project/"
+                        : "/contribuir/projeto-templo/"
                   }
                 >
-                  {isSpanish ? "Proyecto de Edificación" : isEnglish ? "Building Project" : "Edificação & Templo"}
+                  {isSpanish ? "Proyecto del Templo" : isEnglish ? "Temple Project" : "Projeto do Templo"}
                 </Link>
               </li>
               <li>

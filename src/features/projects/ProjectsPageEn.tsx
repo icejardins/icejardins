@@ -61,9 +61,9 @@ export default function ProjectsPageEn() {
   return (
     <>
       <SeoHead
-        title="Building Project: Permanent Campus | ICE Jardins Church"
-        description="Giving subpage of ICE Jardins Church dedicated to the permanent church campus and temple building project at Fazenda Taboquinha, Jardim Botânico, Brasília. Demographics, 3D Google Earth tour, land status, and giving options."
-        canonicalPath="/en/give/building-project/"
+        title="Temple Project: Permanent Campus | ICE Jardins Church"
+        description="Giving subpage of ICE Jardins Church dedicated to the permanent church campus and temple project at Fazenda Taboquinha, Jardim Botânico, Brasília. Demographics, 3D Google Earth tour, land status, and giving options."
+        canonicalPath="/en/give/temple-project/"
         image="/images/projetos/templo-ice-jardins-conceito.webp"
         jsonLd={projectSchemaEn}
       />
@@ -85,7 +85,7 @@ export default function ProjectsPageEn() {
               <span className={styles.breadcrumbSep}>/</span>
             </li>
             <li aria-current="page" className={styles.breadcrumbCurrent}>
-              Building Project (Fazenda Taboquinha)
+              Temple Project (Fazenda Taboquinha)
             </li>
           </ol>
         </div>
@@ -144,7 +144,7 @@ export default function ProjectsPageEn() {
 
             <div className={styles.statusActions}>
               <a href="#how-to-partner" className={styles.ctaContributeBtn}>
-                <Icon name="heart-fill" /> Partner with the Building Project
+                <Icon name="heart-fill" /> Partner with the Temple Project
               </a>
               <a
                 href={projectsContentEn.givingCta.whatsappUrl}

@@ -69,7 +69,7 @@ export default function GivePageEn() {
     <>
       <SeoHead
         title="Tithes, Offerings & Giving | ICE Jardins Church"
-        description="Partner with the ministries, land acquisition, and church building project of ICE Jardins Church in Brasília, Brazil. Tax-deductible giving available for US donors via Reliant (Acts 29), plus international SWIFT and PIX."
+        description="Partner with the ministries, land acquisition, and temple project of ICE Jardins Church in Brasília, Brazil. Tax-deductible giving available for US donors via Reliant (Acts 29), plus international SWIFT and PIX."
         canonicalPath="/en/give/"
       />
 

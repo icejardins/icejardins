@@ -51,12 +51,15 @@ const MULTILINGUAL_PAIRS: Record<string, { pt: string; en: string; es: string }>
   "/fe/": { pt: "/fe/", en: "/en/faith/", es: "/es/fe/" },
   "/en/faith/": { pt: "/fe/", en: "/en/faith/", es: "/es/fe/" },
   "/es/fe/": { pt: "/fe/", en: "/en/faith/", es: "/es/fe/" },
-  "/contribuir/edificacao/": { pt: "/contribuir/edificacao/", en: "/en/give/building-project/", es: "/es/donar/proyecto-edificacion/" },
-  "/en/give/building-project/": { pt: "/contribuir/edificacao/", en: "/en/give/building-project/", es: "/es/donar/proyecto-edificacion/" },
-  "/es/donar/proyecto-edificacion/": { pt: "/contribuir/edificacao/", en: "/en/give/building-project/", es: "/es/donar/proyecto-edificacion/" },
-  "/projetos/": { pt: "/contribuir/edificacao/", en: "/en/give/building-project/", es: "/es/donar/proyecto-edificacion/" },
-  "/en/projects/": { pt: "/contribuir/edificacao/", en: "/en/give/building-project/", es: "/es/donar/proyecto-edificacion/" },
-  "/es/proyectos/": { pt: "/contribuir/edificacao/", en: "/en/give/building-project/", es: "/es/donar/proyecto-edificacion/" }
+  "/contribuir/projeto-templo/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" },
+  "/en/give/temple-project/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" },
+  "/es/donar/proyecto-templo/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" },
+  "/contribuir/edificacao/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" },
+  "/en/give/building-project/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" },
+  "/es/donar/proyecto-edificacion/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" },
+  "/projetos/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" },
+  "/en/projects/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" },
+  "/es/proyectos/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" }
 };
 
 function buildChurchSchema(baseUrl: string, lang: "pt" | "en" | "es" = "pt") {
