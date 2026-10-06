@@ -23,6 +23,37 @@ function getStorageKey(slug: string, lang: string): string {
   return `ice_sermon_cache_${slug}_${lang}`;
 }
 
+function readFromStorage(key: string): string | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const val = window.localStorage.getItem(key);
+    if (val) return val;
+  } catch {
+    // Ignore localStorage errors (e.g. private mode)
+  }
+  try {
+    return window.sessionStorage.getItem(key);
+  } catch {
+    // Ignore sessionStorage errors
+  }
+  return null;
+}
+
+function writeToStorage(key: string, value: string): void {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.setItem(key, value);
+    return;
+  } catch {
+    // Ignore localStorage errors (e.g. quota exceeded)
+  }
+  try {
+    window.sessionStorage.setItem(key, value);
+  } catch {
+    // Ignore sessionStorage errors
+  }
+}
+
 function maskSlots(html: string): { masked: string; slots: string[] } {
   const slots: string[] = [];
   const masked = html.replace(/<div class="video-embed"[\s\S]*?<\/div>/g, (match) => {
@@ -143,19 +174,17 @@ export async function translateSermon(
     return memoryCache.get(cacheKey)!;
   }
 
-  // 2. Check sessionStorage
-  if (typeof window !== "undefined" && window.sessionStorage) {
+  // 2. Check persistent localStorage cache
+  const stored = readFromStorage(getStorageKey(slug, targetLang));
+  if (stored) {
     try {
-      const stored = window.sessionStorage.getItem(getStorageKey(slug, targetLang));
-      if (stored) {
-        const parsed = JSON.parse(stored) as TranslatedPostData;
-        if (parsed.title && parsed.bodyHtml) {
-          memoryCache.set(cacheKey, parsed);
-          return parsed;
-        }
+      const parsed = JSON.parse(stored) as TranslatedPostData;
+      if (parsed.title && parsed.bodyHtml) {
+        memoryCache.set(cacheKey, parsed);
+        return parsed;
       }
     } catch {
-      // sessionStorage unavailable or quota exceeded; proceed to fetch
+      // Ignore parse errors; proceed to fetch
     }
   }
 
@@ -185,15 +214,9 @@ export async function translateSermon(
     toc: translatedToc
   };
 
-  // 4. Update caches
+  // 4. Update memory and persistent localStorage cache
   memoryCache.set(cacheKey, result);
-  if (typeof window !== "undefined" && window.sessionStorage) {
-    try {
-      window.sessionStorage.setItem(getStorageKey(slug, targetLang), JSON.stringify(result));
-    } catch {
-      // Ignore sessionStorage write errors
-    }
-  }
+  writeToStorage(getStorageKey(slug, targetLang), JSON.stringify(result));
 
   return result;
 }

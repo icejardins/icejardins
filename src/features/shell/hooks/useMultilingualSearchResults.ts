@@ -106,56 +106,61 @@ export function useMultilingualSearchResults(
 
     setIsTranslating(true);
 
-    translateCardsBatch(missingToFetch, lang)
-      .then((resultMap) => {
-        if (!isMounted) return;
+    // 600ms debounce to avoid hammering translation API on fast typing
+    const debounceTimer = setTimeout(() => {
+      translateCardsBatch(missingToFetch, lang)
+        .then((resultMap) => {
+          if (!isMounted) return;
 
-        const updated = rawResults.map((doc) => {
-          const permalink = getLocalizedPermalink(doc.permalink, lang);
-          const isAlreadyLocalized =
-            (lang === "en" && doc.permalink.startsWith("/en/")) ||
-            (lang === "es" && doc.permalink.startsWith("/es/"));
+          const updated = rawResults.map((doc) => {
+            const permalink = getLocalizedPermalink(doc.permalink, lang);
+            const isAlreadyLocalized =
+              (lang === "en" && doc.permalink.startsWith("/en/")) ||
+              (lang === "es" && doc.permalink.startsWith("/es/"));
 
-          if (isAlreadyLocalized) {
+            if (isAlreadyLocalized) {
+              return {
+                title: doc.title,
+                description: doc.description,
+                permalink,
+                isTranslated: true
+              };
+            }
+
+            const slug =
+              extractPostSlug(doc.permalink) ||
+              doc.permalink.replace(/\//g, "-").replace(/^-|-$/g, "");
+            const trans = resultMap.get(slug) || getCachedCardTranslation(slug, lang);
+
+            if (trans) {
+              return {
+                title: trans.title,
+                description: trans.summary,
+                permalink,
+                isTranslated: true
+              };
+            }
+
             return {
               title: doc.title,
               description: doc.description,
               permalink,
-              isTranslated: true
+              isTranslated: false
             };
-          }
+          });
 
-          const slug = extractPostSlug(doc.permalink) || doc.permalink.replace(/\//g, "-").replace(/^-|-$/g, "");
-          const trans = resultMap.get(slug) || getCachedCardTranslation(slug, lang);
-
-          if (trans) {
-            return {
-              title: trans.title,
-              description: trans.summary,
-              permalink,
-              isTranslated: true
-            };
-          }
-
-          return {
-            title: doc.title,
-            description: doc.description,
-            permalink,
-            isTranslated: false
-          };
+          setResults(updated);
+          setIsTranslating(false);
+        })
+        .catch(() => {
+          if (!isMounted) return;
+          setIsTranslating(false);
         });
-
-        setResults(updated);
-        setIsTranslating(false);
-      })
-      .catch((err) => {
-        if (!isMounted) return;
-        console.warn("Search results translation failed:", err);
-        setIsTranslating(false);
-      });
+    }, 600);
 
     return () => {
       isMounted = false;
+      clearTimeout(debounceTimer);
     };
   }, [resultsKey, lang]);
 

@@ -17,6 +17,37 @@ function getStorageKey(slug: string, lang: string): string {
   return `ice_card_${slug}_${lang}`;
 }
 
+function readFromStorage(key: string): string | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const val = window.localStorage.getItem(key);
+    if (val) return val;
+  } catch {
+    // Ignore localStorage read errors (e.g., disabled or private browsing)
+  }
+  try {
+    return window.sessionStorage.getItem(key);
+  } catch {
+    // Ignore sessionStorage read errors
+  }
+  return null;
+}
+
+function writeToStorage(key: string, value: string): void {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.setItem(key, value);
+    return;
+  } catch {
+    // Ignore localStorage write errors (e.g., quota exceeded)
+  }
+  try {
+    window.sessionStorage.setItem(key, value);
+  } catch {
+    // Ignore sessionStorage write errors
+  }
+}
+
 export function getCachedCardTranslation(
   slug: string,
   lang: "en" | "es"
@@ -26,26 +57,24 @@ export function getCachedCardTranslation(
     return memoryCache.get(cacheKey)!;
   }
 
-  // 1. Static build-time pre-translated data (always available, 0 network requests)
+  // 1. Static build-time pre-translated data (instant, 0 network requests)
   const staticItem = staticTranslations[slug]?.[lang];
   if (staticItem && staticItem.title) {
     memoryCache.set(cacheKey, staticItem);
     return staticItem;
   }
 
-  // 2. SessionStorage cache
-  if (typeof window !== "undefined" && window.sessionStorage) {
+  // 2. Persistent localStorage cache (survives tab closing and reloads)
+  const stored = readFromStorage(getStorageKey(slug, lang));
+  if (stored) {
     try {
-      const stored = window.sessionStorage.getItem(getStorageKey(slug, lang));
-      if (stored) {
-        const parsed = JSON.parse(stored) as TranslatedCardData;
-        if (parsed.title) {
-          memoryCache.set(cacheKey, parsed);
-          return parsed;
-        }
+      const parsed = JSON.parse(stored) as TranslatedCardData;
+      if (parsed.title) {
+        memoryCache.set(cacheKey, parsed);
+        return parsed;
       }
     } catch {
-      // Ignore sessionStorage read errors
+      // Ignore parse errors
     }
   }
 
@@ -59,14 +88,7 @@ export function setCachedCardTranslation(
 ): void {
   const cacheKey = `${slug}__${lang}`;
   memoryCache.set(cacheKey, data);
-
-  if (typeof window !== "undefined" && window.sessionStorage) {
-    try {
-      window.sessionStorage.setItem(getStorageKey(slug, lang), JSON.stringify(data));
-    } catch {
-      // Ignore sessionStorage write errors
-    }
-  }
+  writeToStorage(getStorageKey(slug, lang), JSON.stringify(data));
 }
 
 export async function translateCardsBatch<
@@ -100,7 +122,7 @@ export async function translateCardsBatch<
   const queryText = queryBlocks.join("\n");
   let fullTranslatedText = "";
 
-  // 1. Primary: Serverless API proxy backed by Google Cloud Translation API
+  // 1. Primary: Serverless API proxy backed by Google Cloud Translation API (Service Account)
   try {
     const apiRes = await fetch("/api/translate", {
       method: "POST",
@@ -253,30 +275,34 @@ export function useTranslatedCards<T extends { slug: string; title: string; summ
     setIsTranslating(true);
     setError(null);
 
-    translateCardsBatch(posts, lang)
-      .then((resultMap) => {
-        if (!isMounted) return;
-        const updated = posts.map((post) => {
-          const trans = resultMap.get(post.slug);
-          if (trans) {
-            return {
-              ...post,
-              title: trans.title,
-              summary: trans.summary
-            };
-          }
-          return post;
+    // 500ms debounce before firing network requests
+    const debounceTimer = setTimeout(() => {
+      translateCardsBatch(posts, lang)
+        .then((resultMap) => {
+          if (!isMounted) return;
+          const updated = posts.map((post) => {
+            const trans = resultMap.get(post.slug);
+            if (trans) {
+              return {
+                ...post,
+                title: trans.title,
+                summary: trans.summary
+              };
+            }
+            return post;
+          });
+          setTranslatedPosts(updated);
+          setIsTranslating(false);
+        })
+        .catch(() => {
+          if (!isMounted) return;
+          setIsTranslating(false);
         });
-        setTranslatedPosts(updated);
-        setIsTranslating(false);
-      })
-      .catch(() => {
-        if (!isMounted) return;
-        setIsTranslating(false);
-      });
+    }, 500);
 
     return () => {
       isMounted = false;
+      clearTimeout(debounceTimer);
     };
   }, [postsKey, lang]);
 

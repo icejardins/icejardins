@@ -225,13 +225,22 @@ export function Header() {
     }
   };
 
+  const [debouncedQuery, setDebouncedQuery] = useState(query);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedQuery(query);
+    }, 400);
+    return () => clearTimeout(timer);
+  }, [query]);
+
   const filteredResults = useMemo(() => {
-    if (!query.trim()) {
+    if (!debouncedQuery.trim()) {
       return [];
     }
 
-    return filterAndRankDocs(searchDocs, query, currentLang);
-  }, [query, searchDocs, currentLang]);
+    return filterAndRankDocs(searchDocs, debouncedQuery, currentLang);
+  }, [debouncedQuery, searchDocs, currentLang]);
 
   const { results: displayResults, isTranslating: isTranslatingResults } =
     useMultilingualSearchResults(filteredResults, currentLang);
