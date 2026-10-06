@@ -51,6 +51,8 @@ export function AppRoutes() {
           <Route element={<MainLayout />}>
             <Route index element={<HomePage />} />
             <Route path="en" element={<HomePageEn />} />
+            <Route path="en/sermons" element={<BlogListPage />} />
+            <Route path="en/posts" element={<Navigate to="/en/sermons/" replace />} />
             <Route path="en/give" element={<GivePageEn />} />
             <Route path="en/give/temple-project" element={<ProjectsPageEn />} />
             <Route path="en/give/building-project" element={<Navigate to="/en/give/temple-project/" replace />} />
@@ -62,6 +64,9 @@ export function AppRoutes() {
             <Route path="en/contribuir" element={<Navigate to="/en/give/" replace />} />
             <Route path="en/contribua" element={<Navigate to="/en/give/" replace />} />
             <Route path="es" element={<HomePageEs />} />
+            <Route path="es/sermones" element={<BlogListPage />} />
+            <Route path="es/sermons" element={<Navigate to="/es/sermones/" replace />} />
+            <Route path="es/posts" element={<Navigate to="/es/sermones/" replace />} />
             <Route path="es/donar" element={<GivePageEs />} />
             <Route path="es/donar/proyecto-templo" element={<ProjectsPageEs />} />
             <Route path="es/donar/proyecto-edificacion" element={<Navigate to="/es/donar/proyecto-templo/" replace />} />

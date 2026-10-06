@@ -6,13 +6,23 @@ import styles from "./PostCard.module.css";
 type PostCardProps = {
   post: Post | PostMeta;
   priority?: boolean;
+  lang?: "pt" | "en" | "es";
 };
 
-export function PostCard({ post, priority = false }: PostCardProps) {
+export function PostCard({ post, priority = false, lang = "pt" }: PostCardProps) {
+  const targetRoute =
+    lang === "es"
+      ? `${post.route}?lang=es`
+      : lang === "en"
+      ? `${post.route}?lang=en`
+      : post.route;
+
+  const readLabel = lang === "es" ? "Leer" : lang === "en" ? "Read" : "Ler";
+
   return (
     <article className={styles.card}>
       {post.image ? (
-        <Link to={post.route} className={styles.imageLink}>
+        <Link to={targetRoute} className={styles.imageLink}>
           <img
             src={post.image}
             alt={post.title}
@@ -26,13 +36,13 @@ export function PostCard({ post, priority = false }: PostCardProps) {
       ) : null}
       <div className={styles.body}>
         <h2>
-          <Link to={post.route}>{post.title}</Link>
+          <Link to={targetRoute}>{post.title}</Link>
         </h2>
         <p>{post.summary}</p>
       </div>
       <footer className={styles.footer}>
-        <span>{formatDate(post.date)}</span>
-        <Link to={post.route}>Ler</Link>
+        <span>{formatDate(post.date, lang)}</span>
+        <Link to={targetRoute}>{readLabel}</Link>
       </footer>
     </article>
   );

@@ -179,7 +179,7 @@ export default function HomePageEs() {
                       </div>
 
                       <h3 className={styles.sermonTitle}>
-                        <Link to={post.route}>{post.title}</Link>
+                        <Link to={`${post.route}?lang=es`}>{post.title}</Link>
                       </h3>
 
                       {post.summary ? (
@@ -188,7 +188,7 @@ export default function HomePageEs() {
                     </div>
 
                     <div className={styles.sermonFooter}>
-                      <Link to={post.route} className={styles.sermonAction}>
+                      <Link to={`${post.route}?lang=es`} className={styles.sermonAction}>
                         Leer sermón →
                       </Link>
                     </div>
@@ -198,7 +198,7 @@ export default function HomePageEs() {
             </div>
 
             <div className={styles.allSermonsWrap}>
-              <Link to="/posts/" className={styles.allSermonsButton}>
+              <Link to="/es/sermones/" className={styles.allSermonsButton}>
                 Ver todos los sermones →
               </Link>
             </div>

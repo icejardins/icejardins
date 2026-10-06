@@ -162,7 +162,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/posts/">
+                <Link to={isSpanish ? "/es/sermones/" : isEnglish ? "/en/sermons/" : "/posts/"}>
                   {isSpanish ? "Sermones" : isEnglish ? "Sermons" : "Sermões"}
                 </Link>
               </li>

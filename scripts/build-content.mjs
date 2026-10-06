@@ -473,12 +473,14 @@ async function main() {
     "/en/give/",
     "/en/give/temple-project/",
     "/en/give/building-project/",
+    "/en/sermons/",
     "/en/faith/",
     "/en/projects/",
     "/es/",
     "/es/donar/",
     "/es/donar/proyecto-templo/",
     "/es/donar/proyecto-edificacion/",
+    "/es/sermones/",
     "/es/fe/",
     "/es/proyectos/",
     "/projetos/",
@@ -558,7 +560,10 @@ async function main() {
     "/es/donar/proyecto-edificacion/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" },
     "/projetos/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" },
     "/en/projects/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" },
-    "/es/proyectos/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" }
+    "/es/proyectos/": { pt: "/contribuir/projeto-templo/", en: "/en/give/temple-project/", es: "/es/donar/proyecto-templo/" },
+    "/posts/": { pt: "/posts/", en: "/en/sermons/", es: "/es/sermones/" },
+    "/en/sermons/": { pt: "/posts/", en: "/en/sermons/", es: "/es/sermones/" },
+    "/es/sermones/": { pt: "/posts/", en: "/en/sermons/", es: "/es/sermones/" }
   };
 
   const sitemapEntries = sortedRoutes
@@ -581,14 +586,17 @@ async function main() {
         cleanedRoute === "/contribuir/" ||
         cleanedRoute === "/contribuir/projeto-templo/" ||
         cleanedRoute === "/contribuir/edificacao/" ||
+        cleanedRoute === "/posts/" ||
         cleanedRoute === "/en/" ||
         cleanedRoute === "/en/give/" ||
+        cleanedRoute === "/en/sermons/" ||
         cleanedRoute === "/en/faith/" ||
         cleanedRoute === "/en/projects/" ||
         cleanedRoute === "/en/give/temple-project/" ||
         cleanedRoute === "/en/give/building-project/" ||
         cleanedRoute === "/es/" ||
         cleanedRoute === "/es/donar/" ||
+        cleanedRoute === "/es/sermones/" ||
         cleanedRoute === "/es/fe/" ||
         cleanedRoute === "/es/proyectos/" ||
         cleanedRoute === "/es/donar/proyecto-templo/" ||

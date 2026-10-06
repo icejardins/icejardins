@@ -23,6 +23,8 @@ const ROUTES = [
   "/contribuir/projeto-templo/",
   "/en/give/temple-project/",
   "/es/donar/proyecto-templo/",
+  "/en/sermons/",
+  "/es/sermones/",
   "/privacy/",
   "/terms/"
 ];

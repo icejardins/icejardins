@@ -31,9 +31,12 @@ export function Header() {
 
   const searchParams = new URLSearchParams(location.search);
   const langParam = searchParams.get("lang");
-  const isSermonPage = location.pathname.startsWith("/posts/");
-  const isEnglish = isSermonPage ? langParam === "en" : location.pathname.startsWith("/en");
-  const isSpanish = isSermonPage ? langParam === "es" : location.pathname.startsWith("/es");
+  const isSermonDetail =
+    location.pathname.startsWith("/posts/") &&
+    location.pathname !== "/posts/" &&
+    location.pathname !== "/posts";
+  const isEnglish = isSermonDetail ? langParam === "en" : location.pathname.startsWith("/en");
+  const isSpanish = isSermonDetail ? langParam === "es" : location.pathname.startsWith("/es");
   const currentLang: "pt" | "en" | "es" = isSpanish ? "es" : isEnglish ? "en" : "pt";
 
   const menuItems = isSpanish
@@ -42,6 +45,7 @@ export function Header() {
         { name: "Nosotros", url: "/es/#about" },
         { name: "Lo que creemos", url: "/es/fe/" },
         { name: "Proyecto del Templo", url: "/es/donar/proyecto-templo/" },
+        { name: "Sermones", url: "/es/sermones/" },
         { name: "Visita", url: "/visita/" },
         { name: "Donar", url: "/es/donar/" }
       ]
@@ -51,6 +55,7 @@ export function Header() {
         { name: "About", url: "/en/#about" },
         { name: "What We Believe", url: "/en/faith/" },
         { name: "Temple Project", url: "/en/give/temple-project/" },
+        { name: "Sermons", url: "/en/sermons/" },
         { name: "Visit", url: "/visita/" },
         { name: "Give", url: "/en/give/" }
       ]
@@ -58,6 +63,36 @@ export function Header() {
 
   const handleLanguageChange = (targetLang: "pt" | "en" | "es") => {
     setLanguagePreference(targetLang);
+
+    // 1. Sermon List page
+    if (
+      location.pathname === "/posts" ||
+      location.pathname === "/posts/" ||
+      location.pathname.startsWith("/en/sermons") ||
+      location.pathname.startsWith("/es/sermones")
+    ) {
+      if (targetLang === "es") {
+        navigate("/es/sermones/");
+      } else if (targetLang === "en") {
+        navigate("/en/sermons/");
+      } else {
+        navigate("/posts/");
+      }
+      return;
+    }
+
+    // 2. Sermon Detail page
+    if (isSermonDetail) {
+      if (targetLang === "es") {
+        navigate(`${location.pathname}?lang=es`);
+      } else if (targetLang === "en") {
+        navigate(`${location.pathname}?lang=en`);
+      } else {
+        navigate(location.pathname);
+      }
+      return;
+    }
+
     if (targetLang === "es") {
       if (
         location.pathname.startsWith("/contribuir/projeto-templo") ||
@@ -80,8 +115,6 @@ export function Header() {
         location.pathname.startsWith("/en/faith")
       ) {
         navigate("/es/fe/");
-      } else if (location.pathname.startsWith("/posts/")) {
-        navigate(`${location.pathname}?lang=es`);
       } else {
         navigate("/es/");
       }
@@ -107,8 +140,6 @@ export function Header() {
         location.pathname.startsWith("/es/fe")
       ) {
         navigate("/en/faith/");
-      } else if (location.pathname.startsWith("/posts/")) {
-        navigate(`${location.pathname}?lang=en`);
       } else {
         navigate("/en/");
       }
@@ -133,8 +164,6 @@ export function Header() {
         location.pathname.startsWith("/es/fe")
       ) {
         navigate("/fe/");
-      } else if (location.pathname.startsWith("/posts/")) {
-        navigate(location.pathname);
       } else {
         navigate("/");
       }
