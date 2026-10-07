@@ -16,7 +16,8 @@
     "check": "tsc --noEmit",
     "postinstall": "npm run build:content",
     "audit": "node scripts/audit-lighthouse.mjs",
-    "audit:live": "AUDIT_BASE_URL=https://icejardins.org.br node scripts/audit-lighthouse.mjs"
+    "audit:live": "AUDIT_BASE_URL=https://icejardins.org.br node scripts/audit-lighthouse.mjs",
+    "podcasts:genesis": "node scripts/generate-podcasts.mjs"
   },
   "dependencies": {
     "@types/node": "^26.1.2",

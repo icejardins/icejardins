@@ -15,6 +15,7 @@ import {
   type TranslatedPostData
 } from "./utils/sermonTranslationService";
 import { getLocalizedTagName } from "./utils/taxonomyTranslations";
+import { PodcastPlayer } from "./components/PodcastPlayer";
 import styles from "./BlogPostPage.module.css";
 
 export default function BlogPostPage() {
@@ -396,6 +397,12 @@ export default function BlogPostPage() {
                 decoding="async"
               />
             ) : null}
+
+            <PodcastPlayer
+              postSlug={post.slug}
+              activeLang={activeLang}
+              postTitle={displayTitle}
+            />
 
             <div
               ref={contentRef}

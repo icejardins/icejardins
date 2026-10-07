@@ -1,0 +1,309 @@
+.container {
+  background: linear-gradient(135deg, rgba(20, 95, 99, 0.06) 0%, rgba(20, 95, 99, 0.12) 100%);
+  border: 1px solid rgba(20, 95, 99, 0.2);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .container {
+  background: linear-gradient(135deg, rgba(20, 95, 99, 0.18) 0%, rgba(18, 56, 58, 0.35) 100%);
+  border-color: rgba(64, 165, 170, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.titleArea {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.podcastIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #145f63;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(20, 95, 99, 0.3);
+}
+
+.titleText {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-color, #12383a);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.badge {
+  font-size: 0.75rem;
+  color: #145f63;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+[data-theme="dark"] .badge {
+  color: #5ec4c8;
+}
+
+.downloadLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #145f63;
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  background: rgba(20, 95, 99, 0.1);
+  transition: all 0.2s ease;
+}
+
+.downloadLink:hover {
+  background: #145f63;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+[data-theme="dark"] .downloadLink {
+  color: #5ec4c8;
+  background: rgba(64, 165, 170, 0.15);
+}
+
+[data-theme="dark"] .downloadLink:hover {
+  background: #5ec4c8;
+  color: #12383a;
+}
+
+/* Timeline / Scrubber */
+.timelineArea {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.timeText {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted, #557577);
+  font-variant-numeric: tabular-nums;
+  min-width: 42px;
+}
+
+.timeEnd {
+  text-align: right;
+}
+
+.progressBar {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(20, 95, 99, 0.15);
+  outline: none;
+  cursor: pointer;
+  transition: height 0.15s ease;
+}
+
+[data-theme="dark"] .progressBar {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.progressBar:hover {
+  height: 8px;
+}
+
+.progressBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #145f63;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s ease;
+}
+
+.progressBar::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.progressBar::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #145f63;
+  cursor: pointer;
+  border: none;
+}
+
+[data-theme="dark"] .progressBar::-webkit-slider-thumb {
+  background: #5ec4c8;
+}
+
+[data-theme="dark"] .progressBar::-moz-range-thumb {
+  background: #5ec4c8;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.mainControls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.podcastIcon svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.skipBtn {
+  background: rgba(20, 95, 99, 0.08);
+  border: 1px solid rgba(20, 95, 99, 0.15);
+  color: var(--text-color, #12383a);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.4rem 0.75rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.2s ease;
+}
+
+.skipBtn svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+.skipBtn:hover {
+  background: rgba(20, 95, 99, 0.15);
+  color: #145f63;
+}
+
+[data-theme="dark"] .skipBtn {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #e0f2f1;
+}
+
+[data-theme="dark"] .skipBtn:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: #5ec4c8;
+}
+
+.playBtn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #145f63;
+  color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(20, 95, 99, 0.4);
+}
+
+.playBtn svg {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+}
+
+.playBtn:hover {
+  transform: scale(1.06);
+  background: #0f4b4e;
+}
+
+.playBtn:active {
+  transform: scale(0.96);
+}
+
+[data-theme="dark"] .playBtn {
+  background: #5ec4c8;
+  color: #12383a;
+  box-shadow: 0 4px 16px rgba(94, 196, 200, 0.4);
+}
+
+[data-theme="dark"] .playBtn svg {
+  fill: #12383a;
+}
+
+[data-theme="dark"] .playBtn:hover {
+  background: #73d1d5;
+}
+
+.speedSelector {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(20, 95, 99, 0.08);
+  border-radius: 20px;
+  padding: 2px 4px;
+}
+
+[data-theme="dark"] .speedSelector {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.speedBtn {
+  background: transparent;
+  border: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted, #557577);
+  padding: 3px 8px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.speedBtnActive {
+  background: #145f63;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .speedBtnActive {
+  background: #5ec4c8;
+  color: #12383a;
+}
