@@ -122,49 +122,49 @@ export async function translateCardsBatch<
   const queryText = queryBlocks.join("\n");
   let fullTranslatedText = "";
 
-  // 1. Primary: Serverless API proxy backed by Google Cloud Translation API (Service Account)
+  // 1. Primary: Free Google Translate endpoint (0 GCP cost)
   try {
-    const apiRes = await fetch("/api/translate/", {
+    const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=pt&tl=${targetLang}&dt=t`;
+    const res = await fetch(url, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
       },
-      body: JSON.stringify({
-        text: queryText,
-        targetLang
-      })
+      body: `q=${encodeURIComponent(queryText)}`
     });
 
-    if (apiRes.ok) {
-      const apiData = await apiRes.json();
-      fullTranslatedText = apiData.translatedText || "";
+    if (res.ok) {
+      const data = await res.json();
+      if (Array.isArray(data) && Array.isArray(data[0])) {
+        fullTranslatedText = data[0]
+          .map((item: any) => (Array.isArray(item) ? item[0] : ""))
+          .join("");
+      }
     }
   } catch {
-    // /api/translate not available (e.g. static local dev)
+    // Non-blocking fallback
   }
 
-  // 2. Secondary fallback
+  // 2. Secondary fallback: /api/translate
   if (!fullTranslatedText) {
     try {
-      const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=pt&tl=${targetLang}&dt=t`;
-      const res = await fetch(url, {
+      const apiRes = await fetch("/api/translate/", {
         method: "POST",
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+          "Content-Type": "application/json"
         },
-        body: `q=${encodeURIComponent(queryText)}`
+        body: JSON.stringify({
+          text: queryText,
+          targetLang
+        })
       });
 
-      if (res.ok) {
-        const data = await res.json();
-        if (Array.isArray(data) && Array.isArray(data[0])) {
-          fullTranslatedText = data[0]
-            .map((item: any) => (Array.isArray(item) ? item[0] : ""))
-            .join("");
-        }
+      if (apiRes.ok) {
+        const apiData = await apiRes.json();
+        fullTranslatedText = apiData.translatedText || "";
       }
     } catch {
-      // Non-blocking fallback
+      // /api/translate not available (e.g. static local dev)
     }
   }
 

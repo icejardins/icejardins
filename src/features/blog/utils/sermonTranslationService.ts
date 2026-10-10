@@ -113,7 +113,29 @@ async function translateChunk(text: string, targetLang: "en" | "es"): Promise<st
     return text;
   }
 
-  // 1. Primary: Serverless API proxy backed by official Google Cloud Translation API (Service Account)
+  // 1. Primary: Free Google Translate endpoint (0 GCP cost)
+  try {
+    const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=pt&tl=${targetLang}&dt=t`;
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+      },
+      body: `q=${encodeURIComponent(text)}`
+    });
+
+    if (res.ok) {
+      const data = await res.json();
+      if (Array.isArray(data) && Array.isArray(data[0])) {
+        const translated = data[0].map((item: any) => (Array.isArray(item) ? item[0] : "")).join("");
+        if (translated) return translated;
+      }
+    }
+  } catch {
+    // Fallback to /api/translate
+  }
+
+  // 2. Secondary fallback: Serverless API proxy backed by Google Cloud Translation API
   try {
     const apiRes = await fetch("/api/translate/", {
       method: "POST",
@@ -135,29 +157,10 @@ async function translateChunk(text: string, targetLang: "en" | "es"): Promise<st
       }
     }
   } catch {
-    // Fallback if /api/translate is unreachable
+    // API not available
   }
 
-  // 2. Secondary fallback
-  const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=pt&tl=${targetLang}&dt=t`;
-  const res = await fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
-    },
-    body: `q=${encodeURIComponent(text)}`
-  });
-
-  if (!res.ok) {
-    throw new Error(`Translation request failed with HTTP ${res.status}`);
-  }
-
-  const data = await res.json();
-  if (!Array.isArray(data) || !Array.isArray(data[0])) {
-    throw new Error("Invalid translation response structure");
-  }
-
-  return data[0].map((item: any) => (Array.isArray(item) ? item[0] : "")).join("");
+  throw new Error("Falha na tradução.");
 }
 
 export async function translateSermon(
@@ -188,7 +191,27 @@ export async function translateSermon(
     }
   }
 
-  // 3. Perform on-demand translation
+  // 3. Check static pre-translated JSON (0 GCP cost, instant load from CDN/static files)
+  try {
+    const staticRes = await fetch(`/data/posts/${slug}.${targetLang}.json`);
+    if (staticRes.ok) {
+      const staticData = (await staticRes.json()) as TranslatedPostData;
+      if (staticData && staticData.bodyHtml) {
+        const finalData: TranslatedPostData = {
+          title: (staticData.title || title).trim(),
+          bodyHtml: staticData.bodyHtml,
+          toc: staticData.toc || toc
+        };
+        memoryCache.set(cacheKey, finalData);
+        writeToStorage(getStorageKey(slug, targetLang), JSON.stringify(finalData));
+        return finalData;
+      }
+    }
+  } catch {
+    // Static file not found or network error; proceed to dynamic fallback
+  }
+
+  // 4. Perform on-demand translation fallback (only if static file is missing)
   const { masked, slots } = maskSlots(bodyHtml);
   const chunks = splitHtmlIntoChunks(masked, 12000);
   const tocTexts = (toc || []).map((t) => t.text).join("\n");
@@ -214,7 +237,7 @@ export async function translateSermon(
     toc: translatedToc
   };
 
-  // 4. Update memory and persistent localStorage cache
+  // 5. Update memory and persistent localStorage cache
   memoryCache.set(cacheKey, result);
   writeToStorage(getStorageKey(slug, targetLang), JSON.stringify(result));
 

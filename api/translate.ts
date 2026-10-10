@@ -109,10 +109,24 @@ async function translateWithGoogleCloud(
 }
 
 export default async function handler(req: any, res: any) {
+  const origin = req.headers.origin || "";
+  const isAllowedOrigin =
+    !origin ||
+    origin === "https://icejardins.org.br" ||
+    origin === "https://www.icejardins.org.br" ||
+    origin.endsWith(".vercel.app") ||
+    origin.includes("localhost") ||
+    origin.includes("127.0.0.1");
+
+  if (isAllowedOrigin && origin) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+  } else if (!origin) {
+    res.setHeader("Access-Control-Allow-Origin", "https://icejardins.org.br");
+  }
+
   // CORS headers
   res.setHeader("Access-Control-Allow-Credentials", "true");
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET,OPTIONS,PATCH,DELETE,POST,PUT");
+  res.setHeader("Access-Control-Allow-Methods", "POST,OPTIONS");
   res.setHeader(
     "Access-Control-Allow-Headers",
     "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"

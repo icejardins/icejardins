@@ -9,6 +9,7 @@ import rehypeSlug from "rehype-slug";
 import rehypeStringify from "rehype-stringify";
 import { visit } from "unist-util-visit";
 import { syncSermonTranslations } from "./sync-sermon-translations.mjs";
+import { syncFullSermonTranslations } from "./sync-full-sermon-translations.mjs";
 
 const rootDir = process.cwd();
 const contentDir = path.join(rootDir, "content");
@@ -635,7 +636,7 @@ async function main() {
     .join("\n");
 
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${sitemapEntries}\n</urlset>\n`;
-  const robotsTxt = `User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /descadastro/\nDisallow: /obrigado-guia/\nDisallow: /recursos/*/obrigado/\n\nSitemap: ${siteConfig.baseUrl}/sitemap.xml\n`;
+  const robotsTxt = `User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /descadastro/\nDisallow: /obrigado-guia/\nDisallow: /recursos/*/obrigado/\nDisallow: /*?*lang=\n\nSitemap: ${siteConfig.baseUrl}/sitemap.xml\n`;
 
   const rssItems = posts
     .slice(0, 20)
@@ -686,6 +687,19 @@ async function main() {
     );
   }
 
+  // Copy pre-translated sermon posts from src/content/data/sermons-translations to static/data/posts
+  const translationsDir = path.join(rootDir, "src", "content", "data", "sermons-translations");
+  try {
+    const translationFiles = await fs.readdir(translationsDir);
+    for (const file of translationFiles) {
+      if (file.endsWith(".json")) {
+        await fs.copyFile(path.join(translationsDir, file), path.join(postsDataDir, file));
+      }
+    }
+  } catch {
+    // Directory might not exist on clean clone; ignore
+  }
+
   await fs.writeFile(
     path.join(generatedDir, "resources.json"),
     `${JSON.stringify(resources, null, 2)}\n`,
@@ -703,6 +717,9 @@ async function main() {
   );
 
   await syncSermonTranslations();
+  if (process.env.SYNC_FULL_TRANSLATIONS === "true") {
+    await syncFullSermonTranslations({ quiet: true });
+  }
 
   console.log(`Generated ${pages.length} pages, ${posts.length} posts, ${resources.length} resources, ${sortedRoutes.length} routes.`);
 }

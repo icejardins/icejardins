@@ -102,22 +102,30 @@ export default function BlogPostPage() {
 
       try {
         let body = loadedBodyHtml || post.bodyHtml || "";
-        if (!body) {
-          try {
-            const res = await fetch(`/data/posts/${slug}.json`);
-            if (res.ok) {
-              const data = await res.json();
-              if (data?.bodyHtml) {
-                body = data.bodyHtml;
-                setLoadedBodyHtml(data.bodyHtml);
+        let result: TranslatedPostData;
+
+        try {
+          // translateSermon checks memory, localStorage, and static pre-translated JSON file first
+          result = await translateSermon(slug, post.title, body, post.toc, targetLang);
+        } catch (firstErr) {
+          // If on-demand fallback was needed and body wasn't loaded yet, fetch it and retry
+          if (!body) {
+            try {
+              const res = await fetch(`/data/posts/${slug}.json`);
+              if (res.ok) {
+                const data = await res.json();
+                if (data?.bodyHtml) {
+                  body = data.bodyHtml;
+                  setLoadedBodyHtml(data.bodyHtml);
+                }
               }
+            } catch {
+              // ignore
             }
-          } catch {
-            // ignore network read errors; proceed
           }
+          result = await translateSermon(slug, post.title, body, post.toc, targetLang);
         }
 
-        const result = await translateSermon(slug, post.title, body, post.toc, targetLang);
         setTranslatedData(result);
         setActiveLang(targetLang);
       } catch {
