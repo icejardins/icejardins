@@ -216,6 +216,7 @@ export async function syncFullSermonTranslations(options = {}) {
     const toProcess = limit ? missing.slice(0, limit) : missing;
     console.log(`[sync-full-translations] Translating ${toProcess.length} posts for '${lang}' (already cached: ${posts.length - missing.length})...`);
 
+    let consecutiveErrors = 0;
     for (let i = 0; i < toProcess.length; i++) {
       const post = toProcess[i];
       const start = Date.now();
@@ -235,8 +236,15 @@ export async function syncFullSermonTranslations(options = {}) {
         const elapsed = ((Date.now() - start) / 1000).toFixed(1);
         console.log(`done in ${elapsed}s`);
         totalProcessed++;
+        consecutiveErrors = 0;
       } catch (err) {
         console.log(`FAILED: ${err.message}`);
+        consecutiveErrors++;
+        if (consecutiveErrors >= 3) {
+          console.log(`[sync-full-translations] 3 falhas consecutivas para '${lang}'. Pausando para evitar bloqueio de IP. Execute novamente mais tarde.`);
+          break;
+        }
+        await new Promise((r) => setTimeout(r, 4000));
       }
       await new Promise((r) => setTimeout(r, 600));
     }
