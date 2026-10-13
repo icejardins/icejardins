@@ -29,6 +29,7 @@ function htmlTagInjector(isProd: boolean): Plugin {
 
         let script = `\n    <!-- Google tag (gtag.js) -->\n`;
         script += `    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />\n`;
+        script += `    <script async src="https://www.googletagmanager.com/gtag/js?id=${primaryId}"></script>\n`;
         script += `    <script>\n`;
         script += `      window.dataLayer = window.dataLayer || [];\n`;
         script += `      function gtag(){window.dataLayer.push(arguments);}\n`;
@@ -41,29 +42,7 @@ function htmlTagInjector(isProd: boolean): Plugin {
           script += `      gtag('config', '${gaId}');\n`;
         }
 
-        script += `      (function(){\n`;
-        script += `        var loaded = false;\n`;
-        script += `        function load(){\n`;
-        script += `          if (loaded) return;\n`;
-        script += `          if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') return;\n`;
-        script += `          loaded = true;\n`;
-        script += `          var s = document.createElement('script');\n`;
-        script += `          s.async = true;\n`;
-        script += `          s.src = 'https://www.googletagmanager.com/gtag/js?id=${primaryId}';\n`;
-        script += `          s.onerror = function(){};\n`;
-        script += `          document.head.appendChild(s);\n`;
-        script += `        }\n`;
-        script += `        window.__loadAnalytics = load;\n`;
-        script += `        window.addEventListener('load-analytics', load, { once: true });\n`;
-        script += `        if ('requestIdleCallback' in window) {\n`;
-        script += `          requestIdleCallback(function(){ setTimeout(load, 2000); });\n`;
-        script += `        } else {\n`;
-        script += `          setTimeout(load, 2500);\n`;
-        script += `        }\n`;
-        script += `        ['touchstart','scroll','keydown','click'].forEach(function(e){\n`;
-        script += `          window.addEventListener(e, load, { once: true, passive: true });\n`;
-        script += `        });\n`;
-        script += `      })();\n`;
+        script += `      window.__loadAnalytics = function(){};\n`;
         script += `    </script>`;
 
         return html.replace("<!--google-tag-->", script);
