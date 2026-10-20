@@ -12,7 +12,8 @@ const GENESIS_SLUGS = [
   "genesis-1-1-antes-de-tudo-deus",
   "genesis-2-1-3-o-descanso-que-ainda-nos-espera",
   "genesis-2-4-25-a-vida-como-deus-a-planejou",
-  "genesis-3-1-8-a-promessa-que-termina-em-fuga-e-vergonha"
+  "genesis-3-1-8-a-promessa-que-termina-em-fuga-e-vergonha",
+  "genesis-4-1-7-quando-deus-confronta-o-nosso-coracao"
 ];
 
 const VOICE_MAP = {

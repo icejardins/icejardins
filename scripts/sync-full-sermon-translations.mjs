@@ -158,7 +158,7 @@ async function translateSermonPost(post, targetLang, cardTranslations) {
 }
 
 export async function syncFullSermonTranslations(options = {}) {
-  const { limit = null, quiet = false } = options;
+  const { limit = null, quiet = false, slug = null } = options;
 
   await fs.mkdir(translationsDir, { recursive: true });
   await fs.mkdir(staticPostsDir, { recursive: true });
@@ -187,6 +187,7 @@ export async function syncFullSermonTranslations(options = {}) {
   for (const lang of languages) {
     const missing = [];
     for (const post of posts) {
+      if (slug && post.slug !== slug) continue;
       const targetFile = path.join(translationsDir, `${post.slug}.${lang}.json`);
       try {
         const existingRaw = await fs.readFile(targetFile, "utf8");
@@ -209,7 +210,7 @@ export async function syncFullSermonTranslations(options = {}) {
     }
 
     if (missing.length === 0) {
-      if (!quiet) console.log(`[sync-full-translations] All ${posts.length} posts already translated for '${lang}'.`);
+      if (!quiet) console.log(`[sync-full-translations] All ${slug ? 1 : posts.length} posts already translated for '${lang}'.`);
       continue;
     }
 
@@ -256,7 +257,9 @@ export async function syncFullSermonTranslations(options = {}) {
 if (process.argv[1]?.endsWith("sync-full-sermon-translations.mjs")) {
   const limitArg = process.argv.find((a) => a.startsWith("--limit="));
   const limit = limitArg ? Number(limitArg.split("=")[1]) : null;
-  syncFullSermonTranslations({ limit }).catch((err) => {
+  const slugArg = process.argv.find((a) => a.startsWith("--slug="));
+  const slug = slugArg ? slugArg.split("=")[1] : null;
+  syncFullSermonTranslations({ limit, slug }).catch((err) => {
     console.error("[sync-full-translations] Error:", err);
   });
 }
