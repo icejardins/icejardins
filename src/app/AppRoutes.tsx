@@ -19,6 +19,8 @@ const TaxonomyPage = lazy(() => import("@/features/blog/TaxonomyPage"));
 const ResourceListPage = lazy(() => import("@/features/resources/ResourceListPage"));
 const ResourcePage = lazy(() => import("@/features/resources/ResourcePage"));
 const ResourceThankYouPage = lazy(() => import("@/features/resources/ResourceThankYouPage"));
+const ReflectionsListPage = lazy(() => import("@/features/reflections/ReflectionsListPage"));
+const ReflectionDetailPage = lazy(() => import("@/features/reflections/ReflectionDetailPage"));
 const GivePage = lazy(() => import("@/features/give/GivePage"));
 const GivePageEn = lazy(() => import("@/features/give/GivePageEn"));
 const GivePageEs = lazy(() => import("@/features/give/GivePageEs"));
@@ -56,6 +58,8 @@ export function AppRoutes() {
             <Route path="en" element={<HomePageEn />} />
             <Route path="en/sermons" element={<BlogListPage />} />
             <Route path="en/posts" element={<Navigate to="/en/sermons/" replace />} />
+            <Route path="en/reflections" element={<ReflectionsListPage />} />
+            <Route path="en/reflections/:slug" element={<ReflectionDetailPage />} />
             <Route path="en/give" element={<GivePageEn />} />
             <Route path="en/give/temple-project" element={<ProjectsPageEn />} />
             <Route path="en/give/building-project" element={<Navigate to="/en/give/temple-project/" replace />} />
@@ -73,6 +77,8 @@ export function AppRoutes() {
             <Route path="es/sermones" element={<BlogListPage />} />
             <Route path="es/sermons" element={<Navigate to="/es/sermones/" replace />} />
             <Route path="es/posts" element={<Navigate to="/es/sermones/" replace />} />
+            <Route path="es/reflexiones" element={<ReflectionsListPage />} />
+            <Route path="es/reflexiones/:slug" element={<ReflectionDetailPage />} />
             <Route path="es/donar" element={<GivePageEs />} />
             <Route path="es/donar/proyecto-templo" element={<ProjectsPageEs />} />
             <Route path="es/donar/proyecto-edificacion" element={<Navigate to="/es/donar/proyecto-templo/" replace />} />
@@ -96,6 +102,8 @@ export function AppRoutes() {
             <Route path="projetos/construcao-do-templo" element={<Navigate to="/contribuir/projeto-templo/" replace />} />
             <Route path="posts" element={<BlogListPage />} />
             <Route path="posts/:slug" element={<BlogPostPage />} />
+            <Route path="reflexoes" element={<ReflectionsListPage />} />
+            <Route path="reflexoes/:slug" element={<ReflectionDetailPage />} />
             <Route path="recursos" element={<ResourceListPage />} />
             <Route path="contribuir" element={<GivePage />} />
             <Route path="contribuir/projeto-templo" element={<ProjectsPage />} />

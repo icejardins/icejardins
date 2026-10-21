@@ -54,6 +54,7 @@ export function Header() {
         { name: "Nosotros", url: "/es/#about" },
         { name: "Lo que creemos", url: "/es/fe/" },
         { name: "Proyecto del Templo", url: "/es/donar/proyecto-templo/" },
+        { name: "Para el Día a Día", url: "/es/reflexiones/" },
         { name: "Sermones", url: "/es/sermones/" },
         { name: "Visita", url: "/es/visita/" },
         { name: "Donar", url: "/es/donar/" }
@@ -64,6 +65,7 @@ export function Header() {
         { name: "About", url: "/en/#about" },
         { name: "What We Believe", url: "/en/faith/" },
         { name: "Temple Project", url: "/en/give/temple-project/" },
+        { name: "For Daily Life", url: "/en/reflections/" },
         { name: "Sermons", url: "/en/sermons/" },
         { name: "Visit", url: "/en/visit/" },
         { name: "Give", url: "/en/give/" }
@@ -86,6 +88,23 @@ export function Header() {
         navigate("/en/sermons/");
       } else {
         navigate("/posts/");
+      }
+      return;
+    }
+
+    // 1b. Reflection List page
+    if (
+      location.pathname === "/reflexoes" ||
+      location.pathname === "/reflexoes/" ||
+      location.pathname.startsWith("/en/reflections") ||
+      location.pathname.startsWith("/es/reflexiones")
+    ) {
+      if (targetLang === "es") {
+        navigate("/es/reflexiones/");
+      } else if (targetLang === "en") {
+        navigate("/en/reflections/");
+      } else {
+        navigate("/reflexoes/");
       }
       return;
     }

@@ -267,7 +267,7 @@ async function main() {
 
   const pageFiles = (await getMarkdownFiles(contentDir)).filter((filePath) => {
     const relativePath = toPosixPath(path.relative(contentDir, filePath));
-    return !relativePath.startsWith("posts/") && !relativePath.startsWith("recursos/");
+    return !relativePath.startsWith("posts/") && !relativePath.startsWith("recursos/") && !relativePath.startsWith("reflexoes/");
   });
 
   const postFiles = (await getMarkdownFiles(path.join(contentDir, "posts"))).filter(
@@ -282,6 +282,16 @@ async function main() {
     );
   } catch {
     resourceFiles = [];
+  }
+
+  let reflectionFiles = [];
+  const reflexoesDir = path.join(contentDir, "reflexoes");
+  try {
+    reflectionFiles = (await getMarkdownFiles(reflexoesDir)).filter(
+      (filePath) => path.basename(filePath) !== "_index.md"
+    );
+  } catch {
+    reflectionFiles = [];
   }
 
   const pages = [];
@@ -438,6 +448,65 @@ async function main() {
     return right.date.localeCompare(left.date);
   });
 
+  const reflections = [];
+  for (const filePath of reflectionFiles) {
+    const relativePath = toPosixPath(path.relative(reflexoesDir, filePath));
+    const slug = relativePath.replace(/\.md$/, "");
+    const fileContent = await fs.readFile(filePath, "utf8");
+    const parsed = parseFrontmatter(fileContent);
+    const { html, toc } = await markdownToHtmlAndToc(parsed.content);
+    const plainText = stripHtml(html);
+
+    const tags = ensureArray(parsed.data.tags);
+    const categories = ensureArray(parsed.data.categorias ?? parsed.data.categories);
+    const lang = parsed.data.lang || "pt";
+
+    let route = `/reflexoes/${slug}/`;
+    if (lang === "en") {
+      route = `/en/reflections/${slug}/`;
+    } else if (lang === "es") {
+      route = `/es/reflexiones/${slug}/`;
+    }
+
+    const readingTime = estimateReadingTime(plainText);
+
+    reflections.push({
+      slug,
+      route: normalizeRoute(route),
+      title: String(parsed.data.title ?? slug),
+      subtitle: parsed.data.subtitle ? String(parsed.data.subtitle) : null,
+      description: String(parsed.data.description ?? parsed.data.subtitle ?? buildSummary(plainText)),
+      date: toIsoDate(parsed.data.date),
+      image: parsed.data.image ? String(parsed.data.image) : null,
+      tags,
+      categories,
+      lang,
+      sermonSlug: parsed.data.sermonSlug || null,
+      passage: parsed.data.passage || null,
+      readingTime,
+      summary: String(parsed.data.subtitle ?? buildSummary(plainText)),
+      bodyHtml: html,
+      toc,
+      sourcePath: `reflexoes/${relativePath}`
+    });
+  }
+
+  reflections.sort((left, right) => {
+    if (!left.date && !right.date) {
+      return left.slug.localeCompare(right.slug);
+    }
+
+    if (!left.date) {
+      return 1;
+    }
+
+    if (!right.date) {
+      return -1;
+    }
+
+    return right.date.localeCompare(left.date);
+  });
+
   const postsIndexPath = path.join(contentDir, "posts", "_index.md");
   const postsIndexRaw = await fs.readFile(postsIndexPath, "utf8");
   const postsIndex = parseFrontmatter(postsIndexRaw);
@@ -447,6 +516,13 @@ async function main() {
     const recursosIndexPath = path.join(contentDir, "recursos", "_index.md");
     const recursosIndexRaw = await fs.readFile(recursosIndexPath, "utf8");
     recursosIndex = parseFrontmatter(recursosIndexRaw);
+  } catch {}
+
+  let reflexoesIndex = { data: {} };
+  try {
+    const reflexoesIndexPath = path.join(contentDir, "reflexoes", "_index.md");
+    const reflexoesIndexRaw = await fs.readFile(reflexoesIndexPath, "utf8");
+    reflexoesIndex = parseFrontmatter(reflexoesIndexRaw);
   } catch {}
 
   const siteConfig = {
@@ -459,6 +535,10 @@ async function main() {
     resources: {
       title: String(recursosIndex.data.title ?? siteConfigData.resources?.title ?? "Recursos"),
       description: String(recursosIndex.data.description ?? siteConfigData.resources?.description ?? "Guias, e-books e materiais gratuitos para fortalecer sua fé")
+    },
+    reflections: {
+      title: String(reflexoesIndex.data.title ?? siteConfigData.reflections?.title ?? "Para o Dia a Dia"),
+      description: String(reflexoesIndex.data.description ?? siteConfigData.reflections?.description ?? "Reflexões práticas e bíblicas para os desafios do cotidiano")
     }
   };
 
@@ -489,6 +569,9 @@ async function main() {
     "/es/proyectos/",
     "/projetos/",
     "/posts/",
+    "/reflexoes/",
+    "/en/reflections/",
+    "/es/reflexiones/",
     "/recursos/",
     "/contribuir/",
     "/contribuir/projeto-templo/",
@@ -508,6 +591,10 @@ async function main() {
   for (const resource of resources) {
     routes.add(normalizeRoute(resource.route));
     routes.add(normalizeRoute(`/recursos/${resource.slug}/obrigado/`));
+  }
+
+  for (const reflection of reflections) {
+    routes.add(normalizeRoute(reflection.route));
   }
 
   for (const tag of taxonomies.tags) {
@@ -568,6 +655,9 @@ async function main() {
     "/posts/": { pt: "/posts/", en: "/en/sermons/", es: "/es/sermones/" },
     "/en/sermons/": { pt: "/posts/", en: "/en/sermons/", es: "/es/sermones/" },
     "/es/sermones/": { pt: "/posts/", en: "/en/sermons/", es: "/es/sermones/" },
+    "/reflexoes/": { pt: "/reflexoes/", en: "/en/reflections/", es: "/es/reflexiones/" },
+    "/en/reflections/": { pt: "/reflexoes/", en: "/en/reflections/", es: "/es/reflexiones/" },
+    "/es/reflexiones/": { pt: "/reflexoes/", en: "/en/reflections/", es: "/es/reflexiones/" },
     "/visita/": { pt: "/visita/", en: "/en/visit/", es: "/es/visita/" },
     "/en/visit/": { pt: "/visita/", en: "/en/visit/", es: "/es/visita/" },
     "/es/visita/": { pt: "/visita/", en: "/en/visit/", es: "/es/visita/" }
@@ -596,6 +686,12 @@ async function main() {
         cleanedRoute === "/contribuir/projeto-templo/" ||
         cleanedRoute === "/contribuir/edificacao/" ||
         cleanedRoute === "/posts/" ||
+        cleanedRoute === "/reflexoes/" ||
+        cleanedRoute.startsWith("/reflexoes/") ||
+        cleanedRoute === "/en/reflections/" ||
+        cleanedRoute.startsWith("/en/reflections/") ||
+        cleanedRoute === "/es/reflexiones/" ||
+        cleanedRoute.startsWith("/es/reflexiones/") ||
         cleanedRoute === "/en/" ||
         cleanedRoute === "/en/give/" ||
         cleanedRoute === "/en/sermons/" ||
@@ -706,6 +802,28 @@ async function main() {
     "utf8"
   );
   await fs.writeFile(
+    path.join(generatedDir, "reflections.json"),
+    `${JSON.stringify(reflections, null, 2)}\n`,
+    "utf8"
+  );
+  const reflectionsMeta = reflections.map(({ bodyHtml, ...meta }) => meta);
+  await fs.writeFile(
+    path.join(generatedDir, "reflections-meta.json"),
+    `${JSON.stringify(reflectionsMeta, null, 2)}\n`,
+    "utf8"
+  );
+
+  const reflectionsDataDir = path.join(staticDir, "data", "reflexoes");
+  await fs.mkdir(reflectionsDataDir, { recursive: true });
+  for (const r of reflections) {
+    await fs.writeFile(
+      path.join(reflectionsDataDir, `${r.slug}.json`),
+      JSON.stringify({ bodyHtml: r.bodyHtml, toc: r.toc }),
+      "utf8"
+    );
+  }
+
+  await fs.writeFile(
     path.join(generatedDir, "taxonomies.json"),
     `${JSON.stringify(taxonomies, null, 2)}\n`,
     "utf8"
@@ -721,7 +839,7 @@ async function main() {
     await syncFullSermonTranslations({ quiet: true });
   }
 
-  console.log(`Generated ${pages.length} pages, ${posts.length} posts, ${resources.length} resources, ${sortedRoutes.length} routes.`);
+  console.log(`Generated ${pages.length} pages, ${posts.length} posts, ${resources.length} resources, ${reflections.length} reflections, ${sortedRoutes.length} routes.`);
 }
 
 main().catch((error) => {

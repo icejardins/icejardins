@@ -14,6 +14,8 @@ import TaxonomyPage from "@/features/blog/TaxonomyPage";
 import ResourceListPage from "@/features/resources/ResourceListPage";
 import ResourcePage from "@/features/resources/ResourcePage";
 import ResourceThankYouPage from "@/features/resources/ResourceThankYouPage";
+import ReflectionsListPage from "@/features/reflections/ReflectionsListPage";
+import ReflectionDetailPage from "@/features/reflections/ReflectionDetailPage";
 import GivePage from "@/features/give/GivePage";
 import GivePageEn from "@/features/give/GivePageEn";
 import GivePageEs from "@/features/give/GivePageEs";
@@ -51,6 +53,8 @@ export function AppRoutesStatic() {
           <Route path="en" element={<HomePageEn />} />
           <Route path="en/sermons" element={<BlogListPage />} />
           <Route path="en/posts" element={<Navigate to="/en/sermons/" replace />} />
+          <Route path="en/reflections" element={<ReflectionsListPage />} />
+          <Route path="en/reflections/:slug" element={<ReflectionDetailPage />} />
           <Route path="en/give" element={<GivePageEn />} />
           <Route path="en/give/temple-project" element={<ProjectsPageEn />} />
           <Route path="en/give/building-project" element={<Navigate to="/en/give/temple-project/" replace />} />
@@ -68,6 +72,8 @@ export function AppRoutesStatic() {
           <Route path="es/sermones" element={<BlogListPage />} />
           <Route path="es/sermons" element={<Navigate to="/es/sermones/" replace />} />
           <Route path="es/posts" element={<Navigate to="/es/sermones/" replace />} />
+          <Route path="es/reflexiones" element={<ReflectionsListPage />} />
+          <Route path="es/reflexiones/:slug" element={<ReflectionDetailPage />} />
           <Route path="es/donar" element={<GivePageEs />} />
           <Route path="es/donar/proyecto-templo" element={<ProjectsPageEs />} />
           <Route path="es/donar/proyecto-edificacion" element={<Navigate to="/es/donar/proyecto-templo/" replace />} />
@@ -91,6 +97,8 @@ export function AppRoutesStatic() {
           <Route path="projetos/construcao-do-templo" element={<Navigate to="/contribuir/projeto-templo/" replace />} />
           <Route path="posts" element={<BlogListPage />} />
           <Route path="posts/:slug" element={<BlogPostPage />} />
+          <Route path="reflexoes" element={<ReflectionsListPage />} />
+          <Route path="reflexoes/:slug" element={<ReflectionDetailPage />} />
           <Route path="recursos" element={<ResourceListPage />} />
           <Route path="contribuir" element={<GivePage />} />
           <Route path="contribuir/projeto-templo" element={<ProjectsPage />} />

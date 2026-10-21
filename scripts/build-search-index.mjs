@@ -26,15 +26,17 @@ function slugify(text) {
 }
 
 async function main() {
-  const [pagesRaw, postsRaw, resourcesRaw] = await Promise.all([
+  const [pagesRaw, postsRaw, resourcesRaw, reflectionsRaw] = await Promise.all([
     fs.readFile(path.join(generatedDir, "pages.json"), "utf8"),
     fs.readFile(path.join(generatedDir, "posts.json"), "utf8"),
-    fs.readFile(path.join(generatedDir, "resources.json"), "utf8").catch(() => "[]")
+    fs.readFile(path.join(generatedDir, "resources.json"), "utf8").catch(() => "[]"),
+    fs.readFile(path.join(generatedDir, "reflections.json"), "utf8").catch(() => "[]")
   ]);
 
   const pages = JSON.parse(pagesRaw.replace(/^\uFEFF/, ""));
   const posts = JSON.parse(postsRaw.replace(/^\uFEFF/, ""));
   const resources = JSON.parse(resourcesRaw.replace(/^\uFEFF/, ""));
+  const reflections = JSON.parse(reflectionsRaw.replace(/^\uFEFF/, ""));
 
   const institutionalDocs = [
     {
@@ -176,6 +178,13 @@ async function main() {
       content: stripHtml(resource.bodyHtml),
       image: resource.image,
       permalink: resource.route
+    })),
+    ...reflections.map((reflection) => ({
+      title: reflection.title,
+      description: reflection.description,
+      content: `${stripHtml(reflection.bodyHtml)} ${(reflection.tags || []).join(" ")} ${(reflection.categories || []).join(" ")}`,
+      image: reflection.image,
+      permalink: reflection.route
     }))
   ];
 

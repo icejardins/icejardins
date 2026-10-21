@@ -104,7 +104,7 @@ export default defineConfig(({ command, mode }) => {
   css: {
     postcss: {
       plugins: [
-        purgecss({
+        ((purgecss as any).default?.default || (purgecss as any).default || purgecss)({
           content: [
             path.resolve(import.meta.dirname, "index.html"),
             path.resolve(import.meta.dirname, "src/**/*.{tsx,ts,jsx,js,html}"),

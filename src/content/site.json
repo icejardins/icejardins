@@ -36,19 +36,24 @@
       "weight": 4
     },
     {
+      "name": "Para o Dia a Dia",
+      "url": "/reflexoes/",
+      "weight": 5
+    },
+    {
       "name": "Sermões",
       "url": "/posts/",
-      "weight": 5
+      "weight": 6
     },
     {
       "name": "Recursos",
       "url": "/recursos/",
-      "weight": 6
+      "weight": 7
     },
     {
       "name": "Contribua",
       "url": "/contribuir/",
-      "weight": 7
+      "weight": 8
     }
   ],
   "navbar": {
@@ -67,6 +72,10 @@
   "blog": {
     "title": "Sermões",
     "description": "Nossos sermões e postagens mais recentes."
+  },
+  "reflections": {
+    "title": "Para o Dia a Dia",
+    "description": "Reflexões práticas e bíblicas para os desafios do cotidiano."
   },
   "resources": {
     "title": "Recursos",

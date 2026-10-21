@@ -52,6 +52,10 @@ export type SiteConfig = {
     title: string;
     description: string;
   };
+  reflections?: {
+    title: string;
+    description: string;
+  };
   theme: ThemeTokens;
 };
 
@@ -127,6 +131,30 @@ export type PostMeta = {
 };
 
 export type Post = PostMeta & {
+  bodyHtml: string;
+  toc: TocHeading[];
+  plainText?: string;
+};
+
+export type ReflectionMeta = {
+  slug: string;
+  route: string;
+  title: string;
+  subtitle: string | null;
+  description: string;
+  date: string | null;
+  image: string | null;
+  tags: string[];
+  categories: string[];
+  lang: "pt" | "en" | "es";
+  sermonSlug: string | null;
+  passage: string | null;
+  readingTime: number;
+  summary: string;
+  sourcePath: string;
+};
+
+export type Reflection = ReflectionMeta & {
   bodyHtml: string;
   toc: TocHeading[];
   plainText?: string;
