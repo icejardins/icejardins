@@ -1,39 +1,54 @@
-# coding: utf-8
-text = """Sim, a oração funciona de verdade e tem o poder de acolher seu coração nos momentos de maior dor e aflição. Ela não é uma fórmula mágica para fazer sumir todos os problemas de repente, mas uma conversa sincera com um Pai que escuta você com ternura e nunca o deixa sozinho. Quando você ora, Deus entra no quarto escuro da sua alma para trazer paz, força e consolo que nenhum remédio humano consegue dar.
+import re
 
-Puxe uma cadeira e fique bem à vontade. Se você nunca abriu uma Bíblia ou nunca colocou os pés numa igreja, não se preocupe com palavras difíceis ou rituais complicados. Deus não se impressiona com discursos decorados; Ele se importa de verdade com o que está pesando no seu peito agora.
+text = """
+Se você sente que vive tropeçando sempre nas mesmas pedras e já não aguenta mais prometer que vai mudar sem conseguir, respire fundo e fique em paz. Você não está sozinho nessa luta, e o fato de você se incomodar com esses erros mostra que o seu coração ainda deseja o que é certo. O verdadeiro autocontrole não nasce da força do seu próprio braço, mas de entender onde a armadilha começa e aprender a receber o socorro bondoso de Deus no momento certo.
 
-### A oração serve para todos os momentos da nossa vida
+Puxe uma cadeira, tome um café comigo e vamos conversar com calma sobre o que realmente acontece dentro de nós.
 
-A vida real é feita de altos e baixos, como uma estrada de serra cheia de curvas. Na Bíblia, no livro de Tiago, capítulo 5, há um ensinamento muito pé no chão que resume como devemos viver: se alguém está sofrendo, deve orar; se alguém está contente e em paz, deve cantar e agradecer com alegria.
+### A armadilha do peixe e a ponta do anzol
 
-Isso nos mostra algo muito libertador: a fé não foi feita só para quem está sorrindo ou para quando tudo dá certo. Você não precisa ter vergonha quando o aperto no peito vier, nem precisa achar que a tristeza significa que Deus se esqueceu de você. Pelo contrário, o Criador quer ser o seu primeiro refúgio em qualquer situação, seja para celebrar uma boa notícia ou para chorar baixinho no travesseiro.
+Sabe quando um pescador vai para a beira do rio? Ele nunca joga na água um anzol brilhante, vazio e pontiagudo, porque peixe nenhum morderia ferro puro. O que ele faz é cobrir o perigo com uma isca bem apetitosa, algo que o peixe gosta muito.
 
-Um pastor corajoso chamado Dietrich Bonhoeffer, enquanto enfrentava a prisão em tempos de guerra, lembrou que Jesus venceu o maior de todos os medos. Por isso, quando o pânico bater na porta, não tente lutar sozinho. Conte para Deus o tamanho do seu cansaço e peça que Ele acalme os seus pensamentos aflitos.
+A tentação funciona desse mesmo jeitinho no nosso dia a dia. A Bíblia ensina, numa carta muito prática escrita por um pastor chamado Tiago, que Deus não tenta ninguém para o mal. Deus só quer o nosso bem. Na verdade, somos nós que somos atraídos e enganados pelos nossos próprios desejos escondidos.
 
-### Quando a doença bate à nossa porta
+A gente costuma colocar a culpa no estresse do trabalho, no trânsito, nos parentes ou até no diabo. Mas a verdade nua e crua é que a isca só funciona porque encontra dentro de nós um apetite que já estava ali. Aquele momento de perder a paciência e gritar com a família, aquela vontade de gastar o que não tem, aquela espiada naquilo que não devia na internet ou a mentirinha para se dar bem no serviço não começam do nada. Eles começam com um pensamento que nos promete um alívio rápido ou um prazer gostoso, mas escondem o anzol que vai rasgar a nossa boca e nos trazer muita dor depois.
 
-E o que a gente faz quando o corpo adoece gravemente? O texto bíblico ensina que devemos pedir ajuda a pessoas de confiança e líderes maduros na fé para orarem por nós, ungindo com óleo em nome do Senhor. Isso não é um passe de mágica nem uma promessa de que nunca iremos ao médico.
+### O caminho perigoso que nos afasta da vida
 
-Na época em que isso foi escrito, o óleo servia como um cuidado medicinal carinhoso e um sinal de respeito. Deus age das duas formas: Ele pode realizar um milagre direto no corpo, mas também age com bondade através das mãos dos médicos e dos remédios. Tudo isso vem do carinho d'Ele por nós.
+Tiago explica que existe um roteiro muito claro que nos faz cair repetidamente. Tudo começa com um engano: a gente começa a duvidar que Deus se importa com a nossa dor ou que os conselhos dEle são realmente os melhores. Pensamos: "Eu mereço isso agora", "Ninguém vai ficar sabendo" ou "Deus não está vendo o meu aperto".
 
-Mas e se a doença continuar e a cura física não acontecer do jeito que a gente pediu? Isso não quer dizer que faltou fé em você. Homens fiéis no passado também passaram por enfermidades duras. A oração da fé sempre traz cura: às vezes levantando o corpo aqui na terra, mas sempre restaurando a alma e garantindo o abraço eterno de Deus, onde dor e lágrima nenhuma terão a palavra final.
+Depois que aceitamos essa mentira, o desejo proibido ganha força no peito e nós mordemos a isca. Vem o ato errado e, logo em seguida, a colheita amarga: culpa pesada, vergonha, relacionamentos destruídos e um vazio enorme na alma. É isso que a Bíblia chama de morte. Não apenas o fim da vida biológica, mas a morte da nossa paz, da confiança das pessoas que amamos e da nossa comunhão com Deus.
 
-Além disso, a doença muitas vezes nos faz parar a correria do dia a dia e olhar para dentro. É um momento de pedir que Deus limpe as mágoas do coração, perdoe nossas falhas e devolva aquela paz que o dinheiro não compra.
+Se você tentar vencer esse ciclo apenas na base de ranger os dentes e fazer promessas de ano novo, você vai se frustrar de novo. A nossa força humana acaba bem rápido quando a isca certa passa na nossa frente.
 
-### A força de não caminhar sozinho
+### Um Pai que não muda e nos dá vida nova
 
-Existe mais um segredo precioso sobre a oração: ela foi feita para ser compartilhada com outras pessoas. Tiago nos aconselha a confessar nossas fraquezas uns aos outros e a orar uns pelos outros, para que sejamos verdadeiramente curados por dentro.
+A melhor notícia que você pode ouvir hoje é esta: Deus não é um fiscal bravo esperando você errar para te castigar com uma vara. Ele é um Pai cheio de bondade, que nunca muda de humor e de quem vem todo presente bom da nossa vida.
 
-Muitas vezes, nós tentamos fingir que somos fortes o tempo todo. Quando alguém pergunta se está tudo bem, a gente responde logo que sim, mesmo estando despedaçado por dentro. Esse orgulho bobo só nos faz sofrer calados.
+A graça de Deus significa exatamente isso na prática: é o amor e o perdão generoso de Deus entregues de graça para quem só merecia bronca e castigo. Ele não espera você ficar perfeito para começar a te amar. Ele mesmo toma a iniciativa de trocar o nosso coração duro como pedra por um coração novo, sensível, capaz de amar o que é bom e resistir ao que nos destrói.
 
-Imagine que você saiu para andar de bicicleta e o pneu furou no meio da estrada. Se um amigo de bom coração passar ao seu lado com uma bomba e remendos na mochila e você disser "não preciso de nada, está tudo bem", você é quem vai continuar empurrando a bicicleta a pé debaixo de sol quente. Pedir socorro e abrir o coração para um amigo de confiança não é fraqueza; é sabedoria que cura a alma.
+Quando você compreende que Jesus enfrentou a morte na cruz para nos livrar da condenação e nos perdoar por completo, você não precisa mais fugir de Deus de vergonha. Você pode correr para os braços dEle justamente na hora em que estiver mais fraco.
 
-A Bíblia lembra que o profeta Elias era uma pessoa comum e frágil como nós, com dias de medo e desânimo, mas orou com sinceridade de coração e Deus ouviu a sua voz. A oração sincera de quem busca a justiça tem muita força porque quem atua nela é o Deus Todo-Poderoso.
+### Aprenda a frear antes de acelerar
+
+Para desenvolver o autocontrole no meio do corre-corre, Tiago nos dá três conselhos de ouro para a rotina: estar sempre pronto para ouvir, ser lento para falar e demorar para ficar com raiva.
+
+Geralmente a gente faz o contrário, não é verdade? Ouvimos muito mal, estamos sempre prontos para responder na ponta da língua e explodimos por qualquer bobagem. Mas a raiva descontrolada nunca produz a vida justa e boa que Deus sonhou para nós.
+
+Autocontrole é como tirar aquela roupa suja e encardida de um dia puxado de trabalho e vestir uma roupa limpa. É calar a nossa teimosia e acolher com humildade os conselhos da Palavra de Deus, deixando que eles sejam plantados dentro da nossa cabeça e do nosso peito como uma semente boa em terra adubada.
+
+### O espelho que transforma as nossas ações
+
+Não adianta nada você levantar de manhã, olhar no espelho do banheiro, ver que o rosto está todo sujo de carvão ou o cabelo despenteado, e sair para a rua sem lavar a cara. Seria uma tolice sem tamanho.
+
+Tiago diz que a Bíblia é como esse espelho. Ler ou ouvir uma mensagem bonita e não colocar em prática no trabalho, no casamento e no trânsito é enganar a si mesmo. A verdadeira fé não fica só em palavras bonitas nem em emoções passageiras; ela se mostra viva quando a gente cuida dos mais frágeis, como os órfãos e as viúvas que não têm quem olhe por eles, e quando guardamos a nossa integridade sem nos deixar contaminar pela maldade e pelo egoísmo do mundo.
 
 ### Próximo passo prático
 
-Não espere sentir uma vontade especial ou achar que aprendeu a falar palavras bonitas. Tire cinco minutos do seu dia hoje mesmo, vá para um cantinho silencioso da sua casa e converse com Deus com as suas próprias palavras. Fale da dor que está sentindo, do medo do futuro e entregue suas preocupações nas mãos d'Ele. Se você estiver muito pesado, procure também um amigo de confiança e compartilhe com humildade o que você está enfrentando."""
+Hoje mesmo, pare por três minutos num cantinho sossegado com um papel e uma caneta. Identifique com honestidade a sua isca favorita — aquela situação típica em que você sempre perde a cabeça ou cai na mesma tentação (como o cansaço no fim da tarde, o celular na cama de madrugada ou uma conversa tensa). 
 
-words = text.split()
-print("Word count:", len(words))
+Assim que reconhecer a isca, faça uma oração simples e sincera dizendo: "Deus, eu sozinho não consigo resistir a isso, mas confio na Tua bondade. Me ajuda agora a não morder esse anzol e me dá calma para calar e ouvir antes de agir". Faça essa pausa respirando fundo antes de dar qualquer resposta impulsiva.
+"""
+
+words = text.strip().split()
+print("Total words:", len(words))
