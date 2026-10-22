@@ -1,4 +1,4 @@
-﻿import {
+import {
   createContext,
   useCallback,
   useContext,
@@ -47,6 +47,7 @@ export function ThemeProvider({ children }: PropsWithChildren) {
 
     document.documentElement.classList.toggle("dark", theme === "dark");
     document.body.classList.toggle("dark", theme === "dark");
+    document.documentElement.setAttribute("data-theme", theme);
 
     if (typeof window !== "undefined") {
       window.localStorage.setItem(STORAGE_KEY, theme);

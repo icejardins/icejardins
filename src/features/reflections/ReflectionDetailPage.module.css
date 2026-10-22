@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   height: 3px;
-  background-color: var(--color-primary);
+  background-color: var(--primary-color, #145f63);
   z-index: 1000;
   transition: width 0.1s ease-out;
 }
@@ -19,30 +19,30 @@
   align-items: center;
   gap: 0.5rem;
   font-size: 0.875rem;
-  color: var(--color-text-secondary);
+  color: var(--secondary-text-color, #4d6b6d);
   margin-bottom: 2rem;
 }
 
 .breadcrumbs a {
-  color: var(--color-text-secondary);
+  color: var(--secondary-text-color, #4d6b6d);
   text-decoration: none;
 }
 
 .breadcrumbs a:hover {
-  color: var(--color-primary);
+  color: var(--primary-color, #145f63);
   text-decoration: underline;
 }
 
 .header {
   margin-bottom: 2.5rem;
-  border-bottom: 1px solid var(--color-border, #e2e8f0);
+  border-bottom: 1px solid rgba(20, 95, 99, 0.12);
   padding-bottom: 2rem;
 }
 
 .passageTag {
   display: inline-block;
-  background-color: var(--color-secondary-bg);
-  color: var(--color-primary);
+  background-color: color-mix(in srgb, var(--primary-color, #145f63) 10%, transparent);
+  color: var(--primary-color, #145f63);
   font-size: 0.85rem;
   font-weight: 600;
   padding: 0.25rem 0.75rem;
@@ -54,14 +54,14 @@
   font-size: 2.35rem;
   font-weight: 800;
   line-height: 1.25;
-  color: var(--color-text);
+  color: var(--text-color, #12383a);
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
 }
 
 .subtitle {
   font-size: 1.2rem;
-  color: var(--color-text-secondary);
+  color: var(--secondary-text-color, #4d6b6d);
   line-height: 1.6;
   margin-bottom: 1.5rem;
   font-weight: 400;
@@ -74,7 +74,7 @@
   flex-wrap: wrap;
   gap: 1rem;
   font-size: 0.875rem;
-  color: var(--color-text-secondary);
+  color: var(--secondary-text-color, #4d6b6d);
 }
 
 .metaInfo {
@@ -89,13 +89,13 @@
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 2.5rem;
-  background-color: var(--color-secondary-bg);
+  background-color: var(--secondary-background-color, #f1f7f7);
 }
 
 .body {
   font-size: 1.15rem;
   line-height: 1.8;
-  color: var(--color-text);
+  color: var(--text-color, #12383a);
 }
 
 .body p {
@@ -106,27 +106,27 @@
 .body h3 {
   font-size: 1.55rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--primary-color, #145f63);
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   letter-spacing: -0.01em;
 }
 
 .body blockquote {
-  border-left: 4px solid var(--color-primary);
+  border-left: 4px solid var(--primary-color, #145f63);
   padding: 0.75rem 1.25rem;
   margin: 1.75rem 0;
-  background-color: var(--color-secondary-bg);
+  background-color: var(--secondary-background-color, #f1f7f7);
   border-radius: 0 8px 8px 0;
   font-style: italic;
-  color: var(--color-text);
+  color: var(--text-color, #12383a);
 }
 
 .sermonBox {
   margin-top: 3.5rem;
   padding: 1.75rem;
-  background-color: var(--color-secondary-bg);
-  border: 1px solid var(--color-border, #cbd5e1);
+  background-color: var(--secondary-background-color, #f1f7f7);
+  border: 1px solid rgba(20, 95, 99, 0.14);
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -136,12 +136,12 @@
 .sermonBoxTitle {
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--primary-color, #145f63);
   margin: 0;
 }
 
 .sermonBoxLink {
-  color: var(--color-primary);
+  color: var(--primary-color, #145f63);
   font-weight: 600;
   text-decoration: underline;
 }
@@ -149,7 +149,7 @@
 .shareSection {
   margin-top: 2.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid var(--color-border, #e2e8f0);
+  border-top: 1px solid rgba(20, 95, 99, 0.12);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -167,10 +167,10 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  border: 1px solid var(--color-border, #cbd5e1);
+  border: 1px solid rgba(20, 95, 99, 0.2);
   border-radius: 8px;
-  background: white;
-  color: var(--color-text);
+  background: #ffffff;
+  color: var(--text-color, #12383a);
   font-size: 0.875rem;
   font-weight: 500;
   text-decoration: none;
@@ -179,15 +179,15 @@
 }
 
 .shareButton:hover {
-  background-color: var(--color-secondary-bg);
-  border-color: var(--color-primary);
-  color: var(--color-primary);
+  background-color: color-mix(in srgb, var(--primary-color, #145f63) 8%, transparent);
+  border-color: var(--primary-color, #145f63);
+  color: var(--primary-color, #145f63);
 }
 
 .tagSection {
   margin-top: 2.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid var(--color-border, #e2e8f0);
+  border-top: 1px solid rgba(20, 95, 99, 0.12);
 }
 
 .tagTitle {
@@ -230,4 +230,139 @@
   .subtitle {
     font-size: 1.05rem;
   }
+}
+
+/* ==========================================================================
+   Dark Mode Overrides
+   ========================================================================== */
+
+:global(.dark) .progressBar,
+:global([data-theme="dark"]) .progressBar {
+  background-color: #7ebec2;
+}
+
+:global(.dark) .breadcrumbs,
+:global([data-theme="dark"]) .breadcrumbs,
+:global(.dark) .breadcrumbs a,
+:global([data-theme="dark"]) .breadcrumbs a {
+  color: var(--secondary-text-color, #b4ced0);
+}
+
+:global(.dark) .breadcrumbs a:hover,
+:global([data-theme="dark"]) .breadcrumbs a:hover {
+  color: #7ebec2;
+}
+
+:global(.dark) .header,
+:global([data-theme="dark"]) .header {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+:global(.dark) .passageTag,
+:global([data-theme="dark"]) .passageTag {
+  background-color: rgba(126, 190, 194, 0.16);
+  color: #7ebec2;
+}
+
+:global(.dark) .title,
+:global([data-theme="dark"]) .title {
+  color: var(--text-color, #ebf4f4);
+}
+
+:global(.dark) .subtitle,
+:global([data-theme="dark"]) .subtitle {
+  color: var(--secondary-text-color, #b4ced0);
+}
+
+:global(.dark) .metaBar,
+:global([data-theme="dark"]) .metaBar {
+  color: var(--secondary-text-color, #b4ced0);
+}
+
+:global(.dark) .heroImage,
+:global([data-theme="dark"]) .heroImage {
+  background-color: #0b1213;
+}
+
+:global(.dark) .body,
+:global([data-theme="dark"]) .body {
+  color: var(--text-color, #ebf4f4);
+}
+
+:global(.dark) .body h2,
+:global(.dark) .body h3,
+:global([data-theme="dark"]) .body h2,
+:global([data-theme="dark"]) .body h3 {
+  color: #7ebec2;
+}
+
+:global(.dark) .body blockquote,
+:global([data-theme="dark"]) .body blockquote {
+  border-left-color: #7ebec2;
+  background-color: #142022;
+  color: var(--text-color, #ebf4f4);
+}
+
+:global(.dark) .sermonBox,
+:global([data-theme="dark"]) .sermonBox {
+  background-color: #142022;
+  border-color: rgba(126, 190, 194, 0.2);
+}
+
+:global(.dark) .sermonBoxTitle,
+:global([data-theme="dark"]) .sermonBoxTitle {
+  color: #7ebec2;
+}
+
+:global(.dark) .sermonBoxLink,
+:global([data-theme="dark"]) .sermonBoxLink {
+  color: #7ebec2;
+}
+
+:global(.dark) .sermonBoxLink:hover,
+:global([data-theme="dark"]) .sermonBoxLink:hover {
+  color: #a7e4e7;
+}
+
+:global(.dark) .shareSection,
+:global([data-theme="dark"]) .shareSection {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+:global(.dark) .shareButton,
+:global([data-theme="dark"]) .shareButton {
+  background: #142022;
+  border-color: rgba(126, 190, 194, 0.2);
+  color: var(--text-color, #ebf4f4);
+}
+
+:global(.dark) .shareButton:hover,
+:global([data-theme="dark"]) .shareButton:hover {
+  background-color: rgba(126, 190, 194, 0.15);
+  border-color: #7ebec2;
+  color: #7ebec2;
+}
+
+:global(.dark) .tagSection,
+:global([data-theme="dark"]) .tagSection {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+:global(.dark) .tagTitle,
+:global([data-theme="dark"]) .tagTitle {
+  color: #7ebec2;
+}
+
+:global(.dark) .tagPill,
+:global([data-theme="dark"]) .tagPill {
+  background: rgba(126, 190, 194, 0.12);
+  border-color: rgba(126, 190, 194, 0.25);
+  color: #7ebec2;
+}
+
+:global(.dark) .tagPill:hover,
+:global([data-theme="dark"]) .tagPill:hover {
+  background: #7ebec2;
+  color: #0e1617;
+  border-color: #7ebec2;
 }

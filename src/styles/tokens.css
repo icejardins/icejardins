@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --text-color: #12383a;
   --secondary-text-color: #4d6b6d;
   --text-link-color: #145f63;
@@ -20,7 +20,10 @@
   --brand-50: #f1f7f7;
 }
 
-.dark {
+.dark,
+[data-theme="dark"],
+html.dark,
+body.dark {
   --text-color: #ebf4f4;
   --secondary-text-color: #b4ced0;
   --background-color: #0e1617;

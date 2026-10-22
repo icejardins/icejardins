@@ -407,3 +407,225 @@
     padding: 1rem;
   }
 }
+
+/* ==========================================================================
+   Dark Mode Overrides
+   ========================================================================== */
+
+:global(.dark) .headerTitle,
+:global([data-theme="dark"]) .headerTitle {
+  color: var(--text-color, #ebf4f4);
+}
+
+:global(.dark) .badge,
+:global([data-theme="dark"]) .badge {
+  background-color: rgba(126, 190, 194, 0.16);
+  color: #7ebec2;
+}
+
+:global(.dark) .tagsSection,
+:global([data-theme="dark"]) .tagsSection {
+  background: #142022;
+  border-color: rgba(126, 190, 194, 0.18);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+:global(.dark) .tagsHeader,
+:global([data-theme="dark"]) .tagsHeader {
+  color: #7ebec2;
+}
+
+:global(.dark) .tagPill,
+:global([data-theme="dark"]) .tagPill {
+  background: #0e1617;
+  color: var(--text-color, #ebf4f4);
+  border-color: rgba(126, 190, 194, 0.22);
+}
+
+:global(.dark) .tagPill:hover,
+:global(.dark) .tagPill:focus-visible,
+:global([data-theme="dark"]) .tagPill:hover,
+:global([data-theme="dark"]) .tagPill:focus-visible {
+  border-color: #7ebec2;
+  color: #7ebec2;
+  background: rgba(126, 190, 194, 0.14);
+}
+
+:global(.dark) .activeTagPill,
+:global([data-theme="dark"]) .activeTagPill {
+  background: #1c7074;
+  border-color: #7ebec2;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+:global(.dark) .tagCount,
+:global([data-theme="dark"]) .tagCount {
+  background: rgba(126, 190, 194, 0.18);
+  color: #7ebec2;
+}
+
+:global(.dark) .activeTagPill .tagCount,
+:global([data-theme="dark"]) .activeTagPill .tagCount {
+  background: #ffffff;
+  color: #0b3032;
+}
+
+:global(.dark) .activeFilterBar,
+:global([data-theme="dark"]) .activeFilterBar {
+  background: rgba(126, 190, 194, 0.1);
+  border-color: rgba(126, 190, 194, 0.28);
+  color: var(--text-color, #ebf4f4);
+}
+
+:global(.dark) .activeFilterBar strong,
+:global([data-theme="dark"]) .activeFilterBar strong {
+  color: #7ebec2;
+}
+
+:global(.dark) .clearFilterBtn,
+:global([data-theme="dark"]) .clearFilterBtn {
+  border-color: #7ebec2;
+  color: #7ebec2;
+}
+
+:global(.dark) .clearFilterBtn:hover,
+:global([data-theme="dark"]) .clearFilterBtn:hover {
+  background: #7ebec2;
+  color: #0e1617;
+}
+
+:global(.dark) .card,
+:global([data-theme="dark"]) .card {
+  background: #142022;
+  border-color: rgba(126, 190, 194, 0.18);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+:global(.dark) .card:hover,
+:global([data-theme="dark"]) .card:hover {
+  border-color: #7ebec2;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+}
+
+:global(.dark) .cardMedia,
+:global([data-theme="dark"]) .cardMedia {
+  background-color: #0b1213;
+}
+
+:global(.dark) .passageBadge,
+:global([data-theme="dark"]) .passageBadge {
+  background-color: rgba(126, 190, 194, 0.16);
+  color: #7ebec2;
+}
+
+:global(.dark) .cardMeta,
+:global([data-theme="dark"]) .cardMeta {
+  color: var(--secondary-text-color, #b4ced0);
+}
+
+:global(.dark) .cardTitle a,
+:global([data-theme="dark"]) .cardTitle a {
+  color: var(--text-color, #ebf4f4);
+}
+
+:global(.dark) .cardTitle a:hover,
+:global([data-theme="dark"]) .cardTitle a:hover {
+  color: #7ebec2;
+}
+
+:global(.dark) .cardSummary,
+:global([data-theme="dark"]) .cardSummary {
+  color: var(--secondary-text-color, #b4ced0);
+}
+
+:global(.dark) .cardTagBadge,
+:global([data-theme="dark"]) .cardTagBadge {
+  background: rgba(126, 190, 194, 0.12);
+  color: #7ebec2;
+  border-color: rgba(126, 190, 194, 0.25);
+}
+
+:global(.dark) .cardTagBadge:hover,
+:global([data-theme="dark"]) .cardTagBadge:hover {
+  background: #7ebec2;
+  color: #0e1617;
+  border-color: #7ebec2;
+}
+
+:global(.dark) .cardFooter,
+:global([data-theme="dark"]) .cardFooter {
+  border-top-color: rgba(255, 255, 255, 0.08);
+  color: var(--secondary-text-color, #b4ced0);
+}
+
+:global(.dark) .readLink,
+:global([data-theme="dark"]) .readLink {
+  color: #7ebec2;
+}
+
+:global(.dark) .readLink:hover,
+:global([data-theme="dark"]) .readLink:hover {
+  color: #a7e4e7;
+}
+
+:global(.dark) .paginationSummary,
+:global([data-theme="dark"]) .paginationSummary {
+  color: var(--secondary-text-color, #b4ced0);
+}
+
+:global(.dark) .pageNumber,
+:global([data-theme="dark"]) .pageNumber {
+  background: #142022;
+  border-color: rgba(126, 190, 194, 0.2);
+  color: var(--text-color, #ebf4f4);
+}
+
+:global(.dark) .pageNumber:hover,
+:global(.dark) .pageNumber:focus-visible,
+:global([data-theme="dark"]) .pageNumber:hover,
+:global([data-theme="dark"]) .pageNumber:focus-visible {
+  border-color: #7ebec2;
+  color: #7ebec2;
+  background: rgba(126, 190, 194, 0.12);
+}
+
+:global(.dark) .currentPage,
+:global([data-theme="dark"]) .currentPage {
+  background: #1c7074;
+  border-color: #7ebec2;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+:global(.dark) .prevNextBtn,
+:global([data-theme="dark"]) .prevNextBtn {
+  background: #142022;
+  border-color: rgba(126, 190, 194, 0.2);
+  color: var(--text-color, #ebf4f4);
+}
+
+:global(.dark) .prevNextBtn:hover,
+:global(.dark) .prevNextBtn:focus-visible,
+:global([data-theme="dark"]) .prevNextBtn:hover,
+:global([data-theme="dark"]) .prevNextBtn:focus-visible {
+  border-color: #7ebec2;
+  color: #7ebec2;
+  background: rgba(126, 190, 194, 0.12);
+}
+
+:global(.dark) .emptyState,
+:global([data-theme="dark"]) .emptyState {
+  background: #142022;
+  border-color: rgba(126, 190, 194, 0.25);
+}
+
+:global(.dark) .emptyState h2,
+:global([data-theme="dark"]) .emptyState h2 {
+  color: var(--text-color, #ebf4f4);
+}
+
+:global(.dark) .emptyState p,
+:global([data-theme="dark"]) .emptyState p {
+  color: var(--secondary-text-color, #b4ced0);
+}
