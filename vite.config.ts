@@ -137,7 +137,7 @@ export default defineConfig(({ command, mode }) => {
             deep: [/^_.*/, /^dark/, /^data-theme/, /^leaflet/],
             greedy: [/^_.*/, /^leaflet/]
           },
-          defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || []
+          defaultExtractor: (content: string) => content.match(/[\w-/:]+(?<!:)/g) || []
         })
       ]
     }
