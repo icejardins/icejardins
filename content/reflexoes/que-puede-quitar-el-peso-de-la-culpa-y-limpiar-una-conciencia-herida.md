@@ -43,4 +43,10 @@ En la antigüedad se enseñaba que la vida de un ser está en su sangre. Cuando 
 
 Cuando entendemos esta verdad, algo hermoso florece adentro. Ya no intentas portarte bien por miedo al castigo ni buscas hacer cosas buenas para obligar a Dios a quererte. Comienzas a hacer el bien por agradecimiento, con una sonrisa sincera y los hombros livianos. El miedo desaparece de tu mente y el amor pasa a gobernar tu rutina diaria.
 
-Tu conciencia queda limpia, no porque te vuelvas perfecto de golpe, sino porque sabes que la gracia de Jesús limpió cada fragmento de tu historia. Ahora puedes recostar
+Tu conciencia queda limpia, no porque te vuelvas perfecto de golpe, sino porque sabes que la gracia de Jesús limpió cada fragmento de tu historia. Ahora puedes recostar la cabeza en la almohada sabiendo que no hay cuentas pendientes entre tú y Dios.
+
+### Tu próximo paso práctico para hoy
+
+Hoy puedes dar un paso muy sencillo y liberador antes de que termine el día. Busca un lugar tranquilo en tu casa, respira hondo y haz una oración sincera con tus propias palabras: *"Señor Jesús, gracias por entregar tu vida por mí en la cruz. Dejo en tus manos toda la culpa que he venido cargando y acepto tu perdón completo. Ayúdame a vivir en paz y con el corazón limpio hoy"*. 
+
+Si cometiste una falta contra alguien cercano, pídele disculpas con humildad antes de dormir, sabiendo que el perdón de Dios ya te acompaña para restaurar tus relaciones con calma y amor.

@@ -10,16 +10,13 @@ sermonSlug = "hebreus-4-1-7-o-descanso-de-deus"
 passage = "Hebreus 4:1-7"
 image = "/images/posts/hebreus-4-1-7-o-descanso-de-deus.webp"
 +++
-
 Para calmar la mente acelerada y encontrar alivio para la ansiedad diaria, necesitas dejar de intentar controlar cada detalle con tus propias fuerzas. El alivio verdadero no surge de tachar todas las tareas de tu lista, sino de entregar el peso del mañana en las manos de Dios. La paz profunda comienza en el momento en que decides confiar en su amor, permitiendo que tu corazón descanse seguro.
 
-Toma asiento, respira profundo y acompáñame con una taza de café caliente. Sé muy bien lo que se siente llegar a la cama después de un día agotador, apagar la luz y notar que la cabeza simplemente no se detiene. Las preocupaciones por el dinero, las deudas pendientes, el bienestar de los hijos, los problemas del trabajo y la incertidumbre del futuro parecen una tormenta que no cesa en nuestra mente.
+Sé muy bien lo que se siente llegar a la cama después de un día agotador, apagar la luz y notar que la cabeza simplemente no se detiene. Las preocupaciones por el dinero, las deudas pendientes, el bienestar de los hijos, los problemas del trabajo y la incertidumbre del futuro parecen una tormenta que no cesa en nuestra mente.
 
 A veces pensamos que una siesta rápida o un par de días libres van a solucionar todo por arte de magia. Sin embargo, cuando regresamos a la rutina, la pesadez sigue ahí intacta. La verdad es que el cansancio más profundo y asfixiante que experimentamos no se encuentra en los músculos ni en los huesos, sino en lo más hondo de nuestra alma.
 
 ### El cansancio que unas vacaciones no logran curar
-
-En la Biblia, dentro de la carta a los Hebreos, encontramos un mensaje muy especial dirigido a personas comunes que, igual que tú y que yo, se sentían completamente agotadas por las dificultades de la vida diaria. El autor les recuerda la historia de los antiguos israelitas que caminaron durante cuarenta largos años por el desierto, soñando con llegar a una tierra propia donde por fin pudieran levantar sus casas y descansar tranquilos.
 
 Aquel pueblo entero creía que todos sus temores y angustias desaparecerían por completo en cuanto cruzaran la frontera prometida. Pensaban que el cambio de lugar resolvería mágicamente sus problemas. Pero las cosas no fueron así. Incluso después de llegar a ese nuevo territorio, el corazón de muchos de ellos continuaba inquieto, amargado y lleno de inseguridad.
 

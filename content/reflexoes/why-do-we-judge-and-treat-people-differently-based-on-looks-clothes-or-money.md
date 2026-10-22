@@ -1,6 +1,6 @@
 +++
 title = "Why do we judge and treat people differently based on looks, clothes, or money?"
-subtitle = "We often look at the outside, but God teaches us to welcome every heart with the same love and respect."
+subtitle = "Discover how sincere love frees us from the trap of appearances and teaches us to welcome everyone with equal dignity."
 date = "2023-10-21"
 draft = false
 lang = "en"
@@ -10,44 +10,45 @@ sermonSlug = "tiago-2-1-13-o-perigo-da-parcialidade"
 passage = "Tiago 2:1-13"
 image = "/images/posts/tiago-2-1-13-o-perigo-da-parcialidade.webp"
 +++
-We often treat people differently because the world trains us to care about what eyes can see on the outside instead of what is inside the heart. Many times we do this without even thinking, hoping to win favor or feel safe around people who seem to have a lot to offer. Yet in the eyes of God, every single human being has the very same precious worth, with no special privileges and no favorites.
 
-Pull up a chair, take a slow breath, and have a cup of warm coffee with me today. Which one of us has not felt this sting on our own skin?
+We often judge and treat people differently based on their looks, clothes, or money because our hearts naturally seek security, favor, and advantage in visible things. We tend to admire those who seem to have something to offer us, while overlooking those who seem to have nothing. But you do not have to live trapped in this shallow mindset, because God offers a lighter and far more loving way to see others.
 
-Think about an afternoon when you walked into a store in plain clothes and old shoes, feeling invisible. Nobody moved to say hello or ask how your day was going. Minutes later, another shopper walked in wearing an expensive jacket and a shiny watch. Instantly, the workers rolled out the red carpet with big smiles and quick offers of help.
+Pull up a chair and let us talk about this honestly. Most of us know what it feels like to be judged by our clothes or our wallet. Perhaps you have felt invisible in a store because you were wearing simple work clothes. Or maybe you have caught yourself flattering someone with a high social position, while barely acknowledging the person cleaning the floor right beside you.
 
-That kind of moment hurts deep inside. It stings because deep in our bones, we know that a person's real value should never depend on the size of their wallet or the brand of their shoes.
+Society constantly trains our minds to measure a person's worth by the brand of their shoes, the car they drive, or the balance in their bank account. It is as if the world places an invisible price tag on every single person. When we live that way, we end up judging human beings by temporary things that do not last.
 
-### The danger of looking only at the wrapper
+### God does not have favorites
 
-In James chapter two, we read about a scene that sounds just like our own street corners. James tells a clear story about two visitors who walk into a church meeting. One arrives wearing shiny gold rings and fancy clothes. The other is a poor laborer in dusty, worn-out clothes from a week of hard work.
+The Bible teaches a truth that brings real relief to our hearts: God does not show favoritism. In the book of Deuteronomy, chapter ten, and in the book of Acts, chapter ten, Scripture makes this clear. God is not swayed by expensive clothes, famous family names, or big bank accounts. He does not take bribes, and outward wealth never impresses Him.
 
-The reaction was quick, sad, and unfair. They smiled at the wealthy man and said, "Welcome, sir! Please sit right here in the best front seat." But when they turned toward the poor man, they pointed at the floor and said, "You can stand in the back, or sit on the floor by my feet."
+Instead, God looks directly at what is inside a person. When the Lord looks at your life, He does not ask about your job title or how much money you have saved. He sees a precious human soul made in His image. Old biblical writings in Proverbs and Leviticus remind us that it is wrong to favor the rich or despise the poor.
 
-James gives us a loving warning: whenever we do that, we act like crooked judges with bad motives. We divide people into those who deserve kindness and those who can be tossed aside. The Bible calls this favoritism or partiality—trying to please the rich while ignoring someone who cannot give us anything in return.
+Since the Creator of the universe treats every person with equal honor, we should never divide people into groups of who matters more and who matters less. Before God, all of us stand on equal ground, made by the same loving hands.
 
-### The beautiful example Jesus gave us every day
+### How Jesus looked at people
 
-If we want to learn how to treat people right, we only need to look at how Jesus lived. He never chose who to welcome based on social status, family name, or the cost of a coat.
+When Jesus walked on this earth, He showed us how to love without prejudice. Jesus did not stay away from wealthy people. He sat down and had a quiet, thoughtful conversation with a respected leader named Nicodemus, and He ate dinner in the home of Zacchaeus, a wealthy tax collector.
 
-Jesus spoke with wealthy leaders like Zacchaeus and Nicodemus, but He spent most of His days listening to people everyone else ignored. He stopped on a crowded road to help a blind beggar crying out in the dirt. He sat down by a well in the hot sun to talk kindly with a lonely woman. He even reached out His hands and gently touched sick lepers whom nobody else had the courage to approach.
+At the same time, Jesus never changed His gentle tone or deep compassion when talking to the poorest people. He stopped in the middle of a noisy crowd to listen to a blind beggar sitting beside the road. He also spent time speaking with an outcast woman at a Samaritan well, offering her dignity and hope.
 
-Jesus never judged anyone by their wrapper. He looked straight into their pain, their deep thirst for peace, and the sacred dignity that belongs to every child of God. James 2:5 reminds us that God holds a special tenderness for the humble, making them rich in faith. When we flatter the mighty and overlook the weak, we work against the very heart of God.
+Even the enemies of Jesus recognized that He was completely sincere and never judged people by outward appearances. Jesus treated everyone with grace. Grace is a free gift of love that costs nothing and cannot be earned. In Christ's eyes, both the wealthy ruler and the beggar in the street needed the very same mercy, forgiveness, and hope.
 
-### The golden rule for our daily life together
+### The danger of double standards
 
-God gives us a great life principle in Scripture called the royal law: "Love your neighbor as yourself" (James 2:8). It is a simple truth that does not require fancy books to understand.
+A practical biblical writer named James gave a strong warning about playing favorites in daily life. He asked his readers to picture two strangers walking into a gathering. One man wears fine clothes and shiny gold rings. The other man is poor, wearing worn-out, stained clothes from a long day of hard labor.
 
-Loving your neighbor means wanting for others the same patience, respect, and care you hope to receive at a clinic, the post office, or a diner. When you play favorites—greeting the boss with praise while ignoring the quiet cleaner—you break that golden law of love.
+James said that if you offer the best seat to the rich man with a wide smile, but tell the poor man to stand in the corner or sit on the floor, you have become an unfair judge. You are valuing shiny clothes more than the dignity of a human being.
 
-God reminds us that He plays no favorites. His grace is a generous gift of love that we could never earn, and His arms stay wide open to everyone who needs a safe harbor. If God did not treat us with prejudice when we were lost, we have no right to build walls against anybody else.
+We often praise the wealthy because we hope they will do us a favor, while we ignore the humble. Yet money often makes people proud and self-reliant. On the other hand, many humble people learn to depend on God daily, teaching us beautiful lessons about faith, quiet generosity, and genuine contentment. In God's eyes, that rich faith is worth far more than gold.
 
-### Building bridges instead of high walls
+### Real love does not pick and choose
 
-Imagine how much brighter our neighborhoods would be if we stopped measuring people by outward appearances. What a wonderful picture it is when an employer and a helper, a doctor and a trash collector, can sit at the same kitchen table, sharing a meal and laughing together like brothers and sisters.
+The Bible gives us a simple rule called the law of love: love your neighbor as you love yourself. When we are only nice to people who can pay for our lunch or help our careers, we are not showing real love. We are just making calculated business deals disguised as politeness.
 
-True faith does not stay trapped in pretty words spoken only on Sundays. Real faith is lived out through our fingertips, through our quiet willingness to lend a hand, and through our choice to see people simply as people. Mercy will always triumph over cold judgment. When you decide to treat everyone with equal dignity, you scatter seeds of God's kindness right in your own town.
+True love looks past outward appearances. It teaches you to greet the company boss and the person who sweeps the sidewalk with the same warm smile and respect. When you treat everyone with equal kindness, the heavy burden of pride disappears, and your soul can truly rest.
 
-### Practical next step for today
+### A practical next step
 
-Today, choose one person who usually goes unnoticed in your daily routine. It might be the custodian cleaning the hall, the person collecting the trash on your block, the cashier at the grocery store, or the quiet coworker sitting by themselves during lunch. Walk over with a gentle step, look them in the eyes, offer a warm and sincere smile, ask their name, and say: "Thank you so much for your hard work today; I hope you have a truly blessed day." Try giving this gift of pure respect without expecting anything back.
+Today, try putting this into practice in your daily routine. Look around for someone near you who is often treated as invisible. It could be the security guard at your building, the custodian cleaning the floors, the worker collecting trash, or the cashier at your neighborhood grocery store.
+
+Take a moment to look them in the eyes, smile warmly, and ask for their name. Say a heartfelt "thank you" for the hard work they do, and listen to their answer without rushing away. Honoring those who are humble is the first step toward seeing others the way God sees them.

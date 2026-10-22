@@ -15,8 +15,6 @@ Dios habla con las personas hoy de una forma muy clara, tierna y accesible a tra
 
 ### Un Creador que nunca ha estado en silencio
 
-Toma asiento, respira hondo y ponte cómodo para conversar. Si alguna vez has mirado un cielo lleno de estrellas o sentido una calma agradable frente al mar, ya has tenido un pequeño encuentro con Dios. Ese asombro no nace de la nada. La Biblia enseña en el Salmo 19 que la creación entera anuncia la gloria de Dios, como si cada día le hablara al siguiente sobre el cuidado amoroso del Padre.
-
 El apóstol Pablo escribió en Romanos que las cualidades del Creador se notan con claridad en todo lo que Él hizo. Esto significa que Dios nunca nos dejó a oscuras. Él no es una fuerza fría que puso el mundo a girar y luego se marchó dándonos la espalda.
 
 Dios se comunica con nosotros por pura gracia. Esta palabra tan conocida en la fe significa simplemente un regalo inmerecido que nace del amor más sincero. Dios no tiene ninguna deuda con nosotros, pero decidió romper el silencio para abrazarnos como un buen padre abraza a sus hijos amados. Él toma siempre la iniciativa porque busca una relación cercana, llena de confianza, tranquilidad y amistad con cada uno de nosotros.

@@ -10,9 +10,8 @@ sermonSlug = "joel-2-18-32-a-compaix-o-de-deus"
 passage = "Joel 2:18-32"
 image = "/images/posts/joel-2-18-32-a-compaix-o-de-deus.webp"
 +++
-Yes, God truly can and wants to restore the wasted years you lost to your own mistakes. He does far more than forgive your old stumbles; He holds the gentle power to rebuild your life starting right now. You are not trapped in what you did yesterday, and your story is not over.
 
-Pull up a chair, take a slow breath, and have a cup of coffee with me. I know how badly it stings when you look back and see years ruined by bad habits, broken homes, harsh words, stubborn pride, or foolish money choices. A heavy weight settles in your chest and whispers, “I ruined everything, and it is just too late for me.” But I want to tell you with all the warmth of my heart: with God, it is never too late. He loves nothing more than giving ordinary, hurting people a brand new start.
+Yes, God truly can and wants to restore the wasted years you lost to your own mistakes. He does far more than forgive your old stumbles; He holds the gentle power to rebuild your life starting right now. You are not trapped in what you did yesterday, and your story is not over.
 
 ### When swarms of locusts eat away our lives
 
@@ -37,8 +36,6 @@ Along with that healing, God promised to remove the thick shame that hung around
 ### Brand new dreams for tired hearts
 
 Near the end of this wonderful message, God made an even larger promise: He said He would pour out His Holy Spirit upon all flesh. Hundreds of years later, Peter stood up before a huge crowd in Jerusalem and told everyone that this ancient promise had finally arrived. Peter reminded them of Joel’s bright words: the old men would dream dreams, and the young men would see visions of tomorrow.
-
-Think about how sweet that is for a second. An elderly person usually lives only on memories of what used to be, but the Holy Spirit plants brand new dreams inside weary hearts. It makes no difference whether you are twenty, forty-five, or seventy-eight years old today. God can give you back a bright sparkle in your eyes and build surprising roads right where you thought the path ended. The blunders of yesterday do not own the final word when you put your hands into His.
 
 ### Your practical next step
 

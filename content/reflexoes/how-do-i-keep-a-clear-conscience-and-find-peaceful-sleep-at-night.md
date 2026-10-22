@@ -10,11 +10,10 @@ sermonSlug = "hebreus-13-18-25-continuando-a-jornada-da-fe"
 passage = "Hebreus 13:18-25"
 image = "/images/posts/hebreus-13-18-25-continuando-a-jornada-da-fe.webp"
 +++
+
 Finding true peace of mind when you rest your head on your pillow happens when you stop carrying guilt and worries that you cannot fix by yourself. You find a clean conscience when you are honest with God about your mistakes, choose to do what is right each day, and rest knowing that He forgives you and cares for your tomorrow. It is a daily gift of calm that comes from living with an open heart and placing your trust in your loving Creator.
 
 ### The heavy weight we feel before turning off the light
-
-Have you ever had one of those long, exhausting days where your body is completely tired, but as soon as you turn off the bedroom light, your mind suddenly starts racing? All kinds of hard thoughts rush in at once: a sharp word you said to someone you love, an unfair situation at work, an unpaid bill sitting on the kitchen counter, or a nagging fear about the days ahead. Your body begs for sleep, but your brain stays wide awake, replaying every single stumble and mistake like an endless movie in the dark.
 
 In the Bible, in Hebrews 13:18, a man of faith facing real danger wrote with deep honesty: "Pray for us, for we are sure that we have a clear conscience, desiring to act honorably in all things." Notice the simple beauty in what he said. He did not boast that he was perfect or better than anyone else. He simply shared that his heart truly wanted to do what was right, and with great humility, he asked his friends to lift him up in prayer.
 
@@ -33,8 +32,6 @@ When this kindness fills your heart, guilt loses all its power over your nights.
 ### No one was ever made to carry the world alone
 
 Another reason we often toss and turn at night is the quiet, painful feeling that we are totally alone in our daily battles. We start believing that everything depends on our own strength, and we try to carry the whole world on our shoulders. Near the end of his letter, the writer shares warm news about his dear friend Timothy, sends greetings from other believers, and asks everyone to stay close in love (Hebrews 13:22-24). He understood that nobody was created to walk through this life all by themselves.
-
-Our worries become heaviest in the quiet dark when we spend all day keeping our hurt locked inside and pretending to be strong. Talking to a trustworthy friend or pouring out your heart to God brings instant relief to an overloaded mind. You do not need big words, fancy phrases, or polished speeches to talk to God. Prayer is simply an honest conversation with someone who loves you—just like sitting at a kitchen table with a warm drink, opening up to a best friend who truly listens.
 
 The closing blessing of the letter wraps around our tired spirits like a warm blanket: "Grace be with all of you" (Hebrews 13:25). That grace is God’s gentle hand holding you up through today and promising that tomorrow morning He will be right beside you, ready with fresh strength for whatever comes your way.
 

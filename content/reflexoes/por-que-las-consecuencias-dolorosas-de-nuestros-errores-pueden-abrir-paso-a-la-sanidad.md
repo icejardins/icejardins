@@ -15,8 +15,6 @@ Las consecuencias dolorosas de nuestros errores abren paso a la sanidad porque f
 
 ### La foto de la multa y nuestra terquedad
 
-Toma asiento por un momento, respira con calma y hablemos de corazón a corazón. ¿Alguna vez te ha llegado una multa de tránsito por pasar demasiado rápido frente a una cámara que ya conocías muy bien? Si has vivido esa amarga experiencia, seguro recuerdas el enojo inmediato que sentiste al abrir la carta.
-
 Nuestra primera reacción casi siempre es buscar culpables afuera: decimos que la cámara estaba escondida, que las autoridades son injustas o que la calle estaba completamente vacía. Sin embargo, cuando pasa el primer coraje, en el fondo sabemos la verdad: pisamos el acelerador sin prudencia y cruzamos el límite marcado.
 
 La cámara de tráfico no inventó nada malo contra ti ni quiso molestarte; solo registró la realidad de tu distracción o de tu prisa. Esa notificación duele bastante en el bolsillo, pero cumple un propósito que puede salvar vidas: nos obliga a frenar en seco antes de provocar un accidente grave.

@@ -12,8 +12,6 @@ image = "/images/posts/jeremias-2-1-3-5-analise-de-um-divorcio.webp"
 +++
 We often trade real love for cheap illusions when routine makes us forget the blessings we already have. Deep inside, we all carry a strong desire to feel safe, known, and truly valued. Yet, in our hurry, we look for quick relief in shiny things that promise everything and deliver nothing.
 
-Pull up a chair and share a warm cup of coffee with me. This quiet ache in our chest is not new to our busy, noisy world. Many centuries ago, a gentle prophet named Jeremiah spoke about this very same heartbreak in the Bible. He compared our relationship with the Lord to a marriage that slowly grew cold over time until it was almost torn apart.
-
 ### Short memories slowly cool down warm love
 
 Every painful split begins long before an open argument ever breaks out. It usually starts when our memory begins to fail us. Jeremiah reminded the people that, in the beginning, they walked closely with God like young newlyweds. They walked through rough deserts together, trusting His voice, finding daily peace in His presence, and resting under His faithful shield.
@@ -21,8 +19,6 @@ Every painful split begins long before an open argument ever breaks out. It usua
 God watched over every tiny step, shielded them from hidden dangers, and carried them through dry valleys like a loyal friend. But as comfortable years passed by and life grew easier, the people slowly forgot the road behind them. They stopped asking where God was, even though He was the very One who broke their heavy chains and gave them good water in a parched desert.
 
 When we forget the quiet care we receive each day, our hearts easily turn proud and ungrateful. We begin to think that every good gift came from our own strength or that other people simply owe us their time and service. The very moment gratitude leaves a home, love begins to walk out the door right behind it.
-
-The exact same tragedy happens around our own kitchen tables every single week. We stop noticing the fresh cup of coffee poured with affection early in the morning. We overlook the warm hug waiting at the front door after a long day at work, and we tune out the kind words spoken when we feel down. Unspoken gratitude builds a high wall of chilly silence between people who care for each other.
 
 ### The painful trick of broken buckets
 

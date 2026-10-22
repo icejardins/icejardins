@@ -15,8 +15,6 @@ Quando a vida aperta e o céu parece de bronze, a sensação de que Deus não es
 
 ### Quando a dor parece não fazer sentido
 
-Puxa uma cadeira, respire fundo e vamos conversar com calma sobre isso. Talvez você esteja passando por um momento muito difícil no trabalho ou na família, vendo pessoas desonestas prosperarem enquanto o seu salário mal dá para pagar as contas básicas no fim do mês. Dá uma sensação profunda de injustiça no peito, não dá? A gente olha para os lados, sente aquele nó na garganta e pensa: "Deus, onde o Senhor está? Por que parece que nada acontece para consertar essa situação?".
-
 Se você já teve esse pensamento, saiba de uma coisa muito importante: você não está sozinho nessa caminhada. Há milhares de anos, um homem chamado Jeremias, cuja história está registrada na Bíblia, sentiu exatamente o mesmo aperto no coração. Ele olhou para o céu e desabafou com Deus com toda a sinceridade: "Por que o caminho das pessoas más sempre dá certo? Por que os traidores vivem tranquilos? Parece que o Senhor mesmo os plantou, e eles só criam raízes e dão frutos, enquanto quem busca ser honesto passa aperto!".
 
 Jeremias estava cansado, confuso e desanimado. O detalhe mais bonito e acolhedor dessa passagem é que Deus não repreendeu nem castigou Jeremias por falar desse jeito. Deus não espera que a gente use palavras bonitas ou finja que está tudo maravilhoso quando o coração está em pedaços. Ele deseja uma conversa sincera, exatamente como um pai amoroso que senta no chão para escutar o choro do filho. Levar suas dúvidas e angústias para Deus em oração não é rebeldia; é demonstrar que você ainda confia que Ele é o único capaz de ajudar.

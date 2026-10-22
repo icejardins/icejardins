@@ -10,15 +10,12 @@ sermonSlug = "1-joao-3-18-24-deus-e-maior-que-o-nosso-coracao"
 passage = "1 João 3:18-24"
 image = "/images/posts/1-joao-3-18-24-deus-e-maior-que-o-nosso-coracao.webp"
 +++
-When heavy guilt weighs on your heart and you cannot seem to forgive yourself, the very first step is to stop listening only to your anxious feelings. Finding true peace does not mean pretending your mistake never happened, but placing it gently into the hands of God, who knows every single detail of your personal story. He never wants you to spend your precious life punishing yourself for something that has already been confessed and washed clean by His deep forgiveness.
 
-Pull up a comfortable chair, take a slow and deep breath, and share a quiet cup of warm coffee with me right now. I know what it feels like to live with that quiet inner voice that never gives you rest. You try your best to go on with normal life, work hard, and care for your family, but it feels like you carry a heavy backpack filled with cold stones everywhere you walk. When we hurt someone we love or make a poor choice, our busy minds love to dig up the past again and again, whispering cruel lies that say we do not deserve to be happy anymore.
+When heavy guilt weighs on your heart and you cannot seem to forgive yourself, the very first step is to stop listening only to your anxious feelings. Finding true peace does not mean pretending your mistake never happened, but placing it gently into the hands of God, who knows every single detail of your personal story. He never wants you to spend your precious life punishing yourself for something that has already been confessed and washed clean by His deep forgiveness.
 
 ### The harsh courtroom inside our own minds
 
 Most of the time, our own conscience turns into an unfair and harsh courtroom. We end up playing every role: we are the angry prosecutor, the strict judge, and the cold guard who punishes us over and over for the exact same old failure. Long ago, the prophet Jeremiah wrote a very honest truth in the Bible when he warned that the human heart is tricky and hard for anyone to fully understand. Our fragile feelings change constantly with how tired our bodies are, the painful words we heard when we were small children, or our hidden fear of being rejected by others.
-
-Because of this constant weakness, our human heart makes a terrible and unreliable judge. On some days, our heart pretends that nothing wrong happened when we really need to apologize; on other days, it attacks us with cold cruelty for mistakes we have already admitted and tried hard to repair. You do not have to spend the rest of your earthly days paying off an endless emotional debt that never seems to reach zero. You were made to live in quiet freedom, not in a dark room of endless regret and self-blame.
 
 ### God is much bigger than all our guilt
 
@@ -35,8 +32,6 @@ In the exact same way, the love and kindness you show to others is not a price y
 ### Two simple keys for living in true peace
 
 When you look at the big picture, God’s clear message for your daily journey comes down to two very practical choices. The first choice is to trust Jesus with all your heart, letting your tired soul rest in the solid promise that He paid your full bill at the cross. Please do not try to bargain with God by stacking up good deeds to make up for the past; simply open your empty hands and receive His warm embrace as a pure gift.
-
-The second choice is to take this sweet relief and turn it into simple, everyday love for the people around you. Jesus taught that everyone would recognize His true followers by the genuine care they showed to one another. When we finally stop staring down at our own old scars and begin reaching out to comfort someone who is hurting, the dark weight of guilt loses all its power over our minds. God’s Holy Spirit, who makes His peaceful home inside of us, gives our hearts the quiet confidence that we are His dearly loved children forever.
 
 ### Your practical next step today
 

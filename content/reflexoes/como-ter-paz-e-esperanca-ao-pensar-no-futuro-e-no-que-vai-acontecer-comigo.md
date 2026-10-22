@@ -13,13 +13,9 @@ image = "/images/posts/1-joao-2-28-3-3-as-bencaos-de-permanecer-em-jesus.webp"
 
 Você encontra verdadeira paz e esperança para o futuro quando compreende que não está sozinho nem desamparado no mundo. O seu amanhã não depende da sorte ou do acaso, mas está guardado nas mãos amorosas de Deus, que cuida de você como um pai cuida de um filho querido. Quando você aprende a caminhar perto de Jesus todos os dias, o medo do que vai acontecer perde a força diante da certeza de que o melhor ainda está por vir.
 
-Puxe uma cadeira e fique à vontade. Se você puder, prepare uma xícara de café quente para conversarmos um pouco sobre a vida. Sei muito bem que a rotina costuma ser corrida e pesada. Quando deitamos a cabeça no travesseiro à noite, é muito comum aquele aperto no peito aparecer: "E se tudo der errado? Como vou pagar as contas? O que vai ser dos meus filhos? O que será de mim daqui a alguns anos?".
-
 O medo do desconhecido machuca a nossa alma. Muita gente passa a vida inteira tentando controlar o incontrolável, acumulando preocupações que só roubam o sono, a alegria e a saúde. Mas a boa notícia é que você não precisa continuar vivendo como escravo dessa ansiedade constante.
 
 Na Bíblia, numa carta muito carinhosa escrita pelo apóstolo João (no capítulo 2, versículo 28 até o capítulo 3, versículo 3), encontramos um caminho seguro e tranquilo para acalmar o coração e enxergar os nossos próximos passos com esperança.
-
-### Segurar na mão certa traz calma para o amanhã
 
 João começa nos chamando com muita doçura de "filhinhos" e nos dá um conselho de ouro: permaneçam em Jesus. Pense numa criança pequena tentando atravessar uma avenida movimentada. Ela não precisa entender de trânsito, de velocidade ou de leis. Ela só precisa segurar bem firme na mão do pai. Enquanto a mão estiver segura, o medo vai embora.
 

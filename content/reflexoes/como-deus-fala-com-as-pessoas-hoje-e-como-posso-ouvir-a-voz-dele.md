@@ -15,8 +15,6 @@ Deus fala com as pessoas hoje de forma muito clara, gentil e acessível por meio
 
 ### Um Criador que nunca esteve em silêncio
 
-Puxe uma cadeira, respire fundo e fique bem à vontade para conversarmos. Se em algum momento da vida você já olhou para um céu repleto de estrelas ou sentiu uma calma boa ao ver a força das ondas na praia, você já teve um vislumbre de Deus. Esse sentimento de admiração não surge do nada. A Bíblia ensina no Salmo 19 que a criação inteira proclama a glória de Deus, como se cada dia discursasse a outro dia sobre o cuidado do Pai.
-
 O apóstolo Paulo escreveu em Romanos que as qualidades invisíveis do Criador podem ser percebidas nas coisas que Ele criou. Isso significa que Deus nunca nos deixou sozinhos no escuro. Ele não é uma força fria que fez o mundo funcionar e depois deu as costas para nós.
 
 Ele se comunica conosco por pura graça. Essa palavrinha "graça", muito usada nas igrejas, nada mais é do que um presente carinhoso e totalmente imerecido. Deus não nos deve nada, mas escolheu quebrar o silêncio para nos acolher, porque nos ama como um bom pai ama seus filhos. Ele toma a iniciativa porque deseja um relacionamento de amizade e confiança com cada um de nós.
