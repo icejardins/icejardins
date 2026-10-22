@@ -1,6 +1,6 @@
 +++
 title = "¿Por qué nos enojamos tanto cuando alguien nos dice una verdad incómoda?"
-subtitle = "La verdad duele porque toca nuestro orgullo, pero aceptarla con humildad es el camino más seguro hacia la paz."
+subtitle = "La verdad incomoda porque desarma nuestro orgullo, pero aceptarla con humildad es el único camino seguro hacia la paz."
 date = "2025-10-25"
 draft = false
 lang = "es"
@@ -10,41 +10,40 @@ sermonSlug = "jeremias-36-38-desafio-mortal"
 passage = "Jeremias 36-38"
 image = "/images/posts/jeremias-36-38-desafio-mortal.webp"
 +++
-
-Nos enojamos tanto porque la verdad choca de frente con nuestro orgullo y rompe la ilusión de tener todo bajo control. Cuando alguien toca una falla real en nuestra vida, nuestro primer instinto casi nunca es agradecer, sino atacar para defendernos. Esa molestia nace del miedo a admitir que nos equivocamos y de la incomodidad que provoca tener que cambiar.
+Nos enojamos tanto porque la verdad choca de frente con nuestro orgullo y desarma la ilusión de tener todo bajo control. Cuando alguien toca una herida real de nuestra vida, nuestro primer impulso rara vez es agradecer, sino atacar para defendernos. Esa irritación nace del miedo a admitir que fallamos y del dolor que cuesta cambiar.
 
 ### Cuando queremos quemar el espejo
 
-Hay una historia muy clara en la Biblia, en el libro de Jeremías. Dios le encargó a este profeta escribir un mensaje de advertencia para el rey Joacim. Con una enorme paciencia, Dios le decía al pueblo: «Si cambian de rumbo y dejan de hacer el mal, perdonaré sus faltas y sanaré su tierra». Era una oportunidad maravillosa para empezar de nuevo.
+Imagine un relato antiguo del profeta Jeremías en la Biblia. Dios llamó a un hombre sencillo para escribir una advertencia al rey de la época, llamado Joacim. Con paciencia, Dios le decía: "Si cambian de rumbo y dejan el mal, perdonaré sus faltas y sanaré su vida". Era una hermosa oportunidad para recomenzar en paz.
 
-Sin embargo, la respuesta del rey fue insólita. Estaba sentado en su palacio calentándose junto a un fuego de invierno. Conforme el mensajero leía las páginas, el rey sacaba una navaja, cortaba el pedazo de pergamino leído y lo arrojaba a las llamas. Así quemó todo el mensaje hasta volverlo cenizas, creyendo tontamente que al destruir el papel el problema dejaría de existir.
+Pero el monarca reaccionó de forma absurda al oír el texto en su sala de invierno. A medida que el mensajero leía el documento junto al fuego de una chimenea, el rey tomaba una cuchilla, cortaba esa parte del rollo y la arrojaba a las brasas. Así quemó todo el mensaje hasta volverlo ceniza. Pensaba que destruyendo el papel desaparecería el problema.
 
-Nosotros solemos hacer lo mismo a diario. Si el médico nos advierte que los exámenes salieron mal, decimos que es un exagerado. Si nuestra pareja señala con cariño una mala actitud, nos enojamos y culpamos al cansancio del trabajo. Intentamos quemar el espejo para no aceptar lo que tenemos que corregir.
+Aunque parezca una locura, nosotros solemos hacer lo mismo a diario. Si el médico avisa que los análisis salieron alterados, decimos que exagera. Si nuestra pareja señala con cariño una mala contestación, nos justificamos con el cansancio del trabajo. Intentamos quemar el aviso para evitar mirar nuestra culpa y no admitir el error.
 
-### Arrojar la verdad al fondo del pozo
+### Tirar la culpa al fondo del pozo
 
-La historia bíblica continúa con otro gobernante terco llamado Sedequías. En lugar de solucionar los males de la nación, él y sus funcionarios decidieron callar al profeta. Tomaron a Jeremías y lo tiraron al fondo de un pozo oscuro y sin agua, donde solo había lodo espeso. Jeremías comenzó a hundirse en el fango simplemente por negarse a mentir para agradarles.
+La historia continúa con otro gobernante terco, llamado Sedequías. En vez de corregir los errores del país, él y sus jefes decidieron callar al mensajero. Tomaron al profeta Jeremías y lo arrojaron a una cisterna profunda y sin agua, donde solo había lodo espeso. Jeremías quedó hundido en el fango por negarse a mentir para agradar a los poderosos.
 
-Querer callar a quien nos dice la verdad es una costumbre humana muy destructiva. Es igual a desconectar la luz de advertencia del tablero del auto cuando el motor recalienta: la alarma deja de sonar, pero el motor terminará rompiéndose poco después. Al explotar contra quien nos corrige, arrojamos nuestras relaciones a un pozo amargo. Preferimos conservar la razón antes que tener paz en casa.
+Silenciar a quien dice la verdad es una costumbre humana muy vieja. Es igual a apagar la luz de alerta del auto cuando el motor empieza a recalentarse: el aviso molesto se apaga, pero el motor termina fundiéndose poco después. Cuando explotamos contra quien nos corrige con sinceridad, arrojamos la relación a un pozo amargo. Preferimos tener la razón antes que vivir en paz.
 
-La Biblia compara esto con abandonar una fuente de agua limpia para cavar pozos rotos que solo guardan barro. Cada vez que rechazamos una verdad sana, quedamos atrapados en el lodo del orgullo. Perdemos la tranquilidad, el sueño y la compañía de las personas que de verdad nos quieren.
+La Biblia compara esta necedad con gente que abandona un manantial limpio para cavar pozos rotos que no retienen agua y juntan fango. Al rechazar una verdad incómoda, nos atascamos en el barro de nuestro propio egoísmo. Perdemos la tranquilidad, perdemos el buen sueño y alejamos a las pocas personas que de verdad buscan cuidarnos con honestidad.
 
-### Una mano amiga que nos rescata
+### La mano amiga que nos rescata del pozo
 
-En medio de aquella situación tan cruel apareció un hombre sencillo llamado Ebed-melec. Al ver la injusticia cometida contra Jeremías, fue valientemente ante el rey y pidió permiso para sacarlo de allí. Con cuerdas suaves y trapos viejos para no lastimar los brazos del prisionero, jaló al profeta hacia arriba y lo salvó de la oscuridad.
+En medio de esa injusticia apareció un hombre humilde llamado Ebed-melec. Al ver la crueldad cometida contra Jeremías, fue a pedir permiso al rey para sacarlo de allí. Con sogas suaves y trapos viejos para no lastimar los brazos del profeta, tiró de él hasta sacarlo de la oscuridad. Ese hombre arriesgó su propia seguridad para rescatar a quien decía la verdad.
 
-Esto refleja con sencillez lo que Dios hace por nosotros. La gracia divina —ese amor generoso que no merecemos— muchas veces nos llega a través de personas valientes que se atreven a decirnos lo que necesitamos oír. Un amigo de verdad no es quien festeja nuestros errores, sino quien nos extiende la mano antes de que caigamos al vacío.
+Esto refleja cómo actúa Dios con nosotros en la vida real. Su amor y su gracia —ese favor hermoso que no merecemos— suelen llegar por medio de personas valientes que pone a nuestro lado. Un amigo sincero no es quien aplaude nuestras malas decisiones, sino quien extiende la mano a tiempo y nos avisa antes de que caigamos al abismo.
 
-Una corrección honesta arde al principio como alcohol sobre un raspón. Quema y nos hace querer gritar, pero es exactamente lo que desinfecta la herida e impide que empeore. Aceptar que otra persona tiene razón es el primer paso indispensable para sanar el corazón y recuperar la serenidad.
+Escuchar una crítica constructiva duele como el alcohol sobre una raspadura abierta. Al inicio arde y dan ganas de gritar, pero es justo esa medicina la que desinfecta y evita un daño mayor. Aceptar con humildad que otra persona tiene razón es el primer paso indispensable para encontrar descanso mental y sanar las heridas del corazón.
 
-### El costo de la terquedad y el alivio de ceder
+### El precio de la terquedad y el alivio de soltar
 
-A menudo pensamos: «Si reconozco mi error, los demás van a pensar que soy débil». El rey Sedequías cayó en esa trampa mental. Tuvo más miedo de la opinión de sus amigos que del consejo de Dios. El final fue trágico: perdió a su familia, su libertad y su reino. Prefirió cuidar su imagen antes que salvar su propia vida.
+A menudo pensamos que admitir un fallo nos hará parecer débiles ante los demás. El rey Sedequías cayó en esa trampa mental. Tuvo más miedo de las opiniones ajenas que del buen consejo de Dios. Aquella debilidad le costó caro: perdió su familia, su libertad y su reino. Prefirió cuidar su imagen pública antes que salvar su propia vida.
 
-Ser humildes tiene un costo real. Cuesta tragar el orgullo, pedir disculpas sinceras y cambiar de conducta. Sin embargo, fingir que todo está bien y mantenerse terco sale infinitamente más caro. Cuesta noches de desvelo, matrimonios rotos, distancia con los hijos y la ruina de nuestra paz mental.
+La humildad tiene un costo real. Cuesta tragar el orgullo, pedir perdón sincero y cambiar viejas actitudes. Sin embargo, aparentar que todo está bien y seguir de tercos sale infinitamente más caro con el tiempo. Cuesta noches en vela, matrimonios rotos, distancia con los hijos y un desgaste muy profundo para la salud.
 
-Jesús lo explicó claramente al hablar de aquel hombre rico que vivía rodeado de lujos pero despreciaba la verdad y al necesitado. Terminó en un dolor profundo, mientras que el pobre Lázaro halló consuelo eterno. Dios nunca nos confronta con la verdad para humillarnos; lo hace porque nos ama demasiado para vernos destruidos por nuestras malas decisiones.
+Jesús lo explicó al hablar de un hombre rico que vivía entre lujos, pero ignoraba la verdad y la necesidad ajena. Vivió comodidades pasajeras y terminó en un dolor eterno, mientras que el pobre Lázaro halló consuelo verdadero junto a Dios. Dios no nos habla con palabras duras para humillarnos; nos dice la verdad porque nos ama demasiado para vernos destruidos por nuestras propias decisiones.
 
-### Un paso práctico para hoy
+### Próximo paso práctico
 
-Hoy mismo, piense en esa conversación reciente que le hizo subir la sangre a la cabeza. Pudo haber sido una queja de su cónyuge, un llamado de atención de su jefe o un reclamo honesto de su hijo. En lugar de alimentar el enojo o inventar excusas para defenderse, respire profundo y haga una oración breve en su interior: «Señor, ayúdame a ver con humildad en qué me equivoqué». Luego, busque con sencillez a esa persona y dígale: «Estuve pensando en lo que me dijiste y reconozco que tienes razón; voy a esforzarme por mejorar en eso». Ese gesto valiente apagará el rencor y traerá una paz duradera a su vida diaria.
+Piense hoy en esa conversación difícil que tuvo hace poco y que le hizo hervir la sangre. Quizá fue una queja de su pareja, un llamado de atención de su jefe o el reclamo sentido de un hijo. En vez de alimentar rencores o justificarse, respire profundo y ore en silencio: "Señor, ayúdame a ver mi error con humildad". Luego busque a esa persona con calma y dígale con sencillez: "Pensé en lo que me dijiste y reconozco que tienes razón; voy a mejorar en eso". Ese simple paso apagará el enojo y abrirá la puerta a una paz duradera.
