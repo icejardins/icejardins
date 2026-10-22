@@ -1,6 +1,6 @@
 +++
 title = "¿Cómo tener buen juicio y discernimiento para no caer en mentiras o engaños?"
-subtitle = "Aprenda a detenerse a tiempo y descubra cómo la sabiduría y el amor cuidan su corazón de los engaños diarios."
+subtitle = "Aprende a proteger tu mente y tu corazón de las falsedades cotidianas con la sabiduría sencilla de la fe."
 date = "2026-06-18"
 draft = false
 lang = "es"
@@ -10,40 +10,39 @@ sermonSlug = "1-joao-4-1-6-testem-os-espiritos"
 passage = "1 João 4:1-6"
 image = "/images/posts/1-joao-4-1-6-testem-os-espiritos.webp"
 +++
-Para no caer en mentiras o engaños, aprenda a hacer una pausa antes de creer o compartir cualquier mensaje, manteniendo la calma y la mente despejada. El verdadero discernimiento nace cuando usted examina con serenidad la intención de lo que lee y comprueba si produce paz, verdad y amor sincero al prójimo. No tema a la avalancha de rumores diarios, pues Dios concede sabiduría a quien busca la verdad de corazón.
 
-### Tome asiento y conversemos
+Para tener buen juicio y discernimiento para no caer en mentiras o engaños, necesitas aprender a hacer una pausa y evaluar con calma quién está detrás de lo que ves o lees. El verdadero discernimiento comienza cuando dejamos de aceptar las cosas con prisa solo porque parecen bonitas, conmovedoras o tienen millones de reproducciones. La sabiduría que viene de Dios nos enseña a examinar la fuente con paciencia y a comprobar si esa idea realmente concuerda con el amor humilde y sincero de Jesús.
 
-¿Ha notado cuántas cosas llegan a la pantalla de su teléfono todos los días? Recibimos un bombardeo constante de alertas urgentes, promesas de dinero fácil, remedios milagrosos y textos emotivos con aparente sentido espiritual. Con frecuencia terminamos angustiados o compartiendo avisos alarmistas que, al final de cuentas, resultan ser inventos falsos.
+Toma asiento un momento y conversemos con calma, como dos buenos amigos que comparten una taza de café recién hecho. Es muy probable que en estos días hayas sentido un cansancio profundo al tomar tu teléfono y encontrarte en medio de una avalancha interminable de publicaciones. Por todos lados aparecen recetas mágicas de éxito, promesas de dinero fácil sin trabajar y personas que hablan de Dios de un modo bastante extraño.
 
-Esto no pasa porque usted sea descuidado, sino porque el mundo digital está diseñado para tocar nuestras emociones más íntimas. Cuando una publicación nos asusta o promete soluciones mágicas a nuestras penas cotidianas, tendemos a reaccionar con prisa. Pero usted no tiene que vivir atado a ese ritmo agitado que solo genera confusión mental y desgaste interior.
+La pantalla de nuestro celular se ha vuelto un mercado ruidoso, lleno de gritos que buscan atrapar nuestra atención y generar ansiedad. Muchas veces terminamos el día aturdidos, sin saber en quién confiar o qué cosas reenviar a nuestros seres queridos. ¿Cómo podemos cuidar nuestra mente de tantas trampas digitales? La Biblia nos ofrece consejos prácticos y llenos de cariño para guiarnos con paz en nuestro andar diario.
 
-La Biblia, que es una carta de amor de Dios llena de sabiduría práctica para la vida diaria, ya trataba este problema hace dos mil años. En la Primera Carta de Juan, en el capítulo cuatro, hallamos consejos muy valiosos de un amigo sabio y cercano que buscaba proteger a su querida comunidad frente a los engaños comunes de la época.
+### No tragues todo lo que brilla en la pantalla
 
-### No crea en todo a la primera
+Hace casi dos mil años, Juan, un amigo muy cercano de Jesús, escribió una carta que parece pensada para nuestra época de internet. Con gran ternura de pastor, nos dejó esta valiosa advertencia: «Queridos hermanos, no crean a cualquiera que afirme tener el Espíritu de Dios; más bien, pónganlos a prueba para ver si de veras vienen de Dios». En palabras sencillas de nuestra vida diaria: no seas ingenuo con lo que consumes en tus redes.
 
-El apóstol Juan comienza sus palabras con un término muy afectuoso: "Amados". No escribe desde la distancia fría ni con regaños duros, sino con el cuidado de quien desea librar a un hermano de una trampa peligrosa. De inmediato nos da una guía de oro: no crean a cualquier voz; examinen con paciencia todo para ver si proviene realmente de Dios.
+Tener una fe sincera jamás ha significado apagar el cerebro o aceptar cualquier mandato a ciegas. Al contrario, la sabiduría divina nos enseña a escuchar con serenidad, evaluar con criterio lo que vemos y comparar el discurso de la gente con su vida real. El discernimiento no es orgullo ni ganas de criticar; es un cuidado amoroso hacia nosotros mismos y hacia la familia. Dios nos regaló buen juicio para que lo usemos todos los días.
 
-En la vida cotidiana, esto nos enseña que tener fe no significa apagar el cerebro ni aceptar ciegamente cualquier discurso bonito. El sentido común es una muestra clara de amor y cuidado responsable ante la vida. El simple hecho de que un video sea muy viral, acumule millones de vistas o lo envíe un pariente querido no garantiza que sea verdad.
+Hoy en día, las redes sociales funcionan mediante programas diseñados para mantenernos pegados a la pantalla. Pero esas aplicaciones no te aman, no cuidan de tu hogar ni tienen interés en la verdad. Por eso, nunca tragues una idea solo porque se volvió viral o porque quien la explica usa palabras elegantes. Detente un instante, respira hondo y examina todo con tranquilidad antes de abrir las puertas de tu corazón.
 
-Muchos creadores de contenido y plataformas digitales no buscan cuidar su tranquilidad familiar ni su bienestar. Su meta principal es atrapar su atención a cualquier costo. Por esa razón, desconfíe de mensajes que usan el miedo o que recurren al nombre de Dios para vender promesas vacías. Antes de confiar, respire hondo y revise con paciencia de dónde proviene en verdad esa noticia.
+### ¿Quién es el Jesús que te están vendiendo?
 
-### La gran prueba de la verdad
+El apóstol Juan nos da una orientación indispensable para no tropezar: debemos prestar atención redoblada a lo que dicen acerca de Jesús. Él explica que toda enseñanza que proviene de Dios confiesa que Jesucristo vino al mundo como un ser humano real. Aunque esto parezca una discusión lejana para teólogos, la verdad es que tiene muchísimo que ver con los dilemas más simples de nuestra vida cotidiana.
 
-Quizá usted se pregunte: "¿Cómo reconozco si un mensaje bonito viene de Dios o si es puro engaño?". Juan nos responde que la clave está en mirar con atención quién es Jesús en realidad. Toda enseñanza sana que proviene del cielo reconoce que Jesucristo vino a este mundo en carne y hueso.
+Jesús no fue un personaje de leyenda ni una idea vaga flotando en el aire. Él fue una persona real: caminó bajo el sol, sintió el cansancio del trabajo honesto, lloró junto a sus amigos y entregó su propia vida en una cruz por nosotros. La gracia de Dios —ese favor generoso que recibimos sin merecerlo— se manifestó en una vida cercana, repleta de misericordia, bondad y compasión hacia el prójimo.
 
-¿Qué nos enseña esto hoy? Significa que la verdad de Dios no es una fantasía mágica ni una receta de autoayuda para tener éxito de la noche a la mañana. Jesús caminó por este suelo polvoriento, sintió cansancio físico, consoló con ternura a los afligidos y entregó su propia vida por amor en la cruz para perdonarnos y reconciliarnos con el Padre celestial.
+En internet, muchos intentan vender un Jesús muy diferente. Han inventado un Cristo que parece un gurú de autoayuda, un genio mágico para volverse rico o un líder enojado que promueve pleitos y divisiones. Si un mensaje borra la cruz, el perdón sincero, la humildad y el amor al prójimo, no proviene de Dios. Antes de entusiasmarte con un discurso religioso, pregúntate con calma: «¿Esto refleja al Jesús humilde y servicial de la Biblia?».
 
-Si un mensaje usa la religión para generar odio, humillar a quien sufre o prometer una vida cómoda sin sacrificios, está falseando la verdad. Cualquier palabra inspirada por Dios nos guía siempre al perdón mutuo, a cuidar al necesitado y a vivir con sencillez y honradez. Si lo que mira en la pantalla produce soberbia, desprecio o engaños disfrazados de piedad, aléjese de inmediato y sin dudarlo.
+### El ruido y los «me gusta» no significan verdad
 
-### Una fuerza mayor que el ruido de las redes
+Otra advertencia importante es que aquello que las multitudes aplauden con entusiasmo no siempre es verdadero. Juan recordaba que los mensajes huecos suelen tener audiencias gigantescas porque le dicen a la gente exactamente lo que quiere oír. En las redes actuales, lo que más visitas genera suele ser el chisme, la burla hiriente, la venganza y el juicio cruel hacia quien piensa de manera distinta.
 
-Frente a tantas trampas y noticias engañosas en internet, es muy normal sentir desánimo o temor a ser manipulado todo el tiempo. Sin embargo, Juan nos da una promesa firme: aquel que cuida de nosotros y vive en nuestro corazón es infinitamente más grande y poderoso que cualquier falsedad de este mundo.
+Medir la verdad por el número de seguidores o de «me gusta» es un camino seguro hacia el engaño. Pero no tienes por qué angustiarte. El apóstol Juan nos anima con cariño paternal: «Hijitos, ustedes son de Dios, y Aquel que cuida de ustedes por dentro es mucho más grande que cualquier mentira que ande por el mundo». Dios es siempre más fuerte que la confusión.
 
-Esto significa que usted no tiene que angustiarse ni depender únicamente de su astucia personal. La gracia de Dios —ese regalo tierno de un Padre bondadoso que jamás nos abandona— llena siempre nuestro pecho de serenidad. Cuando buscamos vivir con rectitud, el Espíritu de la verdad aquieta nuestra mente para distinguir el peligro antes de caer en él.
-
-Tener discernimiento no es creerse superior a los demás, sino conservar la humildad para pedir claridad en medio de la confusión. Las mentiras suelen hacer ruido y juntar multitudes porque alimentan el orgullo humano y el egoísmo. En cambio, la verdad divina habla con suavidad, deja una calma profunda en el alma y da frutos duraderos de bondad y compasión sincera.
+La presencia reconfortante del Espíritu de Dios en nuestro corazón actúa como una brújula segura, brindándonos claridad para distinguir lo que edifica de lo que destruye. Cuando descansamos en el amor del Creador, no nos dejamos manipular por modas pasajeras ni por discursos vacíos. Aprendemos a reconocer la voz dulce de la verdad en medio del bullicio de internet.
 
 ### Próximo paso práctico
 
-Hoy mismo, aplique la "regla de los dos minutos" antes de reaccionar ante cualquier contenido en su teléfono móvil. Cuando reciba una noticia alarmante, un audio urgente o un video impactante, no lo comparta de inmediato ni tome decisiones apresuradas. Espere dos minutos, beba un vaso con agua, eleve una oración breve pidiendo sabiduría y verifique si la fuente es confiable y si ese mensaje edifica de verdad a quienes lo recibirán.
+Para poner en práctica tu buen juicio hoy mismo, aplica la sencilla «regla de los tres minutos» antes de reaccionar frente a cualquier contenido en tu teléfono. Siempre que encuentres un video alarmante, una promesa milagrosa o una noticia polémica, haz una pausa de tres minutos completos antes de compartirla, comentarla o darle «me gusta».
+
+Durante esa pequeña pausa, hazte estas tres preguntas sinceras: «¿Este mensaje me transmite paz y bondad, o solo alimenta mi miedo y mi enojo?», «¿Tengo la total seguridad de que esto es un hecho verdadero y comprobado?», y «¿Lo que dice aquí concuerda con las palabras y la vida humilde de Jesús?». Si no supera estas preguntas, bórralo de inmediato y protege así la paz de tu mente y de tu corazón.
