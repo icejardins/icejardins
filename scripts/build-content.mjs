@@ -300,7 +300,11 @@ async function main() {
     const slug = relativePath.replace(/\.md$/, "");
     const fileContent = await fs.readFile(filePath, "utf8");
     const parsed = parseFrontmatter(fileContent);
-    const { html, toc } = await markdownToHtmlAndToc(parsed.content);
+    const normalizedContent =
+      /^###\s/m.test(parsed.content) && !/^##\s/m.test(parsed.content)
+        ? parsed.content.replace(/^###\s/gm, "## ").replace(/^####\s/gm, "### ")
+        : parsed.content;
+    const { html, toc } = await markdownToHtmlAndToc(normalizedContent);
     const plainText = stripHtml(html);
 
     pages.push({
@@ -324,7 +328,11 @@ async function main() {
     const slug = relativePath.replace(/\.md$/, "");
     const fileContent = await fs.readFile(filePath, "utf8");
     const parsed = parseFrontmatter(fileContent);
-    const { html, toc } = await markdownToHtmlAndToc(parsed.content);
+    const normalizedContent =
+      /^###\s/m.test(parsed.content) && !/^##\s/m.test(parsed.content)
+        ? parsed.content.replace(/^###\s/gm, "## ").replace(/^####\s/gm, "### ")
+        : parsed.content;
+    const { html, toc } = await markdownToHtmlAndToc(normalizedContent);
     const plainText = stripHtml(html);
 
     const tags = ensureArray(parsed.data.tags);
@@ -402,7 +410,11 @@ async function main() {
     const slug = relativePath.replace(/\.md$/, "");
     const fileContent = await fs.readFile(filePath, "utf8");
     const parsed = parseFrontmatter(fileContent);
-    const { html, toc } = await markdownToHtmlAndToc(parsed.content);
+    const normalizedContent =
+      /^###\s/m.test(parsed.content) && !/^##\s/m.test(parsed.content)
+        ? parsed.content.replace(/^###\s/gm, "## ").replace(/^####\s/gm, "### ")
+        : parsed.content;
+    const { html, toc } = await markdownToHtmlAndToc(normalizedContent);
     const plainText = stripHtml(html);
 
     const tags = ensureArray(parsed.data.tags);
@@ -454,7 +466,11 @@ async function main() {
     const slug = relativePath.replace(/\.md$/, "");
     const fileContent = await fs.readFile(filePath, "utf8");
     const parsed = parseFrontmatter(fileContent);
-    const { html, toc } = await markdownToHtmlAndToc(parsed.content);
+    const normalizedContent =
+      /^###\s/m.test(parsed.content) && !/^##\s/m.test(parsed.content)
+        ? parsed.content.replace(/^###\s/gm, "## ").replace(/^####\s/gm, "### ")
+        : parsed.content;
+    const { html, toc } = await markdownToHtmlAndToc(normalizedContent);
     const plainText = stripHtml(html);
 
     const tags = ensureArray(parsed.data.tags);

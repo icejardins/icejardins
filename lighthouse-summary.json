@@ -3,112 +3,29 @@
     "route": "/",
     "mobile": {
       "scores": {
-        "perf": 78,
+        "perf": 87,
         "a11y": 100,
-        "bp": 77,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
-          "id": "deprecations",
-          "title": "Uses deprecated APIs",
-          "score": 0,
-          "displayValue": "2 warnings found"
-        },
-        {
-          "id": "mainthread-work-breakdown",
-          "title": "Minimize main-thread work",
-          "score": 0,
-          "displayValue": "2.3 s"
-        },
-        {
-          "id": "bootup-time",
-          "title": "Reduce JavaScript execution time",
-          "score": 0,
-          "displayValue": "1.7 s"
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
+          "score": 0.5,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
           "score": 0,
           "displayValue": "Est savings of 13 KiB"
-        },
-        {
-          "id": "unused-javascript",
-          "title": "Reduce unused JavaScript",
-          "score": 0,
-          "displayValue": "Est savings of 161 KiB"
-        },
-        {
-          "id": "cache-insight",
-          "title": "Use efficient cache lifetimes",
-          "score": 0.5,
-          "displayValue": "Est savings of 7 KiB"
-        },
-        {
-          "id": "forced-reflow-insight",
-          "title": "Forced reflow",
-          "score": 0
-        },
-        {
-          "id": "image-delivery-insight",
-          "title": "Improve image delivery",
-          "score": 0.5,
-          "displayValue": "Est savings of 44 KiB"
-        },
-        {
-          "id": "network-dependency-tree-insight",
-          "title": "Network dependency tree",
-          "score": 0
-        },
-        {
-          "id": "render-blocking-insight",
-          "title": "Render-blocking requests",
-          "score": 0,
-          "displayValue": "Est savings of 150 ms"
-        }
-      ]
-    },
-    "desktop": {
-      "scores": {
-        "perf": 100,
-        "a11y": 100,
-        "bp": 96,
-        "seo": 100
-      },
-      "failures": [
-        {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
-          "id": "unused-css-rules",
-          "title": "Reduce unused CSS",
-          "score": 0,
-          "displayValue": "Est savings of 12 KiB"
-        },
-        {
-          "id": "unused-javascript",
-          "title": "Reduce unused JavaScript",
-          "score": 0,
-          "displayValue": "Est savings of 164 KiB"
-        },
-        {
-          "id": "forced-reflow-insight",
-          "title": "Forced reflow",
-          "score": 0
-        },
-        {
-          "id": "image-delivery-insight",
-          "title": "Improve image delivery",
-          "score": 0.5,
-          "displayValue": "Est savings of 58 KiB"
         },
         {
           "id": "network-dependency-tree-insight",
@@ -119,6 +36,45 @@
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
           "score": 0.5
+        }
+      ]
+    },
+    "desktop": {
+      "scores": {
+        "perf": 99,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 10 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0.5,
+          "displayValue": "Est savings of 473 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 40 ms"
         }
       ]
     }
@@ -127,94 +83,29 @@
     "route": "/en/",
     "mobile": {
       "scores": {
-        "perf": 96,
+        "perf": 86,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
-          "score": 0,
-          "displayValue": "Est savings of 13 KiB"
+          "score": 0.5,
+          "displayValue": "Est savings of 11 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "displayValue": "Est savings of 163 KiB"
-        },
-        {
-          "id": "cache-insight",
-          "title": "Use efficient cache lifetimes",
-          "score": 0.5,
-          "displayValue": "Est savings of 0 KiB"
-        },
-        {
-          "id": "forced-reflow-insight",
-          "title": "Forced reflow",
-          "score": 0
+          "displayValue": "Est savings of 24 KiB"
         },
         {
           "id": "image-delivery-insight",
           "title": "Improve image delivery",
-          "score": 0.5,
-          "displayValue": "Est savings of 44 KiB"
-        },
-        {
-          "id": "network-dependency-tree-insight",
-          "title": "Network dependency tree",
-          "score": 0
-        },
-        {
-          "id": "render-blocking-insight",
-          "title": "Render-blocking requests",
           "score": 0,
-          "displayValue": "Est savings of 150 ms"
-        }
-      ]
-    },
-    "desktop": {
-      "scores": {
-        "perf": 100,
-        "a11y": 100,
-        "bp": 96,
-        "seo": 100
-      },
-      "failures": [
-        {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
-          "id": "unused-css-rules",
-          "title": "Reduce unused CSS",
-          "score": 0,
-          "displayValue": "Est savings of 12 KiB"
-        },
-        {
-          "id": "unused-javascript",
-          "title": "Reduce unused JavaScript",
-          "score": 0,
-          "displayValue": "Est savings of 163 KiB"
-        },
-        {
-          "id": "forced-reflow-insight",
-          "title": "Forced reflow",
-          "score": 0
-        },
-        {
-          "id": "image-delivery-insight",
-          "title": "Improve image delivery",
-          "score": 0.5,
-          "displayValue": "Est savings of 58 KiB"
+          "displayValue": "Est savings of 56 KiB"
         },
         {
           "id": "network-dependency-tree-insight",
@@ -227,40 +118,32 @@
           "score": 0.5
         }
       ]
-    }
-  },
-  {
-    "route": "/visita/",
-    "mobile": {
+    },
+    "desktop": {
       "scores": {
-        "perf": 95,
+        "perf": 99,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
           "score": 0,
-          "displayValue": "Est savings of 13 KiB"
+          "displayValue": "Est savings of 10 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "displayValue": "Est savings of 154 KiB"
+          "displayValue": "Est savings of 24 KiB"
         },
         {
-          "id": "cache-insight",
-          "title": "Use efficient cache lifetimes",
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
           "score": 0.5,
-          "displayValue": "Est savings of 9 KiB"
+          "displayValue": "Est savings of 473 KiB"
         },
         {
           "id": "network-dependency-tree-insight",
@@ -271,7 +154,128 @@
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
           "score": 0,
-          "displayValue": "Est savings of 150 ms"
+          "displayValue": "Est savings of 40 ms"
+        }
+      ]
+    }
+  },
+  {
+    "route": "/es/",
+    "mobile": {
+      "scores": {
+        "perf": 87,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0.5,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 13 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ]
+    },
+    "desktop": {
+      "scores": {
+        "perf": 99,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 10 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0.5,
+          "displayValue": "Est savings of 473 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 40 ms"
+        }
+      ]
+    }
+  },
+  {
+    "route": "/visita/",
+    "mobile": {
+      "scores": {
+        "perf": 97,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0.5,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "cache-insight",
+          "title": "Use efficient cache lifetimes",
+          "score": 0.5,
+          "displayValue": "Est savings of 8 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
         }
       ]
     },
@@ -279,37 +283,187 @@
       "scores": {
         "perf": 100,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
-          "score": 0.5,
-          "displayValue": "Est savings of 12 KiB"
+          "score": 0,
+          "displayValue": "Est savings of 10 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
-          "score": 0.5,
-          "displayValue": "Est savings of 154 KiB"
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
         },
         {
           "id": "cache-insight",
           "title": "Use efficient cache lifetimes",
           "score": 0.5,
-          "displayValue": "Est savings of 14 KiB"
+          "displayValue": "Est savings of 13 KiB"
         },
         {
-          "id": "forced-reflow-insight",
-          "title": "Forced reflow",
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
           "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 40 ms"
+        }
+      ]
+    }
+  },
+  {
+    "route": "/en/visit/",
+    "mobile": {
+      "scores": {
+        "perf": 97,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0.5,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "cache-insight",
+          "title": "Use efficient cache lifetimes",
+          "score": 0.5,
+          "displayValue": "Est savings of 8 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ]
+    },
+    "desktop": {
+      "scores": {
+        "perf": 100,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 10 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "cache-insight",
+          "title": "Use efficient cache lifetimes",
+          "score": 0.5,
+          "displayValue": "Est savings of 13 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 40 ms"
+        }
+      ]
+    }
+  },
+  {
+    "route": "/es/visita/",
+    "mobile": {
+      "scores": {
+        "perf": 97,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0.5,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "cache-insight",
+          "title": "Use efficient cache lifetimes",
+          "score": 0.5,
+          "displayValue": "Est savings of 8 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ]
+    },
+    "desktop": {
+      "scores": {
+        "perf": 100,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 10 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "cache-insight",
+          "title": "Use efficient cache lifetimes",
+          "score": 0.5,
+          "displayValue": "Est savings of 13 KiB"
         },
         {
           "id": "network-dependency-tree-insight",
@@ -328,33 +482,23 @@
     "route": "/fe/",
     "mobile": {
       "scores": {
-        "perf": 93,
+        "perf": 95,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
-          "score": 0,
-          "displayValue": "Est savings of 13 KiB"
+          "score": 0.5,
+          "displayValue": "Est savings of 11 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "displayValue": "Est savings of 163 KiB"
-        },
-        {
-          "id": "forced-reflow-insight",
-          "title": "Forced reflow",
-          "score": 0
+          "displayValue": "Est savings of 24 KiB"
         },
         {
           "id": "network-dependency-tree-insight",
@@ -373,31 +517,21 @@
       "scores": {
         "perf": 100,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
           "score": 0,
-          "displayValue": "Est savings of 12 KiB"
+          "displayValue": "Est savings of 11 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "displayValue": "Est savings of 164 KiB"
-        },
-        {
-          "id": "forced-reflow-insight",
-          "title": "Forced reflow",
-          "score": 0
+          "displayValue": "Est savings of 24 KiB"
         },
         {
           "id": "network-dependency-tree-insight",
@@ -407,7 +541,8 @@
         {
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
-          "score": 0.5
+          "score": 0,
+          "displayValue": "Est savings of 80 ms"
         }
       ]
     }
@@ -416,28 +551,23 @@
     "route": "/en/faith/",
     "mobile": {
       "scores": {
-        "perf": 98,
+        "perf": 94,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
-          "score": 0,
-          "displayValue": "Est savings of 13 KiB"
+          "score": 0.5,
+          "displayValue": "Est savings of 11 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "displayValue": "Est savings of 164 KiB"
+          "displayValue": "Est savings of 24 KiB"
         },
         {
           "id": "network-dependency-tree-insight",
@@ -456,26 +586,21 @@
       "scores": {
         "perf": 100,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
           "score": 0,
-          "displayValue": "Est savings of 12 KiB"
+          "displayValue": "Est savings of 11 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "displayValue": "Est savings of 163 KiB"
+          "displayValue": "Est savings of 24 KiB"
         },
         {
           "id": "network-dependency-tree-insight",
@@ -485,7 +610,77 @@
         {
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
-          "score": 0.5
+          "score": 0,
+          "displayValue": "Est savings of 80 ms"
+        }
+      ]
+    }
+  },
+  {
+    "route": "/es/fe/",
+    "mobile": {
+      "scores": {
+        "perf": 95,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0.5,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 150 ms"
+        }
+      ]
+    },
+    "desktop": {
+      "scores": {
+        "perf": 100,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 80 ms"
         }
       ]
     }
@@ -494,28 +689,23 @@
     "route": "/contribuir/",
     "mobile": {
       "scores": {
-        "perf": 93,
+        "perf": 96,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
-          "score": 0,
-          "displayValue": "Est savings of 13 KiB"
+          "score": 0.5,
+          "displayValue": "Est savings of 11 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "displayValue": "Est savings of 163 KiB"
+          "displayValue": "Est savings of 24 KiB"
         },
         {
           "id": "image-delivery-insight",
@@ -540,31 +730,21 @@
       "scores": {
         "perf": 100,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
-          "score": 0.5,
-          "displayValue": "Est savings of 12 KiB"
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
-          "score": 0.5,
-          "displayValue": "Est savings of 164 KiB"
-        },
-        {
-          "id": "forced-reflow-insight",
-          "title": "Forced reflow",
-          "score": 0
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
         },
         {
           "id": "image-delivery-insight",
@@ -580,7 +760,8 @@
         {
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
-          "score": 0.5
+          "score": 0,
+          "displayValue": "Est savings of 80 ms"
         }
       ]
     }
@@ -589,71 +770,23 @@
     "route": "/en/give/",
     "mobile": {
       "scores": {
-        "perf": 91,
+        "perf": 96,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
-          "score": 0,
-          "displayValue": "Est savings of 13 KiB"
+          "score": 0.5,
+          "displayValue": "Est savings of 11 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "displayValue": "Est savings of 164 KiB"
-        },
-        {
-          "id": "network-dependency-tree-insight",
-          "title": "Network dependency tree",
-          "score": 0
-        },
-        {
-          "id": "render-blocking-insight",
-          "title": "Render-blocking requests",
-          "score": 0,
-          "displayValue": "Est savings of 150 ms"
-        }
-      ]
-    },
-    "desktop": {
-      "scores": {
-        "perf": 100,
-        "a11y": 100,
-        "bp": 96,
-        "seo": 100
-      },
-      "failures": [
-        {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
-          "id": "unused-css-rules",
-          "title": "Reduce unused CSS",
-          "score": 0.5,
-          "displayValue": "Est savings of 12 KiB"
-        },
-        {
-          "id": "unused-javascript",
-          "title": "Reduce unused JavaScript",
-          "score": 0.5,
-          "displayValue": "Est savings of 163 KiB"
-        },
-        {
-          "id": "forced-reflow-insight",
-          "title": "Forced reflow",
-          "score": 0
+          "displayValue": "Est savings of 24 KiB"
         },
         {
           "id": "image-delivery-insight",
@@ -669,7 +802,128 @@
         {
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
-          "score": 0.5
+          "score": 0,
+          "displayValue": "Est savings of 150 ms"
+        }
+      ]
+    },
+    "desktop": {
+      "scores": {
+        "perf": 100,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0.5,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 80 ms"
+        }
+      ]
+    }
+  },
+  {
+    "route": "/es/donar/",
+    "mobile": {
+      "scores": {
+        "perf": 96,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0.5,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0.5,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 150 ms"
+        }
+      ]
+    },
+    "desktop": {
+      "scores": {
+        "perf": 100,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0.5,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 80 ms"
         }
       ]
     }
@@ -678,39 +932,109 @@
     "route": "/posts/",
     "mobile": {
       "scores": {
-        "perf": 93,
+        "perf": 77,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
           "score": 0,
-          "displayValue": "Est savings of 13 KiB"
+          "displayValue": "Est savings of 11 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "displayValue": "Est savings of 163 KiB"
-        },
-        {
-          "id": "forced-reflow-insight",
-          "title": "Forced reflow",
-          "score": 0
+          "displayValue": "Est savings of 24 KiB"
         },
         {
           "id": "image-delivery-insight",
           "title": "Improve image delivery",
           "score": 0,
-          "displayValue": "Est savings of 109 KiB"
+          "displayValue": "Est savings of 752 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ]
+    },
+    "desktop": {
+      "scores": {
+        "perf": 98,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 860 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 40 ms"
+        }
+      ]
+    }
+  },
+  {
+    "route": "/en/sermons/",
+    "mobile": {
+      "scores": {
+        "perf": 77,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 866 KiB"
         },
         {
           "id": "network-dependency-tree-insight",
@@ -727,34 +1051,71 @@
     },
     "desktop": {
       "scores": {
-        "perf": 100,
+        "perf": 98,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
-          "score": 0.5,
-          "displayValue": "Est savings of 12 KiB"
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "displayValue": "Est savings of 163 KiB"
+          "displayValue": "Est savings of 24 KiB"
         },
         {
           "id": "image-delivery-insight",
           "title": "Improve image delivery",
-          "score": 0.5,
-          "displayValue": "Est savings of 96 KiB"
+          "score": 0,
+          "displayValue": "Est savings of 860 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 40 ms"
+        }
+      ]
+    }
+  },
+  {
+    "route": "/es/sermones/",
+    "mobile": {
+      "scores": {
+        "perf": 80,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 752 KiB"
         },
         {
           "id": "network-dependency-tree-insight",
@@ -765,6 +1126,45 @@
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
           "score": 0.5
+        }
+      ]
+    },
+    "desktop": {
+      "scores": {
+        "perf": 98,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 853 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 40 ms"
         }
       ]
     }
@@ -773,33 +1173,104 @@
     "route": "/posts/joel-1-a-chegada-do-dia-do-senhor/",
     "mobile": {
       "scores": {
-        "perf": 97,
+        "perf": 90,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
-          "score": 0,
-          "displayValue": "Est savings of 13 KiB"
+          "score": 0.5,
+          "displayValue": "Est savings of 11 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "displayValue": "Est savings of 163 KiB"
+          "displayValue": "Est savings of 24 KiB"
         },
         {
-          "id": "forced-reflow-insight",
-          "title": "Forced reflow",
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
           "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 150 ms"
+        }
+      ]
+    },
+    "desktop": {
+      "scores": {
+        "perf": 100,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 17 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 40 ms"
+        }
+      ]
+    }
+  },
+  {
+    "route": "/reflexoes/",
+    "mobile": {
+      "scores": {
+        "perf": 79,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 889 KiB"
         },
         {
           "id": "network-dependency-tree-insight",
@@ -815,33 +1286,71 @@
     },
     "desktop": {
       "scores": {
-        "perf": 100,
+        "perf": 98,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
           "score": 0,
-          "displayValue": "Est savings of 12 KiB"
+          "displayValue": "Est savings of 11 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "displayValue": "Est savings of 163 KiB"
+          "displayValue": "Est savings of 24 KiB"
         },
         {
-          "id": "forced-reflow-insight",
-          "title": "Forced reflow",
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 1,359 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
           "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 40 ms"
+        }
+      ]
+    }
+  },
+  {
+    "route": "/en/reflections/",
+    "mobile": {
+      "scores": {
+        "perf": 79,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 853 KiB"
         },
         {
           "id": "network-dependency-tree-insight",
@@ -852,6 +1361,368 @@
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
           "score": 0.5
+        }
+      ]
+    },
+    "desktop": {
+      "scores": {
+        "perf": 98,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 1,258 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 40 ms"
+        }
+      ]
+    }
+  },
+  {
+    "route": "/es/reflexiones/",
+    "mobile": {
+      "scores": {
+        "perf": 79,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 853 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ]
+    },
+    "desktop": {
+      "scores": {
+        "perf": 98,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 1,241 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 40 ms"
+        }
+      ]
+    }
+  },
+  {
+    "route": "/reflexoes/por-que-e-tao-dificil-aceitar-quando-alguem-aponta-um-erro-meu/",
+    "mobile": {
+      "scores": {
+        "perf": 87,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 142 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 300 ms"
+        }
+      ]
+    },
+    "desktop": {
+      "scores": {
+        "perf": 100,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 142 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 80 ms"
+        }
+      ]
+    }
+  },
+  {
+    "route": "/en/reflections/why-is-it-so-hard-to-accept-criticism-when-someone-points-out-my-mistakes/",
+    "mobile": {
+      "scores": {
+        "perf": 87,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 142 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 150 ms"
+        }
+      ]
+    },
+    "desktop": {
+      "scores": {
+        "perf": 100,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 142 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 80 ms"
+        }
+      ]
+    }
+  },
+  {
+    "route": "/es/reflexiones/por-que-cuesta-tanto-aceptar-cuando-alguien-senala-un-error-mio/",
+    "mobile": {
+      "scores": {
+        "perf": 87,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 142 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 300 ms"
+        }
+      ]
+    },
+    "desktop": {
+      "scores": {
+        "perf": 100,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 142 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 80 ms"
         }
       ]
     }
@@ -860,34 +1731,29 @@
     "route": "/categorias/sermoes/",
     "mobile": {
       "scores": {
-        "perf": 95,
+        "perf": 81,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
           "score": 0,
-          "displayValue": "Est savings of 13 KiB"
+          "displayValue": "Est savings of 11 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "displayValue": "Est savings of 164 KiB"
+          "displayValue": "Est savings of 24 KiB"
         },
         {
           "id": "image-delivery-insight",
           "title": "Improve image delivery",
           "score": 0.5,
-          "displayValue": "Est savings of 109 KiB"
+          "displayValue": "Est savings of 855 KiB"
         },
         {
           "id": "lcp-discovery-insight",
@@ -909,39 +1775,29 @@
     },
     "desktop": {
       "scores": {
-        "perf": 100,
+        "perf": 99,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
-          "score": 0.5,
-          "displayValue": "Est savings of 12 KiB"
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "displayValue": "Est savings of 164 KiB"
-        },
-        {
-          "id": "forced-reflow-insight",
-          "title": "Forced reflow",
-          "score": 0
+          "displayValue": "Est savings of 24 KiB"
         },
         {
           "id": "image-delivery-insight",
           "title": "Improve image delivery",
           "score": 0.5,
-          "displayValue": "Est savings of 108 KiB"
+          "displayValue": "Est savings of 1,310 KiB"
         },
         {
           "id": "lcp-discovery-insight",
@@ -956,7 +1812,8 @@
         {
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
-          "score": 0.5
+          "score": 0,
+          "displayValue": "Est savings of 40 ms"
         }
       ]
     }
@@ -965,88 +1822,29 @@
     "route": "/tags/devocional/",
     "mobile": {
       "scores": {
-        "perf": 93,
+        "perf": 91,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
           "score": 0,
-          "displayValue": "Est savings of 13 KiB"
+          "displayValue": "Est savings of 11 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "displayValue": "Est savings of 163 KiB"
+          "displayValue": "Est savings of 24 KiB"
         },
         {
           "id": "image-delivery-insight",
           "title": "Improve image delivery",
           "score": 0.5,
-          "displayValue": "Est savings of 39 KiB"
-        },
-        {
-          "id": "lcp-discovery-insight",
-          "title": "LCP request discovery",
-          "score": 0
-        },
-        {
-          "id": "network-dependency-tree-insight",
-          "title": "Network dependency tree",
-          "score": 0
-        },
-        {
-          "id": "render-blocking-insight",
-          "title": "Render-blocking requests",
-          "score": 0,
-          "displayValue": "Est savings of 150 ms"
-        }
-      ]
-    },
-    "desktop": {
-      "scores": {
-        "perf": 100,
-        "a11y": 100,
-        "bp": 96,
-        "seo": 100
-      },
-      "failures": [
-        {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
-          "id": "unused-css-rules",
-          "title": "Reduce unused CSS",
-          "score": 0.5,
-          "displayValue": "Est savings of 12 KiB"
-        },
-        {
-          "id": "unused-javascript",
-          "title": "Reduce unused JavaScript",
-          "score": 0,
-          "displayValue": "Est savings of 164 KiB"
-        },
-        {
-          "id": "forced-reflow-insight",
-          "title": "Forced reflow",
-          "score": 0
-        },
-        {
-          "id": "image-delivery-insight",
-          "title": "Improve image delivery",
-          "score": 0,
-          "displayValue": "Est savings of 31 KiB"
+          "displayValue": "Est savings of 81 KiB"
         },
         {
           "id": "lcp-discovery-insight",
@@ -1064,40 +1862,79 @@
           "score": 0.5
         }
       ]
+    },
+    "desktop": {
+      "scores": {
+        "perf": 100,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0.5,
+          "displayValue": "Est savings of 87 KiB"
+        },
+        {
+          "id": "lcp-discovery-insight",
+          "title": "LCP request discovery",
+          "score": 0
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 40 ms"
+        }
+      ]
     }
   },
   {
     "route": "/recursos/",
     "mobile": {
       "scores": {
-        "perf": 94,
+        "perf": 91,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
-          "score": 0,
-          "displayValue": "Est savings of 13 KiB"
+          "score": 0.5,
+          "displayValue": "Est savings of 11 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "displayValue": "Est savings of 162 KiB"
+          "displayValue": "Est savings of 24 KiB"
         },
         {
           "id": "image-delivery-insight",
           "title": "Improve image delivery",
-          "score": 0,
-          "displayValue": "Est savings of 12 KiB"
+          "score": 0.5,
+          "displayValue": "Est savings of 4 KiB"
         },
         {
           "id": "network-dependency-tree-insight",
@@ -1116,31 +1953,21 @@
       "scores": {
         "perf": 100,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
-          "score": 0.5,
-          "displayValue": "Est savings of 12 KiB"
+          "score": 0,
+          "displayValue": "Est savings of 10 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
-          "score": 0.5,
-          "displayValue": "Est savings of 163 KiB"
-        },
-        {
-          "id": "forced-reflow-insight",
-          "title": "Forced reflow",
-          "score": 0
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
         },
         {
           "id": "image-delivery-insight",
@@ -1161,7 +1988,8 @@
         {
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
-          "score": 0.5
+          "score": 0,
+          "displayValue": "Est savings of 40 ms"
         }
       ]
     }
@@ -1170,28 +1998,23 @@
     "route": "/recursos/quando-a-cabeca-nao-para/",
     "mobile": {
       "scores": {
-        "perf": 94,
+        "perf": 92,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
           "score": 0,
-          "displayValue": "Est savings of 14 KiB"
+          "displayValue": "Est savings of 13 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "displayValue": "Est savings of 164 KiB"
+          "displayValue": "Est savings of 26 KiB"
         },
         {
           "id": "network-dependency-tree-insight",
@@ -1202,7 +2025,7 @@
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
           "score": 0,
-          "displayValue": "Est savings of 150 ms"
+          "displayValue": "Est savings of 300 ms"
         }
       ]
     },
@@ -1210,26 +2033,27 @@
       "scores": {
         "perf": 100,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
           "score": 0,
-          "displayValue": "Est savings of 14 KiB"
+          "displayValue": "Est savings of 13 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "displayValue": "Est savings of 164 KiB"
+          "displayValue": "Est savings of 26 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0.5,
+          "displayValue": "Est savings of 5 KiB"
         },
         {
           "id": "network-dependency-tree-insight",
@@ -1239,7 +2063,8 @@
         {
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
-          "score": 0.5
+          "score": 0,
+          "displayValue": "Est savings of 80 ms"
         }
       ]
     }
@@ -1248,28 +2073,23 @@
     "route": "/recursos/palavras-que-confortam/",
     "mobile": {
       "scores": {
-        "perf": 96,
+        "perf": 92,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
           "score": 0,
-          "displayValue": "Est savings of 14 KiB"
+          "displayValue": "Est savings of 13 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "displayValue": "Est savings of 163 KiB"
+          "displayValue": "Est savings of 26 KiB"
         },
         {
           "id": "network-dependency-tree-insight",
@@ -1288,26 +2108,21 @@
       "scores": {
         "perf": 100,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
           "score": 0,
-          "displayValue": "Est savings of 14 KiB"
+          "displayValue": "Est savings of 13 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "displayValue": "Est savings of 163 KiB"
+          "displayValue": "Est savings of 26 KiB"
         },
         {
           "id": "network-dependency-tree-insight",
@@ -1317,7 +2132,371 @@
         {
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
-          "score": 0.5
+          "score": 0,
+          "displayValue": "Est savings of 80 ms"
+        }
+      ]
+    }
+  },
+  {
+    "route": "/projetos/",
+    "mobile": {
+      "scores": {
+        "perf": 71,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "cumulative-layout-shift",
+          "title": "Cumulative Layout Shift",
+          "score": 0.29,
+          "displayValue": "0.365"
+        },
+        {
+          "id": "layout-shifts",
+          "title": "Avoid large layout shifts",
+          "score": 0,
+          "displayValue": "1 layout shift found"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "cls-culprits-insight",
+          "title": "Layout shift culprits",
+          "score": 0
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 151 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 150 ms"
+        }
+      ]
+    },
+    "desktop": {
+      "scores": {
+        "perf": 84,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "cumulative-layout-shift",
+          "title": "Cumulative Layout Shift",
+          "score": 0.38,
+          "displayValue": "0.308"
+        },
+        {
+          "id": "layout-shifts",
+          "title": "Avoid large layout shifts",
+          "score": 0,
+          "displayValue": "1 layout shift found"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "cls-culprits-insight",
+          "title": "Layout shift culprits",
+          "score": 0
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 74 KiB"
+        },
+        {
+          "id": "lcp-discovery-insight",
+          "title": "LCP request discovery",
+          "score": 0
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 40 ms"
+        }
+      ]
+    }
+  },
+  {
+    "route": "/contribuir/projeto-templo/",
+    "mobile": {
+      "scores": {
+        "perf": 87,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 118 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 300 ms"
+        }
+      ]
+    },
+    "desktop": {
+      "scores": {
+        "perf": 100,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 64 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 80 ms"
+        }
+      ]
+    }
+  },
+  {
+    "route": "/en/give/temple-project/",
+    "mobile": {
+      "scores": {
+        "perf": 86,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 127 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 150 ms"
+        }
+      ]
+    },
+    "desktop": {
+      "scores": {
+        "perf": 100,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 64 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 80 ms"
+        }
+      ]
+    }
+  },
+  {
+    "route": "/es/donar/proyecto-templo/",
+    "mobile": {
+      "scores": {
+        "perf": 86,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 127 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 150 ms"
+        }
+      ]
+    },
+    "desktop": {
+      "scores": {
+        "perf": 100,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 64 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 80 ms"
         }
       ]
     }
@@ -1326,71 +2505,23 @@
     "route": "/privacy/",
     "mobile": {
       "scores": {
-        "perf": 98,
+        "perf": 95,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
           "score": 0,
-          "displayValue": "Est savings of 13 KiB"
+          "displayValue": "Est savings of 11 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "displayValue": "Est savings of 163 KiB"
-        },
-        {
-          "id": "network-dependency-tree-insight",
-          "title": "Network dependency tree",
-          "score": 0
-        },
-        {
-          "id": "render-blocking-insight",
-          "title": "Render-blocking requests",
-          "score": 0,
-          "displayValue": "Est savings of 150 ms"
-        }
-      ]
-    },
-    "desktop": {
-      "scores": {
-        "perf": 100,
-        "a11y": 100,
-        "bp": 96,
-        "seo": 100
-      },
-      "failures": [
-        {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
-          "id": "unused-css-rules",
-          "title": "Reduce unused CSS",
-          "score": 0,
-          "displayValue": "Est savings of 12 KiB"
-        },
-        {
-          "id": "unused-javascript",
-          "title": "Reduce unused JavaScript",
-          "score": 0,
-          "displayValue": "Est savings of 163 KiB"
-        },
-        {
-          "id": "forced-reflow-insight",
-          "title": "Forced reflow",
-          "score": 0
+          "displayValue": "Est savings of 24 KiB"
         },
         {
           "id": "network-dependency-tree-insight",
@@ -1401,6 +2532,39 @@
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
           "score": 0.5
+        }
+      ]
+    },
+    "desktop": {
+      "scores": {
+        "perf": 100,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 40 ms"
         }
       ]
     }
@@ -1409,77 +2573,23 @@
     "route": "/terms/",
     "mobile": {
       "scores": {
-        "perf": 91,
+        "perf": 95,
         "a11y": 100,
-        "bp": 96,
+        "bp": 100,
         "seo": 100
       },
       "failures": [
         {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
           "score": 0,
-          "displayValue": "Est savings of 13 KiB"
+          "displayValue": "Est savings of 11 KiB"
         },
         {
           "id": "unused-javascript",
           "title": "Reduce unused JavaScript",
           "score": 0,
-          "displayValue": "Est savings of 163 KiB"
-        },
-        {
-          "id": "cache-insight",
-          "title": "Use efficient cache lifetimes",
-          "score": 0.5,
-          "displayValue": "Est savings of 0 KiB"
-        },
-        {
-          "id": "network-dependency-tree-insight",
-          "title": "Network dependency tree",
-          "score": 0
-        },
-        {
-          "id": "render-blocking-insight",
-          "title": "Render-blocking requests",
-          "score": 0,
-          "displayValue": "Est savings of 150 ms"
-        }
-      ]
-    },
-    "desktop": {
-      "scores": {
-        "perf": 100,
-        "a11y": 100,
-        "bp": 96,
-        "seo": 100
-      },
-      "failures": [
-        {
-          "id": "errors-in-console",
-          "title": "Browser errors were logged to the console",
-          "score": 0
-        },
-        {
-          "id": "unused-css-rules",
-          "title": "Reduce unused CSS",
-          "score": 0,
-          "displayValue": "Est savings of 12 KiB"
-        },
-        {
-          "id": "unused-javascript",
-          "title": "Reduce unused JavaScript",
-          "score": 0,
-          "displayValue": "Est savings of 164 KiB"
-        },
-        {
-          "id": "forced-reflow-insight",
-          "title": "Forced reflow",
-          "score": 0
+          "displayValue": "Est savings of 24 KiB"
         },
         {
           "id": "network-dependency-tree-insight",
@@ -1490,6 +2600,39 @@
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
           "score": 0.5
+        }
+      ]
+    },
+    "desktop": {
+      "scores": {
+        "perf": 100,
+        "a11y": 100,
+        "bp": 100,
+        "seo": 100
+      },
+      "failures": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "displayValue": "Est savings of 24 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 40 ms"
         }
       ]
     }

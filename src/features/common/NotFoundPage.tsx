@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { SeoHead } from "@/shared/components/SeoHead";
-import { getSiteConfig } from "@/content/repositories/contentRepository";
+import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
 
 export default function NotFoundPage() {
   const site = getSiteConfig();

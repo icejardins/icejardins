@@ -1,5 +1,5 @@
-﻿import { useEffect, type PropsWithChildren } from "react";
-import { getSiteConfig } from "@/content/repositories/contentRepository";
+import { useEffect, type PropsWithChildren } from "react";
+import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
 import { ThemeProvider } from "@/features/shell/components/ThemeProvider";
 
 function ThemeTokensSync() {

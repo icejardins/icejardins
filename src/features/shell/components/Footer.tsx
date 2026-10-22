@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router";
-import { getSiteConfig } from "@/content/repositories/contentRepository";
+import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
 import { Icon } from "@/shared/components/Icon";
 import { trackContactConversion, trackWhatsAppConversion } from "@/shared/utils/analytics";
 import styles from "./Footer.module.css";

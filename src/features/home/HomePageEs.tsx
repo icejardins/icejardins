@@ -39,7 +39,9 @@ export default function HomePageEs() {
         title="Iglesia Cristiana Evangélica en Brasília (Jardim Botânico) | ICE Jardins"
         description="Iglesia cristiana evangélica en Jardim Botânico, Brasília - DF. Culto de adoración los domingos a las 9:30. Comunidad bíblica que da la bienvenida a familias, visitantes y residentes hispanohablantes."
         canonicalPath="/es/"
-        preloadImage="/images/sobre/identidade-400.webp"
+        preloadImage="/images/sobre/identidade.webp"
+        preloadImageSrcset="/images/sobre/identidade-400.webp 400w, /images/sobre/identidade.webp 800w"
+        preloadImageSizes="100vw"
       />
 
       <section className={styles.hero}>

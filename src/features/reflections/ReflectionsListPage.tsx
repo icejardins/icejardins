@@ -74,6 +74,8 @@ export default function ReflectionsListPage() {
                       alt={reflection.title}
                       className={styles.cardImage}
                       loading={idx === 0 ? "eager" : "lazy"}
+                      fetchPriority={idx === 0 ? "high" : undefined}
+                      decoding="async"
                       width={600}
                       height={338}
                     />

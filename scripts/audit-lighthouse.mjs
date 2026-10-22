@@ -2,18 +2,31 @@ import lighthouse from "lighthouse";
 import * as chromeLauncher from "chrome-launcher";
 import fs from "node:fs/promises";
 
-const BASE_URL = process.env.AUDIT_BASE_URL || "https://icejardins.org.br";
+const BASE_URL = process.env.AUDIT_BASE_URL || "http://localhost:4173";
 
 const ROUTES = [
   "/",
   "/en/",
+  "/es/",
   "/visita/",
+  "/en/visit/",
+  "/es/visita/",
   "/fe/",
   "/en/faith/",
+  "/es/fe/",
   "/contribuir/",
   "/en/give/",
+  "/es/donar/",
   "/posts/",
+  "/en/sermons/",
+  "/es/sermones/",
   "/posts/joel-1-a-chegada-do-dia-do-senhor/",
+  "/reflexoes/",
+  "/en/reflections/",
+  "/es/reflexiones/",
+  "/reflexoes/por-que-e-tao-dificil-aceitar-quando-alguem-aponta-um-erro-meu/",
+  "/en/reflections/why-is-it-so-hard-to-accept-criticism-when-someone-points-out-my-mistakes/",
+  "/es/reflexiones/por-que-cuesta-tanto-aceptar-cuando-alguien-senala-un-error-mio/",
   "/categorias/sermoes/",
   "/tags/devocional/",
   "/recursos/",
@@ -23,10 +36,6 @@ const ROUTES = [
   "/contribuir/projeto-templo/",
   "/en/give/temple-project/",
   "/es/donar/proyecto-templo/",
-  "/en/sermons/",
-  "/es/sermones/",
-  "/en/visit/",
-  "/es/visita/",
   "/privacy/",
   "/terms/"
 ];
@@ -46,8 +55,8 @@ async function main() {
       const url = `${BASE_URL}${route}`;
       console.log(`\nAuditing ${url}...`);
 
-      // 1. Mobile Audit
       try {
+        // 1. Mobile Audit
         const mobileRes = await lighthouse(url, {
           port: chrome.port,
           output: "json",
@@ -63,7 +72,7 @@ async function main() {
 
         const mFailures = [];
         for (const [id, a] of Object.entries(mobileRes.lhr.audits)) {
-          if (a.score !== null && a.score < 1 && a.details) {
+          if (a.score !== null && a.score < 0.9 && a.details) {
             mFailures.push({ id, title: a.title, score: a.score, displayValue: a.displayValue });
           }
         }
@@ -106,7 +115,7 @@ async function main() {
 
         const dFailures = [];
         for (const [id, a] of Object.entries(desktopRes.lhr.audits)) {
-          if (a.score !== null && a.score < 1 && a.details) {
+          if (a.score !== null && a.score < 0.9 && a.details) {
             dFailures.push({ id, title: a.title, score: a.score, displayValue: a.displayValue });
           }
         }

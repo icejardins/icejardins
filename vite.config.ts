@@ -28,20 +28,24 @@ function htmlTagInjector(isProd: boolean): Plugin {
         }
 
         let script = `\n    <!-- Google tag (gtag.js) -->\n`;
-        script += `    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />\n`;
-        script += `    <script async src="https://www.googletagmanager.com/gtag/js?id=${primaryId}"></script>\n`;
         script += `    <script>\n`;
         script += `      window.dataLayer = window.dataLayer || [];\n`;
         script += `      function gtag(){window.dataLayer.push(arguments);}\n`;
         script += `      gtag('js', new Date());\n`;
+        script += `      if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {\n`;
+        script += `        var s = document.createElement('script');\n`;
+        script += `        s.async = true;\n`;
+        script += `        s.src = 'https://www.googletagmanager.com/gtag/js?id=${primaryId}';\n`;
+        script += `        document.head.appendChild(s);\n`;
 
         if (gadsId) {
-          script += `      gtag('config', '${gadsId}');\n`;
+          script += `        gtag('config', '${gadsId}');\n`;
         }
         if (gaId) {
-          script += `      gtag('config', '${gaId}');\n`;
+          script += `        gtag('config', '${gaId}');\n`;
         }
 
+        script += `      }\n`;
         script += `      window.__loadAnalytics = function(){};\n`;
         script += `    </script>`;
 

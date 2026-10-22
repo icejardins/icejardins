@@ -15,6 +15,8 @@ type SeoHeadProps = {
   tags?: string[];
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   preloadImage?: string | null;
+  preloadImageSrcset?: string;
+  preloadImageSizes?: string;
 };
 
 function toAbsoluteUrl(value: string | null | undefined, baseUrl: string) {
@@ -248,7 +250,9 @@ export function SeoHead({
   section,
   tags,
   jsonLd,
-  preloadImage
+  preloadImage,
+  preloadImageSrcset,
+  preloadImageSizes
 }: SeoHeadProps) {
   const location = useLocation();
   const site = getSiteConfig();
@@ -345,7 +349,14 @@ export function SeoHead({
         href={`${site.baseUrl}/rss.xml`}
       />
       {preloadImage ? (
-        <link rel="preload" as="image" href={preloadImage} fetchPriority="high" />
+        <link
+          rel="preload"
+          as="image"
+          href={preloadImage}
+          {...(preloadImageSrcset ? { imageSrcSet: preloadImageSrcset } : {})}
+          {...(preloadImageSizes ? { imageSizes: preloadImageSizes } : {})}
+          fetchPriority="high"
+        />
       ) : null}
       {allSchemas.map((schema, index) => (
         <script key={index} type="application/ld+json">

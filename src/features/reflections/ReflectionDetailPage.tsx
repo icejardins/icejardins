@@ -127,6 +127,9 @@ export default function ReflectionDetailPage() {
             src={reflection.image}
             alt={reflection.title}
             className={styles.heroImage}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             width={800}
             height={450}
           />

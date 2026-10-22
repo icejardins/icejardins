@@ -1,4 +1,4 @@
-import { getSiteConfig } from "@/content/repositories/contentRepository";
+import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
 import { Icon } from "@/shared/components/Icon";
 import { trackWhatsAppConversion } from "@/shared/utils/analytics";
 import styles from "./WhatsAppFloat.module.css";

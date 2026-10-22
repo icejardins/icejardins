@@ -1,4 +1,4 @@
-import { getSiteConfig } from "@/content/repositories/contentRepository";
+import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
 
 declare global {
   interface Window {
