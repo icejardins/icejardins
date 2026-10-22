@@ -58,7 +58,7 @@ export default function ReflectionDetailPage() {
         <h2>{isSpanish ? "Reflexión no encontrada" : isEnglish ? "Reflection not found" : "Reflexão não encontrada"}</h2>
         <p className="mt-3">
           <Link to={isSpanish ? "/es/reflexiones/" : isEnglish ? "/en/reflections/" : "/reflexoes/"}>
-            &larr; {isSpanish ? "Volver a Reflexiones" : isEnglish ? "Back to Reflections" : "Voltar para Reflexões"}
+            ← {isSpanish ? "Volver a Reflexiones" : isEnglish ? "Back to Reflections" : "Voltar para Reflexões"}
           </Link>
         </p>
       </div>
@@ -151,8 +151,8 @@ export default function ReflectionDetailPage() {
             </p>
             <Link to={`/posts/${reflection.sermonSlug}/`} className={styles.sermonBoxLink}>
               {reflection.passage
-                ? `${isSpanish ? "Ver sermón de" : isEnglish ? "View sermon on" : "Ver sermão de"} ${reflection.passage} &rarr;`
-                : `${isSpanish ? "Ver sermón completo" : isEnglish ? "View full sermon" : "Ver sermão completo"} &rarr;`}
+                ? `${isSpanish ? "Ver sermón de" : isEnglish ? "View sermon on" : "Ver sermão de"} ${reflection.passage} →`
+                : `${isSpanish ? "Ver sermón completo" : isEnglish ? "View full sermon" : "Ver sermão completo"} →`}
             </Link>
           </div>
         )}

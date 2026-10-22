@@ -94,7 +94,7 @@ export default function ReflectionsListPage() {
                 <div className={styles.cardFooter}>
                   <span>{formatDate(reflection.date, lang)}</span>
                   <Link to={reflection.route} className={styles.readLink}>
-                    {readLabel} &rarr;
+                    {readLabel} →
                   </Link>
                 </div>
               </div>
