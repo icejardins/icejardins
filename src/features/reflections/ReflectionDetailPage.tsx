@@ -5,6 +5,7 @@ import { getSiteConfig } from "@/content/repositories/siteConfigRepository";
 import { SeoHead } from "@/shared/components/SeoHead";
 import { formatDate } from "@/core/utils/formatDate";
 import { Icon } from "@/shared/components/Icon";
+import { slugify } from "@/core/utils/slugify";
 import styles from "./ReflectionDetailPage.module.css";
 
 export default function ReflectionDetailPage() {
@@ -139,6 +140,25 @@ export default function ReflectionDetailPage() {
           className={styles.body}
           dangerouslySetInnerHTML={{ __html: loadedBodyHtml || "" }}
         />
+
+        {reflection.tags && reflection.tags.length > 0 && (
+          <div className={styles.tagSection}>
+            <span className={styles.tagTitle}>
+              {isSpanish ? "Temas relacionados:" : isEnglish ? "Related topics:" : "Temas relacionados:"}
+            </span>
+            <div className={styles.tagList}>
+              {reflection.tags.map((tag) => (
+                <Link
+                  key={tag}
+                  to={`${sectionRoute}?tag=${encodeURIComponent(slugify(tag))}`}
+                  className={styles.tagPill}
+                >
+                  #{tag}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
 
         {reflection.sermonSlug && (
           <div className={styles.sermonBox}>

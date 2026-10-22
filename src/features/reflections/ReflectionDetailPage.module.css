@@ -184,6 +184,45 @@
   color: var(--color-primary);
 }
 
+.tagSection {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border, #e2e8f0);
+}
+
+.tagTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary-color, #145f63);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tagPill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  background: color-mix(in srgb, var(--primary-color, #145f63) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--primary-color, #145f63) 20%, transparent);
+  border-radius: 999px;
+  color: var(--primary-color, #145f63);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.tagPill:hover {
+  background: var(--primary-color, #145f63);
+  color: #ffffff;
+}
+
 @media (max-width: 768px) {
   .title {
     font-size: 1.85rem;
